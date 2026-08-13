@@ -1,0 +1,49 @@
+{
+  "source_index": 228,
+  "source_id": "img:valvula-aire-vacio-triple-efecto-compacta-rm-2%e2%80%b3-unirain",
+  "name": "Válvula aire-vacío triple efecto compact, RM 2″ UNIRAIN",
+  "slug": "valvula-aire-vacio-triple-efecto-compact-rm-2-unirain",
+  "category_slug": "valvulas",
+  "brand_name": "Unirain (España)",
+  "product_type_slug": null,
+  "markets": [
+    "agro",
+    "infra"
+  ],
+  "image_url": "https://surerain.com/assets/productos-importados/valvula-aire-vacio-triple-efecto-compacta-rm-2%e2%80%b3-unirain.webp",
+  "image_alt": "Válvula aire-vacío triple efecto compact, RM 2″ UNIRAIN",
+  "ficha_url": null,
+  "description": "Ventosa ARV-2KA COMPACT Válvula diseñada para extraer y admitir el aire de conducciones, grandes filtros, depósitos y, en general, de cualquier elemento que deba funcionar libre de la presencia de aire.",
+  "specs_html": "<tr><td>Marca</td><td>Unirain (España)</td></tr><tr><td>Tipo de Producto</td><td>Agro, Infraestructura</td></tr>",
+  "specs_rows": [
+    {
+      "label": "Marca",
+      "value": "Unirain (España)"
+    },
+    {
+      "label": "Tipo de Producto",
+      "value": "Agro, Infraestructura"
+    }
+  ],
+  "chip_label": "Válvulas",
+  "original_url": "https://surerain.com/catalogo?producto=valvula-aire-vacio-triple-efecto-compact-rm-2-unirain",
+  "outer_html": "<div class=\"card product-card cursor-pointer\" data-category=\"valvulas\" data-marca=\"Unirain (España)\" data-vertical=\"agro infra\" onclick=\"openProductModal('Válvula aire-vacío triple efecto compact, RM&nbsp;2″&nbsp;UNIRAIN','Ventosa ARV-2KA COMPACT Válvula diseñada para extraer y admitir el aire de conducciones, grandes filtros, depósitos y, en general, de cualquier elemento que deba funcionar libre de la presencia de aire.','<tr><td>Marca</td><td>Unirain (España)</td></tr><tr><td>Tipo de Producto</td><td>Agro, Infraestructura</td></tr>')\"><img width=\"195\" height=\"130\" alt=\"Válvula aire-vacío triple efecto compact, RM&nbsp;2″&nbsp;UNIRAIN\" class=\"w-full object-cover\" loading=\"lazy\" src=\"assets/productos-importados/valvula-aire-vacio-triple-efecto-compacta-rm-2%e2%80%b3-unirain.webp\" style=\"height:130px;\"><div class=\"p-3\"><span class=\"chip chip-agro mb-1.5\">Válvulas</span><h4 class=\"font-semibold text-gray-900 text-xs mb-1\">Válvula aire-vacío triple efecto compact, RM&nbsp;2″&nbsp;UNIRAIN</h4><p class=\"text-xs text-gray-400 mb-2\">Unirain (España)</p><div class=\"flex gap-1.5\"><span class=\"text-xs text-sr-green font-semibold cursor-pointer\">Ver ficha</span><span class=\"text-gray-300\">·</span><a class=\"text-xs text-gray-400 hover:text-sr-green\" href=\"contacto.html\">Dónde comprar</a></div></div></div>",
+  "onclick_raw": "openProductModal('Válvula aire-vacío triple efecto compact, RM 2″ UNIRAIN','Ventosa ARV-2KA COMPACT Válvula diseñada para extraer y admitir el aire de conducciones, grandes filtros, depósitos y, en general, de cualquier elemento que deba funcionar libre de la presencia de aire.','<tr><td>Marca</td><td>Unirain (España)</td></tr><tr><td>Tipo de Producto</td><td>Agro, Infraestructura</td></tr>')",
+  "content_hash": "6a6ccc03345bff1d8ab208673548595fa4d5677ddc465a2df4bbafaeb18cace8",
+  "provenance": {
+    "source_url": "file://C:\\proyectos\\SURERAIN-CLONE\\data\\raw\\catalogo.source.html",
+    "source_page": "https://surerain.com/catalogo",
+    "source_selector": ".product-card:nth-of-type(229)",
+    "extracted_at": "2026-08-13T22:03:32.860Z",
+    "raw_fields": [
+      "data-category",
+      "data-marca",
+      "data-tipo",
+      "data-vertical",
+      "data-ficha",
+      "img[src]",
+      "h4",
+      "openProductModal(name,description,specsHtml)"
+    ]
+  }
+}

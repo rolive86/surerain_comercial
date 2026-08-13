@@ -1,0 +1,49 @@
+{
+  "source_index": 166,
+  "source_id": "img:malla-100130-150130-200130",
+  "name": "Malla para filtros Alfa 100130 / 150130/ 200130",
+  "slug": "malla-para-filtros-alfa-100130-150130-200130",
+  "category_slug": "filtros",
+  "brand_name": "Plástica Alfa (Italia)",
+  "product_type_slug": null,
+  "markets": [
+    "agro",
+    "av"
+  ],
+  "image_url": "https://surerain.com/assets/productos-importados/malla-100130-150130-200130.webp",
+  "image_alt": "Malla para filtros Alfa 100130 / 150130/ 200130",
+  "ficha_url": null,
+  "description": "100130 Malla de repuesto para filtros ALFA (3/4”, 1”, 1 1/4”) Mic.: 130 Sup.: 120 cm2 Elemento Filtrante: malla plástica 150130 Malla de repuesto para filtros ALFA (1 1/2”) Mic.: 130 Sup.: 215 cm2 Elemento Filtrante: malla plástica 200130 Malla de repuesto para filtros ALFA (2”) Mic.: 130 Sup.: 340 cm2 Elemento Filtrante: malla plástica",
+  "specs_html": "<tr><td>Marca</td><td>Plástica Alfa (Italia)</td></tr><tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes</td></tr>",
+  "specs_rows": [
+    {
+      "label": "Marca",
+      "value": "Plástica Alfa (Italia)"
+    },
+    {
+      "label": "Tipo de Producto",
+      "value": "Agro, Áreas Verdes"
+    }
+  ],
+  "chip_label": "Filtros",
+  "original_url": "https://surerain.com/catalogo?producto=malla-para-filtros-alfa-100130-150130-200130",
+  "outer_html": "<div class=\"card product-card cursor-pointer\" data-category=\"filtros\" data-marca=\"Plástica Alfa (Italia)\" data-vertical=\"agro av\" onclick=\"openProductModal('Malla para filtros Alfa 100130 / 150130/ 200130','100130 Malla de repuesto para filtros ALFA (3/4”, 1”, 1 1/4”) Mic.: 130 Sup.: 120 cm2 Elemento Filtrante: malla plástica 150130 Malla de repuesto para filtros ALFA (1 1/2”) Mic.: 130 Sup.: 215 cm2 Elemento Filtrante: malla plástica 200130 Malla de repuesto para filtros ALFA (2”) Mic.: 130 Sup.: 340 cm2 Elemento Filtrante: malla plástica','<tr><td>Marca</td><td>Plástica Alfa (Italia)</td></tr><tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes</td></tr>')\"><img width=\"195\" height=\"130\" alt=\"Malla para filtros Alfa 100130 / 150130/ 200130\" class=\"w-full object-cover\" loading=\"lazy\" src=\"assets/productos-importados/malla-100130-150130-200130.webp\" style=\"height:130px;\"><div class=\"p-3\"><span class=\"chip chip-agro mb-1.5\">Filtros</span><h4 class=\"font-semibold text-gray-900 text-xs mb-1\">Malla para filtros Alfa 100130 / 150130/ 200130</h4><p class=\"text-xs text-gray-400 mb-2\">Plástica Alfa (Italia)</p><div class=\"flex gap-1.5\"><span class=\"text-xs text-sr-green font-semibold cursor-pointer\">Ver ficha</span><span class=\"text-gray-300\">·</span><a class=\"text-xs text-gray-400 hover:text-sr-green\" href=\"contacto.html\">Dónde comprar</a></div></div></div>",
+  "onclick_raw": "openProductModal('Malla para filtros Alfa 100130 / 150130/ 200130','100130 Malla de repuesto para filtros ALFA (3/4”, 1”, 1 1/4”) Mic.: 130 Sup.: 120 cm2 Elemento Filtrante: malla plástica 150130 Malla de repuesto para filtros ALFA (1 1/2”) Mic.: 130 Sup.: 215 cm2 Elemento Filtrante: malla plástica 200130 Malla de repuesto para filtros ALFA (2”) Mic.: 130 Sup.: 340 cm2 Elemento Filtrante: malla plástica','<tr><td>Marca</td><td>Plástica Alfa (Italia)</td></tr><tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes</td></tr>')",
+  "content_hash": "0945868c38cd3bbb41fd726d7095c9f310e0867f3d48070f26d0144dfff21087",
+  "provenance": {
+    "source_url": "file://C:\\proyectos\\SURERAIN-CLONE\\data\\raw\\catalogo.source.html",
+    "source_page": "https://surerain.com/catalogo",
+    "source_selector": ".product-card:nth-of-type(167)",
+    "extracted_at": "2026-08-13T22:03:32.860Z",
+    "raw_fields": [
+      "data-category",
+      "data-marca",
+      "data-tipo",
+      "data-vertical",
+      "data-ficha",
+      "img[src]",
+      "h4",
+      "openProductModal(name,description,specsHtml)"
+    ]
+  }
+}

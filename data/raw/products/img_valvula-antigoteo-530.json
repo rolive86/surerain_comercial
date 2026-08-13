@@ -1,0 +1,48 @@
+{
+  "source_index": 124,
+  "source_id": "img:valvula-antigoteo-530",
+  "name": "Válvula antigoteo 530L para microaspersores",
+  "slug": "valvula-antigoteo-530l-para-microaspersores",
+  "category_slug": "microaspersion",
+  "brand_name": "Tavlit (Israel)",
+  "product_type_slug": null,
+  "markets": [
+    "agro"
+  ],
+  "image_url": "https://surerain.com/assets/productos-importados/valvula-antigoteo-530.webp",
+  "image_alt": "Válvula antigoteo 530L para microaspersores",
+  "ficha_url": "https://surerain.com/assets/productos-fichas/299imgdesc1.webp",
+  "description": "La Válvula Antigoteo 53O es una válvula interruptora que se abre cuando se incrementa la presión al abrir el agua, y que se cierra cuando la presión cae al cerrar el agua.",
+  "specs_html": "<tr><td>Marca</td><td>Tavlit (Israel)</td></tr><tr><td>Tipo de Producto</td><td>Agro</td></tr>",
+  "specs_rows": [
+    {
+      "label": "Marca",
+      "value": "Tavlit (Israel)"
+    },
+    {
+      "label": "Tipo de Producto",
+      "value": "Agro"
+    }
+  ],
+  "chip_label": "Microaspersión",
+  "original_url": "https://surerain.com/catalogo?producto=valvula-antigoteo-530l-para-microaspersores",
+  "outer_html": "<div class=\"card product-card cursor-pointer\" data-category=\"microaspersion\" data-ficha=\"assets/productos-fichas/299imgdesc1.webp\" data-marca=\"Tavlit (Israel)\" data-vertical=\"agro\" onclick=\"openProductModal('Válvula antigoteo 530L para microaspersores','La Válvula Antigoteo 53O es una válvula interruptora que se abre cuando se incrementa la presión al abrir el agua, y que se cierra cuando la presión cae al cerrar el agua.','<tr><td>Marca</td><td>Tavlit (Israel)</td></tr><tr><td>Tipo de Producto</td><td>Agro</td></tr>')\"><img width=\"195\" height=\"130\" alt=\"Válvula antigoteo 530L para microaspersores\" class=\"w-full object-cover\" loading=\"lazy\" src=\"assets/productos-importados/valvula-antigoteo-530.webp\" style=\"height:130px;\"><div class=\"p-3\"><span class=\"chip chip-agro mb-1.5\">Microaspersión</span><h4 class=\"font-semibold text-gray-900 text-xs mb-1\">Válvula antigoteo 530L para microaspersores</h4><p class=\"text-xs text-gray-400 mb-2\">Tavlit (Israel)</p><div class=\"flex gap-1.5\"><span class=\"text-xs text-sr-green font-semibold cursor-pointer\">Ver ficha</span><span class=\"text-gray-300\">·</span><a class=\"text-xs text-gray-400 hover:text-sr-green\" href=\"contacto.html\">Dónde comprar</a></div></div></div>",
+  "onclick_raw": "openProductModal('Válvula antigoteo 530L para microaspersores','La Válvula Antigoteo 53O es una válvula interruptora que se abre cuando se incrementa la presión al abrir el agua, y que se cierra cuando la presión cae al cerrar el agua.','<tr><td>Marca</td><td>Tavlit (Israel)</td></tr><tr><td>Tipo de Producto</td><td>Agro</td></tr>')",
+  "content_hash": "9dadfc174b7df617d8cf7aef183297b05865d789379a52be29d1378205894ecd",
+  "provenance": {
+    "source_url": "file://C:\\proyectos\\SURERAIN-CLONE\\data\\raw\\catalogo.source.html",
+    "source_page": "https://surerain.com/catalogo",
+    "source_selector": ".product-card:nth-of-type(125)",
+    "extracted_at": "2026-08-13T22:03:32.860Z",
+    "raw_fields": [
+      "data-category",
+      "data-marca",
+      "data-tipo",
+      "data-vertical",
+      "data-ficha",
+      "img[src]",
+      "h4",
+      "openProductModal(name,description,specsHtml)"
+    ]
+  }
+}

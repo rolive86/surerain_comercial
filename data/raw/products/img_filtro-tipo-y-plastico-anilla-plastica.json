@@ -1,0 +1,49 @@
+{
+  "source_index": 155,
+  "source_id": "img:filtro-tipo-y-plastico-anilla-plastica",
+  "name": "Filtro tipo Y plástico, anilla plástica",
+  "slug": "filtro-tipo-y-plastico-anilla-plastica",
+  "category_slug": "filtros",
+  "brand_name": "Origen China",
+  "product_type_slug": null,
+  "markets": [
+    "agro",
+    "av"
+  ],
+  "image_url": "https://surerain.com/assets/productos-importados/filtro-tipo-y-plastico-anilla-plastica.webp",
+  "image_alt": "Filtro tipo Y plástico, anilla plástica",
+  "ficha_url": "https://surerain.com/assets/productos-fichas/FilYmP.webp",
+  "description": "Los filtros de anillas se encuentran disponibles en las siguientes medidas : ¾», 1″, 1 ¼», 1 ½», 2″ y 2″ largo. Cuentan en su extremo con tapón de desagüe (en caso que se utilicen con filtro de malla de repuesto). Todas las versiones son de 130 micrones.",
+  "specs_html": "<tr><td>Marca</td><td>Origen China</td></tr><tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes</td></tr>",
+  "specs_rows": [
+    {
+      "label": "Marca",
+      "value": "Origen China"
+    },
+    {
+      "label": "Tipo de Producto",
+      "value": "Agro, Áreas Verdes"
+    }
+  ],
+  "chip_label": "Filtros",
+  "original_url": "https://surerain.com/catalogo?producto=filtro-tipo-y-plastico-anilla-plastica",
+  "outer_html": "<div class=\"card product-card cursor-pointer\" data-category=\"filtros\" data-ficha=\"assets/productos-fichas/FilYmP.webp\" data-marca=\"Origen China\" data-vertical=\"agro av\" onclick=\"openProductModal('Filtro tipo Y plástico, anilla plástica','Los filtros de anillas se encuentran disponibles en las siguientes medidas : ¾», 1″, 1 ¼», 1 ½», 2″ y 2″ largo. Cuentan en su extremo con tapón de desagüe (en caso que se utilicen con filtro de malla de repuesto). Todas las versiones son de 130 micrones.','<tr><td>Marca</td><td>Origen China</td></tr><tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes</td></tr>')\"><img width=\"195\" height=\"130\" alt=\"Filtro tipo Y plástico, anilla plástica\" class=\"w-full object-cover\" loading=\"lazy\" src=\"assets/productos-importados/filtro-tipo-y-plastico-anilla-plastica.webp\" style=\"height:130px;\"><div class=\"p-3\"><span class=\"chip chip-agro mb-1.5\">Filtros</span><h4 class=\"font-semibold text-gray-900 text-xs mb-1\">Filtro tipo Y plástico, anilla plástica</h4><p class=\"text-xs text-gray-400 mb-2\">Origen China</p><div class=\"flex gap-1.5\"><span class=\"text-xs text-sr-green font-semibold cursor-pointer\">Ver ficha</span><span class=\"text-gray-300\">·</span><a class=\"text-xs text-gray-400 hover:text-sr-green\" href=\"contacto.html\">Dónde comprar</a></div></div></div>",
+  "onclick_raw": "openProductModal('Filtro tipo Y plástico, anilla plástica','Los filtros de anillas se encuentran disponibles en las siguientes medidas : ¾», 1″, 1 ¼», 1 ½», 2″ y 2″ largo. Cuentan en su extremo con tapón de desagüe (en caso que se utilicen con filtro de malla de repuesto). Todas las versiones son de 130 micrones.','<tr><td>Marca</td><td>Origen China</td></tr><tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes</td></tr>')",
+  "content_hash": "b74390cb26ae14b381bcf8bce369d38711db4d59f017aa39289ecff6ef36738c",
+  "provenance": {
+    "source_url": "file://C:\\proyectos\\SURERAIN-CLONE\\data\\raw\\catalogo.source.html",
+    "source_page": "https://surerain.com/catalogo",
+    "source_selector": ".product-card:nth-of-type(156)",
+    "extracted_at": "2026-08-13T22:03:32.860Z",
+    "raw_fields": [
+      "data-category",
+      "data-marca",
+      "data-tipo",
+      "data-vertical",
+      "data-ficha",
+      "img[src]",
+      "h4",
+      "openProductModal(name,description,specsHtml)"
+    ]
+  }
+}

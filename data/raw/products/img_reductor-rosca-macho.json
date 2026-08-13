@@ -1,0 +1,45 @@
+{
+  "source_index": 202,
+  "source_id": "img:reductor-rosca-macho",
+  "name": "Reductor Rosca Macho",
+  "slug": "reductor-rosca-macho",
+  "category_slug": "valvulas",
+  "brand_name": "GreenPlains",
+  "product_type_slug": null,
+  "markets": [
+    "agro",
+    "infra"
+  ],
+  "image_url": "https://surerain.com/assets/productos-importados/reductor-rosca-macho.webp",
+  "image_alt": "Reductor Rosca Macho",
+  "ficha_url": null,
+  "description": "Reductor Rosca Macho Medidas disponibles: 1/4 x 1/8″",
+  "specs_html": "<tr><td>Tipo de Producto</td><td>Agro, Infraestructura</td></tr>",
+  "specs_rows": [
+    {
+      "label": "Tipo de Producto",
+      "value": "Agro, Infraestructura"
+    }
+  ],
+  "chip_label": "Válvulas",
+  "original_url": "https://surerain.com/catalogo?producto=reductor-rosca-macho",
+  "outer_html": "<div class=\"card product-card cursor-pointer\" data-category=\"valvulas\" data-marca=\"GreenPlains\" data-vertical=\"agro infra\" onclick=\"openProductModal('Reductor Rosca Macho','Reductor Rosca Macho Medidas disponibles: 1/4 x 1/8″','<tr><td>Tipo de Producto</td><td>Agro, Infraestructura</td></tr>')\"><img width=\"195\" height=\"130\" alt=\"Reductor Rosca Macho\" class=\"w-full object-cover\" loading=\"lazy\" src=\"assets/productos-importados/reductor-rosca-macho.webp\" style=\"height:130px;\"><div class=\"p-3\"><span class=\"chip chip-agro mb-1.5\">Válvulas</span><h4 class=\"font-semibold text-gray-900 text-xs mb-1\">Reductor Rosca Macho</h4><p class=\"text-xs text-gray-400 mb-2\">Accesorios y Repuestos</p><div class=\"flex gap-1.5\"><span class=\"text-xs text-sr-green font-semibold cursor-pointer\">Ver ficha</span><span class=\"text-gray-300\">·</span><a class=\"text-xs text-gray-400 hover:text-sr-green\" href=\"contacto.html\">Dónde comprar</a></div></div></div>",
+  "onclick_raw": "openProductModal('Reductor Rosca Macho','Reductor Rosca Macho Medidas disponibles: 1/4 x 1/8″','<tr><td>Tipo de Producto</td><td>Agro, Infraestructura</td></tr>')",
+  "content_hash": "7a962fd1462bce63be3082ea357c6b36c13b6f36bdefc2fee2e2624ca867ee2f",
+  "provenance": {
+    "source_url": "file://C:\\proyectos\\SURERAIN-CLONE\\data\\raw\\catalogo.source.html",
+    "source_page": "https://surerain.com/catalogo",
+    "source_selector": ".product-card:nth-of-type(203)",
+    "extracted_at": "2026-08-13T22:03:32.860Z",
+    "raw_fields": [
+      "data-category",
+      "data-marca",
+      "data-tipo",
+      "data-vertical",
+      "data-ficha",
+      "img[src]",
+      "h4",
+      "openProductModal(name,description,specsHtml)"
+    ]
+  }
+}

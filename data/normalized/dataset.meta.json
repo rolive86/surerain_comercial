@@ -1,0 +1,22 @@
+{
+  "generated_at": "2026-08-13T22:15:34.706Z",
+  "content_hash": "1df3aeaa288785ebf5156596dbf1b38080978282762a9bdc19e068b80e4d78e1",
+  "sync_meta": {
+    "run_id": "257d470f-5a29-4042-b0cd-da88b89da9e8",
+    "source_url": "file://C:\\proyectos\\SURERAIN-CLONE\\data\\raw\\catalogo.source.html",
+    "products_seen": 420,
+    "products_new": 0,
+    "products_modified": 0,
+    "products_unchanged": 420,
+    "products_missing_from_source": 0
+  },
+  "counts": {
+    "products": 420,
+    "categories": 10,
+    "brands": 28,
+    "markets": 4,
+    "media": 536,
+    "documents": 126,
+    "attributes": 5
+  }
+}

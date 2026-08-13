@@ -1,0 +1,49 @@
+{
+  "source_index": 30,
+  "source_id": "img:assr-8019",
+  "name": "ZM 8019",
+  "slug": "zm-8019",
+  "category_slug": "aspersores",
+  "brand_name": "Origen China",
+  "product_type_slug": "impacto",
+  "markets": [
+    "agro",
+    "av"
+  ],
+  "image_url": "https://surerain.com/assets/productos-importados/assr-8019.webp",
+  "image_alt": "ZM 8019",
+  "ficha_url": "https://surerain.com/assets/productos-fichas/187imgdesc1.webp",
+  "description": "Aspersor de impacto ASSR 8019 Características: – Aspersores de impacto de metálico sectorizable – Conexión de 1”  rosca hembra – Fabricado en latón, aluminio, plástico y acero inoxidable – Boquillas intercambiables  y con tornillo regulador de chorro Rango de Operación: – Caudal: 1.2– 3.6m3/h – Radio: 12 – 17 m – Presión: 1.50 – 4.0 bar",
+  "specs_html": "<tr><td>Marca</td><td>Origen China</td></tr><tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes</td></tr>",
+  "specs_rows": [
+    {
+      "label": "Marca",
+      "value": "Origen China"
+    },
+    {
+      "label": "Tipo de Producto",
+      "value": "Agro, Áreas Verdes"
+    }
+  ],
+  "chip_label": "Aspersores",
+  "original_url": "https://surerain.com/catalogo?producto=zm-8019",
+  "outer_html": "<div class=\"card product-card cursor-pointer\" data-category=\"aspersores\" data-ficha=\"assets/productos-fichas/187imgdesc1.webp\" data-marca=\"Origen China\" data-tipo=\"impacto\" data-vertical=\"agro av\" onclick=\"openProductModal('ZM 8019','Aspersor de impacto ASSR 8019 Características: – Aspersores de impacto de metálico sectorizable – Conexión de 1”&nbsp; rosca hembra – Fabricado en latón, aluminio, plástico y acero inoxidable – Boquillas intercambiables&nbsp; y con tornillo regulador de chorro Rango de Operación: – Caudal: 1.2– 3.6m3/h – Radio: 12 – 17 m – Presión: 1.50 – 4.0 bar','<tr><td>Marca</td><td>Origen China</td></tr><tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes</td></tr>')\"><img width=\"195\" height=\"130\" alt=\"ZM 8019\" class=\"w-full object-cover\" loading=\"lazy\" src=\"assets/productos-importados/assr-8019.webp\" style=\"height:130px;\"><div class=\"p-3\"><span class=\"chip chip-agro mb-1.5\">Aspersores</span><h4 class=\"font-semibold text-gray-900 text-xs mb-1\">ZM 8019</h4><p class=\"text-xs text-gray-400 mb-2\">Origen China</p><div class=\"flex gap-1.5\"><span class=\"text-xs text-sr-green font-semibold cursor-pointer\">Ver ficha</span><span class=\"text-gray-300\">·</span><a class=\"text-xs text-gray-400 hover:text-sr-green\" href=\"contacto.html\">Dónde comprar</a></div></div></div>",
+  "onclick_raw": "openProductModal('ZM 8019','Aspersor de impacto ASSR 8019 Características: – Aspersores de impacto de metálico sectorizable – Conexión de 1”  rosca hembra – Fabricado en latón, aluminio, plástico y acero inoxidable – Boquillas intercambiables  y con tornillo regulador de chorro Rango de Operación: – Caudal: 1.2– 3.6m3/h – Radio: 12 – 17 m – Presión: 1.50 – 4.0 bar','<tr><td>Marca</td><td>Origen China</td></tr><tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes</td></tr>')",
+  "content_hash": "c5fa46814739ecd7a95f75f5ca94c279ca877035ea24d1ab082f8108548c7a04",
+  "provenance": {
+    "source_url": "file://C:\\proyectos\\SURERAIN-CLONE\\data\\raw\\catalogo.source.html",
+    "source_page": "https://surerain.com/catalogo",
+    "source_selector": ".product-card:nth-of-type(31)",
+    "extracted_at": "2026-08-13T22:03:32.860Z",
+    "raw_fields": [
+      "data-category",
+      "data-marca",
+      "data-tipo",
+      "data-vertical",
+      "data-ficha",
+      "img[src]",
+      "h4",
+      "openProductModal(name,description,specsHtml)"
+    ]
+  }
+}

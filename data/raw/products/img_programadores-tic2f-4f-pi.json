@@ -1,0 +1,45 @@
+{
+  "source_index": 260,
+  "source_id": "img:programadores-tic2f-4f-pi",
+  "name": "Programadores TIC2F/4F-PI",
+  "slug": "programadores-tic2f-4f-pi",
+  "category_slug": "programadores",
+  "brand_name": "Tecnidro (Italia)",
+  "product_type_slug": null,
+  "markets": [
+    "agro",
+    "infra"
+  ],
+  "image_url": "https://surerain.com/assets/productos-importados/programadores-tic2f-4f-pi.webp",
+  "image_alt": "Programadores TIC2F/4F-PI",
+  "ficha_url": "https://surerain.com/assets/productos-fichas/727imgdesc1.webp",
+  "description": "Características: – Permiten diferentes configuraciones de lavado automático en los cabezales de filtro de arena o de anilla.",
+  "specs_html": "<tr><td>Tipo de Producto</td><td>Agro, Infraestructura</td></tr>",
+  "specs_rows": [
+    {
+      "label": "Tipo de Producto",
+      "value": "Agro, Infraestructura"
+    }
+  ],
+  "chip_label": "Válvulas",
+  "original_url": "https://surerain.com/catalogo?producto=programadores-tic2f-4f-pi",
+  "outer_html": "<div class=\"card product-card cursor-pointer\" data-category=\"programadores\" data-ficha=\"assets/productos-fichas/727imgdesc1.webp\" data-marca=\"Tecnidro (Italia)\" data-vertical=\"agro infra\" onclick=\"openProductModal('Programadores TIC2F/4F-PI','Características: – Permiten diferentes configuraciones de lavado automático en los cabezales de filtro de arena o de anilla.','<tr><td>Tipo de Producto</td><td>Agro, Infraestructura</td></tr>')\"><img width=\"195\" height=\"130\" alt=\"Programadores TIC2F/4F-PI\" class=\"w-full object-cover\" loading=\"lazy\" src=\"assets/productos-importados/programadores-tic2f-4f-pi.webp\" style=\"height:130px;\"><div class=\"p-3\"><span class=\"chip chip-agro mb-1.5\">Válvulas</span><h4 class=\"font-semibold text-gray-900 text-xs mb-1\">Programadores TIC2F/4F-PI</h4><p class=\"text-xs text-gray-400 mb-2\">Válvulas</p><div class=\"flex gap-1.5\"><span class=\"text-xs text-sr-green font-semibold cursor-pointer\">Ver ficha</span><span class=\"text-gray-300\">·</span><a class=\"text-xs text-gray-400 hover:text-sr-green\" href=\"contacto.html\">Dónde comprar</a></div></div></div>",
+  "onclick_raw": "openProductModal('Programadores TIC2F/4F-PI','Características: – Permiten diferentes configuraciones de lavado automático en los cabezales de filtro de arena o de anilla.','<tr><td>Tipo de Producto</td><td>Agro, Infraestructura</td></tr>')",
+  "content_hash": "1259cfabd5edb278698a5d542a3fd438f5635e3e9d156f7068e44d9cd5981ffa",
+  "provenance": {
+    "source_url": "file://C:\\proyectos\\SURERAIN-CLONE\\data\\raw\\catalogo.source.html",
+    "source_page": "https://surerain.com/catalogo",
+    "source_selector": ".product-card:nth-of-type(261)",
+    "extracted_at": "2026-08-13T22:03:32.860Z",
+    "raw_fields": [
+      "data-category",
+      "data-marca",
+      "data-tipo",
+      "data-vertical",
+      "data-ficha",
+      "img[src]",
+      "h4",
+      "openProductModal(name,description,specsHtml)"
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://surerain.com/sitemap.xml
+
+# Páginas privadas — no indexar
+Disallow: /invitacion-sr30.html
+
+# URLs viejas del WordPress / sitio anterior — ya no existen, no indexar
+Disallow: /shop/
+Disallow: /shop
+Disallow: /productos/
+Disallow: /productos
+Disallow: /sistema-riego/
+Disallow: /blog/
+Disallow: /nuevo-sitio-web/
+Disallow: /insumos-para-riego/
+Disallow: /sistemas-de-riego-eficientes/
+
+# Sure Games Mundialista 2026 — campaña terminada, paginas dadas de baja
+Disallow: /sure-games
+Disallow: /sure-games-bracket
+Disallow: /sure-games-reglamento
+Disallow: /prode

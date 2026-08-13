@@ -1,0 +1,14 @@
+{
+  "generated_at": "2026-08-13T22:15:36.206Z",
+  "outputs": [
+    "data/exports/products.json",
+    "data/exports/products.csv",
+    "data/exports/categories.json",
+    "data/exports/brands.json",
+    "data/exports/media.json",
+    "data/exports/documents.json",
+    "data/exports/supabase/seed.sql",
+    "data/exports/supabase/storage-manifest.json"
+  ],
+  "product_count": 420
+}

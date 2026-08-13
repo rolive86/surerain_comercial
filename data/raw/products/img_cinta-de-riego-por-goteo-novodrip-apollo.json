@@ -1,0 +1,48 @@
+{
+  "source_index": 78,
+  "source_id": "img:cinta-de-riego-por-goteo-novodrip-apollo",
+  "name": "Cinta de Riego por goteo Novodrip Apollo",
+  "slug": "cinta-de-riego-por-goteo-novodrip-apollo",
+  "category_slug": "goteo",
+  "brand_name": "GreenPlains",
+  "product_type_slug": null,
+  "markets": [
+    "agro"
+  ],
+  "image_url": "https://surerain.com/assets/productos-importados/cinta-de-riego-por-goteo-novodrip-apollo.webp",
+  "image_alt": "Cinta de Riego por goteo Novodrip Apollo",
+  "ficha_url": "https://surerain.com/assets/productos-fichas/apollo.webp",
+  "description": "La cinta de riego por goteo Novodrip Apollo puede ayudarlo a mejorar el rendimiento, la eficiencia en el uso del agua, y la calidad de los cultivos al poner agua y fertilizante justo donde el cultivo lo necesita.",
+  "specs_html": "<tr><td>Marca</td><td>GreenPlains</td></tr><tr><td>Tipo de Producto</td><td>Agro</td></tr>",
+  "specs_rows": [
+    {
+      "label": "Marca",
+      "value": "GreenPlains"
+    },
+    {
+      "label": "Tipo de Producto",
+      "value": "Agro"
+    }
+  ],
+  "chip_label": "Goteo",
+  "original_url": "https://surerain.com/catalogo?producto=cinta-de-riego-por-goteo-novodrip-apollo",
+  "outer_html": "<div class=\"card product-card cursor-pointer\" data-category=\"goteo\" data-ficha=\"assets/productos-fichas/apollo.webp\" data-marca=\"GreenPlains\" data-vertical=\"agro\" onclick=\"openProductModal('Cinta de Riego por goteo Novodrip Apollo','La cinta de riego por goteo Novodrip Apollo puede ayudarlo a mejorar el rendimiento, la eficiencia en el uso del agua, y la calidad de los cultivos al poner agua y fertilizante justo donde el cultivo lo necesita.','<tr><td>Marca</td><td>GreenPlains</td></tr><tr><td>Tipo de Producto</td><td>Agro</td></tr>')\"><img width=\"195\" height=\"130\" alt=\"Cinta de Riego por goteo Novodrip Apollo\" class=\"w-full object-cover\" loading=\"lazy\" src=\"assets/productos-importados/cinta-de-riego-por-goteo-novodrip-apollo.webp\" style=\"height:130px;\"><div class=\"p-3\"><span class=\"chip chip-agro mb-1.5\">Goteo</span><h4 class=\"font-semibold text-gray-900 text-xs mb-1\">Cinta de Riego por goteo Novodrip Apollo</h4><p class=\"text-xs text-gray-400 mb-2\">GreenPlains</p><div class=\"flex gap-1.5\"><span class=\"text-xs text-sr-green font-semibold cursor-pointer\">Ver ficha</span><span class=\"text-gray-300\">·</span><a class=\"text-xs text-gray-400 hover:text-sr-green\" href=\"contacto.html\">Dónde comprar</a></div></div></div>",
+  "onclick_raw": "openProductModal('Cinta de Riego por goteo Novodrip Apollo','La cinta de riego por goteo Novodrip Apollo puede ayudarlo a mejorar el rendimiento, la eficiencia en el uso del agua, y la calidad de los cultivos al poner agua y fertilizante justo donde el cultivo lo necesita.','<tr><td>Marca</td><td>GreenPlains</td></tr><tr><td>Tipo de Producto</td><td>Agro</td></tr>')",
+  "content_hash": "b33a9ca4e786c5fb73105ac4bdcdbdcb65af60969b0833fac509d1c1bc13e612",
+  "provenance": {
+    "source_url": "file://C:\\proyectos\\SURERAIN-CLONE\\data\\raw\\catalogo.source.html",
+    "source_page": "https://surerain.com/catalogo",
+    "source_selector": ".product-card:nth-of-type(79)",
+    "extracted_at": "2026-08-13T22:03:32.860Z",
+    "raw_fields": [
+      "data-category",
+      "data-marca",
+      "data-tipo",
+      "data-vertical",
+      "data-ficha",
+      "img[src]",
+      "h4",
+      "openProductModal(name,description,specsHtml)"
+    ]
+  }
+}

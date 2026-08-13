@@ -1,0 +1,45 @@
+{
+  "source_index": 375,
+  "source_id": "img:manguito-roscado-macho",
+  "name": "Manguito roscado macho",
+  "slug": "manguito-roscado-macho",
+  "category_slug": "conectores",
+  "brand_name": "GreenPlains",
+  "product_type_slug": null,
+  "markets": [
+    "agro",
+    "av"
+  ],
+  "image_url": "https://surerain.com/assets/productos-importados/manguito-roscado-macho.webp",
+  "image_alt": "Manguito roscado macho",
+  "ficha_url": null,
+  "description": "Manguito roscado macho Diámetro: 16 mm x 1/2” (ACPL006020.016C) 16 mm x 3/4” (ACIR0IP.302.16C) 20 mm x 1/2” (ACPL006020.020C) 20 mm x 3/4” (ACIR0IP.302.20C)",
+  "specs_html": "<tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes</td></tr>",
+  "specs_rows": [
+    {
+      "label": "Tipo de Producto",
+      "value": "Agro, Áreas Verdes"
+    }
+  ],
+  "chip_label": "Conectores",
+  "original_url": "https://surerain.com/catalogo?producto=manguito-roscado-macho",
+  "outer_html": "<div class=\"card product-card cursor-pointer\" data-category=\"conectores\" data-marca=\"GreenPlains\" data-vertical=\"agro av\" onclick=\"openProductModal('Manguito roscado macho','Manguito roscado macho Diámetro: 16 mm x 1/2” (ACPL006020.016C) 16 mm x 3/4” (ACIR0IP.302.16C) 20 mm x 1/2” (ACPL006020.020C) 20 mm x 3/4” (ACIR0IP.302.20C)','<tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes</td></tr>')\"><img width=\"195\" height=\"130\" alt=\"Manguito roscado macho\" class=\"w-full object-cover\" loading=\"lazy\" src=\"assets/productos-importados/manguito-roscado-macho.webp\" style=\"height:130px;\"><div class=\"p-3\"><span class=\"chip chip-agro mb-1.5\">Conectores</span><h4 class=\"font-semibold text-gray-900 text-xs mb-1\">Manguito roscado macho</h4><p class=\"text-xs text-gray-400 mb-2\">Conectores y Accesorios</p><div class=\"flex gap-1.5\"><span class=\"text-xs text-sr-green font-semibold cursor-pointer\">Ver ficha</span><span class=\"text-gray-300\">·</span><a class=\"text-xs text-gray-400 hover:text-sr-green\" href=\"contacto.html\">Dónde comprar</a></div></div></div>",
+  "onclick_raw": "openProductModal('Manguito roscado macho','Manguito roscado macho Diámetro: 16 mm x 1/2” (ACPL006020.016C) 16 mm x 3/4” (ACIR0IP.302.16C) 20 mm x 1/2” (ACPL006020.020C) 20 mm x 3/4” (ACIR0IP.302.20C)','<tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes</td></tr>')",
+  "content_hash": "c3b2511ddb0699e07a37d8e81b032167d7834b2645c5bd7f3b591c2a9f8b5ae8",
+  "provenance": {
+    "source_url": "file://C:\\proyectos\\SURERAIN-CLONE\\data\\raw\\catalogo.source.html",
+    "source_page": "https://surerain.com/catalogo",
+    "source_selector": ".product-card:nth-of-type(376)",
+    "extracted_at": "2026-08-13T22:03:32.860Z",
+    "raw_fields": [
+      "data-category",
+      "data-marca",
+      "data-tipo",
+      "data-vertical",
+      "data-ficha",
+      "img[src]",
+      "h4",
+      "openProductModal(name,description,specsHtml)"
+    ]
+  }
+}

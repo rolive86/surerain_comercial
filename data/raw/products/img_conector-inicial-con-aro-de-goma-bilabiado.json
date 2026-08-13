@@ -1,0 +1,49 @@
+{
+  "source_index": 356,
+  "source_id": "img:conector-inicial-con-aro-de-goma-bilabiado",
+  "name": "Conector inicial con aro de goma bilabiado",
+  "slug": "conector-inicial-con-aro-de-goma-bilabiado",
+  "category_slug": "conectores",
+  "brand_name": "Varios",
+  "product_type_slug": null,
+  "markets": [
+    "agro",
+    "av"
+  ],
+  "image_url": "https://surerain.com/assets/productos-importados/conector-inicial-con-aro-de-goma-bilabiado.webp",
+  "image_alt": "Conector inicial con aro de goma bilabiado",
+  "ficha_url": null,
+  "description": "Conector inicial con aro de goma bilabiado para tubería de polietileno a PE o PVC Diámetro: 16 mm y 20 mm (ACPO00000015842)",
+  "specs_html": "<tr><td>Marca</td><td>Varios</td></tr><tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes</td></tr>",
+  "specs_rows": [
+    {
+      "label": "Marca",
+      "value": "Varios"
+    },
+    {
+      "label": "Tipo de Producto",
+      "value": "Agro, Áreas Verdes"
+    }
+  ],
+  "chip_label": "Conectores",
+  "original_url": "https://surerain.com/catalogo?producto=conector-inicial-con-aro-de-goma-bilabiado",
+  "outer_html": "<div class=\"card product-card cursor-pointer\" data-category=\"conectores\" data-marca=\"Varios\" data-vertical=\"agro av\" onclick=\"openProductModal('Conector inicial con aro de goma bilabiado','Conector inicial con aro de goma bilabiado para tubería de polietileno a PE o PVC Diámetro: 16 mm y 20 mm (ACPO00000015842)','<tr><td>Marca</td><td>Varios</td></tr><tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes</td></tr>')\"><img width=\"195\" height=\"130\" alt=\"Conector inicial con aro de goma bilabiado\" class=\"w-full object-cover\" loading=\"lazy\" src=\"assets/productos-importados/conector-inicial-con-aro-de-goma-bilabiado.webp\" style=\"height:130px;\"><div class=\"p-3\"><span class=\"chip chip-agro mb-1.5\">Conectores</span><h4 class=\"font-semibold text-gray-900 text-xs mb-1\">Conector inicial con aro de goma bilabiado</h4><p class=\"text-xs text-gray-400 mb-2\">Varios</p><div class=\"flex gap-1.5\"><span class=\"text-xs text-sr-green font-semibold cursor-pointer\">Ver ficha</span><span class=\"text-gray-300\">·</span><a class=\"text-xs text-gray-400 hover:text-sr-green\" href=\"contacto.html\">Dónde comprar</a></div></div></div>",
+  "onclick_raw": "openProductModal('Conector inicial con aro de goma bilabiado','Conector inicial con aro de goma bilabiado para tubería de polietileno a PE o PVC Diámetro: 16 mm y 20 mm (ACPO00000015842)','<tr><td>Marca</td><td>Varios</td></tr><tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes</td></tr>')",
+  "content_hash": "6de126c2c2dcffcaa731529202d968e1a9e2988b3b4a43918d515893fc12e03f",
+  "provenance": {
+    "source_url": "file://C:\\proyectos\\SURERAIN-CLONE\\data\\raw\\catalogo.source.html",
+    "source_page": "https://surerain.com/catalogo",
+    "source_selector": ".product-card:nth-of-type(357)",
+    "extracted_at": "2026-08-13T22:03:32.860Z",
+    "raw_fields": [
+      "data-category",
+      "data-marca",
+      "data-tipo",
+      "data-vertical",
+      "data-ficha",
+      "img[src]",
+      "h4",
+      "openProductModal(name,description,specsHtml)"
+    ]
+  }
+}

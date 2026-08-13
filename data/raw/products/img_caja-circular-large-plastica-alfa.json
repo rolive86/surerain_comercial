@@ -1,0 +1,48 @@
+{
+  "source_index": 276,
+  "source_id": "img:caja-circular-large-plastica-alfa",
+  "name": "Caja Circular Large Plástica Alfa",
+  "slug": "caja-circular-large-plastica-alfa",
+  "category_slug": "valvulas",
+  "brand_name": "Plástica Alfa (Italia)",
+  "product_type_slug": null,
+  "markets": [
+    "av"
+  ],
+  "image_url": "https://surerain.com/assets/productos-importados/caja-circular-large-plastica-alfa.webp",
+  "image_alt": "Caja Circular Large Plástica Alfa",
+  "ficha_url": null,
+  "description": "Medidas Modelo Large: Diámetro: 32 cm Altura: 25 cm Construidas en polipropileno reforzado para máxima resistencia mecánica y estabilidad frente a impactos y exposición solar.",
+  "specs_html": "<tr><td>Marca</td><td>Plástica Alfa (Italia)</td></tr><tr><td>Tipo de Producto</td><td>Áreas Verdes</td></tr>",
+  "specs_rows": [
+    {
+      "label": "Marca",
+      "value": "Plástica Alfa (Italia)"
+    },
+    {
+      "label": "Tipo de Producto",
+      "value": "Áreas Verdes"
+    }
+  ],
+  "chip_label": "Válvulas",
+  "original_url": "https://surerain.com/catalogo?producto=caja-circular-large-plastica-alfa",
+  "outer_html": "<div class=\"card product-card cursor-pointer\" data-category=\"valvulas\" data-marca=\"Plástica Alfa (Italia)\" data-vertical=\"av\" onclick=\"openProductModal('Caja Circular Large Plástica Alfa','Medidas Modelo Large: Diámetro: 32 cm Altura: 25 cm Construidas en polipropileno reforzado para máxima resistencia mecánica y estabilidad frente a impactos y exposición solar.','<tr><td>Marca</td><td>Plástica Alfa (Italia)</td></tr><tr><td>Tipo de Producto</td><td>Áreas Verdes</td></tr>')\"><img width=\"195\" height=\"130\" alt=\"Caja Circular Large Plástica Alfa\" class=\"w-full object-cover\" loading=\"lazy\" src=\"assets/productos-importados/caja-circular-large-plastica-alfa.webp\" style=\"height:130px;\"><div class=\"p-3\"><span class=\"chip chip-av mb-1.5\">Válvulas</span><h4 class=\"font-semibold text-gray-900 text-xs mb-1\">Caja Circular Large Plástica Alfa</h4><p class=\"text-xs text-gray-400 mb-2\">Plástica Alfa (Italia)</p><div class=\"flex gap-1.5\"><span class=\"text-xs text-sr-green font-semibold cursor-pointer\">Ver ficha</span><span class=\"text-gray-300\">·</span><a class=\"text-xs text-gray-400 hover:text-sr-green\" href=\"contacto.html\">Dónde comprar</a></div></div></div>",
+  "onclick_raw": "openProductModal('Caja Circular Large Plástica Alfa','Medidas Modelo Large: Diámetro: 32 cm Altura: 25 cm Construidas en polipropileno reforzado para máxima resistencia mecánica y estabilidad frente a impactos y exposición solar.','<tr><td>Marca</td><td>Plástica Alfa (Italia)</td></tr><tr><td>Tipo de Producto</td><td>Áreas Verdes</td></tr>')",
+  "content_hash": "37f2e68a7bf56476bc32544452474939e47857743e3789a6393b8af346eb7c13",
+  "provenance": {
+    "source_url": "file://C:\\proyectos\\SURERAIN-CLONE\\data\\raw\\catalogo.source.html",
+    "source_page": "https://surerain.com/catalogo",
+    "source_selector": ".product-card:nth-of-type(277)",
+    "extracted_at": "2026-08-13T22:03:32.860Z",
+    "raw_fields": [
+      "data-category",
+      "data-marca",
+      "data-tipo",
+      "data-vertical",
+      "data-ficha",
+      "img[src]",
+      "h4",
+      "openProductModal(name,description,specsHtml)"
+    ]
+  }
+}

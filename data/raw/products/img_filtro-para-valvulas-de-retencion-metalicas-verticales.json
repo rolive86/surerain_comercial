@@ -1,0 +1,46 @@
+{
+  "source_index": 219,
+  "source_id": "img:filtro-para-valvulas-de-retencion-metalicas-verticales",
+  "name": "Filtro para válvulas de retención metálicas verticales",
+  "slug": "filtro-para-valvulas-de-retencion-metalicas-verticales",
+  "category_slug": "valvulas",
+  "brand_name": "Taizhou",
+  "product_type_slug": null,
+  "markets": [
+    "agro",
+    "av",
+    "infra"
+  ],
+  "image_url": "https://surerain.com/assets/productos-importados/filtro-para-valvulas-de-retencion-metalicas-verticales.webp",
+  "image_alt": "Filtro para válvulas de retención metálicas verticales",
+  "ficha_url": "https://surerain.com/assets/productos-fichas/797imgdesc1.webp",
+  "description": "Filtro para válvulas de retención metálicas verticales",
+  "specs_html": "<tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes, Infraestructura</td></tr>",
+  "specs_rows": [
+    {
+      "label": "Tipo de Producto",
+      "value": "Agro, Áreas Verdes, Infraestructura"
+    }
+  ],
+  "chip_label": "Válvulas",
+  "original_url": "https://surerain.com/catalogo?producto=filtro-para-valvulas-de-retencion-metalicas-verticales",
+  "outer_html": "<div class=\"card product-card cursor-pointer\" data-category=\"valvulas\" data-ficha=\"assets/productos-fichas/797imgdesc1.webp\" data-marca=\"Taizhou\" data-vertical=\"agro av infra\" onclick=\"openProductModal('Filtro para válvulas de retención metálicas verticales','Filtro para válvulas de retención metálicas verticales','<tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes, Infraestructura</td></tr>')\"><img width=\"195\" height=\"130\" alt=\"Filtro para válvulas de retención metálicas verticales\" class=\"w-full object-cover\" loading=\"lazy\" src=\"assets/productos-importados/filtro-para-valvulas-de-retencion-metalicas-verticales.webp\" style=\"height:130px;\"><div class=\"p-3\"><span class=\"chip chip-agro mb-1.5\">Válvulas</span><h4 class=\"font-semibold text-gray-900 text-xs mb-1\">Filtro para válvulas de retención metálicas verticales</h4><p class=\"text-xs text-gray-400 mb-2\">Válvulas</p><div class=\"flex gap-1.5\"><span class=\"text-xs text-sr-green font-semibold cursor-pointer\">Ver ficha</span><span class=\"text-gray-300\">·</span><a class=\"text-xs text-gray-400 hover:text-sr-green\" href=\"contacto.html\">Dónde comprar</a></div></div></div>",
+  "onclick_raw": "openProductModal('Filtro para válvulas de retención metálicas verticales','Filtro para válvulas de retención metálicas verticales','<tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes, Infraestructura</td></tr>')",
+  "content_hash": "056e014834b715c74b453b0bde04d8ff38a4e290bce8116e2efb7ec597243c56",
+  "provenance": {
+    "source_url": "file://C:\\proyectos\\SURERAIN-CLONE\\data\\raw\\catalogo.source.html",
+    "source_page": "https://surerain.com/catalogo",
+    "source_selector": ".product-card:nth-of-type(220)",
+    "extracted_at": "2026-08-13T22:03:32.860Z",
+    "raw_fields": [
+      "data-category",
+      "data-marca",
+      "data-tipo",
+      "data-vertical",
+      "data-ficha",
+      "img[src]",
+      "h4",
+      "openProductModal(name,description,specsHtml)"
+    ]
+  }
+}

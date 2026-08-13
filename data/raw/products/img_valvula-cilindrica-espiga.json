@@ -1,0 +1,45 @@
+{
+  "source_index": 252,
+  "source_id": "img:valvula-cilindrica-espiga",
+  "name": "Válvula cilíndrica espiga",
+  "slug": "valvula-cilindrica-espiga",
+  "category_slug": "conectores",
+  "brand_name": "GreenPlains",
+  "product_type_slug": null,
+  "markets": [
+    "agro",
+    "av"
+  ],
+  "image_url": "https://surerain.com/assets/productos-importados/valvula-cilindrica-espiga.webp",
+  "image_alt": "Válvula cilíndrica espiga",
+  "ficha_url": null,
+  "description": "Válvula cilíndrica espiga 16 x 16 ACGR02115.0160F Válvula cilíndrica espiga 20 x 20 ACGR02115.0200F",
+  "specs_html": "<tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes</td></tr>",
+  "specs_rows": [
+    {
+      "label": "Tipo de Producto",
+      "value": "Agro, Áreas Verdes"
+    }
+  ],
+  "chip_label": "Válvulas",
+  "original_url": "https://surerain.com/catalogo?producto=valvula-cilindrica-espiga",
+  "outer_html": "<div class=\"card product-card cursor-pointer\" data-category=\"conectores\" data-marca=\"GreenPlains\" data-vertical=\"agro av\" onclick=\"openProductModal('Válvula cilíndrica espiga','Válvula cilíndrica espiga 16 x 16 ACGR02115.0160F Válvula cilíndrica espiga 20 x 20 ACGR02115.0200F','<tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes</td></tr>')\"><img width=\"195\" height=\"130\" alt=\"Válvula cilíndrica espiga\" class=\"w-full object-cover\" loading=\"lazy\" src=\"assets/productos-importados/valvula-cilindrica-espiga.webp\" style=\"height:130px;\"><div class=\"p-3\"><span class=\"chip chip-agro mb-1.5\">Válvulas</span><h4 class=\"font-semibold text-gray-900 text-xs mb-1\">Válvula cilíndrica espiga</h4><p class=\"text-xs text-gray-400 mb-2\">Conectores y Accesorios</p><div class=\"flex gap-1.5\"><span class=\"text-xs text-sr-green font-semibold cursor-pointer\">Ver ficha</span><span class=\"text-gray-300\">·</span><a class=\"text-xs text-gray-400 hover:text-sr-green\" href=\"contacto.html\">Dónde comprar</a></div></div></div>",
+  "onclick_raw": "openProductModal('Válvula cilíndrica espiga','Válvula cilíndrica espiga 16 x 16 ACGR02115.0160F Válvula cilíndrica espiga 20 x 20 ACGR02115.0200F','<tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes</td></tr>')",
+  "content_hash": "6158a28d21e9a01b538a0ee06e64bff0202bf174d1a8f68d03ced9ea09e1163f",
+  "provenance": {
+    "source_url": "file://C:\\proyectos\\SURERAIN-CLONE\\data\\raw\\catalogo.source.html",
+    "source_page": "https://surerain.com/catalogo",
+    "source_selector": ".product-card:nth-of-type(253)",
+    "extracted_at": "2026-08-13T22:03:32.860Z",
+    "raw_fields": [
+      "data-category",
+      "data-marca",
+      "data-tipo",
+      "data-vertical",
+      "data-ficha",
+      "img[src]",
+      "h4",
+      "openProductModal(name,description,specsHtml)"
+    ]
+  }
+}

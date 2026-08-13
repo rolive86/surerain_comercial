@@ -1,0 +1,48 @@
+{
+  "source_index": 141,
+  "source_id": "img:miniaspersor-circular-no-incluye-conector",
+  "name": "Tavlit 961 Miniaspersor circular",
+  "slug": "tavlit-961-miniaspersor-circular",
+  "category_slug": "microaspersion",
+  "brand_name": "Tavlit (Israel)",
+  "product_type_slug": null,
+  "markets": [
+    "agro"
+  ],
+  "image_url": "https://surerain.com/assets/productos-importados/miniaspersor-circular-no-incluye-conector.webp",
+  "image_alt": "Tavlit 961 Miniaspersor circular",
+  "ficha_url": null,
+  "description": "Miniaspersor circular, no incluye conector AGRIDOR 961-120 Caudal: 120 l/h Presión Bar: 2,0 Ángulo: 360° Diámetro: 7 metros",
+  "specs_html": "<tr><td>Marca</td><td>Tavlit (Israel)</td></tr><tr><td>Tipo de Producto</td><td>Agro</td></tr>",
+  "specs_rows": [
+    {
+      "label": "Marca",
+      "value": "Tavlit (Israel)"
+    },
+    {
+      "label": "Tipo de Producto",
+      "value": "Agro"
+    }
+  ],
+  "chip_label": "Microaspersión",
+  "original_url": "https://surerain.com/catalogo?producto=tavlit-961-miniaspersor-circular",
+  "outer_html": "<div class=\"card product-card cursor-pointer\" data-category=\"microaspersion\" data-marca=\"Tavlit (Israel)\" data-vertical=\"agro\" onclick=\"openProductModal('Tavlit 961 Miniaspersor circular','Miniaspersor circular, no incluye conector AGRIDOR 961-120 Caudal: 120 l/h Presión Bar: 2,0 Ángulo: 360° Diámetro: 7 metros','<tr><td>Marca</td><td>Tavlit (Israel)</td></tr><tr><td>Tipo de Producto</td><td>Agro</td></tr>')\"><img width=\"195\" height=\"130\" alt=\"Tavlit 961 Miniaspersor circular\" class=\"w-full object-cover\" loading=\"lazy\" src=\"assets/productos-importados/miniaspersor-circular-no-incluye-conector.webp\" style=\"height:130px;\"><div class=\"p-3\"><span class=\"chip chip-agro mb-1.5\">Microaspersión</span><h4 class=\"font-semibold text-gray-900 text-xs mb-1\">Tavlit 961 Miniaspersor circular</h4><p class=\"text-xs text-gray-400 mb-2\">Tavlit (Israel)</p><div class=\"flex gap-1.5\"><span class=\"text-xs text-sr-green font-semibold cursor-pointer\">Ver ficha</span><span class=\"text-gray-300\">·</span><a class=\"text-xs text-gray-400 hover:text-sr-green\" href=\"contacto.html\">Dónde comprar</a></div></div></div>",
+  "onclick_raw": "openProductModal('Tavlit 961 Miniaspersor circular','Miniaspersor circular, no incluye conector AGRIDOR 961-120 Caudal: 120 l/h Presión Bar: 2,0 Ángulo: 360° Diámetro: 7 metros','<tr><td>Marca</td><td>Tavlit (Israel)</td></tr><tr><td>Tipo de Producto</td><td>Agro</td></tr>')",
+  "content_hash": "d6ba7f95e97d9e209daa54f61dc739e81e8b809a06d0788e2332ca2bbf1bf2a5",
+  "provenance": {
+    "source_url": "file://C:\\proyectos\\SURERAIN-CLONE\\data\\raw\\catalogo.source.html",
+    "source_page": "https://surerain.com/catalogo",
+    "source_selector": ".product-card:nth-of-type(142)",
+    "extracted_at": "2026-08-13T22:03:32.860Z",
+    "raw_fields": [
+      "data-category",
+      "data-marca",
+      "data-tipo",
+      "data-vertical",
+      "data-ficha",
+      "img[src]",
+      "h4",
+      "openProductModal(name,description,specsHtml)"
+    ]
+  }
+}

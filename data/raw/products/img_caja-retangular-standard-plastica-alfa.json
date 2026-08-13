@@ -1,0 +1,48 @@
+{
+  "source_index": 277,
+  "source_id": "img:caja-retangular-standard-plastica-alfa",
+  "name": "Caja Retangular Standard Plástica Alfa",
+  "slug": "caja-retangular-standard-plastica-alfa",
+  "category_slug": "valvulas",
+  "brand_name": "Plástica Alfa (Italia)",
+  "product_type_slug": null,
+  "markets": [
+    "av"
+  ],
+  "image_url": "https://surerain.com/assets/productos-importados/caja-retangular-standard-plastica-alfa.webp",
+  "image_alt": "Caja Retangular Standard Plástica Alfa",
+  "ficha_url": null,
+  "description": "Medidas Modelo Standard: Tapa: 38 cm Altura: 30 cm Base: 49,6 cm Construidas en polipropileno reforzado para máxima resistencia mecánica y estabilidad frente a impactos y exposición solar.",
+  "specs_html": "<tr><td>Marca</td><td>Plástica Alfa (Italia)</td></tr><tr><td>Tipo de Producto</td><td>Áreas Verdes</td></tr>",
+  "specs_rows": [
+    {
+      "label": "Marca",
+      "value": "Plástica Alfa (Italia)"
+    },
+    {
+      "label": "Tipo de Producto",
+      "value": "Áreas Verdes"
+    }
+  ],
+  "chip_label": "Válvulas",
+  "original_url": "https://surerain.com/catalogo?producto=caja-retangular-standard-plastica-alfa",
+  "outer_html": "<div class=\"card product-card cursor-pointer\" data-category=\"valvulas\" data-marca=\"Plástica Alfa (Italia)\" data-vertical=\"av\" onclick=\"openProductModal('Caja Retangular Standard Plástica Alfa','Medidas Modelo Standard: Tapa: 38 cm Altura: 30 cm Base: 49,6 cm Construidas en polipropileno reforzado para máxima resistencia mecánica y estabilidad frente a impactos y exposición solar.','<tr><td>Marca</td><td>Plástica Alfa (Italia)</td></tr><tr><td>Tipo de Producto</td><td>Áreas Verdes</td></tr>')\"><img width=\"195\" height=\"130\" alt=\"Caja Retangular Standard Plástica Alfa\" class=\"w-full object-cover\" loading=\"lazy\" src=\"assets/productos-importados/caja-retangular-standard-plastica-alfa.webp\" style=\"height:130px;\"><div class=\"p-3\"><span class=\"chip chip-av mb-1.5\">Válvulas</span><h4 class=\"font-semibold text-gray-900 text-xs mb-1\">Caja Retangular Standard Plástica Alfa</h4><p class=\"text-xs text-gray-400 mb-2\">Plástica Alfa (Italia)</p><div class=\"flex gap-1.5\"><span class=\"text-xs text-sr-green font-semibold cursor-pointer\">Ver ficha</span><span class=\"text-gray-300\">·</span><a class=\"text-xs text-gray-400 hover:text-sr-green\" href=\"contacto.html\">Dónde comprar</a></div></div></div>",
+  "onclick_raw": "openProductModal('Caja Retangular Standard Plástica Alfa','Medidas Modelo Standard: Tapa: 38 cm Altura: 30 cm Base: 49,6 cm Construidas en polipropileno reforzado para máxima resistencia mecánica y estabilidad frente a impactos y exposición solar.','<tr><td>Marca</td><td>Plástica Alfa (Italia)</td></tr><tr><td>Tipo de Producto</td><td>Áreas Verdes</td></tr>')",
+  "content_hash": "1941ba97e0bb9586af2e1f20d97707701de9aa5ec5432b6ab06ad69360ce7ba6",
+  "provenance": {
+    "source_url": "file://C:\\proyectos\\SURERAIN-CLONE\\data\\raw\\catalogo.source.html",
+    "source_page": "https://surerain.com/catalogo",
+    "source_selector": ".product-card:nth-of-type(278)",
+    "extracted_at": "2026-08-13T22:03:32.860Z",
+    "raw_fields": [
+      "data-category",
+      "data-marca",
+      "data-tipo",
+      "data-vertical",
+      "data-ficha",
+      "img[src]",
+      "h4",
+      "openProductModal(name,description,specsHtml)"
+    ]
+  }
+}

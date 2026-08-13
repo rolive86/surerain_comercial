@@ -1,0 +1,45 @@
+{
+  "source_index": 76,
+  "source_id": "img:microtubo-comando",
+  "name": "Microtubo comando",
+  "slug": "microtubo-comando",
+  "category_slug": "goteo",
+  "brand_name": "GreenPlains",
+  "product_type_slug": null,
+  "markets": [
+    "agro",
+    "av"
+  ],
+  "image_url": "https://surerain.com/assets/productos-importados/microtubo-comando.webp",
+  "image_alt": "Microtubo comando",
+  "ficha_url": null,
+  "description": "Características y uso: – Utilizado para comando a distancia de válvulas hidráulicas. – Semiflexible. – Presión máxima: 5 bar. Medidas disponibles: 6 mm x 8 mm",
+  "specs_html": "<tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes</td></tr>",
+  "specs_rows": [
+    {
+      "label": "Tipo de Producto",
+      "value": "Agro, Áreas Verdes"
+    }
+  ],
+  "chip_label": "Goteo",
+  "original_url": "https://surerain.com/catalogo?producto=microtubo-comando",
+  "outer_html": "<div class=\"card product-card cursor-pointer\" data-category=\"goteo\" data-marca=\"GreenPlains\" data-vertical=\"agro av\" onclick=\"openProductModal('Microtubo comando','Características y uso: – Utilizado para comando a distancia de válvulas hidráulicas. – Semiflexible. – Presión máxima: 5 bar. Medidas disponibles: 6&nbsp;mm&nbsp;x&nbsp;8&nbsp;mm','<tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes</td></tr>')\"><img width=\"195\" height=\"130\" alt=\"Microtubo comando\" class=\"w-full object-cover\" loading=\"lazy\" src=\"assets/productos-importados/microtubo-comando.webp\" style=\"height:130px;\"><div class=\"p-3\"><span class=\"chip chip-agro mb-1.5\">Goteo</span><h4 class=\"font-semibold text-gray-900 text-xs mb-1\">Microtubo comando</h4><p class=\"text-xs text-gray-400 mb-2\">Goteo</p><div class=\"flex gap-1.5\"><span class=\"text-xs text-sr-green font-semibold cursor-pointer\">Ver ficha</span><span class=\"text-gray-300\">·</span><a class=\"text-xs text-gray-400 hover:text-sr-green\" href=\"contacto.html\">Dónde comprar</a></div></div></div>",
+  "onclick_raw": "openProductModal('Microtubo comando','Características y uso: – Utilizado para comando a distancia de válvulas hidráulicas. – Semiflexible. – Presión máxima: 5 bar. Medidas disponibles: 6 mm x 8 mm','<tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes</td></tr>')",
+  "content_hash": "4981fd17b752c88931b27907e10067046036b389858aa68ea06133d7eab03daa",
+  "provenance": {
+    "source_url": "file://C:\\proyectos\\SURERAIN-CLONE\\data\\raw\\catalogo.source.html",
+    "source_page": "https://surerain.com/catalogo",
+    "source_selector": ".product-card:nth-of-type(77)",
+    "extracted_at": "2026-08-13T22:03:32.860Z",
+    "raw_fields": [
+      "data-category",
+      "data-marca",
+      "data-tipo",
+      "data-vertical",
+      "data-ficha",
+      "img[src]",
+      "h4",
+      "openProductModal(name,description,specsHtml)"
+    ]
+  }
+}

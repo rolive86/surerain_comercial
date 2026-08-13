@@ -1,0 +1,48 @@
+{
+  "source_index": 42,
+  "source_id": "img:tobera-emergente-3-pulg-spray",
+  "name": "Tobera Emergente 3 Pulg. (SPRAY)",
+  "slug": "tobera-emergente-3-pulg-spray",
+  "category_slug": "aspersores",
+  "brand_name": "K-Rain (USA)",
+  "product_type_slug": "emergente",
+  "markets": [
+    "av"
+  ],
+  "image_url": "https://surerain.com/assets/productos-importados/tobera-emergente-3-pulg-spray.webp",
+  "image_alt": "Tobera Emergente 3 Pulg. (SPRAY)",
+  "ficha_url": null,
+  "description": "SPRAY – Disponible en modelos de 3″ (7.5cm) y 4″ ( 10 cm ). – Válvula antidrenaje opcional. – Esta tobera es compatible con boquillas rosca macho.",
+  "specs_html": "<tr><td>Marca</td><td>K-Rain (USA)</td></tr><tr><td>Tipo de Producto</td><td>Áreas Verdes</td></tr>",
+  "specs_rows": [
+    {
+      "label": "Marca",
+      "value": "K-Rain (USA)"
+    },
+    {
+      "label": "Tipo de Producto",
+      "value": "Áreas Verdes"
+    }
+  ],
+  "chip_label": "Aspersores",
+  "original_url": "https://surerain.com/catalogo?producto=tobera-emergente-3-pulg-spray",
+  "outer_html": "<div class=\"card product-card cursor-pointer\" data-category=\"aspersores\" data-marca=\"K-Rain (USA)\" data-tipo=\"emergente\" data-vertical=\"av\" onclick=\"openProductModal('Tobera Emergente 3 Pulg. (SPRAY)','SPRAY – Disponible en modelos de 3″ (7.5cm) y 4″ ( 10 cm ). – Válvula antidrenaje opcional. – Esta tobera es compatible con boquillas rosca macho.','<tr><td>Marca</td><td>K-Rain (USA)</td></tr><tr><td>Tipo de Producto</td><td>Áreas Verdes</td></tr>')\"><img width=\"195\" height=\"130\" alt=\"Tobera Emergente 3 Pulg. (SPRAY)\" class=\"w-full object-cover\" loading=\"lazy\" src=\"assets/productos-importados/tobera-emergente-3-pulg-spray.webp\" style=\"height:130px;\"><div class=\"p-3\"><span class=\"chip chip-av mb-1.5\">Aspersores</span><h4 class=\"font-semibold text-gray-900 text-xs mb-1\">Tobera Emergente 3 Pulg. (SPRAY)</h4><p class=\"text-xs text-gray-400 mb-2\">K-Rain (USA)</p><div class=\"flex gap-1.5\"><span class=\"text-xs text-sr-green font-semibold cursor-pointer\">Ver ficha</span><span class=\"text-gray-300\">·</span><a class=\"text-xs text-gray-400 hover:text-sr-green\" href=\"contacto.html\">Dónde comprar</a></div></div></div>",
+  "onclick_raw": "openProductModal('Tobera Emergente 3 Pulg. (SPRAY)','SPRAY – Disponible en modelos de 3″ (7.5cm) y 4″ ( 10 cm ). – Válvula antidrenaje opcional. – Esta tobera es compatible con boquillas rosca macho.','<tr><td>Marca</td><td>K-Rain (USA)</td></tr><tr><td>Tipo de Producto</td><td>Áreas Verdes</td></tr>')",
+  "content_hash": "ab745932a1c4545c351200f564ef88e7f5630ef05e0f67a2e1ff8eb9cb820e94",
+  "provenance": {
+    "source_url": "file://C:\\proyectos\\SURERAIN-CLONE\\data\\raw\\catalogo.source.html",
+    "source_page": "https://surerain.com/catalogo",
+    "source_selector": ".product-card:nth-of-type(43)",
+    "extracted_at": "2026-08-13T22:03:32.860Z",
+    "raw_fields": [
+      "data-category",
+      "data-marca",
+      "data-tipo",
+      "data-vertical",
+      "data-ficha",
+      "img[src]",
+      "h4",
+      "openProductModal(name,description,specsHtml)"
+    ]
+  }
+}

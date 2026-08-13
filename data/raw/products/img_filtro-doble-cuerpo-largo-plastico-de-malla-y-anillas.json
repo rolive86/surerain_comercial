@@ -1,0 +1,48 @@
+{
+  "source_index": 162,
+  "source_id": "img:filtro-doble-cuerpo-largo-plastico-de-malla-y-anillas",
+  "name": "Filtro doble cuerpo largo plástico de malla y anillas",
+  "slug": "filtro-doble-cuerpo-largo-plastico-de-malla-y-anillas",
+  "category_slug": "filtros",
+  "brand_name": "GreenPlains, Origen China",
+  "product_type_slug": null,
+  "markets": [
+    "agro"
+  ],
+  "image_url": "https://surerain.com/assets/productos-importados/filtro-doble-cuerpo-largo-plastico-de-malla-y-anillas.webp",
+  "image_alt": "Filtro doble cuerpo largo plástico de malla y anillas",
+  "ficha_url": null,
+  "description": "En breve.",
+  "specs_html": "<tr><td>Marca</td><td>GreenPlains, Origen China</td></tr><tr><td>Tipo de Producto</td><td>Agro</td></tr>",
+  "specs_rows": [
+    {
+      "label": "Marca",
+      "value": "GreenPlains, Origen China"
+    },
+    {
+      "label": "Tipo de Producto",
+      "value": "Agro"
+    }
+  ],
+  "chip_label": "Filtros",
+  "original_url": "https://surerain.com/catalogo?producto=filtro-doble-cuerpo-largo-plastico-de-malla-y-anillas",
+  "outer_html": "<div class=\"card product-card cursor-pointer\" data-category=\"filtros\" data-marca=\"GreenPlains, Origen China\" data-vertical=\"agro\" onclick=\"openProductModal('Filtro doble cuerpo largo plástico de malla&nbsp;y&nbsp;anillas','En breve.','<tr><td>Marca</td><td>GreenPlains, Origen China</td></tr><tr><td>Tipo de Producto</td><td>Agro</td></tr>')\"><img width=\"195\" height=\"130\" alt=\"Filtro doble cuerpo largo plástico de malla&nbsp;y&nbsp;anillas\" class=\"w-full object-cover\" loading=\"lazy\" src=\"assets/productos-importados/filtro-doble-cuerpo-largo-plastico-de-malla-y-anillas.webp\" style=\"height:130px;\"><div class=\"p-3\"><span class=\"chip chip-agro mb-1.5\">Filtros</span><h4 class=\"font-semibold text-gray-900 text-xs mb-1\">Filtro doble cuerpo largo plástico de malla&nbsp;y&nbsp;anillas</h4><p class=\"text-xs text-gray-400 mb-2\">GreenPlains, Origen China</p><div class=\"flex gap-1.5\"><span class=\"text-xs text-sr-green font-semibold cursor-pointer\">Ver ficha</span><span class=\"text-gray-300\">·</span><a class=\"text-xs text-gray-400 hover:text-sr-green\" href=\"contacto.html\">Dónde comprar</a></div></div></div>",
+  "onclick_raw": "openProductModal('Filtro doble cuerpo largo plástico de malla y anillas','En breve.','<tr><td>Marca</td><td>GreenPlains, Origen China</td></tr><tr><td>Tipo de Producto</td><td>Agro</td></tr>')",
+  "content_hash": "1a20d8443707be7df2a3d4fd8f4fe824bf44abeadf7bc6a2bbc29a19b7656450",
+  "provenance": {
+    "source_url": "file://C:\\proyectos\\SURERAIN-CLONE\\data\\raw\\catalogo.source.html",
+    "source_page": "https://surerain.com/catalogo",
+    "source_selector": ".product-card:nth-of-type(163)",
+    "extracted_at": "2026-08-13T22:03:32.860Z",
+    "raw_fields": [
+      "data-category",
+      "data-marca",
+      "data-tipo",
+      "data-vertical",
+      "data-ficha",
+      "img[src]",
+      "h4",
+      "openProductModal(name,description,specsHtml)"
+    ]
+  }
+}

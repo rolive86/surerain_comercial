@@ -1,0 +1,48 @@
+{
+  "source_index": 144,
+  "source_id": "img:miniaspersor-plastico-a-bolilla-assr-8503",
+  "name": "ASSR 8503 Miniaspersor plástico circular",
+  "slug": "assr-8503-miniaspersor-plastico-circular",
+  "category_slug": "microaspersion",
+  "brand_name": "Origen China",
+  "product_type_slug": null,
+  "markets": [
+    "agro"
+  ],
+  "image_url": "https://surerain.com/assets/productos-importados/miniaspersor-plastico-a-bolilla-assr-8503.webp",
+  "image_alt": "ASSR 8503 Miniaspersor plástico circular",
+  "ficha_url": "https://surerain.com/assets/productos-fichas/321imgdesc1.webp",
+  "description": "CARACTERÍSTICAS: – Aspersores rotativos helicoidales circular – Conexión de 1/2” rosca macho – Fabricado en plástico Delrin – Plástico de alta resistencia a la corrosión, a productos químicos y a UV – Excelente y uniforme distribución – Boquillas codificadas por colores para una fácil identificación…",
+  "specs_html": "<tr><td>Marca</td><td>Origen China</td></tr><tr><td>Tipo de Producto</td><td>Agro</td></tr>",
+  "specs_rows": [
+    {
+      "label": "Marca",
+      "value": "Origen China"
+    },
+    {
+      "label": "Tipo de Producto",
+      "value": "Agro"
+    }
+  ],
+  "chip_label": "Microaspersión",
+  "original_url": "https://surerain.com/catalogo?producto=assr-8503-miniaspersor-plastico-circular",
+  "outer_html": "<div class=\"card product-card cursor-pointer\" data-category=\"microaspersion\" data-ficha=\"assets/productos-fichas/321imgdesc1.webp\" data-marca=\"Origen China\" data-vertical=\"agro\" onclick=\"openProductModal('ASSR 8503 Miniaspersor plástico circular','CARACTERÍSTICAS: – Aspersores rotativos helicoidales circular – Conexión de 1/2” rosca macho – Fabricado en plástico Delrin – Plástico de alta resistencia a la corrosión, a productos químicos y a UV – Excelente y uniforme distribución – Boquillas codificadas por colores para una fácil identificación…','<tr><td>Marca</td><td>Origen China</td></tr><tr><td>Tipo de Producto</td><td>Agro</td></tr>')\"><img width=\"195\" height=\"130\" alt=\"ASSR 8503 Miniaspersor plástico circular\" class=\"w-full object-cover\" loading=\"lazy\" src=\"assets/productos-importados/miniaspersor-plastico-a-bolilla-assr-8503.webp\" style=\"height:130px;\"><div class=\"p-3\"><span class=\"chip chip-agro mb-1.5\">Microaspersión</span><h4 class=\"font-semibold text-gray-900 text-xs mb-1\">ASSR 8503 Miniaspersor plástico circular</h4><p class=\"text-xs text-gray-400 mb-2\">Origen China</p><div class=\"flex gap-1.5\"><span class=\"text-xs text-sr-green font-semibold cursor-pointer\">Ver ficha</span><span class=\"text-gray-300\">·</span><a class=\"text-xs text-gray-400 hover:text-sr-green\" href=\"contacto.html\">Dónde comprar</a></div></div></div>",
+  "onclick_raw": "openProductModal('ASSR 8503 Miniaspersor plástico circular','CARACTERÍSTICAS: – Aspersores rotativos helicoidales circular – Conexión de 1/2” rosca macho – Fabricado en plástico Delrin – Plástico de alta resistencia a la corrosión, a productos químicos y a UV – Excelente y uniforme distribución – Boquillas codificadas por colores para una fácil identificación…','<tr><td>Marca</td><td>Origen China</td></tr><tr><td>Tipo de Producto</td><td>Agro</td></tr>')",
+  "content_hash": "9c59172ae7227f08ccbb0843d0543ae364ecd94eb8f9f136e9d58dcc17451c3f",
+  "provenance": {
+    "source_url": "file://C:\\proyectos\\SURERAIN-CLONE\\data\\raw\\catalogo.source.html",
+    "source_page": "https://surerain.com/catalogo",
+    "source_selector": ".product-card:nth-of-type(145)",
+    "extracted_at": "2026-08-13T22:03:32.860Z",
+    "raw_fields": [
+      "data-category",
+      "data-marca",
+      "data-tipo",
+      "data-vertical",
+      "data-ficha",
+      "img[src]",
+      "h4",
+      "openProductModal(name,description,specsHtml)"
+    ]
+  }
+}

@@ -1,0 +1,254 @@
+[
+  {
+    "id": "c4ec2fec-0e58-4b63-8b8f-e7ef40a8b7bd",
+    "name": "Aqua-Traxx (USA)",
+    "slug": "aqua-traxx-usa",
+    "description": null,
+    "logo_media_id": null,
+    "active": true,
+    "source_id": "brand:aqua-traxx-usa"
+  },
+  {
+    "id": "eebeb959-25ab-47ac-9803-6f8f1c173a77",
+    "name": "Dorot (Israel)",
+    "slug": "dorot-israel",
+    "description": null,
+    "logo_media_id": null,
+    "active": true,
+    "source_id": "brand:dorot-israel"
+  },
+  {
+    "id": "e0067f9c-ccf7-43d9-aaee-8343b8a67aed",
+    "name": "ERA",
+    "slug": "era",
+    "description": null,
+    "logo_media_id": null,
+    "active": true,
+    "source_id": "brand:era"
+  },
+  {
+    "id": "e4f4c451-ad9f-4226-b690-645ba9809cd4",
+    "name": "Erhas (Turquía)",
+    "slug": "erhas-turquia",
+    "description": null,
+    "logo_media_id": null,
+    "active": true,
+    "source_id": "brand:erhas-turquia"
+  },
+  {
+    "id": "108081bc-540f-423b-9854-d47384988b50",
+    "name": "Galarza",
+    "slug": "galarza",
+    "description": null,
+    "logo_media_id": null,
+    "active": true,
+    "source_id": "brand:galarza"
+  },
+  {
+    "id": "e61d87b4-93df-4d0c-afed-89835b844de1",
+    "name": "GreenPlains",
+    "slug": "greenplains",
+    "description": null,
+    "logo_media_id": null,
+    "active": true,
+    "source_id": "brand:greenplains"
+  },
+  {
+    "id": "4f0fc334-1ad2-40f8-a8dc-044492fbbbb7",
+    "name": "GreenPlains, Origen China",
+    "slug": "greenplains-origen-china",
+    "description": null,
+    "logo_media_id": null,
+    "active": true,
+    "source_id": "brand:greenplains-origen-china"
+  },
+  {
+    "id": "4b123b17-6e52-49fe-8659-fe083bf29ca9",
+    "name": "Hebei",
+    "slug": "hebei",
+    "description": null,
+    "logo_media_id": null,
+    "active": true,
+    "source_id": "brand:hebei"
+  },
+  {
+    "id": "4743a11d-5d4f-41f3-b15c-c4eb254ae00d",
+    "name": "Irriway (Italia)",
+    "slug": "irriway-italia",
+    "description": null,
+    "logo_media_id": null,
+    "active": true,
+    "source_id": "brand:irriway-italia"
+  },
+  {
+    "id": "e2b2a28c-4579-4f51-abf9-a03763736a76",
+    "name": "K-Rain (USA)",
+    "slug": "k-rain-usa",
+    "description": null,
+    "logo_media_id": null,
+    "active": true,
+    "source_id": "brand:k-rain-usa"
+  },
+  {
+    "id": "80901ed2-194f-439d-bb2f-9ae0e9eabc44",
+    "name": "Kexing",
+    "slug": "kexing",
+    "description": null,
+    "logo_media_id": null,
+    "active": true,
+    "source_id": "brand:kexing"
+  },
+  {
+    "id": "d5c52dbd-f63e-4a6a-90c8-87f1778a996b",
+    "name": "Olivos",
+    "slug": "olivos",
+    "description": null,
+    "logo_media_id": null,
+    "active": true,
+    "source_id": "brand:olivos"
+  },
+  {
+    "id": "ada680ba-9c5e-4b51-9441-bef501040fd1",
+    "name": "Origen China",
+    "slug": "origen-china",
+    "description": null,
+    "logo_media_id": null,
+    "active": true,
+    "source_id": "brand:origen-china"
+  },
+  {
+    "id": "01093daa-df84-45b2-b390-9e8760084893",
+    "name": "Palaplast (Grecia)",
+    "slug": "palaplast-grecia",
+    "description": null,
+    "logo_media_id": null,
+    "active": true,
+    "source_id": "brand:palaplast-grecia"
+  },
+  {
+    "id": "14b4f623-921c-43d0-84bd-6c67fca9e625",
+    "name": "Plástica Alfa (Italia)",
+    "slug": "plastica-alfa-italia",
+    "description": null,
+    "logo_media_id": null,
+    "active": true,
+    "source_id": "brand:plastica-alfa-italia"
+  },
+  {
+    "id": "502c1968-e603-4c9a-997c-a295179fde97",
+    "name": "Plásticos Coorp",
+    "slug": "plasticos-coorp",
+    "description": null,
+    "logo_media_id": null,
+    "active": true,
+    "source_id": "brand:plasticos-coorp"
+  },
+  {
+    "id": "a4efa00d-ea65-478b-b6e7-dca9b95d2616",
+    "name": "Prosper",
+    "slug": "prosper",
+    "description": null,
+    "logo_media_id": null,
+    "active": true,
+    "source_id": "brand:prosper"
+  },
+  {
+    "id": "7de41fc4-de28-44c7-a3c5-1caa15e0f612",
+    "name": "RPE (Italia)",
+    "slug": "rpe-italia",
+    "description": null,
+    "logo_media_id": null,
+    "active": true,
+    "source_id": "brand:rpe-italia"
+  },
+  {
+    "id": "c255019b-bc23-44f9-9128-c847ec8c8076",
+    "name": "Rossi (Italia)",
+    "slug": "rossi-italia",
+    "description": null,
+    "logo_media_id": null,
+    "active": true,
+    "source_id": "brand:rossi-italia"
+  },
+  {
+    "id": "916b3fcf-86b7-4692-b745-d9e01198fcc2",
+    "name": "Taizhou",
+    "slug": "taizhou",
+    "description": null,
+    "logo_media_id": null,
+    "active": true,
+    "source_id": "brand:taizhou"
+  },
+  {
+    "id": "7befb83d-0e79-47eb-b642-a75e4a804082",
+    "name": "Tavlit (Israel)",
+    "slug": "tavlit-israel",
+    "description": null,
+    "logo_media_id": null,
+    "active": true,
+    "source_id": "brand:tavlit-israel"
+  },
+  {
+    "id": "1276054d-3ae1-4f04-becb-2a67523627ea",
+    "name": "Tecnidro (Italia)",
+    "slug": "tecnidro-italia",
+    "description": null,
+    "logo_media_id": null,
+    "active": true,
+    "source_id": "brand:tecnidro-italia"
+  },
+  {
+    "id": "dbcf3c96-e062-4073-a94a-d2146039eed1",
+    "name": "Tianyan",
+    "slug": "tianyan",
+    "description": null,
+    "logo_media_id": null,
+    "active": true,
+    "source_id": "brand:tianyan"
+  },
+  {
+    "id": "34cb2a26-c322-4185-a80e-62e68d7a9b20",
+    "name": "Unirain (España)",
+    "slug": "unirain-espana",
+    "description": null,
+    "logo_media_id": null,
+    "active": true,
+    "source_id": "brand:unirain-espana"
+  },
+  {
+    "id": "685b5af8-1763-42ee-83fe-4a9ff9da0223",
+    "name": "Varios",
+    "slug": "varios",
+    "description": null,
+    "logo_media_id": null,
+    "active": true,
+    "source_id": "brand:varios"
+  },
+  {
+    "id": "215bba8e-a979-4655-a510-a3b40112eb80",
+    "name": "Vyrsa (España)",
+    "slug": "vyrsa-espana",
+    "description": null,
+    "logo_media_id": null,
+    "active": true,
+    "source_id": "brand:vyrsa-espana"
+  },
+  {
+    "id": "49e3383d-0b52-4d85-805c-4a1b7e56cf25",
+    "name": "Winin",
+    "slug": "winin",
+    "description": null,
+    "logo_media_id": null,
+    "active": true,
+    "source_id": "brand:winin"
+  },
+  {
+    "id": "9b0b7934-4fdc-4f19-9896-32acc26d0eaa",
+    "name": "ZM Yuyao",
+    "slug": "zm-yuyao",
+    "description": null,
+    "logo_media_id": null,
+    "active": true,
+    "source_id": "brand:zm-yuyao"
+  }
+]

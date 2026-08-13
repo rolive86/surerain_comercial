@@ -1,0 +1,48 @@
+{
+  "source_index": 105,
+  "source_id": "img:cinta-de-riego-por-goteo-irriway",
+  "name": "Cinta de Riego por goteo Irriway",
+  "slug": "cinta-de-riego-por-goteo-irriway",
+  "category_slug": "goteo",
+  "brand_name": "Irriway (Italia)",
+  "product_type_slug": null,
+  "markets": [
+    "agro"
+  ],
+  "image_url": "https://surerain.com/assets/productos-importados/cinta-de-riego-por-goteo-irriway.webp",
+  "image_alt": "Cinta de Riego por goteo Irriway",
+  "ficha_url": "https://surerain.com/assets/productos-fichas/849imgdesc1.webp",
+  "description": "La cinta Irriway, con su corta separación entre orificios, bajos caudales y gama de espesores, es el producto ideal para los terrenos permeables generalmente destinados a los cultivos hortícolas y a la floricultura, tanto extensivos como intensivos en invernaderos, de tomate, sandía, melón, fresa, calabacines, pimiento, berenjena, espárrago, papa, pepino, cebolla, rosa, claveles, etc.",
+  "specs_html": "<tr><td>Marca</td><td>Irriway (Italia)</td></tr><tr><td>Tipo de Producto</td><td>Agro</td></tr>",
+  "specs_rows": [
+    {
+      "label": "Marca",
+      "value": "Irriway (Italia)"
+    },
+    {
+      "label": "Tipo de Producto",
+      "value": "Agro"
+    }
+  ],
+  "chip_label": "Goteo",
+  "original_url": "https://surerain.com/catalogo?producto=cinta-de-riego-por-goteo-irriway",
+  "outer_html": "<div class=\"card product-card cursor-pointer\" data-category=\"goteo\" data-ficha=\"assets/productos-fichas/849imgdesc1.webp\" data-marca=\"Irriway (Italia)\" data-vertical=\"agro\" onclick=\"openProductModal('Cinta de Riego por goteo Irriway','La cinta Irriway, con su corta separación entre orificios, bajos caudales y gama de espesores, es el producto ideal para los terrenos permeables generalmente destinados a los cultivos hortícolas y a la floricultura, tanto extensivos como intensivos en invernaderos, de tomate, sandía, melón, fresa, calabacines, pimiento, berenjena, espárrago, papa, pepino, cebolla, rosa, claveles, etc.','<tr><td>Marca</td><td>Irriway (Italia)</td></tr><tr><td>Tipo de Producto</td><td>Agro</td></tr>')\"><img width=\"195\" height=\"130\" alt=\"Cinta de Riego por goteo Irriway\" class=\"w-full object-cover\" loading=\"lazy\" src=\"assets/productos-importados/cinta-de-riego-por-goteo-irriway.webp\" style=\"height:130px;\"><div class=\"p-3\"><span class=\"chip chip-agro mb-1.5\">Goteo</span><h4 class=\"font-semibold text-gray-900 text-xs mb-1\">Cinta de Riego por goteo Irriway</h4><p class=\"text-xs text-gray-400 mb-2\">Irriway (Italia)</p><div class=\"flex gap-1.5\"><span class=\"text-xs text-sr-green font-semibold cursor-pointer\">Ver ficha</span><span class=\"text-gray-300\">·</span><a class=\"text-xs text-gray-400 hover:text-sr-green\" href=\"contacto.html\">Dónde comprar</a></div></div></div>",
+  "onclick_raw": "openProductModal('Cinta de Riego por goteo Irriway','La cinta Irriway, con su corta separación entre orificios, bajos caudales y gama de espesores, es el producto ideal para los terrenos permeables generalmente destinados a los cultivos hortícolas y a la floricultura, tanto extensivos como intensivos en invernaderos, de tomate, sandía, melón, fresa, calabacines, pimiento, berenjena, espárrago, papa, pepino, cebolla, rosa, claveles, etc.','<tr><td>Marca</td><td>Irriway (Italia)</td></tr><tr><td>Tipo de Producto</td><td>Agro</td></tr>')",
+  "content_hash": "df01e6bac4c30004ce3228d04a9eec4ca0f651fbe954f257872731fef7e49903",
+  "provenance": {
+    "source_url": "file://C:\\proyectos\\SURERAIN-CLONE\\data\\raw\\catalogo.source.html",
+    "source_page": "https://surerain.com/catalogo",
+    "source_selector": ".product-card:nth-of-type(106)",
+    "extracted_at": "2026-08-13T22:03:32.860Z",
+    "raw_fields": [
+      "data-category",
+      "data-marca",
+      "data-tipo",
+      "data-vertical",
+      "data-ficha",
+      "img[src]",
+      "h4",
+      "openProductModal(name,description,specsHtml)"
+    ]
+  }
+}

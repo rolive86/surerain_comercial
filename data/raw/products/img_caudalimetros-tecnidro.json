@@ -1,0 +1,45 @@
+{
+  "source_index": 281,
+  "source_id": "img:caudalimetros-tecnidro",
+  "name": "Caudalímetros Tecnidro c/emisor de pulso",
+  "slug": "caudalimetros-tecnidro-c-emisor-de-pulso",
+  "category_slug": "caudalimetros",
+  "brand_name": "Tecnidro (Italia)",
+  "product_type_slug": null,
+  "markets": [
+    "agro",
+    "infra"
+  ],
+  "image_url": "https://surerain.com/assets/productos-importados/caudalimetros-tecnidro.webp",
+  "image_alt": "Caudalímetros Tecnidro c/emisor de pulso",
+  "ficha_url": "https://surerain.com/assets/productos-fichas/106imgdesc1.webp",
+  "description": "CARACTERÍSTICAS: – Pasaje de alto caudal con baja pérdida de carga – Sistema autolimpiante que permite buen funcionamiento con agua sucia – Mecanismo de medición desmontable – Medición mediante pulsos magnéticos inalterables por campos externos – Sellado hermético de mecanismo – Preparado para conex…",
+  "specs_html": "<tr><td>Tipo de Producto</td><td>Agro, Infraestructura</td></tr>",
+  "specs_rows": [
+    {
+      "label": "Tipo de Producto",
+      "value": "Agro, Infraestructura"
+    }
+  ],
+  "chip_label": "Caudalímetros",
+  "original_url": "https://surerain.com/catalogo?producto=caudalimetros-tecnidro-c-emisor-de-pulso",
+  "outer_html": "<div class=\"card product-card cursor-pointer\" data-category=\"caudalimetros\" data-ficha=\"assets/productos-fichas/106imgdesc1.webp\" data-marca=\"Tecnidro (Italia)\" data-vertical=\"agro infra\" onclick=\"openProductModal('Caudalímetros Tecnidro c/emisor de pulso','CARACTERÍSTICAS: – Pasaje de alto caudal con baja pérdida de carga – Sistema autolimpiante que permite buen funcionamiento con agua sucia – Mecanismo de medición desmontable – Medición mediante pulsos magnéticos inalterables por campos externos – Sellado hermético de mecanismo – Preparado para conex…','<tr><td>Tipo de Producto</td><td>Agro, Infraestructura</td></tr>')\"><img width=\"195\" height=\"130\" alt=\"Caudalímetros Tecnidro c/emisor de pulso\" class=\"w-full object-cover\" loading=\"lazy\" src=\"assets/productos-importados/caudalimetros-tecnidro.webp\" style=\"height:130px;\"><div class=\"p-3\"><span class=\"chip chip-agro mb-1.5\">Caudalímetros</span><h4 class=\"font-semibold text-gray-900 text-xs mb-1\">Caudalímetros Tecnidro c/emisor de pulso</h4><p class=\"text-xs text-gray-400 mb-2\">Caudalímetros</p><div class=\"flex gap-1.5\"><span class=\"text-xs text-sr-green font-semibold cursor-pointer\">Ver ficha</span><span class=\"text-gray-300\">·</span><a class=\"text-xs text-gray-400 hover:text-sr-green\" href=\"contacto.html\">Dónde comprar</a></div></div></div>",
+  "onclick_raw": "openProductModal('Caudalímetros Tecnidro c/emisor de pulso','CARACTERÍSTICAS: – Pasaje de alto caudal con baja pérdida de carga – Sistema autolimpiante que permite buen funcionamiento con agua sucia – Mecanismo de medición desmontable – Medición mediante pulsos magnéticos inalterables por campos externos – Sellado hermético de mecanismo – Preparado para conex…','<tr><td>Tipo de Producto</td><td>Agro, Infraestructura</td></tr>')",
+  "content_hash": "3b8807a492c4cd3bdcd4a35254756d85a1f8d291620571896f07da679091b81b",
+  "provenance": {
+    "source_url": "file://C:\\proyectos\\SURERAIN-CLONE\\data\\raw\\catalogo.source.html",
+    "source_page": "https://surerain.com/catalogo",
+    "source_selector": ".product-card:nth-of-type(282)",
+    "extracted_at": "2026-08-13T22:03:32.860Z",
+    "raw_fields": [
+      "data-category",
+      "data-marca",
+      "data-tipo",
+      "data-vertical",
+      "data-ficha",
+      "img[src]",
+      "h4",
+      "openProductModal(name,description,specsHtml)"
+    ]
+  }
+}

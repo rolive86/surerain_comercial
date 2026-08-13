@@ -1,0 +1,49 @@
+{
+  "source_index": 355,
+  "source_id": "img:conector-inicial-con-aro-de-goma-recto-2",
+  "name": "Conector inicial con aro de goma recto",
+  "slug": "conector-inicial-con-aro-de-goma-recto",
+  "category_slug": "conectores",
+  "brand_name": "Varios",
+  "product_type_slug": null,
+  "markets": [
+    "agro",
+    "av"
+  ],
+  "image_url": "https://surerain.com/assets/productos-importados/conector-inicial-con-aro-de-goma-recto-2.webp",
+  "image_alt": "Conector inicial con aro de goma recto",
+  "ficha_url": null,
+  "description": "Conector inicial con aro de goma recto para tubería de polietileno a PE o PVC Diámetro: 16 mm (ACIR00000OP116D)",
+  "specs_html": "<tr><td>Marca</td><td>Varios</td></tr><tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes</td></tr>",
+  "specs_rows": [
+    {
+      "label": "Marca",
+      "value": "Varios"
+    },
+    {
+      "label": "Tipo de Producto",
+      "value": "Agro, Áreas Verdes"
+    }
+  ],
+  "chip_label": "Conectores",
+  "original_url": "https://surerain.com/catalogo?producto=conector-inicial-con-aro-de-goma-recto",
+  "outer_html": "<div class=\"card product-card cursor-pointer\" data-category=\"conectores\" data-marca=\"Varios\" data-vertical=\"agro av\" onclick=\"openProductModal('Conector inicial con aro de goma recto','Conector inicial con aro de goma recto para tubería de polietileno a PE o PVC Diámetro: 16 mm (ACIR00000OP116D)','<tr><td>Marca</td><td>Varios</td></tr><tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes</td></tr>')\"><img width=\"195\" height=\"130\" alt=\"Conector inicial con aro de goma recto\" class=\"w-full object-cover\" loading=\"lazy\" src=\"assets/productos-importados/conector-inicial-con-aro-de-goma-recto-2.webp\" style=\"height:130px;\"><div class=\"p-3\"><span class=\"chip chip-agro mb-1.5\">Conectores</span><h4 class=\"font-semibold text-gray-900 text-xs mb-1\">Conector inicial con aro de goma recto</h4><p class=\"text-xs text-gray-400 mb-2\">Varios</p><div class=\"flex gap-1.5\"><span class=\"text-xs text-sr-green font-semibold cursor-pointer\">Ver ficha</span><span class=\"text-gray-300\">·</span><a class=\"text-xs text-gray-400 hover:text-sr-green\" href=\"contacto.html\">Dónde comprar</a></div></div></div>",
+  "onclick_raw": "openProductModal('Conector inicial con aro de goma recto','Conector inicial con aro de goma recto para tubería de polietileno a PE o PVC Diámetro: 16 mm (ACIR00000OP116D)','<tr><td>Marca</td><td>Varios</td></tr><tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes</td></tr>')",
+  "content_hash": "50dd8567affe96e06b5646119e6789f869349cadc1ca9f8ba78ec0873d7a1340",
+  "provenance": {
+    "source_url": "file://C:\\proyectos\\SURERAIN-CLONE\\data\\raw\\catalogo.source.html",
+    "source_page": "https://surerain.com/catalogo",
+    "source_selector": ".product-card:nth-of-type(356)",
+    "extracted_at": "2026-08-13T22:03:32.860Z",
+    "raw_fields": [
+      "data-category",
+      "data-marca",
+      "data-tipo",
+      "data-vertical",
+      "data-ficha",
+      "img[src]",
+      "h4",
+      "openProductModal(name,description,specsHtml)"
+    ]
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "source_index": 318,
+  "source_id": "img:buje-reduccion-largo-hembra-hembra-pn10",
+  "name": "Buje reducción largo hembra-hembra (PN10)",
+  "slug": "buje-reduccion-largo-hembra-hembra-pn10",
+  "category_slug": "accesorios",
+  "brand_name": "Origen China",
+  "product_type_slug": null,
+  "markets": [
+    "agro",
+    "av",
+    "infra"
+  ],
+  "image_url": "https://surerain.com/assets/productos-importados/buje-reduccion-largo-hembra-hembra-pn10.webp",
+  "image_alt": "Buje reducción largo hembra-hembra (PN10)",
+  "ficha_url": null,
+  "description": "CARACTERÍSTICAS : -Material: PVC -Presión máxima de trabajo: PN 10 -Color: Gris -Utilizado con agua fría o caliente -Ideal para uso agropecuario y domiciliario -Temperatura de trabajo: 6 c° hasta 60 c° MEDIDAS DISPONIBLES : 40×32, 50×40, 63×50, 75×63, 90×75, 110×90, 200×160, 250×200, 315×250, 355×315",
+  "specs_html": "<tr><td>Marca</td><td>Origen China</td></tr><tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes, Infraestructura</td></tr>",
+  "specs_rows": [
+    {
+      "label": "Marca",
+      "value": "Origen China"
+    },
+    {
+      "label": "Tipo de Producto",
+      "value": "Agro, Áreas Verdes, Infraestructura"
+    }
+  ],
+  "chip_label": "Accesorios",
+  "original_url": "https://surerain.com/catalogo?producto=buje-reduccion-largo-hembra-hembra-pn10",
+  "outer_html": "<div class=\"card product-card cursor-pointer\" data-category=\"accesorios\" data-marca=\"Origen China\" data-vertical=\"agro av infra\" onclick=\"openProductModal('Buje reducción largo hembra-hembra (PN10)','CARACTERÍSTICAS : -Material: PVC -Presión máxima de trabajo: PN 10 -Color: Gris -Utilizado con agua fría o caliente -Ideal para uso agropecuario y domiciliario -Temperatura de trabajo: 6 c° hasta 60 c° MEDIDAS DISPONIBLES : 40×32, 50×40, 63×50, 75×63, 90×75, 110×90, 200×160, 250×200, 315×250, 355×315','<tr><td>Marca</td><td>Origen China</td></tr><tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes, Infraestructura</td></tr>')\"><img width=\"195\" height=\"130\" alt=\"Buje reducción largo hembra-hembra (PN10)\" class=\"w-full object-cover\" loading=\"lazy\" src=\"assets/productos-importados/buje-reduccion-largo-hembra-hembra-pn10.webp\" style=\"height:130px;\"><div class=\"p-3\"><span class=\"chip chip-agro mb-1.5\">Accesorios</span><h4 class=\"font-semibold text-gray-900 text-xs mb-1\">Buje reducción largo hembra-hembra (PN10)</h4><p class=\"text-xs text-gray-400 mb-2\">Origen China</p><div class=\"flex gap-1.5\"><span class=\"text-xs text-sr-green font-semibold cursor-pointer\">Ver ficha</span><span class=\"text-gray-300\">·</span><a class=\"text-xs text-gray-400 hover:text-sr-green\" href=\"contacto.html\">Dónde comprar</a></div></div></div>",
+  "onclick_raw": "openProductModal('Buje reducción largo hembra-hembra (PN10)','CARACTERÍSTICAS : -Material: PVC -Presión máxima de trabajo: PN 10 -Color: Gris -Utilizado con agua fría o caliente -Ideal para uso agropecuario y domiciliario -Temperatura de trabajo: 6 c° hasta 60 c° MEDIDAS DISPONIBLES : 40×32, 50×40, 63×50, 75×63, 90×75, 110×90, 200×160, 250×200, 315×250, 355×315','<tr><td>Marca</td><td>Origen China</td></tr><tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes, Infraestructura</td></tr>')",
+  "content_hash": "44f9cbd1638857f1db584d86ed191c78b3dc6db695ffb01808700fc1731b15ab",
+  "provenance": {
+    "source_url": "file://C:\\proyectos\\SURERAIN-CLONE\\data\\raw\\catalogo.source.html",
+    "source_page": "https://surerain.com/catalogo",
+    "source_selector": ".product-card:nth-of-type(319)",
+    "extracted_at": "2026-08-13T22:03:32.860Z",
+    "raw_fields": [
+      "data-category",
+      "data-marca",
+      "data-tipo",
+      "data-vertical",
+      "data-ficha",
+      "img[src]",
+      "h4",
+      "openProductModal(name,description,specsHtml)"
+    ]
+  }
+}

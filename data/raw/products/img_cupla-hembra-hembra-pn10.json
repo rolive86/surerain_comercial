@@ -1,0 +1,50 @@
+{
+  "source_index": 312,
+  "source_id": "img:cupla-hembra-hembra-pn10",
+  "name": "Cupla hembra-hembra (PN10)",
+  "slug": "cupla-hembra-hembra-pn10",
+  "category_slug": "accesorios",
+  "brand_name": "Origen China",
+  "product_type_slug": null,
+  "markets": [
+    "agro",
+    "av",
+    "infra"
+  ],
+  "image_url": "https://surerain.com/assets/productos-importados/cupla-hembra-hembra-pn10.webp",
+  "image_alt": "Cupla hembra-hembra (PN10)",
+  "ficha_url": null,
+  "description": "CARACTERÍSTICAS : -Material: PVC -Presión máxima de trabajo: PN 10 -Color: Gris -Utilizado con agua fría o caliente. -Ideal para uso agropecuario y domiciliario -Temperatura de trabajo: 6 c° hasta 60 c° MEDIDAS DISPONIBLES : 20 mm, 25 mm, 32 mm, 40 mm, 50 mm, 63 mm, 75 mm, 90 mm, 110 mm, 140 mm, 160 mm, 200 mm, 250 mm, 315 mm, 355 mm",
+  "specs_html": "<tr><td>Marca</td><td>Origen China</td></tr><tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes, Infraestructura</td></tr>",
+  "specs_rows": [
+    {
+      "label": "Marca",
+      "value": "Origen China"
+    },
+    {
+      "label": "Tipo de Producto",
+      "value": "Agro, Áreas Verdes, Infraestructura"
+    }
+  ],
+  "chip_label": "Accesorios",
+  "original_url": "https://surerain.com/catalogo?producto=cupla-hembra-hembra-pn10",
+  "outer_html": "<div class=\"card product-card cursor-pointer\" data-category=\"accesorios\" data-marca=\"Origen China\" data-vertical=\"agro av infra\" onclick=\"openProductModal('Cupla hembra-hembra (PN10)','CARACTERÍSTICAS : -Material: PVC -Presión máxima de trabajo: PN 10 -Color: Gris -Utilizado con agua fría o caliente. -Ideal para uso agropecuario y domiciliario -Temperatura de trabajo: 6 c° hasta 60 c° MEDIDAS DISPONIBLES : 20 mm, 25 mm, 32 mm, 40 mm, 50 mm, 63 mm, 75 mm, 90 mm, 110 mm, 140 mm, 160 mm, 200 mm, 250 mm, 315 mm, 355 mm','<tr><td>Marca</td><td>Origen China</td></tr><tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes, Infraestructura</td></tr>')\"><img width=\"195\" height=\"130\" alt=\"Cupla hembra-hembra (PN10)\" class=\"w-full object-cover\" loading=\"lazy\" src=\"assets/productos-importados/cupla-hembra-hembra-pn10.webp\" style=\"height:130px;\"><div class=\"p-3\"><span class=\"chip chip-agro mb-1.5\">Accesorios</span><h4 class=\"font-semibold text-gray-900 text-xs mb-1\">Cupla hembra-hembra (PN10)</h4><p class=\"text-xs text-gray-400 mb-2\">Origen China</p><div class=\"flex gap-1.5\"><span class=\"text-xs text-sr-green font-semibold cursor-pointer\">Ver ficha</span><span class=\"text-gray-300\">·</span><a class=\"text-xs text-gray-400 hover:text-sr-green\" href=\"contacto.html\">Dónde comprar</a></div></div></div>",
+  "onclick_raw": "openProductModal('Cupla hembra-hembra (PN10)','CARACTERÍSTICAS : -Material: PVC -Presión máxima de trabajo: PN 10 -Color: Gris -Utilizado con agua fría o caliente. -Ideal para uso agropecuario y domiciliario -Temperatura de trabajo: 6 c° hasta 60 c° MEDIDAS DISPONIBLES : 20 mm, 25 mm, 32 mm, 40 mm, 50 mm, 63 mm, 75 mm, 90 mm, 110 mm, 140 mm, 160 mm, 200 mm, 250 mm, 315 mm, 355 mm','<tr><td>Marca</td><td>Origen China</td></tr><tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes, Infraestructura</td></tr>')",
+  "content_hash": "7487216024ddd218e0a1fc2d6ce0ef0b9aa283f494f8532341a7c4ada6774afe",
+  "provenance": {
+    "source_url": "file://C:\\proyectos\\SURERAIN-CLONE\\data\\raw\\catalogo.source.html",
+    "source_page": "https://surerain.com/catalogo",
+    "source_selector": ".product-card:nth-of-type(313)",
+    "extracted_at": "2026-08-13T22:03:32.860Z",
+    "raw_fields": [
+      "data-category",
+      "data-marca",
+      "data-tipo",
+      "data-vertical",
+      "data-ficha",
+      "img[src]",
+      "h4",
+      "openProductModal(name,description,specsHtml)"
+    ]
+  }
+}

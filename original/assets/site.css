@@ -1,0 +1,736 @@
+/* Sure Rain Web v1 — CSS adicional sobre Tailwind */
+/* Paleta: #006A46 verde institucional, #1A6B8A azul agua, #D4651A naranja acento */
+
+:root {
+  --sr-green: #006A46;
+  --sr-green-dark: #004f33;
+  --sr-green-light: #e6f2ed;
+  --sr-blue: #1A6B8A;
+  --sr-orange: #D4651A;
+  --sr-text: #1A1A1A;
+  --sr-text-secondary: #555555;
+  --sr-bg-alt: #F5F5F0;
+  --sr-border: #E8E8E3;
+}
+
+/* Fuente */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; color: var(--sr-text); }
+
+/* Header sticky */
+.sr-header {
+  position: sticky; top: 0; z-index: 50;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0,0,0,.08);
+}
+
+/* Nav link activo */
+.nav-link { transition: color .15s; }
+.nav-link:hover { color: var(--sr-green); }
+.nav-link.active { color: var(--sr-green); border-bottom: 2px solid var(--sr-green); }
+
+/* Puente invisible entre el botón del nav y el dropdown — evita que el menú
+   se cierre al pasar por el gap visual entre el trigger y el panel.
+   Mientras el mouse esté sobre el grupo (botón + puente + panel), el dropdown
+   sigue abierto. */
+header nav .group { padding-bottom: 12px; margin-bottom: -12px; }
+header nav .group > div[class*="group-hover:block"] { margin-top: 0 !important; }
+/* Aumentamos el área clickeable de cada link del dropdown */
+header nav .group > div[class*="group-hover:block"] a { padding-top: 10px; padding-bottom: 10px; }
+/* El dropdown queda visible cuando el grupo está hovered o cuando el propio
+   panel está hovered (refuerzo por si el cursor entra rápido). */
+header nav .group:hover > div[class*="group-hover:block"],
+header nav .group > div[class*="group-hover:block"]:hover { display: block !important; }
+
+/* Botones */
+.btn-primary {
+  background: var(--sr-green);
+  color: #fff;
+  font-weight: 600;
+  padding: 12px 28px;
+  border-radius: 6px;
+  transition: background .15s, transform .1s;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 15px;
+  cursor: pointer;
+  border: none;
+}
+.btn-primary:hover { background: var(--sr-green-dark); }
+.btn-primary:active { transform: scale(.98); }
+
+.btn-secondary {
+  border: 1.5px solid var(--sr-green);
+  color: var(--sr-green);
+  background: transparent;
+  font-weight: 600;
+  padding: 12px 28px;
+  border-radius: 6px;
+  transition: background .15s;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 15px;
+  cursor: pointer;
+}
+.btn-secondary:hover { background: rgba(0,106,70,.07); }
+
+.btn-outline-white {
+  border: 1.5px solid rgba(255,255,255,.7);
+  color: #fff;
+  background: transparent;
+  font-weight: 600;
+  padding: 12px 28px;
+  border-radius: 6px;
+  transition: background .15s;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 15px;
+  cursor: pointer;
+}
+.btn-outline-white:hover { background: rgba(255,255,255,.12); }
+
+/* Hero overlay */
+.hero-overlay {
+  background: linear-gradient(to right, rgba(0,40,20,.72) 0%, rgba(0,40,20,.38) 100%);
+}
+
+/* Chips de vertical */
+.chip {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+.chip-agro { background: #d4edda; color: #155724; }
+.chip-av   { background: #cce5e0; color: #0c4a3b; }
+.chip-infra{ background: #d0e6f0; color: #0d3d5a; }
+.chip-hogar{ background: #fde8d8; color: #7a2e06; }
+
+/* Cards */
+.card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 1px 6px rgba(0,0,0,.07);
+  transition: box-shadow .2s, transform .2s;
+}
+.card:hover { box-shadow: 0 6px 20px rgba(0,0,0,.12); transform: translateY(-2px); }
+
+/* Sección con fondo alternado */
+.section-alt { background: var(--sr-bg-alt); }
+
+/* Footer verde */
+.sr-footer { background: var(--sr-green-dark); color: #fff; }
+.sr-footer a { color: rgba(255,255,255,.75); transition: color .15s; }
+.sr-footer a:hover { color: #fff; }
+.sr-footer-divider { border-color: rgba(255,255,255,.15); }
+
+/* Barra de distribuidor (verde institucional) */
+.distributor-bar { background: var(--sr-green); color: #fff; }
+
+/* Pasos numerados */
+.step-number {
+  width: 40px; height: 40px;
+  background: var(--sr-green);
+  color: #fff;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: 18px;
+  flex-shrink: 0;
+}
+
+/* Filtros catálogo */
+.filter-btn {
+  padding: 7px 18px;
+  border-radius: 20px;
+  border: 1.5px solid var(--sr-border);
+  background: #fff;
+  color: var(--sr-text-secondary);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all .15s;
+}
+.filter-btn:hover, .filter-btn.active {
+  border-color: var(--sr-green);
+  color: var(--sr-green);
+  background: var(--sr-green-light);
+}
+
+/* Mapa placeholder */
+.map-container {
+  background: #e8f0e8;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  min-height: 440px;
+}
+
+/* Scroll to top */
+.scroll-top {
+  position: fixed; bottom: 28px; right: 28px;
+  width: 44px; height: 44px;
+  background: var(--sr-green);
+  color: #fff;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; z-index: 40;
+  box-shadow: 0 3px 12px rgba(0,0,0,.18);
+  opacity: 0; pointer-events: none;
+  transition: opacity .2s;
+  border: none;
+  font-size: 20px;
+}
+.scroll-top.visible { opacity: 1; pointer-events: auto; }
+
+/* Animaciones de entrada */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity .4s ease, transform .4s ease;
+}
+.fade-in.visible { opacity: 1; transform: translateY(0); }
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-in { opacity: 1; transform: none; transition: none; }
+  .card { transition: none; }
+}
+
+/* Responsive helpers */
+@media (max-width: 768px) {
+  .btn-primary, .btn-secondary { padding: 11px 20px; font-size: 14px; }
+}
+
+/* ============================================================
+   DARK MODE
+   Se activa agregando la clase .dark a <html>.
+   El script anti-FOUC en el <head> de cada página lo hace
+   antes del primer paint según localStorage o prefers-color-scheme.
+   ============================================================ */
+
+/* Botón flotante de toggle (inyectado por site.js) */
+
+
+
+
+
+/* Color verde institucional → tono accesible en oscuro */
+/* Componentes */
+/* Chips de vertical: tonos oscuros legibles */
+/* Bordes con opacity-blanco que se ven raros en oscuro */
+/* Submenu dropdown del nav */
+/* Mapa placeholder */
+/* Hero overlay un poco más oscuro */
+/* Fondos hardcodeados inline en HTML (los más comunes) */
+/* Imágenes: bajar levemente el brillo en dark para que no encandilen */
+/* Tarjetas de producto con fondo blanco hardcoded */
+/* ============================================================
+   Avatares con iniciales para la sección Equipo
+   Mientras no haya fotos reales, queda elegante y honesto.
+   ============================================================ */
+.avatar {
+  width: 48px; height: 48px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: .02em;
+  flex-shrink: 0;
+  text-transform: uppercase;
+  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+}
+.avatar-1 { background: var(--sr-green); color: #fff; }
+.avatar-2 { background: var(--sr-green-light); color: var(--sr-green); border: 1.5px solid var(--sr-green); }
+.avatar-3 { background: #f0e6d6; color: var(--sr-orange); }
+.avatar-4 { background: #d0e6f0; color: var(--sr-blue); }
+
+.team-section-label {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--sr-green);
+  margin-bottom: 18px;
+  padding-bottom: 8px;
+  border-bottom: 1.5px solid var(--sr-green-light);
+}
+.team-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 18px;
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid var(--sr-border);
+  transition: transform .15s, box-shadow .15s, border-color .15s;
+}
+.team-card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0,0,0,.06);
+  border-color: var(--sr-green-light);
+}
+.team-card .name { font-weight: 700; color: var(--sr-text, #1A1A1A); font-size: 14.5px; line-height: 1.3; }
+.team-card .role { font-size: 12.5px; color: var(--sr-text-secondary, #555); margin-top: 3px; line-height: 1.35; }
+.team-card .role strong { color: var(--sr-green); font-weight: 600; }
+/* ============================================================
+   Tarjetas grandes verticales (versión presencia: foto/avatar arriba)
+   ============================================================ */
+.team-card-big {
+  background: #fff;
+  border: 1px solid var(--sr-border);
+  border-radius: 14px;
+  padding: 28px 20px 24px;
+  text-align: center;
+  transition: transform .2s, box-shadow .2s, border-color .2s;
+}
+.team-card-big:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0,0,0,.08);
+  border-color: var(--sr-green-light);
+}
+.avatar-big {
+  width: 100px; height: 100px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700;
+  font-size: 30px;
+  margin: 0 auto 18px;
+  text-transform: uppercase;
+  letter-spacing: .02em;
+  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  box-shadow: 0 4px 14px rgba(0,106,70,.18);
+}
+.avatar-big.avatar-1 { background: var(--sr-green); color: #fff; }
+.avatar-big.avatar-2 { background: var(--sr-green-light); color: var(--sr-green); border: 2px solid var(--sr-green); }
+.avatar-big.avatar-3 { background: #f0e6d6; color: var(--sr-orange); }
+.avatar-big.avatar-4 { background: #d0e6f0; color: var(--sr-blue); }
+
+/* ============================================================
+   Tarjeta de equipo en formato vertical (cuerpo entero / busto recortado)
+   La foto entra con fondo transparente, apoyada al borde inferior.
+   La info se embebe sobre el card con gradiente para legibilidad.
+   ============================================================ */
+.team-card-portrait {
+  position: relative;
+  aspect-ratio: 3 / 4.2;
+  border-radius: 16px;
+  overflow: hidden;
+  background: linear-gradient(165deg, #e6f2ed 0%, #f5faf7 55%, #ffffff 100%);
+  border: 1px solid var(--sr-border);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  transition: transform .22s, box-shadow .22s, border-color .22s;
+  cursor: default;
+}
+.team-card-portrait:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 32px rgba(0,0,0,.12);
+  border-color: var(--sr-green-light);
+}
+/* Foto recortada (PNG transparente) apoyada al fondo del card */
+.portrait-photo {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  z-index: 1;
+}
+.portrait-photo img {
+  max-height: 86%;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  object-position: center bottom;
+  filter: drop-shadow(0 6px 18px rgba(0,0,0,.18));
+}
+/* Iniciales gigantes para placeholders (cuando no hay foto todavía) */
+.portrait-initials {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(70px, 12vw, 110px);
+  font-weight: 800;
+  color: var(--sr-green);
+  opacity: .22;
+  letter-spacing: -.02em;
+  line-height: 1;
+  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  z-index: 1;
+  user-select: none;
+  pointer-events: none;
+}
+.portrait-badge {
+  position: absolute;
+  top: 14px; left: 14px;
+  z-index: 3;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  background: rgba(255,255,255,.78);
+  color: var(--sr-green);
+  padding: 5px 10px;
+  border-radius: 4px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+/* Variante "brand": fondo verde institucional con la foto en PNG transparente.
+   Pensada para fotos recortadas (sin fondo) — la persona se ve natural, el card
+   transmite identidad de marca. */
+.team-card-portrait.brand {
+  background: radial-gradient(ellipse 120% 70% at 50% 30%, #008a5f 0%, #006A46 55%, #004f33 100%);
+  border-color: #004f33;
+}
+.team-card-portrait.brand .portrait-photo img {
+  max-height: 110%;
+  max-width: 114%;
+  margin-bottom: -1%;
+  filter: drop-shadow(0 8px 24px rgba(0,0,0,.35));
+}
+.team-card-portrait.brand .portrait-info {
+  background: linear-gradient(0deg,
+    rgba(0,30,18,.92) 0%,
+    rgba(0,30,18,.65) 40%,
+    rgba(0,30,18,.15) 78%,
+    rgba(0,30,18,0) 100%);
+}
+.team-card-portrait.brand .portrait-info .name { color: #fff; }
+.team-card-portrait.brand .portrait-info .role { color: #b7e8d2; font-weight: 600; }
+.team-card-portrait.brand .portrait-info .role strong { color: #b7e8d2; font-weight: 600; }
+.team-card-portrait.brand .portrait-badge { background: rgba(255,255,255,.92); color: #004f33; }
+.team-card-portrait.brand:hover { border-color: #b7e8d2; }
+/* Info embebida al pie con gradiente para asegurar legibilidad */
+.portrait-info {
+  position: relative;
+  z-index: 2;
+  padding: 32px 18px 18px;
+  background: linear-gradient(0deg,
+    rgba(0,0,0,.78) 0%,
+    rgba(0,0,0,.55) 40%,
+    rgba(0,0,0,.15) 75%,
+    rgba(0,0,0,0) 100%);
+  color: #fff;
+  pointer-events: none;
+}
+.portrait-info .name {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #fff;
+  margin: 0;
+  text-shadow: 0 1px 3px rgba(0,0,0,.3);
+}
+.portrait-info .role {
+  font-size: 12.5px;
+  line-height: 1.4;
+  color: rgba(255,255,255,.92);
+  margin-top: 5px;
+  text-shadow: 0 1px 3px rgba(0,0,0,.4);
+}
+.portrait-info .role strong { color: #b7e8d2; font-weight: 600; }
+.portrait-info .email {
+  display: block;
+  margin-top: 6px;
+  font-size: 10.5px;
+  line-height: 1.3;
+  color: rgba(255,255,255,.85);
+  text-decoration: none;
+  word-break: break-all;
+  pointer-events: auto;
+  text-shadow: 0 1px 2px rgba(0,0,0,.4);
+}
+.portrait-info .email:hover { color: #fff; text-decoration: underline; }
+
+/* Última fila del equipo (2 cards) — centrada horizontalmente conservando el mismo ancho de card del grid de 6 columnas */
+.team-last-row {
+  display: grid;
+  gap: 1.25rem;
+  margin-top: 1.25rem;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+}
+@media (min-width: 768px) {
+  .team-last-row {
+    grid-template-columns: repeat(2, calc((100% - 2 * 1.25rem) / 3));
+    justify-content: center;
+  }
+}
+@media (min-width: 1024px) {
+  .team-last-row {
+    grid-template-columns: repeat(2, calc((100% - 5 * 1.25rem) / 6));
+    justify-content: center;
+  }
+}
+
+/* Variante placeholder: gradiente blanco hacia arriba en vez de oscuro
+   (las iniciales viven en el card, no necesitamos oscurecer) */
+.team-card-portrait.placeholder .portrait-info {
+  background: linear-gradient(0deg,
+    #ffffff 0%,
+    rgba(255,255,255,.92) 45%,
+    rgba(255,255,255,0) 100%);
+}
+.team-card-portrait.placeholder .portrait-info .name { color: var(--sr-text, #1A1A1A); text-shadow: none; }
+.team-card-portrait.placeholder .portrait-info .role { color: var(--sr-text-secondary, #555); text-shadow: none; }
+.team-card-portrait.placeholder .portrait-info .role strong { color: var(--sr-green); }
+
+.team-card-big .name {
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--sr-text, #1A1A1A);
+  line-height: 1.3;
+  margin-bottom: 6px;
+  word-break: break-word;
+}
+.team-card-big .role {
+  font-size: 13px;
+  color: var(--sr-text-secondary, #555);
+  line-height: 1.45;
+}
+.team-card-big .role strong { color: var(--sr-green); font-weight: 600; }
+/* ============================================================
+   Slider horizontal para áreas con muchas personas
+   ============================================================ */
+.team-slider { position: relative; padding: 0 6px; }
+.slider-viewport {
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.slider-viewport::-webkit-scrollbar { display: none; }
+.slider-track {
+  display: flex;
+  gap: 18px;
+  padding: 4px 2px;
+}
+.slider-track > * {
+  flex: 0 0 calc((100% - 36px) / 3);
+  scroll-snap-align: start;
+}
+@media (max-width: 900px) {
+  .slider-track > * { flex: 0 0 calc((100% - 18px) / 2); }
+}
+@media (max-width: 600px) {
+  .slider-track > * { flex: 0 0 78%; }
+}
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #fff;
+  border: 1.5px solid var(--sr-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 5;
+  color: var(--sr-green);
+  box-shadow: 0 3px 10px rgba(0,0,0,.1);
+  transition: background .15s, color .15s, border-color .15s, transform .15s, opacity .15s;
+  padding: 0;
+}
+.slider-btn:hover {
+  background: var(--sr-green);
+  color: #fff;
+  border-color: var(--sr-green);
+  transform: translateY(-50%) scale(1.05);
+}
+.slider-btn:disabled {
+  opacity: .35;
+  cursor: default;
+  pointer-events: none;
+}
+.slider-btn.prev { left: -16px; }
+.slider-btn.next { right: -16px; }
+.slider-btn svg { width: 18px; height: 18px; }
+@media (max-width: 768px) {
+  .slider-btn.prev { left: -8px; }
+  .slider-btn.next { right: -8px; }
+}
+
+/* Carrusel de imágenes (para páginas detalle de novedades, estilo Instagram) */
+.news-carousel { position: relative; border-radius: 14px; overflow: hidden; background: #0f1411; }
+.news-carousel .slider-viewport {
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+.news-carousel .slider-viewport::-webkit-scrollbar { display: none; }
+.news-carousel .slider-track { display: flex; gap: 0; }
+.news-carousel .slider-track > * {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  display: flex; align-items: center; justify-content: center;
+  background: #0f1411;
+}
+.news-carousel .slider-track img {
+  width: 100%;
+  height: auto;
+  max-height: 78vh;
+  object-fit: contain;
+  display: block;
+}
+.news-carousel .slider-btn.prev { left: 18px; }
+.news-carousel .slider-btn.next { right: 18px; }
+.news-carousel-dots {
+  position: absolute;
+  bottom: 14px; left: 0; right: 0;
+  display: flex; justify-content: center; gap: 8px;
+  z-index: 4;
+}
+.news-carousel-dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: rgba(255,255,255,.4);
+  border: 0; padding: 0; cursor: pointer;
+  transition: background .15s, transform .15s;
+}
+.news-carousel-dot.active { background: #fff; transform: scale(1.3); }
+.news-carousel-dot:hover { background: rgba(255,255,255,.7); }
+
+
+/* ============================================================
+   DARK MODE
+   Default: oscuro. Se activa con .dark en <html> (lo hace el script anti-FOUC).
+   Toggle visible en el header permite cambiar a light.
+   ============================================================ */
+html.dark {
+  --sr-text: #e8e8e3;
+  --sr-text-secondary: #a0a098;
+  --sr-bg-alt: #1a201d;
+  --sr-border: #2c3530;
+}
+html.dark body { background: #0f1411; color: #e8e8e3; }
+html.dark .sr-header { background: #0f1411; box-shadow: 0 1px 4px rgba(0,0,0,.4); border-bottom: 1px solid #1f2421; }
+/* Logo: en dark mode el tagline negro del logo-color.svg no se ve, swap por una variante con tagline blanco */
+html.dark .sr-header img[src*="logo-color.svg"] { content: url('logos/logo-color-dark.svg'); }
+html.dark .nav-link { color: #e8e8e3; }
+html.dark .nav-link.active { color: #2da77a; border-color: #2da77a; }
+html.dark .bg-white { background: #0f1411 !important; color: #e8e8e3; }
+html.dark .bg-gray-50 { background: #161b18 !important; }
+html.dark .bg-gray-100 { background: #1a201d !important; }
+html.dark .text-gray-900 { color: #e8e8e3 !important; }
+html.dark .text-gray-700 { color: #c9c9c2 !important; }
+html.dark .text-gray-600 { color: #a8a8a0 !important; }
+html.dark .text-gray-500 { color: #888880 !important; }
+html.dark .text-gray-400 { color: #6a6a62 !important; }
+html.dark .border-gray-100, html.dark .border-gray-200, html.dark .border-gray-300 { border-color: #2c3530 !important; }
+html.dark .card { background: #161b18; border: 1px solid #2c3530; box-shadow: 0 1px 6px rgba(0,0,0,.4); }
+html.dark .section-alt { background: #161b18; }
+html.dark .sr-footer { background: #0a0e0c; }
+html.dark .chip-agro  { background: #1d3a26; color: #8ad9a3; }
+html.dark .chip-av    { background: #163a32; color: #7fcfbb; }
+html.dark .chip-infra { background: #163444; color: #82c6e4; }
+html.dark .chip-hogar { background: #422814; color: #f0a972; }
+html.dark .filter-btn { background: #161b18; color: #c9c9c2; border-color: #2c3530; }
+html.dark .filter-btn:hover, html.dark .filter-btn.active {
+  background: rgba(45,167,122,.15);
+  color: #2da77a;
+  border-color: #2da77a;
+}
+html.dark .green-50, html.dark .bg-green-50 { background: rgba(45,167,122,.15) !important; }
+html.dark input, html.dark textarea {
+  background: #161b18;
+  border-color: #2c3530;
+  color: #e8e8e3;
+}
+html.dark input::placeholder, html.dark textarea::placeholder { color: #6a6a62; }
+/* Gate-warning en dark: conserva el fondo amarillo claro (es callout intencional) y fuerza texto NEGRO */
+/* Selectores con más especificidad para ganarle a las clases Tailwind text-gray-* */
+html.dark .gate-warning,
+html.dark .gate-warning h2,
+html.dark .gate-warning h3,
+html.dark .gate-warning h3.text-gray-900,
+html.dark .gate-warning p,
+html.dark .gate-warning p.text-gray-700,
+html.dark .gate-warning p.text-gray-600,
+html.dark .gate-warning ul,
+html.dark .gate-warning ul li,
+html.dark .gate-warning li,
+html.dark .gate-warning span,
+html.dark .gate-warning div,
+html.dark .gate-warning strong {
+  color: #000000 !important;
+}
+
+/* Example blocks dentro del gate-warning */
+html.dark .gate-warning .example-block {
+  background: #ffffff !important;
+}
+html.dark .gate-warning .example-block,
+html.dark .gate-warning .example-block p,
+html.dark .gate-warning .example-block p.text-gray-700,
+html.dark .gate-warning .example-block strong {
+  color: #000000 !important;
+}
+html.dark .gate-warning .example-block strong:not(.no-celeste) {
+  color: #2266a8 !important;
+}
+html.dark .prize-row { background: #161b18; border-color: #2c3530; }
+html.dark .prize-row .desc h3 { color: #e8e8e3; }
+html.dark .prize-row .desc p { color: #a8a8a0; }
+html.dark .prize-row.top { background: linear-gradient(135deg, #161b18 0%, #2a2410 100%) !important; }
+
+/* Theme toggle button (inyectado por JS) */
+.theme-toggle {
+  width: 38px; height: 38px;
+  border-radius: 50%;
+  background: #fff;
+  border: 1.5px solid var(--sr-border);
+  cursor: pointer;
+  display: inline-flex; align-items: center; justify-content: center;
+  transition: background .15s, transform .15s, border-color .15s;
+  flex-shrink: 0;
+  color: var(--sr-text);
+  padding: 0;
+  margin-left: 8px;
+}
+.theme-toggle:hover { transform: scale(1.08); border-color: var(--sr-green); }
+.theme-toggle svg { width: 18px; height: 18px; }
+.theme-toggle .icon-sun { display: block; }
+.theme-toggle .icon-moon { display: none; }
+html.dark .theme-toggle { background: #1a201d; color: #e8e8e3; border-color: #2c3530; }
+html.dark .theme-toggle .icon-sun { display: none; }
+html.dark .theme-toggle .icon-moon { display: block; }
+
+/* Filtros compactos (dropdowns) en catálogo */
+.filter-select {
+  width: 100%;
+  padding: 9px 36px 9px 12px;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 8px;
+  background: #ffffff url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2.5' stroke-linecap='round'%3e%3cpolyline points='6 9 12 15 18 9'/%3e%3c/svg%3e") no-repeat right 10px center / 14px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #1f2937;
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  transition: border-color .15s, box-shadow .15s;
+}
+.filter-select:hover { border-color: #006A46; }
+.filter-select:focus { outline: none; border-color: #006A46; box-shadow: 0 0 0 3px rgba(0,106,70,.1); }
+html.dark .filter-select { background-color: #1a201d; color: #e8e8e3; border-color: #2c3530; }
+html.dark .filter-select:hover { border-color: #2da77a; }
+html.dark .filter-select option { background: #1a201d; color: #e8e8e3; }
+#filter-clear { font-weight: 600; }
+

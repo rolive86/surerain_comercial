@@ -1,0 +1,44 @@
+{
+  "source_index": 47,
+  "source_id": "img:rs-pw-3520",
+  "name": "RS-PW 3520",
+  "slug": "rs-pw-3520",
+  "category_slug": "aspersores",
+  "brand_name": "Plásticos Coorp",
+  "product_type_slug": "otro",
+  "markets": [
+    "av"
+  ],
+  "image_url": "https://surerain.com/assets/productos-importados/rs-pw-3520.webp",
+  "image_alt": "RS-PW 3520",
+  "ficha_url": null,
+  "description": "CARACTERÍSTICAS: – Aspersor giratorio 3 brazos, 1/2″ RM. – Fabricado en material plástico.",
+  "specs_html": "<tr><td>Tipo de Producto</td><td>Áreas Verdes</td></tr>",
+  "specs_rows": [
+    {
+      "label": "Tipo de Producto",
+      "value": "Áreas Verdes"
+    }
+  ],
+  "chip_label": "Aspersores",
+  "original_url": "https://surerain.com/catalogo?producto=rs-pw-3520",
+  "outer_html": "<div class=\"card product-card cursor-pointer\" data-category=\"aspersores\" data-marca=\"Plásticos Coorp\" data-tipo=\"otro\" data-vertical=\"av\" onclick=\"openProductModal('RS-PW 3520','CARACTERÍSTICAS: – Aspersor giratorio 3 brazos, 1/2″ RM. – Fabricado en material plástico.','<tr><td>Tipo de Producto</td><td>Áreas Verdes</td></tr>')\"><img width=\"195\" height=\"130\" alt=\"RS-PW 3520\" class=\"w-full object-cover\" loading=\"lazy\" src=\"assets/productos-importados/rs-pw-3520.webp\" style=\"height:130px;\"><div class=\"p-3\"><span class=\"chip chip-av mb-1.5\">Aspersores</span><h4 class=\"font-semibold text-gray-900 text-xs mb-1\">RS-PW 3520</h4><p class=\"text-xs text-gray-400 mb-2\">Aspersores</p><div class=\"flex gap-1.5\"><span class=\"text-xs text-sr-green font-semibold cursor-pointer\">Ver ficha</span><span class=\"text-gray-300\">·</span><a class=\"text-xs text-gray-400 hover:text-sr-green\" href=\"contacto.html\">Dónde comprar</a></div></div></div>",
+  "onclick_raw": "openProductModal('RS-PW 3520','CARACTERÍSTICAS: – Aspersor giratorio 3 brazos, 1/2″ RM. – Fabricado en material plástico.','<tr><td>Tipo de Producto</td><td>Áreas Verdes</td></tr>')",
+  "content_hash": "103927c1d0065ac7cbcda3908a33d039ba98b405942f5dc842e39b4f0ebe850f",
+  "provenance": {
+    "source_url": "file://C:\\proyectos\\SURERAIN-CLONE\\data\\raw\\catalogo.source.html",
+    "source_page": "https://surerain.com/catalogo",
+    "source_selector": ".product-card:nth-of-type(48)",
+    "extracted_at": "2026-08-13T22:03:32.860Z",
+    "raw_fields": [
+      "data-category",
+      "data-marca",
+      "data-tipo",
+      "data-vertical",
+      "data-ficha",
+      "img[src]",
+      "h4",
+      "openProductModal(name,description,specsHtml)"
+    ]
+  }
+}

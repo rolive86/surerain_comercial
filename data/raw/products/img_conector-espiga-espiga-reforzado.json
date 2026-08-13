@@ -1,0 +1,45 @@
+{
+  "source_index": 370,
+  "source_id": "img:conector-espiga-espiga-reforzado",
+  "name": "Conector espiga – espiga reforzado",
+  "slug": "conector-espiga-espiga-reforzado",
+  "category_slug": "conectores",
+  "brand_name": "GreenPlains",
+  "product_type_slug": null,
+  "markets": [
+    "agro",
+    "av"
+  ],
+  "image_url": "https://surerain.com/assets/productos-importados/conector-espiga-espiga-reforzado.webp",
+  "image_alt": "Conector espiga – espiga reforzado",
+  "ficha_url": null,
+  "description": "Conector espiga – espiga reforzado Diámetro: 16×12 mm (ACIR0IE.RC11612) 16×16 mm (ACIR0IEP.830.160) 17×17 mm (ACIR0IEP.830.170) 20×20 mm (ACIR0IEP.830.200) 20×16 mm (ACIR0IP.603.20A)",
+  "specs_html": "<tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes</td></tr>",
+  "specs_rows": [
+    {
+      "label": "Tipo de Producto",
+      "value": "Agro, Áreas Verdes"
+    }
+  ],
+  "chip_label": "Conectores",
+  "original_url": "https://surerain.com/catalogo?producto=conector-espiga-espiga-reforzado",
+  "outer_html": "<div class=\"card product-card cursor-pointer\" data-category=\"conectores\" data-marca=\"GreenPlains\" data-vertical=\"agro av\" onclick=\"openProductModal('Conector espiga – espiga reforzado','Conector espiga – espiga reforzado Diámetro: 16×12 mm (ACIR0IE.RC11612) 16×16 mm (ACIR0IEP.830.160) 17×17 mm (ACIR0IEP.830.170) 20×20 mm (ACIR0IEP.830.200) 20×16 mm (ACIR0IP.603.20A)','<tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes</td></tr>')\"><img width=\"195\" height=\"130\" alt=\"Conector espiga – espiga reforzado\" class=\"w-full object-cover\" loading=\"lazy\" src=\"assets/productos-importados/conector-espiga-espiga-reforzado.webp\" style=\"height:130px;\"><div class=\"p-3\"><span class=\"chip chip-agro mb-1.5\">Conectores</span><h4 class=\"font-semibold text-gray-900 text-xs mb-1\">Conector espiga – espiga reforzado</h4><p class=\"text-xs text-gray-400 mb-2\">Conectores y Accesorios</p><div class=\"flex gap-1.5\"><span class=\"text-xs text-sr-green font-semibold cursor-pointer\">Ver ficha</span><span class=\"text-gray-300\">·</span><a class=\"text-xs text-gray-400 hover:text-sr-green\" href=\"contacto.html\">Dónde comprar</a></div></div></div>",
+  "onclick_raw": "openProductModal('Conector espiga – espiga reforzado','Conector espiga – espiga reforzado Diámetro: 16×12 mm (ACIR0IE.RC11612) 16×16 mm (ACIR0IEP.830.160) 17×17 mm (ACIR0IEP.830.170) 20×20 mm (ACIR0IEP.830.200) 20×16 mm (ACIR0IP.603.20A)','<tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes</td></tr>')",
+  "content_hash": "444c64e8c9cdd7d638eecf09b663c4a27e8ac819af30498c3d02549687a66fc4",
+  "provenance": {
+    "source_url": "file://C:\\proyectos\\SURERAIN-CLONE\\data\\raw\\catalogo.source.html",
+    "source_page": "https://surerain.com/catalogo",
+    "source_selector": ".product-card:nth-of-type(371)",
+    "extracted_at": "2026-08-13T22:03:32.860Z",
+    "raw_fields": [
+      "data-category",
+      "data-marca",
+      "data-tipo",
+      "data-vertical",
+      "data-ficha",
+      "img[src]",
+      "h4",
+      "openProductModal(name,description,specsHtml)"
+    ]
+  }
+}

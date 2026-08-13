@@ -1,0 +1,49 @@
+{
+  "source_index": 160,
+  "source_id": "img:20025-anilla",
+  "name": "Filtro Alfa tipo Y – 1 ½” y 2”, anilla plástica",
+  "slug": "filtro-alfa-tipo-y-1-y-2-anilla-plastica",
+  "category_slug": "filtros",
+  "brand_name": "Plástica Alfa (Italia)",
+  "product_type_slug": null,
+  "markets": [
+    "agro",
+    "av"
+  ],
+  "image_url": "https://surerain.com/assets/productos-importados/20025-anilla.webp",
+  "image_alt": "Filtro Alfa tipo Y – 1 ½” y 2”, anilla plástica",
+  "ficha_url": null,
+  "description": "Filtro Alfa tipo Y plástico, anilla plástica. Los filtros de malla se encuentran disponibles en las siguientes medidas: 1 ½” y 2”, cuentan en su extremo con tapón de desagüe. Todas las versiones son de 120 mesh.",
+  "specs_html": "<tr><td>Marca</td><td>Plástica Alfa (Italia)</td></tr><tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes</td></tr>",
+  "specs_rows": [
+    {
+      "label": "Marca",
+      "value": "Plástica Alfa (Italia)"
+    },
+    {
+      "label": "Tipo de Producto",
+      "value": "Agro, Áreas Verdes"
+    }
+  ],
+  "chip_label": "Filtros",
+  "original_url": "https://surerain.com/catalogo?producto=filtro-alfa-tipo-y-1-y-2-anilla-plastica",
+  "outer_html": "<div class=\"card product-card cursor-pointer\" data-category=\"filtros\" data-marca=\"Plástica Alfa (Italia)\" data-vertical=\"agro av\" onclick=\"openProductModal('Filtro Alfa tipo Y – 1 ½” y 2”, anilla plástica','Filtro Alfa tipo Y plástico, anilla plástica. Los filtros de malla se encuentran disponibles en las siguientes medidas: 1 ½” y 2”, cuentan en su extremo con tapón de desagüe. Todas las versiones son de 120 mesh.','<tr><td>Marca</td><td>Plástica Alfa (Italia)</td></tr><tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes</td></tr>')\"><img width=\"195\" height=\"130\" alt=\"Filtro Alfa tipo Y – 1 ½” y 2”, anilla plástica\" class=\"w-full object-cover\" loading=\"lazy\" src=\"assets/productos-importados/20025-anilla.webp\" style=\"height:130px;\"><div class=\"p-3\"><span class=\"chip chip-agro mb-1.5\">Filtros</span><h4 class=\"font-semibold text-gray-900 text-xs mb-1\">Filtro Alfa tipo Y – 1 ½” y 2”, anilla plástica</h4><p class=\"text-xs text-gray-400 mb-2\">Plástica Alfa (Italia)</p><div class=\"flex gap-1.5\"><span class=\"text-xs text-sr-green font-semibold cursor-pointer\">Ver ficha</span><span class=\"text-gray-300\">·</span><a class=\"text-xs text-gray-400 hover:text-sr-green\" href=\"contacto.html\">Dónde comprar</a></div></div></div>",
+  "onclick_raw": "openProductModal('Filtro Alfa tipo Y – 1 ½” y 2”, anilla plástica','Filtro Alfa tipo Y plástico, anilla plástica. Los filtros de malla se encuentran disponibles en las siguientes medidas: 1 ½” y 2”, cuentan en su extremo con tapón de desagüe. Todas las versiones son de 120 mesh.','<tr><td>Marca</td><td>Plástica Alfa (Italia)</td></tr><tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes</td></tr>')",
+  "content_hash": "e9dd9d49ad78de27e79b98e4f9ec992630e5d3e7eda8e73485083922ff5e4a7a",
+  "provenance": {
+    "source_url": "file://C:\\proyectos\\SURERAIN-CLONE\\data\\raw\\catalogo.source.html",
+    "source_page": "https://surerain.com/catalogo",
+    "source_selector": ".product-card:nth-of-type(161)",
+    "extracted_at": "2026-08-13T22:03:32.860Z",
+    "raw_fields": [
+      "data-category",
+      "data-marca",
+      "data-tipo",
+      "data-vertical",
+      "data-ficha",
+      "img[src]",
+      "h4",
+      "openProductModal(name,description,specsHtml)"
+    ]
+  }
+}

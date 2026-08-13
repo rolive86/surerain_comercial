@@ -1,0 +1,50 @@
+{
+  "source_index": 340,
+  "source_id": "img:junta-de-reparacion-era",
+  "name": "Junta de reparación ERA",
+  "slug": "junta-de-reparacion-era",
+  "category_slug": "accesorios",
+  "brand_name": "ERA",
+  "product_type_slug": null,
+  "markets": [
+    "agro",
+    "av",
+    "infra"
+  ],
+  "image_url": "https://surerain.com/assets/productos-importados/junta-de-reparacion-era.webp",
+  "image_alt": "Junta de reparación ERA",
+  "ficha_url": null,
+  "description": "Especificaciones técnicas: – Material: PVC – Descripción: junta de reparación para conexiones de tuberías dañadas o mantenimiento de sistemas existentes. – Tipo de conexión: H-H – Color: Gris. – Temperatura máxima de operación: 60 °C – Presión de trabajo: PN10 – 10 Bar. Medidas disponibles : 110 mm – 160 mm – 200 mm – 250 mm – 315 mm",
+  "specs_html": "<tr><td>Marca</td><td>ERA</td></tr><tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes, Infraestructura</td></tr>",
+  "specs_rows": [
+    {
+      "label": "Marca",
+      "value": "ERA"
+    },
+    {
+      "label": "Tipo de Producto",
+      "value": "Agro, Áreas Verdes, Infraestructura"
+    }
+  ],
+  "chip_label": "Accesorios",
+  "original_url": "https://surerain.com/catalogo?producto=junta-de-reparacion-era",
+  "outer_html": "<div class=\"card product-card cursor-pointer\" data-category=\"accesorios\" data-marca=\"ERA\" data-vertical=\"agro av infra\" onclick=\"openProductModal('Junta de reparación ERA','Especificaciones técnicas: – Material: PVC – Descripción: junta de reparación para conexiones de tuberías dañadas o mantenimiento de sistemas existentes. – Tipo de conexión: H-H – Color: Gris. – Temperatura máxima de operación: 60 °C – Presión de trabajo: PN10 – 10 Bar. Medidas disponibles : 110 mm – 160 mm – 200 mm – 250 mm – 315 mm','<tr><td>Marca</td><td>ERA</td></tr><tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes, Infraestructura</td></tr>')\"><img width=\"195\" height=\"130\" alt=\"Junta de reparación ERA\" class=\"w-full object-cover\" loading=\"lazy\" src=\"assets/productos-importados/junta-de-reparacion-era.webp\" style=\"height:130px;\"><div class=\"p-3\"><span class=\"chip chip-agro mb-1.5\">Accesorios</span><h4 class=\"font-semibold text-gray-900 text-xs mb-1\">Junta de reparación ERA</h4><p class=\"text-xs text-gray-400 mb-2\">ERA</p><div class=\"flex gap-1.5\"><span class=\"text-xs text-sr-green font-semibold cursor-pointer\">Ver ficha</span><span class=\"text-gray-300\">·</span><a class=\"text-xs text-gray-400 hover:text-sr-green\" href=\"contacto.html\">Dónde comprar</a></div></div></div>",
+  "onclick_raw": "openProductModal('Junta de reparación ERA','Especificaciones técnicas: – Material: PVC – Descripción: junta de reparación para conexiones de tuberías dañadas o mantenimiento de sistemas existentes. – Tipo de conexión: H-H – Color: Gris. – Temperatura máxima de operación: 60 °C – Presión de trabajo: PN10 – 10 Bar. Medidas disponibles : 110 mm – 160 mm – 200 mm – 250 mm – 315 mm','<tr><td>Marca</td><td>ERA</td></tr><tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes, Infraestructura</td></tr>')",
+  "content_hash": "d7ad418188b765d64c61040a0dedf30dcbb0a8a5e1301c06e189f56234a462c8",
+  "provenance": {
+    "source_url": "file://C:\\proyectos\\SURERAIN-CLONE\\data\\raw\\catalogo.source.html",
+    "source_page": "https://surerain.com/catalogo",
+    "source_selector": ".product-card:nth-of-type(341)",
+    "extracted_at": "2026-08-13T22:03:32.860Z",
+    "raw_fields": [
+      "data-category",
+      "data-marca",
+      "data-tipo",
+      "data-vertical",
+      "data-ficha",
+      "img[src]",
+      "h4",
+      "openProductModal(name,description,specsHtml)"
+    ]
+  }
+}

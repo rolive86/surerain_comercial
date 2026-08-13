@@ -1,0 +1,46 @@
+{
+  "source_index": 259,
+  "source_id": "img:valvula",
+  "name": "Válvula de retención metálica – Presión Nominal 16 bar",
+  "slug": "valvula-de-retencion-metalica-presion-nominal-16-bar",
+  "category_slug": "valvulas",
+  "brand_name": "Taizhou",
+  "product_type_slug": null,
+  "markets": [
+    "agro",
+    "av",
+    "infra"
+  ],
+  "image_url": "https://surerain.com/assets/productos-importados/valvula.webp",
+  "image_alt": "Válvula de retención metálica – Presión Nominal 16 bar",
+  "ficha_url": null,
+  "description": "CARACTERÍSTICAS: – Cuerpo de latón – Extremos roscados BSP H-H s/ ISO 228/1 – Presión Nominal 16 bar – Temperatura:-10 a 110°C",
+  "specs_html": "<tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes, Infraestructura</td></tr>",
+  "specs_rows": [
+    {
+      "label": "Tipo de Producto",
+      "value": "Agro, Áreas Verdes, Infraestructura"
+    }
+  ],
+  "chip_label": "Válvulas",
+  "original_url": "https://surerain.com/catalogo?producto=valvula-de-retencion-metalica-presion-nominal-16-bar",
+  "outer_html": "<div class=\"card product-card cursor-pointer\" data-category=\"valvulas\" data-marca=\"Taizhou\" data-vertical=\"agro av infra\" onclick=\"openProductModal('Válvula de retención metálica – Presión Nominal 16 bar','CARACTERÍSTICAS: – Cuerpo de latón – Extremos roscados BSP H-H s/ ISO 228/1 – Presión Nominal 16 bar – Temperatura:-10 a 110°C','<tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes, Infraestructura</td></tr>')\"><img width=\"195\" height=\"130\" alt=\"Válvula de retención metálica – Presión Nominal 16 bar\" class=\"w-full object-cover\" loading=\"lazy\" src=\"assets/productos-importados/valvula.webp\" style=\"height:130px;\"><div class=\"p-3\"><span class=\"chip chip-agro mb-1.5\">Válvulas</span><h4 class=\"font-semibold text-gray-900 text-xs mb-1\">Válvula de retención metálica – Presión Nominal 16 bar</h4><p class=\"text-xs text-gray-400 mb-2\">Válvulas de Retención</p><div class=\"flex gap-1.5\"><span class=\"text-xs text-sr-green font-semibold cursor-pointer\">Ver ficha</span><span class=\"text-gray-300\">·</span><a class=\"text-xs text-gray-400 hover:text-sr-green\" href=\"contacto.html\">Dónde comprar</a></div></div></div>",
+  "onclick_raw": "openProductModal('Válvula de retención metálica – Presión Nominal 16 bar','CARACTERÍSTICAS: – Cuerpo de latón – Extremos roscados BSP H-H s/ ISO 228/1 – Presión Nominal 16 bar – Temperatura:-10 a 110°C','<tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes, Infraestructura</td></tr>')",
+  "content_hash": "867a18c07e6bb883c14d250659e9272d033512ddec3d38c43627bc5a7d21d5d9",
+  "provenance": {
+    "source_url": "file://C:\\proyectos\\SURERAIN-CLONE\\data\\raw\\catalogo.source.html",
+    "source_page": "https://surerain.com/catalogo",
+    "source_selector": ".product-card:nth-of-type(260)",
+    "extracted_at": "2026-08-13T22:03:32.860Z",
+    "raw_fields": [
+      "data-category",
+      "data-marca",
+      "data-tipo",
+      "data-vertical",
+      "data-ficha",
+      "img[src]",
+      "h4",
+      "openProductModal(name,description,specsHtml)"
+    ]
+  }
+}

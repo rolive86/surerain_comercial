@@ -1,0 +1,49 @@
+{
+  "source_index": 217,
+  "source_id": "img:membrana-para-valvula-tecnidro",
+  "name": "Membrana para válvula Tecnidro",
+  "slug": "membrana-para-valvula-tecnidro",
+  "category_slug": "valvulas",
+  "brand_name": "Tecnidro (Italia)",
+  "product_type_slug": null,
+  "markets": [
+    "agro",
+    "infra"
+  ],
+  "image_url": "https://surerain.com/assets/productos-importados/membrana-para-valvula-tecnidro.webp",
+  "image_alt": "Membrana para válvula Tecnidro",
+  "ficha_url": null,
+  "description": "– Membrana para válvula 2” – 3”A – Membrana para válvula 3”C – Membrana suave 70 SH p/ valv. 3-4″ – Membrana para válvula 4”F – DN100",
+  "specs_html": "<tr><td>Marca</td><td>Tecnidro (Italia)</td></tr><tr><td>Tipo de Producto</td><td>Agro, Infraestructura</td></tr>",
+  "specs_rows": [
+    {
+      "label": "Marca",
+      "value": "Tecnidro (Italia)"
+    },
+    {
+      "label": "Tipo de Producto",
+      "value": "Agro, Infraestructura"
+    }
+  ],
+  "chip_label": "Válvulas",
+  "original_url": "https://surerain.com/catalogo?producto=membrana-para-valvula-tecnidro",
+  "outer_html": "<div class=\"card product-card cursor-pointer\" data-category=\"valvulas\" data-marca=\"Tecnidro (Italia)\" data-vertical=\"agro infra\" onclick=\"openProductModal('Membrana para válvula Tecnidro','– Membrana para válvula 2” – 3”A – Membrana para válvula 3”C – Membrana suave 70 SH p/ valv. 3-4″ – Membrana para válvula 4”F – DN100','<tr><td>Marca</td><td>Tecnidro (Italia)</td></tr><tr><td>Tipo de Producto</td><td>Agro, Infraestructura</td></tr>')\"><img width=\"195\" height=\"130\" alt=\"Membrana para válvula Tecnidro\" class=\"w-full object-cover\" loading=\"lazy\" src=\"assets/productos-importados/membrana-para-valvula-tecnidro.webp\" style=\"height:130px;\"><div class=\"p-3\"><span class=\"chip chip-agro mb-1.5\">Válvulas</span><h4 class=\"font-semibold text-gray-900 text-xs mb-1\">Membrana para válvula Tecnidro</h4><p class=\"text-xs text-gray-400 mb-2\">Tecnidro (Italia)</p><div class=\"flex gap-1.5\"><span class=\"text-xs text-sr-green font-semibold cursor-pointer\">Ver ficha</span><span class=\"text-gray-300\">·</span><a class=\"text-xs text-gray-400 hover:text-sr-green\" href=\"contacto.html\">Dónde comprar</a></div></div></div>",
+  "onclick_raw": "openProductModal('Membrana para válvula Tecnidro','– Membrana para válvula 2” – 3”A – Membrana para válvula 3”C – Membrana suave 70 SH p/ valv. 3-4″ – Membrana para válvula 4”F – DN100','<tr><td>Marca</td><td>Tecnidro (Italia)</td></tr><tr><td>Tipo de Producto</td><td>Agro, Infraestructura</td></tr>')",
+  "content_hash": "5721c0215326ce36609a6a39efc18c6d80a4eadf8d82c48d72d1c2532ed14e7b",
+  "provenance": {
+    "source_url": "file://C:\\proyectos\\SURERAIN-CLONE\\data\\raw\\catalogo.source.html",
+    "source_page": "https://surerain.com/catalogo",
+    "source_selector": ".product-card:nth-of-type(218)",
+    "extracted_at": "2026-08-13T22:03:32.860Z",
+    "raw_fields": [
+      "data-category",
+      "data-marca",
+      "data-tipo",
+      "data-vertical",
+      "data-ficha",
+      "img[src]",
+      "h4",
+      "openProductModal(name,description,specsHtml)"
+    ]
+  }
+}

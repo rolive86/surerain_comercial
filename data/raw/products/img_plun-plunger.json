@@ -1,0 +1,48 @@
+{
+  "source_index": 148,
+  "source_id": "img:plun-plunger",
+  "name": "Tavlit PLUN – Plunger",
+  "slug": "tavlit-plun-plunger",
+  "category_slug": "microaspersion",
+  "brand_name": "Tavlit (Israel)",
+  "product_type_slug": null,
+  "markets": [
+    "agro"
+  ],
+  "image_url": "https://surerain.com/assets/productos-importados/plun-plunger.webp",
+  "image_alt": "Tavlit PLUN – Plunger",
+  "ficha_url": null,
+  "description": "Conector para componentes macho a tuberia de PE",
+  "specs_html": "<tr><td>Marca</td><td>Tavlit (Israel)</td></tr><tr><td>Tipo de Producto</td><td>Agro</td></tr>",
+  "specs_rows": [
+    {
+      "label": "Marca",
+      "value": "Tavlit (Israel)"
+    },
+    {
+      "label": "Tipo de Producto",
+      "value": "Agro"
+    }
+  ],
+  "chip_label": "Microaspersión",
+  "original_url": "https://surerain.com/catalogo?producto=tavlit-plun-plunger",
+  "outer_html": "<div class=\"card product-card cursor-pointer\" data-category=\"microaspersion\" data-marca=\"Tavlit (Israel)\" data-vertical=\"agro\" onclick=\"openProductModal('Tavlit PLUN – Plunger','Conector para componentes macho a tuberia de PE','<tr><td>Marca</td><td>Tavlit (Israel)</td></tr><tr><td>Tipo de Producto</td><td>Agro</td></tr>')\"><img width=\"195\" height=\"130\" alt=\"Tavlit PLUN – Plunger\" class=\"w-full object-cover\" loading=\"lazy\" src=\"assets/productos-importados/plun-plunger.webp\" style=\"height:130px;\"><div class=\"p-3\"><span class=\"chip chip-agro mb-1.5\">Microaspersión</span><h4 class=\"font-semibold text-gray-900 text-xs mb-1\">Tavlit PLUN – Plunger</h4><p class=\"text-xs text-gray-400 mb-2\">Tavlit (Israel)</p><div class=\"flex gap-1.5\"><span class=\"text-xs text-sr-green font-semibold cursor-pointer\">Ver ficha</span><span class=\"text-gray-300\">·</span><a class=\"text-xs text-gray-400 hover:text-sr-green\" href=\"contacto.html\">Dónde comprar</a></div></div></div>",
+  "onclick_raw": "openProductModal('Tavlit PLUN – Plunger','Conector para componentes macho a tuberia de PE','<tr><td>Marca</td><td>Tavlit (Israel)</td></tr><tr><td>Tipo de Producto</td><td>Agro</td></tr>')",
+  "content_hash": "05c375910e76909e0a99fb8be093fc6afbd73ff0545484af768fd0dbe0d1af51",
+  "provenance": {
+    "source_url": "file://C:\\proyectos\\SURERAIN-CLONE\\data\\raw\\catalogo.source.html",
+    "source_page": "https://surerain.com/catalogo",
+    "source_selector": ".product-card:nth-of-type(149)",
+    "extracted_at": "2026-08-13T22:03:32.860Z",
+    "raw_fields": [
+      "data-category",
+      "data-marca",
+      "data-tipo",
+      "data-vertical",
+      "data-ficha",
+      "img[src]",
+      "h4",
+      "openProductModal(name,description,specsHtml)"
+    ]
+  }
+}

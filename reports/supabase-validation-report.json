@@ -1,0 +1,105 @@
+{
+  "generated_at": "2026-08-13T23:05:13.690Z",
+  "project_ref": "alewhpkjiktmvbugkcnn",
+  "url": "https://alewhpkjiktmvbugkcnn.supabase.co",
+  "comparison": {
+    "products": {
+      "local": 420,
+      "supabase": 420
+    },
+    "categories": {
+      "local": 10,
+      "supabase": 10
+    },
+    "brands": {
+      "local": 28,
+      "supabase": 28
+    },
+    "markets": {
+      "local": 4,
+      "supabase": 4
+    },
+    "product_types": {
+      "local": 5,
+      "supabase": 5
+    },
+    "media": {
+      "local": 536,
+      "supabase": 536
+    },
+    "media_ok_local": 535,
+    "media_uploaded": 535,
+    "media_failed": 1,
+    "documents": {
+      "local": 126,
+      "supabase": 126
+    }
+  },
+  "relations": {
+    "products_without_category": 0,
+    "products_without_brand": 1,
+    "products_without_market": 0,
+    "products_without_image": 0,
+    "orphan_media": 0,
+    "duplicate_slugs": 0,
+    "duplicate_source_ids": 0,
+    "sample_missing_category": [],
+    "sample_missing_brand": [
+      {
+        "id": "a39da078-3b59-482b-801f-5404f0294039",
+        "brand_id": null,
+        "featured_image_id": "40e1b8e7-4ae4-4714-a9fa-d80af5e01e8e",
+        "slug": "caudalimetro-metalico-bridado",
+        "source_id": "img:caudalimetro-metalico-bridado"
+      }
+    ],
+    "sample_missing_image": []
+  },
+  "storage": {
+    "buckets": [
+      {
+        "id": "product-images",
+        "public": true
+      },
+      {
+        "id": "product-documents",
+        "public": true
+      },
+      {
+        "id": "category-images",
+        "public": true
+      },
+      {
+        "id": "brand-assets",
+        "public": true
+      }
+    ],
+    "uploaded_media_checked": 535,
+    "storage_objects_found": 535,
+    "storage_missing": 0,
+    "public_url_ok": true
+  },
+  "security": {
+    "rls_public_read": "OK",
+    "public_write_blocked": "BLOCKED",
+    "service_role_exposed_in_response": "NO"
+  },
+  "remote_counts": {
+    "products": 420,
+    "categories": 10,
+    "brands": 28,
+    "markets": 4,
+    "product_types": 5,
+    "media": 536,
+    "documents": 126,
+    "attributes": 5,
+    "product_categories": 420,
+    "product_markets": 792,
+    "product_media": 546,
+    "product_attribute_values": 2036,
+    "product_variants": 420,
+    "prices": 0,
+    "inventory": 0
+  },
+  "pass": true
+}

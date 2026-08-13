@@ -1,0 +1,48 @@
+{
+  "source_index": 213,
+  "source_id": "img:valvula-solenoide-k-rain-pro-100",
+  "name": "Válvula Solenoide K-RAIN PRO 100",
+  "slug": "valvula-solenoide-k-rain-pro-100",
+  "category_slug": "valvulas",
+  "brand_name": "K-Rain (USA)",
+  "product_type_slug": null,
+  "markets": [
+    "av"
+  ],
+  "image_url": "https://surerain.com/assets/productos-importados/valvula-solenoide-k-rain-pro-100.webp",
+  "image_alt": "Válvula Solenoide K-RAIN PRO 100",
+  "ficha_url": "https://surerain.com/assets/productos-fichas/127imgdesc1.webp",
+  "description": "VALVULA SOLENOIDE 1” CON CONTROL DE FLUJO CARACTERÍSTICAS: – Regulador de caudal con llave extraíble.",
+  "specs_html": "<tr><td>Marca</td><td>K-Rain (USA)</td></tr><tr><td>Tipo de Producto</td><td>Áreas Verdes</td></tr>",
+  "specs_rows": [
+    {
+      "label": "Marca",
+      "value": "K-Rain (USA)"
+    },
+    {
+      "label": "Tipo de Producto",
+      "value": "Áreas Verdes"
+    }
+  ],
+  "chip_label": "Válvulas",
+  "original_url": "https://surerain.com/catalogo?producto=valvula-solenoide-k-rain-pro-100",
+  "outer_html": "<div class=\"card product-card cursor-pointer\" data-category=\"valvulas\" data-ficha=\"assets/productos-fichas/127imgdesc1.webp\" data-marca=\"K-Rain (USA)\" data-vertical=\"av\" onclick=\"openProductModal('Válvula Solenoide K-RAIN PRO 100','VALVULA SOLENOIDE 1” CON CONTROL DE FLUJO CARACTERÍSTICAS: – Regulador de caudal con llave extraíble.','<tr><td>Marca</td><td>K-Rain (USA)</td></tr><tr><td>Tipo de Producto</td><td>Áreas Verdes</td></tr>')\"><img width=\"195\" height=\"130\" alt=\"Válvula Solenoide K-RAIN PRO 100\" class=\"w-full object-cover\" loading=\"lazy\" src=\"assets/productos-importados/valvula-solenoide-k-rain-pro-100.webp\" style=\"height:130px;\"><div class=\"p-3\"><span class=\"chip chip-av mb-1.5\">Válvulas</span><h4 class=\"font-semibold text-gray-900 text-xs mb-1\">Válvula Solenoide K-RAIN PRO 100</h4><p class=\"text-xs text-gray-400 mb-2\">K-Rain (USA)</p><div class=\"flex gap-1.5\"><span class=\"text-xs text-sr-green font-semibold cursor-pointer\">Ver ficha</span><span class=\"text-gray-300\">·</span><a class=\"text-xs text-gray-400 hover:text-sr-green\" href=\"contacto.html\">Dónde comprar</a></div></div></div>",
+  "onclick_raw": "openProductModal('Válvula Solenoide K-RAIN PRO 100','VALVULA SOLENOIDE 1” CON CONTROL DE FLUJO CARACTERÍSTICAS: – Regulador de caudal con llave extraíble.','<tr><td>Marca</td><td>K-Rain (USA)</td></tr><tr><td>Tipo de Producto</td><td>Áreas Verdes</td></tr>')",
+  "content_hash": "073b3529bbe1a5fb2ef9dcbe23a6f4d87336abde59ee1abd600381e90cce9be2",
+  "provenance": {
+    "source_url": "file://C:\\proyectos\\SURERAIN-CLONE\\data\\raw\\catalogo.source.html",
+    "source_page": "https://surerain.com/catalogo",
+    "source_selector": ".product-card:nth-of-type(214)",
+    "extracted_at": "2026-08-13T22:03:32.860Z",
+    "raw_fields": [
+      "data-category",
+      "data-marca",
+      "data-tipo",
+      "data-vertical",
+      "data-ficha",
+      "img[src]",
+      "h4",
+      "openProductModal(name,description,specsHtml)"
+    ]
+  }
+}

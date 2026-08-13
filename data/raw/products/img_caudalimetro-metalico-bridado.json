@@ -1,0 +1,45 @@
+{
+  "source_index": 282,
+  "source_id": "img:caudalimetro-metalico-bridado",
+  "name": "Caudalímetro metálico bridado",
+  "slug": "caudalimetro-metalico-bridado",
+  "category_slug": "caudalimetros",
+  "brand_name": null,
+  "product_type_slug": null,
+  "markets": [
+    "agro",
+    "infra"
+  ],
+  "image_url": "https://surerain.com/assets/productos-importados/caudalimetro-metalico-bridado.webp",
+  "image_alt": "Caudalímetro metálico bridado",
+  "ficha_url": "https://surerain.com/assets/productos-fichas/635imgdesc1.webp",
+  "description": "CARACTERÍSTICAS: – Pasaje de alto caudal con baja pérdida de carga. – Sistema autolimpiante que permite buen funcionamiento con agua sucia.",
+  "specs_html": "<tr><td>Tipo de Producto</td><td>Agro, Infraestructura</td></tr>",
+  "specs_rows": [
+    {
+      "label": "Tipo de Producto",
+      "value": "Agro, Infraestructura"
+    }
+  ],
+  "chip_label": "Caudalímetros",
+  "original_url": "https://surerain.com/catalogo?producto=caudalimetro-metalico-bridado",
+  "outer_html": "<div class=\"card product-card cursor-pointer\" data-category=\"caudalimetros\" data-ficha=\"assets/productos-fichas/635imgdesc1.webp\" data-marca=\"\" data-vertical=\"agro infra\" onclick=\"openProductModal('Caudalímetro metálico bridado','CARACTERÍSTICAS: – Pasaje de alto caudal con baja pérdida de carga. – Sistema autolimpiante que permite buen funcionamiento con agua sucia.','<tr><td>Tipo de Producto</td><td>Agro, Infraestructura</td></tr>')\"><img width=\"195\" height=\"130\" alt=\"Caudalímetro metálico bridado\" class=\"w-full object-cover\" loading=\"lazy\" src=\"assets/productos-importados/caudalimetro-metalico-bridado.webp\" style=\"height:130px;\"><div class=\"p-3\"><span class=\"chip chip-agro mb-1.5\">Caudalímetros</span><h4 class=\"font-semibold text-gray-900 text-xs mb-1\">Caudalímetro metálico bridado</h4><p class=\"text-xs text-gray-400 mb-2\">Caudalímetros</p><div class=\"flex gap-1.5\"><span class=\"text-xs text-sr-green font-semibold cursor-pointer\">Ver ficha</span><span class=\"text-gray-300\">·</span><a class=\"text-xs text-gray-400 hover:text-sr-green\" href=\"contacto.html\">Dónde comprar</a></div></div></div>",
+  "onclick_raw": "openProductModal('Caudalímetro metálico bridado','CARACTERÍSTICAS: – Pasaje de alto caudal con baja pérdida de carga. – Sistema autolimpiante que permite buen funcionamiento con agua sucia.','<tr><td>Tipo de Producto</td><td>Agro, Infraestructura</td></tr>')",
+  "content_hash": "77c236be72fda644523a801179d6c67ff1bd1788febc32e52a73288a227480c4",
+  "provenance": {
+    "source_url": "file://C:\\proyectos\\SURERAIN-CLONE\\data\\raw\\catalogo.source.html",
+    "source_page": "https://surerain.com/catalogo",
+    "source_selector": ".product-card:nth-of-type(283)",
+    "extracted_at": "2026-08-13T22:03:32.860Z",
+    "raw_fields": [
+      "data-category",
+      "data-marca",
+      "data-tipo",
+      "data-vertical",
+      "data-ficha",
+      "img[src]",
+      "h4",
+      "openProductModal(name,description,specsHtml)"
+    ]
+  }
+}

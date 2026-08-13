@@ -1,0 +1,44 @@
+{
+  "source_index": 147,
+  "source_id": "img:copa-sacabocado",
+  "name": "Copa Sacabocado",
+  "slug": "copa-sacabocado",
+  "category_slug": "microaspersion",
+  "brand_name": "GreenPlains",
+  "product_type_slug": null,
+  "markets": [
+    "agro"
+  ],
+  "image_url": "https://surerain.com/assets/productos-importados/copa-sacabocado.webp",
+  "image_alt": "Copa Sacabocado",
+  "ficha_url": null,
+  "description": "COPA SACABOCADO Medida disponible: 16mm",
+  "specs_html": "<tr><td>Marca</td><td>GreenPlains</td></tr>",
+  "specs_rows": [
+    {
+      "label": "Marca",
+      "value": "GreenPlains"
+    }
+  ],
+  "chip_label": "Microaspersión",
+  "original_url": "https://surerain.com/catalogo?producto=copa-sacabocado",
+  "outer_html": "<div class=\"card product-card cursor-pointer\" data-category=\"microaspersion\" data-marca=\"GreenPlains\" data-vertical=\"agro\" onclick=\"openProductModal('Copa Sacabocado','COPA SACABOCADO Medida disponible: 16mm','<tr><td>Marca</td><td>GreenPlains</td></tr>')\"><img width=\"195\" height=\"130\" alt=\"Copa Sacabocado\" class=\"w-full object-cover\" loading=\"lazy\" src=\"assets/productos-importados/copa-sacabocado.webp\" style=\"height:130px;\"><div class=\"p-3\"><span class=\"chip chip-agro mb-1.5\">Microaspersión</span><h4 class=\"font-semibold text-gray-900 text-xs mb-1\">Copa Sacabocado</h4><p class=\"text-xs text-gray-400 mb-2\">GreenPlains</p><div class=\"flex gap-1.5\"><span class=\"text-xs text-sr-green font-semibold cursor-pointer\">Ver ficha</span><span class=\"text-gray-300\">·</span><a class=\"text-xs text-gray-400 hover:text-sr-green\" href=\"contacto.html\">Dónde comprar</a></div></div></div>",
+  "onclick_raw": "openProductModal('Copa Sacabocado','COPA SACABOCADO Medida disponible: 16mm','<tr><td>Marca</td><td>GreenPlains</td></tr>')",
+  "content_hash": "6aa00136c32886cee1a337a5e7d9ded6239fe22a61edd52cac035b8010999fe7",
+  "provenance": {
+    "source_url": "file://C:\\proyectos\\SURERAIN-CLONE\\data\\raw\\catalogo.source.html",
+    "source_page": "https://surerain.com/catalogo",
+    "source_selector": ".product-card:nth-of-type(148)",
+    "extracted_at": "2026-08-13T22:03:32.860Z",
+    "raw_fields": [
+      "data-category",
+      "data-marca",
+      "data-tipo",
+      "data-vertical",
+      "data-ficha",
+      "img[src]",
+      "h4",
+      "openProductModal(name,description,specsHtml)"
+    ]
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "source_index": 195,
+  "source_id": "img:para-encolar-2",
+  "name": "Válvula esférica para encolar – Sin unión doble",
+  "slug": "valvula-esferica-para-encolar-sin-union-doble",
+  "category_slug": "valvulas",
+  "brand_name": "ERA",
+  "product_type_slug": null,
+  "markets": [
+    "agro",
+    "av",
+    "infra"
+  ],
+  "image_url": "https://surerain.com/assets/productos-importados/para-encolar-2.webp",
+  "image_alt": "Válvula esférica para encolar – Sin unión doble",
+  "ficha_url": null,
+  "description": "CARACTERÍSTICAS: – Para encolar. – Medidas disponibles: Ø40, Ø50, Ø63. – Presión máxima de trabajo: 10 bares (PN10) – Material: PVC, O-Rings (EPDM)",
+  "specs_html": "<tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes, Infraestructura</td></tr>",
+  "specs_rows": [
+    {
+      "label": "Tipo de Producto",
+      "value": "Agro, Áreas Verdes, Infraestructura"
+    }
+  ],
+  "chip_label": "Válvulas",
+  "original_url": "https://surerain.com/catalogo?producto=valvula-esferica-para-encolar-sin-union-doble",
+  "outer_html": "<div class=\"card product-card cursor-pointer\" data-category=\"valvulas\" data-marca=\"ERA\" data-vertical=\"agro av infra\" onclick=\"openProductModal('Válvula esférica para encolar – Sin unión doble','CARACTERÍSTICAS: – Para encolar. – Medidas disponibles: Ø40, Ø50, Ø63. – Presión máxima de trabajo: 10 bares (PN10) – Material: PVC, O-Rings (EPDM)','<tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes, Infraestructura</td></tr>')\"><img width=\"195\" height=\"130\" alt=\"Válvula esférica para encolar – Sin unión doble\" class=\"w-full object-cover\" loading=\"lazy\" src=\"assets/productos-importados/para-encolar-2.webp\" style=\"height:130px;\"><div class=\"p-3\"><span class=\"chip chip-agro mb-1.5\">Válvulas</span><h4 class=\"font-semibold text-gray-900 text-xs mb-1\">Válvula esférica para encolar – Sin unión doble</h4><p class=\"text-xs text-gray-400 mb-2\">Válvulas</p><div class=\"flex gap-1.5\"><span class=\"text-xs text-sr-green font-semibold cursor-pointer\">Ver ficha</span><span class=\"text-gray-300\">·</span><a class=\"text-xs text-gray-400 hover:text-sr-green\" href=\"contacto.html\">Dónde comprar</a></div></div></div>",
+  "onclick_raw": "openProductModal('Válvula esférica para encolar – Sin unión doble','CARACTERÍSTICAS: – Para encolar. – Medidas disponibles: Ø40, Ø50, Ø63. – Presión máxima de trabajo: 10 bares (PN10) – Material: PVC, O-Rings (EPDM)','<tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes, Infraestructura</td></tr>')",
+  "content_hash": "f75d25e42735193c8e2993917560ab56d64570c0ca4c4cb1eb3de8d11b6f10b6",
+  "provenance": {
+    "source_url": "file://C:\\proyectos\\SURERAIN-CLONE\\data\\raw\\catalogo.source.html",
+    "source_page": "https://surerain.com/catalogo",
+    "source_selector": ".product-card:nth-of-type(196)",
+    "extracted_at": "2026-08-13T22:03:32.860Z",
+    "raw_fields": [
+      "data-category",
+      "data-marca",
+      "data-tipo",
+      "data-vertical",
+      "data-ficha",
+      "img[src]",
+      "h4",
+      "openProductModal(name,description,specsHtml)"
+    ]
+  }
+}

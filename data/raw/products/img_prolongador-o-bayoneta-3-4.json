@@ -1,0 +1,49 @@
+{
+  "source_index": 69,
+  "source_id": "img:prolongador-o-bayoneta-3-4",
+  "name": "Prolongador o Bayoneta GreenPlains",
+  "slug": "prolongador-o-bayoneta-greenplains",
+  "category_slug": "aspersores",
+  "brand_name": "Origen China",
+  "product_type_slug": "impacto",
+  "markets": [
+    "av",
+    "infra"
+  ],
+  "image_url": "https://surerain.com/assets/productos-importados/prolongador-o-bayoneta-3-4.webp",
+  "image_alt": "Prolongador o Bayoneta GreenPlains",
+  "ficha_url": null,
+  "description": "Prolongador o Bayoneta. Medidas disponibles: Rosca macho 3/4″",
+  "specs_html": "<tr><td>Marca</td><td>Origen China</td></tr><tr><td>Tipo de Producto</td><td>Áreas Verdes, Infraestructura</td></tr>",
+  "specs_rows": [
+    {
+      "label": "Marca",
+      "value": "Origen China"
+    },
+    {
+      "label": "Tipo de Producto",
+      "value": "Áreas Verdes, Infraestructura"
+    }
+  ],
+  "chip_label": "Aspersores",
+  "original_url": "https://surerain.com/catalogo?producto=prolongador-o-bayoneta-greenplains",
+  "outer_html": "<div class=\"card product-card cursor-pointer\" data-category=\"aspersores\" data-marca=\"Origen China\" data-tipo=\"impacto\" data-vertical=\"av infra\" onclick=\"openProductModal('Prolongador o Bayoneta GreenPlains','Prolongador o Bayoneta. Medidas disponibles: Rosca macho 3/4″','<tr><td>Marca</td><td>Origen China</td></tr><tr><td>Tipo de Producto</td><td>Áreas Verdes, Infraestructura</td></tr>')\"><img width=\"195\" height=\"130\" alt=\"Prolongador o Bayoneta GreenPlains\" class=\"w-full object-cover\" loading=\"lazy\" src=\"assets/productos-importados/prolongador-o-bayoneta-3-4.webp\" style=\"height:130px;\"><div class=\"p-3\"><span class=\"chip chip-av mb-1.5\">Aspersores</span><h4 class=\"font-semibold text-gray-900 text-xs mb-1\">Prolongador o Bayoneta GreenPlains</h4><p class=\"text-xs text-gray-400 mb-2\">Origen China</p><div class=\"flex gap-1.5\"><span class=\"text-xs text-sr-green font-semibold cursor-pointer\">Ver ficha</span><span class=\"text-gray-300\">·</span><a class=\"text-xs text-gray-400 hover:text-sr-green\" href=\"contacto.html\">Dónde comprar</a></div></div></div>",
+  "onclick_raw": "openProductModal('Prolongador o Bayoneta GreenPlains','Prolongador o Bayoneta. Medidas disponibles: Rosca macho 3/4″','<tr><td>Marca</td><td>Origen China</td></tr><tr><td>Tipo de Producto</td><td>Áreas Verdes, Infraestructura</td></tr>')",
+  "content_hash": "3af3f84b2cd2cf0b3ca40260e4b5c3408ecc3e818bdc076f4ceaf0d59fc6d2ac",
+  "provenance": {
+    "source_url": "file://C:\\proyectos\\SURERAIN-CLONE\\data\\raw\\catalogo.source.html",
+    "source_page": "https://surerain.com/catalogo",
+    "source_selector": ".product-card:nth-of-type(70)",
+    "extracted_at": "2026-08-13T22:03:32.860Z",
+    "raw_fields": [
+      "data-category",
+      "data-marca",
+      "data-tipo",
+      "data-vertical",
+      "data-ficha",
+      "img[src]",
+      "h4",
+      "openProductModal(name,description,specsHtml)"
+    ]
+  }
+}

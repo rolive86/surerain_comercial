@@ -1,0 +1,45 @@
+{
+  "source_index": 401,
+  "source_id": "img:wi-2526",
+  "name": "WI-25106",
+  "slug": "wi-25106",
+  "category_slug": "hogar",
+  "brand_name": "Winin",
+  "product_type_slug": null,
+  "markets": [
+    "av",
+    "hogar"
+  ],
+  "image_url": "https://surerain.com/assets/productos-importados/wi-2526.webp",
+  "image_alt": "WI-25106",
+  "ficha_url": null,
+  "description": "Conector rosca macho 3/4″, espiga 3 secciones.",
+  "specs_html": "<tr><td>Tipo de Producto</td><td>Áreas Verdes</td></tr>",
+  "specs_rows": [
+    {
+      "label": "Tipo de Producto",
+      "value": "Áreas Verdes"
+    }
+  ],
+  "chip_label": "Conectores",
+  "original_url": "https://surerain.com/catalogo?producto=wi-25106",
+  "outer_html": "<div class=\"card product-card cursor-pointer\" data-category=\"hogar\" data-marca=\"Winin\" data-vertical=\"av hogar\" onclick=\"openProductModal('WI-25106','Conector rosca macho 3/4″, espiga 3 secciones.','<tr><td>Tipo de Producto</td><td>Áreas Verdes</td></tr>')\"><img width=\"195\" height=\"130\" alt=\"WI-25106\" class=\"w-full object-cover\" loading=\"lazy\" src=\"assets/productos-importados/wi-2526.webp\" style=\"height:130px;\"><div class=\"p-3\"><span class=\"chip chip-av mb-1.5\">Conectores</span><h4 class=\"font-semibold text-gray-900 text-xs mb-1\">WI-25106</h4><p class=\"text-xs text-gray-400 mb-2\">Conectores y Juntas</p><div class=\"flex gap-1.5\"><span class=\"text-xs text-sr-green font-semibold cursor-pointer\">Ver ficha</span><span class=\"text-gray-300\">·</span><a class=\"text-xs text-gray-400 hover:text-sr-green\" href=\"contacto.html\">Dónde comprar</a></div></div></div>",
+  "onclick_raw": "openProductModal('WI-25106','Conector rosca macho 3/4″, espiga 3 secciones.','<tr><td>Tipo de Producto</td><td>Áreas Verdes</td></tr>')",
+  "content_hash": "d7bacb7dbf0b2cf166eb69569c4c1af1e1de7606c2423025d94634ad9ef82fb6",
+  "provenance": {
+    "source_url": "file://C:\\proyectos\\SURERAIN-CLONE\\data\\raw\\catalogo.source.html",
+    "source_page": "https://surerain.com/catalogo",
+    "source_selector": ".product-card:nth-of-type(402)",
+    "extracted_at": "2026-08-13T22:03:32.860Z",
+    "raw_fields": [
+      "data-category",
+      "data-marca",
+      "data-tipo",
+      "data-vertical",
+      "data-ficha",
+      "img[src]",
+      "h4",
+      "openProductModal(name,description,specsHtml)"
+    ]
+  }
+}

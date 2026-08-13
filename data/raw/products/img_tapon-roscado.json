@@ -1,0 +1,45 @@
+{
+  "source_index": 244,
+  "source_id": "img:tapon-roscado",
+  "name": "Tapón roscado",
+  "slug": "tapon-roscado",
+  "category_slug": "valvulas",
+  "brand_name": "GreenPlains",
+  "product_type_slug": null,
+  "markets": [
+    "agro",
+    "infra"
+  ],
+  "image_url": "https://surerain.com/assets/productos-importados/tapon-roscado.webp",
+  "image_alt": "Tapón roscado",
+  "ficha_url": null,
+  "description": "Tapón roscado Medidas disponibles: 1/8″ 1/4″",
+  "specs_html": "<tr><td>Tipo de Producto</td><td>Agro, Infraestructura</td></tr>",
+  "specs_rows": [
+    {
+      "label": "Tipo de Producto",
+      "value": "Agro, Infraestructura"
+    }
+  ],
+  "chip_label": "Válvulas",
+  "original_url": "https://surerain.com/catalogo?producto=tapon-roscado",
+  "outer_html": "<div class=\"card product-card cursor-pointer\" data-category=\"valvulas\" data-marca=\"GreenPlains\" data-vertical=\"agro infra\" onclick=\"openProductModal('Tapón roscado','Tapón roscado Medidas disponibles: 1/8″ 1/4″','<tr><td>Tipo de Producto</td><td>Agro, Infraestructura</td></tr>')\"><img width=\"195\" height=\"130\" alt=\"Tapón roscado\" class=\"w-full object-cover\" loading=\"lazy\" src=\"assets/productos-importados/tapon-roscado.webp\" style=\"height:130px;\"><div class=\"p-3\"><span class=\"chip chip-agro mb-1.5\">Válvulas</span><h4 class=\"font-semibold text-gray-900 text-xs mb-1\">Tapón roscado</h4><p class=\"text-xs text-gray-400 mb-2\">Accesorios y Repuestos</p><div class=\"flex gap-1.5\"><span class=\"text-xs text-sr-green font-semibold cursor-pointer\">Ver ficha</span><span class=\"text-gray-300\">·</span><a class=\"text-xs text-gray-400 hover:text-sr-green\" href=\"contacto.html\">Dónde comprar</a></div></div></div>",
+  "onclick_raw": "openProductModal('Tapón roscado','Tapón roscado Medidas disponibles: 1/8″ 1/4″','<tr><td>Tipo de Producto</td><td>Agro, Infraestructura</td></tr>')",
+  "content_hash": "15843abc0852ff1839bd5f9ca50bb63702dd3820b75260dd2828db93c8a73212",
+  "provenance": {
+    "source_url": "file://C:\\proyectos\\SURERAIN-CLONE\\data\\raw\\catalogo.source.html",
+    "source_page": "https://surerain.com/catalogo",
+    "source_selector": ".product-card:nth-of-type(245)",
+    "extracted_at": "2026-08-13T22:03:32.860Z",
+    "raw_fields": [
+      "data-category",
+      "data-marca",
+      "data-tipo",
+      "data-vertical",
+      "data-ficha",
+      "img[src]",
+      "h4",
+      "openProductModal(name,description,specsHtml)"
+    ]
+  }
+}

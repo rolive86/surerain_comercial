@@ -1,0 +1,45 @@
+{
+  "source_index": 391,
+  "source_id": "img:rs-pw-2185",
+  "name": "RS PW-2185",
+  "slug": "rs-pw-2185",
+  "category_slug": "hogar",
+  "brand_name": "Plásticos Coorp",
+  "product_type_slug": null,
+  "markets": [
+    "av",
+    "hogar"
+  ],
+  "image_url": "https://surerain.com/assets/productos-importados/rs-pw-2185.webp",
+  "image_alt": "RS PW-2185",
+  "ficha_url": null,
+  "description": "Conector 3/4″, rosca macho.",
+  "specs_html": "<tr><td>Tipo de Producto</td><td>Áreas Verdes</td></tr>",
+  "specs_rows": [
+    {
+      "label": "Tipo de Producto",
+      "value": "Áreas Verdes"
+    }
+  ],
+  "chip_label": "Conectores",
+  "original_url": "https://surerain.com/catalogo?producto=rs-pw-2185",
+  "outer_html": "<div class=\"card product-card cursor-pointer\" data-category=\"hogar\" data-marca=\"Plásticos Coorp\" data-vertical=\"av hogar\" onclick=\"openProductModal('RS PW-2185','Conector 3/4″, rosca macho.','<tr><td>Tipo de Producto</td><td>Áreas Verdes</td></tr>')\"><img width=\"195\" height=\"130\" alt=\"RS PW-2185\" class=\"w-full object-cover\" loading=\"lazy\" src=\"assets/productos-importados/rs-pw-2185.webp\" style=\"height:130px;\"><div class=\"p-3\"><span class=\"chip chip-av mb-1.5\">Conectores</span><h4 class=\"font-semibold text-gray-900 text-xs mb-1\">RS PW-2185</h4><p class=\"text-xs text-gray-400 mb-2\">Conectores y Juntas</p><div class=\"flex gap-1.5\"><span class=\"text-xs text-sr-green font-semibold cursor-pointer\">Ver ficha</span><span class=\"text-gray-300\">·</span><a class=\"text-xs text-gray-400 hover:text-sr-green\" href=\"contacto.html\">Dónde comprar</a></div></div></div>",
+  "onclick_raw": "openProductModal('RS PW-2185','Conector 3/4″, rosca macho.','<tr><td>Tipo de Producto</td><td>Áreas Verdes</td></tr>')",
+  "content_hash": "b493c5bbdecd8187c3cb58446458b0a43f897ea1b43305f1f810ebe26adb3035",
+  "provenance": {
+    "source_url": "file://C:\\proyectos\\SURERAIN-CLONE\\data\\raw\\catalogo.source.html",
+    "source_page": "https://surerain.com/catalogo",
+    "source_selector": ".product-card:nth-of-type(392)",
+    "extracted_at": "2026-08-13T22:03:32.860Z",
+    "raw_fields": [
+      "data-category",
+      "data-marca",
+      "data-tipo",
+      "data-vertical",
+      "data-ficha",
+      "img[src]",
+      "h4",
+      "openProductModal(name,description,specsHtml)"
+    ]
+  }
+}

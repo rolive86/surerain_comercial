@@ -1,0 +1,48 @@
+{
+  "source_index": 163,
+  "source_id": "img:filtro-automatico-doble-anillas",
+  "name": "Filtro doble cuerpo plástico, anilla plástica, automático",
+  "slug": "filtro-doble-cuerpo-plastico-anilla-plastica-automatico",
+  "category_slug": "filtros",
+  "brand_name": "Origen China",
+  "product_type_slug": null,
+  "markets": [
+    "agro"
+  ],
+  "image_url": "https://surerain.com/assets/productos-importados/filtro-automatico-doble-anillas.webp",
+  "image_alt": "Filtro doble cuerpo plástico, anilla plástica, automático",
+  "ficha_url": "https://surerain.com/assets/productos-fichas/788imgdesc1.webp",
+  "description": "CARACTERÍSTICAS: – Disponibles en 3″ rosca macho, con tapón de purga y toma para manómetro. – Cuerpo de nylon reforzado con fibra de vidrio. – Elemento filtrante, anillas de 130 micrones. – Cierre metálico. – Caudales máximos de filtrado: 70 m3/h, con pérdida de carga de 0,3 bar. – Presión máxima: 10 bar.",
+  "specs_html": "<tr><td>Marca</td><td>Origen China</td></tr><tr><td>Tipo de Producto</td><td>Agro</td></tr>",
+  "specs_rows": [
+    {
+      "label": "Marca",
+      "value": "Origen China"
+    },
+    {
+      "label": "Tipo de Producto",
+      "value": "Agro"
+    }
+  ],
+  "chip_label": "Filtros",
+  "original_url": "https://surerain.com/catalogo?producto=filtro-doble-cuerpo-plastico-anilla-plastica-automatico",
+  "outer_html": "<div class=\"card product-card cursor-pointer\" data-category=\"filtros\" data-ficha=\"assets/productos-fichas/788imgdesc1.webp\" data-marca=\"Origen China\" data-vertical=\"agro\" onclick=\"openProductModal('Filtro doble cuerpo plástico, anilla plástica, automático','CARACTERÍSTICAS: – Disponibles en 3″ rosca macho, con tapón de purga y toma para manómetro. – Cuerpo de nylon reforzado con fibra de vidrio. – Elemento filtrante, anillas de 130 micrones. – Cierre metálico. – Caudales máximos de filtrado: 70 m3/h, con pérdida de carga de 0,3 bar. – Presión máxima: 10 bar.','<tr><td>Marca</td><td>Origen China</td></tr><tr><td>Tipo de Producto</td><td>Agro</td></tr>')\"><img width=\"195\" height=\"130\" alt=\"Filtro doble cuerpo plástico, anilla plástica, automático\" class=\"w-full object-cover\" loading=\"lazy\" src=\"assets/productos-importados/filtro-automatico-doble-anillas.webp\" style=\"height:130px;\"><div class=\"p-3\"><span class=\"chip chip-agro mb-1.5\">Filtros</span><h4 class=\"font-semibold text-gray-900 text-xs mb-1\">Filtro doble cuerpo plástico, anilla plástica, automático</h4><p class=\"text-xs text-gray-400 mb-2\">Origen China</p><div class=\"flex gap-1.5\"><span class=\"text-xs text-sr-green font-semibold cursor-pointer\">Ver ficha</span><span class=\"text-gray-300\">·</span><a class=\"text-xs text-gray-400 hover:text-sr-green\" href=\"contacto.html\">Dónde comprar</a></div></div></div>",
+  "onclick_raw": "openProductModal('Filtro doble cuerpo plástico, anilla plástica, automático','CARACTERÍSTICAS: – Disponibles en 3″ rosca macho, con tapón de purga y toma para manómetro. – Cuerpo de nylon reforzado con fibra de vidrio. – Elemento filtrante, anillas de 130 micrones. – Cierre metálico. – Caudales máximos de filtrado: 70 m3/h, con pérdida de carga de 0,3 bar. – Presión máxima: 10 bar.','<tr><td>Marca</td><td>Origen China</td></tr><tr><td>Tipo de Producto</td><td>Agro</td></tr>')",
+  "content_hash": "6c359f512d6b92866e0113390b867db766aaf9b6bab08131125bfc4217732f33",
+  "provenance": {
+    "source_url": "file://C:\\proyectos\\SURERAIN-CLONE\\data\\raw\\catalogo.source.html",
+    "source_page": "https://surerain.com/catalogo",
+    "source_selector": ".product-card:nth-of-type(164)",
+    "extracted_at": "2026-08-13T22:03:32.860Z",
+    "raw_fields": [
+      "data-category",
+      "data-marca",
+      "data-tipo",
+      "data-vertical",
+      "data-ficha",
+      "img[src]",
+      "h4",
+      "openProductModal(name,description,specsHtml)"
+    ]
+  }
+}

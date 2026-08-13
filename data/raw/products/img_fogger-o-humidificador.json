@@ -1,0 +1,44 @@
+{
+  "source_index": 137,
+  "source_id": "img:fogger-o-humidificador",
+  "name": "VS772 Fogger o humidificador",
+  "slug": "vs772-fogger-o-humidificador",
+  "category_slug": "microaspersion",
+  "brand_name": "ZM Yuyao",
+  "product_type_slug": null,
+  "markets": [
+    "agro"
+  ],
+  "image_url": "https://surerain.com/assets/productos-importados/fogger-o-humidificador.webp",
+  "image_alt": "VS772 Fogger o humidificador",
+  "ficha_url": null,
+  "description": "Fogger o humidificador Caudal 7 l/h",
+  "specs_html": "<tr><td>Tipo de Producto</td><td>Agro</td></tr>",
+  "specs_rows": [
+    {
+      "label": "Tipo de Producto",
+      "value": "Agro"
+    }
+  ],
+  "chip_label": "Microaspersión",
+  "original_url": "https://surerain.com/catalogo?producto=vs772-fogger-o-humidificador",
+  "outer_html": "<div class=\"card product-card cursor-pointer\" data-category=\"microaspersion\" data-marca=\"ZM Yuyao\" data-vertical=\"agro\" onclick=\"openProductModal('VS772 Fogger o humidificador','Fogger o humidificador Caudal 7 l/h','<tr><td>Tipo de Producto</td><td>Agro</td></tr>')\"><img width=\"195\" height=\"130\" alt=\"VS772 Fogger o humidificador\" class=\"w-full object-cover\" loading=\"lazy\" src=\"assets/productos-importados/fogger-o-humidificador.webp\" style=\"height:130px;\"><div class=\"p-3\"><span class=\"chip chip-agro mb-1.5\">Microaspersión</span><h4 class=\"font-semibold text-gray-900 text-xs mb-1\">VS772 Fogger o humidificador</h4><p class=\"text-xs text-gray-400 mb-2\">Foggers</p><div class=\"flex gap-1.5\"><span class=\"text-xs text-sr-green font-semibold cursor-pointer\">Ver ficha</span><span class=\"text-gray-300\">·</span><a class=\"text-xs text-gray-400 hover:text-sr-green\" href=\"contacto.html\">Dónde comprar</a></div></div></div>",
+  "onclick_raw": "openProductModal('VS772 Fogger o humidificador','Fogger o humidificador Caudal 7 l/h','<tr><td>Tipo de Producto</td><td>Agro</td></tr>')",
+  "content_hash": "2c3bfbbf691d087c2a38c316167722b2c18deb4764005b3827d721669f826e9b",
+  "provenance": {
+    "source_url": "file://C:\\proyectos\\SURERAIN-CLONE\\data\\raw\\catalogo.source.html",
+    "source_page": "https://surerain.com/catalogo",
+    "source_selector": ".product-card:nth-of-type(138)",
+    "extracted_at": "2026-08-13T22:03:32.860Z",
+    "raw_fields": [
+      "data-category",
+      "data-marca",
+      "data-tipo",
+      "data-vertical",
+      "data-ficha",
+      "img[src]",
+      "h4",
+      "openProductModal(name,description,specsHtml)"
+    ]
+  }
+}

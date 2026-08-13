@@ -1,0 +1,48 @@
+{
+  "source_index": 179,
+  "source_id": "img:filtros-simples-en-t-y-dobles-de-malla-plastica-con-efecto-hidrociclon",
+  "name": "Filtros Erhas cortos y largos en T, Malla metálica",
+  "slug": "filtros-erhas-cortos-y-largos-en-t-malla-metalica",
+  "category_slug": "filtros",
+  "brand_name": "Erhas (Turquía)",
+  "product_type_slug": null,
+  "markets": [
+    "agro"
+  ],
+  "image_url": "https://surerain.com/assets/productos-importados/filtros-simples-en-t-y-dobles-de-malla-plastica-con-efecto-hidrociclon.webp",
+  "image_alt": "Filtros Erhas cortos y largos en T, Malla metálica",
+  "ficha_url": "https://surerain.com/assets/productos-fichas/Erhas-simples-malla.webp",
+  "description": "CARACTERÍSTICAS: – Disponibles en : . Cuerpo simple corto de 2″ con tapón de purga y toma para manómetro.",
+  "specs_html": "<tr><td>Marca</td><td>Erhas (Turquía)</td></tr><tr><td>Tipo de Producto</td><td>Agro</td></tr>",
+  "specs_rows": [
+    {
+      "label": "Marca",
+      "value": "Erhas (Turquía)"
+    },
+    {
+      "label": "Tipo de Producto",
+      "value": "Agro"
+    }
+  ],
+  "chip_label": "Filtros",
+  "original_url": "https://surerain.com/catalogo?producto=filtros-erhas-cortos-y-largos-en-t-malla-metalica",
+  "outer_html": "<div class=\"card product-card cursor-pointer\" data-category=\"filtros\" data-ficha=\"assets/productos-fichas/Erhas-simples-malla.webp\" data-marca=\"Erhas (Turquía)\" data-vertical=\"agro\" onclick=\"openProductModal('Filtros Erhas cortos y largos en T, Malla metálica','CARACTERÍSTICAS: – Disponibles en : . Cuerpo simple corto de 2″ con tapón de purga y toma para manómetro.','<tr><td>Marca</td><td>Erhas (Turquía)</td></tr><tr><td>Tipo de Producto</td><td>Agro</td></tr>')\"><img width=\"195\" height=\"130\" alt=\"Filtros Erhas cortos y largos en T, Malla metálica\" class=\"w-full object-cover\" loading=\"lazy\" src=\"assets/productos-importados/filtros-simples-en-t-y-dobles-de-malla-plastica-con-efecto-hidrociclon.webp\" style=\"height:130px;\"><div class=\"p-3\"><span class=\"chip chip-agro mb-1.5\">Filtros</span><h4 class=\"font-semibold text-gray-900 text-xs mb-1\">Filtros Erhas cortos y largos en T, Malla metálica</h4><p class=\"text-xs text-gray-400 mb-2\">Erhas (Turquía)</p><div class=\"flex gap-1.5\"><span class=\"text-xs text-sr-green font-semibold cursor-pointer\">Ver ficha</span><span class=\"text-gray-300\">·</span><a class=\"text-xs text-gray-400 hover:text-sr-green\" href=\"contacto.html\">Dónde comprar</a></div></div></div>",
+  "onclick_raw": "openProductModal('Filtros Erhas cortos y largos en T, Malla metálica','CARACTERÍSTICAS: – Disponibles en : . Cuerpo simple corto de 2″ con tapón de purga y toma para manómetro.','<tr><td>Marca</td><td>Erhas (Turquía)</td></tr><tr><td>Tipo de Producto</td><td>Agro</td></tr>')",
+  "content_hash": "24ff6070a83e2a33a127c9cb50810fbddbf9f64de35bdbcfebd54a09f4dd3b1f",
+  "provenance": {
+    "source_url": "file://C:\\proyectos\\SURERAIN-CLONE\\data\\raw\\catalogo.source.html",
+    "source_page": "https://surerain.com/catalogo",
+    "source_selector": ".product-card:nth-of-type(180)",
+    "extracted_at": "2026-08-13T22:03:32.860Z",
+    "raw_fields": [
+      "data-category",
+      "data-marca",
+      "data-tipo",
+      "data-vertical",
+      "data-ficha",
+      "img[src]",
+      "h4",
+      "openProductModal(name,description,specsHtml)"
+    ]
+  }
+}

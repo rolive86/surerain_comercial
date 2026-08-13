@@ -1,0 +1,49 @@
+{
+  "source_index": 369,
+  "source_id": "img:estaca-para-tuberia-16mm-y-20mm",
+  "name": "Estaca para tubería 16mm y 20mm",
+  "slug": "estaca-para-tuberia-16mm-y-20mm",
+  "category_slug": "conectores",
+  "brand_name": "Plástica Alfa (Italia)",
+  "product_type_slug": null,
+  "markets": [
+    "agro",
+    "av"
+  ],
+  "image_url": "https://surerain.com/assets/productos-importados/estaca-para-tuberia-16mm-y-20mm.webp",
+  "image_alt": "Estaca para tubería 16mm y 20mm",
+  "ficha_url": null,
+  "description": "Estaca para tubería 16mm y 20mm Cód. ACGR009030.0020",
+  "specs_html": "<tr><td>Marca</td><td>Plástica Alfa (Italia)</td></tr><tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes</td></tr>",
+  "specs_rows": [
+    {
+      "label": "Marca",
+      "value": "Plástica Alfa (Italia)"
+    },
+    {
+      "label": "Tipo de Producto",
+      "value": "Agro, Áreas Verdes"
+    }
+  ],
+  "chip_label": "Conectores",
+  "original_url": "https://surerain.com/catalogo?producto=estaca-para-tuberia-16mm-y-20mm",
+  "outer_html": "<div class=\"card product-card cursor-pointer\" data-category=\"conectores\" data-marca=\"Plástica Alfa (Italia)\" data-vertical=\"agro av\" onclick=\"openProductModal('Estaca para tubería 16mm y 20mm','Estaca para tubería 16mm y 20mm Cód. ACGR009030.0020','<tr><td>Marca</td><td>Plástica Alfa (Italia)</td></tr><tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes</td></tr>')\"><img width=\"195\" height=\"130\" alt=\"Estaca para tubería 16mm y 20mm\" class=\"w-full object-cover\" loading=\"lazy\" src=\"assets/productos-importados/estaca-para-tuberia-16mm-y-20mm.webp\" style=\"height:130px;\"><div class=\"p-3\"><span class=\"chip chip-agro mb-1.5\">Conectores</span><h4 class=\"font-semibold text-gray-900 text-xs mb-1\">Estaca para tubería 16mm y 20mm</h4><p class=\"text-xs text-gray-400 mb-2\">Plástica Alfa (Italia)</p><div class=\"flex gap-1.5\"><span class=\"text-xs text-sr-green font-semibold cursor-pointer\">Ver ficha</span><span class=\"text-gray-300\">·</span><a class=\"text-xs text-gray-400 hover:text-sr-green\" href=\"contacto.html\">Dónde comprar</a></div></div></div>",
+  "onclick_raw": "openProductModal('Estaca para tubería 16mm y 20mm','Estaca para tubería 16mm y 20mm Cód. ACGR009030.0020','<tr><td>Marca</td><td>Plástica Alfa (Italia)</td></tr><tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes</td></tr>')",
+  "content_hash": "19a2eb720a28e080df784d5eb430f888a12a57b598840e54e60fdea0a9217e8b",
+  "provenance": {
+    "source_url": "file://C:\\proyectos\\SURERAIN-CLONE\\data\\raw\\catalogo.source.html",
+    "source_page": "https://surerain.com/catalogo",
+    "source_selector": ".product-card:nth-of-type(370)",
+    "extracted_at": "2026-08-13T22:03:32.860Z",
+    "raw_fields": [
+      "data-category",
+      "data-marca",
+      "data-tipo",
+      "data-vertical",
+      "data-ficha",
+      "img[src]",
+      "h4",
+      "openProductModal(name,description,specsHtml)"
+    ]
+  }
+}

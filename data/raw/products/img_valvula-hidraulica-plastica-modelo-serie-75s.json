@@ -1,0 +1,49 @@
+{
+  "source_index": 263,
+  "source_id": "img:valvula-hidraulica-plastica-modelo-serie-75s",
+  "name": "Válvulas Dorot plástica modelo serie 75S",
+  "slug": "valvulas-dorot-plastica-modelo-serie-75s",
+  "category_slug": "valvulas",
+  "brand_name": "Dorot (Israel)",
+  "product_type_slug": null,
+  "markets": [
+    "agro",
+    "infra"
+  ],
+  "image_url": "https://surerain.com/assets/productos-importados/valvula-hidraulica-plastica-modelo-serie-75s.webp",
+  "image_alt": "Válvulas Dorot plástica modelo serie 75S",
+  "ficha_url": "https://surerain.com/assets/productos-fichas/830imgdesc1.webp",
+  "description": "DESCRIPCIÓN TÉCNICA Características y Beneficios – Diseño de alta capacidad con pérdida de presión extremadamente bajas.",
+  "specs_html": "<tr><td>Marca</td><td>Dorot (Israel)</td></tr><tr><td>Tipo de Producto</td><td>Agro, Infraestructura</td></tr>",
+  "specs_rows": [
+    {
+      "label": "Marca",
+      "value": "Dorot (Israel)"
+    },
+    {
+      "label": "Tipo de Producto",
+      "value": "Agro, Infraestructura"
+    }
+  ],
+  "chip_label": "Válvulas",
+  "original_url": "https://surerain.com/catalogo?producto=valvulas-dorot-plastica-modelo-serie-75s",
+  "outer_html": "<div class=\"card product-card cursor-pointer\" data-category=\"valvulas\" data-ficha=\"assets/productos-fichas/830imgdesc1.webp\" data-marca=\"Dorot (Israel)\" data-vertical=\"agro infra\" onclick=\"openProductModal('Válvulas Dorot plástica modelo serie 75S','DESCRIPCIÓN TÉCNICA Características y Beneficios – Diseño de alta capacidad con pérdida de presión extremadamente bajas.','<tr><td>Marca</td><td>Dorot (Israel)</td></tr><tr><td>Tipo de Producto</td><td>Agro, Infraestructura</td></tr>')\"><img width=\"195\" height=\"130\" alt=\"Válvulas Dorot plástica modelo serie 75S\" class=\"w-full object-cover\" loading=\"lazy\" src=\"assets/productos-importados/valvula-hidraulica-plastica-modelo-serie-75s.webp\" style=\"height:130px;\"><div class=\"p-3\"><span class=\"chip chip-agro mb-1.5\">Válvulas</span><h4 class=\"font-semibold text-gray-900 text-xs mb-1\">Válvulas Dorot plástica modelo serie 75S</h4><p class=\"text-xs text-gray-400 mb-2\">Dorot (Israel)</p><div class=\"flex gap-1.5\"><span class=\"text-xs text-sr-green font-semibold cursor-pointer\">Ver ficha</span><span class=\"text-gray-300\">·</span><a class=\"text-xs text-gray-400 hover:text-sr-green\" href=\"contacto.html\">Dónde comprar</a></div></div></div>",
+  "onclick_raw": "openProductModal('Válvulas Dorot plástica modelo serie 75S','DESCRIPCIÓN TÉCNICA Características y Beneficios – Diseño de alta capacidad con pérdida de presión extremadamente bajas.','<tr><td>Marca</td><td>Dorot (Israel)</td></tr><tr><td>Tipo de Producto</td><td>Agro, Infraestructura</td></tr>')",
+  "content_hash": "de26ac1d22f36f4df3ca10de65c13b8c6615dc05329f24df2223e6de83225c14",
+  "provenance": {
+    "source_url": "file://C:\\proyectos\\SURERAIN-CLONE\\data\\raw\\catalogo.source.html",
+    "source_page": "https://surerain.com/catalogo",
+    "source_selector": ".product-card:nth-of-type(264)",
+    "extracted_at": "2026-08-13T22:03:32.860Z",
+    "raw_fields": [
+      "data-category",
+      "data-marca",
+      "data-tipo",
+      "data-vertical",
+      "data-ficha",
+      "img[src]",
+      "h4",
+      "openProductModal(name,description,specsHtml)"
+    ]
+  }
+}

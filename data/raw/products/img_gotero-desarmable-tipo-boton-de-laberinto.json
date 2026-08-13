@@ -1,0 +1,45 @@
+{
+  "source_index": 79,
+  "source_id": "img:gotero-desarmable-tipo-boton-de-laberinto",
+  "name": "Gotero desarmable, tipo botón de laberinto",
+  "slug": "gotero-desarmable-tipo-boton-de-laberinto",
+  "category_slug": "goteo",
+  "brand_name": "GreenPlains",
+  "product_type_slug": null,
+  "markets": [
+    "agro",
+    "av"
+  ],
+  "image_url": "https://surerain.com/assets/productos-importados/gotero-desarmable-tipo-boton-de-laberinto.webp",
+  "image_alt": "Gotero desarmable, tipo botón de laberinto",
+  "ficha_url": "https://surerain.com/assets/productos-fichas/392imgdesc1.webp",
+  "description": "GOTEROS DESARMABLES TIPO BOTÓN DE LABERINTO CARACTERÍSTICAS: – Confeccionados en polipropileno reforzado con fibra de vidrio.",
+  "specs_html": "<tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes</td></tr>",
+  "specs_rows": [
+    {
+      "label": "Tipo de Producto",
+      "value": "Agro, Áreas Verdes"
+    }
+  ],
+  "chip_label": "Goteo",
+  "original_url": "https://surerain.com/catalogo?producto=gotero-desarmable-tipo-boton-de-laberinto",
+  "outer_html": "<div class=\"card product-card cursor-pointer\" data-category=\"goteo\" data-ficha=\"assets/productos-fichas/392imgdesc1.webp\" data-marca=\"GreenPlains\" data-vertical=\"agro av\" onclick=\"openProductModal('Gotero desarmable, tipo botón de laberinto','GOTEROS DESARMABLES TIPO BOTÓN DE LABERINTO CARACTERÍSTICAS: – Confeccionados en polipropileno reforzado con fibra de vidrio.','<tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes</td></tr>')\"><img width=\"195\" height=\"130\" alt=\"Gotero desarmable, tipo botón de laberinto\" class=\"w-full object-cover\" loading=\"lazy\" src=\"assets/productos-importados/gotero-desarmable-tipo-boton-de-laberinto.webp\" style=\"height:130px;\"><div class=\"p-3\"><span class=\"chip chip-agro mb-1.5\">Goteo</span><h4 class=\"font-semibold text-gray-900 text-xs mb-1\">Gotero desarmable, tipo botón de laberinto</h4><p class=\"text-xs text-gray-400 mb-2\">Goteo</p><div class=\"flex gap-1.5\"><span class=\"text-xs text-sr-green font-semibold cursor-pointer\">Ver ficha</span><span class=\"text-gray-300\">·</span><a class=\"text-xs text-gray-400 hover:text-sr-green\" href=\"contacto.html\">Dónde comprar</a></div></div></div>",
+  "onclick_raw": "openProductModal('Gotero desarmable, tipo botón de laberinto','GOTEROS DESARMABLES TIPO BOTÓN DE LABERINTO CARACTERÍSTICAS: – Confeccionados en polipropileno reforzado con fibra de vidrio.','<tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes</td></tr>')",
+  "content_hash": "86852d06d4dcbaa8f3e5746be2c225b4fdcf7a843cc225ad9be7e56af7363c5b",
+  "provenance": {
+    "source_url": "file://C:\\proyectos\\SURERAIN-CLONE\\data\\raw\\catalogo.source.html",
+    "source_page": "https://surerain.com/catalogo",
+    "source_selector": ".product-card:nth-of-type(80)",
+    "extracted_at": "2026-08-13T22:03:32.860Z",
+    "raw_fields": [
+      "data-category",
+      "data-marca",
+      "data-tipo",
+      "data-vertical",
+      "data-ficha",
+      "img[src]",
+      "h4",
+      "openProductModal(name,description,specsHtml)"
+    ]
+  }
+}

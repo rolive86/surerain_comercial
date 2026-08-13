@@ -1,0 +1,45 @@
+{
+  "source_index": 394,
+  "source_id": "img:pw-2140-pw-2150",
+  "name": "PW-2140 | PW-2150",
+  "slug": "pw-2140-pw-2150",
+  "category_slug": "hogar",
+  "brand_name": "Plásticos Coorp",
+  "product_type_slug": null,
+  "markets": [
+    "av",
+    "hogar"
+  ],
+  "image_url": "https://surerain.com/assets/productos-importados/pw-2140-pw-2150.webp",
+  "image_alt": "PW-2140 | PW-2150",
+  "ficha_url": null,
+  "description": "Conector rápido con válvula de cierre para manguera de 1/2″ (2140) o de 3/4″ (2150) SKU 1/2″: LHRS0PW-2140-00 SKU 3/4″: LHRS0PW-2150-00",
+  "specs_html": "<tr><td>Tipo de Producto</td><td>Áreas Verdes</td></tr>",
+  "specs_rows": [
+    {
+      "label": "Tipo de Producto",
+      "value": "Áreas Verdes"
+    }
+  ],
+  "chip_label": "Conectores",
+  "original_url": "https://surerain.com/catalogo?producto=pw-2140-pw-2150",
+  "outer_html": "<div class=\"card product-card cursor-pointer\" data-category=\"hogar\" data-marca=\"Plásticos Coorp\" data-vertical=\"av hogar\" onclick=\"openProductModal('PW-2140 | PW-2150','Conector rápido con válvula de cierre para manguera de 1/2″ (2140) o de 3/4″ (2150) SKU 1/2″: LHRS0PW-2140-00 SKU 3/4″: LHRS0PW-2150-00','<tr><td>Tipo de Producto</td><td>Áreas Verdes</td></tr>')\"><img width=\"195\" height=\"130\" alt=\"PW-2140 | PW-2150\" class=\"w-full object-cover\" loading=\"lazy\" src=\"assets/productos-importados/pw-2140-pw-2150.webp\" style=\"height:130px;\"><div class=\"p-3\"><span class=\"chip chip-av mb-1.5\">Conectores</span><h4 class=\"font-semibold text-gray-900 text-xs mb-1\">PW-2140 | PW-2150</h4><p class=\"text-xs text-gray-400 mb-2\">Conectores y Juntas</p><div class=\"flex gap-1.5\"><span class=\"text-xs text-sr-green font-semibold cursor-pointer\">Ver ficha</span><span class=\"text-gray-300\">·</span><a class=\"text-xs text-gray-400 hover:text-sr-green\" href=\"contacto.html\">Dónde comprar</a></div></div></div>",
+  "onclick_raw": "openProductModal('PW-2140 | PW-2150','Conector rápido con válvula de cierre para manguera de 1/2″ (2140) o de 3/4″ (2150) SKU 1/2″: LHRS0PW-2140-00 SKU 3/4″: LHRS0PW-2150-00','<tr><td>Tipo de Producto</td><td>Áreas Verdes</td></tr>')",
+  "content_hash": "d3b4de4bedf65d6c7111d4661a7d632467fab0759a9902bf6c51f8c47ef884e3",
+  "provenance": {
+    "source_url": "file://C:\\proyectos\\SURERAIN-CLONE\\data\\raw\\catalogo.source.html",
+    "source_page": "https://surerain.com/catalogo",
+    "source_selector": ".product-card:nth-of-type(395)",
+    "extracted_at": "2026-08-13T22:03:32.860Z",
+    "raw_fields": [
+      "data-category",
+      "data-marca",
+      "data-tipo",
+      "data-vertical",
+      "data-ficha",
+      "img[src]",
+      "h4",
+      "openProductModal(name,description,specsHtml)"
+    ]
+  }
+}

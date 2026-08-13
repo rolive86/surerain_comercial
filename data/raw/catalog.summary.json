@@ -1,0 +1,131 @@
+{
+  "generated_at": "2026-08-13T22:03:33.435Z",
+  "published_total": 420,
+  "extracted_total": 420,
+  "categories": [
+    "aspersores",
+    "goteo",
+    "conectores",
+    "microaspersion",
+    "filtros",
+    "valvulas",
+    "programadores",
+    "caudalimetros",
+    "accesorios",
+    "hogar"
+  ],
+  "brands": [
+    "Vyrsa (España)",
+    "Origen China",
+    "GreenPlains",
+    "K-Rain (USA)",
+    "Rossi (Italia)",
+    "Plásticos Coorp",
+    "Plástica Alfa (Italia)",
+    "Prosper",
+    "Aqua-Traxx (USA)",
+    "Irriway (Italia)",
+    "Olivos",
+    "ZM Yuyao",
+    "Tavlit (Israel)",
+    "Erhas (Turquía)",
+    "GreenPlains, Origen China",
+    "Palaplast (Grecia)",
+    "ERA",
+    "Taizhou",
+    "Hebei",
+    "Tecnidro (Italia)",
+    "RPE (Italia)",
+    "Unirain (España)",
+    "Dorot (Israel)",
+    "Galarza",
+    "Kexing",
+    "Tianyan",
+    "Varios",
+    "Winin"
+  ],
+  "markets": [
+    "agro",
+    "av",
+    "infra",
+    "hogar"
+  ],
+  "product_types": [
+    "impacto",
+    "oscilante",
+    "emergente",
+    "otro",
+    "accesorio"
+  ],
+  "with_ficha": 126,
+  "with_description": 387,
+  "unique_images": 420,
+  "duplicate_names": [
+    {
+      "name": "Conector inicial con aro de goma bilabiado",
+      "count": 3
+    },
+    {
+      "name": "Válvula Solenoide con Programador",
+      "count": 2
+    },
+    {
+      "name": "Válvula aire-vacío triple efecto, RM 1″ y 2″",
+      "count": 2
+    },
+    {
+      "name": "Conector inicial con aro de goma recto",
+      "count": 2
+    },
+    {
+      "name": "Unión para polietileno de alta densidad",
+      "count": 2
+    },
+    {
+      "name": "Reducción polietileno de alta densidad",
+      "count": 2
+    },
+    {
+      "name": "Codo 90° para polietileno de alta densidad",
+      "count": 2
+    },
+    {
+      "name": "T para polietileno de alta densidad",
+      "count": 2
+    },
+    {
+      "name": "Final de línea polietileno de alta densidad",
+      "count": 2
+    },
+    {
+      "name": "Codo roscado para PEAD",
+      "count": 2
+    },
+    {
+      "name": "Adaptador rosca macho para Lay Flat",
+      "count": 2
+    },
+    {
+      "name": "Adaptador rosca macho para PEAD",
+      "count": 2
+    }
+  ],
+  "category_labels": {
+    "aspersores": "Aspersores",
+    "goteo": "Goteo",
+    "microaspersion": "Microaspersión",
+    "filtros": "Filtros",
+    "valvulas": "Válvulas",
+    "programadores": "Programadores",
+    "conectores": "Conectores",
+    "accesorios": "Accesorios tuberías",
+    "caudalimetros": "Caudalímetros",
+    "hogar": "Jardinería Hogar"
+  },
+  "market_labels": {
+    "agro": "Agro",
+    "av": "Áreas Verdes",
+    "infra": "Infraestructura",
+    "hogar": "Jardinería Hogar"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "source_index": 327,
+  "source_id": "img:union-victaulica-hidroten-copia",
+  "name": "Manguito victaulico",
+  "slug": "manguito-victaulico",
+  "category_slug": "accesorios",
+  "brand_name": "Plástica Alfa (Italia)",
+  "product_type_slug": null,
+  "markets": [
+    "agro",
+    "av",
+    "infra"
+  ],
+  "image_url": "https://surerain.com/assets/productos-importados/union-victaulica-hidroten-copia.webp",
+  "image_alt": "Manguito victaulico",
+  "ficha_url": null,
+  "description": "Manguito victaulico (6″) PVC pegar diam 160mm",
+  "specs_html": "<tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes, Infraestructura</td></tr>",
+  "specs_rows": [
+    {
+      "label": "Tipo de Producto",
+      "value": "Agro, Áreas Verdes, Infraestructura"
+    }
+  ],
+  "chip_label": "Accesorios",
+  "original_url": "https://surerain.com/catalogo?producto=manguito-victaulico",
+  "outer_html": "<div class=\"card product-card cursor-pointer\" data-category=\"accesorios\" data-marca=\"Plástica Alfa (Italia)\" data-vertical=\"agro av infra\" onclick=\"openProductModal('Manguito victaulico','Manguito victaulico (6″) PVC pegar diam 160mm','<tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes, Infraestructura</td></tr>')\"><img width=\"195\" height=\"130\" alt=\"Manguito victaulico\" class=\"w-full object-cover\" loading=\"lazy\" src=\"assets/productos-importados/union-victaulica-hidroten-copia.webp\" style=\"height:130px;\"><div class=\"p-3\"><span class=\"chip chip-agro mb-1.5\">Accesorios</span><h4 class=\"font-semibold text-gray-900 text-xs mb-1\">Manguito victaulico</h4><p class=\"text-xs text-gray-400 mb-2\">Accesorios para Tuberías</p><div class=\"flex gap-1.5\"><span class=\"text-xs text-sr-green font-semibold cursor-pointer\">Ver ficha</span><span class=\"text-gray-300\">·</span><a class=\"text-xs text-gray-400 hover:text-sr-green\" href=\"contacto.html\">Dónde comprar</a></div></div></div>",
+  "onclick_raw": "openProductModal('Manguito victaulico','Manguito victaulico (6″) PVC pegar diam 160mm','<tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes, Infraestructura</td></tr>')",
+  "content_hash": "0e42f1b40bea436f98e1a3ee05a420117e80784ccd2051c56e4e502685793816",
+  "provenance": {
+    "source_url": "file://C:\\proyectos\\SURERAIN-CLONE\\data\\raw\\catalogo.source.html",
+    "source_page": "https://surerain.com/catalogo",
+    "source_selector": ".product-card:nth-of-type(328)",
+    "extracted_at": "2026-08-13T22:03:32.860Z",
+    "raw_fields": [
+      "data-category",
+      "data-marca",
+      "data-tipo",
+      "data-vertical",
+      "data-ficha",
+      "img[src]",
+      "h4",
+      "openProductModal(name,description,specsHtml)"
+    ]
+  }
+}

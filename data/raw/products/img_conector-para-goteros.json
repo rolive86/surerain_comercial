@@ -1,0 +1,45 @@
+{
+  "source_index": 92,
+  "source_id": "img:conector-para-goteros",
+  "name": "Conector para Goteros de 2 y 4 salidas",
+  "slug": "conector-para-goteros-de-2-y-4-salidas",
+  "category_slug": "conectores",
+  "brand_name": "GreenPlains",
+  "product_type_slug": null,
+  "markets": [
+    "agro",
+    "av"
+  ],
+  "image_url": "https://surerain.com/assets/productos-importados/conector-para-goteros.webp",
+  "image_alt": "Conector para Goteros de 2 y 4 salidas",
+  "ficha_url": null,
+  "description": "Conector de 2 salidas para goteros ACIR0000005133A Conector de 4 salidas para goteros ACIR0000005135A",
+  "specs_html": "<tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes</td></tr>",
+  "specs_rows": [
+    {
+      "label": "Tipo de Producto",
+      "value": "Agro, Áreas Verdes"
+    }
+  ],
+  "chip_label": "Goteo",
+  "original_url": "https://surerain.com/catalogo?producto=conector-para-goteros-de-2-y-4-salidas",
+  "outer_html": "<div class=\"card product-card cursor-pointer\" data-category=\"conectores\" data-marca=\"GreenPlains\" data-vertical=\"agro av\" onclick=\"openProductModal('Conector para Goteros de 2 y 4 salidas','Conector de 2 salidas para goteros ACIR0000005133A Conector de 4 salidas&nbsp;para&nbsp;goteros ACIR0000005135A','<tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes</td></tr>')\"><img width=\"195\" height=\"130\" alt=\"Conector para Goteros de 2 y 4 salidas\" class=\"w-full object-cover\" loading=\"lazy\" src=\"assets/productos-importados/conector-para-goteros.webp\" style=\"height:130px;\"><div class=\"p-3\"><span class=\"chip chip-agro mb-1.5\">Goteo</span><h4 class=\"font-semibold text-gray-900 text-xs mb-1\">Conector para Goteros de 2 y 4 salidas</h4><p class=\"text-xs text-gray-400 mb-2\">Goteo</p><div class=\"flex gap-1.5\"><span class=\"text-xs text-sr-green font-semibold cursor-pointer\">Ver ficha</span><span class=\"text-gray-300\">·</span><a class=\"text-xs text-gray-400 hover:text-sr-green\" href=\"contacto.html\">Dónde comprar</a></div></div></div>",
+  "onclick_raw": "openProductModal('Conector para Goteros de 2 y 4 salidas','Conector de 2 salidas para goteros ACIR0000005133A Conector de 4 salidas para goteros ACIR0000005135A','<tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes</td></tr>')",
+  "content_hash": "43e917c08bd5159fcde98229ad0ea66a605c4180ca206630670d940c0e72230e",
+  "provenance": {
+    "source_url": "file://C:\\proyectos\\SURERAIN-CLONE\\data\\raw\\catalogo.source.html",
+    "source_page": "https://surerain.com/catalogo",
+    "source_selector": ".product-card:nth-of-type(93)",
+    "extracted_at": "2026-08-13T22:03:32.860Z",
+    "raw_fields": [
+      "data-category",
+      "data-marca",
+      "data-tipo",
+      "data-vertical",
+      "data-ficha",
+      "img[src]",
+      "h4",
+      "openProductModal(name,description,specsHtml)"
+    ]
+  }
+}

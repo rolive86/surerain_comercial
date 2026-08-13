@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-M69H44BV');</script>
+<!-- End Google Tag Manager -->
+<!-- ===== SW kill-switch: limpia Service Workers viejos del WordPress anterior ===== -->
+<script>
+(function () {
+  try {
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.getRegistrations().then(function (regs) {
+        regs.forEach(function (r) { r.unregister(); });
+      }).catch(function () {});
+    }
+    if ('caches' in window) {
+      caches.keys().then(function (names) {
+        names.forEach(function (n) { caches.delete(n); });
+      }).catch(function () {});
+    }
+  } catch (e) {}
+})();
+</script>
+
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Política de privacidad — Sure Rain</title>
+  <meta name="description" content="Política de privacidad y tratamiento de datos personales de Sure Rain S.A. Conformidad con la Ley 25.326 de Protección de Datos Personales de la República Argentina." />
+  <link rel="canonical" href="https://surerain.com/privacidad.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#006A46" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Sure Rain" />
+  <meta property="og:title" content="Política de privacidad — Sure Rain" />
+  <meta property="og:description" content="Política de privacidad y tratamiento de datos personales de Sure Rain S.A. Conformidad con la Ley 25.326 de Protección de Datos Personales de la República Argentina." />
+  <meta property="og:image" content="https://surerain.com/assets/og-default.webp" />
+  <meta property="og:url" content="https://surerain.com/privacidad.html" />
+  <meta property="og:locale" content="es_AR" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Política de privacidad — Sure Rain" />
+  <meta name="twitter:description" content="Política de privacidad y tratamiento de datos personales de Sure Rain S.A. Conformidad con la Ley 25.326 de Protección de Datos Personales de la República Argentina." />
+  <meta name="twitter:image" content="https://surerain.com/assets/og-default.webp" />
+<link href="assets/logos/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="assets/tailwind.css?v=20260528b" rel="stylesheet"/>
+<link href="assets/site.css?v=20260527-order" rel="stylesheet"/>
+<script>(function(){try{var t=localStorage.getItem('sr-theme');if(t==='light'){document.documentElement.classList.remove('dark');}else{document.documentElement.classList.add('dark');}}catch(e){document.documentElement.classList.add('dark');}})();</script>
+  <!-- Google Analytics 4 (carga diferida para no bloquear render) -->
+  <script>
+    (function () {
+      var GA_ID = "G-YPETHX15B9";
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){ dataLayer.push(arguments); }
+      window.gtag = gtag;
+      gtag("js", new Date());
+      gtag("config", GA_ID, { send_page_view: true });
+      var loaded = false;
+      function loadGA() {
+        if (loaded) return; loaded = true;
+        var s = document.createElement("script");
+        s.async = true;
+        s.src = "https://www.googletagmanager.com/gtag/js?id=" + GA_ID;
+        document.head.appendChild(s);
+      }
+      // Cargar tras primera interacción O 3.5 segundos
+      var events = ["scroll","mousemove","touchstart","keydown"];
+      function once() { events.forEach(function(e){document.removeEventListener(e, once);}); loadGA(); }
+      events.forEach(function(e){document.addEventListener(e, once, {passive:true, once:true});});
+      setTimeout(loadGA, 3500);
+    })();
+  </script>
+</head>
+<body class="bg-white text-gray-900">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M69H44BV"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="sr-header">
+<!-- Utility bar -->
+<div class="bg-gray-50 border-b border-gray-200 text-xs text-gray-500 hidden md:block">
+<div class="max-w-6xl mx-auto px-6 flex justify-between items-center py-2">
+<span>Importadora y distribuidora mayorista — Pilar, Buenos Aires</span>
+<div class="flex gap-6">
+<a class="hover:text-sr-green transition-colors" href="contacto.html#distribuidor">¿Sos distribuidor?</a>
+</div>
+</div>
+</div>
+<!-- Main nav -->
+<nav class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+<a aria-label="Sure Rain" class="flex items-center no-underline" href="index.html">
+<img alt="Sure Rain" class="h-14 md:h-16 w-auto" src="assets/logos/logo-color.svg"/>
+</a>
+<div class="hidden md:flex items-center gap-7">
+<a class="nav-link text-sm font-semibold text-gray-700" href="catalogo.html">Insumos para Riego y Agua</a>
+<a class="nav-link text-sm font-semibold text-gray-700" href="novedades.html">Novedades</a>
+<a class="nav-link text-sm font-semibold text-gray-700" href="nosotros.html">Nuestra Historia</a>
+<a class="nav-link text-sm font-semibold text-gray-700" href="contacto.html">Contacto</a>
+<div class="relative group">
+<button class="nav-link text-sm font-semibold text-gray-700 flex items-center gap-1">Información<svg fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-width="2.5" viewbox="0 0 24 24" width="14"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+<div class="absolute right-0 top-full mt-1 bg-white rounded-xl shadow-xl border border-gray-100 w-56 hidden group-hover:block z-50 py-2">
+<a class="block px-5 py-2.5 text-sm hover:bg-gray-50 hover:text-sr-green font-medium" href="manuales-2.html">Manuales</a>
+<a class="block px-5 py-2.5 text-sm hover:bg-gray-50 hover:text-sr-green font-medium" href="videos.html">Videos</a>
+<a class="block px-5 py-2.5 text-sm hover:bg-gray-50 hover:text-sr-green font-medium" href="contacto.html#lista-precios">Solicitar lista de precios</a>
+</div>
+</div>
+</div>
+<button class="md:hidden p-2 text-gray-600" id="menu-toggle"><svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24" width="24"><line x1="3" x2="21" y1="6" y2="6"></line><line x1="3" x2="21" y1="12" y2="12"></line><line x1="3" x2="21" y1="18" y2="18"></line></svg></button>
+</nav>
+<!-- Mobile menu -->
+<div class="hidden md:hidden bg-white border-t border-gray-100 px-6 pb-4" id="mobile-menu">
+<a class="block py-3 text-sm font-semibold border-b border-gray-100 hover:text-sr-green" href="catalogo.html">Insumos para Riego y Agua</a>
+<a class="block py-3 text-sm font-semibold border-b border-gray-100 hover:text-sr-green" href="novedades.html">Novedades</a>
+<a class="block py-3 text-sm font-semibold border-b border-gray-100 hover:text-sr-green" href="nosotros.html">Nuestra Historia</a>
+<a class="block py-3 text-sm font-semibold border-b border-gray-100 hover:text-sr-green" href="contacto.html">Contacto</a>
+<details class="border-b border-gray-100 py-3">
+<summary class="text-sm font-semibold cursor-pointer">Información</summary>
+<div class="pl-3 mt-2 space-y-2">
+<a class="block py-1.5 text-sm hover:text-sr-green" href="manuales-2.html">Manuales</a>
+<a class="block py-1.5 text-sm hover:text-sr-green" href="videos.html">Videos</a>
+<a class="block py-1.5 text-sm hover:text-sr-green" href="contacto.html#lista-precios">Solicitar lista de precios</a>
+</div>
+</details>
+</div>
+</header>
+<!-- Breadcrumb -->
+<div class="max-w-4xl mx-auto px-6 py-4 text-sm text-gray-400">
+  <a href="index.html" class="hover:text-sr-green">Inicio</a> /
+  <span class="text-gray-700 font-medium">Política de privacidad</span>
+</div>
+
+<section class="max-w-4xl mx-auto px-6 py-12">
+  <span class="text-sr-green text-sm font-semibold uppercase tracking-widest">Letra clara</span>
+  <h1 class="text-3xl md:text-5xl font-bold text-gray-900 leading-tight mt-2 mb-4">Política de privacidad</h1>
+  <p class="text-gray-500 text-sm mb-10">Última actualización: 28 de mayo de 2026</p>
+
+  <div class="prose-content space-y-7 text-gray-700 leading-relaxed">
+    <p>En Sure Rain S.A. nos tomamos en serio tus datos. Esta política explica qué información recolectamos a través de nuestro sitio web, para qué la usamos y qué derechos tenés sobre ella, en cumplimiento con la <strong>Ley 25.326 de Protección de Datos Personales</strong> de la República Argentina y su decreto reglamentario.</p>
+
+    <div>
+      <h2 class="text-xl font-bold text-gray-900 mb-3">1. Quién es el responsable de tus datos</h2>
+      <p><strong>Sure Rain S.A.</strong> — CUIT 30-69658030-4 — domicilio en Carlos A. Tellier Lote 20, Parque Industrial Pilarica, C.P. 1633, Pilar, Provincia de Buenos Aires, Argentina. Para cualquier consulta podés escribirnos a <a href="mailto:info@surerain.com" class="text-sr-green font-semibold">info@surerain.com</a>.</p>
+    </div>
+
+    <div>
+      <h2 class="text-xl font-bold text-gray-900 mb-3">2. Qué datos recolectamos</h2>
+      <p>Solo los datos que vos nos das voluntariamente al usar:</p>
+      <ul class="space-y-2 pl-6 list-disc">
+        <li><strong>Formulario de contacto:</strong> nombre, email, teléfono, asunto y mensaje.</li>
+        <li><strong>Sure Games Mundialista 2026:</strong> nombre, razón social, CUIT/CUIL, mail, teléfono y las predicciones que cargás del Mundial.</li>
+        <li><strong>Datos de navegación:</strong> dirección IP, tipo de navegador, páginas visitadas y tiempo de permanencia, mediante herramientas de analítica web (Google Analytics).</li>
+      </ul>
+      <p>No recolectamos información sensible (origen racial, salud, etc.) ni datos de menores de edad.</p>
+    </div>
+
+    <div>
+      <h2 class="text-xl font-bold text-gray-900 mb-3">3. Para qué los usamos</h2>
+      <ul class="space-y-2 pl-6 list-disc">
+        <li>Responder tus consultas comerciales o técnicas.</li>
+        <li>Procesar tu participación en el Sure Games Mundialista 2026, validar tu facturación y entregarte el premio correspondiente si corresponde.</li>
+        <li>Mejorar nuestro sitio en base a estadísticas anónimas de uso.</li>
+        <li>Enviarte información comercial únicamente si autorizaste recibirla.</li>
+      </ul>
+      <p>No vendemos ni cedemos tus datos a terceros con fines publicitarios.</p>
+    </div>
+
+    <div>
+      <h2 class="text-xl font-bold text-gray-900 mb-3">4. Con quiénes compartimos los datos</h2>
+      <p>Para que el sitio funcione, algunos datos los procesan servicios de terceros como encargados de tratamiento:</p>
+      <ul class="space-y-2 pl-6 list-disc">
+        <li><strong>Google (Google Workspace y Google Analytics)</strong> — para gestión de mails y estadísticas anónimas de visita.</li>
+        <li><strong>Web3Forms</strong> — para procesar los envíos del formulario de contacto.</li>
+        <li><strong>Netlify</strong> — proveedor de hosting del sitio.</li>
+      </ul>
+      <p>Estos proveedores cumplen con sus propias políticas de privacidad y procesan los datos solo para los fines indicados.</p>
+    </div>
+
+    <div>
+      <h2 class="text-xl font-bold text-gray-900 mb-3">5. Cuánto tiempo los conservamos</h2>
+      <p>Conservamos los datos del formulario de contacto y del Sure Games el tiempo necesario para responder tu consulta, gestionar el premio si corresponde y cumplir obligaciones legales (fiscales, contables) por el plazo que exige la normativa argentina. Después se eliminan o se anonimizan.</p>
+    </div>
+
+    <div>
+      <h2 class="text-xl font-bold text-gray-900 mb-3">6. Tus derechos</h2>
+      <p>Según el Art. 14 de la Ley 25.326 tenés derecho a:</p>
+      <ul class="space-y-2 pl-6 list-disc">
+        <li><strong>Acceder</strong> a los datos que tenemos sobre vos.</li>
+        <li><strong>Rectificar</strong> datos inexactos.</li>
+        <li><strong>Suprimir</strong> tus datos cuando no sean necesarios o ya no querés que los tengamos.</li>
+        <li><strong>Oponerte</strong> al tratamiento por motivos legítimos.</li>
+      </ul>
+      <p>Para ejercer cualquiera de estos derechos escribinos a <a href="mailto:info@surerain.com" class="text-sr-green font-semibold">info@surerain.com</a> con el asunto "Derechos ARCO" y atendemos tu pedido dentro de los 10 días corridos, sin costo.</p>
+      <p class="text-sm text-gray-500">Autoridad de control: <a href="https://www.argentina.gob.ar/aaip" target="_blank" rel="noopener" class="text-sr-green">Agencia de Acceso a la Información Pública (AAIP)</a> — Av. Pte. Julio A. Roca 710, 3º piso, CABA — Tel. +54 11 3988-3968.</p>
+    </div>
+
+    <div>
+      <h2 class="text-xl font-bold text-gray-900 mb-3">7. Cookies y tecnologías similares</h2>
+      <p>Usamos cookies técnicas para que el sitio funcione (preferencia de tema claro/oscuro, estado de tu cuadro del Sure Games en tu navegador) y cookies de analítica de Google Analytics para entender cómo se usa el sitio de forma agregada. Podés bloquear cookies desde la configuración de tu navegador; algunas funciones pueden dejar de funcionar correctamente.</p>
+    </div>
+
+    <div>
+      <h2 class="text-xl font-bold text-gray-900 mb-3">8. Seguridad</h2>
+      <p>Aplicamos medidas técnicas y organizativas razonables para proteger tus datos contra acceso no autorizado, pérdida o alteración. Ningún sistema es 100% seguro: si detectás algo raro, escribinos a <a href="mailto:info@surerain.com" class="text-sr-green font-semibold">info@surerain.com</a>.</p>
+    </div>
+
+    <div>
+      <h2 class="text-xl font-bold text-gray-900 mb-3">9. Cambios en esta política</h2>
+      <p>Podemos actualizar esta política cuando incorporamos nuevas funciones o por requerimientos legales. La fecha de la última actualización está al inicio del documento. Si los cambios son sustanciales, los avisamos por el sitio o por mail si correspondiera.</p>
+    </div>
+
+    <div>
+      <h2 class="text-xl font-bold text-gray-900 mb-3">10. Contacto</h2>
+      <p>Dudas, reclamos o ejercicio de derechos: <a href="mailto:info@surerain.com" class="text-sr-green font-semibold">info@surerain.com</a> o por WhatsApp al <a href="https://wa.me/5491124828378" target="_blank" rel="noopener" class="text-sr-green font-semibold">+54 9 11 2482-8378</a>.</p>
+    </div>
+  </div>
+</section>
+<footer class="sr-footer pt-16 pb-8">
+<div class="max-w-6xl mx-auto px-6">
+<div class="grid md:grid-cols-4 gap-10 mb-12">
+<div><div class="mb-4"><img alt="Sure Rain — Gracias. 30 años / 1996-2026" class="h-14 w-auto" src="assets/logos/logo-blanco.svg"/></div><p class="text-sm opacity-60">Pilar, Buenos Aires, Argentina.</p><div class="flex gap-3 mt-4"><a aria-label="Instagram" class="w-8 h-8 rounded-full bg-white bg-opacity-10 flex items-center justify-center hover:bg-opacity-20 transition" href="https://www.instagram.com/surerainsa" rel="noopener noreferrer" target="_blank"><svg fill="white" height="14" viewbox="0 0 24 24" width="14"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg></a><a aria-label="LinkedIn" class="w-8 h-8 rounded-full bg-white bg-opacity-10 flex items-center justify-center hover:bg-opacity-20 transition" href="https://www.linkedin.com/company/surerainsa/" rel="noopener noreferrer" target="_blank"><svg fill="white" height="14" viewbox="0 0 24 24" width="14"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg></a><a aria-label="Facebook" class="w-8 h-8 rounded-full bg-white bg-opacity-10 flex items-center justify-center hover:bg-opacity-20 transition" href="https://www.facebook.com/surerainsa" rel="noopener noreferrer" target="_blank"><svg fill="white" height="14" viewbox="0 0 24 24" width="14"><path d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24h11.495v-9.294H9.692V11.01h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.696h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z"></path></svg></a><a aria-label="Twitter / X" class="w-8 h-8 rounded-full bg-white bg-opacity-10 flex items-center justify-center hover:bg-opacity-20 transition" href="https://x.com/SureRain" rel="noopener noreferrer" target="_blank"><svg fill="white" height="14" viewbox="0 0 24 24" width="14"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg></a><a aria-label="WhatsApp" class="w-8 h-8 rounded-full bg-white bg-opacity-10 flex items-center justify-center hover:bg-opacity-20 transition" href="https://wa.me/5491124828378?text=Hola%21%20Necesito%20hacer%20una%20consulta." rel="noopener noreferrer" target="_blank"><svg fill="white" height="14" viewbox="0 0 24 24" width="14"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg></a></div></div>
+<div><h4 class="font-semibold text-white text-sm mb-4 uppercase tracking-wider">Productos</h4><ul class="space-y-2.5"><li><a class="text-sm" href="catalogo.html">Agro</a></li><li><a class="text-sm" href="catalogo.html">Áreas Verdes</a></li><li><a class="text-sm" href="catalogo.html">Infraestructura</a></li></ul></div>
+<div><h4 class="font-semibold text-white text-sm mb-4 uppercase tracking-wider">Empresa</h4><ul class="space-y-2.5"><li><a class="text-sm" href="nosotros.html">Quiénes somos</a></li><li><a class="text-sm" href="contacto.html">Dónde comprar</a></li><li><a class="text-sm" href="contacto.html">Contacto</a></li></ul></div>
+<div><h4 class="font-semibold text-white text-sm mb-4 uppercase tracking-wider">Contacto</h4><ul class="space-y-2.5"><li class="text-sm opacity-75">Carlos Alberto Tellier, Lote 20 — B1633 Pilar, Bs. As.</li><li class="text-sm opacity-75">info@surerain.com</li></ul></div>
+</div>
+<div class="border-t sr-footer-divider pt-8 flex flex-wrap justify-between items-center gap-4"><p class="text-xs opacity-50">© 2026 Sure Rain S.A. · <a href="privacidad.html" style="color:rgba(255,255,255,0.7);" class="underline hover:opacity-100">Política de privacidad</a></p><p class="text-xs opacity-40">Prototipo v1</p></div>
+</div>
+</footer>
+<!-- ===== Botón flotante WhatsApp ===== -->
+<a href="https://wa.me/5491124828378?text=Hola%2C%20vengo%20desde%20la%20web%20de%20Sure%20Rain.%20Quer%C3%ADa%20hacerles%20una%20consulta..."
+   target="_blank"
+   rel="noopener noreferrer"
+   class="whatsapp-float"
+   aria-label="Chatear por WhatsApp"
+   title="Chatear por WhatsApp">
+  <svg width="32" height="32" viewBox="0 0 32 32" fill="white" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M16.003 0C7.165 0 0 7.166 0 16.003c0 2.823.737 5.482 2.027 7.793L0 32l8.404-2.04A15.93 15.93 0 0 0 16.003 32C24.84 32 32 24.832 32 15.998 32 7.16 24.83 0 16.003 0zm0 29.276c-2.473 0-4.79-.665-6.785-1.821l-.486-.288-5.013 1.219 1.235-4.844-.32-.5a13.21 13.21 0 0 1-2.054-7.04c0-7.31 5.946-13.256 13.256-13.256C23.31 2.746 29.255 8.692 29.255 16c0 7.31-5.945 13.276-13.252 13.276zm7.314-9.956c-.402-.2-2.378-1.17-2.748-1.305-.369-.135-.638-.2-.907.2-.269.402-1.04 1.306-1.275 1.575-.235.27-.47.302-.873.1-.402-.2-1.697-.625-3.234-1.997-1.196-1.066-2.004-2.38-2.239-2.782-.235-.402-.025-.62.176-.82.181-.18.402-.47.604-.705.201-.235.269-.402.402-.671.135-.27.067-.503-.033-.705-.1-.2-.907-2.18-1.243-2.985-.327-.785-.66-.678-.907-.69h-.772c-.27 0-.706.1-1.075.503-.369.402-1.41 1.378-1.41 3.358 0 1.98 1.443 3.892 1.645 4.162.202.27 2.84 4.336 6.879 6.082.962.415 1.713.663 2.298.85.965.305 1.843.262 2.537.158.774-.114 2.378-.972 2.713-1.91.336-.94.336-1.744.235-1.91-.1-.168-.369-.27-.772-.469z"/>
+  </svg>
+</a>
+<style>
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.18);
+  z-index: 9999;
+  transition: transform .2s ease, box-shadow .2s ease;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.whatsapp-float:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 22px rgba(37,211,102,0.45);
+}
+.whatsapp-float:active {
+  transform: scale(0.96);
+}
+@media (max-width: 640px) {
+  .whatsapp-float {
+    bottom: 16px;
+    right: 16px;
+    width: 54px;
+    height: 54px;
+  }
+  .whatsapp-float svg {
+    width: 28px;
+    height: 28px;
+  }
+}
+</style>
+<!-- ===== Fin botón WhatsApp ===== -->
+
+</body>
+</html>

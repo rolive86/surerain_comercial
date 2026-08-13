@@ -1,0 +1,48 @@
+{
+  "source_index": 108,
+  "source_id": "img:manguera-de-succion",
+  "name": "Mangueras de Succión",
+  "slug": "mangueras-de-succion",
+  "category_slug": "goteo",
+  "brand_name": "Prosper",
+  "product_type_slug": null,
+  "markets": [
+    "agro"
+  ],
+  "image_url": "https://surerain.com/assets/productos-importados/manguera-de-succion.webp",
+  "image_alt": "Mangueras de Succión",
+  "ficha_url": "https://surerain.com/assets/productos-fichas/mang_succ.webp",
+  "description": "Características: – Funcionan bajo presión negativa para extraer fluidos. – Textura flexible. – Material: PVC. – Diámetro: 11/2” – 2” – Rollos x 32 mts. – Presión de trabajo: Hasta 5-6 Bar. – Presión de rotura: 15-19 Bar.",
+  "specs_html": "<tr><td>Marca</td><td>Prosper</td></tr><tr><td>Tipo de Producto</td><td>Agro</td></tr>",
+  "specs_rows": [
+    {
+      "label": "Marca",
+      "value": "Prosper"
+    },
+    {
+      "label": "Tipo de Producto",
+      "value": "Agro"
+    }
+  ],
+  "chip_label": "Goteo",
+  "original_url": "https://surerain.com/catalogo?producto=mangueras-de-succion",
+  "outer_html": "<div class=\"card product-card cursor-pointer\" data-category=\"goteo\" data-ficha=\"assets/productos-fichas/mang_succ.webp\" data-marca=\"Prosper\" data-vertical=\"agro\" onclick=\"openProductModal('Mangueras de Succión','Características: – Funcionan bajo presión negativa para extraer fluidos. – Textura flexible. – Material: PVC. – Diámetro: 11/2” – 2” – Rollos x 32 mts. – Presión de trabajo: Hasta 5-6 Bar. – Presión de rotura: 15-19 Bar.','<tr><td>Marca</td><td>Prosper</td></tr><tr><td>Tipo de Producto</td><td>Agro</td></tr>')\"><img width=\"195\" height=\"130\" alt=\"Mangueras de Succión\" class=\"w-full object-cover\" loading=\"lazy\" src=\"assets/productos-importados/manguera-de-succion.webp\" style=\"height:130px;\"><div class=\"p-3\"><span class=\"chip chip-agro mb-1.5\">Goteo</span><h4 class=\"font-semibold text-gray-900 text-xs mb-1\">Mangueras de Succión</h4><p class=\"text-xs text-gray-400 mb-2\">Prosper</p><div class=\"flex gap-1.5\"><span class=\"text-xs text-sr-green font-semibold cursor-pointer\">Ver ficha</span><span class=\"text-gray-300\">·</span><a class=\"text-xs text-gray-400 hover:text-sr-green\" href=\"contacto.html\">Dónde comprar</a></div></div></div>",
+  "onclick_raw": "openProductModal('Mangueras de Succión','Características: – Funcionan bajo presión negativa para extraer fluidos. – Textura flexible. – Material: PVC. – Diámetro: 11/2” – 2” – Rollos x 32 mts. – Presión de trabajo: Hasta 5-6 Bar. – Presión de rotura: 15-19 Bar.','<tr><td>Marca</td><td>Prosper</td></tr><tr><td>Tipo de Producto</td><td>Agro</td></tr>')",
+  "content_hash": "91d55464aa2fe6d86afeedb46e8cbf2245924ff5b1108267b12710a4dee15c59",
+  "provenance": {
+    "source_url": "file://C:\\proyectos\\SURERAIN-CLONE\\data\\raw\\catalogo.source.html",
+    "source_page": "https://surerain.com/catalogo",
+    "source_selector": ".product-card:nth-of-type(109)",
+    "extracted_at": "2026-08-13T22:03:32.860Z",
+    "raw_fields": [
+      "data-category",
+      "data-marca",
+      "data-tipo",
+      "data-vertical",
+      "data-ficha",
+      "img[src]",
+      "h4",
+      "openProductModal(name,description,specsHtml)"
+    ]
+  }
+}

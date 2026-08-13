@@ -1,0 +1,48 @@
+{
+  "source_index": 168,
+  "source_id": "img:20550-malla-metalica-anilla-y-anilla-votrix",
+  "name": "Filtro Alfa doble 20550 (malla/anilla/anilla vortix)",
+  "slug": "filtro-alfa-doble-20550-malla-anilla-anilla-vortix",
+  "category_slug": "filtros",
+  "brand_name": "Plástica Alfa (Italia)",
+  "product_type_slug": null,
+  "markets": [
+    "agro"
+  ],
+  "image_url": "https://surerain.com/assets/productos-importados/20550-malla-metalica-anilla-y-anilla-votrix.webp",
+  "image_alt": "Filtro Alfa doble 20550 (malla/anilla/anilla vortix)",
+  "ficha_url": null,
+  "description": "El modelo 20550 se lo encuentra en la version de anillas, anillas con efecto Vortix (hidrociclon) y malla metálica. Todas las versiones estan provistas de tapa de desague y los cartuchos de filtrado son de 120 mesh.",
+  "specs_html": "<tr><td>Marca</td><td>Plástica Alfa (Italia)</td></tr><tr><td>Tipo de Producto</td><td>Agro</td></tr>",
+  "specs_rows": [
+    {
+      "label": "Marca",
+      "value": "Plástica Alfa (Italia)"
+    },
+    {
+      "label": "Tipo de Producto",
+      "value": "Agro"
+    }
+  ],
+  "chip_label": "Filtros",
+  "original_url": "https://surerain.com/catalogo?producto=filtro-alfa-doble-20550-malla-anilla-anilla-vortix",
+  "outer_html": "<div class=\"card product-card cursor-pointer\" data-category=\"filtros\" data-marca=\"Plástica Alfa (Italia)\" data-vertical=\"agro\" onclick=\"openProductModal('Filtro Alfa doble 20550 (malla/anilla/anilla vortix)','El modelo 20550 se lo encuentra en la version de anillas, anillas con efecto Vortix (hidrociclon) y malla metálica. Todas las versiones estan provistas de tapa de desague y los cartuchos de filtrado son de 120 mesh.','<tr><td>Marca</td><td>Plástica Alfa (Italia)</td></tr><tr><td>Tipo de Producto</td><td>Agro</td></tr>')\"><img width=\"195\" height=\"130\" alt=\"Filtro Alfa doble 20550 (malla/anilla/anilla vortix)\" class=\"w-full object-cover\" loading=\"lazy\" src=\"assets/productos-importados/20550-malla-metalica-anilla-y-anilla-votrix.webp\" style=\"height:130px;\"><div class=\"p-3\"><span class=\"chip chip-agro mb-1.5\">Filtros</span><h4 class=\"font-semibold text-gray-900 text-xs mb-1\">Filtro Alfa doble 20550 (malla/anilla/anilla vortix)</h4><p class=\"text-xs text-gray-400 mb-2\">Plástica Alfa (Italia)</p><div class=\"flex gap-1.5\"><span class=\"text-xs text-sr-green font-semibold cursor-pointer\">Ver ficha</span><span class=\"text-gray-300\">·</span><a class=\"text-xs text-gray-400 hover:text-sr-green\" href=\"contacto.html\">Dónde comprar</a></div></div></div>",
+  "onclick_raw": "openProductModal('Filtro Alfa doble 20550 (malla/anilla/anilla vortix)','El modelo 20550 se lo encuentra en la version de anillas, anillas con efecto Vortix (hidrociclon) y malla metálica. Todas las versiones estan provistas de tapa de desague y los cartuchos de filtrado son de 120 mesh.','<tr><td>Marca</td><td>Plástica Alfa (Italia)</td></tr><tr><td>Tipo de Producto</td><td>Agro</td></tr>')",
+  "content_hash": "642363158db775de47450d8d8e05f368f2b5f3c70592e15146477db4e5d938ae",
+  "provenance": {
+    "source_url": "file://C:\\proyectos\\SURERAIN-CLONE\\data\\raw\\catalogo.source.html",
+    "source_page": "https://surerain.com/catalogo",
+    "source_selector": ".product-card:nth-of-type(169)",
+    "extracted_at": "2026-08-13T22:03:32.860Z",
+    "raw_fields": [
+      "data-category",
+      "data-marca",
+      "data-tipo",
+      "data-vertical",
+      "data-ficha",
+      "img[src]",
+      "h4",
+      "openProductModal(name,description,specsHtml)"
+    ]
+  }
+}

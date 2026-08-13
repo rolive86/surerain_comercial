@@ -1,0 +1,238 @@
+{
+  "generated_at": "2026-08-13T22:03:12.334Z",
+  "base_url": "https://surerain.com",
+  "technology": {
+    "framework": "Static HTML site (post-WordPress migration)",
+    "rendering": "Server delivers full catalog HTML with all product cards embedded",
+    "filtering": "Client-side only via assets/site.js (dropdowns + text search)",
+    "product_ui": "Modal openProductModal(name, description, specsHtml); deep-link ?producto=slug"
+  },
+  "endpoints_probed": [
+    {
+      "url": "https://surerain.com/robots.txt",
+      "status": 200,
+      "content_type": "text/plain; charset=UTF-8"
+    },
+    {
+      "url": "https://surerain.com/sitemap.xml",
+      "status": 404,
+      "content_type": "text/html; charset=iso-8859-1"
+    },
+    {
+      "url": "https://surerain.com/sitemap_index.xml",
+      "status": 404,
+      "content_type": "text/html; charset=iso-8859-1"
+    },
+    {
+      "url": "https://surerain.com/catalogo",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://surerain.com/catalogo.html",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://surerain.com/products.json",
+      "status": 404,
+      "content_type": "text/html; charset=iso-8859-1"
+    },
+    {
+      "url": "https://surerain.com/data/products.json",
+      "status": 404,
+      "content_type": "text/html; charset=iso-8859-1"
+    },
+    {
+      "url": "https://surerain.com/assets/products.json",
+      "status": 404,
+      "content_type": "text/html; charset=iso-8859-1"
+    },
+    {
+      "url": "https://surerain.com/catalogo.json",
+      "status": 404,
+      "content_type": "text/html; charset=iso-8859-1"
+    },
+    {
+      "url": "https://surerain.com/api/products",
+      "status": 404,
+      "content_type": "text/html; charset=iso-8859-1"
+    },
+    {
+      "url": "https://surerain.com/wp-json/wp/v2/product",
+      "status": 404,
+      "content_type": "text/html; charset=iso-8859-1"
+    },
+    {
+      "url": "https://surerain.com/wp-json/wc/v3/products",
+      "status": 404,
+      "content_type": "text/html; charset=iso-8859-1"
+    },
+    {
+      "url": "https://surerain.com/assets/site.js",
+      "status": 200,
+      "content_type": "text/javascript"
+    },
+    {
+      "url": "https://surerain.com/assets/site.css",
+      "status": 200,
+      "content_type": "text/css"
+    },
+    {
+      "url": "https://surerain.com/assets/tailwind.css",
+      "status": 200,
+      "content_type": "text/css"
+    }
+  ],
+  "primary_source": {
+    "url": "https://surerain.com/catalogo",
+    "type": "embedded-html-product-cards",
+    "reason": "No public JSON/API/JSON-LD catalog endpoint found. All 420 products are present in catalogo HTML as .product-card nodes with data-* attributes and openProductModal payload."
+  },
+  "secondary_sources": [
+    "https://surerain.com/assets/site.js (filter + modal behavior)",
+    "https://surerain.com/assets/productos-importados/* (featured images)",
+    "https://surerain.com/assets/productos-fichas/* (technical sheet images)",
+    "https://surerain.com/robots.txt"
+  ],
+  "catalog": {
+    "published_total": 420,
+    "categories": [
+      "aspersores",
+      "goteo",
+      "conectores",
+      "microaspersion",
+      "filtros",
+      "valvulas",
+      "programadores",
+      "caudalimetros",
+      "accesorios",
+      "hogar"
+    ],
+    "brands": [
+      "Vyrsa (España)",
+      "Origen China",
+      "GreenPlains",
+      "K-Rain (USA)",
+      "Rossi (Italia)",
+      "Plásticos Coorp",
+      "Plástica Alfa (Italia)",
+      "Prosper",
+      "Aqua-Traxx (USA)",
+      "Irriway (Italia)",
+      "Olivos",
+      "ZM Yuyao",
+      "Tavlit (Israel)",
+      "Erhas (Turquía)",
+      "GreenPlains, Origen China",
+      "Palaplast (Grecia)",
+      "ERA",
+      "Taizhou",
+      "Hebei",
+      "Tecnidro (Italia)",
+      "RPE (Italia)",
+      "Unirain (España)",
+      "Dorot (Israel)",
+      "Galarza",
+      "Kexing",
+      "Tianyan",
+      "Varios",
+      "Winin"
+    ],
+    "markets": [
+      "agro",
+      "av",
+      "infra",
+      "hogar"
+    ],
+    "product_types": [
+      "impacto",
+      "oscilante",
+      "emergente",
+      "otro",
+      "accesorio"
+    ],
+    "cards_detected": 420,
+    "with_ficha": 126,
+    "with_description": 387,
+    "unique_images": 420,
+    "duplicate_names": [
+      {
+        "name": "Conector inicial con aro de goma bilabiado",
+        "count": 3
+      },
+      {
+        "name": "Válvula Solenoide con Programador",
+        "count": 2
+      },
+      {
+        "name": "Válvula aire-vacío triple efecto, RM 1″ y 2″",
+        "count": 2
+      },
+      {
+        "name": "Conector inicial con aro de goma recto",
+        "count": 2
+      },
+      {
+        "name": "Unión para polietileno de alta densidad",
+        "count": 2
+      },
+      {
+        "name": "Reducción polietileno de alta densidad",
+        "count": 2
+      },
+      {
+        "name": "Codo 90° para polietileno de alta densidad",
+        "count": 2
+      },
+      {
+        "name": "T para polietileno de alta densidad",
+        "count": 2
+      },
+      {
+        "name": "Final de línea polietileno de alta densidad",
+        "count": 2
+      },
+      {
+        "name": "Codo roscado para PEAD",
+        "count": 2
+      },
+      {
+        "name": "Adaptador rosca macho para Lay Flat",
+        "count": 2
+      },
+      {
+        "name": "Adaptador rosca macho para PEAD",
+        "count": 2
+      }
+    ]
+  },
+  "asset_roots": [
+    "assets/productos-importados/",
+    "assets/productos-fichas/",
+    "assets/logos/",
+    "assets/hero/",
+    "assets/site.css",
+    "assets/tailwind.css",
+    "assets/site.js"
+  ],
+  "site_pages": [
+    "https://surerain.com/",
+    "https://surerain.com/catalogo",
+    "https://surerain.com/novedades",
+    "https://surerain.com/nosotros",
+    "https://surerain.com/contacto",
+    "https://surerain.com/manuales-2",
+    "https://surerain.com/videos",
+    "https://surerain.com/privacidad"
+  ],
+  "recommended_extraction_method": "Parse .product-card elements from catalog HTML as primary structured source. Download referenced product images and data-ficha technical sheets. Mirror static site pages/assets for offline reference. Do not scrape WordPress/shop URLs (explicitly retired in robots.txt).",
+  "notes": [
+    "sitemap.xml returns 404",
+    "No wp-json / WooCommerce / Next.js / Supabase public catalog API detected",
+    "Specs tables mostly contain Marca + Tipo de Producto (markets); rich specs live in description text",
+    "Product names are not globally unique; source_id derived from image filename",
+    "Fichas técnicas are images (webp/jpg), not PDFs",
+    "Published claim: 420 productos en 9 categorías"
+  ]
+}

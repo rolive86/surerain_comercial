@@ -1,0 +1,48 @@
+{
+  "source_index": 107,
+  "source_id": "img:cinta-de-riego-olivos-rauli",
+  "name": "Cinta de Riego Olivos-Rauli",
+  "slug": "cinta-de-riego-olivos-rauli",
+  "category_slug": "goteo",
+  "brand_name": "Olivos",
+  "product_type_slug": null,
+  "markets": [
+    "agro"
+  ],
+  "image_url": "https://surerain.com/assets/productos-importados/cinta-de-riego-olivos-rauli.webp",
+  "image_alt": "Cinta de Riego Olivos-Rauli",
+  "ficha_url": "https://surerain.com/assets/productos-fichas/Cuadro_olivos-1.webp",
+  "description": "La cinta de riego Olivos-Rauli es una opción económica, compacta y eficiente con gotero integrado de alta efectividad.",
+  "specs_html": "<tr><td>Marca</td><td>Olivos</td></tr><tr><td>Tipo de Producto</td><td>Agro</td></tr>",
+  "specs_rows": [
+    {
+      "label": "Marca",
+      "value": "Olivos"
+    },
+    {
+      "label": "Tipo de Producto",
+      "value": "Agro"
+    }
+  ],
+  "chip_label": "Goteo",
+  "original_url": "https://surerain.com/catalogo?producto=cinta-de-riego-olivos-rauli",
+  "outer_html": "<div class=\"card product-card cursor-pointer\" data-category=\"goteo\" data-ficha=\"assets/productos-fichas/Cuadro_olivos-1.webp\" data-marca=\"Olivos\" data-vertical=\"agro\" onclick=\"openProductModal('Cinta de Riego Olivos-Rauli','La cinta de riego Olivos-Rauli es una opción económica, compacta y eficiente con gotero integrado de alta efectividad.','<tr><td>Marca</td><td>Olivos</td></tr><tr><td>Tipo de Producto</td><td>Agro</td></tr>')\"><img width=\"195\" height=\"130\" alt=\"Cinta de Riego Olivos-Rauli\" class=\"w-full object-cover\" loading=\"lazy\" src=\"assets/productos-importados/cinta-de-riego-olivos-rauli.webp\" style=\"height:130px;\"><div class=\"p-3\"><span class=\"chip chip-agro mb-1.5\">Goteo</span><h4 class=\"font-semibold text-gray-900 text-xs mb-1\">Cinta de Riego Olivos-Rauli</h4><p class=\"text-xs text-gray-400 mb-2\">Olivos</p><div class=\"flex gap-1.5\"><span class=\"text-xs text-sr-green font-semibold cursor-pointer\">Ver ficha</span><span class=\"text-gray-300\">·</span><a class=\"text-xs text-gray-400 hover:text-sr-green\" href=\"contacto.html\">Dónde comprar</a></div></div></div>",
+  "onclick_raw": "openProductModal('Cinta de Riego Olivos-Rauli','La cinta de riego Olivos-Rauli es una opción económica, compacta y eficiente con gotero integrado de alta efectividad.','<tr><td>Marca</td><td>Olivos</td></tr><tr><td>Tipo de Producto</td><td>Agro</td></tr>')",
+  "content_hash": "748d0d90580a52452e91560a07c5c857ef1c8ae887f3fd9643876610b27a2947",
+  "provenance": {
+    "source_url": "file://C:\\proyectos\\SURERAIN-CLONE\\data\\raw\\catalogo.source.html",
+    "source_page": "https://surerain.com/catalogo",
+    "source_selector": ".product-card:nth-of-type(108)",
+    "extracted_at": "2026-08-13T22:03:32.860Z",
+    "raw_fields": [
+      "data-category",
+      "data-marca",
+      "data-tipo",
+      "data-vertical",
+      "data-ficha",
+      "img[src]",
+      "h4",
+      "openProductModal(name,description,specsHtml)"
+    ]
+  }
+}

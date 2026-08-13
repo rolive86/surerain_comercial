@@ -1,0 +1,49 @@
+{
+  "source_index": 344,
+  "source_id": "img:codo-90",
+  "name": "Codo 90°",
+  "slug": "codo-90",
+  "category_slug": "accesorios",
+  "brand_name": "ERA",
+  "product_type_slug": null,
+  "markets": [
+    "agro",
+    "infra"
+  ],
+  "image_url": "https://surerain.com/assets/productos-importados/codo-90.webp",
+  "image_alt": "Codo 90°",
+  "ficha_url": null,
+  "description": "CARACTERÍSTICAS: – Material: PEAD – Presión máxima de trabajo: PN 16 – Color: Negro – Ideal para tuberías de agua, tuberías de gas, tuberías de alcantarillado, líneas de transferencia de lodos, riego rural, conductos eléctricos y de comunicaciones.",
+  "specs_html": "<tr><td>Marca</td><td>ERA</td></tr><tr><td>Tipo de Producto</td><td>Agro, Infraestructura</td></tr>",
+  "specs_rows": [
+    {
+      "label": "Marca",
+      "value": "ERA"
+    },
+    {
+      "label": "Tipo de Producto",
+      "value": "Agro, Infraestructura"
+    }
+  ],
+  "chip_label": "Accesorios",
+  "original_url": "https://surerain.com/catalogo?producto=codo-90",
+  "outer_html": "<div class=\"card product-card cursor-pointer\" data-category=\"accesorios\" data-marca=\"ERA\" data-vertical=\"agro infra\" onclick=\"openProductModal('Codo 90°','CARACTERÍSTICAS: – Material: PEAD – Presión máxima de trabajo: PN 16 – Color: Negro – Ideal para tuberías de agua, tuberías de gas, tuberías de alcantarillado, líneas de transferencia de lodos, riego rural, conductos eléctricos y de comunicaciones.','<tr><td>Marca</td><td>ERA</td></tr><tr><td>Tipo de Producto</td><td>Agro, Infraestructura</td></tr>')\"><img width=\"195\" height=\"130\" alt=\"Codo 90°\" class=\"w-full object-cover\" loading=\"lazy\" src=\"assets/productos-importados/codo-90.webp\" style=\"height:130px;\"><div class=\"p-3\"><span class=\"chip chip-agro mb-1.5\">Accesorios</span><h4 class=\"font-semibold text-gray-900 text-xs mb-1\">Codo 90°</h4><p class=\"text-xs text-gray-400 mb-2\">ERA</p><div class=\"flex gap-1.5\"><span class=\"text-xs text-sr-green font-semibold cursor-pointer\">Ver ficha</span><span class=\"text-gray-300\">·</span><a class=\"text-xs text-gray-400 hover:text-sr-green\" href=\"contacto.html\">Dónde comprar</a></div></div></div>",
+  "onclick_raw": "openProductModal('Codo 90°','CARACTERÍSTICAS: – Material: PEAD – Presión máxima de trabajo: PN 16 – Color: Negro – Ideal para tuberías de agua, tuberías de gas, tuberías de alcantarillado, líneas de transferencia de lodos, riego rural, conductos eléctricos y de comunicaciones.','<tr><td>Marca</td><td>ERA</td></tr><tr><td>Tipo de Producto</td><td>Agro, Infraestructura</td></tr>')",
+  "content_hash": "6cab746e9d5f34b164429fe12686bf328753490dcc0cf0eab26432e42042961e",
+  "provenance": {
+    "source_url": "file://C:\\proyectos\\SURERAIN-CLONE\\data\\raw\\catalogo.source.html",
+    "source_page": "https://surerain.com/catalogo",
+    "source_selector": ".product-card:nth-of-type(345)",
+    "extracted_at": "2026-08-13T22:03:32.860Z",
+    "raw_fields": [
+      "data-category",
+      "data-marca",
+      "data-tipo",
+      "data-vertical",
+      "data-ficha",
+      "img[src]",
+      "h4",
+      "openProductModal(name,description,specsHtml)"
+    ]
+  }
+}

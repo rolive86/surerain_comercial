@@ -1,0 +1,4301 @@
+{
+  "generated_at": "2026-08-13T23:02:33.597Z",
+  "mode": "full",
+  "project_ref": "alewhpkjiktmvbugkcnn",
+  "products_imported": 420,
+  "media_stats": {
+    "uploadedCount": 506,
+    "skipped": 29,
+    "failed": 1,
+    "updates": [
+      {
+        "id": "db462e46-21ee-4b13-aac6-f08cbfcdeda3",
+        "bucket": "product-images",
+        "storage_path": "media/db462e46-21ee-4b13-aac6-f08cbfcdeda3/vyr-26.webp",
+        "checksum": "937b3efd18a3a7b97ae08ff6c17c7ca20a79d58d96876c1b2af8454272d3b6d7",
+        "file_size": 11412,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "2651b252-e699-4ebc-ab8a-b3ba5e490b5f",
+        "bucket": "product-images",
+        "storage_path": "media/2651b252-e699-4ebc-ab8a-b3ba5e490b5f/vyr-80-circular.webp",
+        "checksum": "6b562b1ec7ea8e4eaa666790b8a41599f85b6109d60eae723e61cef6a2791830",
+        "file_size": 12092,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "466c8b21-1a56-49be-a0d7-c0eeec6df6b0",
+        "bucket": "product-documents",
+        "storage_path": "media/466c8b21-1a56-49be-a0d7-c0eeec6df6b0/709imgdesc1.webp",
+        "checksum": "ce969b0daee5b5b62f1c6f6950b8f30eae1c1e1f505b0274184003894fed50a6",
+        "file_size": 20178,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "2168481b-fc73-451c-b6dd-552f576c2515",
+        "bucket": "product-images",
+        "storage_path": "media/2168481b-fc73-451c-b6dd-552f576c2515/vyr-80-sectorizable.webp",
+        "checksum": "0c28b564bc8b8a4ebb966dae95bc2ebe62ae95fe2625eb820437b9a98948b3db",
+        "file_size": 17000,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "6953fba7-4f4b-40d6-a9bf-bd402d4dc035",
+        "bucket": "product-documents",
+        "storage_path": "media/6953fba7-4f4b-40d6-a9bf-bd402d4dc035/45imgdesc1.webp",
+        "checksum": "cfc1defece3cb9cde6c34decc0d9a1cdae97540d49a31106f0f51df2e753de4b",
+        "file_size": 20560,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "e9125fe7-e2d7-4461-85d0-9f97df0f85d0",
+        "bucket": "product-images",
+        "storage_path": "media/e9125fe7-e2d7-4461-85d0-9f97df0f85d0/vyr-37.webp",
+        "checksum": "883be7a2aff2a44f5ad8895bf4ab1e09ee9dfe2d9a9e1436b83650d8b2b2c8a2",
+        "file_size": 10926,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "965c0093-c09e-43a9-b323-b9431d588ee3",
+        "bucket": "product-documents",
+        "storage_path": "media/965c0093-c09e-43a9-b323-b9431d588ee3/369imgdesc1.webp",
+        "checksum": "e2738f9cc6587d5b5fa512763bedf759f07686a3936839ecc8bd82248d14f9d1",
+        "file_size": 86674,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "4ac4045f-f130-424d-828e-8fd708def076",
+        "bucket": "product-images",
+        "storage_path": "media/4ac4045f-f130-424d-828e-8fd708def076/vyr-802.webp",
+        "checksum": "9e06b3e27adabc9a19324d07d211bd742c0d00e7b709710d7617a0e63f68a29c",
+        "file_size": 14606,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "144af0ec-ef08-4d8a-8e9f-d0d6a1430b4a",
+        "bucket": "product-documents",
+        "storage_path": "media/144af0ec-ef08-4d8a-8e9f-d0d6a1430b4a/381imgdesc1.webp",
+        "checksum": "ba6cb998516ed35207ab38d68eeb051309756525e408f5de77542562d69cec70",
+        "file_size": 11952,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "d03cb3c0-61b0-496e-b1cd-3ff5b5e10321",
+        "bucket": "product-images",
+        "storage_path": "media/d03cb3c0-61b0-496e-b1cd-3ff5b5e10321/vyr-56.webp",
+        "checksum": "d5a5ad63b2c149624fbc6121ce3a39357ab519810bd5e81587a80d05066c6a20",
+        "file_size": 12954,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "5c9f2b41-c925-4836-9d2a-dbc029f43f0a",
+        "bucket": "product-images",
+        "storage_path": "media/5c9f2b41-c925-4836-9d2a-dbc029f43f0a/vyr-66.webp",
+        "checksum": "f5ba971c25e4f40ad7d0f0504f47bc57eb899c7251af972714ed95abb09bd969",
+        "file_size": 13336,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "f452f300-5d08-42f4-960e-c319e76b14c4",
+        "bucket": "product-images",
+        "storage_path": "media/f452f300-5d08-42f4-960e-c319e76b14c4/vyr-23.webp",
+        "checksum": "a4794b09aa88b5dea70ee109320efb9424c69d41212cb005de358d5eab184ef1",
+        "file_size": 11500,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "7d7c2db9-3988-473f-8752-bae9ccfab1bd",
+        "bucket": "product-images",
+        "storage_path": "media/7d7c2db9-3988-473f-8752-bae9ccfab1bd/vyr-33-plastico.webp",
+        "checksum": "0b565fd76973c3f4e3b059af1eefe56e20b3cdc3ad348d6dc5e6133af6f26a5d",
+        "file_size": 6938,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "eab2dc7d-db55-4ed6-a380-76781701df00",
+        "bucket": "product-images",
+        "storage_path": "media/eab2dc7d-db55-4ed6-a380-76781701df00/vyr-33.webp",
+        "checksum": "72f7b694dca456fecb8f918468f4d75bee5d449b59568af12f2f5a1d66f77318",
+        "file_size": 12996,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "3fef03c2-95b3-4abf-b476-ae1a4eae7ba4",
+        "bucket": "product-images",
+        "storage_path": "media/3fef03c2-95b3-4abf-b476-ae1a4eae7ba4/vyr-60.webp",
+        "checksum": "bd08ce921a0a7c643113b4ceb629e6738f96b86c5de69755644209cc7d41c0c2",
+        "file_size": 16132,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "1970275e-a590-43cf-9cf2-329e89565c2a",
+        "bucket": "product-images",
+        "storage_path": "media/1970275e-a590-43cf-9cf2-329e89565c2a/vyr-86.webp",
+        "checksum": "85925a1e11f015fcb71d717c01d1b2f332d1bfaa3cf5d351403ef1f7fa5b3824",
+        "file_size": 12610,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "d04ad7e8-7ba4-4350-9672-32843ec6e9c6",
+        "bucket": "product-images",
+        "storage_path": "media/d04ad7e8-7ba4-4350-9672-32843ec6e9c6/vyr-166.webp",
+        "checksum": "a2282d3c7c12130a1f790a00c47a06f37ae5e033225f76c01deb43ac87b883f7",
+        "file_size": 12360,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "e264ffb8-498c-4095-a7b1-9acb31b42ac4",
+        "bucket": "product-images",
+        "storage_path": "media/e264ffb8-498c-4095-a7b1-9acb31b42ac4/vyr-70-v.webp",
+        "checksum": "885ab76418a17a2c93ceb9ea152a8813e53a042db908100081f214382dc4721e",
+        "file_size": 10572,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "353cdc74-dc06-403c-9031-7769fa33b3c2",
+        "bucket": "product-images",
+        "storage_path": "media/353cdc74-dc06-403c-9031-7769fa33b3c2/vyr-65.webp",
+        "checksum": "175535398ae20db04a272f4440551441f7a5253562778c17751fa1a2fa9df967",
+        "file_size": 12692,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "21acf6ca-b79a-4710-825a-ba0b1b770a3e",
+        "bucket": "product-images",
+        "storage_path": "media/21acf6ca-b79a-4710-825a-ba0b1b770a3e/vyr-155.webp",
+        "checksum": "e009d1e3fc4b768c8e2e7c6a9ac53a6aa24919bcdfe8fb8c248c699d94e48437",
+        "file_size": 11302,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "b7f66125-39ec-43a0-a6c5-82f1ae10574d",
+        "bucket": "product-images",
+        "storage_path": "media/b7f66125-39ec-43a0-a6c5-82f1ae10574d/vyr-150.webp",
+        "checksum": "25c32e308bab9dac7b681cec66ea3ebbe6da251e4522829b3c2f219f517ff328",
+        "file_size": 12758,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "0318e06d-cc21-4869-8ccd-1210f869f1be",
+        "bucket": "product-images",
+        "storage_path": "media/0318e06d-cc21-4869-8ccd-1210f869f1be/assr-8427.webp",
+        "checksum": "fadd640bcbfeda89edb4ec8d60345d30708cfd292968fa36d90f14da3a2aef45",
+        "file_size": 13728,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "3bb60247-16cd-402e-b42d-5388e5c519dc",
+        "bucket": "product-documents",
+        "storage_path": "media/3bb60247-16cd-402e-b42d-5388e5c519dc/171imgdesc1.webp",
+        "checksum": "5586d4e40ec72bb0fc29a83ed2d6a6eed9a268f013a210b4a766a62c56bc4f26",
+        "file_size": 19140,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "de688584-5785-4c6b-9263-487ecc17dadf",
+        "bucket": "product-images",
+        "storage_path": "media/de688584-5785-4c6b-9263-487ecc17dadf/assr-8022.webp",
+        "checksum": "e89011be7d4a7c823f65a3c0e1ebc847b1efd7c5cb8cc7fc3f45ac0022fbc410",
+        "file_size": 10094,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "7c707d86-4656-4e71-8bb5-60ad86bb5fa6",
+        "bucket": "product-documents",
+        "storage_path": "media/7c707d86-4656-4e71-8bb5-60ad86bb5fa6/169imgdesc1.webp",
+        "checksum": "c37b725e90874927772547b55a9880fb94410fac5bf02cbfcb1a245bd52a7a49",
+        "file_size": 26556,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "3f078c55-088f-4ea6-9d63-e2ad93e6c3eb",
+        "bucket": "product-images",
+        "storage_path": "media/3f078c55-088f-4ea6-9d63-e2ad93e6c3eb/pl-3100.webp",
+        "checksum": "a54f9c7f4f6729c9ce0f6921686a402d792ccf282ededeedfb47f70772b283f4",
+        "file_size": 15414,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "02586fb1-0df4-48b3-9c0b-3b4d5cf19ec9",
+        "bucket": "product-images",
+        "storage_path": "media/02586fb1-0df4-48b3-9c0b-3b4d5cf19ec9/aspersor-oscilante-de-angulo-ajustable.webp",
+        "checksum": "ed15d4ce5075b4154b1408e01782592b648e305318e6ac233770c4e2c8afb6e8",
+        "file_size": 17394,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "843ae951-a74a-48f9-b560-fcfc1834ad2f",
+        "bucket": "product-images",
+        "storage_path": "media/843ae951-a74a-48f9-b560-fcfc1834ad2f/boquilla-ajustable-rosca-hembra.webp",
+        "checksum": "8f38792754a5f673a264ef6a5cc6c81ae5fd45b77d2829dab553f71b93c1e8da",
+        "file_size": 5778,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "3ea32539-7cf8-45d1-a2c0-a898559532d4",
+        "bucket": "product-documents",
+        "storage_path": "media/3ea32539-7cf8-45d1-a2c0-a898559532d4/350imgdesc1.webp",
+        "checksum": "011c5efe46b233c7d9746fef60d5e311e5acbc4482b643c5e247883313d818dc",
+        "file_size": 31910,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "c5d583a7-47f2-45bb-80ca-6cd736a75520",
+        "bucket": "product-images",
+        "storage_path": "media/c5d583a7-47f2-45bb-80ca-6cd736a75520/boquilla-ajustable-rosca-macho.webp",
+        "checksum": "aba8acd66b3ac803ae2d506d41f3fd2809eea5be3c297e6d7aff2b0a76c3c3f3",
+        "file_size": 8492,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "77a89d52-be7c-4893-aed7-8ad1b030695a",
+        "bucket": "product-documents",
+        "storage_path": "media/77a89d52-be7c-4893-aed7-8ad1b030695a/349imgdesc1.webp",
+        "checksum": "aa6f939dddd1b57bf8f9a2b7deea08dac40676322797b82f0617c793a256d514",
+        "file_size": 31380,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "76db1824-ccac-4901-85d4-fa25f484dc98",
+        "bucket": "product-images",
+        "storage_path": "media/76db1824-ccac-4901-85d4-fa25f484dc98/assr-8028.webp",
+        "checksum": "91d525a3d2bc6001e7b961a27dde8b7c0adab6f8e5c785c03191dda75bc41c65",
+        "file_size": 18190,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "9d02a698-280b-4575-bdcc-891361d59820",
+        "bucket": "product-documents",
+        "storage_path": "media/9d02a698-280b-4575-bdcc-891361d59820/174imgdesc1.webp",
+        "checksum": "ff4be46ef68718e1f5cb447cb594feda2c57cd55a3560f9be3ff0ff98a78f390",
+        "file_size": 25766,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "e5fadb10-6366-42cb-abb0-53dbe71d932c",
+        "bucket": "product-images",
+        "storage_path": "media/e5fadb10-6366-42cb-abb0-53dbe71d932c/assr-8035.webp",
+        "checksum": "459b321070cc6fe9f0e90325dd9e9b4fec6f7cea45264c8548a66ad401d3998e",
+        "file_size": 11896,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "ac0549bb-d623-4fa4-882a-857f91c37e69",
+        "bucket": "product-documents",
+        "storage_path": "media/ac0549bb-d623-4fa4-882a-857f91c37e69/177imgdesc1.webp",
+        "checksum": "421171d5e9a0dea8e4ee00582d3dfd62473ef4534c904cad544ad9d6ed957b20",
+        "file_size": 29526,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "a48f3ef7-ea75-42f1-8613-849b1d7f679a",
+        "bucket": "product-images",
+        "storage_path": "media/a48f3ef7-ea75-42f1-8613-849b1d7f679a/assr-8035-sec.webp",
+        "checksum": "bcec5892cdbe4e3901ae03637680cc79658cfce5004355ec48dee392cef85f2f",
+        "file_size": 10128,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "390f869b-1087-48ea-a6f5-cc617f2175f9",
+        "bucket": "product-documents",
+        "storage_path": "media/390f869b-1087-48ea-a6f5-cc617f2175f9/592imgdesc1.webp",
+        "checksum": "47d38bdb7a460690200cc0317e50d421974b97ec0dd03a97800e13a67051f50f",
+        "file_size": 21768,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "53646239-0d79-45a8-ae39-a1ad0ac01717",
+        "bucket": "product-images",
+        "storage_path": "media/53646239-0d79-45a8-ae39-a1ad0ac01717/assr-8044.webp",
+        "checksum": "542cedfc019ec10e6339b93c8130488d565f1360f249b3e581e32946e078ad99",
+        "file_size": 13952,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "78322356-b38f-4f54-9b20-d8d7a1e2363a",
+        "bucket": "product-documents",
+        "storage_path": "media/78322356-b38f-4f54-9b20-d8d7a1e2363a/179imgdesc1.webp",
+        "checksum": "144badc2dfdc6ecead2abb4953d8b5db1f19c274881f25b877ce9871b4b7613d",
+        "file_size": 18462,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "99318496-0932-4a06-bac8-c98af2e23db1",
+        "bucket": "product-images",
+        "storage_path": "media/99318496-0932-4a06-bac8-c98af2e23db1/assr-8046.webp",
+        "checksum": "4652ab30cd015f96e1cc45293c78501237e202a10589e1295f171735413abb7d",
+        "file_size": 9436,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "21592016-e317-41b7-8a0b-1727c03887b7",
+        "bucket": "product-documents",
+        "storage_path": "media/21592016-e317-41b7-8a0b-1727c03887b7/713imgdesc1.webp",
+        "checksum": "187e2f4bbe2c5a2e2fa2348f5fb5c6ec772335ebacc9fb96ec7a2964c08e2b7e",
+        "file_size": 29538,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "57bea490-9205-4d40-9221-7125a93df89b",
+        "bucket": "product-images",
+        "storage_path": "media/57bea490-9205-4d40-9221-7125a93df89b/assr-8036.webp",
+        "checksum": "3a512d903566f2759926eafb7ca45788bcddc4ce37b1067035bf9b223a66b4e9",
+        "file_size": 14304,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "3c4ec2c4-4721-4d71-a301-d1500777fb72",
+        "bucket": "product-documents",
+        "storage_path": "media/3c4ec2c4-4721-4d71-a301-d1500777fb72/181imgdesc1.webp",
+        "checksum": "cf33ebbdc2d22c946f76e0dd64a364c6ba1a962da4e0bddfae9d9ea68b34d21f",
+        "file_size": 59414,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "33958bbe-f87a-4e15-9ddc-a173041e2e3d",
+        "bucket": "product-images",
+        "storage_path": "media/33958bbe-f87a-4e15-9ddc-a173041e2e3d/assr-8041.webp",
+        "checksum": "67bd505c9d5f68206b98f891a7094b3f8ebc0d58b148e30645bf6f792178717c",
+        "file_size": 19768,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "7bd854d8-3777-4951-b30c-effa127418d8",
+        "bucket": "product-documents",
+        "storage_path": "media/7bd854d8-3777-4951-b30c-effa127418d8/185imgdesc1.webp",
+        "checksum": "659d490b562f52b3171ebb565eb79c982524c744ca593f769e3f80ede9c31056",
+        "file_size": 59656,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "ddaabd26-bb31-4880-bc5a-b63f28a6b747",
+        "bucket": "product-images",
+        "storage_path": "media/ddaabd26-bb31-4880-bc5a-b63f28a6b747/assr-8019.webp",
+        "checksum": "2121b1f1574a5a32a84d418f132fad08b635e759d5713f261bace2a6bb1c2279",
+        "file_size": 13204,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "68bbea98-c7be-4f3e-a568-70836ee2a115",
+        "bucket": "product-documents",
+        "storage_path": "media/68bbea98-c7be-4f3e-a568-70836ee2a115/187imgdesc1.webp",
+        "checksum": "d4f44b322951820991f0ee0de689b867c356049054070f885e582b3d3f642334",
+        "file_size": 18666,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "b63999eb-7cfe-4d06-9787-b8dddc3461f6",
+        "bucket": "product-images",
+        "storage_path": "media/b63999eb-7cfe-4d06-9787-b8dddc3461f6/assr-8021-antihelada.webp",
+        "checksum": "b44b1f3126059932e044b8fb96d7f2f89dac7b99edaa86eb178a1cbb7e9857b1",
+        "file_size": 10210,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "3eb65f45-9b16-4baf-80af-a2e58536ad17",
+        "bucket": "product-documents",
+        "storage_path": "media/3eb65f45-9b16-4baf-80af-a2e58536ad17/183imgdesc1-1.webp",
+        "checksum": "d1ef91c213189c5d006fbfbc844943e980c3f34758505c051a9cdc3d4a133544",
+        "file_size": 60558,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "f75928d3-39f8-4f02-8b03-15d3be5d4c97",
+        "bucket": "product-images",
+        "storage_path": "media/f75928d3-39f8-4f02-8b03-15d3be5d4c97/r25.webp",
+        "checksum": "4f5c0fbd53344d3c99424f7d14a64f7da5f06c42e4a1ca2eb6acc2160f9fab64",
+        "file_size": 13064,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "49b14b0c-1dbe-4f71-b82c-f98dec7534e7",
+        "bucket": "product-documents",
+        "storage_path": "media/49b14b0c-1dbe-4f71-b82c-f98dec7534e7/385imgdesc1.webp",
+        "checksum": "fbe5cd2bd54382e71992a4b4ad7d284a2d8ca9a0d7fc7d5f2dfd8e34c26cda4e",
+        "file_size": 20898,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "28cbabc7-237e-4021-9370-479f6b07aea0",
+        "bucket": "product-images",
+        "storage_path": "media/28cbabc7-237e-4021-9370-479f6b07aea0/r25-s.webp",
+        "checksum": "e90f2a2bab0a826cb78d12043fce7442d7100a5a09a63c6c0335eac34d49fb89",
+        "file_size": 17096,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "5b7feb8d-8b3a-4708-ae32-efdfe7ebec3e",
+        "bucket": "product-images",
+        "storage_path": "media/5b7feb8d-8b3a-4708-ae32-efdfe7ebec3e/r15.webp",
+        "checksum": "3067f00a3f3413ecdafd1b73188dccdb8402d06d62407a7dc4e6f1133ff996a2",
+        "file_size": 10506,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "b22d5dd4-7114-428d-a6e9-6bf31abb87aa",
+        "bucket": "product-documents",
+        "storage_path": "media/b22d5dd4-7114-428d-a6e9-6bf31abb87aa/383imgdesc1.webp",
+        "checksum": "a0b449c041634f0e6ab706ba7650fcec71fb5b56dc1482184e70dd9889d23179",
+        "file_size": 15184,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "2871121a-a63f-4548-84f0-f97d0bc36262",
+        "bucket": "product-images",
+        "storage_path": "media/2871121a-a63f-4548-84f0-f97d0bc36262/r15-s.webp",
+        "checksum": "da5f861de043321b2ab8a4b124c3e7317e3139de01a0baa68229df2c480346c5",
+        "file_size": 11960,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "618a0746-14a6-4eb7-9584-d3b02f3b2a53",
+        "bucket": "product-images",
+        "storage_path": "media/618a0746-14a6-4eb7-9584-d3b02f3b2a53/valvula-antidrenaje-sport-plus-superrps75.webp",
+        "checksum": "ca57cbff237254695106b7192e185db15f2696639aa95cb7b6e0cd854e33186b",
+        "file_size": 9224,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "0d24283b-a389-4fe0-b20d-8102d5010406",
+        "bucket": "product-images",
+        "storage_path": "media/0d24283b-a389-4fe0-b20d-8102d5010406/rps-select.webp",
+        "checksum": "809d86aa2e69ccf0a6bf43bedf667e8c41c4b078412702544766b3b8d0fa23da",
+        "file_size": 2934,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "b942864f-b608-472a-bcce-a29f5fbacf0d",
+        "bucket": "product-documents",
+        "storage_path": "media/b942864f-b608-472a-bcce-a29f5fbacf0d/597imgdesc1.webp",
+        "checksum": "f1214bbe0de258483eb282fb3a9ef358059ff9a41a7f37a70e05a8e4cfbd8fcf",
+        "file_size": 66688,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "6a32f3ea-c4f5-46d7-9cc1-ec6e888deeec",
+        "bucket": "product-images",
+        "storage_path": "media/6a32f3ea-c4f5-46d7-9cc1-ec6e888deeec/tobera-emergente-2-pulg-nps.webp",
+        "checksum": "3e4bdb668e1c3725f5a8d9646bad6e13e22db0982b446480aa84f7498bf62274",
+        "file_size": 7624,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "a72f9475-825a-4d53-bf17-c39a7795651d",
+        "bucket": "product-images",
+        "storage_path": "media/a72f9475-825a-4d53-bf17-c39a7795651d/tobera-emergente-4-pulg-nps.webp",
+        "checksum": "71273500e5aa6b32f87b5ad40468db936151339b45905a71cd3c09699155a24e",
+        "file_size": 5100,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "58853242-b4a9-442e-8598-3fd91c0b84fd",
+        "bucket": "product-images",
+        "storage_path": "media/58853242-b4a9-442e-8598-3fd91c0b84fd/tobera-emergente-pro-s-12.webp",
+        "checksum": "70cd5c5764a6356906a283049a086a30c17536aa891a9315ab0784c403a770c4",
+        "file_size": 3572,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "3d965964-86c5-47f9-a99c-1ce1764f546b",
+        "bucket": "product-images",
+        "storage_path": "media/3d965964-86c5-47f9-a99c-1ce1764f546b/tobera-emergente-4-pulg-pro-s.webp",
+        "checksum": "fbdf1b896daa525beb8bdf61dfc92410efff0bb83e2883c9fe7f15e63de842fa",
+        "file_size": 5640,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "2af1a7e3-b360-4e0c-86b2-f415c0ad1d07",
+        "bucket": "product-images",
+        "storage_path": "media/2af1a7e3-b360-4e0c-86b2-f415c0ad1d07/tobera-emergente-3-pulg-spray.webp",
+        "checksum": "28d0dadcd5b2844c73a624a7ed235badf94837d0c39743f20260e169e041af47",
+        "file_size": 4620,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "cd97904c-e3eb-4c67-8e9c-b6eb0fd317be",
+        "bucket": "product-images",
+        "storage_path": "media/cd97904c-e3eb-4c67-8e9c-b6eb0fd317be/tobera-emergente-4-pulg-spray.webp",
+        "checksum": "d303059dbeb3780e88780548a5a65daf1512de0a91d25474664ee67f209bdcb8",
+        "file_size": 4110,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "89ea98d5-99cc-40f7-b89d-e1a123c01c14",
+        "bucket": "product-images",
+        "storage_path": "media/89ea98d5-99cc-40f7-b89d-e1a123c01c14/valvula-antidrenaje-toberas-spray.webp",
+        "checksum": "6fe073e27940ae2f3f60837a73a5367e9758e8771c67e48a5de20c822d998e45",
+        "file_size": 10664,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "9a4dec36-aa23-4f4d-aeae-cf35ad19b02c",
+        "bucket": "product-images",
+        "storage_path": "media/9a4dec36-aa23-4f4d-aeae-cf35ad19b02c/valvula-antidrenaje-toberas-pro-s.webp",
+        "checksum": "999c424c3683e8c307c1e2eddec1a2b4d0ecdb425ff2f981e7207ca918642435",
+        "file_size": 12214,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "a7c66dee-b08b-440f-93ba-07e97b1dbcca",
+        "bucket": "product-images",
+        "storage_path": "media/a7c66dee-b08b-440f-93ba-07e97b1dbcca/valvula-antidrenaje-mini-pro.webp",
+        "checksum": "e9fb0bac944d05d71c20ed86983ddb6033e5dc00f9dfc4c799ac49f372676e17",
+        "file_size": 7508,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "56727c25-febf-4318-8df6-4a7ff2030487",
+        "bucket": "product-images",
+        "storage_path": "media/56727c25-febf-4318-8df6-4a7ff2030487/rs-pw-3520.webp",
+        "checksum": "ebd4f684a74d50012e01aba004f446bc74de735324256858a27783b3eb270267",
+        "file_size": 9590,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "e915a072-f6f2-4840-858c-ccddde66d0d6",
+        "bucket": "product-images",
+        "storage_path": "media/e915a072-f6f2-4840-858c-ccddde66d0d6/aspersor-1700-00c-greenplains.webp",
+        "checksum": "b528081483cb475a75a4832bfb7060476b992ebb290280d4a6419997aae1d84a",
+        "file_size": 12198,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "cca74c05-4b3e-4e01-b97a-3c0bb1205c15",
+        "bucket": "product-documents",
+        "storage_path": "media/cca74c05-4b3e-4e01-b97a-3c0bb1205c15/1700.00C-Ficha-tecnica.webp",
+        "checksum": "fea63fd59b8659386dcf6318708ca80cdbd855df80bb2950f78d0110668cb37f",
+        "file_size": 67716,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "c17b17cc-f17e-4c8d-8433-129eb70a9ce8",
+        "bucket": "product-images",
+        "storage_path": "media/c17b17cc-f17e-4c8d-8433-129eb70a9ce8/aspersor-1700-00e-greenplains.webp",
+        "checksum": "0de5261d29ec338ea49834aad9165991b1982fdeb38924dabed1a921da2a0233",
+        "file_size": 14576,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "d68014c1-587c-4878-a910-7b8e1a7e1351",
+        "bucket": "product-documents",
+        "storage_path": "media/d68014c1-587c-4878-a910-7b8e1a7e1351/1700.00E-Ficha-tecnica.webp",
+        "checksum": "12c9cd5a1516743af47cff2e2ccd5d8fd7bf986df03b3602bd9cd775ab31c8dd",
+        "file_size": 71178,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "049ca6e8-4cea-4007-89a5-330666a397a2",
+        "bucket": "product-images",
+        "storage_path": "media/049ca6e8-4cea-4007-89a5-330666a397a2/aspersor-1704-00d-greenplains.webp",
+        "checksum": "9358939281d25084734ca4efe977c6833aa8b86edc42d5da02989e733dd6a303",
+        "file_size": 21940,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "95260f8a-f9e9-443e-8971-1ea70dea287c",
+        "bucket": "product-documents",
+        "storage_path": "media/95260f8a-f9e9-443e-8971-1ea70dea287c/1704.00D-Ficha-tecnica.webp",
+        "checksum": "f0ae36858433b1f0215ccfd2aa76df703fa4e8089dd65d210b77b20c7b0ed4b2",
+        "file_size": 86838,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "c40fc8f4-7dcb-4795-9d58-30db573be469",
+        "bucket": "product-images",
+        "storage_path": "media/c40fc8f4-7dcb-4795-9d58-30db573be469/aspersor-1704-00e-greenplains.webp",
+        "checksum": "1febc0547f066c3a3d3874d1003fd5a3d994cc5f1af825e1ddfd0a7b70958303",
+        "file_size": 19360,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "e640a234-762e-4d42-867b-e1eb1b8bc801",
+        "bucket": "product-documents",
+        "storage_path": "media/e640a234-762e-4d42-867b-e1eb1b8bc801/1704.00E-Ficha-tecnica.webp",
+        "checksum": "f37e0df8a8dfe7cde3097f7e641d8859e1875eb62d4439f49157b9ec814b1403",
+        "file_size": 71558,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "7c5a460a-c376-4b8f-804c-4c6ebf749a2f",
+        "bucket": "product-images",
+        "storage_path": "media/7c5a460a-c376-4b8f-804c-4c6ebf749a2f/aspersor-1705-00f-greenplains.webp",
+        "checksum": "bca0a7856784e98d4de4a34178db814aad0bef7a9774de53e4e45ed8402628ef",
+        "file_size": 15262,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "8e573823-2130-4e54-a4cd-aeaf2de485b5",
+        "bucket": "product-documents",
+        "storage_path": "media/8e573823-2130-4e54-a4cd-aeaf2de485b5/1705.00F-Ficha-tecnica.webp",
+        "checksum": "6ce53056582ba91b92eef9b090265468625dc8e15fcf70158564f13c818ed0af",
+        "file_size": 76282,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "2c6ef77e-9526-427f-8140-39b203c719bc",
+        "bucket": "product-images",
+        "storage_path": "media/2c6ef77e-9526-427f-8140-39b203c719bc/aspersor-plastico-circular-boquillas-plasticas.webp",
+        "checksum": "af4c512d8970cc9c11392acb405dba4600a5564820ec08fccaf331765b1a2e57",
+        "file_size": 16414,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "0da61329-b08d-4bc8-bf74-13dca61c87de",
+        "bucket": "product-images",
+        "storage_path": "media/0da61329-b08d-4bc8-bf74-13dca61c87de/aspersor-plastico-greenplains-2.webp",
+        "checksum": "3ec22b6c932aaebb39bf12b00bb8abdbad733ac659d39f64e755aaad48f330ef",
+        "file_size": 15336,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "935c9e59-d666-4e40-a4a4-6918427ccbe1",
+        "bucket": "product-images",
+        "storage_path": "media/935c9e59-d666-4e40-a4a4-6918427ccbe1/aspersor-plastico-greenplains.webp",
+        "checksum": "6f49771383417bcbe0dd1b62bbef4b783b5b80728129307190ec8c9369eb8841",
+        "file_size": 15430,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "a80ce594-657f-4a08-8346-e23aa5c6a84e",
+        "bucket": "product-images",
+        "storage_path": "media/a80ce594-657f-4a08-8346-e23aa5c6a84e/boquillas-p-aspersores-de-impacto-greenplains.webp",
+        "checksum": "c802882a256932cc61cbd89ee15ba324174be852d78e5800a22de473d1f8d75a",
+        "file_size": 8122,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "83fa7114-f28a-4d08-a830-22f3f552979a",
+        "bucket": "product-images",
+        "storage_path": "media/83fa7114-f28a-4d08-a830-22f3f552979a/boquilla-fija-rosca-hembra.webp",
+        "checksum": "c59e2cb021ded5c6a08d7a4c1e310a6c3bab860fdc6cf4ab7266ae795d49bff4",
+        "file_size": 8442,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "2c230ed3-0dda-41ff-810b-f1d0ccdee9e4",
+        "bucket": "product-documents",
+        "storage_path": "media/2c230ed3-0dda-41ff-810b-f1d0ccdee9e4/610imgdesc1.webp",
+        "checksum": "006c38ea90ada17aaa4b965ff386551cca8881da753b61353633ee5220b69a63",
+        "file_size": 25564,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "773e3bb1-23dc-4358-9167-db548b5a0d6f",
+        "bucket": "product-images",
+        "storage_path": "media/773e3bb1-23dc-4358-9167-db548b5a0d6f/boquilla-fija-rosca-macho.webp",
+        "checksum": "ac2055c3786bd6d6377543c5122fe45869780081edac33f98032a70af86ad185",
+        "file_size": 11466,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "b57e6f89-7363-4b9c-8612-17e61d645fe9",
+        "bucket": "product-documents",
+        "storage_path": "media/b57e6f89-7363-4b9c-8612-17e61d645fe9/351imgdesc1.webp",
+        "checksum": "9dca516891190a790a8b9ea8fa2245abe48d6a2eda2657564d8e228384f30856",
+        "file_size": 41952,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "db9d56ee-758e-4af7-b793-da78cc7a09c4",
+        "bucket": "product-images",
+        "storage_path": "media/db9d56ee-758e-4af7-b793-da78cc7a09c4/boquillas-giratorias-regulables.webp",
+        "checksum": "39ea42e86282099a92908e97b2b34bd0f323285b0b288447a8c3fe53ddb0dce8",
+        "file_size": 16540,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "818f0f76-6e47-4660-bb23-08aec2213c0f",
+        "bucket": "product-documents",
+        "storage_path": "media/818f0f76-6e47-4660-bb23-08aec2213c0f/gira01.webp",
+        "checksum": "05e3f96298790362f2bd9bc39a1d11e0bc602eb35670db636c651a633266285c",
+        "file_size": 122404,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "ddcac9fe-f6b7-4447-aa09-dc4ace0b2e66",
+        "bucket": "product-images",
+        "storage_path": "media/ddcac9fe-f6b7-4447-aa09-dc4ace0b2e66/adaptador-p-boquillas-rosca-hembra.webp",
+        "checksum": "14e793b987ae75fe2367757755d5cbd2b458d8c217d651a2101a99999e9f58ae",
+        "file_size": 10190,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "3e02cb7a-bd31-41d2-85b2-2d08489b2e4d",
+        "bucket": "product-images",
+        "storage_path": "media/3e02cb7a-bd31-41d2-85b2-2d08489b2e4d/adaptador-p-boquillas-rosca-macho.webp",
+        "checksum": "51c54add5e3e09d59dc5b0927ea82d5d4b4bbc24ed2bf143a48da4c2ae2f2f11",
+        "file_size": 7810,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "dbee4444-6adc-4636-99b8-fc1c099a7b68",
+        "bucket": "product-images",
+        "storage_path": "media/dbee4444-6adc-4636-99b8-fc1c099a7b68/pro-plus.webp",
+        "checksum": "0fd5bf46340573bdec2249a6c8fdd4637e1602b3e541fbbc0b2201dbc3e19a89",
+        "file_size": 3926,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "fbfc9537-1bf6-4df2-94fc-61005573c3b3",
+        "bucket": "product-images",
+        "storage_path": "media/fbfc9537-1bf6-4df2-94fc-61005573c3b3/super-pro.webp",
+        "checksum": "d0905c295fe6fb2331e1367170f4f4182837447e2dee227de6ae8cf6816542f9",
+        "file_size": 3814,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "7827ed65-d1b8-4998-af7e-8d35ec57b741",
+        "bucket": "product-images",
+        "storage_path": "media/7827ed65-d1b8-4998-af7e-8d35ec57b741/pro-sport.webp",
+        "checksum": "2c5bd06e36c490d8f815e675e1be04f334eade565ae3cf2ce6d5b4147f43c7ff",
+        "file_size": 7626,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "8bbefc6b-ec0c-4f78-818b-15b714f538c5",
+        "bucket": "product-documents",
+        "storage_path": "media/8bbefc6b-ec0c-4f78-818b-15b714f538c5/50imgdesc1.webp",
+        "checksum": "925312ee47b564419079b85daf18242cc2f17bd3bdf66508d30d864413712d3f",
+        "file_size": 24174,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "749cae03-be33-44c3-bd05-530ac1f625d0",
+        "bucket": "product-images",
+        "storage_path": "media/749cae03-be33-44c3-bd05-530ac1f625d0/rps75.webp",
+        "checksum": "dc37960f00922655b3e10d6cd7d11ff310f9d6af2a737fc013b3aae713532ad0",
+        "file_size": 4108,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "cf4981f5-d740-4ea5-b7b1-361bcfc113b7",
+        "bucket": "product-images",
+        "storage_path": "media/cf4981f5-d740-4ea5-b7b1-361bcfc113b7/mini-pro.webp",
+        "checksum": "c37a6af58be04a9a757187bf53caf520900c8d73d1bd98977be143bf67b0bcde",
+        "file_size": 3930,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "fd478911-a847-490d-9061-aadecbd14a6e",
+        "bucket": "product-images",
+        "storage_path": "media/fd478911-a847-490d-9061-aadecbd14a6e/aspersor-emergente-plastico-de-impacto-sectorizable.webp",
+        "checksum": "0af73015256af3058a26218b68bf7599fde0daafb1493e5d1e3e44ffc288b0c9",
+        "file_size": 5160,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "144c200f-1bbf-431a-983f-1fb3bf8623c2",
+        "bucket": "product-images",
+        "storage_path": "media/144c200f-1bbf-431a-983f-1fb3bf8623c2/valvula-plastica-para-aspersor-3-4-y-1.webp",
+        "checksum": "4f1059ce82fdb5255163308718d413e21b8ba7c30176be732938c17553d14dff",
+        "file_size": 7836,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "531c21ca-b595-4346-a2e9-90e649751442",
+        "bucket": "product-images",
+        "storage_path": "media/531c21ca-b595-4346-a2e9-90e649751442/prolongador-o-bayoneta-3-4.webp",
+        "checksum": "6bcb02e87d5276fe349221f8b59c3669ff7970380915cd18d7a261ea7d2e9356",
+        "file_size": 8226,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "bc980ed1-b2d1-4efe-be9f-5fff20b18381",
+        "bucket": "product-images",
+        "storage_path": "media/bc980ed1-b2d1-4efe-be9f-5fff20b18381/valvula-con-rosca-macho.webp",
+        "checksum": "272052f4d98e6685c343af067a16a4fb461b0d6d16c050728d5ac2d266a906f6",
+        "file_size": 8266,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "619eb7b9-c1ac-4927-907a-1eea20e3675b",
+        "bucket": "product-images",
+        "storage_path": "media/619eb7b9-c1ac-4927-907a-1eea20e3675b/wi-30320.webp",
+        "checksum": "a780d52d8bccd38dab2c5f7bc8f292ba89e2e8dee11e0f166d811e95a938b7d8",
+        "file_size": 15990,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "d20ae7e5-89e5-486d-aadc-3c5450ac42de",
+        "bucket": "product-images",
+        "storage_path": "media/d20ae7e5-89e5-486d-aadc-3c5450ac42de/valvulas-plasticas-con-acople-rapido-rosca-macho.webp",
+        "checksum": "e46aaaa15dffe6ae9acdebc4312eaf16aa6cf989c91a9620d227dc43a08702c6",
+        "file_size": 7238,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "521398b1-2322-42cc-b106-5f39de0ea157",
+        "bucket": "product-images",
+        "storage_path": "media/521398b1-2322-42cc-b106-5f39de0ea157/prolongador-o-bayoneta-3-4-plastica-alfa.webp",
+        "checksum": "92af0543edc135646b79c9e675048f527d95392984461a2c8f6d0398fa509006",
+        "file_size": 11256,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "b189a0bc-1de1-4cf9-aa17-4be5be9c6ace",
+        "bucket": "product-images",
+        "storage_path": "media/b189a0bc-1de1-4cf9-aa17-4be5be9c6ace/tuberia-con-gotero-integrado-2.webp",
+        "checksum": "c229eb95a927985840810c5b51b38c24e3938806b28d5227d221cfc7adc75c16",
+        "file_size": 42512,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "8fc44164-30a4-4bd8-95c9-e05030f093a6",
+        "bucket": "product-documents",
+        "storage_path": "media/8fc44164-30a4-4bd8-95c9-e05030f093a6/442imgdesc1.webp",
+        "checksum": "dcfae0ac3576b758506901ca39915739927837636da2fb694bc0e29583533ca8",
+        "file_size": 21052,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "dd1269a8-d2e2-4b99-a3d3-e3a791719e0b",
+        "bucket": "product-images",
+        "storage_path": "media/dd1269a8-d2e2-4b99-a3d3-e3a791719e0b/microtubo-de-pvc-semiflexible.webp",
+        "checksum": "8bc4ec22440d949837b6a8dbf9731ee78ca51ecdfb906bc4069fee5f9ce89bc0",
+        "file_size": 32672,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "01dcf709-714e-4e4b-bcfa-2056692623d0",
+        "bucket": "product-images",
+        "storage_path": "media/01dcf709-714e-4e4b-bcfa-2056692623d0/microtubo-comando.webp",
+        "checksum": "3a4a9ba90d30aa862bbbbb7f19684e2acde48310e51bcb6812eaa15a944cf80a",
+        "file_size": 34802,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "e7c3a7cc-236f-4c89-9aa3-eda3e9ef2b84",
+        "bucket": "product-images",
+        "storage_path": "media/e7c3a7cc-236f-4c89-9aa3-eda3e9ef2b84/mangas-lay-flat.webp",
+        "checksum": "0aacd8a41a5d4ac65a1bfe05ca4dca26745fd5198c17ec8337d3223ab3beef8e",
+        "file_size": 11192,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "b57f26a9-853c-4dd7-8ca4-45371867c8de",
+        "bucket": "product-documents",
+        "storage_path": "media/b57f26a9-853c-4dd7-8ca4-45371867c8de/691imgdesc1.webp",
+        "checksum": "d91c4e85b17969b0984eac646ae5e07a1a73527da698d43ae0d33c7d091b4fe8",
+        "file_size": 17058,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "b3fce31d-84c4-4d96-b817-5971059e1d28",
+        "bucket": "product-images",
+        "storage_path": "media/b3fce31d-84c4-4d96-b817-5971059e1d28/cinta-de-riego-por-goteo-novodrip-apollo.webp",
+        "checksum": "48aa0785c78db8f14c75b2c6812427d58977d5586fc7275cc12a3092074700e0",
+        "file_size": 58388,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "4563a366-f20b-436c-87bd-89409c319924",
+        "bucket": "product-documents",
+        "storage_path": "media/4563a366-f20b-436c-87bd-89409c319924/apollo.webp",
+        "checksum": "fa5da96bb341b2c1f2b82bec6c4ac813af8b68176e509de3284dfe2de58fdd7a",
+        "file_size": 13022,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "1987c6f4-07af-4bb3-8fda-5edc88aeb56b",
+        "bucket": "product-images",
+        "storage_path": "media/1987c6f4-07af-4bb3-8fda-5edc88aeb56b/gotero-desarmable-tipo-boton-de-laberinto.webp",
+        "checksum": "b5f06c1995ad3d40f30e2318820dfb26d38b9cae2673f35833ee89db10ded6b4",
+        "file_size": 12064,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "faa24dcc-cc60-49f6-99db-9846f5eb27fa",
+        "bucket": "product-documents",
+        "storage_path": "media/faa24dcc-cc60-49f6-99db-9846f5eb27fa/392imgdesc1.webp",
+        "checksum": "443b68ca94492e1f3b7a103f99b35d9491b586f2a4d3183e354f665e5b72ee3b",
+        "file_size": 23240,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "d509c88a-7bf3-4a0c-841f-bbf5ac6df1bb",
+        "bucket": "product-images",
+        "storage_path": "media/d509c88a-7bf3-4a0c-841f-bbf5ac6df1bb/gotero-desarmable-autocompensado-tipo-boton.webp",
+        "checksum": "5740a627a2009409e22891a6b3d67089f6bc4545501a09d9d2cde8c69207871e",
+        "file_size": 7006,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "dc985c19-f05a-4b45-b9f5-3a60932752f0",
+        "bucket": "product-images",
+        "storage_path": "media/dc985c19-f05a-4b45-b9f5-3a60932752f0/gotero-desarmable-autocompensado-3109-0004.webp",
+        "checksum": "f042a655c49ced7b16252dd22c5129297dd62fa37d7a4d527441fe6d3f8759d9",
+        "file_size": 4892,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "43dd8926-c951-4e36-b1dc-a72e4dc30489",
+        "bucket": "product-images",
+        "storage_path": "media/43dd8926-c951-4e36-b1dc-a72e4dc30489/gotero-desarmable-autocompensado-3109-0008.webp",
+        "checksum": "a7885a1e78a945151486c08589fe2549625518bb0b923af85de81f7ed9b93352",
+        "file_size": 9792,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "f72d23eb-bb41-4d6d-9d0e-9a0f95d73192",
+        "bucket": "product-images",
+        "storage_path": "media/f72d23eb-bb41-4d6d-9d0e-9a0f95d73192/gotero-no-desarmable-autocompensado-autolimpiante.webp",
+        "checksum": "9f2c474bda4df494a80a68194dfe76d95bd831af23ab122aff547805db0e0e78",
+        "file_size": 5536,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "e88865be-608a-407c-9eac-2fb293024c30",
+        "bucket": "product-documents",
+        "storage_path": "media/e88865be-608a-407c-9eac-2fb293024c30/841imgdesc1.webp",
+        "checksum": "02b065d55f1cd27a4b5185d564305bbf398b150774a6c539903f71dd30b25bc8",
+        "file_size": 3906,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "f249f446-d8ff-47fe-a83a-d5dcbc6fc148",
+        "bucket": "product-images",
+        "storage_path": "media/f249f446-d8ff-47fe-a83a-d5dcbc6fc148/gotero-no-desarmable-autocompensado-antidrenante-autolimpiante.webp",
+        "checksum": "9b7f92e5b613980625a0b6a4723e70a18e92dbddc9f735244978ec06d2d25048",
+        "file_size": 4348,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "69273fcb-f76c-4766-88df-d6a6f78e8dd6",
+        "bucket": "product-documents",
+        "storage_path": "media/e88865be-608a-407c-9eac-2fb293024c30/841imgdesc1.webp",
+        "checksum": "02b065d55f1cd27a4b5185d564305bbf398b150774a6c539903f71dd30b25bc8",
+        "file_size": 3906,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "8827e03c-9e2a-4f4d-a7de-e07dc7dc5150",
+        "bucket": "product-images",
+        "storage_path": "media/8827e03c-9e2a-4f4d-a7de-e07dc7dc5150/gotero-estaca-de-laberinto-asd-002.webp",
+        "checksum": "447d690f4ab3fb23e5fce7d36a74371d3456e7f8ab80798e3c9bc6be07299598",
+        "file_size": 3212,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "3463ec3d-7853-485d-ad07-d4b0a1bfc206",
+        "bucket": "product-images",
+        "storage_path": "media/3463ec3d-7853-485d-ad07-d4b0a1bfc206/gotero-ajustable-plast-project.webp",
+        "checksum": "14b1af63136eccf767d1747d7e418d2fbd9ca5af444f88b8ed3328a36d0eb17f",
+        "file_size": 6922,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "8d0869a9-43ff-4260-9124-d5cb0ae210ae",
+        "bucket": "product-images",
+        "storage_path": "media/8d0869a9-43ff-4260-9124-d5cb0ae210ae/gotero-ajustable-alfa.webp",
+        "checksum": "8051576c2fdefb9371340dd783ccdb08790c15aff648506f16716bc6983df095",
+        "file_size": 8194,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "66674955-6c5d-454f-b011-85da5a14c595",
+        "bucket": "product-images",
+        "storage_path": "media/66674955-6c5d-454f-b011-85da5a14c595/tuberia-de-polietileno-pe.webp",
+        "checksum": "19a49ad1ace8e707fc5355cff521cdc82c36e67cbf3d34cd1481fa0cbe296864",
+        "file_size": 38806,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "47633218-33ad-4515-b931-7c5008000d71",
+        "bucket": "product-images",
+        "storage_path": "media/47633218-33ad-4515-b931-7c5008000d71/conector-de-tuberia-de-polietileno-de-16mm-chicote-a-cinta.webp",
+        "checksum": "db538a830dd9672c40e09f1965a48a529835cb5cbc547f23d3e4ccd9755069a3",
+        "file_size": 7040,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "80cf2d07-6544-4a78-b7eb-31dfaf953b33",
+        "bucket": "product-images",
+        "storage_path": "media/80cf2d07-6544-4a78-b7eb-31dfaf953b33/manguera-de-alta-presion-para-pulverizacion-con-conector-incluido.webp",
+        "checksum": "38c5ac31596b5fd7abf641f3579b47ee35ee221a799ded0d516d0878134f3cb7",
+        "file_size": 38864,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "b8615d1b-1bda-4f7f-83b8-8eb5bce99971",
+        "bucket": "product-documents",
+        "storage_path": "media/b8615d1b-1bda-4f7f-83b8-8eb5bce99971/mang_alta_trans.webp",
+        "checksum": "93d82dcaf58cd96855aff5921fc3ba703091a1caf4bc7ef34deb667c50be6295",
+        "file_size": 48550,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "03c11642-f478-4651-b18a-eb0f0040bdb0",
+        "bucket": "product-images",
+        "storage_path": "media/03c11642-f478-4651-b18a-eb0f0040bdb0/conector-para-goteros-anti-drenante-de-2-y-4-salidas.webp",
+        "checksum": "0c8ac7140c032bef516978795f28c13176a0ba4835669c3758986d8546bd9620",
+        "file_size": 4890,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "28f47163-8386-4124-b3ef-7b119e2bb5ee",
+        "bucket": "product-images",
+        "storage_path": "media/03c11642-f478-4651-b18a-eb0f0040bdb0/conector-para-goteros-anti-drenante-de-2-y-4-salidas.webp",
+        "checksum": "0c8ac7140c032bef516978795f28c13176a0ba4835669c3758986d8546bd9620",
+        "file_size": 4890,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "1d91d8f9-2db5-40e4-a51e-38e95e64aa8c",
+        "bucket": "product-images",
+        "storage_path": "media/1d91d8f9-2db5-40e4-a51e-38e95e64aa8c/conector-inicial-p-cinta-con-goma-pe.webp",
+        "checksum": "5cb12612bc584e288a044846396f793b8eac3ecb7aecd6e296a7345bf79555b8",
+        "file_size": 11478,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "c3fc1ba9-380c-47ff-8f36-d556bd885858",
+        "bucket": "product-images",
+        "storage_path": "media/c3fc1ba9-380c-47ff-8f36-d556bd885858/conector-inicial-p-cinta-con-goma-pe-pvc.webp",
+        "checksum": "5e0b59c1c750bf36748a65693be7666012632b91a870295da1b984772fa287c2",
+        "file_size": 8718,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "6cc5d6d5-ff7a-4083-b74d-5b2c3b322f29",
+        "bucket": "product-images",
+        "storage_path": "media/6cc5d6d5-ff7a-4083-b74d-5b2c3b322f29/conector-inicial-p-cinta-c-rosca-de-ajuste-s-goma.webp",
+        "checksum": "6b81c3431548d8704de50e2514777c76256459f5062efc20d9c36b8f4879aa3d",
+        "file_size": 6114,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "45d5b760-121b-4e63-a6e4-5d66d53313e7",
+        "bucket": "product-images",
+        "storage_path": "media/45d5b760-121b-4e63-a6e4-5d66d53313e7/conector-cinta-x-rm-1-2.webp",
+        "checksum": "44314f03a1e57053edc8a23bb64057046d7749de4ac562e7f309b5c2398fe6b9",
+        "file_size": 8780,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "c75b3529-1b7b-499e-9bc4-afef70359721",
+        "bucket": "product-images",
+        "storage_path": "media/c75b3529-1b7b-499e-9bc4-afef70359721/conector-cinta-x-cinta-22.webp",
+        "checksum": "e93659b34117b0707d08e7e62e76f13080940184fce09e79256649ea691cd808",
+        "file_size": 7292,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "f91aedeb-cc8a-4219-b474-1ab3d3145edf",
+        "bucket": "product-images",
+        "storage_path": "media/f91aedeb-cc8a-4219-b474-1ab3d3145edf/conector-inicial-lay-flat-cinta.webp",
+        "checksum": "d2dc45bd04dd7b390fb2443bff989179b43496070637b3f3f317ac253728835b",
+        "file_size": 9644,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "f98a37e8-5983-4ef9-97fb-3b37480ab4b1",
+        "bucket": "product-images",
+        "storage_path": "media/f98a37e8-5983-4ef9-97fb-3b37480ab4b1/conector-cinta-x-cinta-en-codo-90-grados.webp",
+        "checksum": "31653614b963a40bd1284cf1a25cd88925e6e469c225106127e39c414c7b117a",
+        "file_size": 7158,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "042c539b-4064-4f2a-8886-11b42e526096",
+        "bucket": "product-images",
+        "storage_path": "media/042c539b-4064-4f2a-8886-11b42e526096/conector-cinta-x-cinta-en-t.webp",
+        "checksum": "798ddea50f6b4f5a3e23761b9526aeced97768519e71e56b02e37a6903f36c6b",
+        "file_size": 6930,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "f4f4a189-6948-4325-9514-fb29fa8c4250",
+        "bucket": "product-images",
+        "storage_path": "media/f4f4a189-6948-4325-9514-fb29fa8c4250/conector-de-tuberia-de-polietileno-a-cinta.webp",
+        "checksum": "d5330fe040654b3cdb057f6dc4e71be7cc03f661a8cff2f56e2827bb6246fc5e",
+        "file_size": 7036,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "2322c2ed-074c-4539-993d-0f50133d4c9c",
+        "bucket": "product-images",
+        "storage_path": "media/2322c2ed-074c-4539-993d-0f50133d4c9c/conector-cinta-x-cinta.webp",
+        "checksum": "d0c5e6b84632f32bae188c18ec67a91fdcd3cd71aeb1d88ef335427e76ace494",
+        "file_size": 7284,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "82395b82-996c-41f7-a54e-170222fddcc3",
+        "bucket": "product-images",
+        "storage_path": "media/82395b82-996c-41f7-a54e-170222fddcc3/tapon-final-de-linea-para-cinta.webp",
+        "checksum": "99a9c16c0d94c01422541b862f981cafa83fba6a8e8133018f5c9460e4e1c029",
+        "file_size": 8530,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "6bad94d3-0158-4abe-b23e-88a74a17827a",
+        "bucket": "product-images",
+        "storage_path": "media/6bad94d3-0158-4abe-b23e-88a74a17827a/cinta-de-riego-por-goteo-aqua-traxx-toro.webp",
+        "checksum": "440d23bff27c500ab3072c661a8404dd7086c01baa2828a3c749df060f99b1a0",
+        "file_size": 25492,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "fdb6bb33-2e4d-4172-b939-1b1439e3933f",
+        "bucket": "product-documents",
+        "storage_path": "media/fdb6bb33-2e4d-4172-b939-1b1439e3933f/440imgdesc1.webp",
+        "checksum": "6e94c68cbdadaaeae08d79a8830eae5dc0746993aa618777c1bf4ad8e42bdcca",
+        "file_size": 85600,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "5c7bf405-b609-4d42-bbc1-99a99157d24d",
+        "bucket": "product-images",
+        "storage_path": "media/5c7bf405-b609-4d42-bbc1-99a99157d24d/cinta-de-riego-por-goteo-irriway.webp",
+        "checksum": "71f3548030b867b0295fc40e354c766ed991fa6f563da5d9ab267f1aa5d4c167",
+        "file_size": 35468,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "e0d5f9aa-43fa-45da-ad91-0d3c6beb1bd9",
+        "bucket": "product-documents",
+        "storage_path": "media/e0d5f9aa-43fa-45da-ad91-0d3c6beb1bd9/849imgdesc1.webp",
+        "checksum": "2243406d4fc238787cb4c04a594968c68c96c319016d745c89319d3bff837dd1",
+        "file_size": 59122,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "75292da6-0b07-470a-9efc-e9c08c34d3ff",
+        "bucket": "product-images",
+        "storage_path": "media/75292da6-0b07-470a-9efc-e9c08c34d3ff/tuberia-de-riego-por-goteo-novodrip-vimi.webp",
+        "checksum": "7ce54dbf242602c6f1d043f29aa9d514693bd1565b4e8b352d9fcfc8f96241c6",
+        "file_size": 59084,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "84415fc5-c47e-4c3a-9267-9a114b59ab29",
+        "bucket": "product-documents",
+        "storage_path": "media/84415fc5-c47e-4c3a-9267-9a114b59ab29/vimi.webp",
+        "checksum": "4601dd1d19bcea33e6ec67d5656000b46ccdc5f8508ba974073b8a18483955ec",
+        "file_size": 12608,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "13cccfa4-d1b3-40f2-bc88-9146be42f3b3",
+        "bucket": "product-images",
+        "storage_path": "media/13cccfa4-d1b3-40f2-bc88-9146be42f3b3/cinta-de-riego-olivos-rauli.webp",
+        "checksum": "4b2c586e0f9eb32462ef45317f0a5a63b5703353c4b054c28b604cda25d9ad40",
+        "file_size": 14708,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "5a08b773-8cf7-465f-a400-8883494296f8",
+        "bucket": "product-documents",
+        "storage_path": "media/5a08b773-8cf7-465f-a400-8883494296f8/Cuadro_olivos-1.webp",
+        "checksum": "694e3118931f7b2c73b5bbe128d669f96233816f630d41e8de97c27ebc590ccd",
+        "file_size": 31864,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "5867671a-5b25-4ca5-a695-68bc13f38115",
+        "bucket": "product-images",
+        "storage_path": "media/5867671a-5b25-4ca5-a695-68bc13f38115/manguera-de-succion.webp",
+        "checksum": "aa89517e33029f9af3d01662bf3d69209b9501a16b361ad75272f6f1377cf502",
+        "file_size": 31484,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "e986c8d1-ce4e-463c-8c78-8e49a20a5c8b",
+        "bucket": "product-documents",
+        "storage_path": "media/e986c8d1-ce4e-463c-8c78-8e49a20a5c8b/mang_succ.webp",
+        "checksum": "813168f954296ab4d09289967594771ae88606bb98bf4c1304c1509f6cfaea3d",
+        "file_size": 32874,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "8215e2c4-bf10-4c66-9a86-eb21fa65d47e",
+        "bucket": "product-images",
+        "storage_path": "media/8215e2c4-bf10-4c66-9a86-eb21fa65d47e/fogger-valvula-antigoteo-conector-a-tuberia-pe.webp",
+        "checksum": "152ba238c119162564676156b6eb049bc75954e8ec1ddd88b22e24034453d3d0",
+        "file_size": 5376,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "5929290d-8ba4-4018-8128-f4969b8774e9",
+        "bucket": "product-images",
+        "storage_path": "media/5929290d-8ba4-4018-8128-f4969b8774e9/fogger-valvula-antigoteo-conector-rm-1-2.webp",
+        "checksum": "84c62d69c7886e96c60b22b8b629d41cab0c424a2ea108f3c051acef1b63f9d8",
+        "file_size": 6200,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "ad2cffea-2692-4622-a478-9298e684fffd",
+        "bucket": "product-images",
+        "storage_path": "media/ad2cffea-2692-4622-a478-9298e684fffd/super-fogger-con-valvula-y-conector-a-pe-incorporado.webp",
+        "checksum": "cc256dc5c74e73f5d88337a2ca5890eff82cb8626957da50449ad0777aea1b00",
+        "file_size": 5178,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "c8234a6b-fd63-4d98-8cdf-c7ec023a9403",
+        "bucket": "product-images",
+        "storage_path": "media/c8234a6b-fd63-4d98-8cdf-c7ec023a9403/adaptador-rosca-macho-p-fogger.webp",
+        "checksum": "faa25a14176c810e76eeb3c41e8d149475ce39b455d58f2f931bcfcd7f046fb3",
+        "file_size": 6304,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "4fee46ca-27c7-494f-b632-a8858751dba8",
+        "bucket": "product-images",
+        "storage_path": "media/4fee46ca-27c7-494f-b632-a8858751dba8/fogger-o-humidificador-2.webp",
+        "checksum": "72ef2513fa4c2b78149b1d1268c421a488b9fde43b667d4e65b79a59614995a9",
+        "file_size": 5672,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "659d9e1f-ef49-4df6-9eaf-f5bf865a5a5d",
+        "bucket": "product-images",
+        "storage_path": "media/659d9e1f-ef49-4df6-9eaf-f5bf865a5a5d/miniaspersor-circular-vyr-3250.webp",
+        "checksum": "a931e79c3f96492ef5e73000a49228f7f2612964830b5b869387f1e6025d6d98",
+        "file_size": 4890,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "6a90b6f5-94f3-4008-87bf-6df345cc8efc",
+        "bucket": "product-documents",
+        "storage_path": "media/6a90b6f5-94f3-4008-87bf-6df345cc8efc/VYR-3250-Verde.webp",
+        "checksum": "41279727c0bb47c7c12668c56f7604684b9652e6b1242bc417ee5b02868cc84e",
+        "file_size": 7932,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "ccb2d3f4-0737-439f-8c49-2e1ec6b8603e",
+        "bucket": "product-images",
+        "storage_path": "media/ccb2d3f4-0737-439f-8c49-2e1ec6b8603e/vyr-3264-miniaspersor-circular.webp",
+        "checksum": "730033671fcc5ac5657fa7001b80d8d2d59c2d43164bf4309c79073288f7753e",
+        "file_size": 5072,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "ff7176d1-d4c2-4dbf-94f2-cffb22061dd2",
+        "bucket": "product-images",
+        "storage_path": "media/ccb2d3f4-0737-439f-8c49-2e1ec6b8603e/vyr-3264-miniaspersor-circular.webp",
+        "checksum": "730033671fcc5ac5657fa7001b80d8d2d59c2d43164bf4309c79073288f7753e",
+        "file_size": 5072,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "6f1423dd-18d7-48fb-ba7c-679b36c962a8",
+        "bucket": "product-images",
+        "storage_path": "media/ccb2d3f4-0737-439f-8c49-2e1ec6b8603e/vyr-3264-miniaspersor-circular.webp",
+        "checksum": "730033671fcc5ac5657fa7001b80d8d2d59c2d43164bf4309c79073288f7753e",
+        "file_size": 5072,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "37c89bc4-6f1c-4828-964f-dcb867005f39",
+        "bucket": "product-images",
+        "storage_path": "media/37c89bc4-6f1c-4828-964f-dcb867005f39/mist-o-nebulizador-320-sin-conector.webp",
+        "checksum": "d3645ce9203fce82a61509d5888a2b4a089973e0b22c9f80263b58639f2346a3",
+        "file_size": 9074,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "42703cbf-dbd4-4752-a21b-ca616827e463",
+        "bucket": "product-images",
+        "storage_path": "media/42703cbf-dbd4-4752-a21b-ca616827e463/microaspersor-de-uso-invertido-360-sin-conector.webp",
+        "checksum": "bc0a7a97f03dfe2e949a8c1a4c3ef6dbc691130e35a947dfb28a8ae47b8eaa45",
+        "file_size": 5292,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "a9317ff8-7b24-4332-8dd7-2a802053bb19",
+        "bucket": "product-images",
+        "storage_path": "media/a9317ff8-7b24-4332-8dd7-2a802053bb19/kit-estaca-microjet-360-tubin-conector-inicial.webp",
+        "checksum": "6a788bd6506fac41fe87ca43ff0159c64e0b826ce0b5982a59821e7cfc79cf0c",
+        "file_size": 9114,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "d6042f51-5b03-49d2-a01a-6f429b30b5c7",
+        "bucket": "product-images",
+        "storage_path": "media/d6042f51-5b03-49d2-a01a-6f429b30b5c7/microaspersor-giratorio-360-sin-conector-801.webp",
+        "checksum": "3fd0821bf2a81aeecb35d67a8d82d28d67b84e0e49a144bc3f06a475ae373858",
+        "file_size": 8094,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "46300008-7159-4768-887b-95d827991696",
+        "bucket": "product-images",
+        "storage_path": "media/46300008-7159-4768-887b-95d827991696/valvula-antigoteo-para-fogger.webp",
+        "checksum": "45e6fcaf46597458430af9a15987463921d460880da85041f58f1667e37f9892",
+        "file_size": 8166,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "55040aa6-aae1-4802-9ed2-49a7acd12359",
+        "bucket": "product-images",
+        "storage_path": "media/55040aa6-aae1-4802-9ed2-49a7acd12359/valvula-antigoteo-530x-para-fogger.webp",
+        "checksum": "4544275d30495be03e6584fc86836d936711b44062e9fff0ac20dbec19a115ae",
+        "file_size": 6104,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "10ecf7c2-b05d-45c4-8cb9-acbeb942df10",
+        "bucket": "product-images",
+        "storage_path": "media/55040aa6-aae1-4802-9ed2-49a7acd12359/valvula-antigoteo-530x-para-fogger.webp",
+        "checksum": "4544275d30495be03e6584fc86836d936711b44062e9fff0ac20dbec19a115ae",
+        "file_size": 6104,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "0ac3b114-ee1a-4086-a21a-71f96a9b1c5b",
+        "bucket": "product-documents",
+        "storage_path": "media/0ac3b114-ee1a-4086-a21a-71f96a9b1c5b/299imgdesc1.webp",
+        "checksum": "ef563c440aa47eb2a3f36fef05871b2b4c024ae37d971fe19ec4216845cb15c3",
+        "file_size": 6458,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "47870f37-5aa0-4d2f-8570-76aed0b93b71",
+        "bucket": "product-images",
+        "storage_path": "media/47870f37-5aa0-4d2f-8570-76aed0b93b71/estaca-plastica-para-microaspesores.webp",
+        "checksum": "db710a29fb626cfe2db81debcef58bd2bb194e815c28c81d3f1eb67e12e84bac",
+        "file_size": 1910,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "0cea57e7-a044-4136-ad32-81b9eb591ce4",
+        "bucket": "product-images",
+        "storage_path": "media/0cea57e7-a044-4136-ad32-81b9eb591ce4/estaca-plastica-c-microtubo.webp",
+        "checksum": "1d8b18ab630d67b7fd1e26178ab3a6c06d659ac17150ad4f9f9f845fce4cdde1",
+        "file_size": 7518,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "366d0d4e-7373-4620-a252-ec3d255edc85",
+        "bucket": "product-images",
+        "storage_path": "media/366d0d4e-7373-4620-a252-ec3d255edc85/plunger-roscado-p-componentes-macho.webp",
+        "checksum": "c5e273d013f4312ed76e09a278c28cee44305654e4b4d1d107308d9db6bd3800",
+        "file_size": 6500,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "b5972668-d640-4def-99a5-b8b5316b5309",
+        "bucket": "product-images",
+        "storage_path": "media/b5972668-d640-4def-99a5-b8b5316b5309/plunger-roscado-p-componentes-hembra.webp",
+        "checksum": "41e99779a82ead0434896486d6cb914e872ab5a1231af3e42c3bc8fb71573c85",
+        "file_size": 6742,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "8c095e14-8b8d-4657-86ff-74405fcc0217",
+        "bucket": "product-images",
+        "storage_path": "media/8c095e14-8b8d-4657-86ff-74405fcc0217/pd-0800.webp",
+        "checksum": "ce912b3ef543c8321668f48240c091e09696fb7bbfc95119b1f8c2217ab792d1",
+        "file_size": 6674,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "e70eb9f0-4ec9-4845-be46-51c83a5a6a10",
+        "bucket": "product-images",
+        "storage_path": "media/e70eb9f0-4ec9-4845-be46-51c83a5a6a10/pd-0900.webp",
+        "checksum": "10848db38147d8894f7e7407b1a079a417a23426f4be27dc932af666476274db",
+        "file_size": 8160,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "700ea643-2b68-42ee-ad04-750b32b48334",
+        "bucket": "product-images",
+        "storage_path": "media/700ea643-2b68-42ee-ad04-750b32b48334/pd-1000.webp",
+        "checksum": "40c891d25fd6389723ee39616a1228ad5c1cd0c25ef7918549f8cb4ed399f6f6",
+        "file_size": 8276,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "2f5e9d52-d319-40db-8d6c-1752c75fa03f",
+        "bucket": "product-images",
+        "storage_path": "media/2f5e9d52-d319-40db-8d6c-1752c75fa03f/pd-1403-pd-1503.webp",
+        "checksum": "6732798904bb59db5d0b89b2b0b7c904e0d2d2b8ec3630b86c40ed451f0ead64",
+        "file_size": 7540,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "4fc3203e-ef62-4268-911a-f50d4fc0b089",
+        "bucket": "product-images",
+        "storage_path": "media/2f5e9d52-d319-40db-8d6c-1752c75fa03f/pd-1403-pd-1503.webp",
+        "checksum": "6732798904bb59db5d0b89b2b0b7c904e0d2d2b8ec3630b86c40ed451f0ead64",
+        "file_size": 7540,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "dc267c32-31b5-42af-845a-a89fa95dd957",
+        "bucket": "product-images",
+        "storage_path": "media/dc267c32-31b5-42af-845a-a89fa95dd957/pd-0850.webp",
+        "checksum": "edd350dfc47a376d615f342972cf78ae815575cf2b31234e62c65bb7242ac088",
+        "file_size": 6828,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "b5744391-39fa-4876-bec7-83acb4ac9744",
+        "bucket": "product-images",
+        "storage_path": "media/b5744391-39fa-4876-bec7-83acb4ac9744/pd-1050.webp",
+        "checksum": "315da5f2c92e5fb141039113aa61d1f85c5244362b35a39919ba13b34bbc1415",
+        "file_size": 6512,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "2bd54658-5c7b-4a3c-82c9-86872c99064c",
+        "bucket": "product-images",
+        "storage_path": "media/2bd54658-5c7b-4a3c-82c9-86872c99064c/pd-0700.webp",
+        "checksum": "58b02c36ac84780e15aeb068dd35c1883fba04c8b7cf7f092db60c9a246000d0",
+        "file_size": 9246,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "86b838b6-6b5f-4f9d-881c-efe81e12b957",
+        "bucket": "product-images",
+        "storage_path": "media/86b838b6-6b5f-4f9d-881c-efe81e12b957/fogger-o-humidificador.webp",
+        "checksum": "6a10435aa5ed096bbbac391871654b7c51629b14a8809e4ed4d9dbb5258a2257",
+        "file_size": 5474,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "cc47bbd2-5883-4750-9d78-80c9aecd0d24",
+        "bucket": "product-images",
+        "storage_path": "media/cc47bbd2-5883-4750-9d78-80c9aecd0d24/puente-o-mariposa-para-fogger-a-tuberia-pe.webp",
+        "checksum": "2b93db10c85156d3967ebdf375b447b5cab257bc7ca5e54324b9a67273459a84",
+        "file_size": 6446,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "146cec58-0a70-4ae7-8fbd-0874a1400869",
+        "bucket": "product-images",
+        "storage_path": "media/146cec58-0a70-4ae7-8fbd-0874a1400869/puente-o-mariposa-para-fogger-rm-1-2.webp",
+        "checksum": "a3ab12c6d4015d62e8216b56ec62d0066dcdce64f018243ae31383219b4ced9d",
+        "file_size": 8270,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "2ecdfd81-5314-4bc0-b436-838dabdb680a",
+        "bucket": "product-images",
+        "storage_path": "media/2ecdfd81-5314-4bc0-b436-838dabdb680a/miniaspersor-rosca-hembra-1-2.webp",
+        "checksum": "3ae80adfdde1a3d47824cf9f0b72e5d33bf89ac3ae2be901271ce27e0aef28a1",
+        "file_size": 9128,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "c17acc54-71dc-4452-b974-fa9c78eec073",
+        "bucket": "product-images",
+        "storage_path": "media/c17acc54-71dc-4452-b974-fa9c78eec073/miniaspersor-circular-no-incluye-conector.webp",
+        "checksum": "50257f3e2ca80c2149cb7b4b2aca092d721269cf734ff65ee420b990cef22204",
+        "file_size": 8572,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "9fa23468-1395-4271-9711-cc9e5264f18f",
+        "bucket": "product-images",
+        "storage_path": "media/9fa23468-1395-4271-9711-cc9e5264f18f/miniaspersor-sectorizable-sin-conector.webp",
+        "checksum": "92940d532a916d9bfe74143dad7c430335de6694c4c2813786edfe650e43e4a4",
+        "file_size": 8354,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "39ba6633-1458-4d53-90d1-3ee35c3a388b",
+        "bucket": "product-images",
+        "storage_path": "media/39ba6633-1458-4d53-90d1-3ee35c3a388b/vs776-puente-para-fogger-4-salidas.webp",
+        "checksum": "6727578eee18f5ed4e2bf0d11de73dcbe57a1d8a5bec0689c3c9d98bc66c9392",
+        "file_size": 8808,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "d73b729e-038b-45d3-b496-d8902a0eb4bb",
+        "bucket": "product-images",
+        "storage_path": "media/d73b729e-038b-45d3-b496-d8902a0eb4bb/miniaspersor-plastico-a-bolilla-assr-8503.webp",
+        "checksum": "14ea7cc97e7b3edd36e326df47c905c00280cc9189897afaf9b21a935c9b401e",
+        "file_size": 5166,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "9493b573-9ddb-41d0-932d-c368ae78ae79",
+        "bucket": "product-documents",
+        "storage_path": "media/9493b573-9ddb-41d0-932d-c368ae78ae79/321imgdesc1.webp",
+        "checksum": "1a8e8896da3c43c83da608e9d18ad076324d64669403be6eecd745db63468e10",
+        "file_size": 18514,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "9ca0f63c-f595-4343-8ef0-f79262bce267",
+        "bucket": "product-images",
+        "storage_path": "media/9ca0f63c-f595-4343-8ef0-f79262bce267/sacabocados.webp",
+        "checksum": "3954e36cb592dde6893e26cb6e265a8a7d5aea12494fc79feae5c4cdca2fb6e4",
+        "file_size": 5142,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "f344612f-98c3-4c1d-9c22-c03ea0521033",
+        "bucket": "product-images",
+        "storage_path": "media/f344612f-98c3-4c1d-9c22-c03ea0521033/mecha-sacabocado.webp",
+        "checksum": "1c2ce2a8bfd62fc3d6f05e74eece548e0f47b47809122dbcf02a97779e949036",
+        "file_size": 7452,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "ae86594c-574b-4b5c-9090-d2aee45f8ed0",
+        "bucket": "product-images",
+        "storage_path": "media/ae86594c-574b-4b5c-9090-d2aee45f8ed0/copa-sacabocado.webp",
+        "checksum": "5f4f29ded108c4de73f70f2d34da2691b16a74e32f6d097792986f25be5a3acd",
+        "file_size": 8972,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "8fce7304-2342-49d1-a694-7da21efb3c55",
+        "bucket": "product-images",
+        "storage_path": "media/8fce7304-2342-49d1-a694-7da21efb3c55/plun-plunger.webp",
+        "checksum": "85200dcd67234fb6b7b36c1883d29675ac25b1f1b8f344ca38ed1860c112315b",
+        "file_size": 8146,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "e1c01ade-fad6-4789-87f8-c49a1fa06376",
+        "bucket": "product-images",
+        "storage_path": "media/e1c01ade-fad6-4789-87f8-c49a1fa06376/plunm-plunger.webp",
+        "checksum": "125e982cdeee87f85a7a6fafb54aeb91e0ba035ec6e6e3d6256c697071aa447f",
+        "file_size": 9762,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "98f68033-60a4-41e9-b5fa-cf5152238005",
+        "bucket": "product-images",
+        "storage_path": "media/98f68033-60a4-41e9-b5fa-cf5152238005/plun-1-4.webp",
+        "checksum": "34293c741bbe629b0256cb7a6fbc3758aea743636e189220d40e78ada8293a54",
+        "file_size": 9486,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "04168d28-f46d-48f2-91d1-956cef5823be",
+        "bucket": "product-images",
+        "storage_path": "media/04168d28-f46d-48f2-91d1-956cef5823be/tavlit-plun-3-8.webp",
+        "checksum": "3cc061b75694f08a400fa5426d662d1974b1c8520f75b396bf18706f7d06bc63",
+        "file_size": 10040,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "62481789-99ae-44e6-a2ba-67c8cc05e9d4",
+        "bucket": "product-images",
+        "storage_path": "media/62481789-99ae-44e6-a2ba-67c8cc05e9d4/996-020-01-01-996-030-01-01.webp",
+        "checksum": "3d30fe032237e797702afc5640d015a38cf73a431c6db8050a895245713de6d2",
+        "file_size": 8046,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "faa9f113-11ba-484d-aa91-2e90e80b23b2",
+        "bucket": "product-images",
+        "storage_path": "media/faa9f113-11ba-484d-aa91-2e90e80b23b2/filtro-tipo-t-de-anilla-plastica-greenplains.webp",
+        "checksum": "823cab476ce7507410a98c0307094d3a36ae98bfcb1654d805187c22b084045d",
+        "file_size": 7554,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "9f0e6c27-5c79-4c64-b28c-048515e221fc",
+        "bucket": "product-documents",
+        "storage_path": "media/9f0e6c27-5c79-4c64-b28c-048515e221fc/TipoT_anilla_cuadro.webp",
+        "checksum": "63babbf0169f82a550210b39c8e245f9f000db074ccfb009cab635b1ff4497d3",
+        "file_size": 9688,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "96d254b3-3840-47ce-a344-62d1e77afcac",
+        "bucket": "product-images",
+        "storage_path": "media/96d254b3-3840-47ce-a344-62d1e77afcac/filtro-tipo-y-de-anilla-plastica-greenplains.webp",
+        "checksum": "28db48d62f1f4753b758dfbab1fddf6335c1804280f6929f3890e2a0e66432bd",
+        "file_size": 11408,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "b573c22b-f7c6-4cad-8f77-9cd988ee45af",
+        "bucket": "product-documents",
+        "storage_path": "media/b573c22b-f7c6-4cad-8f77-9cd988ee45af/cuadro1.webp",
+        "checksum": "97f54d30a99fae1cdfa8b8f6b6c9eb839cacc4d14fe4c8d32083056de64969b3",
+        "file_size": 16158,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "7ac39f06-22e2-4cc7-9ebd-4e0dba18e39c",
+        "bucket": "product-images",
+        "storage_path": "media/7ac39f06-22e2-4cc7-9ebd-4e0dba18e39c/filtro-tipo-y-plastico-anilla-plastica.webp",
+        "checksum": "6740387a0fee99fb1045373b28546086979fd3cbd0915caab5164f8badd37da2",
+        "file_size": 23334,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "a8a177ab-85f3-47f9-a662-a4782aed4790",
+        "bucket": "product-documents",
+        "storage_path": "media/a8a177ab-85f3-47f9-a662-a4782aed4790/FilYmP.webp",
+        "checksum": "3817a7170a7e76748cba538dc6fd60d20e21e1c9f2641922f64c1642250a984e",
+        "file_size": 15894,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "9c281a85-4437-40f9-9f5b-6dac3c453c36",
+        "bucket": "product-images",
+        "storage_path": "media/9c281a85-4437-40f9-9f5b-6dac3c453c36/filtro-tipo-t-plastico-anilla-plastica.webp",
+        "checksum": "19ca34e0d6603b5ee75851f17736bdf2ebfea594f5d2cb029774ac204b1d6bbf",
+        "file_size": 6478,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "2c3e6b4f-70bb-47f4-8b22-cc4e4ed08754",
+        "bucket": "product-documents",
+        "storage_path": "media/2c3e6b4f-70bb-47f4-8b22-cc4e4ed08754/785imgdesc1.webp",
+        "checksum": "fae1467bbccb7293cd5bf690de9618a08badafa5d4a0b904e6a5b9dd000c735f",
+        "file_size": 5242,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "5b109e7b-1f0e-4111-b351-a85718e1f071",
+        "bucket": "product-images",
+        "storage_path": "media/5b109e7b-1f0e-4111-b351-a85718e1f071/filtro-automatico-en-t-anillas.webp",
+        "checksum": "dcb26cddf86116c63a20e47b73ce294db59d72bccdd0bb7a63901c067143caf3",
+        "file_size": 6040,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "4a55de73-3383-4c4b-98e7-d7540208bd96",
+        "bucket": "product-documents",
+        "storage_path": "media/4a55de73-3383-4c4b-98e7-d7540208bd96/787imgdesc1.webp",
+        "checksum": "13d110eea106a3d681f0f5641176d64635dbef2a49b2ce3d645ac8b5f192589b",
+        "file_size": 5252,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "32b5d606-ac82-4c4c-bf43-c6fb36590955",
+        "bucket": "product-images",
+        "storage_path": "media/32b5d606-ac82-4c4c-bf43-c6fb36590955/anilla.webp",
+        "checksum": "b7d3557081dd1e0625e3a1b12c9dec671971e3b2adccd867b61b52eab0f2b4ca",
+        "file_size": 5394,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "f4b01a3d-54ed-489d-b5c9-f33c44ff4d8a",
+        "bucket": "product-images",
+        "storage_path": "media/f4b01a3d-54ed-489d-b5c9-f33c44ff4d8a/20015-anilla.webp",
+        "checksum": "25a8fc709d47e2d22f255a51d09d2318ca6cf3e9456f6eca1717b356b340d5f4",
+        "file_size": 16992,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "1260be02-6c69-4d93-b45b-18bfc3d1a047",
+        "bucket": "product-images",
+        "storage_path": "media/1260be02-6c69-4d93-b45b-18bfc3d1a047/20025-anilla.webp",
+        "checksum": "ff2a468315819fb3eddc97d862a1d2b8f06299e71e48193fc670b6a5a5f5b757",
+        "file_size": 14608,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "a575cabf-7e05-404c-b435-b4e73a8559e3",
+        "bucket": "product-images",
+        "storage_path": "media/a575cabf-7e05-404c-b435-b4e73a8559e3/filtro-doble-cuerpo-corto-plastico-de-malla-y-anillas.webp",
+        "checksum": "79d83067a320657ed727606639c070fa8930e0fcb70b334c4994995c1216af28",
+        "file_size": 8546,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "ad482fec-e87a-4139-acaf-741c0873f062",
+        "bucket": "product-images",
+        "storage_path": "media/ad482fec-e87a-4139-acaf-741c0873f062/filtro-doble-cuerpo-largo-plastico-de-malla-y-anillas.webp",
+        "checksum": "4bde74c70ac054c6506d5260c061e0cb4ff95fb4473a38b2bc2155e13b84ac69",
+        "file_size": 9766,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "3f6ec5fb-1135-4fee-9c98-1b3fd0984fa8",
+        "bucket": "product-images",
+        "storage_path": "media/3f6ec5fb-1135-4fee-9c98-1b3fd0984fa8/filtro-automatico-doble-anillas.webp",
+        "checksum": "980e1e47c769eb1716159bb74b679a316a1f90f7021fe23582bb5456e9a3f1fc",
+        "file_size": 7174,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "16ec4c04-d299-44e1-8df5-75fa16cdf1fa",
+        "bucket": "product-documents",
+        "storage_path": "media/16ec4c04-d299-44e1-8df5-75fa16cdf1fa/788imgdesc1.webp",
+        "checksum": "0bed682a5ceac6de9297857eca36b00370a369eacefd5cc277f282f9dcfe1e57",
+        "file_size": 5572,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "878717f8-95a9-4089-9e81-b30e6a94b220",
+        "bucket": "product-images",
+        "storage_path": "media/878717f8-95a9-4089-9e81-b30e6a94b220/malla.webp",
+        "checksum": "a95749b2fa0323db4930eb49237257877cd0a5e4db8fab5e8f6a35beff33d79a",
+        "file_size": 7670,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "2a0251e5-1190-4c52-9418-ed6b2ff8aad6",
+        "bucket": "product-images",
+        "storage_path": "media/2a0251e5-1190-4c52-9418-ed6b2ff8aad6/rs-pd-9213.webp",
+        "checksum": "d07f896302be97cbad3697274ae527c9fb70957cd8e21b41589c9817ffe66ea8",
+        "file_size": 7008,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "618b8ed0-757f-4041-951b-1a67b069f9e4",
+        "bucket": "product-images",
+        "storage_path": "media/618b8ed0-757f-4041-951b-1a67b069f9e4/malla-100130-150130-200130.webp",
+        "checksum": "b8b8648bc1c0bf20b359bec7c6b3f2e1f95296858954dc4db28a9596d1d55bfe",
+        "file_size": 8304,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "862c1e59-cdf4-4eb3-a01d-a08894beb6a9",
+        "bucket": "product-images",
+        "storage_path": "media/862c1e59-cdf4-4eb3-a01d-a08894beb6a9/anillas-100130-200130.webp",
+        "checksum": "460717432fe842795928853b1641d5637bb7d0457f62ddc73b7fff7a40f0d228",
+        "file_size": 11606,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "3b1c0ee6-ebea-44ba-957c-0ad082dec3e4",
+        "bucket": "product-images",
+        "storage_path": "media/3b1c0ee6-ebea-44ba-957c-0ad082dec3e4/20550-malla-metalica-anilla-y-anilla-votrix.webp",
+        "checksum": "11f8318932bc60ccc8f274a5d0ecbe302e2ed638be1c3a8bc88f418b2bd6f34d",
+        "file_size": 9014,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "59f96cf7-2725-4e5a-a083-9a657c9ae9a4",
+        "bucket": "product-images",
+        "storage_path": "media/59f96cf7-2725-4e5a-a083-9a657c9ae9a4/filtro-alfa-tipo-t-2-anilla-plastica-con-hidrociclon.webp",
+        "checksum": "0d69b59fb0d330e8fb57d22b350cbe134ad3ef56f5affe6fb11dded36b91e817",
+        "file_size": 8226,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "bacecf3e-65ae-4568-b141-013e52ada9a8",
+        "bucket": "product-images",
+        "storage_path": "media/bacecf3e-65ae-4568-b141-013e52ada9a8/anillas-20545-20540-50.webp",
+        "checksum": "e0f3585296ff8d1836ded27c608623d3c891c591382845aae9393fa0cb2199e4",
+        "file_size": 14110,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "4e9f6cb7-4fec-4ebf-a1d6-ed1922ccd4ee",
+        "bucket": "product-images",
+        "storage_path": "media/4e9f6cb7-4fec-4ebf-a1d6-ed1922ccd4ee/anillas-20535-45-20540-50-vortix.webp",
+        "checksum": "99e4e27e7a6f25c9e5755b2c8cea459f273aca8002d6915c6acc554bf52dea80",
+        "file_size": 12698,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "f7243b29-37b0-4cbe-80e0-5f90e27bd6c0",
+        "bucket": "product-images",
+        "storage_path": "media/f7243b29-37b0-4cbe-80e0-5f90e27bd6c0/20540-malla-anilla-anilla-vortix.webp",
+        "checksum": "07e2f50a62b4877733a82b6fd20d0dd4ac4daf58879f083abbf43c2df60e2605",
+        "file_size": 5668,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "1f647f92-8b9d-42b3-8228-bc19d16c75ea",
+        "bucket": "product-images",
+        "storage_path": "media/1f647f92-8b9d-42b3-8228-bc19d16c75ea/malla-20540-50.webp",
+        "checksum": "b009a5c80e0c0e3bbcdf89a455b4e8990c0a889aa7eae466e8ac1b22587d74a1",
+        "file_size": 11594,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "ec2b9dda-3e25-43e9-aaf6-0903c4dc00fe",
+        "bucket": "product-images",
+        "storage_path": "media/ec2b9dda-3e25-43e9-aaf6-0903c4dc00fe/4608.webp",
+        "checksum": "36fced5ac79f835e990d97dfe9bac366ac608c51c776704b3490608d452c5456",
+        "file_size": 12060,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "fcf8288f-29c7-41ab-a903-82eee70f2304",
+        "bucket": "product-images",
+        "storage_path": "media/fcf8288f-29c7-41ab-a903-82eee70f2304/33820122-33820123-33830122.webp",
+        "checksum": "2d75fc75631647669577aa9eb4d22e81fd9ae3a66d3f8b964dc263ee71e96b1c",
+        "file_size": 11974,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "bc32afbf-17d5-4cad-bb4d-98a93df8599d",
+        "bucket": "product-documents",
+        "storage_path": "media/bc32afbf-17d5-4cad-bb4d-98a93df8599d/197imgdesc2.webp",
+        "checksum": "3a2c4d35165cda13dbd8dbca6f9c572910df0242a8348c5a131f7d8a7286ffd3",
+        "file_size": 6456,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "7948ad19-cb08-4d56-a3be-09e0df411631",
+        "bucket": "product-images",
+        "storage_path": "media/7948ad19-cb08-4d56-a3be-09e0df411631/33850123-33850124.webp",
+        "checksum": "262a1fe92375a86b57dce4ad3de1548369332401e12a4f82e7b604012d733a78",
+        "file_size": 13194,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "ba1d4ec3-4939-4d59-8332-97b86884463f",
+        "bucket": "product-images",
+        "storage_path": "media/ba1d4ec3-4939-4d59-8332-97b86884463f/34810120.webp",
+        "checksum": "7080035a7ca4dc4b0f5b4f6f6a5186c2f77487569b6a467fa7e52f75602a72e4",
+        "file_size": 17556,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "b59f5b31-62be-4c74-a19b-2bbc805b31fe",
+        "bucket": "product-images",
+        "storage_path": "media/b59f5b31-62be-4c74-a19b-2bbc805b31fe/34811060-34811120-34822242.webp",
+        "checksum": "3b748c26b53d2781897eef98685dfba05ef1075120e5c2d732f5c0a7388f960d",
+        "file_size": 29622,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "88fb0129-e54e-4027-9001-be093241b418",
+        "bucket": "product-images",
+        "storage_path": "media/88fb0129-e54e-4027-9001-be093241b418/filtros-simples-en-t-y-dobles-de-malla-plastica-con-efecto-hidrociclon.webp",
+        "checksum": "729ff28fa5e42523315df99c2a57afddf2dcdd635756e87ff2a5d1427e73f318",
+        "file_size": 7008,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "06954640-a13f-4cd6-ab73-42668ac3558a",
+        "bucket": "product-documents",
+        "storage_path": "media/06954640-a13f-4cd6-ab73-42668ac3558a/Erhas-simples-malla.webp",
+        "checksum": "29b94f72ab38f16a2357c01a88bf7bf25fc4d534c9ee5018c4af40cff7f197a9",
+        "file_size": 15162,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "855f35d6-b406-4c46-ac79-8348ed417415",
+        "bucket": "product-images",
+        "storage_path": "media/855f35d6-b406-4c46-ac79-8348ed417415/filtros-dobles-erhas-cortos-y-largos-en-t-malla-metalica-copia.webp",
+        "checksum": "1425cbd5c8347bf6c6a7ac591a3b380e1b08fd97ac53ef2487d283908c02a0c8",
+        "file_size": 2390,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "71d450d4-02c7-44f5-8c3a-a6c04bc039b4",
+        "bucket": "product-documents",
+        "storage_path": "media/71d450d4-02c7-44f5-8c3a-a6c04bc039b4/Erhas-dobles-malla.webp",
+        "checksum": "f0a92d917f09f7da9fc02a55d01b97e5d51488b945b7b89a4742cc3ca72bdc92",
+        "file_size": 7670,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "e091c484-3921-41b0-a29c-046b63d080a8",
+        "bucket": "product-images",
+        "storage_path": "media/88fb0129-e54e-4027-9001-be093241b418/filtros-simples-en-t-y-dobles-de-malla-plastica-con-efecto-hidrociclon.webp",
+        "checksum": "729ff28fa5e42523315df99c2a57afddf2dcdd635756e87ff2a5d1427e73f318",
+        "file_size": 7008,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "3d72207c-1aed-44a6-9403-1321a6e85266",
+        "bucket": "product-documents",
+        "storage_path": "media/3d72207c-1aed-44a6-9403-1321a6e85266/Erhas-simples-anilla.webp",
+        "checksum": "70b81328ad6100217b25aa596e056e72cb924cdb72ccbda2b91f240a70cab104",
+        "file_size": 15916,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "14a2e341-c6da-4003-b950-a3c689811adb",
+        "bucket": "product-images",
+        "storage_path": "media/855f35d6-b406-4c46-ac79-8348ed417415/filtros-dobles-erhas-cortos-y-largos-en-t-malla-metalica-copia.webp",
+        "checksum": "1425cbd5c8347bf6c6a7ac591a3b380e1b08fd97ac53ef2487d283908c02a0c8",
+        "file_size": 2390,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "cc0dd713-b5cf-413a-8e7f-d48892b2f9b2",
+        "bucket": "product-documents",
+        "storage_path": "media/cc0dd713-b5cf-413a-8e7f-d48892b2f9b2/833imgdesc2.webp",
+        "checksum": "4d831009ca37157e869f357bcb993978d135fb5e2c10d27c3e60c40ee55b0748",
+        "file_size": 16274,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "5db5ec13-8559-422a-b780-9981fc4ec1dd",
+        "bucket": "product-images",
+        "storage_path": "media/5db5ec13-8559-422a-b780-9981fc4ec1dd/997-030-00-01-997-040-00-01.webp",
+        "checksum": "9cf21c4f98e0c129aa65da9c7091ae98c4dcf650a28ee13b7035bce495fbf350",
+        "file_size": 8308,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "c67f3ba3-1876-487b-95ee-452556ae8952",
+        "bucket": "product-images",
+        "storage_path": "media/c67f3ba3-1876-487b-95ee-452556ae8952/hidrociclon-plastico-greenplains.webp",
+        "checksum": "d984b6e111a31666ae65d4e8ab7a12185ff68239a07065ddd3c86d651f7f2a64",
+        "file_size": 8872,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "634aa5ed-cdc3-4efb-848c-ab467c3b016b",
+        "bucket": "product-documents",
+        "storage_path": "media/634aa5ed-cdc3-4efb-848c-ab467c3b016b/hi2.webp",
+        "checksum": "4728ab09ceb96ae33743f8c3d4683e67955b0b91ee6c26b2804abe9b8cda1c05",
+        "file_size": 24596,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "f963de8a-1584-43e9-8f86-d4b1a672f67e",
+        "bucket": "product-images",
+        "storage_path": "media/f963de8a-1584-43e9-8f86-d4b1a672f67e/filtro-semiautomatico-green-plains.webp",
+        "checksum": "cbb73eeb9ba34434e9aea837f4eb682a6988cf209846953bd99d3d5af55ded42",
+        "file_size": 6606,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "f9005c65-a440-4392-b3d6-c83eac45becc",
+        "bucket": "product-documents",
+        "storage_path": "media/f9005c65-a440-4392-b3d6-c83eac45becc/graf.webp",
+        "checksum": "b45511cbb37d59fc1a2c0e3a601f6bfff1283294adf93afddfe97177b59c4417",
+        "file_size": 14618,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "077d0848-e263-46d9-9bd4-3f5888118ef5",
+        "bucket": "product-images",
+        "storage_path": "media/077d0848-e263-46d9-9bd4-3f5888118ef5/filtro-tipo-t-de-malla-metalica-greenplains.webp",
+        "checksum": "5d0810787ce81f326036e5872b887a4dbed58fe3f51d887629968d01bd005b46",
+        "file_size": 11596,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "daf9b0b9-a583-4475-966d-33e0a0cb8377",
+        "bucket": "product-documents",
+        "storage_path": "media/daf9b0b9-a583-4475-966d-33e0a0cb8377/TipoT_malla_cuadro.webp",
+        "checksum": "d4a45c56054eacdd2e3a592cde762eae29aaeb4eb587461e847eeda3545ab801",
+        "file_size": 9054,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "709254b4-02f8-480d-b98e-a28fc5841f85",
+        "bucket": "product-images",
+        "storage_path": "media/709254b4-02f8-480d-b98e-a28fc5841f85/filtro-tipo-y-de-malla-greenplains.webp",
+        "checksum": "28ba31bf17206f8e5c2b8a1f5c64f4e847390d5140c915bc4344727ae211160c",
+        "file_size": 14882,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "15823820-d190-49e4-a1ff-fe1876934738",
+        "bucket": "product-documents",
+        "storage_path": "media/15823820-d190-49e4-a1ff-fe1876934738/cuadro2.webp",
+        "checksum": "289bd4f05d5c3690f6466f9e8c2a29126433b7b7b95440082363987d3204c08c",
+        "file_size": 31514,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "eaaf747b-29f3-4956-8e1c-bd22332b23d6",
+        "bucket": "product-images",
+        "storage_path": "media/eaaf747b-29f3-4956-8e1c-bd22332b23d6/estacion-de-filtrado-automatico-greenplains.webp",
+        "checksum": "3dc5e2ba46120208d54d39ebcb40a06fa063c34be721ccabff6653d672324d10",
+        "file_size": 39214,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "9a62de99-466a-4ae2-ab63-28d7b81eb861",
+        "bucket": "product-documents",
+        "storage_path": "media/9a62de99-466a-4ae2-ab63-28d7b81eb861/Medidas-En-filtros-dobles-1.webp",
+        "checksum": "4920f00181b310dfc63c5e5334ba1bc12f530c39fcdfcdd0156dd2f0380aba07",
+        "file_size": 69758,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "3bf81490-422b-4c0c-9151-55c9f752c7a5",
+        "bucket": "product-images",
+        "storage_path": "media/3bf81490-422b-4c0c-9151-55c9f752c7a5/filtro-tipo-y-plastico-malla-metalica.webp",
+        "checksum": "9d0c0101f048adad0e67ee83a3953340dc9cfe776994fc024b8065e30e078d39",
+        "file_size": 11418,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "61a928a9-3695-4729-bf99-7dc08372cf1a",
+        "bucket": "product-documents",
+        "storage_path": "media/61a928a9-3695-4729-bf99-7dc08372cf1a/FilYmM.webp",
+        "checksum": "9d5b3204bf0cf52227f157ad3077269ce5f6819309780bcd083ad87825575641",
+        "file_size": 15944,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "eb973c59-3e9a-4e6b-9cd7-6f9d138bdc57",
+        "bucket": "product-images",
+        "storage_path": "media/eb973c59-3e9a-4e6b-9cd7-6f9d138bdc57/filtro-tipo-t-plastico-malla-metalica.webp",
+        "checksum": "9a72e7baf21e474deeb832a678eb07d9c62d122db8db89f2d3d274fce8920931",
+        "file_size": 6644,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "8f01d343-927b-4a0d-8695-cdf0981c202d",
+        "bucket": "product-images",
+        "storage_path": "media/f4b01a3d-54ed-489d-b5c9-f33c44ff4d8a/20015-anilla.webp",
+        "checksum": "25a8fc709d47e2d22f255a51d09d2318ca6cf3e9456f6eca1717b356b340d5f4",
+        "file_size": 16992,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "1111e9fc-e32d-4f3b-bad5-b1b6daf0c02a",
+        "bucket": "product-images",
+        "storage_path": "media/1260be02-6c69-4d93-b45b-18bfc3d1a047/20025-anilla.webp",
+        "checksum": "ff2a468315819fb3eddc97d862a1d2b8f06299e71e48193fc670b6a5a5f5b757",
+        "file_size": 14608,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "b57c7261-de72-4d67-a899-29b90281cf9e",
+        "bucket": "product-images",
+        "storage_path": "media/b57c7261-de72-4d67-a899-29b90281cf9e/hidrociclon-plastico-alfa.webp",
+        "checksum": "bcb0985964aff6f423a791f930a62273f04aedfaa649782539436bbc63012949",
+        "file_size": 7602,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "b822e7bc-8f35-4d12-b8f0-25ade9375ab3",
+        "bucket": "product-documents",
+        "storage_path": "media/b822e7bc-8f35-4d12-b8f0-25ade9375ab3/104imgdesc1.webp",
+        "checksum": "bca61197099c1e18b36b701be55f56c73e62d5523d3d14038076ae4927ebb57d",
+        "file_size": 35914,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "d7d400d2-dc46-4754-80f1-d8e2e2119284",
+        "bucket": "product-images",
+        "storage_path": "media/d7d400d2-dc46-4754-80f1-d8e2e2119284/roscada-2.webp",
+        "checksum": "9652e186120e94e333dd7776ba8e93a1c32eb533231ab6992723db35aa12c409",
+        "file_size": 10660,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "558c693d-895c-4d38-83bf-6f8cff2b07b2",
+        "bucket": "product-images",
+        "storage_path": "media/558c693d-895c-4d38-83bf-6f8cff2b07b2/para-encolar-2.webp",
+        "checksum": "785030d1a21099b93f89611748ee35f9712d57c57478adf887605d065c25bd27",
+        "file_size": 8214,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "18034efa-09f6-4cc7-a1a2-aafa0263a719",
+        "bucket": "product-images",
+        "storage_path": "media/18034efa-09f6-4cc7-a1a2-aafa0263a719/roscada.webp",
+        "checksum": "5c3985eed0481923dd75010e15a2f750bc558644643b7581af8563538e51eede",
+        "file_size": 11436,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "a6061eec-e8cb-4759-b3dd-4b1979da0fba",
+        "bucket": "product-images",
+        "storage_path": "media/a6061eec-e8cb-4759-b3dd-4b1979da0fba/para-encolar.webp",
+        "checksum": "cb23772f729d7694d1960941da451129bfe422faeb1bc06bf4db99fcb64633d8",
+        "file_size": 10078,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "cc94ae25-ffa8-4f0a-bb46-b542cdc8e62e",
+        "bucket": "product-images",
+        "storage_path": "media/cc94ae25-ffa8-4f0a-bb46-b542cdc8e62e/valvula-esclusa-metalica-presion-nominal-16-bar.webp",
+        "checksum": "9d1b81dd924bca36efb58dfb9dfd50ae776f2cb46c409a206d04efd76e30d86c",
+        "file_size": 5706,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "15926e4e-898d-4931-9521-af16c0032f79",
+        "bucket": "product-images",
+        "storage_path": "media/15926e4e-898d-4931-9521-af16c0032f79/valvula-esferica-metalica-mariposa-presion-nominal-16-bar.webp",
+        "checksum": "3f63a4fba548b4ad906e25e1bff0e18aea79376750ed1b4c117df39a6d492a68",
+        "file_size": 7400,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "70d7353f-88b3-4bbb-8b3f-3c7343edd79e",
+        "bucket": "product-images",
+        "storage_path": "media/70d7353f-88b3-4bbb-8b3f-3c7343edd79e/valvula-mariposa-plastica-bridada.webp",
+        "checksum": "b847df0634d939af38b381f63123be808b5e12691c540b4fab41688ede35bff3",
+        "file_size": 8184,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "fa0d4083-3203-43d5-8fe0-29211ebd4a70",
+        "bucket": "product-documents",
+        "storage_path": "media/fa0d4083-3203-43d5-8fe0-29211ebd4a70/603imgdesc1.webp",
+        "checksum": "31eb83fa9bdf0960bf4643709395148da7c52a2716a28b329a7696440ceba2ba",
+        "file_size": 7464,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "dc176de8-278e-4ee3-8298-529bf5bc4e7b",
+        "bucket": "product-images",
+        "storage_path": "media/dc176de8-278e-4ee3-8298-529bf5bc4e7b/valvula-mariposa-tipo-wafer.webp",
+        "checksum": "504006540fe2e7c3f5fe0305ee58089be3bd4df263c59842d63c6098772edfe3",
+        "file_size": 9522,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "d090ccc9-001d-4fa6-a7d1-3ac47c9a0317",
+        "bucket": "product-documents",
+        "storage_path": "media/d090ccc9-001d-4fa6-a7d1-3ac47c9a0317/601imgdesc1.webp",
+        "checksum": "1eade2c216786f45f9c3f829e01f30f9fc6927c53c85ecd7652fdcf6bc7da7b4",
+        "file_size": 32132,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "bda21046-aed7-4a42-a414-4b6754342abf",
+        "bucket": "product-images",
+        "storage_path": "media/bda21046-aed7-4a42-a414-4b6754342abf/reductor-rosca-macho.webp",
+        "checksum": "2281cf3e6457c14591cfee8e207d89d100ad1eb2b86d37af7d4dbfb0bf8eb0b1",
+        "file_size": 4640,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "5aedbbe7-7adf-4510-a6f0-b84951682b06",
+        "bucket": "product-images",
+        "storage_path": "media/5aedbbe7-7adf-4510-a6f0-b84951682b06/reductor-rosca-hembra.webp",
+        "checksum": "65e31286155abeb1d482318d0f0d74141be2d17fd09da3d46c2e4e8efc5bd2ab",
+        "file_size": 3984,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "b9eed14f-ea7a-41b7-ac7f-d42451e921d3",
+        "bucket": "product-images",
+        "storage_path": "media/b9eed14f-ea7a-41b7-ac7f-d42451e921d3/valvula-de-retrolavado-platica.webp",
+        "checksum": "30119789b157b1cb5889b13e60b5dd82e498b173aa5a802ea181b41bd7325770",
+        "file_size": 4978,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "77a8821e-71d5-46e3-a8a3-f2a9a5c6929f",
+        "bucket": "product-documents",
+        "storage_path": "media/77a8821e-71d5-46e3-a8a3-f2a9a5c6929f/789imgdesc1.webp",
+        "checksum": "607f5c85665beec8a44ca7e265928ba3ee43e3848b058fbbc6dd3a6f47097503",
+        "file_size": 15556,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "4dcde72b-2988-4c9f-85d8-16be04ce3389",
+        "bucket": "product-images",
+        "storage_path": "media/4dcde72b-2988-4c9f-85d8-16be04ce3389/solenoide-de-3-vias-na-latch-9-12-v-dc.webp",
+        "checksum": "063488cb324bc0ac75298a0b8d4727dff5384239d1dcc9de141cd7f0963b6b79",
+        "file_size": 8466,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "4121a2cd-c08d-4d52-9fe1-b07a645869b9",
+        "bucket": "product-images",
+        "storage_path": "media/4121a2cd-c08d-4d52-9fe1-b07a645869b9/solenoide-de-repuesto.webp",
+        "checksum": "3c7fdacc464cbfa8aa516d3de7e6bca6392b3f0ebd4d07352aff7b140c9a7556",
+        "file_size": 8036,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "0d3b0fa8-f096-463c-9409-1fc5f4882134",
+        "bucket": "product-images",
+        "storage_path": "media/0d3b0fa8-f096-463c-9409-1fc5f4882134/valvula-solenoide-rpe-3ra-serie.webp",
+        "checksum": "75600e561d00f0782216b88e16525f5d7ce75fe158bdc76cf25e65e7b783891f",
+        "file_size": 9586,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "2b687af2-83be-4653-badd-a287ee8da127",
+        "bucket": "product-documents",
+        "storage_path": "media/2b687af2-83be-4653-badd-a287ee8da127/107imgdesc1.webp",
+        "checksum": "f5ff50b1b63dd1aef3605f5dcf306132f14da270dfe6c9ed3563ee1c5c3e9381",
+        "file_size": 38168,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "9efda66e-776c-455d-abee-78987ca58578",
+        "bucket": "product-images",
+        "storage_path": "media/9efda66e-776c-455d-abee-78987ca58578/valvula-solenoide-rpe-2da-serie.webp",
+        "checksum": "ea660cc6fbb0c77e06ccf5593a2393346d7e3fb93871a794141dc68ae5cabe61",
+        "file_size": 8012,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "afdf4954-ec00-4c32-9de7-0135fd671462",
+        "bucket": "product-documents",
+        "storage_path": "media/afdf4954-ec00-4c32-9de7-0135fd671462/108imgdesc1.webp",
+        "checksum": "7ddf2e1057c8fca41c75e9b097a4a519ef1b1ab494426080cf55ca7441206141",
+        "file_size": 25976,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "96236048-438a-4d4b-8c06-06f60aab50da",
+        "bucket": "product-images",
+        "storage_path": "media/96236048-438a-4d4b-8c06-06f60aab50da/valvula-solenoide-para-baja-presion.webp",
+        "checksum": "a53eb138601facc5d171ae74e9483988ce7e55a12a927cc70570fc778ce9700e",
+        "file_size": 17094,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "cecf29d1-f74a-4518-8222-dadf9c4190b5",
+        "bucket": "product-images",
+        "storage_path": "media/cecf29d1-f74a-4518-8222-dadf9c4190b5/valvula-solenoide-con-programador.webp",
+        "checksum": "4ddb0b34aabd819828d4706c44aaf8d4cd9bc4f8cde47cb7b63ca53c0913c92e",
+        "file_size": 17790,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "aecd60bb-7eb5-46be-88ed-f08eb5212d15",
+        "bucket": "product-images",
+        "storage_path": "media/aecd60bb-7eb5-46be-88ed-f08eb5212d15/solenoide.webp",
+        "checksum": "dfc9a68aea36cb4e30b7d0d6eb73d001fc51a49bbea4577b45c5a97842cc6e35",
+        "file_size": 5340,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "0fe0a174-8132-4320-b7a9-6986492d274c",
+        "bucket": "product-images",
+        "storage_path": "media/0fe0a174-8132-4320-b7a9-6986492d274c/regulador-de-presion.webp",
+        "checksum": "6e5dee1a95b7d4c9c5a9037984c3342f529b01f49a2df41d79a2775f76b9a309",
+        "file_size": 7964,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "7af1a5ba-caf0-4e28-9a4b-bd8ce6772c89",
+        "bucket": "product-images",
+        "storage_path": "media/7af1a5ba-caf0-4e28-9a4b-bd8ce6772c89/valvula-solenoide-k-rain-pro-100.webp",
+        "checksum": "87445f4242e169f26bd9dd80bd4717606c9bf5c0d337e3ae0dea80a94e3fd52b",
+        "file_size": 526838,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "9f101914-49eb-4135-8e8a-ec5a86298a99",
+        "bucket": "product-documents",
+        "storage_path": "media/9f101914-49eb-4135-8e8a-ec5a86298a99/127imgdesc1.webp",
+        "checksum": "b30c10448cc9d4d36ae06445c04db87e3315d5884c1d18eb640d3d45279dbefe",
+        "file_size": 9410,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "3e762244-c1a2-47a7-8413-253e6cdb0b5e",
+        "bucket": "product-images",
+        "storage_path": "media/7af1a5ba-caf0-4e28-9a4b-bd8ce6772c89/valvula-solenoide-k-rain-pro-100.webp",
+        "checksum": "87445f4242e169f26bd9dd80bd4717606c9bf5c0d337e3ae0dea80a94e3fd52b",
+        "file_size": 526838,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "dd352729-2519-43ab-a0b6-833ee8462c6b",
+        "bucket": "product-images",
+        "storage_path": "media/dd352729-2519-43ab-a0b6-833ee8462c6b/solenoide-de-3-vias-c-base-plastica-24vac-no-nc.webp",
+        "checksum": "456f29cb9fd871d9a8976b6a10ec72973c5d274166e8379c1817307a89d3e652",
+        "file_size": 4296,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "8f8e22cf-cfad-46e8-8c25-0a3cd7556add",
+        "bucket": "product-images",
+        "storage_path": "media/8f8e22cf-cfad-46e8-8c25-0a3cd7556add/repuesto-membrana.webp",
+        "checksum": "a6d4e242bd3015adde320d3f867538d3fedb79edc25c7ade35f03b948670ae59",
+        "file_size": 7062,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "219cde02-8675-4bf6-8662-2c6542ee40f7",
+        "bucket": "product-images",
+        "storage_path": "media/219cde02-8675-4bf6-8662-2c6542ee40f7/membrana-para-valvula-tecnidro.webp",
+        "checksum": "dfd0ad222340388066df0fc65a18210748668c904be7a1bbe59a3320519e0074",
+        "file_size": 7866,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "86169631-e268-44ac-ba3e-c06102521010",
+        "bucket": "product-images",
+        "storage_path": "media/86169631-e268-44ac-ba3e-c06102521010/valvulas-de-retencion-verticales-roscadas.webp",
+        "checksum": "bf217014764072f7ada397d74a34bf002262258b0be0edb596d46c55bb4a0cac",
+        "file_size": 5074,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "f26cb15d-c3fc-4052-9c53-a62306e3e670",
+        "bucket": "product-documents",
+        "storage_path": "media/f26cb15d-c3fc-4052-9c53-a62306e3e670/795imgdesc1.webp",
+        "checksum": "f9529a77e7bec08a79bdb70052d024d69757638bb34d5cdc2d334bd2af28b490",
+        "file_size": 11468,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "a03fae87-fd9f-4cc4-953c-7b9f5752d3f8",
+        "bucket": "product-images",
+        "storage_path": "media/a03fae87-fd9f-4cc4-953c-7b9f5752d3f8/filtro-para-valvulas-de-retencion-metalicas-verticales.webp",
+        "checksum": "3b3c2f43a458c9fe97df77dbd682e2d9be67ae1714ac517082a400090275f135",
+        "file_size": 12300,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "32246b69-f712-4f63-a91b-ed10f386d34e",
+        "bucket": "product-documents",
+        "storage_path": "media/32246b69-f712-4f63-a91b-ed10f386d34e/797imgdesc1.webp",
+        "checksum": "f1e0025f8a4c0015d0f8a5b6c5f76b8b178881fd434f0338f6203f98198fb6d8",
+        "file_size": 7922,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "99304155-ccea-4c58-9d35-5c90f1a98372",
+        "bucket": "product-images",
+        "storage_path": "media/99304155-ccea-4c58-9d35-5c90f1a98372/de-aire-doble-efecto.webp",
+        "checksum": "7ba36b6cbd07257c02ccdb5a6bd886a6c5ff29fa6fbec9aa1fc0aba85b1ed206",
+        "file_size": 6108,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "debd0eb8-ed1d-494e-b531-168088dd0308",
+        "bucket": "product-images",
+        "storage_path": "media/debd0eb8-ed1d-494e-b531-168088dd0308/valvula-de-aire-vacio-doble-efecto-rosca-macho.webp",
+        "checksum": "795aba4946bce6720a33c199ad749b315166df978b9c42c11232661eba0a622b",
+        "file_size": 6156,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "e4bb9de7-ff25-400e-a928-ed13895856c1",
+        "bucket": "product-images",
+        "storage_path": "media/e4bb9de7-ff25-400e-a928-ed13895856c1/valvula-de-aire-vacio-doble-efecto-rm-3-4-o-1.webp",
+        "checksum": "4156f4df5950b9978a435bb4fb75dc7b8c0f619e3b59bedb1684f548842cde6d",
+        "file_size": 7294,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "4c7f945a-e53e-4e6c-b24c-df2a1d2e9e03",
+        "bucket": "product-images",
+        "storage_path": "media/4c7f945a-e53e-4e6c-b24c-df2a1d2e9e03/valvula-aire-vacio-triple-efecto-rm-1-y-2.webp",
+        "checksum": "779a0e73491baa60de7ae0108af0e7c325a41ba86681f0150666722b92cc8473",
+        "file_size": 8354,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "296e5bcb-4951-4292-9027-00b394490351",
+        "bucket": "product-images",
+        "storage_path": "media/296e5bcb-4951-4292-9027-00b394490351/de-aire-triple-efecto-2.webp",
+        "checksum": "566b4454e660362cd05fa056051b5eb66703ef65af0f12c2b854fcee18fca563",
+        "file_size": 4344,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "c7e6d464-59ca-48c9-8977-fa02e8c92348",
+        "bucket": "product-images",
+        "storage_path": "media/c7e6d464-59ca-48c9-8977-fa02e8c92348/unirain-arv-1.webp",
+        "checksum": "79155c4a2d65452c7e2e2954e397b79e7a55c29a3e855a7aa0a461d044b6b449",
+        "file_size": 5012,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "93dfcba1-157b-4134-8034-3f284c323878",
+        "bucket": "product-images",
+        "storage_path": "media/93dfcba1-157b-4134-8034-3f284c323878/unirain-arv-2.webp",
+        "checksum": "c797fb1bfda87a50fcdd7eb32a885a8e7f183025ae420d2157b0961dcc9df4ef",
+        "file_size": 4956,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "b8c00bc3-f1ca-4ce2-b22c-e0a526d95738",
+        "bucket": "product-images",
+        "storage_path": "media/b8c00bc3-f1ca-4ce2-b22c-e0a526d95738/unirain-arv-1-automatica.webp",
+        "checksum": "d19086bcd9f798171a484ecd17ab4bce063f0bf4766ea460a072c896e9d8ae5c",
+        "file_size": 5940,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "dbbdbb40-3784-4a29-9392-a2ba4a75acf6",
+        "bucket": "product-images",
+        "storage_path": "media/dbbdbb40-3784-4a29-9392-a2ba4a75acf6/unirain-arv-2-cinetica-y-automatica.webp",
+        "checksum": "055c97f21b97b43fd5afdee4f2e8192e7122bd54f08bd293190f05a4a8c48028",
+        "file_size": 6510,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "c9ec94b7-e9aa-467c-8ec3-20667c8f5bf9",
+        "bucket": "product-images",
+        "storage_path": "media/c9ec94b7-e9aa-467c-8ec3-20667c8f5bf9/valvula-cilindrica-compacta-roscada.webp",
+        "checksum": "a6689ff3418f4ebd661fa597b020ef05067b94692397e21e76316502ff292c1d",
+        "file_size": 11990,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "907f5253-e325-441c-a6a6-b0aec996d405",
+        "bucket": "product-images",
+        "storage_path": "media/907f5253-e325-441c-a6a6-b0aec996d405/valvula-cilindrica-compacta-espiga-x-espiga.webp",
+        "checksum": "67cf380c23cb28346525859ff1b4b74c0278069f2148e20512cc2a83c2c892f2",
+        "file_size": 10384,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "277eaf58-a97c-4994-b642-ff2fd4c219dd",
+        "bucket": "product-images",
+        "storage_path": "media/277eaf58-a97c-4994-b642-ff2fd4c219dd/valvula-cilindrica-compacta-16-mm-espiga-x-cinta.webp",
+        "checksum": "9b6778a4c3d8c213c34273aa3d362343419c0058003acd6f1283a0b9df337d9e",
+        "file_size": 11962,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "12156f24-9008-4dd3-8d4b-e5e1e2d38d3d",
+        "bucket": "product-images",
+        "storage_path": "media/12156f24-9008-4dd3-8d4b-e5e1e2d38d3d/valvula-cilindrica-compacta-inicial-c-goma-x-espiga.webp",
+        "checksum": "28c5a95a01161a58c8dadbbae86b9841ad99ddaf79b946952c34f2f89b8422cf",
+        "file_size": 8570,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "54c7f2dd-0eb6-475a-8b7f-4b7fcaba534c",
+        "bucket": "product-images",
+        "storage_path": "media/54c7f2dd-0eb6-475a-8b7f-4b7fcaba534c/valvula-cilindrica-compacta-inicial-4.webp",
+        "checksum": "15e27b235c668075852c8310a7a74b4f468d8c78fe9e61bba53392d993f0e6c0",
+        "file_size": 13892,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "493aa332-21f6-4ec4-a1f7-c28ac5eda96c",
+        "bucket": "product-images",
+        "storage_path": "media/493aa332-21f6-4ec4-a1f7-c28ac5eda96c/valvula-cilindrica-compacta-inicial-c-goma-x-cinta.webp",
+        "checksum": "67b223856e069802b461bbd42a0e8efcc2ad0fc6bc99f55b69bfe1e76a76d0b7",
+        "file_size": 9422,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "9359218d-24ba-4351-8e92-d519586dad01",
+        "bucket": "product-images",
+        "storage_path": "media/9359218d-24ba-4351-8e92-d519586dad01/valvula-de-drenaje.webp",
+        "checksum": "2e761a1d40f033eb80da64fe23232ebab4b04d8d4b5211363f7cd98780518a3c",
+        "file_size": 9836,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "a9dfc2ee-4d9b-4b69-a9d7-32a24a70f7b9",
+        "bucket": "product-images",
+        "storage_path": "media/a9dfc2ee-4d9b-4b69-a9d7-32a24a70f7b9/valvula-de-bronce-de-3-vias.webp",
+        "checksum": "1b629580c630a776d2026bd89bc853e27129db8f404ff86471741f184fc2e081",
+        "file_size": 9246,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "2e0f2d88-1c92-493b-9a7f-1a7d78e85eec",
+        "bucket": "product-images",
+        "storage_path": "media/2e0f2d88-1c92-493b-9a7f-1a7d78e85eec/piloto-reductor-sostenedor-de-presion-dorot.webp",
+        "checksum": "9081971d5d4f4fdde74ab5761d1f2a4ecd14b616e738e8ee24a2062d975ec045",
+        "file_size": 8820,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "e6fab605-12aa-44fc-bc24-a572aadcb327",
+        "bucket": "product-images",
+        "storage_path": "media/e6fab605-12aa-44fc-bc24-a572aadcb327/piloto-reductor-6-bar.webp",
+        "checksum": "5c8c54dcf69fc2b096d6dd949d3751d6f5527347d80089a51d0e4ce6fa204ad7",
+        "file_size": 8476,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "3308b003-cfa3-4438-9755-be242707b04e",
+        "bucket": "product-images",
+        "storage_path": "media/3308b003-cfa3-4438-9755-be242707b04e/piloto-reductor-05-4-bar.webp",
+        "checksum": "f4abc3b56235579b6d61c602123405722ac2bdffc94f57ba14a2cbdca640e354",
+        "file_size": 7858,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "74f615a8-4b88-45dc-89f3-c18258a4a11a",
+        "bucket": "product-images",
+        "storage_path": "media/74f615a8-4b88-45dc-89f3-c18258a4a11a/resorte-para-valvula-tecnidro.webp",
+        "checksum": "9a5266c04fac0180f6b903a5e9a95f4a8e0156a266447fe0b4b1c9f4db7fec6c",
+        "file_size": 8692,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "dba4068e-5e74-462f-a765-a55394c5b790",
+        "bucket": "product-images",
+        "storage_path": "media/dba4068e-5e74-462f-a765-a55394c5b790/resorte-para-piloto-de-alivio-tecnidro.webp",
+        "checksum": "74dfe428122dc08b2581260c7e512e9a34a3f0af1756c6fef9e4c75847717165",
+        "file_size": 10274,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "b2b9ed5d-f6f5-4358-bbcd-cf46ab38a010",
+        "bucket": "product-images",
+        "storage_path": "media/b2b9ed5d-f6f5-4358-bbcd-cf46ab38a010/relay-hidraulico-galit.webp",
+        "checksum": "6b3ce767ee9193db783a874c36dc772dce3f71cd5dce7fd7a23d5b2aa2fe0924",
+        "file_size": 9204,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "bb74bc19-b130-4ce1-81d8-00e0d87be3f9",
+        "bucket": "product-images",
+        "storage_path": "media/bb74bc19-b130-4ce1-81d8-00e0d87be3f9/tapon-roscado.webp",
+        "checksum": "364ddbb56184899916e21597ad45ce150f791a2d327dfb1fcccbbc1143c3f135",
+        "file_size": 3058,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "0b5ba788-1719-4c37-ba2d-9862b29223e1",
+        "bucket": "product-images",
+        "storage_path": "media/0b5ba788-1719-4c37-ba2d-9862b29223e1/filtro.webp",
+        "checksum": "f9c799a637b5f9c31aa031c8fcdca0487d00860b844109c5b55de94fb6f0a60d",
+        "file_size": 7268,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "d238d4ff-4a68-4638-919f-0f8b6e904e79",
+        "bucket": "product-images",
+        "storage_path": "media/d238d4ff-4a68-4638-919f-0f8b6e904e79/conector.webp",
+        "checksum": "0e2c6f5de8327761b6e6a2ef63efa2549fa6f2d76556887a70e4e630356e06b2",
+        "file_size": 8574,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "39a782fa-5618-4b87-9a42-9445372f6a4d",
+        "bucket": "product-images",
+        "storage_path": "media/39a782fa-5618-4b87-9a42-9445372f6a4d/t.webp",
+        "checksum": "376a6cb6cebbc15da6da8bf2b4f2f44b7c5a7c5c7a4441348ebfab01dbb40bbd",
+        "file_size": 7136,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "7bba4a9a-a7a0-4c47-9749-98e184996ed8",
+        "bucket": "product-images",
+        "storage_path": "media/7bba4a9a-a7a0-4c47-9749-98e184996ed8/adaptador-macho.webp",
+        "checksum": "d7ac75479781ec767d79e3a2e29835ac41ce9eee63745bbf0ede6954ba1d4c16",
+        "file_size": 5394,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "da85d15e-1bf4-4780-9ffd-8d78576de753",
+        "bucket": "product-documents",
+        "storage_path": "media/da85d15e-1bf4-4780-9ffd-8d78576de753/Adaptador-RM.webp",
+        "checksum": "53dd698ff4ecea393668ac62c0f19fbea5cb4260ca8687dde90a499483c38831",
+        "file_size": 56432,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "7ac15074-bbb5-4f39-9d2b-9c08f220f014",
+        "bucket": "product-images",
+        "storage_path": "media/7ac15074-bbb5-4f39-9d2b-9c08f220f014/valvula-cilindrica-c-rosca-x-cinta.webp",
+        "checksum": "89d24985ecd4295ab5a3408971620d8297149486973a866aab9bac409df87950",
+        "file_size": 7400,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "d2bf21eb-346d-4037-9db1-7ad7def6baf8",
+        "bucket": "product-images",
+        "storage_path": "media/d2bf21eb-346d-4037-9db1-7ad7def6baf8/valvula-cilindrica-lay-flat-a-cinta.webp",
+        "checksum": "ab4f4a6fa8c91cecf21a1040083cdadccbacdee649ac7212950c2557cd380df3",
+        "file_size": 6910,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "33e49d3f-8e43-4a8f-bbfb-646907b5646c",
+        "bucket": "product-images",
+        "storage_path": "media/33e49d3f-8e43-4a8f-bbfb-646907b5646c/valvula-cilindrica-lay-flat-cinta.webp",
+        "checksum": "f53048f3cf1be9dcba2852ff3f8b936a259a29a2a2668eeebb8be34d829bc36b",
+        "file_size": 13912,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "3d16c804-4e87-4bf7-a24f-6e6a21338052",
+        "bucket": "product-images",
+        "storage_path": "media/3d16c804-4e87-4bf7-a24f-6e6a21338052/valvula-cilindrica-espiga.webp",
+        "checksum": "6b93a5a34fff67e06ede7892830880e65e42262fae1892aca1b9722fc0f83f2f",
+        "file_size": 5680,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "d23b66cf-e485-46fe-926c-af2d9ca99e6b",
+        "bucket": "product-images",
+        "storage_path": "media/d23b66cf-e485-46fe-926c-af2d9ca99e6b/valvulas-metalicas-de-retencion-dual-check.webp",
+        "checksum": "0d3d24c57dcb420b3c281074979d1933ef1f54b2f6ec6255430774d0b85579a7",
+        "file_size": 15678,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "8fc7ea81-33ad-4cdc-b5bf-2025f328a7a0",
+        "bucket": "product-documents",
+        "storage_path": "media/8fc7ea81-33ad-4cdc-b5bf-2025f328a7a0/633imgdesc1.webp",
+        "checksum": "971b4edc536a7b0a9c4e611dd41b979d6dc9bba7d2cfc3d4a74f170ce3b774d0",
+        "file_size": 23948,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "d5374b7d-d2e3-4606-b621-d39c9e3a538c",
+        "bucket": "product-images",
+        "storage_path": "media/d5374b7d-d2e3-4606-b621-d39c9e3a538c/codo.webp",
+        "checksum": "4fa41fdc4547f396d95772abe3522da01230ded74564b0702b0629cc9cf3f3c1",
+        "file_size": 5216,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "329c9f49-600c-4eed-9768-411f8d93a5ff",
+        "bucket": "product-documents",
+        "storage_path": "media/329c9f49-600c-4eed-9768-411f8d93a5ff/Codo-90.webp",
+        "checksum": "7d5b2db88e30644380da645058ce85c37c4acbe99417f9be1f06c6410efe7499",
+        "file_size": 42972,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "2f1a5456-ea57-4019-b27e-a9cb699c6f97",
+        "bucket": "product-images",
+        "storage_path": "media/2f1a5456-ea57-4019-b27e-a9cb699c6f97/t-con-rosca-macho-2.webp",
+        "checksum": "0479012e2922fc7ae30ca7d85debad8fedaf656123c440dcb4d2f66a294f9b2f",
+        "file_size": 8886,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "2354a222-9b03-453d-8577-f5027004819a",
+        "bucket": "product-images",
+        "storage_path": "media/2354a222-9b03-453d-8577-f5027004819a/niple.webp",
+        "checksum": "d20d17062c590315a877c62374fedde074c0f9b362d005ae09703c523c6b76c8",
+        "file_size": 3720,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "92208be9-1edb-4092-aabc-b27cc1441e00",
+        "bucket": "product-images",
+        "storage_path": "media/92208be9-1edb-4092-aabc-b27cc1441e00/valvula-esferica-metalica-presion-nominal-16-bar-2.webp",
+        "checksum": "31709b1cdd781a42568a8d111e2198bf1ffbccd5eaa7076b584b712fa1ca8ecc",
+        "file_size": 7160,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "6f492724-4cb3-4cf1-a544-b33c2daa04dc",
+        "bucket": "product-images",
+        "storage_path": "media/92208be9-1edb-4092-aabc-b27cc1441e00/valvula-esferica-metalica-presion-nominal-16-bar-2.webp",
+        "checksum": "31709b1cdd781a42568a8d111e2198bf1ffbccd5eaa7076b584b712fa1ca8ecc",
+        "file_size": 7160,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "451951b9-7752-491e-b9e9-dadc0e8aaa57",
+        "bucket": "product-images",
+        "storage_path": "media/451951b9-7752-491e-b9e9-dadc0e8aaa57/valvula.webp",
+        "checksum": "468ebebd5ae0136f4e7a6d5809c6e5dfdd6508e31954a5c15fc3ae7ffb7328f4",
+        "file_size": 5386,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "309c7944-b2be-48bf-9ec4-f83554dfe35a",
+        "bucket": "product-images",
+        "storage_path": "media/309c7944-b2be-48bf-9ec4-f83554dfe35a/programadores-tic2f-4f-pi.webp",
+        "checksum": "2d60b2cf55b31aaaf7dda2d3ea84fdd57a467c6e6ab8587509885f0cd72121ca",
+        "file_size": 6006,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "48299821-aee0-4d8e-b362-9ba1b53323ce",
+        "bucket": "product-documents",
+        "storage_path": "media/48299821-aee0-4d8e-b362-9ba1b53323ce/727imgdesc1.webp",
+        "checksum": "a5a87db353b81224d8f05474606a97867af2b7467e68dfd1e8863267256b9e79",
+        "file_size": 26168,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "eed03f8c-aa25-43e3-9704-f196c4938542",
+        "bucket": "product-images",
+        "storage_path": "media/eed03f8c-aa25-43e3-9704-f196c4938542/valvula-cilindrica-espiga-16mm-x-cinta.webp",
+        "checksum": "160b91cc621c01efcb707fdae08d61558bdb8508d477c698f36d9820ecb0ff34",
+        "file_size": 5880,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "f575382a-8ee8-42df-8db3-f9450467cdc2",
+        "bucket": "product-images",
+        "storage_path": "media/f575382a-8ee8-42df-8db3-f9450467cdc2/interruptor-de-vacio-arv.webp",
+        "checksum": "30e0c597c857ad4c2ccf73cda7e75636e21b6996ce6cd698096706b25802bf28",
+        "file_size": 6974,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "7e13bc0c-0e05-40f3-975b-51e4dcf5d52d",
+        "bucket": "product-images",
+        "storage_path": "media/7e13bc0c-0e05-40f3-975b-51e4dcf5d52d/valvula-hidraulica-plastica-modelo-serie-75s.webp",
+        "checksum": "774e03595d2aeeefdd7142aa646f7f91c476d971c8aba46752638611fbadb426",
+        "file_size": 9458,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "d12936a1-e93e-4e77-ba5c-c3cdcb1899c7",
+        "bucket": "product-documents",
+        "storage_path": "media/d12936a1-e93e-4e77-ba5c-c3cdcb1899c7/830imgdesc1.webp",
+        "checksum": "6be86a3410bba047f61557dfb2329e48b41b1517f0e2e5bac157b5b55ee7900a",
+        "file_size": 33592,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "6cf86194-f5ca-4314-bb8a-d95a4d774ce4",
+        "bucket": "product-images",
+        "storage_path": "media/6cf86194-f5ca-4314-bb8a-d95a4d774ce4/valvulas-dorot-plasticas-modelo-serie-75t.webp",
+        "checksum": "00c20f7a9fbe831a576001933355782d504105652d23c264e8b183d56eb0c83a",
+        "file_size": 14846,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "1eba62cd-b24a-4f39-95d7-41d65cfe8312",
+        "bucket": "product-documents",
+        "storage_path": "media/1eba62cd-b24a-4f39-95d7-41d65cfe8312/156imgdesc1.webp",
+        "checksum": "5a69c9c3915a9dabbae96b29943143565f755fc7ebd98ca089ac16681a80d0b6",
+        "file_size": 44466,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "63ecb74b-35ca-4c82-998a-ce72da0a2f00",
+        "bucket": "product-images",
+        "storage_path": "media/63ecb74b-35ca-4c82-998a-ce72da0a2f00/valvulas-dorot-plasticas-modelo-serie-95-y-96.webp",
+        "checksum": "c59fcadfe69466f46b5e817284e6e26ee01dc0f11ce61ca7ef4fe93b02e25672",
+        "file_size": 15688,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "c982a590-a673-4dbb-98ee-094570c92f72",
+        "bucket": "product-documents",
+        "storage_path": "media/c982a590-a673-4dbb-98ee-094570c92f72/687imgdesc1.webp",
+        "checksum": "fc60b00628caef050f621098e9b7d78e2bd3a53ca51cb49df8efa8bdb8deb71f",
+        "file_size": 15958,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "09d2b248-a4b5-440b-ae98-bbf722577298",
+        "bucket": "product-images",
+        "storage_path": "media/09d2b248-a4b5-440b-ae98-bbf722577298/valvula-de-retencion-iri-greenplains.webp",
+        "checksum": "b4f812b0d6d5d3a5c4966323be7c858787ab5dba3bc56afde7eb61e7096181c0",
+        "file_size": 18596,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "aa9c73ca-2487-40b2-b797-4977bbc2a91a",
+        "bucket": "product-documents",
+        "storage_path": "media/aa9c73ca-2487-40b2-b797-4977bbc2a91a/Valvula-de-Retencion-GreenPlains-01.webp",
+        "checksum": "aa47e487d5125d6d7489408f03aaccfed4b0c596ba47ea0960ee8786e7ef722c",
+        "file_size": 87840,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "3da68344-03d3-4348-a729-4d36efe8e9e5",
+        "bucket": "product-images",
+        "storage_path": "media/3da68344-03d3-4348-a729-4d36efe8e9e5/caja-mini-greenplains.webp",
+        "checksum": "ffa939e68d5ba399b5574fb047c7bebb4227eab26ae6c13b1e86e2a6679df447",
+        "file_size": 11586,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "fd56ab33-71b1-42be-8144-2f8a8a1d13e8",
+        "bucket": "product-images",
+        "storage_path": "media/fd56ab33-71b1-42be-8144-2f8a8a1d13e8/valvula-de-pie-greenplains-2.webp",
+        "checksum": "0296a2269151b475be39727dbf02ef4a2838b883d60ff881f0dc6df066a09015",
+        "file_size": 15028,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "3a05506c-4510-42cf-9326-879b40eea6cc",
+        "bucket": "product-documents",
+        "storage_path": "media/3a05506c-4510-42cf-9326-879b40eea6cc/Valvula-de-pie.webp",
+        "checksum": "d15703c43e24bf9f5f7a5cc6b52337adcb804a3c13c51d47178ef7e2f91a2123",
+        "file_size": 112756,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "bcdaded8-9b3c-4667-b11c-fd8781b6f393",
+        "bucket": "product-images",
+        "storage_path": "media/bcdaded8-9b3c-4667-b11c-fd8781b6f393/valvula-de-pie-greenplains.webp",
+        "checksum": "b11d9dc8fad7acfd5e604699ff68036387b5115e2bd07288d5dc4daf9ded674b",
+        "file_size": 13822,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "feaa6183-0d7d-450a-99ab-249a8d7b8220",
+        "bucket": "product-documents",
+        "storage_path": "media/feaa6183-0d7d-450a-99ab-249a8d7b8220/Valvula-de-pie-scaled.webp",
+        "checksum": "e2924a1ec1b9f3cbe99b952919f5f585c64299d6b524e9f5b250d6f416063106",
+        "file_size": 105292,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "c64cee45-2c96-45fa-a066-e719c4c1dd5a",
+        "bucket": "product-images",
+        "storage_path": "media/c64cee45-2c96-45fa-a066-e719c4c1dd5a/cajas-para-valvulas.webp",
+        "checksum": "f0b5012b77dd061ec60271fedef1af56d5b05fe41da6d39b1e3fbffd03571f5b",
+        "file_size": 20508,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "efe2aca3-8bda-4867-a589-ceb9d36625f2",
+        "bucket": "product-images",
+        "storage_path": "media/efe2aca3-8bda-4867-a589-ceb9d36625f2/valvulas-de-control-hidraulico-adi.webp",
+        "checksum": "1b757fef46f4d3bc6253da7cf3dec049656663829cc4275f35c3ac019d93336a",
+        "file_size": 14158,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "ee88d928-f0c1-4f0b-af78-3521b8a8a2f0",
+        "bucket": "product-documents",
+        "storage_path": "media/ee88d928-f0c1-4f0b-af78-3521b8a8a2f0/ADI_tec.webp",
+        "checksum": "8044903c33029d60c9857aec4a5eee2bc0a671cb2c639e8adc06af2ee97fdb70",
+        "file_size": 125624,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "7f9c87bc-cfd2-4046-81ce-2b9a3ce1e1f2",
+        "bucket": "product-images",
+        "storage_path": "media/7f9c87bc-cfd2-4046-81ce-2b9a3ce1e1f2/valvulas-de-control-hidraulico-ama.webp",
+        "checksum": "cffa5c92ecc8f586cb3b2a1aa04e8d5646c0eb1fa328614653aae258be6b1f05",
+        "file_size": 25634,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "98f2b0e9-38a4-437a-b3ea-3b3411cba0f1",
+        "bucket": "product-documents",
+        "storage_path": "media/98f2b0e9-38a4-437a-b3ea-3b3411cba0f1/AMA_tec.webp",
+        "checksum": "7df2b0f5da98c4d72ced202283db9489dde3169a3288278d580f2255b69d67bf",
+        "file_size": 130972,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "2b6b1938-6eda-451a-a78c-1693c5845c29",
+        "bucket": "product-images",
+        "storage_path": "media/2b6b1938-6eda-451a-a78c-1693c5845c29/valvulas-de-control-hidraulico-ami.webp",
+        "checksum": "333cd898cf5c2b045810e0c21d0ca329543f3c04c58dcc949b7bfdd019b7eb9d",
+        "file_size": 20868,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "71532cd2-6e4f-4291-9576-f240bca906de",
+        "bucket": "product-documents",
+        "storage_path": "media/71532cd2-6e4f-4291-9576-f240bca906de/AMI_tec.webp",
+        "checksum": "42c06b4eedc2ded9d226b69f9b3b72e9287ba1ac602dc8c028a6eb153ca9fdb2",
+        "file_size": 172112,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "c1101b90-2a2a-4010-91eb-3f2b3e6e3fed",
+        "bucket": "product-images",
+        "storage_path": "media/c1101b90-2a2a-4010-91eb-3f2b3e6e3fed/valvula-esferica-pead-con-union-doble.webp",
+        "checksum": "042374ab1eee647713ec555d65c586fbb171366b5e46f918e19e62f5a0dcab6d",
+        "file_size": 15740,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "33b69875-6e69-4fad-bcd4-ed3a384536e1",
+        "bucket": "product-documents",
+        "storage_path": "media/33b69875-6e69-4fad-bcd4-ed3a384536e1/cuadro02-1.webp",
+        "checksum": "beab55deda6652caec8f56802e3e3cca130517793255d024a095cbc11197d1a8",
+        "file_size": 9068,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "118d7847-756c-421e-9034-ea2133346272",
+        "bucket": "product-images",
+        "storage_path": "media/118d7847-756c-421e-9034-ea2133346272/caja-circular-mini-plastica-alfa.webp",
+        "checksum": "8f1e5217a0f2112a60b4488b394db51651e8893ea98757b86cd555d3c39c05ad",
+        "file_size": 15066,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "41aa8842-b69d-4acd-a5be-99186d4d6955",
+        "bucket": "product-images",
+        "storage_path": "media/41aa8842-b69d-4acd-a5be-99186d4d6955/caja-circular-large-plastica-alfa.webp",
+        "checksum": "084e3624a5d9d508a5dc46656f4a91a52675104ae24b4f1eed91c4c013afcea3",
+        "file_size": 17900,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "38a43103-6501-4454-857f-bf57c93dcb23",
+        "bucket": "product-images",
+        "storage_path": "media/38a43103-6501-4454-857f-bf57c93dcb23/caja-retangular-standard-plastica-alfa.webp",
+        "checksum": "57eaf9333f4a5f75c0045bb76496dcc565639577285a8190abef4a91d248fd5d",
+        "file_size": 15274,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "2581b14b-b541-494c-a6d9-3290eb96458a",
+        "bucket": "product-images",
+        "storage_path": "media/2581b14b-b541-494c-a6d9-3290eb96458a/caja-retangular-jumbo-plastica-alfa.webp",
+        "checksum": "a7d6a1f7d8be7fb414106f0b0f8eb273b23900947031c013a03530965996b7c1",
+        "file_size": 18394,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "bd9418b3-9842-4b50-a5bd-f88e9f7d26d0",
+        "bucket": "product-images",
+        "storage_path": "media/bd9418b3-9842-4b50-a5bd-f88e9f7d26d0/valvulas-tecnidro-metalicas.webp",
+        "checksum": "8dbf8a4b7d7bafd4339b20bc0b011854da057b005fbc72b205571bb15f8acfee",
+        "file_size": 23226,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "ca67978f-11f5-4abb-9bf2-e72eae75191e",
+        "bucket": "product-documents",
+        "storage_path": "media/ca67978f-11f5-4abb-9bf2-e72eae75191e/130imgdesc1.webp",
+        "checksum": "4d35e94f2eec1ab5d98d68325162dd20cb95689d1a3f4639f3c252c2ea995d56",
+        "file_size": 18392,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "7f072c02-ed00-45ae-aa91-d785eda9c091",
+        "bucket": "product-images",
+        "storage_path": "media/7f072c02-ed00-45ae-aa91-d785eda9c091/valvulas-tecnidro-plasticas.webp",
+        "checksum": "88c4238d114d63676e73ab141e49fdf62ff956f46e7e89b7432e5c8655e0dc27",
+        "file_size": 9624,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "69fc5868-9c0b-4a94-aba2-9e9490b11517",
+        "bucket": "product-documents",
+        "storage_path": "media/69fc5868-9c0b-4a94-aba2-9e9490b11517/128imgdesc1.webp",
+        "checksum": "fd7bfe5c35331fe029a354ae986b880ec09a5f61429197e6591e3aee3f843934",
+        "file_size": 26746,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "a7d16759-7492-4569-a3d3-4faa6ce41d53",
+        "bucket": "product-images",
+        "storage_path": "media/a7d16759-7492-4569-a3d3-4faa6ce41d53/caudalimetros-tecnidro.webp",
+        "checksum": "b8e79b0cd65c3317048fa2dfd05ccd6e0f5fb93503ce1ed0b946726ea2943718",
+        "file_size": 20828,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "cf36a82a-ced1-4116-89b6-034b4222d06e",
+        "bucket": "product-documents",
+        "storage_path": "media/cf36a82a-ced1-4116-89b6-034b4222d06e/106imgdesc1.webp",
+        "checksum": "532b34a0c91d1ec825feffa586d433c636002cfdf2c2d22f56320d39e1251d29",
+        "file_size": 35864,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "40e1b8e7-4ae4-4714-a9fa-d80af5e01e8e",
+        "bucket": "product-images",
+        "storage_path": "media/40e1b8e7-4ae4-4714-a9fa-d80af5e01e8e/caudalimetro-metalico-bridado.webp",
+        "checksum": "2acfbe3db87e8d29a10dd0af817c8a364147465b7d46c55c347ad4fe87048ec7",
+        "file_size": 21548,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "686fb25c-90cb-408e-b2ce-60f8a1695133",
+        "bucket": "product-documents",
+        "storage_path": "media/686fb25c-90cb-408e-b2ce-60f8a1695133/635imgdesc1.webp",
+        "checksum": "016914d9545b36e659838a67984c261c10b348422511d4267be44c187f758989",
+        "file_size": 66828,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "2fe015dc-2b75-478b-a9a5-b63546189cee",
+        "bucket": "product-images",
+        "storage_path": "media/2fe015dc-2b75-478b-a9a5-b63546189cee/manometro-1-4-de-0-6-bares-y-de-0-10-bares.webp",
+        "checksum": "75b1e9f9d68dfc15c528263df30806d5bdbfa2587ff00e6bed91095baf68d4cc",
+        "file_size": 20780,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "5beb829a-0c89-49fc-b2f2-d756e7f8e904",
+        "bucket": "product-images",
+        "storage_path": "media/5beb829a-0c89-49fc-b2f2-d756e7f8e904/adaptador-para-manometro.webp",
+        "checksum": "4ab2718d39af1d0b7297af0bf9b2b8bff5624b4525aedf7d4751acc7e4e807ec",
+        "file_size": 4448,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "375604e0-82ab-4213-8bde-2cfe3c79e6ff",
+        "bucket": "product-images",
+        "storage_path": "media/375604e0-82ab-4213-8bde-2cfe3c79e6ff/flujometro-rh-1-2-y-3-4.webp",
+        "checksum": "64c0515ce2616f56ded39a4cef8809e317ad05433e73f45ecbcd03aec7e92e10",
+        "file_size": 5732,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "a9b4d736-ab97-477f-95bd-dd6edfdde39c",
+        "bucket": "product-images",
+        "storage_path": "media/a9b4d736-ab97-477f-95bd-dd6edfdde39c/caudalimetro-plastico-tecnidro.webp",
+        "checksum": "d899fced5a84481d15286c4a09169096fb200c974a2dd32835c3395df6e537e1",
+        "file_size": 14412,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "e07765cf-2602-43f7-9c62-232a60de1370",
+        "bucket": "product-documents",
+        "storage_path": "media/e07765cf-2602-43f7-9c62-232a60de1370/ima1.webp",
+        "checksum": "bc9b1596c43d60d5c664079641bce74872b70e6a59dc9f7f978f40287e3aeb78",
+        "file_size": 27774,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "c7cdfeae-ed29-4336-b489-5014bc3bd061",
+        "bucket": "product-images",
+        "storage_path": "media/c7cdfeae-ed29-4336-b489-5014bc3bd061/programador-de-canilla.webp",
+        "checksum": "aa4eb20bb64746638a14a3c11ebe644b4cf9d178bbc631d7e67117df193396f4",
+        "file_size": 12624,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "58b6eb69-a5ac-41a4-9125-af36e678be3b",
+        "bucket": "product-images",
+        "storage_path": "media/58b6eb69-a5ac-41a4-9125-af36e678be3b/programador-de-retrolavado-tic-dp.webp",
+        "checksum": "8144ff48eee4dd178c17e04d143adadadc0968ab817a66465b45a93e98bf06dc",
+        "file_size": 7946,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "63313abf-53dd-4c92-b543-5fc5983ec1a1",
+        "bucket": "product-images",
+        "storage_path": "media/63313abf-53dd-4c92-b543-5fc5983ec1a1/pro-lc-8-y-12-estaciones-con-funcion-loop.webp",
+        "checksum": "faaabc583bc63b3241e4d67109421c15ca226c824fe24cb52a4e61aaec9a5459",
+        "file_size": 11762,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "6dc347d2-55ee-40a3-b89a-bb46ebdb220d",
+        "bucket": "product-images",
+        "storage_path": "media/6dc347d2-55ee-40a3-b89a-bb46ebdb220d/pro-lc-8-y-12-estaciones.webp",
+        "checksum": "bb63bc0004e8ab77dbefdac3c26d819dd7e619384ddf4051a455a3ae6b41ae6b",
+        "file_size": 23382,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "d1214a6c-17fc-4615-ac8b-3eae63b80c9f",
+        "bucket": "product-images",
+        "storage_path": "media/d1214a6c-17fc-4615-ac8b-3eae63b80c9f/pro-tap-100.webp",
+        "checksum": "fc190f71458da09e5ff23fc4b942817cc874d9ae1cee0a8a324895acf50fb53e",
+        "file_size": 16996,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "8a1b9635-a3c7-40bd-90a1-c1bade85394f",
+        "bucket": "product-images",
+        "storage_path": "media/7af1a5ba-caf0-4e28-9a4b-bd8ce6772c89/valvula-solenoide-k-rain-pro-100.webp",
+        "checksum": "87445f4242e169f26bd9dd80bd4717606c9bf5c0d337e3ae0dea80a94e3fd52b",
+        "file_size": 526838,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "f4bfc2cc-fa00-4aee-b03d-578f3316604f",
+        "bucket": "product-documents",
+        "storage_path": "media/f4bfc2cc-fa00-4aee-b03d-578f3316604f/367imgdesc1.webp",
+        "checksum": "567e0e3503fa35553ec4d45b9ce2a8a761cf0b99403cb1d8cab897c72ed9e22e",
+        "file_size": 44430,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "633ddc02-f543-478a-87ef-7ae5d65d5cf5",
+        "bucket": "product-images",
+        "storage_path": "media/7af1a5ba-caf0-4e28-9a4b-bd8ce6772c89/valvula-solenoide-k-rain-pro-100.webp",
+        "checksum": "87445f4242e169f26bd9dd80bd4717606c9bf5c0d337e3ae0dea80a94e3fd52b",
+        "file_size": 526838,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "f8f8b59b-848b-4aaf-8e58-4817d8402e47",
+        "bucket": "product-documents",
+        "storage_path": "media/f8f8b59b-848b-4aaf-8e58-4817d8402e47/755imgdesc2.webp",
+        "checksum": "7d7faf659877a1bafca658a0c0a24ad91655a699b2c693743e416c7fd8ea1b36",
+        "file_size": 6150,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "e3bb1bf4-3574-46fa-92a3-a445da1a7037",
+        "bucket": "product-images",
+        "storage_path": "media/e3bb1bf4-3574-46fa-92a3-a445da1a7037/valvula-selenoide-con-programador.webp",
+        "checksum": "28b6de85bb64943a2db7a3ee6cacd54c5bbea1c3eadb5d3d42a31d51591fb198",
+        "file_size": 15212,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "a378b598-d804-4e14-b879-cecd26200d8d",
+        "bucket": "product-images",
+        "storage_path": "media/7af1a5ba-caf0-4e28-9a4b-bd8ce6772c89/valvula-solenoide-k-rain-pro-100.webp",
+        "checksum": "87445f4242e169f26bd9dd80bd4717606c9bf5c0d337e3ae0dea80a94e3fd52b",
+        "file_size": 526838,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "cde79ad3-b332-4440-bb97-2130be419842",
+        "bucket": "product-images",
+        "storage_path": "media/7af1a5ba-caf0-4e28-9a4b-bd8ce6772c89/valvula-solenoide-k-rain-pro-100.webp",
+        "checksum": "87445f4242e169f26bd9dd80bd4717606c9bf5c0d337e3ae0dea80a94e3fd52b",
+        "file_size": 526838,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "46ca021a-7b43-431a-a228-ff419772ed22",
+        "bucket": "product-documents",
+        "storage_path": "media/46ca021a-7b43-431a-a228-ff419772ed22/599imgdesc1.webp",
+        "checksum": "733a8db5a955492bd79d198ea8cd2580b9d7cc696f4d53603fe226e54eaa604e",
+        "file_size": 5950,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "5b05a923-e5fc-43a8-a205-268e48f30503",
+        "bucket": "product-images",
+        "storage_path": "media/7af1a5ba-caf0-4e28-9a4b-bd8ce6772c89/valvula-solenoide-k-rain-pro-100.webp",
+        "checksum": "87445f4242e169f26bd9dd80bd4717606c9bf5c0d337e3ae0dea80a94e3fd52b",
+        "file_size": 526838,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "79c4e7fa-7268-4bc9-9e70-c2dbf3c8d6d3",
+        "bucket": "product-images",
+        "storage_path": "media/79c4e7fa-7268-4bc9-9e70-c2dbf3c8d6d3/monturas-abrazaderas-o-silletas-2-bulones.webp",
+        "checksum": "3c7d6a393f14885065b65af442c75246702f3d0d14e627e379a3f1b28717cd30",
+        "file_size": 10788,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "fd7f6484-c503-4b85-83da-375e3f744583",
+        "bucket": "product-images",
+        "storage_path": "media/fd7f6484-c503-4b85-83da-375e3f744583/monturas-abrazaderas-o-silletas-4-bulones.webp",
+        "checksum": "af6f4129b3ede981afff45af5c32d14efa21f3adb797dde56840e0153ba199cd",
+        "file_size": 10666,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "b40bf50b-0724-4642-953a-1e14adfc2fe7",
+        "bucket": "product-images",
+        "storage_path": "media/b40bf50b-0724-4642-953a-1e14adfc2fe7/monturas-abrazaderas-o-silletas-6-bulones-2.webp",
+        "checksum": "4ea9ccc1beebbd01266576b8fb5f8d45533ec43f6e9441548f7f30c3c68ea9a3",
+        "file_size": 12344,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "0482f8aa-27e8-4a9a-bcea-79dd56325ef1",
+        "bucket": "product-images",
+        "storage_path": "media/0482f8aa-27e8-4a9a-bcea-79dd56325ef1/con-bulones-y-anillo-metalico-de-refuerzo.webp",
+        "checksum": "e0b2d2cee9f911659a1a90fe16441cfa7b6a1a2b69e91c83ccd255f104589621",
+        "file_size": 14010,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "fcb77660-69a7-4008-98f2-d6756f5696b1",
+        "bucket": "product-documents",
+        "storage_path": "media/fcb77660-69a7-4008-98f2-d6756f5696b1/618imgdesc2.webp",
+        "checksum": "d9b4a1eb8b0b9dc52c8a91505e9b6d11e7f97152cf4b6c4effeb12daa3a061e8",
+        "file_size": 10398,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "183cc68d-a4d0-456f-8cd6-5b8e25da5737",
+        "bucket": "product-images",
+        "storage_path": "media/183cc68d-a4d0-456f-8cd6-5b8e25da5737/monturas-con-cuna.webp",
+        "checksum": "50980799d7ec0808245c168584c0b55bb12add97fe30da6a69075f6dea42ed93",
+        "file_size": 7208,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "d1725889-8349-47b2-9f07-0877f079c598",
+        "bucket": "product-documents",
+        "storage_path": "media/d1725889-8349-47b2-9f07-0877f079c598/cuna2.webp",
+        "checksum": "3e9ab313a096034e511c3f9a59346e91cb84d55b339ab64218b3858001877045",
+        "file_size": 28068,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "7f728ef1-f3c3-4c42-9494-869d073b1aff",
+        "bucket": "product-images",
+        "storage_path": "media/7f728ef1-f3c3-4c42-9494-869d073b1aff/abrazadera-metalica-greenplains.webp",
+        "checksum": "669f69e9b72240fffe0306f12c751142c9b1a55c007ab303de4279fc8a8d9455",
+        "file_size": 18928,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "4c1dd122-52b6-4ac4-95d0-03abd811f3a9",
+        "bucket": "product-images",
+        "storage_path": "media/4c1dd122-52b6-4ac4-95d0-03abd811f3a9/buje-reductor-hembra-hembra-con-aro-de-goma.webp",
+        "checksum": "4067f5ef6c3b4e32eadd2671f8ca659e82ee6d0083d2eab1940ce3fc1f6c1598",
+        "file_size": 4182,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "7cb828b3-0c41-44ce-a4a2-d9057a79e97c",
+        "bucket": "product-images",
+        "storage_path": "media/7cb828b3-0c41-44ce-a4a2-d9057a79e97c/cupla-hembra-hembra-con-aro-de-goma.webp",
+        "checksum": "3d7e1abdc2fc786ea80830b620375c8bf1ec984fa75e59e659103ee26f0bb3d4",
+        "file_size": 4604,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "a4a0a571-0669-48e7-9e18-912f5a0e9cf2",
+        "bucket": "product-images",
+        "storage_path": "media/a4a0a571-0669-48e7-9e18-912f5a0e9cf2/codo-90-hembra-hembra-con-aro-de-goma.webp",
+        "checksum": "db077407cbae32e440b1259a7616fec0b0b22752ee16db3b2fef0d6485b53ed9",
+        "file_size": 5242,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "89e7242c-ff45-4ae5-abce-010f562028d5",
+        "bucket": "product-images",
+        "storage_path": "media/89e7242c-ff45-4ae5-abce-010f562028d5/codo-45-hembra-hembra-con-aro-de-goma.webp",
+        "checksum": "2895689c74ef73187ea08941add4070a39ddba086f182a1b29faa07946cb2d0b",
+        "file_size": 4756,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "59a46621-c90d-443d-abba-00e0be01a976",
+        "bucket": "product-images",
+        "storage_path": "media/59a46621-c90d-443d-abba-00e0be01a976/union-doble-pn10.webp",
+        "checksum": "4022fa1c58882b0976d95167bb4852c42ad795977b0ffb0c8f318988dcfe8fb9",
+        "file_size": 11378,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "db74e9e5-9818-4c8a-ad8a-c94264eca21b",
+        "bucket": "product-images",
+        "storage_path": "media/db74e9e5-9818-4c8a-ad8a-c94264eca21b/t-reductora-h-h-h-con-aro-de-goma.webp",
+        "checksum": "d4bdbc363e00592d97e5cc3e2ae05b30c47f6c3693c8c68e116b58fa2fa6bf43",
+        "file_size": 4822,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "bd506f16-23e4-45da-935a-a9a829db3359",
+        "bucket": "product-images",
+        "storage_path": "media/bd506f16-23e4-45da-935a-a9a829db3359/brida-campana-con-aro-de-goma.webp",
+        "checksum": "ccf5b5321bf6293e5d3b8707b9ba45230e876747cdd34990b498e242c2f641af",
+        "file_size": 7088,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "824fe2d2-1dfd-4f81-8a20-7c3396eafb12",
+        "bucket": "product-images",
+        "storage_path": "media/824fe2d2-1dfd-4f81-8a20-7c3396eafb12/brida-ciega.webp",
+        "checksum": "7c818e38de475743c2ebb00c4bb85d5178563e161f5a34888742a7155d751fbe",
+        "file_size": 4816,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "c4f42167-76c0-457b-9a28-52cc3554bd0a",
+        "bucket": "product-images",
+        "storage_path": "media/c4f42167-76c0-457b-9a28-52cc3554bd0a/cupla-hembra-hembra-pn10.webp",
+        "checksum": "d2ab4b2f8235dcdd985a6e4aba5e4400be46e54ee094e1b571d3a6897c416654",
+        "file_size": 4482,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "19182dfc-4247-4d78-9a13-47cb2a2356ba",
+        "bucket": "product-images",
+        "storage_path": "media/19182dfc-4247-4d78-9a13-47cb2a2356ba/codo-90-hembra-hembra-pn10.webp",
+        "checksum": "345d6d48d6b69a8dc6224ae7ec3be8a18ccc1b1c60f187bce27b3102c454fa8c",
+        "file_size": 4152,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "b145ab3c-330a-48c9-bf54-b96d468bc56c",
+        "bucket": "product-images",
+        "storage_path": "media/b145ab3c-330a-48c9-bf54-b96d468bc56c/codo-45-hembra-hembra-pn10.webp",
+        "checksum": "263f4a500065cae6d93e89ca12c88d73ac8b6f71e18921c776ecb0c44b0a52ff",
+        "file_size": 4658,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "7693eb5c-5fd8-4249-8f0b-bf0d7a1e3cce",
+        "bucket": "product-images",
+        "storage_path": "media/7693eb5c-5fd8-4249-8f0b-bf0d7a1e3cce/t-de-90-hembra-hembra-hembra-pn10.webp",
+        "checksum": "e2c0a77bd624b00f16da63a53448fb0b15f61a692faf3e40479e624eb60cd9ce",
+        "file_size": 4292,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "a833e318-96ba-4669-9c6f-5766e5fb4748",
+        "bucket": "product-images",
+        "storage_path": "media/a833e318-96ba-4669-9c6f-5766e5fb4748/t-de-90-reduccion-hembra-hembra-hembra-pn10.webp",
+        "checksum": "76cd0342423cfbe0842feebdf5560b4de27b0c5dc97daf9e396a6e893734029b",
+        "file_size": 4636,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "358c72ab-4f76-481a-84b5-c1fcaeeb9aed",
+        "bucket": "product-images",
+        "storage_path": "media/358c72ab-4f76-481a-84b5-c1fcaeeb9aed/t-de-90-hembra-rosca-hembra-hembra-pn10.webp",
+        "checksum": "721ccfbed1f3ae7ddc70d221c66f88eb2d70324ba9b51e85c2943e260c3303bf",
+        "file_size": 4704,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "60a63b53-95dc-4d62-ac1e-91c4472ca015",
+        "bucket": "product-images",
+        "storage_path": "media/60a63b53-95dc-4d62-ac1e-91c4472ca015/buje-reduccion-largo-hembra-hembra-pn10.webp",
+        "checksum": "c457d883696905ebe0093a8ab2708f11231c63c20efee87ba89f072ebd915c68",
+        "file_size": 5358,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "70d419c9-8355-46e0-987c-c5b6c61fc1f1",
+        "bucket": "product-images",
+        "storage_path": "media/70d419c9-8355-46e0-987c-c5b6c61fc1f1/buje-reduccion-corto-hembra-hembra-pn10.webp",
+        "checksum": "716eff9c8e84a143223e6cf668dda66114eb490c965dbf42ed980c01bf520f1b",
+        "file_size": 4322,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "34827063-6167-4ef5-8513-17ef9efe02c5",
+        "bucket": "product-images",
+        "storage_path": "media/34827063-6167-4ef5-8513-17ef9efe02c5/tapa-hembra-pn10.webp",
+        "checksum": "569f06737f4c633889bebe1c4fade2fef21de7fca7608a9eec1dcd07586ab54a",
+        "file_size": 4808,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "ed8756ad-1318-41ce-9ea1-c5d3b87ecac4",
+        "bucket": "product-images",
+        "storage_path": "media/ed8756ad-1318-41ce-9ea1-c5d3b87ecac4/manguito-rosca-hembra-pn10.webp",
+        "checksum": "9ebd0979121e390945aea244e8206625b360c254950429d25be12b17e64d5c45",
+        "file_size": 4224,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "45ded4d2-d150-456c-90d4-5f7550dd0b20",
+        "bucket": "product-images",
+        "storage_path": "media/45ded4d2-d150-456c-90d4-5f7550dd0b20/tapon-roscado-pn10.webp",
+        "checksum": "0f71513143443c42b51d448ed1c1548c38e5676a13320ab5421468b98131e73e",
+        "file_size": 8814,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "c29e93ff-f62c-4e82-a683-0570901e5825",
+        "bucket": "product-images",
+        "storage_path": "media/c29e93ff-f62c-4e82-a683-0570901e5825/manguito-rosca-macho-pn10-pn16-2.webp",
+        "checksum": "9e3f888d5d525fa7912ecf70f537d2615f783fecd096fa1f407fde8f63638b4c",
+        "file_size": 5834,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "7188ba6e-2566-4072-a609-118bd1ec864e",
+        "bucket": "product-images",
+        "storage_path": "media/7188ba6e-2566-4072-a609-118bd1ec864e/brida-pn10.webp",
+        "checksum": "8bed5d18170b025853ee824f2a869f699b13f4fbf3830e2ad9980e82872629cc",
+        "file_size": 5548,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "4403f1da-c782-4279-94b3-aacb81fb0694",
+        "bucket": "product-images",
+        "storage_path": "media/4403f1da-c782-4279-94b3-aacb81fb0694/brida-giratoria-pn10.webp",
+        "checksum": "f3fe84e93890c080abc611d8a7e446868750c54654c363f7c829e14741221d7e",
+        "file_size": 19224,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "fd819213-50c8-442d-826e-333b4d61b94e",
+        "bucket": "product-images",
+        "storage_path": "media/fd819213-50c8-442d-826e-333b4d61b94e/t-de-90-h-h-h-con-aro-de-goma.webp",
+        "checksum": "c670178022fe911bf150ad5ee184f3e9fb79ec23194296aa74201010a8ad620e",
+        "file_size": 5550,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "d074cc57-da98-4567-85eb-f445add1adc9",
+        "bucket": "product-images",
+        "storage_path": "media/d074cc57-da98-4567-85eb-f445add1adc9/union-victaulica-hidroten-copia.webp",
+        "checksum": "871c795132415d9df7dcdece754da9a10b53792a0171965fe07b4d5caeb85c2b",
+        "file_size": 7186,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "efbfcf11-e4cb-46b3-a5ce-43f6eb379dc5",
+        "bucket": "product-images",
+        "storage_path": "media/efbfcf11-e4cb-46b3-a5ce-43f6eb379dc5/manguito-alfa-rapid-victaulico-x-rosca-macho.webp",
+        "checksum": "c4287bd58a6a6076ae11d8430bc2886eba3771f58f345b188fe1cc42b3492c53",
+        "file_size": 15060,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "3fd94187-da6d-4a8c-9955-a612f3cd61ed",
+        "bucket": "product-images",
+        "storage_path": "media/3fd94187-da6d-4a8c-9955-a612f3cd61ed/bridas-metalicas.webp",
+        "checksum": "2e3e55f982748ba0fc098b4a66bb95631bff891ad7be46eda5495de7033ee5d3",
+        "file_size": 10780,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "9125b7ba-0dce-4f95-97c3-fb0c7ade93b6",
+        "bucket": "product-documents",
+        "storage_path": "media/9125b7ba-0dce-4f95-97c3-fb0c7ade93b6/670imgdesc1.webp",
+        "checksum": "a1e140da0395646c50e4ae71ea30f65e2be3fa67319cbb8ce125505067a8f800",
+        "file_size": 14302,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "597239ee-75c1-42df-aee6-c4f5ffdf4e99",
+        "bucket": "product-images",
+        "storage_path": "media/597239ee-75c1-42df-aee6-c4f5ffdf4e99/manguito-rosca-macho-pn10-pn16.webp",
+        "checksum": "417525d008ab64bb3f197353418d4ffd952b27d0baba1830b76c2e1b122037a2",
+        "file_size": 3762,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "f7fc790b-5ef1-43c3-a2a8-ba8c195dc59c",
+        "bucket": "product-images",
+        "storage_path": "media/f7fc790b-5ef1-43c3-a2a8-ba8c195dc59c/manguito-rosca-hembra-pn16.webp",
+        "checksum": "942aa1763c37b51a3db6fbd1034ab66f1ff4f95d1e25cdadf49002d7bc504fd3",
+        "file_size": 5074,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "a515a483-66e8-4126-a4f9-09771377b6e5",
+        "bucket": "product-images",
+        "storage_path": "media/a515a483-66e8-4126-a4f9-09771377b6e5/codo-45-hembra-hembra-pn16.webp",
+        "checksum": "cf284184bb91176a74f2aad286b0ed78e70da3fd34a3fd59f2073fb81f72184e",
+        "file_size": 3406,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "668bcdbb-6451-49a2-b394-29312464fd43",
+        "bucket": "product-images",
+        "storage_path": "media/668bcdbb-6451-49a2-b394-29312464fd43/t-de-90-hembra-hembra-hembra-pn16.webp",
+        "checksum": "6cea712648358d9cc6e8f62dc5a12a5e4b466e6aafd9dc5b01b12ccef35a78f0",
+        "file_size": 4288,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "ae6dfc33-ea83-40d6-9281-4cf5a5594b50",
+        "bucket": "product-images",
+        "storage_path": "media/ae6dfc33-ea83-40d6-9281-4cf5a5594b50/manguito-rosca-hembra-pn10-pn16.webp",
+        "checksum": "aaeaa2dc680cff7c505ea0e3b3d9b4fed01aad6bd935ffa3c13b8e5c89f5e819",
+        "file_size": 4148,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "f6c5399c-b311-4ed1-9cc4-7f21ed4b5da0",
+        "bucket": "product-images",
+        "storage_path": "media/f6c5399c-b311-4ed1-9cc4-7f21ed4b5da0/buje-reduccion-corto-hembra-hembra-pn16.webp",
+        "checksum": "5d31e8f86478d9d48d6dc663d495e7e8c0395181f8c41524234b3c6a4c1c1e9f",
+        "file_size": 7132,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "8ebf06cc-4d91-495e-8de9-a07f27cb6300",
+        "bucket": "product-images",
+        "storage_path": "media/8ebf06cc-4d91-495e-8de9-a07f27cb6300/manguito-rosca-macho-pn16.webp",
+        "checksum": "2139fef30e7e7eafeb0da302012b6a3114bf70a6df0bd4aaa38a4ed01329c56d",
+        "file_size": 14234,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "187107e0-fc9d-4776-8aed-509e7716d647",
+        "bucket": "product-images",
+        "storage_path": "media/187107e0-fc9d-4776-8aed-509e7716d647/union-alfa-rapid-plastica-victaulica.webp",
+        "checksum": "4008b4127e802417af4027db12e274c395f0c92075389925517b2ee9b8d92513",
+        "file_size": 12850,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "223dd8ca-deb5-4af1-aac3-280ece7fbf22",
+        "bucket": "product-images",
+        "storage_path": "media/223dd8ca-deb5-4af1-aac3-280ece7fbf22/conector-para-unir-tuberia.webp",
+        "checksum": "b28d3dc95d8e589ff693407c6337373dc4b6183e0317958c06d094348fb87115",
+        "file_size": 5916,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "59b7f4bc-0e77-4345-8c03-f5f912581414",
+        "bucket": "product-images",
+        "storage_path": "media/59b7f4bc-0e77-4345-8c03-f5f912581414/aro-de-goma.webp",
+        "checksum": "18f9addf2e206d08ed3abb28b7fb9bbffaa3412bc6ed87c36fc0f796f4efc48c",
+        "file_size": 4682,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "8859b00e-0a41-49a4-a37c-2575071feff3",
+        "bucket": "product-images",
+        "storage_path": "media/8859b00e-0a41-49a4-a37c-2575071feff3/junta-de-reparacion-era.webp",
+        "checksum": "de4454820882d2f77aae2ac8f6c42851a90e47b30629e8d0b5df75f611733339",
+        "file_size": 24216,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "f35f9965-bf3a-41b9-82ad-d67b9af1f341",
+        "bucket": "product-images",
+        "storage_path": "media/f35f9965-bf3a-41b9-82ad-d67b9af1f341/brida.webp",
+        "checksum": "b6ab0f99903c20b53379c8493676ebcbe67f4fc964ab84c430e390216c5fb82f",
+        "file_size": 14994,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "be1c58f8-4cc6-4469-b854-b6501247eba3",
+        "bucket": "product-images",
+        "storage_path": "media/be1c58f8-4cc6-4469-b854-b6501247eba3/cupla.webp",
+        "checksum": "8b93feb728bd75b86c7f16e323a788b4712302ac4254a6f74fbc24d02ee7e58a",
+        "file_size": 42374,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "d4169c45-c141-4791-95ad-fcce51cff355",
+        "bucket": "product-images",
+        "storage_path": "media/d4169c45-c141-4791-95ad-fcce51cff355/cupla-de-reduccion.webp",
+        "checksum": "15313ab9504c6eebbcca4960a7e9a2abccc86280aa09ad6c7000af5071931468",
+        "file_size": 30026,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "89287ae2-c5bc-4e28-8605-6373201dbd8b",
+        "bucket": "product-images",
+        "storage_path": "media/89287ae2-c5bc-4e28-8605-6373201dbd8b/codo-90.webp",
+        "checksum": "8be41452a16e8359f042b53f0bc281ff9c59779bbdcbfd9be8e54c7d627ac1e3",
+        "file_size": 33204,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "17ebea32-c7b9-4e86-9222-6b2b45c33c2a",
+        "bucket": "product-images",
+        "storage_path": "media/17ebea32-c7b9-4e86-9222-6b2b45c33c2a/codo-45.webp",
+        "checksum": "6317711df7fa456d7bdfeb94ca5a1d628710eaa3835f2c6f0c885cd8319f0212",
+        "file_size": 21750,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "57316a99-f86e-43cd-8e65-f9bbac830a86",
+        "bucket": "product-images",
+        "storage_path": "media/57316a99-f86e-43cd-8e65-f9bbac830a86/te-de-90.webp",
+        "checksum": "f100ee68b0fde7cb7628689a5afb6f2939800506b963fd1c62be9d2aeb1602f6",
+        "file_size": 32050,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "83965e11-3eae-4c46-b5bb-4299d105c015",
+        "bucket": "product-images",
+        "storage_path": "media/83965e11-3eae-4c46-b5bb-4299d105c015/tapa.webp",
+        "checksum": "660f73ebaed299a32a5a384c78bfd3fda1cf3ace8eff4aa63fecdc8d7abc162d",
+        "file_size": 28680,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "0fe2271e-7243-4730-8b2f-b8791f768e21",
+        "bucket": "product-images",
+        "storage_path": "media/0fe2271e-7243-4730-8b2f-b8791f768e21/cruces-de-pvc.webp",
+        "checksum": "53b695ddbae144f2ba0d4f99579d6d99b1d73323e4d5d0da515dba38d5c10c48",
+        "file_size": 3810,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "eea2fdae-fea9-40b7-99c4-ebd752dcae6f",
+        "bucket": "product-images",
+        "storage_path": "media/eea2fdae-fea9-40b7-99c4-ebd752dcae6f/inyector-de-fertilizante-tipo-venturi.webp",
+        "checksum": "8ca2b47f2caa958f69cebf0826bbb4582169a0275c96bed1c0342577c1b0c0ff",
+        "file_size": 7874,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "ca343252-43c4-4636-bf19-185a0444b290",
+        "bucket": "product-images",
+        "storage_path": "media/ca343252-43c4-4636-bf19-185a0444b290/inyector-de-fertilizante-venturi-con-kit-3-4-y-1.webp",
+        "checksum": "7b001867dc989fedffa07797428ed1eeaa1a9fd3f91a4a33b30abce995f122a4",
+        "file_size": 16578,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "a23a2e69-c859-4072-ae61-fa88f4eea30b",
+        "bucket": "product-images",
+        "storage_path": "media/a23a2e69-c859-4072-ae61-fa88f4eea30b/inyectores-de-fertilizantes-venturi-alfa.webp",
+        "checksum": "1da1247cea51dff1cb04d546386fec2ff11d92bc67f6e3778e3791fd665bcf51",
+        "file_size": 15570,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "bac04b59-3eb4-4c84-90ff-24c7f8b3e3b5",
+        "bucket": "product-documents",
+        "storage_path": "media/bac04b59-3eb4-4c84-90ff-24c7f8b3e3b5/152imgdesc1.webp",
+        "checksum": "1a61b314d8c7526017c2599c6cdef03dbb5acb7eac077f19648865ec243c8d91",
+        "file_size": 36924,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "da6deea7-1f21-4801-b910-db1917bc9f29",
+        "bucket": "product-images",
+        "storage_path": "media/da6deea7-1f21-4801-b910-db1917bc9f29/conector-inicial-con-aro-de-goma-recto.webp",
+        "checksum": "a4b3c8a19d73137aba6d0618b17b13e019f98627b56e3da8548810a5b9a84953",
+        "file_size": 10198,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "9921828c-b2cb-4f5e-9c39-9297849bc652",
+        "bucket": "product-images",
+        "storage_path": "media/9921828c-b2cb-4f5e-9c39-9297849bc652/conector-inicial-con-aro-de-goma-bilabiado-2.webp",
+        "checksum": "dd0a1f4844cd72539e76cd4d73343fcbbd4feefb5b92e5cc5e17bbad21583aa9",
+        "file_size": 9874,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "5eea9c03-6f43-431d-986d-4cae9039c485",
+        "bucket": "product-images",
+        "storage_path": "media/5eea9c03-6f43-431d-986d-4cae9039c485/conector-inicial-con-aro-de-goma-bilabiado-3.webp",
+        "checksum": "4b03edfdd08356fb687b62cdc705fb68e6c0ce648b103a094a3db94144d4bc1c",
+        "file_size": 8512,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "53da7b06-ed10-4227-a619-daf360c17c58",
+        "bucket": "product-images",
+        "storage_path": "media/5eea9c03-6f43-431d-986d-4cae9039c485/conector-inicial-con-aro-de-goma-bilabiado-3.webp",
+        "checksum": "4b03edfdd08356fb687b62cdc705fb68e6c0ce648b103a094a3db94144d4bc1c",
+        "file_size": 8512,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "a3fc4177-704f-41c7-82d7-320ab110f640",
+        "bucket": "product-images",
+        "storage_path": "media/a3fc4177-704f-41c7-82d7-320ab110f640/conector-inicial-con-aro-de-goma-bilabiado.webp",
+        "checksum": "87de16892ecf98313598a0f06e5d363021d668c9a49e1eef6c69164ecf7c3e5c",
+        "file_size": 7258,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "e8335435-e58c-4639-8400-02e6ff36a088",
+        "bucket": "product-images",
+        "storage_path": "media/e8335435-e58c-4639-8400-02e6ff36a088/t-rosca-hembra-para-polietileno-de-alta-densidad.webp",
+        "checksum": "5fa2f47509256ee5738676832f8f8a35ce74bb3ee623ac1d6109e8c476207093",
+        "file_size": 34752,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "ddc7079e-9470-44a9-9417-9e87bf9665bc",
+        "bucket": "product-documents",
+        "storage_path": "media/ddc7079e-9470-44a9-9417-9e87bf9665bc/cuadro01.webp",
+        "checksum": "03604efb51cd7e99d6f637e4e3b187abcbebd9012462c091e0ca1b61cf585714",
+        "file_size": 46322,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "25b2dc68-3984-412d-9c3a-d0e0d5b620c2",
+        "bucket": "product-images",
+        "storage_path": "media/25b2dc68-3984-412d-9c3a-d0e0d5b620c2/te-rosca-macho-para-polietileno-de-alta-densidad.webp",
+        "checksum": "cdc47eccdde43d45e94a4d0f41c7ab59fc7765590ed172d5a6eac3e395922806",
+        "file_size": 8202,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "65afc1c4-e0b2-4aca-a0dc-dd17a539e902",
+        "bucket": "product-documents",
+        "storage_path": "media/65afc1c4-e0b2-4aca-a0dc-dd17a539e902/TE-RM.webp",
+        "checksum": "6c9740c0bbe3c935867ece4758b220d2b063fcf515f4b166f274afd23e8e464a",
+        "file_size": 76612,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "203e8c64-5042-4cd6-b994-132187bf2194",
+        "bucket": "product-images",
+        "storage_path": "media/203e8c64-5042-4cd6-b994-132187bf2194/union-para-polietileno-de-alta-densidad.webp",
+        "checksum": "1ed595807ae4328f3951cf83a2ea4b32c3705785030c1427021f3499b4b5ddec",
+        "file_size": 8116,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "8d05e311-5142-4f30-8eb9-ea43f27c60e5",
+        "bucket": "product-documents",
+        "storage_path": "media/8d05e311-5142-4f30-8eb9-ea43f27c60e5/Union.webp",
+        "checksum": "ff0999c52f387adf481764405221fb46ec079bd7d9a79196743e91c121f68ebd",
+        "file_size": 53882,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "c20730c1-b1d4-49c8-8057-de27d01f7c35",
+        "bucket": "product-images",
+        "storage_path": "media/c20730c1-b1d4-49c8-8057-de27d01f7c35/reduccion-para-polietileno-de-alta-densidad.webp",
+        "checksum": "0c985d8465b6a555f18077ac9faa6d51c6a4c137bfa6abaee3e453dc751625bb",
+        "file_size": 10046,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "646f6809-3db6-438e-b035-140bb67cd521",
+        "bucket": "product-documents",
+        "storage_path": "media/646f6809-3db6-438e-b035-140bb67cd521/reduccion-11.webp",
+        "checksum": "3eeb890013e115d43e38874304b362696ec240d0f51c11e07fef0d4958b549c4",
+        "file_size": 54256,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "75d9617e-1faf-4dde-8e4e-953c215afa6a",
+        "bucket": "product-images",
+        "storage_path": "media/75d9617e-1faf-4dde-8e4e-953c215afa6a/codo-de-90-para-polietileno-de-alta-densidad.webp",
+        "checksum": "89a0c09e7632d8d6a905c2ce9e9563f99dc8fdc99bf6dbb82ff20baa78c98de8",
+        "file_size": 8030,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "2f17e108-c8d2-4d2d-80d7-1ef41bb83a8a",
+        "bucket": "product-documents",
+        "storage_path": "media/2f17e108-c8d2-4d2d-80d7-1ef41bb83a8a/codo-90-11.webp",
+        "checksum": "fb26bc3f459df1498151b809bfc8e52854029f2e0037658e5e811304ab6ee831",
+        "file_size": 45590,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "f93080b2-32d8-42c1-b769-9d907093a0ef",
+        "bucket": "product-images",
+        "storage_path": "media/f93080b2-32d8-42c1-b769-9d907093a0ef/te-para-polietileno-de-alta-densidad.webp",
+        "checksum": "0e12820c8665dc8da76c803095baefa31cc87db0758bc0b89ed380a727bdedfe",
+        "file_size": 7524,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "110a6ccd-67f5-46fb-bcd4-a044bc8f983b",
+        "bucket": "product-documents",
+        "storage_path": "media/110a6ccd-67f5-46fb-bcd4-a044bc8f983b/TE.webp",
+        "checksum": "bac3f066526a3cc222c5c7edcea4b171b8985c4a34e8aa9239018700098331f6",
+        "file_size": 61276,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "fe4f04ae-9583-427a-bd42-a60da7d6a143",
+        "bucket": "product-images",
+        "storage_path": "media/fe4f04ae-9583-427a-bd42-a60da7d6a143/final-de-linea-para-polietileno-de-alta-densidad.webp",
+        "checksum": "2e309663328d307db6a9b9f566c9ec2f575c4cf40f31a958394e4587cd945287",
+        "file_size": 7370,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "7aeb84f2-3d4f-4e83-9790-31696a56842f",
+        "bucket": "product-documents",
+        "storage_path": "media/7aeb84f2-3d4f-4e83-9790-31696a56842f/Tapon.webp",
+        "checksum": "067d1a6744b71cb5eccac1d93d1c03b48882f6aa18f20eeb37d8cdad745cace6",
+        "file_size": 39138,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "b4443a06-91d7-4aab-a792-6b4303f901aa",
+        "bucket": "product-images",
+        "storage_path": "media/b4443a06-91d7-4aab-a792-6b4303f901aa/union-para-polietileno-de-alta-densidad-2.webp",
+        "checksum": "b66efe59acef6756079e4ec90db828ce661e2ea5906f42a0bfaa0478467fab25",
+        "file_size": 7700,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "75455751-126e-47a4-8c67-01aba02143df",
+        "bucket": "product-images",
+        "storage_path": "media/75455751-126e-47a4-8c67-01aba02143df/reduccion-para-polietileno-de-alta-densidad-2.webp",
+        "checksum": "36d7806f4f79c4fa02140d4697cd7629cdfc8085ec22988ee78703f0b2139214",
+        "file_size": 8146,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "cea9e1bb-fc7e-44f8-9969-0427e1865c2a",
+        "bucket": "product-images",
+        "storage_path": "media/cea9e1bb-fc7e-44f8-9969-0427e1865c2a/codo-de-90-para-polietileno-de-alta-densidad-2.webp",
+        "checksum": "f2b4fa39a5256212ad6013f2ed20ad64d34707ce3088210da2617a3153566125",
+        "file_size": 6110,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "47091152-f059-4b26-83a9-170c98f8b662",
+        "bucket": "product-images",
+        "storage_path": "media/47091152-f059-4b26-83a9-170c98f8b662/codo-de-90-para-polietileno-de-alta-densidad-copia.webp",
+        "checksum": "8c976bda50a17fd80d25d8e2e421d45b4023836f7124a40d0853382d848d034f",
+        "file_size": 12210,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "cb949801-919c-4bc5-9369-80e8776aecad",
+        "bucket": "product-images",
+        "storage_path": "media/cb949801-919c-4bc5-9369-80e8776aecad/final-de-linea-para-polietileno-de-alta-densidad-2.webp",
+        "checksum": "1a753a4a35e14495b923cf313bfff608a3d5fcc00aa09ebeeabcdc6fc0475b01",
+        "file_size": 14110,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "014f07d2-4b32-4e5f-bb65-11ea8256937c",
+        "bucket": "product-images",
+        "storage_path": "media/014f07d2-4b32-4e5f-bb65-11ea8256937c/estaca-para-tuberia-16mm-y-20mm.webp",
+        "checksum": "a3f8b2c96bfb50ca8af73336503e0536e6127ac8d4d40d0cd34d52ce4b9f4333",
+        "file_size": 5112,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "ec3c3df0-423b-499a-897c-e80d391dfe12",
+        "bucket": "product-images",
+        "storage_path": "media/ec3c3df0-423b-499a-897c-e80d391dfe12/conector-espiga-espiga-reforzado.webp",
+        "checksum": "4379f32c33bee09e95ed8f45e1d37175af58df3f14ec40dbd6a2ba12a40b8be1",
+        "file_size": 5684,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "570e97ba-4b11-4b5c-b5f1-9a4d884c0a84",
+        "bucket": "product-images",
+        "storage_path": "media/570e97ba-4b11-4b5c-b5f1-9a4d884c0a84/codo-espiga-x-rosca-macho.webp",
+        "checksum": "9c8b94422843c666d303c2d9737ee2537a44bad4d0eca8fa280bb98b1c05c6e9",
+        "file_size": 9082,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "6c0ce340-14ac-428b-8129-90daf5b0c4af",
+        "bucket": "product-images",
+        "storage_path": "media/6c0ce340-14ac-428b-8129-90daf5b0c4af/t-espiga-x-espiga-x-espiga-2.webp",
+        "checksum": "706176766bab628fc1891bfecf4529778bdc62e0fbcaacdd2ec90d5bb4fd517e",
+        "file_size": 8102,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "a43cf84c-dbb0-4a50-a6ea-87b73d2b74fc",
+        "bucket": "product-images",
+        "storage_path": "media/a43cf84c-dbb0-4a50-a6ea-87b73d2b74fc/t-espiga-x-rosca-macho-x-espiga.webp",
+        "checksum": "868cfcb30976a579336121e8c3ca869c7f3db2e8de702b40efa06429426d61de",
+        "file_size": 10024,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "3caa0c0a-3dc7-45c8-a89e-2c8d8b310521",
+        "bucket": "product-images",
+        "storage_path": "media/3caa0c0a-3dc7-45c8-a89e-2c8d8b310521/codo-espiga-x-espiga.webp",
+        "checksum": "0f6b988e38ec46e64b1955734d9e2802b8d15da359b36fcfe671df0489e01f65",
+        "file_size": 4786,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "20f1b4c3-374d-4310-9405-1327736906ac",
+        "bucket": "product-images",
+        "storage_path": "media/20f1b4c3-374d-4310-9405-1327736906ac/manguito-roscado-macho.webp",
+        "checksum": "28f636b27c4c3cd06004c9e9ada8b18dac69e17cb1f8774446c1642fbec70ab9",
+        "file_size": 10038,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "7e47b2cc-8905-4b6c-bc7d-0d96b04ad4be",
+        "bucket": "product-images",
+        "storage_path": "media/7e47b2cc-8905-4b6c-bc7d-0d96b04ad4be/codo-roscado-para-polietileno-de-alta-densidad.webp",
+        "checksum": "c429548f67cf81522327cd19bb8999612c58b08b912d8a46e4941787aa8ae018",
+        "file_size": 6368,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "00e9ae56-1f71-4536-b06a-4a471b39fa73",
+        "bucket": "product-documents",
+        "storage_path": "media/00e9ae56-1f71-4536-b06a-4a471b39fa73/CODO-ROSCADO-11.webp",
+        "checksum": "5a35891f8e059564c6061750e0d2a1360e3984121785511e93d12132eef1cc38",
+        "file_size": 67410,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "1c711529-2f43-4e65-be44-8013b2fb2e05",
+        "bucket": "product-images",
+        "storage_path": "media/1c711529-2f43-4e65-be44-8013b2fb2e05/codo-roscado-para-polietileno-de-alta-densidad-2.webp",
+        "checksum": "393c921ed648bfbec2e4358a21766455d545e13415a7bbbb5af7f0291c319c64",
+        "file_size": 9746,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "8b6e3903-1c3e-484e-98bd-ced3e6e04ace",
+        "bucket": "product-images",
+        "storage_path": "media/8b6e3903-1c3e-484e-98bd-ced3e6e04ace/estaca-para-sujetar-tuberia-de-polietileno.webp",
+        "checksum": "09041840215ed5f01934fc3e5ebbf2eb90c8a4ce3c150f62352415708aa5fda5",
+        "file_size": 5828,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "35429c83-949a-4e85-9729-d60495e70669",
+        "bucket": "product-images",
+        "storage_path": "media/35429c83-949a-4e85-9729-d60495e70669/llave-de-ajuste-p-conectores-pead.webp",
+        "checksum": "a53b5604f84fa83da3de7d89edd31912ad35edef9b43fd47ffccfadf6e84f085",
+        "file_size": 7574,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "b35b7a6d-a506-4db9-b121-90158b3e8c6f",
+        "bucket": "product-documents",
+        "storage_path": "media/b35b7a6d-a506-4db9-b121-90158b3e8c6f/LLave.webp",
+        "checksum": "3f6895e8441689ca89a2d6be91d64003b5cc07739aca10d2a324563dd846432a",
+        "file_size": 15826,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "a088e0b7-90d6-4389-b870-c396eb918552",
+        "bucket": "product-images",
+        "storage_path": "media/a088e0b7-90d6-4389-b870-c396eb918552/tapon-enmienda-error-4-y-6-mm.webp",
+        "checksum": "bd2f916661663cc9d27e675607005e756152cf66f60049df14b6f9f7dbd25a6f",
+        "file_size": 5060,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "ba4d09a3-b8b4-40af-95c8-723d0d9bab31",
+        "bucket": "product-images",
+        "storage_path": "media/ba4d09a3-b8b4-40af-95c8-723d0d9bab31/valvula-espiga-x-espiga.webp",
+        "checksum": "462de24308294ad848652f834aa43df7daefb0c51624bfeadbb1d0e247158d29",
+        "file_size": 8756,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "c8aa295f-d39d-4a27-8351-f5fac94e8536",
+        "bucket": "product-images",
+        "storage_path": "media/c8aa295f-d39d-4a27-8351-f5fac94e8536/sacabocado-13-mm.webp",
+        "checksum": "2eb23d399ec6f9b408fca470aa95f05ef650ea75f928053be8c215f33886e93f",
+        "file_size": 9874,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "bf99e74c-520e-44cf-90e1-a64a0e48beca",
+        "bucket": "product-images",
+        "storage_path": "media/bf99e74c-520e-44cf-90e1-a64a0e48beca/sacabocado-lay-flat.webp",
+        "checksum": "cd2c33d036c65688cdbdb71c223fb52fdb8c15e70bf93c07b7f67c50f05adf80",
+        "file_size": 4514,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "0aeb2a7e-60f3-430c-92f8-7930fb2d1a79",
+        "bucket": "product-images",
+        "storage_path": "media/0aeb2a7e-60f3-430c-92f8-7930fb2d1a79/conector-lay-flat.webp",
+        "checksum": "5c38876b6e2988bcaa48371db527b8b592df2376b454a7210c5262915429f83e",
+        "file_size": 19586,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "a9f43bd2-116b-4e0e-9cc4-0a2986a3b110",
+        "bucket": "product-images",
+        "storage_path": "media/a9f43bd2-116b-4e0e-9cc4-0a2986a3b110/conector-tipo-t.webp",
+        "checksum": "2aeae5c51a11dcea42205bb799f4fef8e15b04512bc54045db491e851f38a314",
+        "file_size": 5216,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "51161a8e-5942-41ec-9dc1-15d3f60ab7ae",
+        "bucket": "product-images",
+        "storage_path": "media/51161a8e-5942-41ec-9dc1-15d3f60ab7ae/adaptador-rosca-macho-para-lay-flat.webp",
+        "checksum": "c2ebd2ce1df8a9b9b43c9011ea007f1f1ec45d436c514fb3920240cad1e9d0b9",
+        "file_size": 14362,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "3c8c6e41-f995-4b88-84e8-72a26c101b43",
+        "bucket": "product-images",
+        "storage_path": "media/3c8c6e41-f995-4b88-84e8-72a26c101b43/adaptador-rosca-macho-para-lay-flat-2.webp",
+        "checksum": "269a04d994338e3ecd1ce2fd0587a963ab3b2c5a2eea37a40e63a4fbfe953507",
+        "file_size": 19656,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "cf956d08-2b48-45a8-8adb-2004c4adb63f",
+        "bucket": "product-images",
+        "storage_path": "media/cf956d08-2b48-45a8-8adb-2004c4adb63f/final-de-linea-para-lay-flat.webp",
+        "checksum": "3bae8231065b8d0688cd327a55451c7cefbcc487c8163dd285a5eb7362b46393",
+        "file_size": 12080,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "d1e7f267-bfbe-4d81-b5e8-9d10341d15e0",
+        "bucket": "product-documents",
+        "storage_path": "media/d1e7f267-bfbe-4d81-b5e8-9d10341d15e0/Final-de-linea.webp",
+        "checksum": "9f50cc0455e20ed0f0fa9ff14337ca5bb55eeed84c4ac98fe8845192d3f8d0ab",
+        "file_size": 37436,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "829c1948-57c2-4d36-a515-f172b1651dc2",
+        "bucket": "product-images",
+        "storage_path": "media/829c1948-57c2-4d36-a515-f172b1651dc2/final-de-linea-tipo-8-2.webp",
+        "checksum": "ace5e82a57ca9c953f4f57e5e8f90b3cf60c37eac8003ef4c0315cb09b9f6dfd",
+        "file_size": 7008,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "653b8009-f7c3-4ae9-b2c8-26932cf82237",
+        "bucket": "product-images",
+        "storage_path": "media/653b8009-f7c3-4ae9-b2c8-26932cf82237/tapon-final-de-linea-2.webp",
+        "checksum": "590ef38fc0f62066af060ecf42c9f74a2e0acc1ab04691a16b774c768a928d96",
+        "file_size": 3894,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "2d8e755b-b456-4c6c-8811-26af12def5f4",
+        "bucket": "product-images",
+        "storage_path": "media/2d8e755b-b456-4c6c-8811-26af12def5f4/rs-pw-2185.webp",
+        "checksum": "afe7afb2b6b307502c6141e8e3862b50545a21d2792b89154a190c64fdeeb0cd",
+        "file_size": 15336,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "544a66c7-8b58-4ccd-b9b5-ed59b005f4a9",
+        "bucket": "product-images",
+        "storage_path": "media/544a66c7-8b58-4ccd-b9b5-ed59b005f4a9/pw-2195-pw-2197.webp",
+        "checksum": "b434af062cb153777d0c493e83e6273fcbf4b264f095baa540b8763f0ec1ebd2",
+        "file_size": 8308,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "f64fef72-8d3c-4729-be1d-7d8675045a0c",
+        "bucket": "product-images",
+        "storage_path": "media/f64fef72-8d3c-4729-be1d-7d8675045a0c/pw-2120-pw-2130.webp",
+        "checksum": "ac8d98f3086b5694bef5a9a820a1a26491fd3b709a0926580ea26670b25dcdf2",
+        "file_size": 14500,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "039eed99-bf01-41cd-b913-25fbdd427ad6",
+        "bucket": "product-images",
+        "storage_path": "media/039eed99-bf01-41cd-b913-25fbdd427ad6/pw-2140-pw-2150.webp",
+        "checksum": "6a677c342a73998db5d6e43fbbf57e2ce94732a10d0de5829494acba1083b4e6",
+        "file_size": 14088,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "2628138e-99d8-4e5e-8c4c-1155d0b4d8e2",
+        "bucket": "product-images",
+        "storage_path": "media/2628138e-99d8-4e5e-8c4c-1155d0b4d8e2/pw-2210.webp",
+        "checksum": "2f93a85f337138ab7c0bad30fe248342690bfe5152e49f47d487165af1d2b5e7",
+        "file_size": 9676,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "edf2ca4e-ca1a-4814-9a5b-e8c3df87da98",
+        "bucket": "product-images",
+        "storage_path": "media/edf2ca4e-ca1a-4814-9a5b-e8c3df87da98/pw-2100-pw-2110.webp",
+        "checksum": "8590a0c30e63ccbee86c8a88bcdef32a08f69a8eba30eedde300ab02712c2536",
+        "file_size": 16330,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "45958542-25f3-4369-ab91-e5366afb5abe",
+        "bucket": "product-images",
+        "storage_path": "media/45958542-25f3-4369-ab91-e5366afb5abe/pw-2200.webp",
+        "checksum": "f315b3b0595f4e03bb85453ba8a2f5d92bb3dcba9985a26d73e615ec1f89b24f",
+        "file_size": 7934,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "ceeef1e7-b474-4d52-8a44-79bede5cd487",
+        "bucket": "product-images",
+        "storage_path": "media/ceeef1e7-b474-4d52-8a44-79bede5cd487/union-para-lay-flat.webp",
+        "checksum": "79119894ff6ed59ce1b68d8174c82a3f36a0e238dec157aece8e69dd3cd237fd",
+        "file_size": 14976,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "dac51979-f027-4e75-a4e6-358d373c9dcf",
+        "bucket": "product-documents",
+        "storage_path": "media/dac51979-f027-4e75-a4e6-358d373c9dcf/union-11-11-1.webp",
+        "checksum": "247630f0541a42eaa40d710041c583825a6da4aea2539568e809e1f91ed7732a",
+        "file_size": 54426,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "95e533c6-266f-4b27-b1d2-c86facbcc096",
+        "bucket": "product-images",
+        "storage_path": "media/95e533c6-266f-4b27-b1d2-c86facbcc096/reduccion-para-lay-flat.webp",
+        "checksum": "82e30e7e56d275b594810efddf0da517852ccfd210948d97397e7db9e9076baf",
+        "file_size": 17180,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "be804289-d4ce-40e8-8bb8-ebf71e165bad",
+        "bucket": "product-documents",
+        "storage_path": "media/be804289-d4ce-40e8-8bb8-ebf71e165bad/Reduccion.webp",
+        "checksum": "73b7a65ae0e96c50576df2f07518c63314f85e626c5c0c6f3205bfefb9d74f0c",
+        "file_size": 48090,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "c42cf6ed-832e-4020-94d9-06c4c1a52876",
+        "bucket": "product-images",
+        "storage_path": "media/c42cf6ed-832e-4020-94d9-06c4c1a52876/pw-2220.webp",
+        "checksum": "d71577f6fc387b014b845eae600b608c737c60d778ca2d4f5e08a74156ba625c",
+        "file_size": 12800,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "7d7f5fb9-7682-45f4-8a0c-782253b8fd07",
+        "bucket": "product-images",
+        "storage_path": "media/7d7f5fb9-7682-45f4-8a0c-782253b8fd07/wi-2526.webp",
+        "checksum": "b988c0bc080612c58fed7bc065780c9247923cf3e26a01d341195a77ac5cb2e8",
+        "file_size": 9274,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "95f6acba-a97b-4ab5-8aee-e7975b1976b0",
+        "bucket": "product-images",
+        "storage_path": "media/95f6acba-a97b-4ab5-8aee-e7975b1976b0/adaptador-rosca-hembra-para-polietileno-de-alta-densidad.webp",
+        "checksum": "ec5e660bbcf20fb60a5cf3b513b04536d5b0b8aee29e0abde9a46b346f612238",
+        "file_size": 8806,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "056ff8d5-a7e6-4009-b338-54ede4fb1bcc",
+        "bucket": "product-documents",
+        "storage_path": "media/056ff8d5-a7e6-4009-b338-54ede4fb1bcc/Adap-RH.webp",
+        "checksum": "443c33fe46f008285180559cb377df30cb0256fc04dc52682aba26c70173cbed",
+        "file_size": 61160,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "8d6b24a1-5723-44f6-89c1-8b4de7ffd222",
+        "bucket": "product-images",
+        "storage_path": "media/8d6b24a1-5723-44f6-89c1-8b4de7ffd222/adaptador-rosca-macho-para-polietileno-de-alta-densidad.webp",
+        "checksum": "4afe5a86e5301958b5fafec510b9843debe45756dd98b3f4ef0da0cf71e3df97",
+        "file_size": 6878,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "2d4f3f57-4d0f-4a57-b3da-1ec22e62931a",
+        "bucket": "product-documents",
+        "storage_path": "media/2d4f3f57-4d0f-4a57-b3da-1ec22e62931a/Adap-RM.webp",
+        "checksum": "2f4b0a1ae51fce1b57c678ac2f7740c8289b495ed67370c55482cfe5b8f3fc88",
+        "file_size": 63218,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "98679044-7e23-49c1-8d8c-1d61e403775e",
+        "bucket": "product-images",
+        "storage_path": "media/98679044-7e23-49c1-8d8c-1d61e403775e/kit-de-succion.webp",
+        "checksum": "a068e60e7241fb17a994604afff323a9fd0ff43967222b70b58cb17ad083bb5f",
+        "file_size": 11976,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "ec88b2b0-ea9f-4b6d-bb6e-449bc22bfaf2",
+        "bucket": "product-images",
+        "storage_path": "media/ec88b2b0-ea9f-4b6d-bb6e-449bc22bfaf2/pead.webp",
+        "checksum": "4c2002ec2142f85cdada4a6bb408ea0f7a9375692ddf93c6be5f94123fa820c4",
+        "file_size": 10856,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "d22b20b4-14c9-4c2b-ac74-19b2c4d5cd3e",
+        "bucket": "product-images",
+        "storage_path": "media/d22b20b4-14c9-4c2b-ac74-19b2c4d5cd3e/pw-3585.webp",
+        "checksum": "a30c44d17dc0652da56f6ff0f4628c5b6bfd4b214246bf620fd74962f4d5bd6b",
+        "file_size": 9860,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "b6f5ddfa-3bf7-4d8a-937f-1bc736e0e930",
+        "bucket": "product-images",
+        "storage_path": "media/b6f5ddfa-3bf7-4d8a-937f-1bc736e0e930/pw-3565.webp",
+        "checksum": "b562171cd769733a66678a61b914b11b06aaff4a10a44ba47f8eec8910da0bd3",
+        "file_size": 11528,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "3d837592-13c4-4c79-819d-447016fb68ba",
+        "bucket": "product-images",
+        "storage_path": "media/3d837592-13c4-4c79-819d-447016fb68ba/pw-4710-2.webp",
+        "checksum": "d77e93ca3d8fc42d6bd9f2931c1cb9b4cb918243c0abd1fd97bc8d668e89ed44",
+        "file_size": 14988,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "251141c6-136d-438d-a81b-b706d608af1d",
+        "bucket": "product-images",
+        "storage_path": "media/251141c6-136d-438d-a81b-b706d608af1d/pw-4710.webp",
+        "checksum": "3d9dcbc7d90a117dbfedff3504f3e73f9a145ba25020d45c23d8693537a30483",
+        "file_size": 15122,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "f745f4a7-c0c5-4b90-a2bd-5f0707ef7a72",
+        "bucket": "product-images",
+        "storage_path": "media/f745f4a7-c0c5-4b90-a2bd-5f0707ef7a72/pw-4350.webp",
+        "checksum": "83b1293989096415db2f78ea13deebba037947a3ad4db01722a3e1474e7f2ca2",
+        "file_size": 15220,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "82c104d7-938d-4ce7-bc1d-4e2242805cae",
+        "bucket": "product-images",
+        "storage_path": "media/82c104d7-938d-4ce7-bc1d-4e2242805cae/manguera-reforzada-anti-torsion.webp",
+        "checksum": "99ffb7678d5023d0a658969093cf20a9c51581b680b07053448ac756459d2899",
+        "file_size": 22434,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "216fead2-df3a-42f9-939d-17217a7f4dc7",
+        "bucket": "product-documents",
+        "storage_path": "media/216fead2-df3a-42f9-939d-17217a7f4dc7/690imgdesc1.webp",
+        "checksum": "4eed8cd60c8ca64a84124d963e1afbf1bd6716ac223d3439df3133f2ecaaa093",
+        "file_size": 17872,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "0efeabc0-0b89-4a60-85c1-9511bc3023a9",
+        "bucket": "product-images",
+        "storage_path": "media/0efeabc0-0b89-4a60-85c1-9511bc3023a9/manguera-c-enrollador-y-accesorios-de-10-metros.webp",
+        "checksum": "8ccfd703e5143309361d17193d1c8f3495e4f8807d5edf1484d44dd7cb353bb3",
+        "file_size": 21220,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "a759be93-97e2-419f-9af4-508b9f7138c1",
+        "bucket": "product-documents",
+        "storage_path": "media/a759be93-97e2-419f-9af4-508b9f7138c1/10-metros-Caracteristicas-tecnicas-1.webp",
+        "checksum": "e6d56bccbaee5b5d9771fd4fd6c3b755d8191574cfa633aa2b0d45127ab04896",
+        "file_size": 43022,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "ab3aa300-1c21-412f-a44c-1651adccb44b",
+        "bucket": "product-images",
+        "storage_path": "media/ab3aa300-1c21-412f-a44c-1651adccb44b/manguera-c-enrollador-y-accesorios-de-15-metros.webp",
+        "checksum": "a999a911c78217d9d27f5f960210e7a3776e3a8eec3a929180bcecf387819b09",
+        "file_size": 25490,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "a3c7fedf-b6cc-486f-903a-5c3ac9878827",
+        "bucket": "product-documents",
+        "storage_path": "media/a3c7fedf-b6cc-486f-903a-5c3ac9878827/15-Caracteristicas-tecnicas-2.webp",
+        "checksum": "0b1164014e582ba7caa50778e6d177e8c191469f5ace4d4a792ab1b08b999ec0",
+        "file_size": 58888,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "84eb52f9-c437-475c-b16e-08fdc8659573",
+        "bucket": "product-images",
+        "storage_path": "media/84eb52f9-c437-475c-b16e-08fdc8659573/manguera-c-enrollador-y-accesorios-de-20-metros.webp",
+        "checksum": "3d93a06ffebc874c74540d778df958532cfeabbe1b8d86517a2bdac3043e8f1e",
+        "file_size": 31618,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "2986ab2a-54fd-4fa5-8012-e72f85ab3891",
+        "bucket": "product-documents",
+        "storage_path": "media/2986ab2a-54fd-4fa5-8012-e72f85ab3891/20-metros-Caracteristicas-tecnicas-3.webp",
+        "checksum": "c2b3fc4e8f6b42f774703a15299f42f25d22e1e98abd24e80d0a45e9a317d464",
+        "file_size": 61432,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "09d55047-9df5-441d-b19f-341cc8cbc83b",
+        "bucket": "product-images",
+        "storage_path": "media/09d55047-9df5-441d-b19f-341cc8cbc83b/manguera-c-enrollador-y-accesorios-de-50-metros.webp",
+        "checksum": "583b11ad55b0e980bd8fc7cb4be9cde3dff9ba0b5d2709d6167c26c8ed696448",
+        "file_size": 20452,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "10debcf9-38a4-47ea-8b27-b6f06f78658a",
+        "bucket": "product-documents",
+        "storage_path": "media/10debcf9-38a4-47ea-8b27-b6f06f78658a/30-metros-Caracteristicas-tecnicas-4.webp",
+        "checksum": "6184461972a4cb8ee6c8a54b49804fcca6bd73c5fe5b017319c0e5a1afc888c1",
+        "file_size": 63068,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "16e8ec63-4736-4822-9552-b0aa7ab50811",
+        "bucket": "product-images",
+        "storage_path": "media/16e8ec63-4736-4822-9552-b0aa7ab50811/manguera-standard.webp",
+        "checksum": "7c730199c3f618f528e50c20ca931d135105fc8b2e5eb4cc1738b6aaa96f134d",
+        "file_size": 14410,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "b325cbfd-495c-4f1a-bcf1-f1b1f5f19423",
+        "bucket": "product-documents",
+        "storage_path": "media/b325cbfd-495c-4f1a-bcf1-f1b1f5f19423/689imgdesc1.webp",
+        "checksum": "e9fa15a88f6561813967d44dfb2d67b6ba9dac7de4e6de852c30d0948076a9fc",
+        "file_size": 11422,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "4df811a6-62b2-49b2-9161-84e7bc7be915",
+        "bucket": "product-images",
+        "storage_path": "media/4df811a6-62b2-49b2-9161-84e7bc7be915/wi-32100.webp",
+        "checksum": "f1e376af31172605029ed8e92c7c9dc106337d058c5e8bb275c24aac9ceabe50",
+        "file_size": 7596,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "a5a48bdd-c37d-49b5-8a54-c6a54f6ac5a3",
+        "bucket": "product-images",
+        "storage_path": "media/a5a48bdd-c37d-49b5-8a54-c6a54f6ac5a3/wi-32120.webp",
+        "checksum": "8b64fa1c460f421519ec8dc08312a1c2553753ba8891d661dda399dcf5177317",
+        "file_size": 8990,
+        "download_status": "uploaded"
+      },
+      {
+        "id": "81477170-7a21-4dc8-948d-207f4d5f1f73",
+        "bucket": "product-images",
+        "storage_path": "media/81477170-7a21-4dc8-948d-207f4d5f1f73/pw-4815.webp",
+        "checksum": "882dfa84e3601007ed35a8532d1f4d2d4af063a65d98cc5db0ca9bb0bfcc1078",
+        "file_size": 9874,
+        "download_status": "uploaded"
+      }
+    ]
+  },
+  "errors": [
+    {
+      "stage": "media",
+      "ref": "https://surerain.com/assets/productos-importados/valvula-aire-vacio-triple-efecto-compacta-rm-2%e2%80%b3-unirain.webp",
+      "message": "missing local file / source 404"
+    }
+  ],
+  "error_count": 1
+}

@@ -1,0 +1,3226 @@
+{
+  "generated_at": "2026-08-13T22:15:36.204Z",
+  "buckets": {
+    "product-images": [
+      {
+        "local_path": "media/products/vyr-26.webp",
+        "storage_path": "product-images/vyr-26.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/vyr-26.webp",
+        "checksum": "937b3efd18a3a7b97ae08ff6c17c7ca20a79d58d96876c1b2af8454272d3b6d7"
+      },
+      {
+        "local_path": "media/products/vyr-80-circular.webp",
+        "storage_path": "product-images/vyr-80-circular.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/vyr-80-circular.webp",
+        "checksum": "6b562b1ec7ea8e4eaa666790b8a41599f85b6109d60eae723e61cef6a2791830"
+      },
+      {
+        "local_path": "media/products/vyr-80-sectorizable.webp",
+        "storage_path": "product-images/vyr-80-sectorizable.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/vyr-80-sectorizable.webp",
+        "checksum": "0c28b564bc8b8a4ebb966dae95bc2ebe62ae95fe2625eb820437b9a98948b3db"
+      },
+      {
+        "local_path": "media/products/vyr-37.webp",
+        "storage_path": "product-images/vyr-37.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/vyr-37.webp",
+        "checksum": "883be7a2aff2a44f5ad8895bf4ab1e09ee9dfe2d9a9e1436b83650d8b2b2c8a2"
+      },
+      {
+        "local_path": "media/products/vyr-802.webp",
+        "storage_path": "product-images/vyr-802.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/vyr-802.webp",
+        "checksum": "9e06b3e27adabc9a19324d07d211bd742c0d00e7b709710d7617a0e63f68a29c"
+      },
+      {
+        "local_path": "media/products/vyr-56.webp",
+        "storage_path": "product-images/vyr-56.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/vyr-56.webp",
+        "checksum": "d5a5ad63b2c149624fbc6121ce3a39357ab519810bd5e81587a80d05066c6a20"
+      },
+      {
+        "local_path": "media/products/vyr-66.webp",
+        "storage_path": "product-images/vyr-66.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/vyr-66.webp",
+        "checksum": "f5ba971c25e4f40ad7d0f0504f47bc57eb899c7251af972714ed95abb09bd969"
+      },
+      {
+        "local_path": "media/products/vyr-23.webp",
+        "storage_path": "product-images/vyr-23.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/vyr-23.webp",
+        "checksum": "a4794b09aa88b5dea70ee109320efb9424c69d41212cb005de358d5eab184ef1"
+      },
+      {
+        "local_path": "media/products/vyr-33-plastico.webp",
+        "storage_path": "product-images/vyr-33-plastico.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/vyr-33-plastico.webp",
+        "checksum": "0b565fd76973c3f4e3b059af1eefe56e20b3cdc3ad348d6dc5e6133af6f26a5d"
+      },
+      {
+        "local_path": "media/products/vyr-33.webp",
+        "storage_path": "product-images/vyr-33.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/vyr-33.webp",
+        "checksum": "72f7b694dca456fecb8f918468f4d75bee5d449b59568af12f2f5a1d66f77318"
+      },
+      {
+        "local_path": "media/products/vyr-60.webp",
+        "storage_path": "product-images/vyr-60.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/vyr-60.webp",
+        "checksum": "bd08ce921a0a7c643113b4ceb629e6738f96b86c5de69755644209cc7d41c0c2"
+      },
+      {
+        "local_path": "media/products/vyr-86.webp",
+        "storage_path": "product-images/vyr-86.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/vyr-86.webp",
+        "checksum": "85925a1e11f015fcb71d717c01d1b2f332d1bfaa3cf5d351403ef1f7fa5b3824"
+      },
+      {
+        "local_path": "media/products/vyr-166.webp",
+        "storage_path": "product-images/vyr-166.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/vyr-166.webp",
+        "checksum": "a2282d3c7c12130a1f790a00c47a06f37ae5e033225f76c01deb43ac87b883f7"
+      },
+      {
+        "local_path": "media/products/vyr-70-v.webp",
+        "storage_path": "product-images/vyr-70-v.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/vyr-70-v.webp",
+        "checksum": "885ab76418a17a2c93ceb9ea152a8813e53a042db908100081f214382dc4721e"
+      },
+      {
+        "local_path": "media/products/vyr-65.webp",
+        "storage_path": "product-images/vyr-65.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/vyr-65.webp",
+        "checksum": "175535398ae20db04a272f4440551441f7a5253562778c17751fa1a2fa9df967"
+      },
+      {
+        "local_path": "media/products/vyr-155.webp",
+        "storage_path": "product-images/vyr-155.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/vyr-155.webp",
+        "checksum": "e009d1e3fc4b768c8e2e7c6a9ac53a6aa24919bcdfe8fb8c248c699d94e48437"
+      },
+      {
+        "local_path": "media/products/vyr-150.webp",
+        "storage_path": "product-images/vyr-150.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/vyr-150.webp",
+        "checksum": "25c32e308bab9dac7b681cec66ea3ebbe6da251e4522829b3c2f219f517ff328"
+      },
+      {
+        "local_path": "media/products/assr-8427.webp",
+        "storage_path": "product-images/assr-8427.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/assr-8427.webp",
+        "checksum": "fadd640bcbfeda89edb4ec8d60345d30708cfd292968fa36d90f14da3a2aef45"
+      },
+      {
+        "local_path": "media/products/assr-8022.webp",
+        "storage_path": "product-images/assr-8022.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/assr-8022.webp",
+        "checksum": "e89011be7d4a7c823f65a3c0e1ebc847b1efd7c5cb8cc7fc3f45ac0022fbc410"
+      },
+      {
+        "local_path": "media/products/pl-3100.webp",
+        "storage_path": "product-images/pl-3100.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/pl-3100.webp",
+        "checksum": "a54f9c7f4f6729c9ce0f6921686a402d792ccf282ededeedfb47f70772b283f4"
+      },
+      {
+        "local_path": "media/products/aspersor-oscilante-de-angulo-ajustable.webp",
+        "storage_path": "product-images/aspersor-oscilante-de-angulo-ajustable.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/aspersor-oscilante-de-angulo-ajustable.webp",
+        "checksum": "ed15d4ce5075b4154b1408e01782592b648e305318e6ac233770c4e2c8afb6e8"
+      },
+      {
+        "local_path": "media/products/boquilla-ajustable-rosca-hembra.webp",
+        "storage_path": "product-images/boquilla-ajustable-rosca-hembra.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/boquilla-ajustable-rosca-hembra.webp",
+        "checksum": "8f38792754a5f673a264ef6a5cc6c81ae5fd45b77d2829dab553f71b93c1e8da"
+      },
+      {
+        "local_path": "media/products/boquilla-ajustable-rosca-macho.webp",
+        "storage_path": "product-images/boquilla-ajustable-rosca-macho.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/boquilla-ajustable-rosca-macho.webp",
+        "checksum": "aba8acd66b3ac803ae2d506d41f3fd2809eea5be3c297e6d7aff2b0a76c3c3f3"
+      },
+      {
+        "local_path": "media/products/assr-8028.webp",
+        "storage_path": "product-images/assr-8028.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/assr-8028.webp",
+        "checksum": "91d525a3d2bc6001e7b961a27dde8b7c0adab6f8e5c785c03191dda75bc41c65"
+      },
+      {
+        "local_path": "media/products/assr-8035.webp",
+        "storage_path": "product-images/assr-8035.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/assr-8035.webp",
+        "checksum": "459b321070cc6fe9f0e90325dd9e9b4fec6f7cea45264c8548a66ad401d3998e"
+      },
+      {
+        "local_path": "media/products/assr-8035-sec.webp",
+        "storage_path": "product-images/assr-8035-sec.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/assr-8035-sec.webp",
+        "checksum": "bcec5892cdbe4e3901ae03637680cc79658cfce5004355ec48dee392cef85f2f"
+      },
+      {
+        "local_path": "media/products/assr-8044.webp",
+        "storage_path": "product-images/assr-8044.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/assr-8044.webp",
+        "checksum": "542cedfc019ec10e6339b93c8130488d565f1360f249b3e581e32946e078ad99"
+      },
+      {
+        "local_path": "media/products/assr-8046.webp",
+        "storage_path": "product-images/assr-8046.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/assr-8046.webp",
+        "checksum": "4652ab30cd015f96e1cc45293c78501237e202a10589e1295f171735413abb7d"
+      },
+      {
+        "local_path": "media/products/assr-8036.webp",
+        "storage_path": "product-images/assr-8036.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/assr-8036.webp",
+        "checksum": "3a512d903566f2759926eafb7ca45788bcddc4ce37b1067035bf9b223a66b4e9"
+      },
+      {
+        "local_path": "media/products/assr-8041.webp",
+        "storage_path": "product-images/assr-8041.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/assr-8041.webp",
+        "checksum": "67bd505c9d5f68206b98f891a7094b3f8ebc0d58b148e30645bf6f792178717c"
+      },
+      {
+        "local_path": "media/products/assr-8019.webp",
+        "storage_path": "product-images/assr-8019.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/assr-8019.webp",
+        "checksum": "2121b1f1574a5a32a84d418f132fad08b635e759d5713f261bace2a6bb1c2279"
+      },
+      {
+        "local_path": "media/products/assr-8021-antihelada.webp",
+        "storage_path": "product-images/assr-8021-antihelada.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/assr-8021-antihelada.webp",
+        "checksum": "b44b1f3126059932e044b8fb96d7f2f89dac7b99edaa86eb178a1cbb7e9857b1"
+      },
+      {
+        "local_path": "media/products/r25.webp",
+        "storage_path": "product-images/r25.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/r25.webp",
+        "checksum": "4f5c0fbd53344d3c99424f7d14a64f7da5f06c42e4a1ca2eb6acc2160f9fab64"
+      },
+      {
+        "local_path": "media/products/r25-s.webp",
+        "storage_path": "product-images/r25-s.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/r25-s.webp",
+        "checksum": "e90f2a2bab0a826cb78d12043fce7442d7100a5a09a63c6c0335eac34d49fb89"
+      },
+      {
+        "local_path": "media/products/r15.webp",
+        "storage_path": "product-images/r15.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/r15.webp",
+        "checksum": "3067f00a3f3413ecdafd1b73188dccdb8402d06d62407a7dc4e6f1133ff996a2"
+      },
+      {
+        "local_path": "media/products/r15-s.webp",
+        "storage_path": "product-images/r15-s.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/r15-s.webp",
+        "checksum": "da5f861de043321b2ab8a4b124c3e7317e3139de01a0baa68229df2c480346c5"
+      },
+      {
+        "local_path": "media/products/valvula-antidrenaje-sport-plus-superrps75.webp",
+        "storage_path": "product-images/valvula-antidrenaje-sport-plus-superrps75.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/valvula-antidrenaje-sport-plus-superrps75.webp",
+        "checksum": "ca57cbff237254695106b7192e185db15f2696639aa95cb7b6e0cd854e33186b"
+      },
+      {
+        "local_path": "media/products/rps-select.webp",
+        "storage_path": "product-images/rps-select.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/rps-select.webp",
+        "checksum": "809d86aa2e69ccf0a6bf43bedf667e8c41c4b078412702544766b3b8d0fa23da"
+      },
+      {
+        "local_path": "media/products/tobera-emergente-2-pulg-nps.webp",
+        "storage_path": "product-images/tobera-emergente-2-pulg-nps.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/tobera-emergente-2-pulg-nps.webp",
+        "checksum": "3e4bdb668e1c3725f5a8d9646bad6e13e22db0982b446480aa84f7498bf62274"
+      },
+      {
+        "local_path": "media/products/tobera-emergente-4-pulg-nps.webp",
+        "storage_path": "product-images/tobera-emergente-4-pulg-nps.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/tobera-emergente-4-pulg-nps.webp",
+        "checksum": "71273500e5aa6b32f87b5ad40468db936151339b45905a71cd3c09699155a24e"
+      },
+      {
+        "local_path": "media/products/tobera-emergente-pro-s-12.webp",
+        "storage_path": "product-images/tobera-emergente-pro-s-12.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/tobera-emergente-pro-s-12.webp",
+        "checksum": "70cd5c5764a6356906a283049a086a30c17536aa891a9315ab0784c403a770c4"
+      },
+      {
+        "local_path": "media/products/tobera-emergente-4-pulg-pro-s.webp",
+        "storage_path": "product-images/tobera-emergente-4-pulg-pro-s.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/tobera-emergente-4-pulg-pro-s.webp",
+        "checksum": "fbdf1b896daa525beb8bdf61dfc92410efff0bb83e2883c9fe7f15e63de842fa"
+      },
+      {
+        "local_path": "media/products/tobera-emergente-3-pulg-spray.webp",
+        "storage_path": "product-images/tobera-emergente-3-pulg-spray.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/tobera-emergente-3-pulg-spray.webp",
+        "checksum": "28d0dadcd5b2844c73a624a7ed235badf94837d0c39743f20260e169e041af47"
+      },
+      {
+        "local_path": "media/products/tobera-emergente-4-pulg-spray.webp",
+        "storage_path": "product-images/tobera-emergente-4-pulg-spray.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/tobera-emergente-4-pulg-spray.webp",
+        "checksum": "d303059dbeb3780e88780548a5a65daf1512de0a91d25474664ee67f209bdcb8"
+      },
+      {
+        "local_path": "media/products/valvula-antidrenaje-toberas-spray.webp",
+        "storage_path": "product-images/valvula-antidrenaje-toberas-spray.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/valvula-antidrenaje-toberas-spray.webp",
+        "checksum": "6fe073e27940ae2f3f60837a73a5367e9758e8771c67e48a5de20c822d998e45"
+      },
+      {
+        "local_path": "media/products/valvula-antidrenaje-toberas-pro-s.webp",
+        "storage_path": "product-images/valvula-antidrenaje-toberas-pro-s.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/valvula-antidrenaje-toberas-pro-s.webp",
+        "checksum": "999c424c3683e8c307c1e2eddec1a2b4d0ecdb425ff2f981e7207ca918642435"
+      },
+      {
+        "local_path": "media/products/valvula-antidrenaje-mini-pro.webp",
+        "storage_path": "product-images/valvula-antidrenaje-mini-pro.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/valvula-antidrenaje-mini-pro.webp",
+        "checksum": "e9fb0bac944d05d71c20ed86983ddb6033e5dc00f9dfc4c799ac49f372676e17"
+      },
+      {
+        "local_path": "media/products/rs-pw-3520.webp",
+        "storage_path": "product-images/rs-pw-3520.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/rs-pw-3520.webp",
+        "checksum": "ebd4f684a74d50012e01aba004f446bc74de735324256858a27783b3eb270267"
+      },
+      {
+        "local_path": "media/products/aspersor-1700-00c-greenplains.webp",
+        "storage_path": "product-images/aspersor-1700-00c-greenplains.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/aspersor-1700-00c-greenplains.webp",
+        "checksum": "b528081483cb475a75a4832bfb7060476b992ebb290280d4a6419997aae1d84a"
+      },
+      {
+        "local_path": "media/products/aspersor-1700-00e-greenplains.webp",
+        "storage_path": "product-images/aspersor-1700-00e-greenplains.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/aspersor-1700-00e-greenplains.webp",
+        "checksum": "0de5261d29ec338ea49834aad9165991b1982fdeb38924dabed1a921da2a0233"
+      },
+      {
+        "local_path": "media/products/aspersor-1704-00d-greenplains.webp",
+        "storage_path": "product-images/aspersor-1704-00d-greenplains.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/aspersor-1704-00d-greenplains.webp",
+        "checksum": "9358939281d25084734ca4efe977c6833aa8b86edc42d5da02989e733dd6a303"
+      },
+      {
+        "local_path": "media/products/aspersor-1704-00e-greenplains.webp",
+        "storage_path": "product-images/aspersor-1704-00e-greenplains.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/aspersor-1704-00e-greenplains.webp",
+        "checksum": "1febc0547f066c3a3d3874d1003fd5a3d994cc5f1af825e1ddfd0a7b70958303"
+      },
+      {
+        "local_path": "media/products/aspersor-1705-00f-greenplains.webp",
+        "storage_path": "product-images/aspersor-1705-00f-greenplains.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/aspersor-1705-00f-greenplains.webp",
+        "checksum": "bca0a7856784e98d4de4a34178db814aad0bef7a9774de53e4e45ed8402628ef"
+      },
+      {
+        "local_path": "media/products/aspersor-plastico-circular-boquillas-plasticas.webp",
+        "storage_path": "product-images/aspersor-plastico-circular-boquillas-plasticas.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/aspersor-plastico-circular-boquillas-plasticas.webp",
+        "checksum": "af4c512d8970cc9c11392acb405dba4600a5564820ec08fccaf331765b1a2e57"
+      },
+      {
+        "local_path": "media/products/aspersor-plastico-greenplains-2.webp",
+        "storage_path": "product-images/aspersor-plastico-greenplains-2.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/aspersor-plastico-greenplains-2.webp",
+        "checksum": "3ec22b6c932aaebb39bf12b00bb8abdbad733ac659d39f64e755aaad48f330ef"
+      },
+      {
+        "local_path": "media/products/aspersor-plastico-greenplains.webp",
+        "storage_path": "product-images/aspersor-plastico-greenplains.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/aspersor-plastico-greenplains.webp",
+        "checksum": "6f49771383417bcbe0dd1b62bbef4b783b5b80728129307190ec8c9369eb8841"
+      },
+      {
+        "local_path": "media/products/boquillas-p-aspersores-de-impacto-greenplains.webp",
+        "storage_path": "product-images/boquillas-p-aspersores-de-impacto-greenplains.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/boquillas-p-aspersores-de-impacto-greenplains.webp",
+        "checksum": "c802882a256932cc61cbd89ee15ba324174be852d78e5800a22de473d1f8d75a"
+      },
+      {
+        "local_path": "media/products/boquilla-fija-rosca-hembra.webp",
+        "storage_path": "product-images/boquilla-fija-rosca-hembra.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/boquilla-fija-rosca-hembra.webp",
+        "checksum": "c59e2cb021ded5c6a08d7a4c1e310a6c3bab860fdc6cf4ab7266ae795d49bff4"
+      },
+      {
+        "local_path": "media/products/boquilla-fija-rosca-macho.webp",
+        "storage_path": "product-images/boquilla-fija-rosca-macho.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/boquilla-fija-rosca-macho.webp",
+        "checksum": "ac2055c3786bd6d6377543c5122fe45869780081edac33f98032a70af86ad185"
+      },
+      {
+        "local_path": "media/products/boquillas-giratorias-regulables.webp",
+        "storage_path": "product-images/boquillas-giratorias-regulables.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/boquillas-giratorias-regulables.webp",
+        "checksum": "39ea42e86282099a92908e97b2b34bd0f323285b0b288447a8c3fe53ddb0dce8"
+      },
+      {
+        "local_path": "media/products/adaptador-p-boquillas-rosca-hembra.webp",
+        "storage_path": "product-images/adaptador-p-boquillas-rosca-hembra.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/adaptador-p-boquillas-rosca-hembra.webp",
+        "checksum": "14e793b987ae75fe2367757755d5cbd2b458d8c217d651a2101a99999e9f58ae"
+      },
+      {
+        "local_path": "media/products/adaptador-p-boquillas-rosca-macho.webp",
+        "storage_path": "product-images/adaptador-p-boquillas-rosca-macho.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/adaptador-p-boquillas-rosca-macho.webp",
+        "checksum": "51c54add5e3e09d59dc5b0927ea82d5d4b4bbc24ed2bf143a48da4c2ae2f2f11"
+      },
+      {
+        "local_path": "media/products/pro-plus.webp",
+        "storage_path": "product-images/pro-plus.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/pro-plus.webp",
+        "checksum": "0fd5bf46340573bdec2249a6c8fdd4637e1602b3e541fbbc0b2201dbc3e19a89"
+      },
+      {
+        "local_path": "media/products/super-pro.webp",
+        "storage_path": "product-images/super-pro.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/super-pro.webp",
+        "checksum": "d0905c295fe6fb2331e1367170f4f4182837447e2dee227de6ae8cf6816542f9"
+      },
+      {
+        "local_path": "media/products/pro-sport.webp",
+        "storage_path": "product-images/pro-sport.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/pro-sport.webp",
+        "checksum": "2c5bd06e36c490d8f815e675e1be04f334eade565ae3cf2ce6d5b4147f43c7ff"
+      },
+      {
+        "local_path": "media/products/rps75.webp",
+        "storage_path": "product-images/rps75.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/rps75.webp",
+        "checksum": "dc37960f00922655b3e10d6cd7d11ff310f9d6af2a737fc013b3aae713532ad0"
+      },
+      {
+        "local_path": "media/products/mini-pro.webp",
+        "storage_path": "product-images/mini-pro.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/mini-pro.webp",
+        "checksum": "c37a6af58be04a9a757187bf53caf520900c8d73d1bd98977be143bf67b0bcde"
+      },
+      {
+        "local_path": "media/products/aspersor-emergente-plastico-de-impacto-sectorizable.webp",
+        "storage_path": "product-images/aspersor-emergente-plastico-de-impacto-sectorizable.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/aspersor-emergente-plastico-de-impacto-sectorizable.webp",
+        "checksum": "0af73015256af3058a26218b68bf7599fde0daafb1493e5d1e3e44ffc288b0c9"
+      },
+      {
+        "local_path": "media/products/valvula-plastica-para-aspersor-3-4-y-1.webp",
+        "storage_path": "product-images/valvula-plastica-para-aspersor-3-4-y-1.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/valvula-plastica-para-aspersor-3-4-y-1.webp",
+        "checksum": "4f1059ce82fdb5255163308718d413e21b8ba7c30176be732938c17553d14dff"
+      },
+      {
+        "local_path": "media/products/prolongador-o-bayoneta-3-4.webp",
+        "storage_path": "product-images/prolongador-o-bayoneta-3-4.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/prolongador-o-bayoneta-3-4.webp",
+        "checksum": "6bcb02e87d5276fe349221f8b59c3669ff7970380915cd18d7a261ea7d2e9356"
+      },
+      {
+        "local_path": "media/products/valvula-con-rosca-macho.webp",
+        "storage_path": "product-images/valvula-con-rosca-macho.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/valvula-con-rosca-macho.webp",
+        "checksum": "272052f4d98e6685c343af067a16a4fb461b0d6d16c050728d5ac2d266a906f6"
+      },
+      {
+        "local_path": "media/products/wi-30320.webp",
+        "storage_path": "product-images/wi-30320.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/wi-30320.webp",
+        "checksum": "a780d52d8bccd38dab2c5f7bc8f292ba89e2e8dee11e0f166d811e95a938b7d8"
+      },
+      {
+        "local_path": "media/products/valvulas-plasticas-con-acople-rapido-rosca-macho.webp",
+        "storage_path": "product-images/valvulas-plasticas-con-acople-rapido-rosca-macho.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/valvulas-plasticas-con-acople-rapido-rosca-macho.webp",
+        "checksum": "e46aaaa15dffe6ae9acdebc4312eaf16aa6cf989c91a9620d227dc43a08702c6"
+      },
+      {
+        "local_path": "media/products/prolongador-o-bayoneta-3-4-plastica-alfa.webp",
+        "storage_path": "product-images/prolongador-o-bayoneta-3-4-plastica-alfa.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/prolongador-o-bayoneta-3-4-plastica-alfa.webp",
+        "checksum": "92af0543edc135646b79c9e675048f527d95392984461a2c8f6d0398fa509006"
+      },
+      {
+        "local_path": "media/products/tuberia-con-gotero-integrado-2.webp",
+        "storage_path": "product-images/tuberia-con-gotero-integrado-2.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/tuberia-con-gotero-integrado-2.webp",
+        "checksum": "c229eb95a927985840810c5b51b38c24e3938806b28d5227d221cfc7adc75c16"
+      },
+      {
+        "local_path": "media/products/microtubo-de-pvc-semiflexible.webp",
+        "storage_path": "product-images/microtubo-de-pvc-semiflexible.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/microtubo-de-pvc-semiflexible.webp",
+        "checksum": "8bc4ec22440d949837b6a8dbf9731ee78ca51ecdfb906bc4069fee5f9ce89bc0"
+      },
+      {
+        "local_path": "media/products/microtubo-comando.webp",
+        "storage_path": "product-images/microtubo-comando.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/microtubo-comando.webp",
+        "checksum": "3a4a9ba90d30aa862bbbbb7f19684e2acde48310e51bcb6812eaa15a944cf80a"
+      },
+      {
+        "local_path": "media/products/mangas-lay-flat.webp",
+        "storage_path": "product-images/mangas-lay-flat.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/mangas-lay-flat.webp",
+        "checksum": "0aacd8a41a5d4ac65a1bfe05ca4dca26745fd5198c17ec8337d3223ab3beef8e"
+      },
+      {
+        "local_path": "media/products/cinta-de-riego-por-goteo-novodrip-apollo.webp",
+        "storage_path": "product-images/cinta-de-riego-por-goteo-novodrip-apollo.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/cinta-de-riego-por-goteo-novodrip-apollo.webp",
+        "checksum": "48aa0785c78db8f14c75b2c6812427d58977d5586fc7275cc12a3092074700e0"
+      },
+      {
+        "local_path": "media/products/gotero-desarmable-tipo-boton-de-laberinto.webp",
+        "storage_path": "product-images/gotero-desarmable-tipo-boton-de-laberinto.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/gotero-desarmable-tipo-boton-de-laberinto.webp",
+        "checksum": "b5f06c1995ad3d40f30e2318820dfb26d38b9cae2673f35833ee89db10ded6b4"
+      },
+      {
+        "local_path": "media/products/gotero-desarmable-autocompensado-tipo-boton.webp",
+        "storage_path": "product-images/gotero-desarmable-autocompensado-tipo-boton.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/gotero-desarmable-autocompensado-tipo-boton.webp",
+        "checksum": "5740a627a2009409e22891a6b3d67089f6bc4545501a09d9d2cde8c69207871e"
+      },
+      {
+        "local_path": "media/products/gotero-desarmable-autocompensado-3109-0004.webp",
+        "storage_path": "product-images/gotero-desarmable-autocompensado-3109-0004.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/gotero-desarmable-autocompensado-3109-0004.webp",
+        "checksum": "f042a655c49ced7b16252dd22c5129297dd62fa37d7a4d527441fe6d3f8759d9"
+      },
+      {
+        "local_path": "media/products/gotero-desarmable-autocompensado-3109-0008.webp",
+        "storage_path": "product-images/gotero-desarmable-autocompensado-3109-0008.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/gotero-desarmable-autocompensado-3109-0008.webp",
+        "checksum": "a7885a1e78a945151486c08589fe2549625518bb0b923af85de81f7ed9b93352"
+      },
+      {
+        "local_path": "media/products/gotero-no-desarmable-autocompensado-autolimpiante.webp",
+        "storage_path": "product-images/gotero-no-desarmable-autocompensado-autolimpiante.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/gotero-no-desarmable-autocompensado-autolimpiante.webp",
+        "checksum": "9f2c474bda4df494a80a68194dfe76d95bd831af23ab122aff547805db0e0e78"
+      },
+      {
+        "local_path": "media/products/gotero-no-desarmable-autocompensado-antidrenante-autolimpiante.webp",
+        "storage_path": "product-images/gotero-no-desarmable-autocompensado-antidrenante-autolimpiante.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/gotero-no-desarmable-autocompensado-antidrenante-autolimpiante.webp",
+        "checksum": "9b7f92e5b613980625a0b6a4723e70a18e92dbddc9f735244978ec06d2d25048"
+      },
+      {
+        "local_path": "media/products/gotero-estaca-de-laberinto-asd-002.webp",
+        "storage_path": "product-images/gotero-estaca-de-laberinto-asd-002.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/gotero-estaca-de-laberinto-asd-002.webp",
+        "checksum": "447d690f4ab3fb23e5fce7d36a74371d3456e7f8ab80798e3c9bc6be07299598"
+      },
+      {
+        "local_path": "media/products/gotero-ajustable-plast-project.webp",
+        "storage_path": "product-images/gotero-ajustable-plast-project.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/gotero-ajustable-plast-project.webp",
+        "checksum": "14b1af63136eccf767d1747d7e418d2fbd9ca5af444f88b8ed3328a36d0eb17f"
+      },
+      {
+        "local_path": "media/products/gotero-ajustable-alfa.webp",
+        "storage_path": "product-images/gotero-ajustable-alfa.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/gotero-ajustable-alfa.webp",
+        "checksum": "8051576c2fdefb9371340dd783ccdb08790c15aff648506f16716bc6983df095"
+      },
+      {
+        "local_path": "media/products/tuberia-de-polietileno-pe.webp",
+        "storage_path": "product-images/tuberia-de-polietileno-pe.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/tuberia-de-polietileno-pe.webp",
+        "checksum": "19a49ad1ace8e707fc5355cff521cdc82c36e67cbf3d34cd1481fa0cbe296864"
+      },
+      {
+        "local_path": "media/products/conector-de-tuberia-de-polietileno-de-16mm-chicote-a-cinta.webp",
+        "storage_path": "product-images/conector-de-tuberia-de-polietileno-de-16mm-chicote-a-cinta.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/conector-de-tuberia-de-polietileno-de-16mm-chicote-a-cinta.webp",
+        "checksum": "db538a830dd9672c40e09f1965a48a529835cb5cbc547f23d3e4ccd9755069a3"
+      },
+      {
+        "local_path": "media/products/manguera-de-alta-presion-para-pulverizacion-con-conector-incluido.webp",
+        "storage_path": "product-images/manguera-de-alta-presion-para-pulverizacion-con-conector-incluido.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/manguera-de-alta-presion-para-pulverizacion-con-conector-incluido.webp",
+        "checksum": "38c5ac31596b5fd7abf641f3579b47ee35ee221a799ded0d516d0878134f3cb7"
+      },
+      {
+        "local_path": "media/products/conector-para-goteros-anti-drenante-de-2-y-4-salidas.webp",
+        "storage_path": "product-images/conector-para-goteros-anti-drenante-de-2-y-4-salidas.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/conector-para-goteros-anti-drenante-de-2-y-4-salidas.webp",
+        "checksum": "0c8ac7140c032bef516978795f28c13176a0ba4835669c3758986d8546bd9620"
+      },
+      {
+        "local_path": "media/products/conector-para-goteros.webp",
+        "storage_path": "product-images/conector-para-goteros.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/conector-para-goteros.webp",
+        "checksum": "0c8ac7140c032bef516978795f28c13176a0ba4835669c3758986d8546bd9620"
+      },
+      {
+        "local_path": "media/products/conector-inicial-p-cinta-con-goma-pe.webp",
+        "storage_path": "product-images/conector-inicial-p-cinta-con-goma-pe.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/conector-inicial-p-cinta-con-goma-pe.webp",
+        "checksum": "5cb12612bc584e288a044846396f793b8eac3ecb7aecd6e296a7345bf79555b8"
+      },
+      {
+        "local_path": "media/products/conector-inicial-p-cinta-con-goma-pe-pvc.webp",
+        "storage_path": "product-images/conector-inicial-p-cinta-con-goma-pe-pvc.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/conector-inicial-p-cinta-con-goma-pe-pvc.webp",
+        "checksum": "5e0b59c1c750bf36748a65693be7666012632b91a870295da1b984772fa287c2"
+      },
+      {
+        "local_path": "media/products/conector-inicial-p-cinta-c-rosca-de-ajuste-s-goma.webp",
+        "storage_path": "product-images/conector-inicial-p-cinta-c-rosca-de-ajuste-s-goma.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/conector-inicial-p-cinta-c-rosca-de-ajuste-s-goma.webp",
+        "checksum": "6b81c3431548d8704de50e2514777c76256459f5062efc20d9c36b8f4879aa3d"
+      },
+      {
+        "local_path": "media/products/conector-cinta-x-rm-1-2.webp",
+        "storage_path": "product-images/conector-cinta-x-rm-1-2.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/conector-cinta-x-rm-1-2.webp",
+        "checksum": "44314f03a1e57053edc8a23bb64057046d7749de4ac562e7f309b5c2398fe6b9"
+      },
+      {
+        "local_path": "media/products/conector-cinta-x-cinta-22.webp",
+        "storage_path": "product-images/conector-cinta-x-cinta-22.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/conector-cinta-x-cinta-22.webp",
+        "checksum": "e93659b34117b0707d08e7e62e76f13080940184fce09e79256649ea691cd808"
+      },
+      {
+        "local_path": "media/products/conector-inicial-lay-flat-cinta.webp",
+        "storage_path": "product-images/conector-inicial-lay-flat-cinta.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/conector-inicial-lay-flat-cinta.webp",
+        "checksum": "d2dc45bd04dd7b390fb2443bff989179b43496070637b3f3f317ac253728835b"
+      },
+      {
+        "local_path": "media/products/conector-cinta-x-cinta-en-codo-90-grados.webp",
+        "storage_path": "product-images/conector-cinta-x-cinta-en-codo-90-grados.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/conector-cinta-x-cinta-en-codo-90-grados.webp",
+        "checksum": "31653614b963a40bd1284cf1a25cd88925e6e469c225106127e39c414c7b117a"
+      },
+      {
+        "local_path": "media/products/conector-cinta-x-cinta-en-t.webp",
+        "storage_path": "product-images/conector-cinta-x-cinta-en-t.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/conector-cinta-x-cinta-en-t.webp",
+        "checksum": "798ddea50f6b4f5a3e23761b9526aeced97768519e71e56b02e37a6903f36c6b"
+      },
+      {
+        "local_path": "media/products/conector-de-tuberia-de-polietileno-a-cinta.webp",
+        "storage_path": "product-images/conector-de-tuberia-de-polietileno-a-cinta.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/conector-de-tuberia-de-polietileno-a-cinta.webp",
+        "checksum": "d5330fe040654b3cdb057f6dc4e71be7cc03f661a8cff2f56e2827bb6246fc5e"
+      },
+      {
+        "local_path": "media/products/conector-cinta-x-cinta.webp",
+        "storage_path": "product-images/conector-cinta-x-cinta.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/conector-cinta-x-cinta.webp",
+        "checksum": "d0c5e6b84632f32bae188c18ec67a91fdcd3cd71aeb1d88ef335427e76ace494"
+      },
+      {
+        "local_path": "media/products/tapon-final-de-linea-para-cinta.webp",
+        "storage_path": "product-images/tapon-final-de-linea-para-cinta.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/tapon-final-de-linea-para-cinta.webp",
+        "checksum": "99a9c16c0d94c01422541b862f981cafa83fba6a8e8133018f5c9460e4e1c029"
+      },
+      {
+        "local_path": "media/products/cinta-de-riego-por-goteo-aqua-traxx-toro.webp",
+        "storage_path": "product-images/cinta-de-riego-por-goteo-aqua-traxx-toro.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/cinta-de-riego-por-goteo-aqua-traxx-toro.webp",
+        "checksum": "440d23bff27c500ab3072c661a8404dd7086c01baa2828a3c749df060f99b1a0"
+      },
+      {
+        "local_path": "media/products/cinta-de-riego-por-goteo-irriway.webp",
+        "storage_path": "product-images/cinta-de-riego-por-goteo-irriway.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/cinta-de-riego-por-goteo-irriway.webp",
+        "checksum": "71f3548030b867b0295fc40e354c766ed991fa6f563da5d9ab267f1aa5d4c167"
+      },
+      {
+        "local_path": "media/products/tuberia-de-riego-por-goteo-novodrip-vimi.webp",
+        "storage_path": "product-images/tuberia-de-riego-por-goteo-novodrip-vimi.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/tuberia-de-riego-por-goteo-novodrip-vimi.webp",
+        "checksum": "7ce54dbf242602c6f1d043f29aa9d514693bd1565b4e8b352d9fcfc8f96241c6"
+      },
+      {
+        "local_path": "media/products/cinta-de-riego-olivos-rauli.webp",
+        "storage_path": "product-images/cinta-de-riego-olivos-rauli.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/cinta-de-riego-olivos-rauli.webp",
+        "checksum": "4b2c586e0f9eb32462ef45317f0a5a63b5703353c4b054c28b604cda25d9ad40"
+      },
+      {
+        "local_path": "media/products/manguera-de-succion.webp",
+        "storage_path": "product-images/manguera-de-succion.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/manguera-de-succion.webp",
+        "checksum": "aa89517e33029f9af3d01662bf3d69209b9501a16b361ad75272f6f1377cf502"
+      },
+      {
+        "local_path": "media/products/fogger-valvula-antigoteo-conector-a-tuberia-pe.webp",
+        "storage_path": "product-images/fogger-valvula-antigoteo-conector-a-tuberia-pe.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/fogger-valvula-antigoteo-conector-a-tuberia-pe.webp",
+        "checksum": "152ba238c119162564676156b6eb049bc75954e8ec1ddd88b22e24034453d3d0"
+      },
+      {
+        "local_path": "media/products/fogger-valvula-antigoteo-conector-rm-1-2.webp",
+        "storage_path": "product-images/fogger-valvula-antigoteo-conector-rm-1-2.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/fogger-valvula-antigoteo-conector-rm-1-2.webp",
+        "checksum": "84c62d69c7886e96c60b22b8b629d41cab0c424a2ea108f3c051acef1b63f9d8"
+      },
+      {
+        "local_path": "media/products/super-fogger-con-valvula-y-conector-a-pe-incorporado.webp",
+        "storage_path": "product-images/super-fogger-con-valvula-y-conector-a-pe-incorporado.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/super-fogger-con-valvula-y-conector-a-pe-incorporado.webp",
+        "checksum": "cc256dc5c74e73f5d88337a2ca5890eff82cb8626957da50449ad0777aea1b00"
+      },
+      {
+        "local_path": "media/products/adaptador-rosca-macho-p-fogger.webp",
+        "storage_path": "product-images/adaptador-rosca-macho-p-fogger.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/adaptador-rosca-macho-p-fogger.webp",
+        "checksum": "faa25a14176c810e76eeb3c41e8d149475ce39b455d58f2f931bcfcd7f046fb3"
+      },
+      {
+        "local_path": "media/products/fogger-o-humidificador-2.webp",
+        "storage_path": "product-images/fogger-o-humidificador-2.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/fogger-o-humidificador-2.webp",
+        "checksum": "72ef2513fa4c2b78149b1d1268c421a488b9fde43b667d4e65b79a59614995a9"
+      },
+      {
+        "local_path": "media/products/miniaspersor-circular-vyr-3250.webp",
+        "storage_path": "product-images/miniaspersor-circular-vyr-3250.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/miniaspersor-circular-vyr-3250.webp",
+        "checksum": "a931e79c3f96492ef5e73000a49228f7f2612964830b5b869387f1e6025d6d98"
+      },
+      {
+        "local_path": "media/products/vyr-3264-miniaspersor-circular.webp",
+        "storage_path": "product-images/vyr-3264-miniaspersor-circular.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/vyr-3264-miniaspersor-circular.webp",
+        "checksum": "730033671fcc5ac5657fa7001b80d8d2d59c2d43164bf4309c79073288f7753e"
+      },
+      {
+        "local_path": "media/products/vyr-3260-azul-miniaspersor-circular.webp",
+        "storage_path": "product-images/vyr-3260-azul-miniaspersor-circular.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/vyr-3260-azul-miniaspersor-circular.webp",
+        "checksum": "730033671fcc5ac5657fa7001b80d8d2d59c2d43164bf4309c79073288f7753e"
+      },
+      {
+        "local_path": "media/products/vyr-3260-rojo-miniaspersor-circular.webp",
+        "storage_path": "product-images/vyr-3260-rojo-miniaspersor-circular.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/vyr-3260-rojo-miniaspersor-circular.webp",
+        "checksum": "730033671fcc5ac5657fa7001b80d8d2d59c2d43164bf4309c79073288f7753e"
+      },
+      {
+        "local_path": "media/products/mist-o-nebulizador-320-sin-conector.webp",
+        "storage_path": "product-images/mist-o-nebulizador-320-sin-conector.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/mist-o-nebulizador-320-sin-conector.webp",
+        "checksum": "d3645ce9203fce82a61509d5888a2b4a089973e0b22c9f80263b58639f2346a3"
+      },
+      {
+        "local_path": "media/products/microaspersor-de-uso-invertido-360-sin-conector.webp",
+        "storage_path": "product-images/microaspersor-de-uso-invertido-360-sin-conector.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/microaspersor-de-uso-invertido-360-sin-conector.webp",
+        "checksum": "bc0a7a97f03dfe2e949a8c1a4c3ef6dbc691130e35a947dfb28a8ae47b8eaa45"
+      },
+      {
+        "local_path": "media/products/kit-estaca-microjet-360-tubin-conector-inicial.webp",
+        "storage_path": "product-images/kit-estaca-microjet-360-tubin-conector-inicial.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/kit-estaca-microjet-360-tubin-conector-inicial.webp",
+        "checksum": "6a788bd6506fac41fe87ca43ff0159c64e0b826ce0b5982a59821e7cfc79cf0c"
+      },
+      {
+        "local_path": "media/products/microaspersor-giratorio-360-sin-conector-801.webp",
+        "storage_path": "product-images/microaspersor-giratorio-360-sin-conector-801.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/microaspersor-giratorio-360-sin-conector-801.webp",
+        "checksum": "3fd0821bf2a81aeecb35d67a8d82d28d67b84e0e49a144bc3f06a475ae373858"
+      },
+      {
+        "local_path": "media/products/valvula-antigoteo-para-fogger.webp",
+        "storage_path": "product-images/valvula-antigoteo-para-fogger.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/valvula-antigoteo-para-fogger.webp",
+        "checksum": "45e6fcaf46597458430af9a15987463921d460880da85041f58f1667e37f9892"
+      },
+      {
+        "local_path": "media/products/valvula-antigoteo-530x-para-fogger.webp",
+        "storage_path": "product-images/valvula-antigoteo-530x-para-fogger.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/valvula-antigoteo-530x-para-fogger.webp",
+        "checksum": "4544275d30495be03e6584fc86836d936711b44062e9fff0ac20dbec19a115ae"
+      },
+      {
+        "local_path": "media/products/valvula-antigoteo-530.webp",
+        "storage_path": "product-images/valvula-antigoteo-530.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/valvula-antigoteo-530.webp",
+        "checksum": "4544275d30495be03e6584fc86836d936711b44062e9fff0ac20dbec19a115ae"
+      },
+      {
+        "local_path": "media/products/estaca-plastica-para-microaspesores.webp",
+        "storage_path": "product-images/estaca-plastica-para-microaspesores.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/estaca-plastica-para-microaspesores.webp",
+        "checksum": "db710a29fb626cfe2db81debcef58bd2bb194e815c28c81d3f1eb67e12e84bac"
+      },
+      {
+        "local_path": "media/products/estaca-plastica-c-microtubo.webp",
+        "storage_path": "product-images/estaca-plastica-c-microtubo.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/estaca-plastica-c-microtubo.webp",
+        "checksum": "1d8b18ab630d67b7fd1e26178ab3a6c06d659ac17150ad4f9f9f845fce4cdde1"
+      },
+      {
+        "local_path": "media/products/plunger-roscado-p-componentes-macho.webp",
+        "storage_path": "product-images/plunger-roscado-p-componentes-macho.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/plunger-roscado-p-componentes-macho.webp",
+        "checksum": "c5e273d013f4312ed76e09a278c28cee44305654e4b4d1d107308d9db6bd3800"
+      },
+      {
+        "local_path": "media/products/plunger-roscado-p-componentes-hembra.webp",
+        "storage_path": "product-images/plunger-roscado-p-componentes-hembra.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/plunger-roscado-p-componentes-hembra.webp",
+        "checksum": "41e99779a82ead0434896486d6cb914e872ab5a1231af3e42c3bc8fb71573c85"
+      },
+      {
+        "local_path": "media/products/pd-0800.webp",
+        "storage_path": "product-images/pd-0800.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/pd-0800.webp",
+        "checksum": "ce912b3ef543c8321668f48240c091e09696fb7bbfc95119b1f8c2217ab792d1"
+      },
+      {
+        "local_path": "media/products/pd-0900.webp",
+        "storage_path": "product-images/pd-0900.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/pd-0900.webp",
+        "checksum": "10848db38147d8894f7e7407b1a079a417a23426f4be27dc932af666476274db"
+      },
+      {
+        "local_path": "media/products/pd-1000.webp",
+        "storage_path": "product-images/pd-1000.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/pd-1000.webp",
+        "checksum": "40c891d25fd6389723ee39616a1228ad5c1cd0c25ef7918549f8cb4ed399f6f6"
+      },
+      {
+        "local_path": "media/products/pd-1403-pd-1503.webp",
+        "storage_path": "product-images/pd-1403-pd-1503.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/pd-1403-pd-1503.webp",
+        "checksum": "6732798904bb59db5d0b89b2b0b7c904e0d2d2b8ec3630b86c40ed451f0ead64"
+      },
+      {
+        "local_path": "media/products/pd-1503.webp",
+        "storage_path": "product-images/pd-1503.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/pd-1503.webp",
+        "checksum": "6732798904bb59db5d0b89b2b0b7c904e0d2d2b8ec3630b86c40ed451f0ead64"
+      },
+      {
+        "local_path": "media/products/pd-0850.webp",
+        "storage_path": "product-images/pd-0850.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/pd-0850.webp",
+        "checksum": "edd350dfc47a376d615f342972cf78ae815575cf2b31234e62c65bb7242ac088"
+      },
+      {
+        "local_path": "media/products/pd-1050.webp",
+        "storage_path": "product-images/pd-1050.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/pd-1050.webp",
+        "checksum": "315da5f2c92e5fb141039113aa61d1f85c5244362b35a39919ba13b34bbc1415"
+      },
+      {
+        "local_path": "media/products/pd-0700.webp",
+        "storage_path": "product-images/pd-0700.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/pd-0700.webp",
+        "checksum": "58b02c36ac84780e15aeb068dd35c1883fba04c8b7cf7f092db60c9a246000d0"
+      },
+      {
+        "local_path": "media/products/fogger-o-humidificador.webp",
+        "storage_path": "product-images/fogger-o-humidificador.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/fogger-o-humidificador.webp",
+        "checksum": "6a10435aa5ed096bbbac391871654b7c51629b14a8809e4ed4d9dbb5258a2257"
+      },
+      {
+        "local_path": "media/products/puente-o-mariposa-para-fogger-a-tuberia-pe.webp",
+        "storage_path": "product-images/puente-o-mariposa-para-fogger-a-tuberia-pe.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/puente-o-mariposa-para-fogger-a-tuberia-pe.webp",
+        "checksum": "2b93db10c85156d3967ebdf375b447b5cab257bc7ca5e54324b9a67273459a84"
+      },
+      {
+        "local_path": "media/products/puente-o-mariposa-para-fogger-rm-1-2.webp",
+        "storage_path": "product-images/puente-o-mariposa-para-fogger-rm-1-2.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/puente-o-mariposa-para-fogger-rm-1-2.webp",
+        "checksum": "a3ab12c6d4015d62e8216b56ec62d0066dcdce64f018243ae31383219b4ced9d"
+      },
+      {
+        "local_path": "media/products/miniaspersor-rosca-hembra-1-2.webp",
+        "storage_path": "product-images/miniaspersor-rosca-hembra-1-2.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/miniaspersor-rosca-hembra-1-2.webp",
+        "checksum": "3ae80adfdde1a3d47824cf9f0b72e5d33bf89ac3ae2be901271ce27e0aef28a1"
+      },
+      {
+        "local_path": "media/products/miniaspersor-circular-no-incluye-conector.webp",
+        "storage_path": "product-images/miniaspersor-circular-no-incluye-conector.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/miniaspersor-circular-no-incluye-conector.webp",
+        "checksum": "50257f3e2ca80c2149cb7b4b2aca092d721269cf734ff65ee420b990cef22204"
+      },
+      {
+        "local_path": "media/products/miniaspersor-sectorizable-sin-conector.webp",
+        "storage_path": "product-images/miniaspersor-sectorizable-sin-conector.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/miniaspersor-sectorizable-sin-conector.webp",
+        "checksum": "92940d532a916d9bfe74143dad7c430335de6694c4c2813786edfe650e43e4a4"
+      },
+      {
+        "local_path": "media/products/vs776-puente-para-fogger-4-salidas.webp",
+        "storage_path": "product-images/vs776-puente-para-fogger-4-salidas.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/vs776-puente-para-fogger-4-salidas.webp",
+        "checksum": "6727578eee18f5ed4e2bf0d11de73dcbe57a1d8a5bec0689c3c9d98bc66c9392"
+      },
+      {
+        "local_path": "media/products/miniaspersor-plastico-a-bolilla-assr-8503.webp",
+        "storage_path": "product-images/miniaspersor-plastico-a-bolilla-assr-8503.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/miniaspersor-plastico-a-bolilla-assr-8503.webp",
+        "checksum": "14ea7cc97e7b3edd36e326df47c905c00280cc9189897afaf9b21a935c9b401e"
+      },
+      {
+        "local_path": "media/products/sacabocados.webp",
+        "storage_path": "product-images/sacabocados.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/sacabocados.webp",
+        "checksum": "3954e36cb592dde6893e26cb6e265a8a7d5aea12494fc79feae5c4cdca2fb6e4"
+      },
+      {
+        "local_path": "media/products/mecha-sacabocado.webp",
+        "storage_path": "product-images/mecha-sacabocado.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/mecha-sacabocado.webp",
+        "checksum": "1c2ce2a8bfd62fc3d6f05e74eece548e0f47b47809122dbcf02a97779e949036"
+      },
+      {
+        "local_path": "media/products/copa-sacabocado.webp",
+        "storage_path": "product-images/copa-sacabocado.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/copa-sacabocado.webp",
+        "checksum": "5f4f29ded108c4de73f70f2d34da2691b16a74e32f6d097792986f25be5a3acd"
+      },
+      {
+        "local_path": "media/products/plun-plunger.webp",
+        "storage_path": "product-images/plun-plunger.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/plun-plunger.webp",
+        "checksum": "85200dcd67234fb6b7b36c1883d29675ac25b1f1b8f344ca38ed1860c112315b"
+      },
+      {
+        "local_path": "media/products/plunm-plunger.webp",
+        "storage_path": "product-images/plunm-plunger.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/plunm-plunger.webp",
+        "checksum": "125e982cdeee87f85a7a6fafb54aeb91e0ba035ec6e6e3d6256c697071aa447f"
+      },
+      {
+        "local_path": "media/products/plun-1-4.webp",
+        "storage_path": "product-images/plun-1-4.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/plun-1-4.webp",
+        "checksum": "34293c741bbe629b0256cb7a6fbc3758aea743636e189220d40e78ada8293a54"
+      },
+      {
+        "local_path": "media/products/tavlit-plun-3-8.webp",
+        "storage_path": "product-images/tavlit-plun-3-8.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/tavlit-plun-3-8.webp",
+        "checksum": "3cc061b75694f08a400fa5426d662d1974b1c8520f75b396bf18706f7d06bc63"
+      },
+      {
+        "local_path": "media/products/996-020-01-01-996-030-01-01.webp",
+        "storage_path": "product-images/996-020-01-01-996-030-01-01.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/996-020-01-01-996-030-01-01.webp",
+        "checksum": "3d30fe032237e797702afc5640d015a38cf73a431c6db8050a895245713de6d2"
+      },
+      {
+        "local_path": "media/products/filtro-tipo-t-de-anilla-plastica-greenplains.webp",
+        "storage_path": "product-images/filtro-tipo-t-de-anilla-plastica-greenplains.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/filtro-tipo-t-de-anilla-plastica-greenplains.webp",
+        "checksum": "823cab476ce7507410a98c0307094d3a36ae98bfcb1654d805187c22b084045d"
+      },
+      {
+        "local_path": "media/products/filtro-tipo-y-de-anilla-plastica-greenplains.webp",
+        "storage_path": "product-images/filtro-tipo-y-de-anilla-plastica-greenplains.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/filtro-tipo-y-de-anilla-plastica-greenplains.webp",
+        "checksum": "28db48d62f1f4753b758dfbab1fddf6335c1804280f6929f3890e2a0e66432bd"
+      },
+      {
+        "local_path": "media/products/filtro-tipo-y-plastico-anilla-plastica.webp",
+        "storage_path": "product-images/filtro-tipo-y-plastico-anilla-plastica.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/filtro-tipo-y-plastico-anilla-plastica.webp",
+        "checksum": "6740387a0fee99fb1045373b28546086979fd3cbd0915caab5164f8badd37da2"
+      },
+      {
+        "local_path": "media/products/filtro-tipo-t-plastico-anilla-plastica.webp",
+        "storage_path": "product-images/filtro-tipo-t-plastico-anilla-plastica.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/filtro-tipo-t-plastico-anilla-plastica.webp",
+        "checksum": "19ca34e0d6603b5ee75851f17736bdf2ebfea594f5d2cb029774ac204b1d6bbf"
+      },
+      {
+        "local_path": "media/products/filtro-automatico-en-t-anillas.webp",
+        "storage_path": "product-images/filtro-automatico-en-t-anillas.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/filtro-automatico-en-t-anillas.webp",
+        "checksum": "dcb26cddf86116c63a20e47b73ce294db59d72bccdd0bb7a63901c067143caf3"
+      },
+      {
+        "local_path": "media/products/anilla.webp",
+        "storage_path": "product-images/anilla.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/anilla.webp",
+        "checksum": "b7d3557081dd1e0625e3a1b12c9dec671971e3b2adccd867b61b52eab0f2b4ca"
+      },
+      {
+        "local_path": "media/products/20015-anilla.webp",
+        "storage_path": "product-images/20015-anilla.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/20015-anilla.webp",
+        "checksum": "25a8fc709d47e2d22f255a51d09d2318ca6cf3e9456f6eca1717b356b340d5f4"
+      },
+      {
+        "local_path": "media/products/20025-anilla.webp",
+        "storage_path": "product-images/20025-anilla.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/20025-anilla.webp",
+        "checksum": "ff2a468315819fb3eddc97d862a1d2b8f06299e71e48193fc670b6a5a5f5b757"
+      },
+      {
+        "local_path": "media/products/filtro-doble-cuerpo-corto-plastico-de-malla-y-anillas.webp",
+        "storage_path": "product-images/filtro-doble-cuerpo-corto-plastico-de-malla-y-anillas.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/filtro-doble-cuerpo-corto-plastico-de-malla-y-anillas.webp",
+        "checksum": "79d83067a320657ed727606639c070fa8930e0fcb70b334c4994995c1216af28"
+      },
+      {
+        "local_path": "media/products/filtro-doble-cuerpo-largo-plastico-de-malla-y-anillas.webp",
+        "storage_path": "product-images/filtro-doble-cuerpo-largo-plastico-de-malla-y-anillas.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/filtro-doble-cuerpo-largo-plastico-de-malla-y-anillas.webp",
+        "checksum": "4bde74c70ac054c6506d5260c061e0cb4ff95fb4473a38b2bc2155e13b84ac69"
+      },
+      {
+        "local_path": "media/products/filtro-automatico-doble-anillas.webp",
+        "storage_path": "product-images/filtro-automatico-doble-anillas.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/filtro-automatico-doble-anillas.webp",
+        "checksum": "980e1e47c769eb1716159bb74b679a316a1f90f7021fe23582bb5456e9a3f1fc"
+      },
+      {
+        "local_path": "media/products/malla.webp",
+        "storage_path": "product-images/malla.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/malla.webp",
+        "checksum": "a95749b2fa0323db4930eb49237257877cd0a5e4db8fab5e8f6a35beff33d79a"
+      },
+      {
+        "local_path": "media/products/rs-pd-9213.webp",
+        "storage_path": "product-images/rs-pd-9213.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/rs-pd-9213.webp",
+        "checksum": "d07f896302be97cbad3697274ae527c9fb70957cd8e21b41589c9817ffe66ea8"
+      },
+      {
+        "local_path": "media/products/malla-100130-150130-200130.webp",
+        "storage_path": "product-images/malla-100130-150130-200130.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/malla-100130-150130-200130.webp",
+        "checksum": "b8b8648bc1c0bf20b359bec7c6b3f2e1f95296858954dc4db28a9596d1d55bfe"
+      },
+      {
+        "local_path": "media/products/anillas-100130-200130.webp",
+        "storage_path": "product-images/anillas-100130-200130.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/anillas-100130-200130.webp",
+        "checksum": "460717432fe842795928853b1641d5637bb7d0457f62ddc73b7fff7a40f0d228"
+      },
+      {
+        "local_path": "media/products/20550-malla-metalica-anilla-y-anilla-votrix.webp",
+        "storage_path": "product-images/20550-malla-metalica-anilla-y-anilla-votrix.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/20550-malla-metalica-anilla-y-anilla-votrix.webp",
+        "checksum": "11f8318932bc60ccc8f274a5d0ecbe302e2ed638be1c3a8bc88f418b2bd6f34d"
+      },
+      {
+        "local_path": "media/products/filtro-alfa-tipo-t-2-anilla-plastica-con-hidrociclon.webp",
+        "storage_path": "product-images/filtro-alfa-tipo-t-2-anilla-plastica-con-hidrociclon.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/filtro-alfa-tipo-t-2-anilla-plastica-con-hidrociclon.webp",
+        "checksum": "0d69b59fb0d330e8fb57d22b350cbe134ad3ef56f5affe6fb11dded36b91e817"
+      },
+      {
+        "local_path": "media/products/anillas-20545-20540-50.webp",
+        "storage_path": "product-images/anillas-20545-20540-50.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/anillas-20545-20540-50.webp",
+        "checksum": "e0f3585296ff8d1836ded27c608623d3c891c591382845aae9393fa0cb2199e4"
+      },
+      {
+        "local_path": "media/products/anillas-20535-45-20540-50-vortix.webp",
+        "storage_path": "product-images/anillas-20535-45-20540-50-vortix.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/anillas-20535-45-20540-50-vortix.webp",
+        "checksum": "99e4e27e7a6f25c9e5755b2c8cea459f273aca8002d6915c6acc554bf52dea80"
+      },
+      {
+        "local_path": "media/products/20540-malla-anilla-anilla-vortix.webp",
+        "storage_path": "product-images/20540-malla-anilla-anilla-vortix.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/20540-malla-anilla-anilla-vortix.webp",
+        "checksum": "07e2f50a62b4877733a82b6fd20d0dd4ac4daf58879f083abbf43c2df60e2605"
+      },
+      {
+        "local_path": "media/products/malla-20540-50.webp",
+        "storage_path": "product-images/malla-20540-50.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/malla-20540-50.webp",
+        "checksum": "b009a5c80e0c0e3bbcdf89a455b4e8990c0a889aa7eae466e8ac1b22587d74a1"
+      },
+      {
+        "local_path": "media/products/4608.webp",
+        "storage_path": "product-images/4608.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/4608.webp",
+        "checksum": "36fced5ac79f835e990d97dfe9bac366ac608c51c776704b3490608d452c5456"
+      },
+      {
+        "local_path": "media/products/33820122-33820123-33830122.webp",
+        "storage_path": "product-images/33820122-33820123-33830122.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/33820122-33820123-33830122.webp",
+        "checksum": "2d75fc75631647669577aa9eb4d22e81fd9ae3a66d3f8b964dc263ee71e96b1c"
+      },
+      {
+        "local_path": "media/products/33850123-33850124.webp",
+        "storage_path": "product-images/33850123-33850124.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/33850123-33850124.webp",
+        "checksum": "262a1fe92375a86b57dce4ad3de1548369332401e12a4f82e7b604012d733a78"
+      },
+      {
+        "local_path": "media/products/34810120.webp",
+        "storage_path": "product-images/34810120.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/34810120.webp",
+        "checksum": "7080035a7ca4dc4b0f5b4f6f6a5186c2f77487569b6a467fa7e52f75602a72e4"
+      },
+      {
+        "local_path": "media/products/34811060-34811120-34822242.webp",
+        "storage_path": "product-images/34811060-34811120-34822242.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/34811060-34811120-34822242.webp",
+        "checksum": "3b748c26b53d2781897eef98685dfba05ef1075120e5c2d732f5c0a7388f960d"
+      },
+      {
+        "local_path": "media/products/filtros-simples-en-t-y-dobles-de-malla-plastica-con-efecto-hidrociclon.webp",
+        "storage_path": "product-images/filtros-simples-en-t-y-dobles-de-malla-plastica-con-efecto-hidrociclon.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/filtros-simples-en-t-y-dobles-de-malla-plastica-con-efecto-hidrociclon.webp",
+        "checksum": "729ff28fa5e42523315df99c2a57afddf2dcdd635756e87ff2a5d1427e73f318"
+      },
+      {
+        "local_path": "media/products/filtros-dobles-erhas-cortos-y-largos-en-t-malla-metalica-copia.webp",
+        "storage_path": "product-images/filtros-dobles-erhas-cortos-y-largos-en-t-malla-metalica-copia.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/filtros-dobles-erhas-cortos-y-largos-en-t-malla-metalica-copia.webp",
+        "checksum": "1425cbd5c8347bf6c6a7ac591a3b380e1b08fd97ac53ef2487d283908c02a0c8"
+      },
+      {
+        "local_path": "media/products/filtros-erhas-cortos-y-largos-en-t-anilla-plastica.webp",
+        "storage_path": "product-images/filtros-erhas-cortos-y-largos-en-t-anilla-plastica.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/filtros-erhas-cortos-y-largos-en-t-anilla-plastica.webp",
+        "checksum": "729ff28fa5e42523315df99c2a57afddf2dcdd635756e87ff2a5d1427e73f318"
+      },
+      {
+        "local_path": "media/products/filtros-dobles-erhas-cortos-y-largos-anilla-con-efecto-hidrociclon.webp",
+        "storage_path": "product-images/filtros-dobles-erhas-cortos-y-largos-anilla-con-efecto-hidrociclon.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/filtros-dobles-erhas-cortos-y-largos-anilla-con-efecto-hidrociclon.webp",
+        "checksum": "1425cbd5c8347bf6c6a7ac591a3b380e1b08fd97ac53ef2487d283908c02a0c8"
+      },
+      {
+        "local_path": "media/products/997-030-00-01-997-040-00-01.webp",
+        "storage_path": "product-images/997-030-00-01-997-040-00-01.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/997-030-00-01-997-040-00-01.webp",
+        "checksum": "9cf21c4f98e0c129aa65da9c7091ae98c4dcf650a28ee13b7035bce495fbf350"
+      },
+      {
+        "local_path": "media/products/hidrociclon-plastico-greenplains.webp",
+        "storage_path": "product-images/hidrociclon-plastico-greenplains.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/hidrociclon-plastico-greenplains.webp",
+        "checksum": "d984b6e111a31666ae65d4e8ab7a12185ff68239a07065ddd3c86d651f7f2a64"
+      },
+      {
+        "local_path": "media/products/filtro-semiautomatico-green-plains.webp",
+        "storage_path": "product-images/filtro-semiautomatico-green-plains.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/filtro-semiautomatico-green-plains.webp",
+        "checksum": "cbb73eeb9ba34434e9aea837f4eb682a6988cf209846953bd99d3d5af55ded42"
+      },
+      {
+        "local_path": "media/products/filtro-tipo-t-de-malla-metalica-greenplains.webp",
+        "storage_path": "product-images/filtro-tipo-t-de-malla-metalica-greenplains.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/filtro-tipo-t-de-malla-metalica-greenplains.webp",
+        "checksum": "5d0810787ce81f326036e5872b887a4dbed58fe3f51d887629968d01bd005b46"
+      },
+      {
+        "local_path": "media/products/filtro-tipo-y-de-malla-greenplains.webp",
+        "storage_path": "product-images/filtro-tipo-y-de-malla-greenplains.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/filtro-tipo-y-de-malla-greenplains.webp",
+        "checksum": "28ba31bf17206f8e5c2b8a1f5c64f4e847390d5140c915bc4344727ae211160c"
+      },
+      {
+        "local_path": "media/products/estacion-de-filtrado-automatico-greenplains.webp",
+        "storage_path": "product-images/estacion-de-filtrado-automatico-greenplains.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/estacion-de-filtrado-automatico-greenplains.webp",
+        "checksum": "3dc5e2ba46120208d54d39ebcb40a06fa063c34be721ccabff6653d672324d10"
+      },
+      {
+        "local_path": "media/products/filtro-tipo-y-plastico-malla-metalica.webp",
+        "storage_path": "product-images/filtro-tipo-y-plastico-malla-metalica.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/filtro-tipo-y-plastico-malla-metalica.webp",
+        "checksum": "9d0c0101f048adad0e67ee83a3953340dc9cfe776994fc024b8065e30e078d39"
+      },
+      {
+        "local_path": "media/products/filtro-tipo-t-plastico-malla-metalica.webp",
+        "storage_path": "product-images/filtro-tipo-t-plastico-malla-metalica.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/filtro-tipo-t-plastico-malla-metalica.webp",
+        "checksum": "9a72e7baf21e474deeb832a678eb07d9c62d122db8db89f2d3d274fce8920931"
+      },
+      {
+        "local_path": "media/products/20015-malla.webp",
+        "storage_path": "product-images/20015-malla.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/20015-malla.webp",
+        "checksum": "25a8fc709d47e2d22f255a51d09d2318ca6cf3e9456f6eca1717b356b340d5f4"
+      },
+      {
+        "local_path": "media/products/20025-malla.webp",
+        "storage_path": "product-images/20025-malla.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/20025-malla.webp",
+        "checksum": "ff2a468315819fb3eddc97d862a1d2b8f06299e71e48193fc670b6a5a5f5b757"
+      },
+      {
+        "local_path": "media/products/hidrociclon-plastico-alfa.webp",
+        "storage_path": "product-images/hidrociclon-plastico-alfa.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/hidrociclon-plastico-alfa.webp",
+        "checksum": "bcb0985964aff6f423a791f930a62273f04aedfaa649782539436bbc63012949"
+      },
+      {
+        "local_path": "media/products/roscada-2.webp",
+        "storage_path": "product-images/roscada-2.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/roscada-2.webp",
+        "checksum": "9652e186120e94e333dd7776ba8e93a1c32eb533231ab6992723db35aa12c409"
+      },
+      {
+        "local_path": "media/products/para-encolar-2.webp",
+        "storage_path": "product-images/para-encolar-2.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/para-encolar-2.webp",
+        "checksum": "785030d1a21099b93f89611748ee35f9712d57c57478adf887605d065c25bd27"
+      },
+      {
+        "local_path": "media/products/roscada.webp",
+        "storage_path": "product-images/roscada.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/roscada.webp",
+        "checksum": "5c3985eed0481923dd75010e15a2f750bc558644643b7581af8563538e51eede"
+      },
+      {
+        "local_path": "media/products/para-encolar.webp",
+        "storage_path": "product-images/para-encolar.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/para-encolar.webp",
+        "checksum": "cb23772f729d7694d1960941da451129bfe422faeb1bc06bf4db99fcb64633d8"
+      },
+      {
+        "local_path": "media/products/valvula-esclusa-metalica-presion-nominal-16-bar.webp",
+        "storage_path": "product-images/valvula-esclusa-metalica-presion-nominal-16-bar.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/valvula-esclusa-metalica-presion-nominal-16-bar.webp",
+        "checksum": "9d1b81dd924bca36efb58dfb9dfd50ae776f2cb46c409a206d04efd76e30d86c"
+      },
+      {
+        "local_path": "media/products/valvula-esferica-metalica-mariposa-presion-nominal-16-bar.webp",
+        "storage_path": "product-images/valvula-esferica-metalica-mariposa-presion-nominal-16-bar.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/valvula-esferica-metalica-mariposa-presion-nominal-16-bar.webp",
+        "checksum": "3f63a4fba548b4ad906e25e1bff0e18aea79376750ed1b4c117df39a6d492a68"
+      },
+      {
+        "local_path": "media/products/valvula-mariposa-plastica-bridada.webp",
+        "storage_path": "product-images/valvula-mariposa-plastica-bridada.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/valvula-mariposa-plastica-bridada.webp",
+        "checksum": "b847df0634d939af38b381f63123be808b5e12691c540b4fab41688ede35bff3"
+      },
+      {
+        "local_path": "media/products/valvula-mariposa-tipo-wafer.webp",
+        "storage_path": "product-images/valvula-mariposa-tipo-wafer.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/valvula-mariposa-tipo-wafer.webp",
+        "checksum": "504006540fe2e7c3f5fe0305ee58089be3bd4df263c59842d63c6098772edfe3"
+      },
+      {
+        "local_path": "media/products/reductor-rosca-macho.webp",
+        "storage_path": "product-images/reductor-rosca-macho.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/reductor-rosca-macho.webp",
+        "checksum": "2281cf3e6457c14591cfee8e207d89d100ad1eb2b86d37af7d4dbfb0bf8eb0b1"
+      },
+      {
+        "local_path": "media/products/reductor-rosca-hembra.webp",
+        "storage_path": "product-images/reductor-rosca-hembra.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/reductor-rosca-hembra.webp",
+        "checksum": "65e31286155abeb1d482318d0f0d74141be2d17fd09da3d46c2e4e8efc5bd2ab"
+      },
+      {
+        "local_path": "media/products/valvula-de-retrolavado-platica.webp",
+        "storage_path": "product-images/valvula-de-retrolavado-platica.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/valvula-de-retrolavado-platica.webp",
+        "checksum": "30119789b157b1cb5889b13e60b5dd82e498b173aa5a802ea181b41bd7325770"
+      },
+      {
+        "local_path": "media/products/solenoide-de-3-vias-na-latch-9-12-v-dc.webp",
+        "storage_path": "product-images/solenoide-de-3-vias-na-latch-9-12-v-dc.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/solenoide-de-3-vias-na-latch-9-12-v-dc.webp",
+        "checksum": "063488cb324bc0ac75298a0b8d4727dff5384239d1dcc9de141cd7f0963b6b79"
+      },
+      {
+        "local_path": "media/products/solenoide-de-repuesto.webp",
+        "storage_path": "product-images/solenoide-de-repuesto.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/solenoide-de-repuesto.webp",
+        "checksum": "3c7fdacc464cbfa8aa516d3de7e6bca6392b3f0ebd4d07352aff7b140c9a7556"
+      },
+      {
+        "local_path": "media/products/valvula-solenoide-rpe-3ra-serie.webp",
+        "storage_path": "product-images/valvula-solenoide-rpe-3ra-serie.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/valvula-solenoide-rpe-3ra-serie.webp",
+        "checksum": "75600e561d00f0782216b88e16525f5d7ce75fe158bdc76cf25e65e7b783891f"
+      },
+      {
+        "local_path": "media/products/valvula-solenoide-rpe-2da-serie.webp",
+        "storage_path": "product-images/valvula-solenoide-rpe-2da-serie.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/valvula-solenoide-rpe-2da-serie.webp",
+        "checksum": "ea660cc6fbb0c77e06ccf5593a2393346d7e3fb93871a794141dc68ae5cabe61"
+      },
+      {
+        "local_path": "media/products/valvula-solenoide-para-baja-presion.webp",
+        "storage_path": "product-images/valvula-solenoide-para-baja-presion.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/valvula-solenoide-para-baja-presion.webp",
+        "checksum": "a53eb138601facc5d171ae74e9483988ce7e55a12a927cc70570fc778ce9700e"
+      },
+      {
+        "local_path": "media/products/valvula-solenoide-con-programador.webp",
+        "storage_path": "product-images/valvula-solenoide-con-programador.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/valvula-solenoide-con-programador.webp",
+        "checksum": "4ddb0b34aabd819828d4706c44aaf8d4cd9bc4f8cde47cb7b63ca53c0913c92e"
+      },
+      {
+        "local_path": "media/products/solenoide.webp",
+        "storage_path": "product-images/solenoide.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/solenoide.webp",
+        "checksum": "dfc9a68aea36cb4e30b7d0d6eb73d001fc51a49bbea4577b45c5a97842cc6e35"
+      },
+      {
+        "local_path": "media/products/regulador-de-presion.webp",
+        "storage_path": "product-images/regulador-de-presion.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/regulador-de-presion.webp",
+        "checksum": "6e5dee1a95b7d4c9c5a9037984c3342f529b01f49a2df41d79a2775f76b9a309"
+      },
+      {
+        "local_path": "media/products/valvula-solenoide-k-rain-pro-100.webp",
+        "storage_path": "product-images/valvula-solenoide-k-rain-pro-100.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/valvula-solenoide-k-rain-pro-100.webp",
+        "checksum": "87445f4242e169f26bd9dd80bd4717606c9bf5c0d337e3ae0dea80a94e3fd52b"
+      },
+      {
+        "local_path": "media/products/valvula-solenoide-k-rain-pro-150.webp",
+        "storage_path": "product-images/valvula-solenoide-k-rain-pro-150.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/valvula-solenoide-k-rain-pro-150.webp",
+        "checksum": "87445f4242e169f26bd9dd80bd4717606c9bf5c0d337e3ae0dea80a94e3fd52b"
+      },
+      {
+        "local_path": "media/products/solenoide-de-3-vias-c-base-plastica-24vac-no-nc.webp",
+        "storage_path": "product-images/solenoide-de-3-vias-c-base-plastica-24vac-no-nc.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/solenoide-de-3-vias-c-base-plastica-24vac-no-nc.webp",
+        "checksum": "456f29cb9fd871d9a8976b6a10ec72973c5d274166e8379c1817307a89d3e652"
+      },
+      {
+        "local_path": "media/products/repuesto-membrana.webp",
+        "storage_path": "product-images/repuesto-membrana.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/repuesto-membrana.webp",
+        "checksum": "a6d4e242bd3015adde320d3f867538d3fedb79edc25c7ade35f03b948670ae59"
+      },
+      {
+        "local_path": "media/products/membrana-para-valvula-tecnidro.webp",
+        "storage_path": "product-images/membrana-para-valvula-tecnidro.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/membrana-para-valvula-tecnidro.webp",
+        "checksum": "dfd0ad222340388066df0fc65a18210748668c904be7a1bbe59a3320519e0074"
+      },
+      {
+        "local_path": "media/products/valvulas-de-retencion-verticales-roscadas.webp",
+        "storage_path": "product-images/valvulas-de-retencion-verticales-roscadas.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/valvulas-de-retencion-verticales-roscadas.webp",
+        "checksum": "bf217014764072f7ada397d74a34bf002262258b0be0edb596d46c55bb4a0cac"
+      },
+      {
+        "local_path": "media/products/filtro-para-valvulas-de-retencion-metalicas-verticales.webp",
+        "storage_path": "product-images/filtro-para-valvulas-de-retencion-metalicas-verticales.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/filtro-para-valvulas-de-retencion-metalicas-verticales.webp",
+        "checksum": "3b3c2f43a458c9fe97df77dbd682e2d9be67ae1714ac517082a400090275f135"
+      },
+      {
+        "local_path": "media/products/de-aire-doble-efecto.webp",
+        "storage_path": "product-images/de-aire-doble-efecto.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/de-aire-doble-efecto.webp",
+        "checksum": "7ba36b6cbd07257c02ccdb5a6bd886a6c5ff29fa6fbec9aa1fc0aba85b1ed206"
+      },
+      {
+        "local_path": "media/products/valvula-de-aire-vacio-doble-efecto-rosca-macho.webp",
+        "storage_path": "product-images/valvula-de-aire-vacio-doble-efecto-rosca-macho.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/valvula-de-aire-vacio-doble-efecto-rosca-macho.webp",
+        "checksum": "795aba4946bce6720a33c199ad749b315166df978b9c42c11232661eba0a622b"
+      },
+      {
+        "local_path": "media/products/valvula-de-aire-vacio-doble-efecto-rm-3-4-o-1.webp",
+        "storage_path": "product-images/valvula-de-aire-vacio-doble-efecto-rm-3-4-o-1.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/valvula-de-aire-vacio-doble-efecto-rm-3-4-o-1.webp",
+        "checksum": "4156f4df5950b9978a435bb4fb75dc7b8c0f619e3b59bedb1684f548842cde6d"
+      },
+      {
+        "local_path": "media/products/valvula-aire-vacio-triple-efecto-rm-1-y-2.webp",
+        "storage_path": "product-images/valvula-aire-vacio-triple-efecto-rm-1-y-2.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/valvula-aire-vacio-triple-efecto-rm-1-y-2.webp",
+        "checksum": "779a0e73491baa60de7ae0108af0e7c325a41ba86681f0150666722b92cc8473"
+      },
+      {
+        "local_path": "media/products/de-aire-triple-efecto-2.webp",
+        "storage_path": "product-images/de-aire-triple-efecto-2.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/de-aire-triple-efecto-2.webp",
+        "checksum": "566b4454e660362cd05fa056051b5eb66703ef65af0f12c2b854fcee18fca563"
+      },
+      {
+        "local_path": "media/products/unirain-arv-1.webp",
+        "storage_path": "product-images/unirain-arv-1.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/unirain-arv-1.webp",
+        "checksum": "79155c4a2d65452c7e2e2954e397b79e7a55c29a3e855a7aa0a461d044b6b449"
+      },
+      {
+        "local_path": "media/products/unirain-arv-2.webp",
+        "storage_path": "product-images/unirain-arv-2.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/unirain-arv-2.webp",
+        "checksum": "c797fb1bfda87a50fcdd7eb32a885a8e7f183025ae420d2157b0961dcc9df4ef"
+      },
+      {
+        "local_path": "media/products/unirain-arv-1-automatica.webp",
+        "storage_path": "product-images/unirain-arv-1-automatica.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/unirain-arv-1-automatica.webp",
+        "checksum": "d19086bcd9f798171a484ecd17ab4bce063f0bf4766ea460a072c896e9d8ae5c"
+      },
+      {
+        "local_path": "media/products/valvula-aire-vacio-triple-efecto-compacta-rm-2″-unirain.webp",
+        "storage_path": "product-images/valvula-aire-vacio-triple-efecto-compacta-rm-2″-unirain.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/valvula-aire-vacio-triple-efecto-compacta-rm-2%e2%80%b3-unirain.webp",
+        "checksum": null
+      },
+      {
+        "local_path": "media/products/unirain-arv-2-cinetica-y-automatica.webp",
+        "storage_path": "product-images/unirain-arv-2-cinetica-y-automatica.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/unirain-arv-2-cinetica-y-automatica.webp",
+        "checksum": "055c97f21b97b43fd5afdee4f2e8192e7122bd54f08bd293190f05a4a8c48028"
+      },
+      {
+        "local_path": "media/products/valvula-cilindrica-compacta-roscada.webp",
+        "storage_path": "product-images/valvula-cilindrica-compacta-roscada.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/valvula-cilindrica-compacta-roscada.webp",
+        "checksum": "a6689ff3418f4ebd661fa597b020ef05067b94692397e21e76316502ff292c1d"
+      },
+      {
+        "local_path": "media/products/valvula-cilindrica-compacta-espiga-x-espiga.webp",
+        "storage_path": "product-images/valvula-cilindrica-compacta-espiga-x-espiga.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/valvula-cilindrica-compacta-espiga-x-espiga.webp",
+        "checksum": "67cf380c23cb28346525859ff1b4b74c0278069f2148e20512cc2a83c2c892f2"
+      },
+      {
+        "local_path": "media/products/valvula-cilindrica-compacta-16-mm-espiga-x-cinta.webp",
+        "storage_path": "product-images/valvula-cilindrica-compacta-16-mm-espiga-x-cinta.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/valvula-cilindrica-compacta-16-mm-espiga-x-cinta.webp",
+        "checksum": "9b6778a4c3d8c213c34273aa3d362343419c0058003acd6f1283a0b9df337d9e"
+      },
+      {
+        "local_path": "media/products/valvula-cilindrica-compacta-inicial-c-goma-x-espiga.webp",
+        "storage_path": "product-images/valvula-cilindrica-compacta-inicial-c-goma-x-espiga.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/valvula-cilindrica-compacta-inicial-c-goma-x-espiga.webp",
+        "checksum": "28c5a95a01161a58c8dadbbae86b9841ad99ddaf79b946952c34f2f89b8422cf"
+      },
+      {
+        "local_path": "media/products/valvula-cilindrica-compacta-inicial-4.webp",
+        "storage_path": "product-images/valvula-cilindrica-compacta-inicial-4.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/valvula-cilindrica-compacta-inicial-4.webp",
+        "checksum": "15e27b235c668075852c8310a7a74b4f468d8c78fe9e61bba53392d993f0e6c0"
+      },
+      {
+        "local_path": "media/products/valvula-cilindrica-compacta-inicial-c-goma-x-cinta.webp",
+        "storage_path": "product-images/valvula-cilindrica-compacta-inicial-c-goma-x-cinta.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/valvula-cilindrica-compacta-inicial-c-goma-x-cinta.webp",
+        "checksum": "67b223856e069802b461bbd42a0e8efcc2ad0fc6bc99f55b69bfe1e76a76d0b7"
+      },
+      {
+        "local_path": "media/products/valvula-de-drenaje.webp",
+        "storage_path": "product-images/valvula-de-drenaje.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/valvula-de-drenaje.webp",
+        "checksum": "2e761a1d40f033eb80da64fe23232ebab4b04d8d4b5211363f7cd98780518a3c"
+      },
+      {
+        "local_path": "media/products/valvula-de-bronce-de-3-vias.webp",
+        "storage_path": "product-images/valvula-de-bronce-de-3-vias.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/valvula-de-bronce-de-3-vias.webp",
+        "checksum": "1b629580c630a776d2026bd89bc853e27129db8f404ff86471741f184fc2e081"
+      },
+      {
+        "local_path": "media/products/piloto-reductor-sostenedor-de-presion-dorot.webp",
+        "storage_path": "product-images/piloto-reductor-sostenedor-de-presion-dorot.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/piloto-reductor-sostenedor-de-presion-dorot.webp",
+        "checksum": "9081971d5d4f4fdde74ab5761d1f2a4ecd14b616e738e8ee24a2062d975ec045"
+      },
+      {
+        "local_path": "media/products/piloto-reductor-6-bar.webp",
+        "storage_path": "product-images/piloto-reductor-6-bar.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/piloto-reductor-6-bar.webp",
+        "checksum": "5c8c54dcf69fc2b096d6dd949d3751d6f5527347d80089a51d0e4ce6fa204ad7"
+      },
+      {
+        "local_path": "media/products/piloto-reductor-05-4-bar.webp",
+        "storage_path": "product-images/piloto-reductor-05-4-bar.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/piloto-reductor-05-4-bar.webp",
+        "checksum": "f4abc3b56235579b6d61c602123405722ac2bdffc94f57ba14a2cbdca640e354"
+      },
+      {
+        "local_path": "media/products/resorte-para-valvula-tecnidro.webp",
+        "storage_path": "product-images/resorte-para-valvula-tecnidro.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/resorte-para-valvula-tecnidro.webp",
+        "checksum": "9a5266c04fac0180f6b903a5e9a95f4a8e0156a266447fe0b4b1c9f4db7fec6c"
+      },
+      {
+        "local_path": "media/products/resorte-para-piloto-de-alivio-tecnidro.webp",
+        "storage_path": "product-images/resorte-para-piloto-de-alivio-tecnidro.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/resorte-para-piloto-de-alivio-tecnidro.webp",
+        "checksum": "74dfe428122dc08b2581260c7e512e9a34a3f0af1756c6fef9e4c75847717165"
+      },
+      {
+        "local_path": "media/products/relay-hidraulico-galit.webp",
+        "storage_path": "product-images/relay-hidraulico-galit.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/relay-hidraulico-galit.webp",
+        "checksum": "6b3ce767ee9193db783a874c36dc772dce3f71cd5dce7fd7a23d5b2aa2fe0924"
+      },
+      {
+        "local_path": "media/products/tapon-roscado.webp",
+        "storage_path": "product-images/tapon-roscado.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/tapon-roscado.webp",
+        "checksum": "364ddbb56184899916e21597ad45ce150f791a2d327dfb1fcccbbc1143c3f135"
+      },
+      {
+        "local_path": "media/products/filtro.webp",
+        "storage_path": "product-images/filtro.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/filtro.webp",
+        "checksum": "f9c799a637b5f9c31aa031c8fcdca0487d00860b844109c5b55de94fb6f0a60d"
+      },
+      {
+        "local_path": "media/products/conector.webp",
+        "storage_path": "product-images/conector.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/conector.webp",
+        "checksum": "0e2c6f5de8327761b6e6a2ef63efa2549fa6f2d76556887a70e4e630356e06b2"
+      },
+      {
+        "local_path": "media/products/t.webp",
+        "storage_path": "product-images/t.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/t.webp",
+        "checksum": "376a6cb6cebbc15da6da8bf2b4f2f44b7c5a7c5c7a4441348ebfab01dbb40bbd"
+      },
+      {
+        "local_path": "media/products/adaptador-macho.webp",
+        "storage_path": "product-images/adaptador-macho.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/adaptador-macho.webp",
+        "checksum": "d7ac75479781ec767d79e3a2e29835ac41ce9eee63745bbf0ede6954ba1d4c16"
+      },
+      {
+        "local_path": "media/products/valvula-cilindrica-c-rosca-x-cinta.webp",
+        "storage_path": "product-images/valvula-cilindrica-c-rosca-x-cinta.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/valvula-cilindrica-c-rosca-x-cinta.webp",
+        "checksum": "89d24985ecd4295ab5a3408971620d8297149486973a866aab9bac409df87950"
+      },
+      {
+        "local_path": "media/products/valvula-cilindrica-lay-flat-a-cinta.webp",
+        "storage_path": "product-images/valvula-cilindrica-lay-flat-a-cinta.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/valvula-cilindrica-lay-flat-a-cinta.webp",
+        "checksum": "ab4f4a6fa8c91cecf21a1040083cdadccbacdee649ac7212950c2557cd380df3"
+      },
+      {
+        "local_path": "media/products/valvula-cilindrica-lay-flat-cinta.webp",
+        "storage_path": "product-images/valvula-cilindrica-lay-flat-cinta.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/valvula-cilindrica-lay-flat-cinta.webp",
+        "checksum": "f53048f3cf1be9dcba2852ff3f8b936a259a29a2a2668eeebb8be34d829bc36b"
+      },
+      {
+        "local_path": "media/products/valvula-cilindrica-espiga.webp",
+        "storage_path": "product-images/valvula-cilindrica-espiga.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/valvula-cilindrica-espiga.webp",
+        "checksum": "6b93a5a34fff67e06ede7892830880e65e42262fae1892aca1b9722fc0f83f2f"
+      },
+      {
+        "local_path": "media/products/valvulas-metalicas-de-retencion-dual-check.webp",
+        "storage_path": "product-images/valvulas-metalicas-de-retencion-dual-check.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/valvulas-metalicas-de-retencion-dual-check.webp",
+        "checksum": "0d3d24c57dcb420b3c281074979d1933ef1f54b2f6ec6255430774d0b85579a7"
+      },
+      {
+        "local_path": "media/products/codo.webp",
+        "storage_path": "product-images/codo.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/codo.webp",
+        "checksum": "4fa41fdc4547f396d95772abe3522da01230ded74564b0702b0629cc9cf3f3c1"
+      },
+      {
+        "local_path": "media/products/t-con-rosca-macho-2.webp",
+        "storage_path": "product-images/t-con-rosca-macho-2.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/t-con-rosca-macho-2.webp",
+        "checksum": "0479012e2922fc7ae30ca7d85debad8fedaf656123c440dcb4d2f66a294f9b2f"
+      },
+      {
+        "local_path": "media/products/niple.webp",
+        "storage_path": "product-images/niple.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/niple.webp",
+        "checksum": "d20d17062c590315a877c62374fedde074c0f9b362d005ae09703c523c6b76c8"
+      },
+      {
+        "local_path": "media/products/valvula-esferica-metalica-presion-nominal-16-bar-2.webp",
+        "storage_path": "product-images/valvula-esferica-metalica-presion-nominal-16-bar-2.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/valvula-esferica-metalica-presion-nominal-16-bar-2.webp",
+        "checksum": "31709b1cdd781a42568a8d111e2198bf1ffbccd5eaa7076b584b712fa1ca8ecc"
+      },
+      {
+        "local_path": "media/products/valvula-esferica-metalica-presion-nominal-16-bar.webp",
+        "storage_path": "product-images/valvula-esferica-metalica-presion-nominal-16-bar.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/valvula-esferica-metalica-presion-nominal-16-bar.webp",
+        "checksum": "31709b1cdd781a42568a8d111e2198bf1ffbccd5eaa7076b584b712fa1ca8ecc"
+      },
+      {
+        "local_path": "media/products/valvula.webp",
+        "storage_path": "product-images/valvula.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/valvula.webp",
+        "checksum": "468ebebd5ae0136f4e7a6d5809c6e5dfdd6508e31954a5c15fc3ae7ffb7328f4"
+      },
+      {
+        "local_path": "media/products/programadores-tic2f-4f-pi.webp",
+        "storage_path": "product-images/programadores-tic2f-4f-pi.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/programadores-tic2f-4f-pi.webp",
+        "checksum": "2d60b2cf55b31aaaf7dda2d3ea84fdd57a467c6e6ab8587509885f0cd72121ca"
+      },
+      {
+        "local_path": "media/products/valvula-cilindrica-espiga-16mm-x-cinta.webp",
+        "storage_path": "product-images/valvula-cilindrica-espiga-16mm-x-cinta.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/valvula-cilindrica-espiga-16mm-x-cinta.webp",
+        "checksum": "160b91cc621c01efcb707fdae08d61558bdb8508d477c698f36d9820ecb0ff34"
+      },
+      {
+        "local_path": "media/products/interruptor-de-vacio-arv.webp",
+        "storage_path": "product-images/interruptor-de-vacio-arv.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/interruptor-de-vacio-arv.webp",
+        "checksum": "30e0c597c857ad4c2ccf73cda7e75636e21b6996ce6cd698096706b25802bf28"
+      },
+      {
+        "local_path": "media/products/valvula-hidraulica-plastica-modelo-serie-75s.webp",
+        "storage_path": "product-images/valvula-hidraulica-plastica-modelo-serie-75s.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/valvula-hidraulica-plastica-modelo-serie-75s.webp",
+        "checksum": "774e03595d2aeeefdd7142aa646f7f91c476d971c8aba46752638611fbadb426"
+      },
+      {
+        "local_path": "media/products/valvulas-dorot-plasticas-modelo-serie-75t.webp",
+        "storage_path": "product-images/valvulas-dorot-plasticas-modelo-serie-75t.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/valvulas-dorot-plasticas-modelo-serie-75t.webp",
+        "checksum": "00c20f7a9fbe831a576001933355782d504105652d23c264e8b183d56eb0c83a"
+      },
+      {
+        "local_path": "media/products/valvulas-dorot-plasticas-modelo-serie-95-y-96.webp",
+        "storage_path": "product-images/valvulas-dorot-plasticas-modelo-serie-95-y-96.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/valvulas-dorot-plasticas-modelo-serie-95-y-96.webp",
+        "checksum": "c59fcadfe69466f46b5e817284e6e26ee01dc0f11ce61ca7ef4fe93b02e25672"
+      },
+      {
+        "local_path": "media/products/valvula-de-retencion-iri-greenplains.webp",
+        "storage_path": "product-images/valvula-de-retencion-iri-greenplains.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/valvula-de-retencion-iri-greenplains.webp",
+        "checksum": "b4f812b0d6d5d3a5c4966323be7c858787ab5dba3bc56afde7eb61e7096181c0"
+      },
+      {
+        "local_path": "media/products/caja-mini-greenplains.webp",
+        "storage_path": "product-images/caja-mini-greenplains.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/caja-mini-greenplains.webp",
+        "checksum": "ffa939e68d5ba399b5574fb047c7bebb4227eab26ae6c13b1e86e2a6679df447"
+      },
+      {
+        "local_path": "media/products/valvula-de-pie-greenplains-2.webp",
+        "storage_path": "product-images/valvula-de-pie-greenplains-2.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/valvula-de-pie-greenplains-2.webp",
+        "checksum": "0296a2269151b475be39727dbf02ef4a2838b883d60ff881f0dc6df066a09015"
+      },
+      {
+        "local_path": "media/products/valvula-de-pie-greenplains.webp",
+        "storage_path": "product-images/valvula-de-pie-greenplains.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/valvula-de-pie-greenplains.webp",
+        "checksum": "b11d9dc8fad7acfd5e604699ff68036387b5115e2bd07288d5dc4daf9ded674b"
+      },
+      {
+        "local_path": "media/products/cajas-para-valvulas.webp",
+        "storage_path": "product-images/cajas-para-valvulas.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/cajas-para-valvulas.webp",
+        "checksum": "f0b5012b77dd061ec60271fedef1af56d5b05fe41da6d39b1e3fbffd03571f5b"
+      },
+      {
+        "local_path": "media/products/valvulas-de-control-hidraulico-adi.webp",
+        "storage_path": "product-images/valvulas-de-control-hidraulico-adi.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/valvulas-de-control-hidraulico-adi.webp",
+        "checksum": "1b757fef46f4d3bc6253da7cf3dec049656663829cc4275f35c3ac019d93336a"
+      },
+      {
+        "local_path": "media/products/valvulas-de-control-hidraulico-ama.webp",
+        "storage_path": "product-images/valvulas-de-control-hidraulico-ama.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/valvulas-de-control-hidraulico-ama.webp",
+        "checksum": "cffa5c92ecc8f586cb3b2a1aa04e8d5646c0eb1fa328614653aae258be6b1f05"
+      },
+      {
+        "local_path": "media/products/valvulas-de-control-hidraulico-ami.webp",
+        "storage_path": "product-images/valvulas-de-control-hidraulico-ami.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/valvulas-de-control-hidraulico-ami.webp",
+        "checksum": "333cd898cf5c2b045810e0c21d0ca329543f3c04c58dcc949b7bfdd019b7eb9d"
+      },
+      {
+        "local_path": "media/products/valvula-esferica-pead-con-union-doble.webp",
+        "storage_path": "product-images/valvula-esferica-pead-con-union-doble.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/valvula-esferica-pead-con-union-doble.webp",
+        "checksum": "042374ab1eee647713ec555d65c586fbb171366b5e46f918e19e62f5a0dcab6d"
+      },
+      {
+        "local_path": "media/products/caja-circular-mini-plastica-alfa.webp",
+        "storage_path": "product-images/caja-circular-mini-plastica-alfa.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/caja-circular-mini-plastica-alfa.webp",
+        "checksum": "8f1e5217a0f2112a60b4488b394db51651e8893ea98757b86cd555d3c39c05ad"
+      },
+      {
+        "local_path": "media/products/caja-circular-large-plastica-alfa.webp",
+        "storage_path": "product-images/caja-circular-large-plastica-alfa.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/caja-circular-large-plastica-alfa.webp",
+        "checksum": "084e3624a5d9d508a5dc46656f4a91a52675104ae24b4f1eed91c4c013afcea3"
+      },
+      {
+        "local_path": "media/products/caja-retangular-standard-plastica-alfa.webp",
+        "storage_path": "product-images/caja-retangular-standard-plastica-alfa.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/caja-retangular-standard-plastica-alfa.webp",
+        "checksum": "57eaf9333f4a5f75c0045bb76496dcc565639577285a8190abef4a91d248fd5d"
+      },
+      {
+        "local_path": "media/products/caja-retangular-jumbo-plastica-alfa.webp",
+        "storage_path": "product-images/caja-retangular-jumbo-plastica-alfa.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/caja-retangular-jumbo-plastica-alfa.webp",
+        "checksum": "a7d6a1f7d8be7fb414106f0b0f8eb273b23900947031c013a03530965996b7c1"
+      },
+      {
+        "local_path": "media/products/valvulas-tecnidro-metalicas.webp",
+        "storage_path": "product-images/valvulas-tecnidro-metalicas.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/valvulas-tecnidro-metalicas.webp",
+        "checksum": "8dbf8a4b7d7bafd4339b20bc0b011854da057b005fbc72b205571bb15f8acfee"
+      },
+      {
+        "local_path": "media/products/valvulas-tecnidro-plasticas.webp",
+        "storage_path": "product-images/valvulas-tecnidro-plasticas.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/valvulas-tecnidro-plasticas.webp",
+        "checksum": "88c4238d114d63676e73ab141e49fdf62ff956f46e7e89b7432e5c8655e0dc27"
+      },
+      {
+        "local_path": "media/products/caudalimetros-tecnidro.webp",
+        "storage_path": "product-images/caudalimetros-tecnidro.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/caudalimetros-tecnidro.webp",
+        "checksum": "b8e79b0cd65c3317048fa2dfd05ccd6e0f5fb93503ce1ed0b946726ea2943718"
+      },
+      {
+        "local_path": "media/products/caudalimetro-metalico-bridado.webp",
+        "storage_path": "product-images/caudalimetro-metalico-bridado.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/caudalimetro-metalico-bridado.webp",
+        "checksum": "2acfbe3db87e8d29a10dd0af817c8a364147465b7d46c55c347ad4fe87048ec7"
+      },
+      {
+        "local_path": "media/products/manometro-1-4-de-0-6-bares-y-de-0-10-bares.webp",
+        "storage_path": "product-images/manometro-1-4-de-0-6-bares-y-de-0-10-bares.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/manometro-1-4-de-0-6-bares-y-de-0-10-bares.webp",
+        "checksum": "75b1e9f9d68dfc15c528263df30806d5bdbfa2587ff00e6bed91095baf68d4cc"
+      },
+      {
+        "local_path": "media/products/adaptador-para-manometro.webp",
+        "storage_path": "product-images/adaptador-para-manometro.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/adaptador-para-manometro.webp",
+        "checksum": "4ab2718d39af1d0b7297af0bf9b2b8bff5624b4525aedf7d4751acc7e4e807ec"
+      },
+      {
+        "local_path": "media/products/flujometro-rh-1-2-y-3-4.webp",
+        "storage_path": "product-images/flujometro-rh-1-2-y-3-4.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/flujometro-rh-1-2-y-3-4.webp",
+        "checksum": "64c0515ce2616f56ded39a4cef8809e317ad05433e73f45ecbcd03aec7e92e10"
+      },
+      {
+        "local_path": "media/products/caudalimetro-plastico-tecnidro.webp",
+        "storage_path": "product-images/caudalimetro-plastico-tecnidro.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/caudalimetro-plastico-tecnidro.webp",
+        "checksum": "d899fced5a84481d15286c4a09169096fb200c974a2dd32835c3395df6e537e1"
+      },
+      {
+        "local_path": "media/products/programador-de-canilla.webp",
+        "storage_path": "product-images/programador-de-canilla.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/programador-de-canilla.webp",
+        "checksum": "aa4eb20bb64746638a14a3c11ebe644b4cf9d178bbc631d7e67117df193396f4"
+      },
+      {
+        "local_path": "media/products/programador-de-retrolavado-tic-dp.webp",
+        "storage_path": "product-images/programador-de-retrolavado-tic-dp.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/programador-de-retrolavado-tic-dp.webp",
+        "checksum": "8144ff48eee4dd178c17e04d143adadadc0968ab817a66465b45a93e98bf06dc"
+      },
+      {
+        "local_path": "media/products/pro-lc-8-y-12-estaciones-con-funcion-loop.webp",
+        "storage_path": "product-images/pro-lc-8-y-12-estaciones-con-funcion-loop.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/pro-lc-8-y-12-estaciones-con-funcion-loop.webp",
+        "checksum": "faaabc583bc63b3241e4d67109421c15ca226c824fe24cb52a4e61aaec9a5459"
+      },
+      {
+        "local_path": "media/products/pro-lc-8-y-12-estaciones.webp",
+        "storage_path": "product-images/pro-lc-8-y-12-estaciones.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/pro-lc-8-y-12-estaciones.webp",
+        "checksum": "bb63bc0004e8ab77dbefdac3c26d819dd7e619384ddf4051a455a3ae6b41ae6b"
+      },
+      {
+        "local_path": "media/products/pro-tap-100.webp",
+        "storage_path": "product-images/pro-tap-100.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/pro-tap-100.webp",
+        "checksum": "fc190f71458da09e5ff23fc4b942817cc874d9ae1cee0a8a324895acf50fb53e"
+      },
+      {
+        "local_path": "media/products/sensor-de-lluvia-3208-k-rain.webp",
+        "storage_path": "product-images/sensor-de-lluvia-3208-k-rain.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/sensor-de-lluvia-3208-k-rain.webp",
+        "checksum": "87445f4242e169f26bd9dd80bd4717606c9bf5c0d337e3ae0dea80a94e3fd52b"
+      },
+      {
+        "local_path": "media/products/k-rain-bl-kr-bluetooth.webp",
+        "storage_path": "product-images/k-rain-bl-kr-bluetooth.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/k-rain-bl-kr-bluetooth.webp",
+        "checksum": "87445f4242e169f26bd9dd80bd4717606c9bf5c0d337e3ae0dea80a94e3fd52b"
+      },
+      {
+        "local_path": "media/products/valvula-selenoide-con-programador.webp",
+        "storage_path": "product-images/valvula-selenoide-con-programador.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/valvula-selenoide-con-programador.webp",
+        "checksum": "28b6de85bb64943a2db7a3ee6cacd54c5bbea1c3eadb5d3d42a31d51591fb198"
+      },
+      {
+        "local_path": "media/products/k-rain-rps-46.webp",
+        "storage_path": "product-images/k-rain-rps-46.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/k-rain-rps-46.webp",
+        "checksum": "87445f4242e169f26bd9dd80bd4717606c9bf5c0d337e3ae0dea80a94e3fd52b"
+      },
+      {
+        "local_path": "media/products/k-rain-pro-ex-2-0.webp",
+        "storage_path": "product-images/k-rain-pro-ex-2-0.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/k-rain-pro-ex-2-0.webp",
+        "checksum": "87445f4242e169f26bd9dd80bd4717606c9bf5c0d337e3ae0dea80a94e3fd52b"
+      },
+      {
+        "local_path": "media/products/k-rain-pro-ex-2-0-wifi.webp",
+        "storage_path": "product-images/k-rain-pro-ex-2-0-wifi.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/k-rain-pro-ex-2-0-wifi.webp",
+        "checksum": "87445f4242e169f26bd9dd80bd4717606c9bf5c0d337e3ae0dea80a94e3fd52b"
+      },
+      {
+        "local_path": "media/products/monturas-abrazaderas-o-silletas-2-bulones.webp",
+        "storage_path": "product-images/monturas-abrazaderas-o-silletas-2-bulones.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/monturas-abrazaderas-o-silletas-2-bulones.webp",
+        "checksum": "3c7d6a393f14885065b65af442c75246702f3d0d14e627e379a3f1b28717cd30"
+      },
+      {
+        "local_path": "media/products/monturas-abrazaderas-o-silletas-4-bulones.webp",
+        "storage_path": "product-images/monturas-abrazaderas-o-silletas-4-bulones.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/monturas-abrazaderas-o-silletas-4-bulones.webp",
+        "checksum": "af6f4129b3ede981afff45af5c32d14efa21f3adb797dde56840e0153ba199cd"
+      },
+      {
+        "local_path": "media/products/monturas-abrazaderas-o-silletas-6-bulones-2.webp",
+        "storage_path": "product-images/monturas-abrazaderas-o-silletas-6-bulones-2.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/monturas-abrazaderas-o-silletas-6-bulones-2.webp",
+        "checksum": "4ea9ccc1beebbd01266576b8fb5f8d45533ec43f6e9441548f7f30c3c68ea9a3"
+      },
+      {
+        "local_path": "media/products/con-bulones-y-anillo-metalico-de-refuerzo.webp",
+        "storage_path": "product-images/con-bulones-y-anillo-metalico-de-refuerzo.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/con-bulones-y-anillo-metalico-de-refuerzo.webp",
+        "checksum": "e0b2d2cee9f911659a1a90fe16441cfa7b6a1a2b69e91c83ccd255f104589621"
+      },
+      {
+        "local_path": "media/products/monturas-con-cuna.webp",
+        "storage_path": "product-images/monturas-con-cuna.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/monturas-con-cuna.webp",
+        "checksum": "50980799d7ec0808245c168584c0b55bb12add97fe30da6a69075f6dea42ed93"
+      },
+      {
+        "local_path": "media/products/abrazadera-metalica-greenplains.webp",
+        "storage_path": "product-images/abrazadera-metalica-greenplains.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/abrazadera-metalica-greenplains.webp",
+        "checksum": "669f69e9b72240fffe0306f12c751142c9b1a55c007ab303de4279fc8a8d9455"
+      },
+      {
+        "local_path": "media/products/buje-reductor-hembra-hembra-con-aro-de-goma.webp",
+        "storage_path": "product-images/buje-reductor-hembra-hembra-con-aro-de-goma.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/buje-reductor-hembra-hembra-con-aro-de-goma.webp",
+        "checksum": "4067f5ef6c3b4e32eadd2671f8ca659e82ee6d0083d2eab1940ce3fc1f6c1598"
+      },
+      {
+        "local_path": "media/products/cupla-hembra-hembra-con-aro-de-goma.webp",
+        "storage_path": "product-images/cupla-hembra-hembra-con-aro-de-goma.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/cupla-hembra-hembra-con-aro-de-goma.webp",
+        "checksum": "3d7e1abdc2fc786ea80830b620375c8bf1ec984fa75e59e659103ee26f0bb3d4"
+      },
+      {
+        "local_path": "media/products/codo-90-hembra-hembra-con-aro-de-goma.webp",
+        "storage_path": "product-images/codo-90-hembra-hembra-con-aro-de-goma.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/codo-90-hembra-hembra-con-aro-de-goma.webp",
+        "checksum": "db077407cbae32e440b1259a7616fec0b0b22752ee16db3b2fef0d6485b53ed9"
+      },
+      {
+        "local_path": "media/products/codo-45-hembra-hembra-con-aro-de-goma.webp",
+        "storage_path": "product-images/codo-45-hembra-hembra-con-aro-de-goma.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/codo-45-hembra-hembra-con-aro-de-goma.webp",
+        "checksum": "2895689c74ef73187ea08941add4070a39ddba086f182a1b29faa07946cb2d0b"
+      },
+      {
+        "local_path": "media/products/union-doble-pn10.webp",
+        "storage_path": "product-images/union-doble-pn10.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/union-doble-pn10.webp",
+        "checksum": "4022fa1c58882b0976d95167bb4852c42ad795977b0ffb0c8f318988dcfe8fb9"
+      },
+      {
+        "local_path": "media/products/t-reductora-h-h-h-con-aro-de-goma.webp",
+        "storage_path": "product-images/t-reductora-h-h-h-con-aro-de-goma.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/t-reductora-h-h-h-con-aro-de-goma.webp",
+        "checksum": "d4bdbc363e00592d97e5cc3e2ae05b30c47f6c3693c8c68e116b58fa2fa6bf43"
+      },
+      {
+        "local_path": "media/products/brida-campana-con-aro-de-goma.webp",
+        "storage_path": "product-images/brida-campana-con-aro-de-goma.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/brida-campana-con-aro-de-goma.webp",
+        "checksum": "ccf5b5321bf6293e5d3b8707b9ba45230e876747cdd34990b498e242c2f641af"
+      },
+      {
+        "local_path": "media/products/brida-ciega.webp",
+        "storage_path": "product-images/brida-ciega.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/brida-ciega.webp",
+        "checksum": "7c818e38de475743c2ebb00c4bb85d5178563e161f5a34888742a7155d751fbe"
+      },
+      {
+        "local_path": "media/products/cupla-hembra-hembra-pn10.webp",
+        "storage_path": "product-images/cupla-hembra-hembra-pn10.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/cupla-hembra-hembra-pn10.webp",
+        "checksum": "d2ab4b2f8235dcdd985a6e4aba5e4400be46e54ee094e1b571d3a6897c416654"
+      },
+      {
+        "local_path": "media/products/codo-90-hembra-hembra-pn10.webp",
+        "storage_path": "product-images/codo-90-hembra-hembra-pn10.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/codo-90-hembra-hembra-pn10.webp",
+        "checksum": "345d6d48d6b69a8dc6224ae7ec3be8a18ccc1b1c60f187bce27b3102c454fa8c"
+      },
+      {
+        "local_path": "media/products/codo-45-hembra-hembra-pn10.webp",
+        "storage_path": "product-images/codo-45-hembra-hembra-pn10.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/codo-45-hembra-hembra-pn10.webp",
+        "checksum": "263f4a500065cae6d93e89ca12c88d73ac8b6f71e18921c776ecb0c44b0a52ff"
+      },
+      {
+        "local_path": "media/products/t-de-90-hembra-hembra-hembra-pn10.webp",
+        "storage_path": "product-images/t-de-90-hembra-hembra-hembra-pn10.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/t-de-90-hembra-hembra-hembra-pn10.webp",
+        "checksum": "e2c0a77bd624b00f16da63a53448fb0b15f61a692faf3e40479e624eb60cd9ce"
+      },
+      {
+        "local_path": "media/products/t-de-90-reduccion-hembra-hembra-hembra-pn10.webp",
+        "storage_path": "product-images/t-de-90-reduccion-hembra-hembra-hembra-pn10.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/t-de-90-reduccion-hembra-hembra-hembra-pn10.webp",
+        "checksum": "76cd0342423cfbe0842feebdf5560b4de27b0c5dc97daf9e396a6e893734029b"
+      },
+      {
+        "local_path": "media/products/t-de-90-hembra-rosca-hembra-hembra-pn10.webp",
+        "storage_path": "product-images/t-de-90-hembra-rosca-hembra-hembra-pn10.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/t-de-90-hembra-rosca-hembra-hembra-pn10.webp",
+        "checksum": "721ccfbed1f3ae7ddc70d221c66f88eb2d70324ba9b51e85c2943e260c3303bf"
+      },
+      {
+        "local_path": "media/products/buje-reduccion-largo-hembra-hembra-pn10.webp",
+        "storage_path": "product-images/buje-reduccion-largo-hembra-hembra-pn10.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/buje-reduccion-largo-hembra-hembra-pn10.webp",
+        "checksum": "c457d883696905ebe0093a8ab2708f11231c63c20efee87ba89f072ebd915c68"
+      },
+      {
+        "local_path": "media/products/buje-reduccion-corto-hembra-hembra-pn10.webp",
+        "storage_path": "product-images/buje-reduccion-corto-hembra-hembra-pn10.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/buje-reduccion-corto-hembra-hembra-pn10.webp",
+        "checksum": "716eff9c8e84a143223e6cf668dda66114eb490c965dbf42ed980c01bf520f1b"
+      },
+      {
+        "local_path": "media/products/tapa-hembra-pn10.webp",
+        "storage_path": "product-images/tapa-hembra-pn10.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/tapa-hembra-pn10.webp",
+        "checksum": "569f06737f4c633889bebe1c4fade2fef21de7fca7608a9eec1dcd07586ab54a"
+      },
+      {
+        "local_path": "media/products/manguito-rosca-hembra-pn10.webp",
+        "storage_path": "product-images/manguito-rosca-hembra-pn10.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/manguito-rosca-hembra-pn10.webp",
+        "checksum": "9ebd0979121e390945aea244e8206625b360c254950429d25be12b17e64d5c45"
+      },
+      {
+        "local_path": "media/products/tapon-roscado-pn10.webp",
+        "storage_path": "product-images/tapon-roscado-pn10.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/tapon-roscado-pn10.webp",
+        "checksum": "0f71513143443c42b51d448ed1c1548c38e5676a13320ab5421468b98131e73e"
+      },
+      {
+        "local_path": "media/products/manguito-rosca-macho-pn10-pn16-2.webp",
+        "storage_path": "product-images/manguito-rosca-macho-pn10-pn16-2.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/manguito-rosca-macho-pn10-pn16-2.webp",
+        "checksum": "9e3f888d5d525fa7912ecf70f537d2615f783fecd096fa1f407fde8f63638b4c"
+      },
+      {
+        "local_path": "media/products/brida-pn10.webp",
+        "storage_path": "product-images/brida-pn10.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/brida-pn10.webp",
+        "checksum": "8bed5d18170b025853ee824f2a869f699b13f4fbf3830e2ad9980e82872629cc"
+      },
+      {
+        "local_path": "media/products/brida-giratoria-pn10.webp",
+        "storage_path": "product-images/brida-giratoria-pn10.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/brida-giratoria-pn10.webp",
+        "checksum": "f3fe84e93890c080abc611d8a7e446868750c54654c363f7c829e14741221d7e"
+      },
+      {
+        "local_path": "media/products/t-de-90-h-h-h-con-aro-de-goma.webp",
+        "storage_path": "product-images/t-de-90-h-h-h-con-aro-de-goma.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/t-de-90-h-h-h-con-aro-de-goma.webp",
+        "checksum": "c670178022fe911bf150ad5ee184f3e9fb79ec23194296aa74201010a8ad620e"
+      },
+      {
+        "local_path": "media/products/union-victaulica-hidroten-copia.webp",
+        "storage_path": "product-images/union-victaulica-hidroten-copia.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/union-victaulica-hidroten-copia.webp",
+        "checksum": "871c795132415d9df7dcdece754da9a10b53792a0171965fe07b4d5caeb85c2b"
+      },
+      {
+        "local_path": "media/products/manguito-alfa-rapid-victaulico-x-rosca-macho.webp",
+        "storage_path": "product-images/manguito-alfa-rapid-victaulico-x-rosca-macho.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/manguito-alfa-rapid-victaulico-x-rosca-macho.webp",
+        "checksum": "c4287bd58a6a6076ae11d8430bc2886eba3771f58f345b188fe1cc42b3492c53"
+      },
+      {
+        "local_path": "media/products/bridas-metalicas.webp",
+        "storage_path": "product-images/bridas-metalicas.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/bridas-metalicas.webp",
+        "checksum": "2e3e55f982748ba0fc098b4a66bb95631bff891ad7be46eda5495de7033ee5d3"
+      },
+      {
+        "local_path": "media/products/manguito-rosca-macho-pn10-pn16.webp",
+        "storage_path": "product-images/manguito-rosca-macho-pn10-pn16.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/manguito-rosca-macho-pn10-pn16.webp",
+        "checksum": "417525d008ab64bb3f197353418d4ffd952b27d0baba1830b76c2e1b122037a2"
+      },
+      {
+        "local_path": "media/products/manguito-rosca-hembra-pn16.webp",
+        "storage_path": "product-images/manguito-rosca-hembra-pn16.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/manguito-rosca-hembra-pn16.webp",
+        "checksum": "942aa1763c37b51a3db6fbd1034ab66f1ff4f95d1e25cdadf49002d7bc504fd3"
+      },
+      {
+        "local_path": "media/products/codo-45-hembra-hembra-pn16.webp",
+        "storage_path": "product-images/codo-45-hembra-hembra-pn16.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/codo-45-hembra-hembra-pn16.webp",
+        "checksum": "cf284184bb91176a74f2aad286b0ed78e70da3fd34a3fd59f2073fb81f72184e"
+      },
+      {
+        "local_path": "media/products/t-de-90-hembra-hembra-hembra-pn16.webp",
+        "storage_path": "product-images/t-de-90-hembra-hembra-hembra-pn16.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/t-de-90-hembra-hembra-hembra-pn16.webp",
+        "checksum": "6cea712648358d9cc6e8f62dc5a12a5e4b466e6aafd9dc5b01b12ccef35a78f0"
+      },
+      {
+        "local_path": "media/products/manguito-rosca-hembra-pn10-pn16.webp",
+        "storage_path": "product-images/manguito-rosca-hembra-pn10-pn16.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/manguito-rosca-hembra-pn10-pn16.webp",
+        "checksum": "aaeaa2dc680cff7c505ea0e3b3d9b4fed01aad6bd935ffa3c13b8e5c89f5e819"
+      },
+      {
+        "local_path": "media/products/buje-reduccion-corto-hembra-hembra-pn16.webp",
+        "storage_path": "product-images/buje-reduccion-corto-hembra-hembra-pn16.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/buje-reduccion-corto-hembra-hembra-pn16.webp",
+        "checksum": "5d31e8f86478d9d48d6dc663d495e7e8c0395181f8c41524234b3c6a4c1c1e9f"
+      },
+      {
+        "local_path": "media/products/manguito-rosca-macho-pn16.webp",
+        "storage_path": "product-images/manguito-rosca-macho-pn16.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/manguito-rosca-macho-pn16.webp",
+        "checksum": "2139fef30e7e7eafeb0da302012b6a3114bf70a6df0bd4aaa38a4ed01329c56d"
+      },
+      {
+        "local_path": "media/products/union-alfa-rapid-plastica-victaulica.webp",
+        "storage_path": "product-images/union-alfa-rapid-plastica-victaulica.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/union-alfa-rapid-plastica-victaulica.webp",
+        "checksum": "4008b4127e802417af4027db12e274c395f0c92075389925517b2ee9b8d92513"
+      },
+      {
+        "local_path": "media/products/conector-para-unir-tuberia.webp",
+        "storage_path": "product-images/conector-para-unir-tuberia.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/conector-para-unir-tuberia.webp",
+        "checksum": "b28d3dc95d8e589ff693407c6337373dc4b6183e0317958c06d094348fb87115"
+      },
+      {
+        "local_path": "media/products/aro-de-goma.webp",
+        "storage_path": "product-images/aro-de-goma.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/aro-de-goma.webp",
+        "checksum": "18f9addf2e206d08ed3abb28b7fb9bbffaa3412bc6ed87c36fc0f796f4efc48c"
+      },
+      {
+        "local_path": "media/products/junta-de-reparacion-era.webp",
+        "storage_path": "product-images/junta-de-reparacion-era.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/junta-de-reparacion-era.webp",
+        "checksum": "de4454820882d2f77aae2ac8f6c42851a90e47b30629e8d0b5df75f611733339"
+      },
+      {
+        "local_path": "media/products/brida.webp",
+        "storage_path": "product-images/brida.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/brida.webp",
+        "checksum": "b6ab0f99903c20b53379c8493676ebcbe67f4fc964ab84c430e390216c5fb82f"
+      },
+      {
+        "local_path": "media/products/cupla.webp",
+        "storage_path": "product-images/cupla.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/cupla.webp",
+        "checksum": "8b93feb728bd75b86c7f16e323a788b4712302ac4254a6f74fbc24d02ee7e58a"
+      },
+      {
+        "local_path": "media/products/cupla-de-reduccion.webp",
+        "storage_path": "product-images/cupla-de-reduccion.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/cupla-de-reduccion.webp",
+        "checksum": "15313ab9504c6eebbcca4960a7e9a2abccc86280aa09ad6c7000af5071931468"
+      },
+      {
+        "local_path": "media/products/codo-90.webp",
+        "storage_path": "product-images/codo-90.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/codo-90.webp",
+        "checksum": "8be41452a16e8359f042b53f0bc281ff9c59779bbdcbfd9be8e54c7d627ac1e3"
+      },
+      {
+        "local_path": "media/products/codo-45.webp",
+        "storage_path": "product-images/codo-45.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/codo-45.webp",
+        "checksum": "6317711df7fa456d7bdfeb94ca5a1d628710eaa3835f2c6f0c885cd8319f0212"
+      },
+      {
+        "local_path": "media/products/te-de-90.webp",
+        "storage_path": "product-images/te-de-90.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/te-de-90.webp",
+        "checksum": "f100ee68b0fde7cb7628689a5afb6f2939800506b963fd1c62be9d2aeb1602f6"
+      },
+      {
+        "local_path": "media/products/tapa.webp",
+        "storage_path": "product-images/tapa.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/tapa.webp",
+        "checksum": "660f73ebaed299a32a5a384c78bfd3fda1cf3ace8eff4aa63fecdc8d7abc162d"
+      },
+      {
+        "local_path": "media/products/cruces-de-pvc.webp",
+        "storage_path": "product-images/cruces-de-pvc.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/cruces-de-pvc.webp",
+        "checksum": "53b695ddbae144f2ba0d4f99579d6d99b1d73323e4d5d0da515dba38d5c10c48"
+      },
+      {
+        "local_path": "media/products/inyector-de-fertilizante-tipo-venturi.webp",
+        "storage_path": "product-images/inyector-de-fertilizante-tipo-venturi.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/inyector-de-fertilizante-tipo-venturi.webp",
+        "checksum": "8ca2b47f2caa958f69cebf0826bbb4582169a0275c96bed1c0342577c1b0c0ff"
+      },
+      {
+        "local_path": "media/products/inyector-de-fertilizante-venturi-con-kit-3-4-y-1.webp",
+        "storage_path": "product-images/inyector-de-fertilizante-venturi-con-kit-3-4-y-1.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/inyector-de-fertilizante-venturi-con-kit-3-4-y-1.webp",
+        "checksum": "7b001867dc989fedffa07797428ed1eeaa1a9fd3f91a4a33b30abce995f122a4"
+      },
+      {
+        "local_path": "media/products/inyectores-de-fertilizantes-venturi-alfa.webp",
+        "storage_path": "product-images/inyectores-de-fertilizantes-venturi-alfa.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/inyectores-de-fertilizantes-venturi-alfa.webp",
+        "checksum": "1da1247cea51dff1cb04d546386fec2ff11d92bc67f6e3778e3791fd665bcf51"
+      },
+      {
+        "local_path": "media/products/conector-inicial-con-aro-de-goma-recto.webp",
+        "storage_path": "product-images/conector-inicial-con-aro-de-goma-recto.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/conector-inicial-con-aro-de-goma-recto.webp",
+        "checksum": "a4b3c8a19d73137aba6d0618b17b13e019f98627b56e3da8548810a5b9a84953"
+      },
+      {
+        "local_path": "media/products/conector-inicial-con-aro-de-goma-bilabiado-2.webp",
+        "storage_path": "product-images/conector-inicial-con-aro-de-goma-bilabiado-2.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/conector-inicial-con-aro-de-goma-bilabiado-2.webp",
+        "checksum": "dd0a1f4844cd72539e76cd4d73343fcbbd4feefb5b92e5cc5e17bbad21583aa9"
+      },
+      {
+        "local_path": "media/products/conector-inicial-con-aro-de-goma-bilabiado-3.webp",
+        "storage_path": "product-images/conector-inicial-con-aro-de-goma-bilabiado-3.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/conector-inicial-con-aro-de-goma-bilabiado-3.webp",
+        "checksum": "4b03edfdd08356fb687b62cdc705fb68e6c0ce648b103a094a3db94144d4bc1c"
+      },
+      {
+        "local_path": "media/products/conector-inicial-con-aro-de-goma-recto-2.webp",
+        "storage_path": "product-images/conector-inicial-con-aro-de-goma-recto-2.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/conector-inicial-con-aro-de-goma-recto-2.webp",
+        "checksum": "4b03edfdd08356fb687b62cdc705fb68e6c0ce648b103a094a3db94144d4bc1c"
+      },
+      {
+        "local_path": "media/products/conector-inicial-con-aro-de-goma-bilabiado.webp",
+        "storage_path": "product-images/conector-inicial-con-aro-de-goma-bilabiado.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/conector-inicial-con-aro-de-goma-bilabiado.webp",
+        "checksum": "87de16892ecf98313598a0f06e5d363021d668c9a49e1eef6c69164ecf7c3e5c"
+      },
+      {
+        "local_path": "media/products/t-rosca-hembra-para-polietileno-de-alta-densidad.webp",
+        "storage_path": "product-images/t-rosca-hembra-para-polietileno-de-alta-densidad.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/t-rosca-hembra-para-polietileno-de-alta-densidad.webp",
+        "checksum": "5fa2f47509256ee5738676832f8f8a35ce74bb3ee623ac1d6109e8c476207093"
+      },
+      {
+        "local_path": "media/products/te-rosca-macho-para-polietileno-de-alta-densidad.webp",
+        "storage_path": "product-images/te-rosca-macho-para-polietileno-de-alta-densidad.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/te-rosca-macho-para-polietileno-de-alta-densidad.webp",
+        "checksum": "cdc47eccdde43d45e94a4d0f41c7ab59fc7765590ed172d5a6eac3e395922806"
+      },
+      {
+        "local_path": "media/products/union-para-polietileno-de-alta-densidad.webp",
+        "storage_path": "product-images/union-para-polietileno-de-alta-densidad.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/union-para-polietileno-de-alta-densidad.webp",
+        "checksum": "1ed595807ae4328f3951cf83a2ea4b32c3705785030c1427021f3499b4b5ddec"
+      },
+      {
+        "local_path": "media/products/reduccion-para-polietileno-de-alta-densidad.webp",
+        "storage_path": "product-images/reduccion-para-polietileno-de-alta-densidad.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/reduccion-para-polietileno-de-alta-densidad.webp",
+        "checksum": "0c985d8465b6a555f18077ac9faa6d51c6a4c137bfa6abaee3e453dc751625bb"
+      },
+      {
+        "local_path": "media/products/codo-de-90-para-polietileno-de-alta-densidad.webp",
+        "storage_path": "product-images/codo-de-90-para-polietileno-de-alta-densidad.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/codo-de-90-para-polietileno-de-alta-densidad.webp",
+        "checksum": "89a0c09e7632d8d6a905c2ce9e9563f99dc8fdc99bf6dbb82ff20baa78c98de8"
+      },
+      {
+        "local_path": "media/products/te-para-polietileno-de-alta-densidad.webp",
+        "storage_path": "product-images/te-para-polietileno-de-alta-densidad.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/te-para-polietileno-de-alta-densidad.webp",
+        "checksum": "0e12820c8665dc8da76c803095baefa31cc87db0758bc0b89ed380a727bdedfe"
+      },
+      {
+        "local_path": "media/products/final-de-linea-para-polietileno-de-alta-densidad.webp",
+        "storage_path": "product-images/final-de-linea-para-polietileno-de-alta-densidad.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/final-de-linea-para-polietileno-de-alta-densidad.webp",
+        "checksum": "2e309663328d307db6a9b9f566c9ec2f575c4cf40f31a958394e4587cd945287"
+      },
+      {
+        "local_path": "media/products/union-para-polietileno-de-alta-densidad-2.webp",
+        "storage_path": "product-images/union-para-polietileno-de-alta-densidad-2.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/union-para-polietileno-de-alta-densidad-2.webp",
+        "checksum": "b66efe59acef6756079e4ec90db828ce661e2ea5906f42a0bfaa0478467fab25"
+      },
+      {
+        "local_path": "media/products/reduccion-para-polietileno-de-alta-densidad-2.webp",
+        "storage_path": "product-images/reduccion-para-polietileno-de-alta-densidad-2.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/reduccion-para-polietileno-de-alta-densidad-2.webp",
+        "checksum": "36d7806f4f79c4fa02140d4697cd7629cdfc8085ec22988ee78703f0b2139214"
+      },
+      {
+        "local_path": "media/products/codo-de-90-para-polietileno-de-alta-densidad-2.webp",
+        "storage_path": "product-images/codo-de-90-para-polietileno-de-alta-densidad-2.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/codo-de-90-para-polietileno-de-alta-densidad-2.webp",
+        "checksum": "f2b4fa39a5256212ad6013f2ed20ad64d34707ce3088210da2617a3153566125"
+      },
+      {
+        "local_path": "media/products/codo-de-90-para-polietileno-de-alta-densidad-copia.webp",
+        "storage_path": "product-images/codo-de-90-para-polietileno-de-alta-densidad-copia.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/codo-de-90-para-polietileno-de-alta-densidad-copia.webp",
+        "checksum": "8c976bda50a17fd80d25d8e2e421d45b4023836f7124a40d0853382d848d034f"
+      },
+      {
+        "local_path": "media/products/final-de-linea-para-polietileno-de-alta-densidad-2.webp",
+        "storage_path": "product-images/final-de-linea-para-polietileno-de-alta-densidad-2.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/final-de-linea-para-polietileno-de-alta-densidad-2.webp",
+        "checksum": "1a753a4a35e14495b923cf313bfff608a3d5fcc00aa09ebeeabcdc6fc0475b01"
+      },
+      {
+        "local_path": "media/products/estaca-para-tuberia-16mm-y-20mm.webp",
+        "storage_path": "product-images/estaca-para-tuberia-16mm-y-20mm.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/estaca-para-tuberia-16mm-y-20mm.webp",
+        "checksum": "a3f8b2c96bfb50ca8af73336503e0536e6127ac8d4d40d0cd34d52ce4b9f4333"
+      },
+      {
+        "local_path": "media/products/conector-espiga-espiga-reforzado.webp",
+        "storage_path": "product-images/conector-espiga-espiga-reforzado.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/conector-espiga-espiga-reforzado.webp",
+        "checksum": "4379f32c33bee09e95ed8f45e1d37175af58df3f14ec40dbd6a2ba12a40b8be1"
+      },
+      {
+        "local_path": "media/products/codo-espiga-x-rosca-macho.webp",
+        "storage_path": "product-images/codo-espiga-x-rosca-macho.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/codo-espiga-x-rosca-macho.webp",
+        "checksum": "9c8b94422843c666d303c2d9737ee2537a44bad4d0eca8fa280bb98b1c05c6e9"
+      },
+      {
+        "local_path": "media/products/t-espiga-x-espiga-x-espiga-2.webp",
+        "storage_path": "product-images/t-espiga-x-espiga-x-espiga-2.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/t-espiga-x-espiga-x-espiga-2.webp",
+        "checksum": "706176766bab628fc1891bfecf4529778bdc62e0fbcaacdd2ec90d5bb4fd517e"
+      },
+      {
+        "local_path": "media/products/t-espiga-x-rosca-macho-x-espiga.webp",
+        "storage_path": "product-images/t-espiga-x-rosca-macho-x-espiga.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/t-espiga-x-rosca-macho-x-espiga.webp",
+        "checksum": "868cfcb30976a579336121e8c3ca869c7f3db2e8de702b40efa06429426d61de"
+      },
+      {
+        "local_path": "media/products/codo-espiga-x-espiga.webp",
+        "storage_path": "product-images/codo-espiga-x-espiga.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/codo-espiga-x-espiga.webp",
+        "checksum": "0f6b988e38ec46e64b1955734d9e2802b8d15da359b36fcfe671df0489e01f65"
+      },
+      {
+        "local_path": "media/products/manguito-roscado-macho.webp",
+        "storage_path": "product-images/manguito-roscado-macho.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/manguito-roscado-macho.webp",
+        "checksum": "28f636b27c4c3cd06004c9e9ada8b18dac69e17cb1f8774446c1642fbec70ab9"
+      },
+      {
+        "local_path": "media/products/codo-roscado-para-polietileno-de-alta-densidad.webp",
+        "storage_path": "product-images/codo-roscado-para-polietileno-de-alta-densidad.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/codo-roscado-para-polietileno-de-alta-densidad.webp",
+        "checksum": "c429548f67cf81522327cd19bb8999612c58b08b912d8a46e4941787aa8ae018"
+      },
+      {
+        "local_path": "media/products/codo-roscado-para-polietileno-de-alta-densidad-2.webp",
+        "storage_path": "product-images/codo-roscado-para-polietileno-de-alta-densidad-2.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/codo-roscado-para-polietileno-de-alta-densidad-2.webp",
+        "checksum": "393c921ed648bfbec2e4358a21766455d545e13415a7bbbb5af7f0291c319c64"
+      },
+      {
+        "local_path": "media/products/estaca-para-sujetar-tuberia-de-polietileno.webp",
+        "storage_path": "product-images/estaca-para-sujetar-tuberia-de-polietileno.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/estaca-para-sujetar-tuberia-de-polietileno.webp",
+        "checksum": "09041840215ed5f01934fc3e5ebbf2eb90c8a4ce3c150f62352415708aa5fda5"
+      },
+      {
+        "local_path": "media/products/llave-de-ajuste-p-conectores-pead.webp",
+        "storage_path": "product-images/llave-de-ajuste-p-conectores-pead.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/llave-de-ajuste-p-conectores-pead.webp",
+        "checksum": "a53b5604f84fa83da3de7d89edd31912ad35edef9b43fd47ffccfadf6e84f085"
+      },
+      {
+        "local_path": "media/products/tapon-enmienda-error-4-y-6-mm.webp",
+        "storage_path": "product-images/tapon-enmienda-error-4-y-6-mm.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/tapon-enmienda-error-4-y-6-mm.webp",
+        "checksum": "bd2f916661663cc9d27e675607005e756152cf66f60049df14b6f9f7dbd25a6f"
+      },
+      {
+        "local_path": "media/products/valvula-espiga-x-espiga.webp",
+        "storage_path": "product-images/valvula-espiga-x-espiga.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/valvula-espiga-x-espiga.webp",
+        "checksum": "462de24308294ad848652f834aa43df7daefb0c51624bfeadbb1d0e247158d29"
+      },
+      {
+        "local_path": "media/products/sacabocado-13-mm.webp",
+        "storage_path": "product-images/sacabocado-13-mm.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/sacabocado-13-mm.webp",
+        "checksum": "2eb23d399ec6f9b408fca470aa95f05ef650ea75f928053be8c215f33886e93f"
+      },
+      {
+        "local_path": "media/products/sacabocado-lay-flat.webp",
+        "storage_path": "product-images/sacabocado-lay-flat.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/sacabocado-lay-flat.webp",
+        "checksum": "cd2c33d036c65688cdbdb71c223fb52fdb8c15e70bf93c07b7f67c50f05adf80"
+      },
+      {
+        "local_path": "media/products/conector-lay-flat.webp",
+        "storage_path": "product-images/conector-lay-flat.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/conector-lay-flat.webp",
+        "checksum": "5c38876b6e2988bcaa48371db527b8b592df2376b454a7210c5262915429f83e"
+      },
+      {
+        "local_path": "media/products/conector-tipo-t.webp",
+        "storage_path": "product-images/conector-tipo-t.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/conector-tipo-t.webp",
+        "checksum": "2aeae5c51a11dcea42205bb799f4fef8e15b04512bc54045db491e851f38a314"
+      },
+      {
+        "local_path": "media/products/adaptador-rosca-macho-para-lay-flat.webp",
+        "storage_path": "product-images/adaptador-rosca-macho-para-lay-flat.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/adaptador-rosca-macho-para-lay-flat.webp",
+        "checksum": "c2ebd2ce1df8a9b9b43c9011ea007f1f1ec45d436c514fb3920240cad1e9d0b9"
+      },
+      {
+        "local_path": "media/products/adaptador-rosca-macho-para-lay-flat-2.webp",
+        "storage_path": "product-images/adaptador-rosca-macho-para-lay-flat-2.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/adaptador-rosca-macho-para-lay-flat-2.webp",
+        "checksum": "269a04d994338e3ecd1ce2fd0587a963ab3b2c5a2eea37a40e63a4fbfe953507"
+      },
+      {
+        "local_path": "media/products/final-de-linea-para-lay-flat.webp",
+        "storage_path": "product-images/final-de-linea-para-lay-flat.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/final-de-linea-para-lay-flat.webp",
+        "checksum": "3bae8231065b8d0688cd327a55451c7cefbcc487c8163dd285a5eb7362b46393"
+      },
+      {
+        "local_path": "media/products/final-de-linea-tipo-8-2.webp",
+        "storage_path": "product-images/final-de-linea-tipo-8-2.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/final-de-linea-tipo-8-2.webp",
+        "checksum": "ace5e82a57ca9c953f4f57e5e8f90b3cf60c37eac8003ef4c0315cb09b9f6dfd"
+      },
+      {
+        "local_path": "media/products/tapon-final-de-linea-2.webp",
+        "storage_path": "product-images/tapon-final-de-linea-2.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/tapon-final-de-linea-2.webp",
+        "checksum": "590ef38fc0f62066af060ecf42c9f74a2e0acc1ab04691a16b774c768a928d96"
+      },
+      {
+        "local_path": "media/products/rs-pw-2185.webp",
+        "storage_path": "product-images/rs-pw-2185.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/rs-pw-2185.webp",
+        "checksum": "afe7afb2b6b307502c6141e8e3862b50545a21d2792b89154a190c64fdeeb0cd"
+      },
+      {
+        "local_path": "media/products/pw-2195-pw-2197.webp",
+        "storage_path": "product-images/pw-2195-pw-2197.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/pw-2195-pw-2197.webp",
+        "checksum": "b434af062cb153777d0c493e83e6273fcbf4b264f095baa540b8763f0ec1ebd2"
+      },
+      {
+        "local_path": "media/products/pw-2120-pw-2130.webp",
+        "storage_path": "product-images/pw-2120-pw-2130.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/pw-2120-pw-2130.webp",
+        "checksum": "ac8d98f3086b5694bef5a9a820a1a26491fd3b709a0926580ea26670b25dcdf2"
+      },
+      {
+        "local_path": "media/products/pw-2140-pw-2150.webp",
+        "storage_path": "product-images/pw-2140-pw-2150.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/pw-2140-pw-2150.webp",
+        "checksum": "6a677c342a73998db5d6e43fbbf57e2ce94732a10d0de5829494acba1083b4e6"
+      },
+      {
+        "local_path": "media/products/pw-2210.webp",
+        "storage_path": "product-images/pw-2210.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/pw-2210.webp",
+        "checksum": "2f93a85f337138ab7c0bad30fe248342690bfe5152e49f47d487165af1d2b5e7"
+      },
+      {
+        "local_path": "media/products/pw-2100-pw-2110.webp",
+        "storage_path": "product-images/pw-2100-pw-2110.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/pw-2100-pw-2110.webp",
+        "checksum": "8590a0c30e63ccbee86c8a88bcdef32a08f69a8eba30eedde300ab02712c2536"
+      },
+      {
+        "local_path": "media/products/pw-2200.webp",
+        "storage_path": "product-images/pw-2200.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/pw-2200.webp",
+        "checksum": "f315b3b0595f4e03bb85453ba8a2f5d92bb3dcba9985a26d73e615ec1f89b24f"
+      },
+      {
+        "local_path": "media/products/union-para-lay-flat.webp",
+        "storage_path": "product-images/union-para-lay-flat.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/union-para-lay-flat.webp",
+        "checksum": "79119894ff6ed59ce1b68d8174c82a3f36a0e238dec157aece8e69dd3cd237fd"
+      },
+      {
+        "local_path": "media/products/reduccion-para-lay-flat.webp",
+        "storage_path": "product-images/reduccion-para-lay-flat.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/reduccion-para-lay-flat.webp",
+        "checksum": "82e30e7e56d275b594810efddf0da517852ccfd210948d97397e7db9e9076baf"
+      },
+      {
+        "local_path": "media/products/pw-2220.webp",
+        "storage_path": "product-images/pw-2220.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/pw-2220.webp",
+        "checksum": "d71577f6fc387b014b845eae600b608c737c60d778ca2d4f5e08a74156ba625c"
+      },
+      {
+        "local_path": "media/products/wi-2526.webp",
+        "storage_path": "product-images/wi-2526.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/wi-2526.webp",
+        "checksum": "b988c0bc080612c58fed7bc065780c9247923cf3e26a01d341195a77ac5cb2e8"
+      },
+      {
+        "local_path": "media/products/adaptador-rosca-hembra-para-polietileno-de-alta-densidad.webp",
+        "storage_path": "product-images/adaptador-rosca-hembra-para-polietileno-de-alta-densidad.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/adaptador-rosca-hembra-para-polietileno-de-alta-densidad.webp",
+        "checksum": "ec5e660bbcf20fb60a5cf3b513b04536d5b0b8aee29e0abde9a46b346f612238"
+      },
+      {
+        "local_path": "media/products/adaptador-rosca-macho-para-polietileno-de-alta-densidad.webp",
+        "storage_path": "product-images/adaptador-rosca-macho-para-polietileno-de-alta-densidad.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/adaptador-rosca-macho-para-polietileno-de-alta-densidad.webp",
+        "checksum": "4afe5a86e5301958b5fafec510b9843debe45756dd98b3f4ef0da0cf71e3df97"
+      },
+      {
+        "local_path": "media/products/kit-de-succion.webp",
+        "storage_path": "product-images/kit-de-succion.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/kit-de-succion.webp",
+        "checksum": "a068e60e7241fb17a994604afff323a9fd0ff43967222b70b58cb17ad083bb5f"
+      },
+      {
+        "local_path": "media/products/pead.webp",
+        "storage_path": "product-images/pead.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/pead.webp",
+        "checksum": "4c2002ec2142f85cdada4a6bb408ea0f7a9375692ddf93c6be5f94123fa820c4"
+      },
+      {
+        "local_path": "media/products/pw-3585.webp",
+        "storage_path": "product-images/pw-3585.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/pw-3585.webp",
+        "checksum": "a30c44d17dc0652da56f6ff0f4628c5b6bfd4b214246bf620fd74962f4d5bd6b"
+      },
+      {
+        "local_path": "media/products/pw-3565.webp",
+        "storage_path": "product-images/pw-3565.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/pw-3565.webp",
+        "checksum": "b562171cd769733a66678a61b914b11b06aaff4a10a44ba47f8eec8910da0bd3"
+      },
+      {
+        "local_path": "media/products/pw-4710-2.webp",
+        "storage_path": "product-images/pw-4710-2.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/pw-4710-2.webp",
+        "checksum": "d77e93ca3d8fc42d6bd9f2931c1cb9b4cb918243c0abd1fd97bc8d668e89ed44"
+      },
+      {
+        "local_path": "media/products/pw-4710.webp",
+        "storage_path": "product-images/pw-4710.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/pw-4710.webp",
+        "checksum": "3d9dcbc7d90a117dbfedff3504f3e73f9a145ba25020d45c23d8693537a30483"
+      },
+      {
+        "local_path": "media/products/pw-4350.webp",
+        "storage_path": "product-images/pw-4350.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/pw-4350.webp",
+        "checksum": "83b1293989096415db2f78ea13deebba037947a3ad4db01722a3e1474e7f2ca2"
+      },
+      {
+        "local_path": "media/products/manguera-reforzada-anti-torsion.webp",
+        "storage_path": "product-images/manguera-reforzada-anti-torsion.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/manguera-reforzada-anti-torsion.webp",
+        "checksum": "99ffb7678d5023d0a658969093cf20a9c51581b680b07053448ac756459d2899"
+      },
+      {
+        "local_path": "media/products/manguera-c-enrollador-y-accesorios-de-10-metros.webp",
+        "storage_path": "product-images/manguera-c-enrollador-y-accesorios-de-10-metros.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/manguera-c-enrollador-y-accesorios-de-10-metros.webp",
+        "checksum": "8ccfd703e5143309361d17193d1c8f3495e4f8807d5edf1484d44dd7cb353bb3"
+      },
+      {
+        "local_path": "media/products/manguera-c-enrollador-y-accesorios-de-15-metros.webp",
+        "storage_path": "product-images/manguera-c-enrollador-y-accesorios-de-15-metros.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/manguera-c-enrollador-y-accesorios-de-15-metros.webp",
+        "checksum": "a999a911c78217d9d27f5f960210e7a3776e3a8eec3a929180bcecf387819b09"
+      },
+      {
+        "local_path": "media/products/manguera-c-enrollador-y-accesorios-de-20-metros.webp",
+        "storage_path": "product-images/manguera-c-enrollador-y-accesorios-de-20-metros.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/manguera-c-enrollador-y-accesorios-de-20-metros.webp",
+        "checksum": "3d93a06ffebc874c74540d778df958532cfeabbe1b8d86517a2bdac3043e8f1e"
+      },
+      {
+        "local_path": "media/products/manguera-c-enrollador-y-accesorios-de-50-metros.webp",
+        "storage_path": "product-images/manguera-c-enrollador-y-accesorios-de-50-metros.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/manguera-c-enrollador-y-accesorios-de-50-metros.webp",
+        "checksum": "583b11ad55b0e980bd8fc7cb4be9cde3dff9ba0b5d2709d6167c26c8ed696448"
+      },
+      {
+        "local_path": "media/products/manguera-standard.webp",
+        "storage_path": "product-images/manguera-standard.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/manguera-standard.webp",
+        "checksum": "7c730199c3f618f528e50c20ca931d135105fc8b2e5eb4cc1738b6aaa96f134d"
+      },
+      {
+        "local_path": "media/products/wi-32100.webp",
+        "storage_path": "product-images/wi-32100.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/wi-32100.webp",
+        "checksum": "f1e376af31172605029ed8e92c7c9dc106337d058c5e8bb275c24aac9ceabe50"
+      },
+      {
+        "local_path": "media/products/wi-32120.webp",
+        "storage_path": "product-images/wi-32120.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/wi-32120.webp",
+        "checksum": "8b64fa1c460f421519ec8dc08312a1c2553753ba8891d661dda399dcf5177317"
+      },
+      {
+        "local_path": "media/products/pw-4815.webp",
+        "storage_path": "product-images/pw-4815.webp",
+        "original_url": "https://surerain.com/assets/productos-importados/pw-4815.webp",
+        "checksum": "882dfa84e3601007ed35a8532d1f4d2d4af063a65d98cc5db0ca9bb0bfcc1078"
+      }
+    ],
+    "product-documents": [
+      {
+        "local_path": "media/documents/709imgdesc1.webp",
+        "storage_path": "product-documents/709imgdesc1.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/709imgdesc1.webp",
+        "checksum": "ce969b0daee5b5b62f1c6f6950b8f30eae1c1e1f505b0274184003894fed50a6"
+      },
+      {
+        "local_path": "media/documents/45imgdesc1.webp",
+        "storage_path": "product-documents/45imgdesc1.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/45imgdesc1.webp",
+        "checksum": "cfc1defece3cb9cde6c34decc0d9a1cdae97540d49a31106f0f51df2e753de4b"
+      },
+      {
+        "local_path": "media/documents/369imgdesc1.webp",
+        "storage_path": "product-documents/369imgdesc1.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/369imgdesc1.webp",
+        "checksum": "e2738f9cc6587d5b5fa512763bedf759f07686a3936839ecc8bd82248d14f9d1"
+      },
+      {
+        "local_path": "media/documents/381imgdesc1.webp",
+        "storage_path": "product-documents/381imgdesc1.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/381imgdesc1.webp",
+        "checksum": "ba6cb998516ed35207ab38d68eeb051309756525e408f5de77542562d69cec70"
+      },
+      {
+        "local_path": "media/documents/171imgdesc1.webp",
+        "storage_path": "product-documents/171imgdesc1.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/171imgdesc1.webp",
+        "checksum": "5586d4e40ec72bb0fc29a83ed2d6a6eed9a268f013a210b4a766a62c56bc4f26"
+      },
+      {
+        "local_path": "media/documents/169imgdesc1.webp",
+        "storage_path": "product-documents/169imgdesc1.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/169imgdesc1.webp",
+        "checksum": "c37b725e90874927772547b55a9880fb94410fac5bf02cbfcb1a245bd52a7a49"
+      },
+      {
+        "local_path": "media/documents/350imgdesc1.webp",
+        "storage_path": "product-documents/350imgdesc1.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/350imgdesc1.webp",
+        "checksum": "011c5efe46b233c7d9746fef60d5e311e5acbc4482b643c5e247883313d818dc"
+      },
+      {
+        "local_path": "media/documents/349imgdesc1.webp",
+        "storage_path": "product-documents/349imgdesc1.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/349imgdesc1.webp",
+        "checksum": "aa6f939dddd1b57bf8f9a2b7deea08dac40676322797b82f0617c793a256d514"
+      },
+      {
+        "local_path": "media/documents/174imgdesc1.webp",
+        "storage_path": "product-documents/174imgdesc1.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/174imgdesc1.webp",
+        "checksum": "ff4be46ef68718e1f5cb447cb594feda2c57cd55a3560f9be3ff0ff98a78f390"
+      },
+      {
+        "local_path": "media/documents/177imgdesc1.webp",
+        "storage_path": "product-documents/177imgdesc1.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/177imgdesc1.webp",
+        "checksum": "421171d5e9a0dea8e4ee00582d3dfd62473ef4534c904cad544ad9d6ed957b20"
+      },
+      {
+        "local_path": "media/documents/592imgdesc1.webp",
+        "storage_path": "product-documents/592imgdesc1.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/592imgdesc1.webp",
+        "checksum": "47d38bdb7a460690200cc0317e50d421974b97ec0dd03a97800e13a67051f50f"
+      },
+      {
+        "local_path": "media/documents/179imgdesc1.webp",
+        "storage_path": "product-documents/179imgdesc1.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/179imgdesc1.webp",
+        "checksum": "144badc2dfdc6ecead2abb4953d8b5db1f19c274881f25b877ce9871b4b7613d"
+      },
+      {
+        "local_path": "media/documents/713imgdesc1.webp",
+        "storage_path": "product-documents/713imgdesc1.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/713imgdesc1.webp",
+        "checksum": "187e2f4bbe2c5a2e2fa2348f5fb5c6ec772335ebacc9fb96ec7a2964c08e2b7e"
+      },
+      {
+        "local_path": "media/documents/181imgdesc1.webp",
+        "storage_path": "product-documents/181imgdesc1.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/181imgdesc1.webp",
+        "checksum": "cf33ebbdc2d22c946f76e0dd64a364c6ba1a962da4e0bddfae9d9ea68b34d21f"
+      },
+      {
+        "local_path": "media/documents/185imgdesc1.webp",
+        "storage_path": "product-documents/185imgdesc1.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/185imgdesc1.webp",
+        "checksum": "659d490b562f52b3171ebb565eb79c982524c744ca593f769e3f80ede9c31056"
+      },
+      {
+        "local_path": "media/documents/187imgdesc1.webp",
+        "storage_path": "product-documents/187imgdesc1.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/187imgdesc1.webp",
+        "checksum": "d4f44b322951820991f0ee0de689b867c356049054070f885e582b3d3f642334"
+      },
+      {
+        "local_path": "media/documents/183imgdesc1-1.webp",
+        "storage_path": "product-documents/183imgdesc1-1.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/183imgdesc1-1.webp",
+        "checksum": "d1ef91c213189c5d006fbfbc844943e980c3f34758505c051a9cdc3d4a133544"
+      },
+      {
+        "local_path": "media/documents/385imgdesc1.webp",
+        "storage_path": "product-documents/385imgdesc1.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/385imgdesc1.webp",
+        "checksum": "fbe5cd2bd54382e71992a4b4ad7d284a2d8ca9a0d7fc7d5f2dfd8e34c26cda4e"
+      },
+      {
+        "local_path": "media/documents/383imgdesc1.webp",
+        "storage_path": "product-documents/383imgdesc1.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/383imgdesc1.webp",
+        "checksum": "a0b449c041634f0e6ab706ba7650fcec71fb5b56dc1482184e70dd9889d23179"
+      },
+      {
+        "local_path": "media/documents/597imgdesc1.webp",
+        "storage_path": "product-documents/597imgdesc1.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/597imgdesc1.webp",
+        "checksum": "f1214bbe0de258483eb282fb3a9ef358059ff9a41a7f37a70e05a8e4cfbd8fcf"
+      },
+      {
+        "local_path": "media/documents/1700.00C-Ficha-tecnica.webp",
+        "storage_path": "product-documents/1700.00C-Ficha-tecnica.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/1700.00C-Ficha-tecnica.webp",
+        "checksum": "fea63fd59b8659386dcf6318708ca80cdbd855df80bb2950f78d0110668cb37f"
+      },
+      {
+        "local_path": "media/documents/1700.00E-Ficha-tecnica.webp",
+        "storage_path": "product-documents/1700.00E-Ficha-tecnica.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/1700.00E-Ficha-tecnica.webp",
+        "checksum": "12c9cd5a1516743af47cff2e2ccd5d8fd7bf986df03b3602bd9cd775ab31c8dd"
+      },
+      {
+        "local_path": "media/documents/1704.00D-Ficha-tecnica.webp",
+        "storage_path": "product-documents/1704.00D-Ficha-tecnica.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/1704.00D-Ficha-tecnica.webp",
+        "checksum": "f0ae36858433b1f0215ccfd2aa76df703fa4e8089dd65d210b77b20c7b0ed4b2"
+      },
+      {
+        "local_path": "media/documents/1704.00E-Ficha-tecnica.webp",
+        "storage_path": "product-documents/1704.00E-Ficha-tecnica.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/1704.00E-Ficha-tecnica.webp",
+        "checksum": "f37e0df8a8dfe7cde3097f7e641d8859e1875eb62d4439f49157b9ec814b1403"
+      },
+      {
+        "local_path": "media/documents/1705.00F-Ficha-tecnica.webp",
+        "storage_path": "product-documents/1705.00F-Ficha-tecnica.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/1705.00F-Ficha-tecnica.webp",
+        "checksum": "6ce53056582ba91b92eef9b090265468625dc8e15fcf70158564f13c818ed0af"
+      },
+      {
+        "local_path": "media/documents/610imgdesc1.webp",
+        "storage_path": "product-documents/610imgdesc1.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/610imgdesc1.webp",
+        "checksum": "006c38ea90ada17aaa4b965ff386551cca8881da753b61353633ee5220b69a63"
+      },
+      {
+        "local_path": "media/documents/351imgdesc1.webp",
+        "storage_path": "product-documents/351imgdesc1.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/351imgdesc1.webp",
+        "checksum": "9dca516891190a790a8b9ea8fa2245abe48d6a2eda2657564d8e228384f30856"
+      },
+      {
+        "local_path": "media/documents/gira01.webp",
+        "storage_path": "product-documents/gira01.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/gira01.webp",
+        "checksum": "05e3f96298790362f2bd9bc39a1d11e0bc602eb35670db636c651a633266285c"
+      },
+      {
+        "local_path": "media/documents/50imgdesc1.webp",
+        "storage_path": "product-documents/50imgdesc1.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/50imgdesc1.webp",
+        "checksum": "925312ee47b564419079b85daf18242cc2f17bd3bdf66508d30d864413712d3f"
+      },
+      {
+        "local_path": "media/documents/442imgdesc1.webp",
+        "storage_path": "product-documents/442imgdesc1.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/442imgdesc1.webp",
+        "checksum": "dcfae0ac3576b758506901ca39915739927837636da2fb694bc0e29583533ca8"
+      },
+      {
+        "local_path": "media/documents/691imgdesc1.webp",
+        "storage_path": "product-documents/691imgdesc1.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/691imgdesc1.webp",
+        "checksum": "d91c4e85b17969b0984eac646ae5e07a1a73527da698d43ae0d33c7d091b4fe8"
+      },
+      {
+        "local_path": "media/documents/apollo.webp",
+        "storage_path": "product-documents/apollo.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/apollo.webp",
+        "checksum": "fa5da96bb341b2c1f2b82bec6c4ac813af8b68176e509de3284dfe2de58fdd7a"
+      },
+      {
+        "local_path": "media/documents/392imgdesc1.webp",
+        "storage_path": "product-documents/392imgdesc1.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/392imgdesc1.webp",
+        "checksum": "443b68ca94492e1f3b7a103f99b35d9491b586f2a4d3183e354f665e5b72ee3b"
+      },
+      {
+        "local_path": "media/documents/841imgdesc1.webp",
+        "storage_path": "product-documents/841imgdesc1.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/841imgdesc1.webp",
+        "checksum": "02b065d55f1cd27a4b5185d564305bbf398b150774a6c539903f71dd30b25bc8"
+      },
+      {
+        "local_path": "media/documents/840imgdesc1.webp",
+        "storage_path": "product-documents/840imgdesc1.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/840imgdesc1.webp",
+        "checksum": "02b065d55f1cd27a4b5185d564305bbf398b150774a6c539903f71dd30b25bc8"
+      },
+      {
+        "local_path": "media/documents/mang_alta_trans.webp",
+        "storage_path": "product-documents/mang_alta_trans.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/mang_alta_trans.webp",
+        "checksum": "93d82dcaf58cd96855aff5921fc3ba703091a1caf4bc7ef34deb667c50be6295"
+      },
+      {
+        "local_path": "media/documents/440imgdesc1.webp",
+        "storage_path": "product-documents/440imgdesc1.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/440imgdesc1.webp",
+        "checksum": "6e94c68cbdadaaeae08d79a8830eae5dc0746993aa618777c1bf4ad8e42bdcca"
+      },
+      {
+        "local_path": "media/documents/849imgdesc1.webp",
+        "storage_path": "product-documents/849imgdesc1.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/849imgdesc1.webp",
+        "checksum": "2243406d4fc238787cb4c04a594968c68c96c319016d745c89319d3bff837dd1"
+      },
+      {
+        "local_path": "media/documents/vimi.webp",
+        "storage_path": "product-documents/vimi.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/vimi.webp",
+        "checksum": "4601dd1d19bcea33e6ec67d5656000b46ccdc5f8508ba974073b8a18483955ec"
+      },
+      {
+        "local_path": "media/documents/Cuadro_olivos-1.webp",
+        "storage_path": "product-documents/Cuadro_olivos-1.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/Cuadro_olivos-1.webp",
+        "checksum": "694e3118931f7b2c73b5bbe128d669f96233816f630d41e8de97c27ebc590ccd"
+      },
+      {
+        "local_path": "media/documents/mang_succ.webp",
+        "storage_path": "product-documents/mang_succ.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/mang_succ.webp",
+        "checksum": "813168f954296ab4d09289967594771ae88606bb98bf4c1304c1509f6cfaea3d"
+      },
+      {
+        "local_path": "media/documents/VYR-3250-Verde.webp",
+        "storage_path": "product-documents/VYR-3250-Verde.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/VYR-3250-Verde.webp",
+        "checksum": "41279727c0bb47c7c12668c56f7604684b9652e6b1242bc417ee5b02868cc84e"
+      },
+      {
+        "local_path": "media/documents/299imgdesc1.webp",
+        "storage_path": "product-documents/299imgdesc1.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/299imgdesc1.webp",
+        "checksum": "ef563c440aa47eb2a3f36fef05871b2b4c024ae37d971fe19ec4216845cb15c3"
+      },
+      {
+        "local_path": "media/documents/321imgdesc1.webp",
+        "storage_path": "product-documents/321imgdesc1.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/321imgdesc1.webp",
+        "checksum": "1a8e8896da3c43c83da608e9d18ad076324d64669403be6eecd745db63468e10"
+      },
+      {
+        "local_path": "media/documents/TipoT_anilla_cuadro.webp",
+        "storage_path": "product-documents/TipoT_anilla_cuadro.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/TipoT_anilla_cuadro.webp",
+        "checksum": "63babbf0169f82a550210b39c8e245f9f000db074ccfb009cab635b1ff4497d3"
+      },
+      {
+        "local_path": "media/documents/cuadro1.webp",
+        "storage_path": "product-documents/cuadro1.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/cuadro1.webp",
+        "checksum": "97f54d30a99fae1cdfa8b8f6b6c9eb839cacc4d14fe4c8d32083056de64969b3"
+      },
+      {
+        "local_path": "media/documents/FilYmP.webp",
+        "storage_path": "product-documents/FilYmP.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/FilYmP.webp",
+        "checksum": "3817a7170a7e76748cba538dc6fd60d20e21e1c9f2641922f64c1642250a984e"
+      },
+      {
+        "local_path": "media/documents/785imgdesc1.webp",
+        "storage_path": "product-documents/785imgdesc1.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/785imgdesc1.webp",
+        "checksum": "fae1467bbccb7293cd5bf690de9618a08badafa5d4a0b904e6a5b9dd000c735f"
+      },
+      {
+        "local_path": "media/documents/787imgdesc1.webp",
+        "storage_path": "product-documents/787imgdesc1.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/787imgdesc1.webp",
+        "checksum": "13d110eea106a3d681f0f5641176d64635dbef2a49b2ce3d645ac8b5f192589b"
+      },
+      {
+        "local_path": "media/documents/788imgdesc1.webp",
+        "storage_path": "product-documents/788imgdesc1.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/788imgdesc1.webp",
+        "checksum": "0bed682a5ceac6de9297857eca36b00370a369eacefd5cc277f282f9dcfe1e57"
+      },
+      {
+        "local_path": "media/documents/197imgdesc2.webp",
+        "storage_path": "product-documents/197imgdesc2.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/197imgdesc2.webp",
+        "checksum": "3a2c4d35165cda13dbd8dbca6f9c572910df0242a8348c5a131f7d8a7286ffd3"
+      },
+      {
+        "local_path": "media/documents/Erhas-simples-malla.webp",
+        "storage_path": "product-documents/Erhas-simples-malla.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/Erhas-simples-malla.webp",
+        "checksum": "29b94f72ab38f16a2357c01a88bf7bf25fc4d534c9ee5018c4af40cff7f197a9"
+      },
+      {
+        "local_path": "media/documents/Erhas-dobles-malla.webp",
+        "storage_path": "product-documents/Erhas-dobles-malla.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/Erhas-dobles-malla.webp",
+        "checksum": "f0a92d917f09f7da9fc02a55d01b97e5d51488b945b7b89a4742cc3ca72bdc92"
+      },
+      {
+        "local_path": "media/documents/Erhas-simples-anilla.webp",
+        "storage_path": "product-documents/Erhas-simples-anilla.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/Erhas-simples-anilla.webp",
+        "checksum": "70b81328ad6100217b25aa596e056e72cb924cdb72ccbda2b91f240a70cab104"
+      },
+      {
+        "local_path": "media/documents/833imgdesc2.webp",
+        "storage_path": "product-documents/833imgdesc2.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/833imgdesc2.webp",
+        "checksum": "4d831009ca37157e869f357bcb993978d135fb5e2c10d27c3e60c40ee55b0748"
+      },
+      {
+        "local_path": "media/documents/hi2.webp",
+        "storage_path": "product-documents/hi2.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/hi2.webp",
+        "checksum": "4728ab09ceb96ae33743f8c3d4683e67955b0b91ee6c26b2804abe9b8cda1c05"
+      },
+      {
+        "local_path": "media/documents/graf.webp",
+        "storage_path": "product-documents/graf.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/graf.webp",
+        "checksum": "b45511cbb37d59fc1a2c0e3a601f6bfff1283294adf93afddfe97177b59c4417"
+      },
+      {
+        "local_path": "media/documents/TipoT_malla_cuadro.webp",
+        "storage_path": "product-documents/TipoT_malla_cuadro.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/TipoT_malla_cuadro.webp",
+        "checksum": "d4a45c56054eacdd2e3a592cde762eae29aaeb4eb587461e847eeda3545ab801"
+      },
+      {
+        "local_path": "media/documents/cuadro2.webp",
+        "storage_path": "product-documents/cuadro2.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/cuadro2.webp",
+        "checksum": "289bd4f05d5c3690f6466f9e8c2a29126433b7b7b95440082363987d3204c08c"
+      },
+      {
+        "local_path": "media/documents/Medidas-En-filtros-dobles-1.webp",
+        "storage_path": "product-documents/Medidas-En-filtros-dobles-1.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/Medidas-En-filtros-dobles-1.webp",
+        "checksum": "4920f00181b310dfc63c5e5334ba1bc12f530c39fcdfcdd0156dd2f0380aba07"
+      },
+      {
+        "local_path": "media/documents/FilYmM.webp",
+        "storage_path": "product-documents/FilYmM.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/FilYmM.webp",
+        "checksum": "9d5b3204bf0cf52227f157ad3077269ce5f6819309780bcd083ad87825575641"
+      },
+      {
+        "local_path": "media/documents/104imgdesc1.webp",
+        "storage_path": "product-documents/104imgdesc1.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/104imgdesc1.webp",
+        "checksum": "bca61197099c1e18b36b701be55f56c73e62d5523d3d14038076ae4927ebb57d"
+      },
+      {
+        "local_path": "media/documents/603imgdesc1.webp",
+        "storage_path": "product-documents/603imgdesc1.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/603imgdesc1.webp",
+        "checksum": "31eb83fa9bdf0960bf4643709395148da7c52a2716a28b329a7696440ceba2ba"
+      },
+      {
+        "local_path": "media/documents/601imgdesc1.webp",
+        "storage_path": "product-documents/601imgdesc1.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/601imgdesc1.webp",
+        "checksum": "1eade2c216786f45f9c3f829e01f30f9fc6927c53c85ecd7652fdcf6bc7da7b4"
+      },
+      {
+        "local_path": "media/documents/789imgdesc1.webp",
+        "storage_path": "product-documents/789imgdesc1.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/789imgdesc1.webp",
+        "checksum": "607f5c85665beec8a44ca7e265928ba3ee43e3848b058fbbc6dd3a6f47097503"
+      },
+      {
+        "local_path": "media/documents/107imgdesc1.webp",
+        "storage_path": "product-documents/107imgdesc1.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/107imgdesc1.webp",
+        "checksum": "f5ff50b1b63dd1aef3605f5dcf306132f14da270dfe6c9ed3563ee1c5c3e9381"
+      },
+      {
+        "local_path": "media/documents/108imgdesc1.webp",
+        "storage_path": "product-documents/108imgdesc1.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/108imgdesc1.webp",
+        "checksum": "7ddf2e1057c8fca41c75e9b097a4a519ef1b1ab494426080cf55ca7441206141"
+      },
+      {
+        "local_path": "media/documents/127imgdesc1.webp",
+        "storage_path": "product-documents/127imgdesc1.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/127imgdesc1.webp",
+        "checksum": "b30c10448cc9d4d36ae06445c04db87e3315d5884c1d18eb640d3d45279dbefe"
+      },
+      {
+        "local_path": "media/documents/795imgdesc1.webp",
+        "storage_path": "product-documents/795imgdesc1.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/795imgdesc1.webp",
+        "checksum": "f9529a77e7bec08a79bdb70052d024d69757638bb34d5cdc2d334bd2af28b490"
+      },
+      {
+        "local_path": "media/documents/797imgdesc1.webp",
+        "storage_path": "product-documents/797imgdesc1.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/797imgdesc1.webp",
+        "checksum": "f1e0025f8a4c0015d0f8a5b6c5f76b8b178881fd434f0338f6203f98198fb6d8"
+      },
+      {
+        "local_path": "media/documents/Adaptador-RM.webp",
+        "storage_path": "product-documents/Adaptador-RM.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/Adaptador-RM.webp",
+        "checksum": "53dd698ff4ecea393668ac62c0f19fbea5cb4260ca8687dde90a499483c38831"
+      },
+      {
+        "local_path": "media/documents/633imgdesc1.webp",
+        "storage_path": "product-documents/633imgdesc1.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/633imgdesc1.webp",
+        "checksum": "971b4edc536a7b0a9c4e611dd41b979d6dc9bba7d2cfc3d4a74f170ce3b774d0"
+      },
+      {
+        "local_path": "media/documents/Codo-90.webp",
+        "storage_path": "product-documents/Codo-90.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/Codo-90.webp",
+        "checksum": "7d5b2db88e30644380da645058ce85c37c4acbe99417f9be1f06c6410efe7499"
+      },
+      {
+        "local_path": "media/documents/727imgdesc1.webp",
+        "storage_path": "product-documents/727imgdesc1.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/727imgdesc1.webp",
+        "checksum": "a5a87db353b81224d8f05474606a97867af2b7467e68dfd1e8863267256b9e79"
+      },
+      {
+        "local_path": "media/documents/830imgdesc1.webp",
+        "storage_path": "product-documents/830imgdesc1.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/830imgdesc1.webp",
+        "checksum": "6be86a3410bba047f61557dfb2329e48b41b1517f0e2e5bac157b5b55ee7900a"
+      },
+      {
+        "local_path": "media/documents/156imgdesc1.webp",
+        "storage_path": "product-documents/156imgdesc1.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/156imgdesc1.webp",
+        "checksum": "5a69c9c3915a9dabbae96b29943143565f755fc7ebd98ca089ac16681a80d0b6"
+      },
+      {
+        "local_path": "media/documents/687imgdesc1.webp",
+        "storage_path": "product-documents/687imgdesc1.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/687imgdesc1.webp",
+        "checksum": "fc60b00628caef050f621098e9b7d78e2bd3a53ca51cb49df8efa8bdb8deb71f"
+      },
+      {
+        "local_path": "media/documents/Valvula-de-Retencion-GreenPlains-01.webp",
+        "storage_path": "product-documents/Valvula-de-Retencion-GreenPlains-01.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/Valvula-de-Retencion-GreenPlains-01.webp",
+        "checksum": "aa47e487d5125d6d7489408f03aaccfed4b0c596ba47ea0960ee8786e7ef722c"
+      },
+      {
+        "local_path": "media/documents/Valvula-de-pie.webp",
+        "storage_path": "product-documents/Valvula-de-pie.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/Valvula-de-pie.webp",
+        "checksum": "d15703c43e24bf9f5f7a5cc6b52337adcb804a3c13c51d47178ef7e2f91a2123"
+      },
+      {
+        "local_path": "media/documents/Valvula-de-pie-scaled.webp",
+        "storage_path": "product-documents/Valvula-de-pie-scaled.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/Valvula-de-pie-scaled.webp",
+        "checksum": "e2924a1ec1b9f3cbe99b952919f5f585c64299d6b524e9f5b250d6f416063106"
+      },
+      {
+        "local_path": "media/documents/ADI_tec.webp",
+        "storage_path": "product-documents/ADI_tec.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/ADI_tec.webp",
+        "checksum": "8044903c33029d60c9857aec4a5eee2bc0a671cb2c639e8adc06af2ee97fdb70"
+      },
+      {
+        "local_path": "media/documents/AMA_tec.webp",
+        "storage_path": "product-documents/AMA_tec.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/AMA_tec.webp",
+        "checksum": "7df2b0f5da98c4d72ced202283db9489dde3169a3288278d580f2255b69d67bf"
+      },
+      {
+        "local_path": "media/documents/AMI_tec.webp",
+        "storage_path": "product-documents/AMI_tec.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/AMI_tec.webp",
+        "checksum": "42c06b4eedc2ded9d226b69f9b3b72e9287ba1ac602dc8c028a6eb153ca9fdb2"
+      },
+      {
+        "local_path": "media/documents/cuadro02-1.webp",
+        "storage_path": "product-documents/cuadro02-1.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/cuadro02-1.webp",
+        "checksum": "beab55deda6652caec8f56802e3e3cca130517793255d024a095cbc11197d1a8"
+      },
+      {
+        "local_path": "media/documents/130imgdesc1.webp",
+        "storage_path": "product-documents/130imgdesc1.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/130imgdesc1.webp",
+        "checksum": "4d35e94f2eec1ab5d98d68325162dd20cb95689d1a3f4639f3c252c2ea995d56"
+      },
+      {
+        "local_path": "media/documents/128imgdesc1.webp",
+        "storage_path": "product-documents/128imgdesc1.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/128imgdesc1.webp",
+        "checksum": "fd7bfe5c35331fe029a354ae986b880ec09a5f61429197e6591e3aee3f843934"
+      },
+      {
+        "local_path": "media/documents/106imgdesc1.webp",
+        "storage_path": "product-documents/106imgdesc1.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/106imgdesc1.webp",
+        "checksum": "532b34a0c91d1ec825feffa586d433c636002cfdf2c2d22f56320d39e1251d29"
+      },
+      {
+        "local_path": "media/documents/635imgdesc1.webp",
+        "storage_path": "product-documents/635imgdesc1.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/635imgdesc1.webp",
+        "checksum": "016914d9545b36e659838a67984c261c10b348422511d4267be44c187f758989"
+      },
+      {
+        "local_path": "media/documents/ima1.webp",
+        "storage_path": "product-documents/ima1.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/ima1.webp",
+        "checksum": "bc9b1596c43d60d5c664079641bce74872b70e6a59dc9f7f978f40287e3aeb78"
+      },
+      {
+        "local_path": "media/documents/367imgdesc1.webp",
+        "storage_path": "product-documents/367imgdesc1.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/367imgdesc1.webp",
+        "checksum": "567e0e3503fa35553ec4d45b9ce2a8a761cf0b99403cb1d8cab897c72ed9e22e"
+      },
+      {
+        "local_path": "media/documents/755imgdesc2.webp",
+        "storage_path": "product-documents/755imgdesc2.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/755imgdesc2.webp",
+        "checksum": "7d7faf659877a1bafca658a0c0a24ad91655a699b2c693743e416c7fd8ea1b36"
+      },
+      {
+        "local_path": "media/documents/599imgdesc1.webp",
+        "storage_path": "product-documents/599imgdesc1.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/599imgdesc1.webp",
+        "checksum": "733a8db5a955492bd79d198ea8cd2580b9d7cc696f4d53603fe226e54eaa604e"
+      },
+      {
+        "local_path": "media/documents/618imgdesc2.webp",
+        "storage_path": "product-documents/618imgdesc2.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/618imgdesc2.webp",
+        "checksum": "d9b4a1eb8b0b9dc52c8a91505e9b6d11e7f97152cf4b6c4effeb12daa3a061e8"
+      },
+      {
+        "local_path": "media/documents/cuna2.webp",
+        "storage_path": "product-documents/cuna2.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/cuna2.webp",
+        "checksum": "3e9ab313a096034e511c3f9a59346e91cb84d55b339ab64218b3858001877045"
+      },
+      {
+        "local_path": "media/documents/670imgdesc1.webp",
+        "storage_path": "product-documents/670imgdesc1.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/670imgdesc1.webp",
+        "checksum": "a1e140da0395646c50e4ae71ea30f65e2be3fa67319cbb8ce125505067a8f800"
+      },
+      {
+        "local_path": "media/documents/152imgdesc1.webp",
+        "storage_path": "product-documents/152imgdesc1.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/152imgdesc1.webp",
+        "checksum": "1a61b314d8c7526017c2599c6cdef03dbb5acb7eac077f19648865ec243c8d91"
+      },
+      {
+        "local_path": "media/documents/cuadro01.webp",
+        "storage_path": "product-documents/cuadro01.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/cuadro01.webp",
+        "checksum": "03604efb51cd7e99d6f637e4e3b187abcbebd9012462c091e0ca1b61cf585714"
+      },
+      {
+        "local_path": "media/documents/TE-RM.webp",
+        "storage_path": "product-documents/TE-RM.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/TE-RM.webp",
+        "checksum": "6c9740c0bbe3c935867ece4758b220d2b063fcf515f4b166f274afd23e8e464a"
+      },
+      {
+        "local_path": "media/documents/Union.webp",
+        "storage_path": "product-documents/Union.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/Union.webp",
+        "checksum": "ff0999c52f387adf481764405221fb46ec079bd7d9a79196743e91c121f68ebd"
+      },
+      {
+        "local_path": "media/documents/reduccion-11.webp",
+        "storage_path": "product-documents/reduccion-11.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/reduccion-11.webp",
+        "checksum": "3eeb890013e115d43e38874304b362696ec240d0f51c11e07fef0d4958b549c4"
+      },
+      {
+        "local_path": "media/documents/codo-90-11.webp",
+        "storage_path": "product-documents/codo-90-11.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/codo-90-11.webp",
+        "checksum": "fb26bc3f459df1498151b809bfc8e52854029f2e0037658e5e811304ab6ee831"
+      },
+      {
+        "local_path": "media/documents/TE.webp",
+        "storage_path": "product-documents/TE.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/TE.webp",
+        "checksum": "bac3f066526a3cc222c5c7edcea4b171b8985c4a34e8aa9239018700098331f6"
+      },
+      {
+        "local_path": "media/documents/Tapon.webp",
+        "storage_path": "product-documents/Tapon.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/Tapon.webp",
+        "checksum": "067d1a6744b71cb5eccac1d93d1c03b48882f6aa18f20eeb37d8cdad745cace6"
+      },
+      {
+        "local_path": "media/documents/CODO-ROSCADO-11.webp",
+        "storage_path": "product-documents/CODO-ROSCADO-11.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/CODO-ROSCADO-11.webp",
+        "checksum": "5a35891f8e059564c6061750e0d2a1360e3984121785511e93d12132eef1cc38"
+      },
+      {
+        "local_path": "media/documents/LLave.webp",
+        "storage_path": "product-documents/LLave.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/LLave.webp",
+        "checksum": "3f6895e8441689ca89a2d6be91d64003b5cc07739aca10d2a324563dd846432a"
+      },
+      {
+        "local_path": "media/documents/Final-de-linea.webp",
+        "storage_path": "product-documents/Final-de-linea.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/Final-de-linea.webp",
+        "checksum": "9f50cc0455e20ed0f0fa9ff14337ca5bb55eeed84c4ac98fe8845192d3f8d0ab"
+      },
+      {
+        "local_path": "media/documents/union-11-11-1.webp",
+        "storage_path": "product-documents/union-11-11-1.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/union-11-11-1.webp",
+        "checksum": "247630f0541a42eaa40d710041c583825a6da4aea2539568e809e1f91ed7732a"
+      },
+      {
+        "local_path": "media/documents/Reduccion.webp",
+        "storage_path": "product-documents/Reduccion.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/Reduccion.webp",
+        "checksum": "73b7a65ae0e96c50576df2f07518c63314f85e626c5c0c6f3205bfefb9d74f0c"
+      },
+      {
+        "local_path": "media/documents/Adap-RH.webp",
+        "storage_path": "product-documents/Adap-RH.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/Adap-RH.webp",
+        "checksum": "443c33fe46f008285180559cb377df30cb0256fc04dc52682aba26c70173cbed"
+      },
+      {
+        "local_path": "media/documents/Adap-RM.webp",
+        "storage_path": "product-documents/Adap-RM.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/Adap-RM.webp",
+        "checksum": "2f4b0a1ae51fce1b57c678ac2f7740c8289b495ed67370c55482cfe5b8f3fc88"
+      },
+      {
+        "local_path": "media/documents/690imgdesc1.webp",
+        "storage_path": "product-documents/690imgdesc1.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/690imgdesc1.webp",
+        "checksum": "4eed8cd60c8ca64a84124d963e1afbf1bd6716ac223d3439df3133f2ecaaa093"
+      },
+      {
+        "local_path": "media/documents/10-metros-Caracteristicas-tecnicas-1.webp",
+        "storage_path": "product-documents/10-metros-Caracteristicas-tecnicas-1.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/10-metros-Caracteristicas-tecnicas-1.webp",
+        "checksum": "e6d56bccbaee5b5d9771fd4fd6c3b755d8191574cfa633aa2b0d45127ab04896"
+      },
+      {
+        "local_path": "media/documents/15-Caracteristicas-tecnicas-2.webp",
+        "storage_path": "product-documents/15-Caracteristicas-tecnicas-2.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/15-Caracteristicas-tecnicas-2.webp",
+        "checksum": "0b1164014e582ba7caa50778e6d177e8c191469f5ace4d4a792ab1b08b999ec0"
+      },
+      {
+        "local_path": "media/documents/20-metros-Caracteristicas-tecnicas-3.webp",
+        "storage_path": "product-documents/20-metros-Caracteristicas-tecnicas-3.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/20-metros-Caracteristicas-tecnicas-3.webp",
+        "checksum": "c2b3fc4e8f6b42f774703a15299f42f25d22e1e98abd24e80d0a45e9a317d464"
+      },
+      {
+        "local_path": "media/documents/30-metros-Caracteristicas-tecnicas-4.webp",
+        "storage_path": "product-documents/30-metros-Caracteristicas-tecnicas-4.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/30-metros-Caracteristicas-tecnicas-4.webp",
+        "checksum": "6184461972a4cb8ee6c8a54b49804fcca6bd73c5fe5b017319c0e5a1afc888c1"
+      },
+      {
+        "local_path": "media/documents/689imgdesc1.webp",
+        "storage_path": "product-documents/689imgdesc1.webp",
+        "original_url": "https://surerain.com/assets/productos-fichas/689imgdesc1.webp",
+        "checksum": "e9fa15a88f6561813967d44dfb2d67b6ba9dac7de4e6de852c30d0948076a9fc"
+      }
+    ]
+  },
+  "note": "Upload later with Supabase Storage API/CLI. Do not invent public URLs."
+}

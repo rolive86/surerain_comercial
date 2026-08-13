@@ -1,0 +1,100 @@
+{
+  "generated_at": "2026-08-13T22:15:15.722Z",
+  "total": 536,
+  "downloaded": 0,
+  "skipped": 535,
+  "failed": 1,
+  "checksum_duplicates": 12,
+  "duplicates_sample": [
+    {
+      "checksum": "02b065d55f1cd27a4b5185d564305bbf398b150774a6c539903f71dd30b25bc8",
+      "urls": [
+        "https://surerain.com/assets/productos-fichas/841imgdesc1.webp",
+        "https://surerain.com/assets/productos-fichas/840imgdesc1.webp"
+      ]
+    },
+    {
+      "checksum": "0c8ac7140c032bef516978795f28c13176a0ba4835669c3758986d8546bd9620",
+      "urls": [
+        "https://surerain.com/assets/productos-importados/conector-para-goteros-anti-drenante-de-2-y-4-salidas.webp",
+        "https://surerain.com/assets/productos-importados/conector-para-goteros.webp"
+      ]
+    },
+    {
+      "checksum": "730033671fcc5ac5657fa7001b80d8d2d59c2d43164bf4309c79073288f7753e",
+      "urls": [
+        "https://surerain.com/assets/productos-importados/vyr-3264-miniaspersor-circular.webp",
+        "https://surerain.com/assets/productos-importados/vyr-3260-azul-miniaspersor-circular.webp",
+        "https://surerain.com/assets/productos-importados/vyr-3260-rojo-miniaspersor-circular.webp"
+      ]
+    },
+    {
+      "checksum": "4544275d30495be03e6584fc86836d936711b44062e9fff0ac20dbec19a115ae",
+      "urls": [
+        "https://surerain.com/assets/productos-importados/valvula-antigoteo-530x-para-fogger.webp",
+        "https://surerain.com/assets/productos-importados/valvula-antigoteo-530.webp"
+      ]
+    },
+    {
+      "checksum": "6732798904bb59db5d0b89b2b0b7c904e0d2d2b8ec3630b86c40ed451f0ead64",
+      "urls": [
+        "https://surerain.com/assets/productos-importados/pd-1403-pd-1503.webp",
+        "https://surerain.com/assets/productos-importados/pd-1503.webp"
+      ]
+    },
+    {
+      "checksum": "25a8fc709d47e2d22f255a51d09d2318ca6cf3e9456f6eca1717b356b340d5f4",
+      "urls": [
+        "https://surerain.com/assets/productos-importados/20015-anilla.webp",
+        "https://surerain.com/assets/productos-importados/20015-malla.webp"
+      ]
+    },
+    {
+      "checksum": "ff2a468315819fb3eddc97d862a1d2b8f06299e71e48193fc670b6a5a5f5b757",
+      "urls": [
+        "https://surerain.com/assets/productos-importados/20025-anilla.webp",
+        "https://surerain.com/assets/productos-importados/20025-malla.webp"
+      ]
+    },
+    {
+      "checksum": "729ff28fa5e42523315df99c2a57afddf2dcdd635756e87ff2a5d1427e73f318",
+      "urls": [
+        "https://surerain.com/assets/productos-importados/filtros-simples-en-t-y-dobles-de-malla-plastica-con-efecto-hidrociclon.webp",
+        "https://surerain.com/assets/productos-importados/filtros-erhas-cortos-y-largos-en-t-anilla-plastica.webp"
+      ]
+    },
+    {
+      "checksum": "1425cbd5c8347bf6c6a7ac591a3b380e1b08fd97ac53ef2487d283908c02a0c8",
+      "urls": [
+        "https://surerain.com/assets/productos-importados/filtros-dobles-erhas-cortos-y-largos-en-t-malla-metalica-copia.webp",
+        "https://surerain.com/assets/productos-importados/filtros-dobles-erhas-cortos-y-largos-anilla-con-efecto-hidrociclon.webp"
+      ]
+    },
+    {
+      "checksum": "87445f4242e169f26bd9dd80bd4717606c9bf5c0d337e3ae0dea80a94e3fd52b",
+      "urls": [
+        "https://surerain.com/assets/productos-importados/valvula-solenoide-k-rain-pro-100.webp",
+        "https://surerain.com/assets/productos-importados/valvula-solenoide-k-rain-pro-150.webp",
+        "https://surerain.com/assets/productos-importados/sensor-de-lluvia-3208-k-rain.webp",
+        "https://surerain.com/assets/productos-importados/k-rain-bl-kr-bluetooth.webp",
+        "https://surerain.com/assets/productos-importados/k-rain-rps-46.webp",
+        "https://surerain.com/assets/productos-importados/k-rain-pro-ex-2-0.webp",
+        "https://surerain.com/assets/productos-importados/k-rain-pro-ex-2-0-wifi.webp"
+      ]
+    },
+    {
+      "checksum": "31709b1cdd781a42568a8d111e2198bf1ffbccd5eaa7076b584b712fa1ca8ecc",
+      "urls": [
+        "https://surerain.com/assets/productos-importados/valvula-esferica-metalica-presion-nominal-16-bar-2.webp",
+        "https://surerain.com/assets/productos-importados/valvula-esferica-metalica-presion-nominal-16-bar.webp"
+      ]
+    },
+    {
+      "checksum": "4b03edfdd08356fb687b62cdc705fb68e6c0ce648b103a094a3db94144d4bc1c",
+      "urls": [
+        "https://surerain.com/assets/productos-importados/conector-inicial-con-aro-de-goma-bilabiado-3.webp",
+        "https://surerain.com/assets/productos-importados/conector-inicial-con-aro-de-goma-recto-2.webp"
+      ]
+    }
+  ]
+}

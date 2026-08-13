@@ -1,0 +1,49 @@
+{
+  "source_index": 49,
+  "source_id": "img:aspersor-1700-00e-greenplains",
+  "name": "Aspersor 1700.000E GreenPlains",
+  "slug": "aspersor-1700-000e-greenplains",
+  "category_slug": "aspersores",
+  "brand_name": "GreenPlains",
+  "product_type_slug": "impacto",
+  "markets": [
+    "agro",
+    "av"
+  ],
+  "image_url": "https://surerain.com/assets/productos-importados/aspersor-1700-00e-greenplains.webp",
+  "image_alt": "Aspersor 1700.000E GreenPlains",
+  "ficha_url": "https://surerain.com/assets/productos-fichas/1700.00E-Ficha-tecnica.webp",
+  "description": "CARACTERÍSTICAS: – Aspersor de 1 1/2” BSPT, Rosca Hembra – Materiales: Aleación de aluminio, cobre, acero inoxidable y plástico poliamida. – Alcance de riego: 16 – 29 m – Presión de trabajo: 1.5 – 5.0 bar. – Caudal: 5 – 25 m³/h – Boquillas disponibles: 8 mm, 10 mm, 12 mm, 14 mm y 16 mm – Ángulo de rotación: 360° Sectorizable.",
+  "specs_html": "<tr><td>Marca</td><td>GreenPlains</td></tr><tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes</td></tr>",
+  "specs_rows": [
+    {
+      "label": "Marca",
+      "value": "GreenPlains"
+    },
+    {
+      "label": "Tipo de Producto",
+      "value": "Agro, Áreas Verdes"
+    }
+  ],
+  "chip_label": "Aspersores",
+  "original_url": "https://surerain.com/catalogo?producto=aspersor-1700-000e-greenplains",
+  "outer_html": "<div class=\"card product-card cursor-pointer\" data-category=\"aspersores\" data-ficha=\"assets/productos-fichas/1700.00E-Ficha-tecnica.webp\" data-marca=\"GreenPlains\" data-tipo=\"impacto\" data-vertical=\"agro av\" onclick=\"openProductModal('Aspersor 1700.000E GreenPlains','CARACTERÍSTICAS: – Aspersor de 1 1/2” BSPT, Rosca Hembra – Materiales: Aleación de aluminio, cobre, acero inoxidable y plástico poliamida. – Alcance de riego: 16 – 29 m – Presión de trabajo: 1.5 – 5.0 bar. – Caudal: 5 – 25 m³/h – Boquillas disponibles: 8 mm, 10 mm, 12 mm, 14 mm y 16 mm – Ángulo de rotación: 360° Sectorizable.','<tr><td>Marca</td><td>GreenPlains</td></tr><tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes</td></tr>')\"><img width=\"195\" height=\"130\" alt=\"Aspersor 1700.000E GreenPlains\" class=\"w-full object-cover\" loading=\"lazy\" src=\"assets/productos-importados/aspersor-1700-00e-greenplains.webp\" style=\"height:130px;\"><div class=\"p-3\"><span class=\"chip chip-agro mb-1.5\">Aspersores</span><h4 class=\"font-semibold text-gray-900 text-xs mb-1\">Aspersor 1700.000E GreenPlains</h4><p class=\"text-xs text-gray-400 mb-2\">GreenPlains</p><div class=\"flex gap-1.5\"><span class=\"text-xs text-sr-green font-semibold cursor-pointer\">Ver ficha</span><span class=\"text-gray-300\">·</span><a class=\"text-xs text-gray-400 hover:text-sr-green\" href=\"contacto.html\">Dónde comprar</a></div></div></div>",
+  "onclick_raw": "openProductModal('Aspersor 1700.000E GreenPlains','CARACTERÍSTICAS: – Aspersor de 1 1/2” BSPT, Rosca Hembra – Materiales: Aleación de aluminio, cobre, acero inoxidable y plástico poliamida. – Alcance de riego: 16 – 29 m – Presión de trabajo: 1.5 – 5.0 bar. – Caudal: 5 – 25 m³/h – Boquillas disponibles: 8 mm, 10 mm, 12 mm, 14 mm y 16 mm – Ángulo de rotación: 360° Sectorizable.','<tr><td>Marca</td><td>GreenPlains</td></tr><tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes</td></tr>')",
+  "content_hash": "d338d05263a6ada108304e8e9b766c8d0b42d61332787728160a8fba3cebe1c0",
+  "provenance": {
+    "source_url": "file://C:\\proyectos\\SURERAIN-CLONE\\data\\raw\\catalogo.source.html",
+    "source_page": "https://surerain.com/catalogo",
+    "source_selector": ".product-card:nth-of-type(50)",
+    "extracted_at": "2026-08-13T22:03:32.860Z",
+    "raw_fields": [
+      "data-category",
+      "data-marca",
+      "data-tipo",
+      "data-vertical",
+      "data-ficha",
+      "img[src]",
+      "h4",
+      "openProductModal(name,description,specsHtml)"
+    ]
+  }
+}

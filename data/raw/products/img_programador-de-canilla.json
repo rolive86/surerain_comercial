@@ -1,0 +1,48 @@
+{
+  "source_index": 287,
+  "source_id": "img:programador-de-canilla",
+  "name": "Programador de Canilla",
+  "slug": "programador-de-canilla",
+  "category_slug": "programadores",
+  "brand_name": "RPE (Italia)",
+  "product_type_slug": null,
+  "markets": [
+    "av"
+  ],
+  "image_url": "https://surerain.com/assets/productos-importados/programador-de-canilla.webp",
+  "image_alt": "Programador de Canilla",
+  "ficha_url": null,
+  "description": "CARACTERÍSTICAS: – Posee un solenoide interno para realizar el cierre y apertura. – Alimentación: batería de 9v.",
+  "specs_html": "<tr><td>Marca</td><td>RPE (Italia)</td></tr><tr><td>Tipo de Producto</td><td>Áreas Verdes</td></tr>",
+  "specs_rows": [
+    {
+      "label": "Marca",
+      "value": "RPE (Italia)"
+    },
+    {
+      "label": "Tipo de Producto",
+      "value": "Áreas Verdes"
+    }
+  ],
+  "chip_label": "Programadores",
+  "original_url": "https://surerain.com/catalogo?producto=programador-de-canilla",
+  "outer_html": "<div class=\"card product-card cursor-pointer\" data-category=\"programadores\" data-marca=\"RPE (Italia)\" data-vertical=\"av\" onclick=\"openProductModal('Programador de Canilla','CARACTERÍSTICAS: – Posee un solenoide interno para realizar el cierre y apertura. – Alimentación: batería de 9v.','<tr><td>Marca</td><td>RPE (Italia)</td></tr><tr><td>Tipo de Producto</td><td>Áreas Verdes</td></tr>')\"><img width=\"195\" height=\"130\" alt=\"Programador de Canilla\" class=\"w-full object-cover\" loading=\"lazy\" src=\"assets/productos-importados/programador-de-canilla.webp\" style=\"height:130px;\"><div class=\"p-3\"><span class=\"chip chip-av mb-1.5\">Programadores</span><h4 class=\"font-semibold text-gray-900 text-xs mb-1\">Programador de Canilla</h4><p class=\"text-xs text-gray-400 mb-2\">RPE (Italia)</p><div class=\"flex gap-1.5\"><span class=\"text-xs text-sr-green font-semibold cursor-pointer\">Ver ficha</span><span class=\"text-gray-300\">·</span><a class=\"text-xs text-gray-400 hover:text-sr-green\" href=\"contacto.html\">Dónde comprar</a></div></div></div>",
+  "onclick_raw": "openProductModal('Programador de Canilla','CARACTERÍSTICAS: – Posee un solenoide interno para realizar el cierre y apertura. – Alimentación: batería de 9v.','<tr><td>Marca</td><td>RPE (Italia)</td></tr><tr><td>Tipo de Producto</td><td>Áreas Verdes</td></tr>')",
+  "content_hash": "db819a613e7604b03a7e2b794721e29dd186c7de29f628984655995f8ee9efda",
+  "provenance": {
+    "source_url": "file://C:\\proyectos\\SURERAIN-CLONE\\data\\raw\\catalogo.source.html",
+    "source_page": "https://surerain.com/catalogo",
+    "source_selector": ".product-card:nth-of-type(288)",
+    "extracted_at": "2026-08-13T22:03:32.860Z",
+    "raw_fields": [
+      "data-category",
+      "data-marca",
+      "data-tipo",
+      "data-vertical",
+      "data-ficha",
+      "img[src]",
+      "h4",
+      "openProductModal(name,description,specsHtml)"
+    ]
+  }
+}

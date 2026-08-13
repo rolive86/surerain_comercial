@@ -1,0 +1,46 @@
+{
+  "source_index": 197,
+  "source_id": "img:para-encolar",
+  "name": "Válvula esférica para encolar – Con unión doble",
+  "slug": "valvula-esferica-para-encolar-con-union-doble",
+  "category_slug": "valvulas",
+  "brand_name": "ERA",
+  "product_type_slug": null,
+  "markets": [
+    "agro",
+    "av",
+    "infra"
+  ],
+  "image_url": "https://surerain.com/assets/productos-importados/para-encolar.webp",
+  "image_alt": "Válvula esférica para encolar – Con unión doble",
+  "ficha_url": null,
+  "description": "VÁLVULAS ESFÉRICAS CON UNA UNIÓN DOBLE CARACTERÍSTICAS: – Para encolar – Medidas disponibles: 20, 25, 32, 40, 50, 63, 75, 90, 110 – Presión máx. de trabajo: 10 bares (PN10) – Material: PVC, O-Rings (EPDM)",
+  "specs_html": "<tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes, Infraestructura</td></tr>",
+  "specs_rows": [
+    {
+      "label": "Tipo de Producto",
+      "value": "Agro, Áreas Verdes, Infraestructura"
+    }
+  ],
+  "chip_label": "Válvulas",
+  "original_url": "https://surerain.com/catalogo?producto=valvula-esferica-para-encolar-con-union-doble",
+  "outer_html": "<div class=\"card product-card cursor-pointer\" data-category=\"valvulas\" data-marca=\"ERA\" data-vertical=\"agro av infra\" onclick=\"openProductModal('Válvula esférica para encolar – Con unión doble','VÁLVULAS ESFÉRICAS CON UNA UNIÓN DOBLE CARACTERÍSTICAS: – Para encolar – Medidas disponibles: 20, 25, 32, 40, 50, 63, 75, 90, 110 – Presión máx. de trabajo: 10 bares (PN10) – Material: PVC, O-Rings (EPDM)','<tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes, Infraestructura</td></tr>')\"><img width=\"195\" height=\"130\" alt=\"Válvula esférica para encolar – Con unión doble\" class=\"w-full object-cover\" loading=\"lazy\" src=\"assets/productos-importados/para-encolar.webp\" style=\"height:130px;\"><div class=\"p-3\"><span class=\"chip chip-agro mb-1.5\">Válvulas</span><h4 class=\"font-semibold text-gray-900 text-xs mb-1\">Válvula esférica para encolar – Con unión doble</h4><p class=\"text-xs text-gray-400 mb-2\">Válvulas</p><div class=\"flex gap-1.5\"><span class=\"text-xs text-sr-green font-semibold cursor-pointer\">Ver ficha</span><span class=\"text-gray-300\">·</span><a class=\"text-xs text-gray-400 hover:text-sr-green\" href=\"contacto.html\">Dónde comprar</a></div></div></div>",
+  "onclick_raw": "openProductModal('Válvula esférica para encolar – Con unión doble','VÁLVULAS ESFÉRICAS CON UNA UNIÓN DOBLE CARACTERÍSTICAS: – Para encolar – Medidas disponibles: 20, 25, 32, 40, 50, 63, 75, 90, 110 – Presión máx. de trabajo: 10 bares (PN10) – Material: PVC, O-Rings (EPDM)','<tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes, Infraestructura</td></tr>')",
+  "content_hash": "fec3551e8fabc9be83d74286fbcc34cac7398f5cce5b609c88cd5e163329b1de",
+  "provenance": {
+    "source_url": "file://C:\\proyectos\\SURERAIN-CLONE\\data\\raw\\catalogo.source.html",
+    "source_page": "https://surerain.com/catalogo",
+    "source_selector": ".product-card:nth-of-type(198)",
+    "extracted_at": "2026-08-13T22:03:32.860Z",
+    "raw_fields": [
+      "data-category",
+      "data-marca",
+      "data-tipo",
+      "data-vertical",
+      "data-ficha",
+      "img[src]",
+      "h4",
+      "openProductModal(name,description,specsHtml)"
+    ]
+  }
+}

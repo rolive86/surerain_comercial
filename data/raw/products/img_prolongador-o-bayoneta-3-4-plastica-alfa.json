@@ -1,0 +1,49 @@
+{
+  "source_index": 73,
+  "source_id": "img:prolongador-o-bayoneta-3-4-plastica-alfa",
+  "name": "Prolongador o bayoneta 3/4″, Plástica Alfa",
+  "slug": "prolongador-o-bayoneta-3-4-plastica-alfa",
+  "category_slug": "aspersores",
+  "brand_name": "Plástica Alfa (Italia)",
+  "product_type_slug": "impacto",
+  "markets": [
+    "av",
+    "infra"
+  ],
+  "image_url": "https://surerain.com/assets/productos-importados/prolongador-o-bayoneta-3-4-plastica-alfa.webp",
+  "image_alt": "Prolongador o bayoneta 3/4″, Plástica Alfa",
+  "ficha_url": null,
+  "description": "Prolongador o bayoneta, Plástica Alfa Medidas disponibles: rosca macho 3/4”.",
+  "specs_html": "<tr><td>Marca</td><td>Plástica Alfa (Italia)</td></tr><tr><td>Tipo de Producto</td><td>Áreas Verdes, Infraestructura</td></tr>",
+  "specs_rows": [
+    {
+      "label": "Marca",
+      "value": "Plástica Alfa (Italia)"
+    },
+    {
+      "label": "Tipo de Producto",
+      "value": "Áreas Verdes, Infraestructura"
+    }
+  ],
+  "chip_label": "Aspersores",
+  "original_url": "https://surerain.com/catalogo?producto=prolongador-o-bayoneta-3-4-plastica-alfa",
+  "outer_html": "<div class=\"card product-card cursor-pointer\" data-category=\"aspersores\" data-marca=\"Plástica Alfa (Italia)\" data-tipo=\"impacto\" data-vertical=\"av infra\" onclick=\"openProductModal('Prolongador o bayoneta 3/4″, Plástica Alfa','Prolongador o bayoneta, Plástica Alfa Medidas disponibles: rosca macho 3/4”.','<tr><td>Marca</td><td>Plástica Alfa (Italia)</td></tr><tr><td>Tipo de Producto</td><td>Áreas Verdes, Infraestructura</td></tr>')\"><img width=\"195\" height=\"130\" alt=\"Prolongador o bayoneta 3/4″, Plástica Alfa\" class=\"w-full object-cover\" loading=\"lazy\" src=\"assets/productos-importados/prolongador-o-bayoneta-3-4-plastica-alfa.webp\" style=\"height:130px;\"><div class=\"p-3\"><span class=\"chip chip-av mb-1.5\">Aspersores</span><h4 class=\"font-semibold text-gray-900 text-xs mb-1\">Prolongador o bayoneta 3/4″, Plástica Alfa</h4><p class=\"text-xs text-gray-400 mb-2\">Plástica Alfa (Italia)</p><div class=\"flex gap-1.5\"><span class=\"text-xs text-sr-green font-semibold cursor-pointer\">Ver ficha</span><span class=\"text-gray-300\">·</span><a class=\"text-xs text-gray-400 hover:text-sr-green\" href=\"contacto.html\">Dónde comprar</a></div></div></div>",
+  "onclick_raw": "openProductModal('Prolongador o bayoneta 3/4″, Plástica Alfa','Prolongador o bayoneta, Plástica Alfa Medidas disponibles: rosca macho 3/4”.','<tr><td>Marca</td><td>Plástica Alfa (Italia)</td></tr><tr><td>Tipo de Producto</td><td>Áreas Verdes, Infraestructura</td></tr>')",
+  "content_hash": "df7efc2132e471b35f12da3c5668c414cfb2d9ba296642075332d5a2f5167b86",
+  "provenance": {
+    "source_url": "file://C:\\proyectos\\SURERAIN-CLONE\\data\\raw\\catalogo.source.html",
+    "source_page": "https://surerain.com/catalogo",
+    "source_selector": ".product-card:nth-of-type(74)",
+    "extracted_at": "2026-08-13T22:03:32.860Z",
+    "raw_fields": [
+      "data-category",
+      "data-marca",
+      "data-tipo",
+      "data-vertical",
+      "data-ficha",
+      "img[src]",
+      "h4",
+      "openProductModal(name,description,specsHtml)"
+    ]
+  }
+}

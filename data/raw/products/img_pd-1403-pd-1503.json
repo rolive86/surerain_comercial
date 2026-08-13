@@ -1,0 +1,45 @@
+{
+  "source_index": 132,
+  "source_id": "img:pd-1403-pd-1503",
+  "name": "PD-1403 Microjet-estaca 360°",
+  "slug": "pd-1403-microjet-estaca-360",
+  "category_slug": "microaspersion",
+  "brand_name": "GreenPlains",
+  "product_type_slug": null,
+  "markets": [
+    "av",
+    "hogar"
+  ],
+  "image_url": "https://surerain.com/assets/productos-importados/pd-1403-pd-1503.webp",
+  "image_alt": "PD-1403 Microjet-estaca 360°",
+  "ficha_url": null,
+  "description": "CARACTERÍSTICAS: PD-1403 Micro 360° Caudal: 0-38 l/h Radio: 0-45 cm -Fabricado en material plástico. Nota: Sólo hace falta agregar la cantidad necesaria de tubería de 4 mm (microtubo)",
+  "specs_html": "<tr><td>Tipo de Producto</td><td>Áreas Verdes</td></tr>",
+  "specs_rows": [
+    {
+      "label": "Tipo de Producto",
+      "value": "Áreas Verdes"
+    }
+  ],
+  "chip_label": "Microaspersión",
+  "original_url": "https://surerain.com/catalogo?producto=pd-1403-microjet-estaca-360",
+  "outer_html": "<div class=\"card product-card cursor-pointer\" data-category=\"microaspersion\" data-marca=\"GreenPlains\" data-vertical=\"av hogar\" onclick=\"openProductModal('PD-1403 Microjet-estaca 360°','CARACTERÍSTICAS: PD-1403 Micro 360° Caudal: 0-38 l/h Radio: 0-45 cm -Fabricado en material plástico. Nota: Sólo hace falta agregar la cantidad necesaria de tubería de 4 mm (microtubo)','<tr><td>Tipo de Producto</td><td>Áreas Verdes</td></tr>')\"><img width=\"195\" height=\"130\" alt=\"PD-1403 Microjet-estaca 360°\" class=\"w-full object-cover\" loading=\"lazy\" src=\"assets/productos-importados/pd-1403-pd-1503.webp\" style=\"height:130px;\"><div class=\"p-3\"><span class=\"chip chip-av mb-1.5\">Microaspersión</span><h4 class=\"font-semibold text-gray-900 text-xs mb-1\">PD-1403 Microjet-estaca 360°</h4><p class=\"text-xs text-gray-400 mb-2\">Microaspersión</p><div class=\"flex gap-1.5\"><span class=\"text-xs text-sr-green font-semibold cursor-pointer\">Ver ficha</span><span class=\"text-gray-300\">·</span><a class=\"text-xs text-gray-400 hover:text-sr-green\" href=\"contacto.html\">Dónde comprar</a></div></div></div>",
+  "onclick_raw": "openProductModal('PD-1403 Microjet-estaca 360°','CARACTERÍSTICAS: PD-1403 Micro 360° Caudal: 0-38 l/h Radio: 0-45 cm -Fabricado en material plástico. Nota: Sólo hace falta agregar la cantidad necesaria de tubería de 4 mm (microtubo)','<tr><td>Tipo de Producto</td><td>Áreas Verdes</td></tr>')",
+  "content_hash": "c407e9fef1a60278d656ebd1c87ab629d59598996f3075ed209f3bdbf8c7021a",
+  "provenance": {
+    "source_url": "file://C:\\proyectos\\SURERAIN-CLONE\\data\\raw\\catalogo.source.html",
+    "source_page": "https://surerain.com/catalogo",
+    "source_selector": ".product-card:nth-of-type(133)",
+    "extracted_at": "2026-08-13T22:03:32.860Z",
+    "raw_fields": [
+      "data-category",
+      "data-marca",
+      "data-tipo",
+      "data-vertical",
+      "data-ficha",
+      "img[src]",
+      "h4",
+      "openProductModal(name,description,specsHtml)"
+    ]
+  }
+}

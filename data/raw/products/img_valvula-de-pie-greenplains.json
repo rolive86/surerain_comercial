@@ -1,0 +1,49 @@
+{
+  "source_index": 269,
+  "source_id": "img:valvula-de-pie-greenplains",
+  "name": "Válvula de pie Junta Pegar GreenPlains",
+  "slug": "valvula-de-pie-junta-pegar-greenplains",
+  "category_slug": "valvulas",
+  "brand_name": "GreenPlains",
+  "product_type_slug": null,
+  "markets": [
+    "agro",
+    "infra"
+  ],
+  "image_url": "https://surerain.com/assets/productos-importados/valvula-de-pie-greenplains.webp",
+  "image_alt": "Válvula de pie Junta Pegar GreenPlains",
+  "ficha_url": "https://surerain.com/assets/productos-fichas/Valvula-de-pie-scaled.webp",
+  "description": "Medidas disponibles: Junta a pegar de 110 – 140 – 160 – 200 mm.",
+  "specs_html": "<tr><td>Marca</td><td>GreenPlains</td></tr><tr><td>Tipo de Producto</td><td>Agro, Infraestructura</td></tr>",
+  "specs_rows": [
+    {
+      "label": "Marca",
+      "value": "GreenPlains"
+    },
+    {
+      "label": "Tipo de Producto",
+      "value": "Agro, Infraestructura"
+    }
+  ],
+  "chip_label": "Válvulas",
+  "original_url": "https://surerain.com/catalogo?producto=valvula-de-pie-junta-pegar-greenplains",
+  "outer_html": "<div class=\"card product-card cursor-pointer\" data-category=\"valvulas\" data-ficha=\"assets/productos-fichas/Valvula-de-pie-scaled.webp\" data-marca=\"GreenPlains\" data-vertical=\"agro infra\" onclick=\"openProductModal('Válvula de pie Junta Pegar GreenPlains','Medidas disponibles: Junta a pegar de 110 – 140 – 160&nbsp;–&nbsp;200&nbsp;mm.','<tr><td>Marca</td><td>GreenPlains</td></tr><tr><td>Tipo de Producto</td><td>Agro, Infraestructura</td></tr>')\"><img width=\"195\" height=\"130\" alt=\"Válvula de pie Junta Pegar GreenPlains\" class=\"w-full object-cover\" loading=\"lazy\" src=\"assets/productos-importados/valvula-de-pie-greenplains.webp\" style=\"height:130px;\"><div class=\"p-3\"><span class=\"chip chip-agro mb-1.5\">Válvulas</span><h4 class=\"font-semibold text-gray-900 text-xs mb-1\">Válvula de pie Junta Pegar GreenPlains</h4><p class=\"text-xs text-gray-400 mb-2\">GreenPlains</p><div class=\"flex gap-1.5\"><span class=\"text-xs text-sr-green font-semibold cursor-pointer\">Ver ficha</span><span class=\"text-gray-300\">·</span><a class=\"text-xs text-gray-400 hover:text-sr-green\" href=\"contacto.html\">Dónde comprar</a></div></div></div>",
+  "onclick_raw": "openProductModal('Válvula de pie Junta Pegar GreenPlains','Medidas disponibles: Junta a pegar de 110 – 140 – 160 – 200 mm.','<tr><td>Marca</td><td>GreenPlains</td></tr><tr><td>Tipo de Producto</td><td>Agro, Infraestructura</td></tr>')",
+  "content_hash": "951e163a8db87442448db3366566e6cfaf0fd4ecb8586ade94750dc2ac48c0de",
+  "provenance": {
+    "source_url": "file://C:\\proyectos\\SURERAIN-CLONE\\data\\raw\\catalogo.source.html",
+    "source_page": "https://surerain.com/catalogo",
+    "source_selector": ".product-card:nth-of-type(270)",
+    "extracted_at": "2026-08-13T22:03:32.860Z",
+    "raw_fields": [
+      "data-category",
+      "data-marca",
+      "data-tipo",
+      "data-vertical",
+      "data-ficha",
+      "img[src]",
+      "h4",
+      "openProductModal(name,description,specsHtml)"
+    ]
+  }
+}

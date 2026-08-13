@@ -1,0 +1,48 @@
+{
+  "source_index": 211,
+  "source_id": "img:solenoide",
+  "name": "Solenoide RPE – Repuesto",
+  "slug": "solenoide-rpe-repuesto",
+  "category_slug": "valvulas",
+  "brand_name": "RPE (Italia)",
+  "product_type_slug": null,
+  "markets": [
+    "av"
+  ],
+  "image_url": "https://surerain.com/assets/productos-importados/solenoide.webp",
+  "image_alt": "Solenoide RPE – Repuesto",
+  "ficha_url": null,
+  "description": "– Solenoide 24 VAC NC – VARPSOLREP24VAC RPE – Solenoide 230 VAC NC – VARPSOREP230VAC RPE – Solenoide 24 VAC, normalmente abierto (NO) – VARPSOLREP24VNO – Solenoide 9/12 V LATCH – VARPSOLREP9/12V – Solenoide 12 VDC – VARPSOLREP12VDC",
+  "specs_html": "<tr><td>Marca</td><td>RPE (Italia)</td></tr><tr><td>Tipo de Producto</td><td>Áreas Verdes</td></tr>",
+  "specs_rows": [
+    {
+      "label": "Marca",
+      "value": "RPE (Italia)"
+    },
+    {
+      "label": "Tipo de Producto",
+      "value": "Áreas Verdes"
+    }
+  ],
+  "chip_label": "Válvulas",
+  "original_url": "https://surerain.com/catalogo?producto=solenoide-rpe-repuesto",
+  "outer_html": "<div class=\"card product-card cursor-pointer\" data-category=\"valvulas\" data-marca=\"RPE (Italia)\" data-vertical=\"av\" onclick=\"openProductModal('Solenoide RPE – Repuesto','– Solenoide 24 VAC NC – VARPSOLREP24VAC RPE – Solenoide 230 VAC NC – VARPSOREP230VAC RPE – Solenoide 24 VAC, normalmente abierto (NO) – VARPSOLREP24VNO – Solenoide 9/12 V LATCH – VARPSOLREP9/12V – Solenoide 12 VDC – VARPSOLREP12VDC','<tr><td>Marca</td><td>RPE (Italia)</td></tr><tr><td>Tipo de Producto</td><td>Áreas Verdes</td></tr>')\"><img width=\"195\" height=\"130\" alt=\"Solenoide RPE – Repuesto\" class=\"w-full object-cover\" loading=\"lazy\" src=\"assets/productos-importados/solenoide.webp\" style=\"height:130px;\"><div class=\"p-3\"><span class=\"chip chip-av mb-1.5\">Válvulas</span><h4 class=\"font-semibold text-gray-900 text-xs mb-1\">Solenoide RPE – Repuesto</h4><p class=\"text-xs text-gray-400 mb-2\">RPE (Italia)</p><div class=\"flex gap-1.5\"><span class=\"text-xs text-sr-green font-semibold cursor-pointer\">Ver ficha</span><span class=\"text-gray-300\">·</span><a class=\"text-xs text-gray-400 hover:text-sr-green\" href=\"contacto.html\">Dónde comprar</a></div></div></div>",
+  "onclick_raw": "openProductModal('Solenoide RPE – Repuesto','– Solenoide 24 VAC NC – VARPSOLREP24VAC RPE – Solenoide 230 VAC NC – VARPSOREP230VAC RPE – Solenoide 24 VAC, normalmente abierto (NO) – VARPSOLREP24VNO – Solenoide 9/12 V LATCH – VARPSOLREP9/12V – Solenoide 12 VDC – VARPSOLREP12VDC','<tr><td>Marca</td><td>RPE (Italia)</td></tr><tr><td>Tipo de Producto</td><td>Áreas Verdes</td></tr>')",
+  "content_hash": "178c25999f262a2a92074eabf48deafe2396c06674faee14fe565e0eacbfa95e",
+  "provenance": {
+    "source_url": "file://C:\\proyectos\\SURERAIN-CLONE\\data\\raw\\catalogo.source.html",
+    "source_page": "https://surerain.com/catalogo",
+    "source_selector": ".product-card:nth-of-type(212)",
+    "extracted_at": "2026-08-13T22:03:32.860Z",
+    "raw_fields": [
+      "data-category",
+      "data-marca",
+      "data-tipo",
+      "data-vertical",
+      "data-ficha",
+      "img[src]",
+      "h4",
+      "openProductModal(name,description,specsHtml)"
+    ]
+  }
+}

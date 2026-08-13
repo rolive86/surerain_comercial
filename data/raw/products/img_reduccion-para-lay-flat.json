@@ -1,0 +1,45 @@
+{
+  "source_index": 399,
+  "source_id": "img:reduccion-para-lay-flat",
+  "name": "Reducción para Lay Flat",
+  "slug": "reduccion-para-lay-flat",
+  "category_slug": "accesorios",
+  "brand_name": "GreenPlains",
+  "product_type_slug": null,
+  "markets": [
+    "agro",
+    "infra"
+  ],
+  "image_url": "https://surerain.com/assets/productos-importados/reduccion-para-lay-flat.webp",
+  "image_alt": "Reducción para Lay Flat",
+  "ficha_url": "https://surerain.com/assets/productos-fichas/Reduccion.webp",
+  "description": "– Medidas disponibles: 2″x 1 1/2″; 3″x 2″; 4″ x3″",
+  "specs_html": "<tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes, Infraestructura</td></tr>",
+  "specs_rows": [
+    {
+      "label": "Tipo de Producto",
+      "value": "Agro, Áreas Verdes, Infraestructura"
+    }
+  ],
+  "chip_label": "Conectores",
+  "original_url": "https://surerain.com/catalogo?producto=reduccion-para-lay-flat",
+  "outer_html": "<div class=\"card product-card cursor-pointer\" data-ficha=\"assets/productos-fichas/Reduccion.webp\" data-category=\"accesorios\" data-marca=\"GreenPlains\" data-vertical=\"agro infra\" onclick=\"openProductModal('Reducción para Lay Flat','– Medidas disponibles: 2″x 1 1/2″; 3″x 2″; 4″ x3″','<tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes, Infraestructura</td></tr>')\"><img width=\"195\" height=\"130\" alt=\"Reducción para Lay Flat\" class=\"w-full object-cover\" loading=\"lazy\" src=\"assets/productos-importados/reduccion-para-lay-flat.webp\" style=\"height:130px;\"><div class=\"p-3\"><span class=\"chip chip-agro mb-1.5\">Conectores</span><h4 class=\"font-semibold text-gray-900 text-xs mb-1\">Reducción para Lay Flat</h4><p class=\"text-xs text-gray-400 mb-2\">Accesorios para Tuberías</p><div class=\"flex gap-1.5\"><span class=\"text-xs text-sr-green font-semibold cursor-pointer\">Ver ficha</span><span class=\"text-gray-300\">·</span><a class=\"text-xs text-gray-400 hover:text-sr-green\" href=\"contacto.html\">Dónde comprar</a></div></div></div>",
+  "onclick_raw": "openProductModal('Reducción para Lay Flat','– Medidas disponibles: 2″x 1 1/2″; 3″x 2″; 4″ x3″','<tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes, Infraestructura</td></tr>')",
+  "content_hash": "c7694b0e9657faa4cf839dd689c6897e600b881a0e102b1bbd97b45768301f83",
+  "provenance": {
+    "source_url": "file://C:\\proyectos\\SURERAIN-CLONE\\data\\raw\\catalogo.source.html",
+    "source_page": "https://surerain.com/catalogo",
+    "source_selector": ".product-card:nth-of-type(400)",
+    "extracted_at": "2026-08-13T22:03:32.860Z",
+    "raw_fields": [
+      "data-category",
+      "data-marca",
+      "data-tipo",
+      "data-vertical",
+      "data-ficha",
+      "img[src]",
+      "h4",
+      "openProductModal(name,description,specsHtml)"
+    ]
+  }
+}

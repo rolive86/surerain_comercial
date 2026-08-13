@@ -1,0 +1,48 @@
+{
+  "source_index": 208,
+  "source_id": "img:valvula-solenoide-rpe-2da-serie",
+  "name": "Válvula Solenoide RPE 2da. Serie",
+  "slug": "valvula-solenoide-rpe-2da-serie",
+  "category_slug": "valvulas",
+  "brand_name": "RPE (Italia)",
+  "product_type_slug": null,
+  "markets": [
+    "av"
+  ],
+  "image_url": "https://surerain.com/assets/productos-importados/valvula-solenoide-rpe-2da-serie.webp",
+  "image_alt": "Válvula Solenoide RPE 2da. Serie",
+  "ficha_url": "https://surerain.com/assets/productos-fichas/108imgdesc1.webp",
+  "description": "CARACTERÍSTICAS: – Diámetros: 1″ rosca hembra, 1″ rosca macho – Presión de trabajo: 0.5 – 10 bar. – Temperatura máxima del fluido: 75° C – Posición de trabajo: Cualquiera – Materiales constitutivos: Cuerpo de poliamida de fibra de vidrio, membrana de NBR (Buna) y núcleo de acero inoxidable.",
+  "specs_html": "<tr><td>Marca</td><td>RPE (Italia)</td></tr><tr><td>Tipo de Producto</td><td>Áreas Verdes</td></tr>",
+  "specs_rows": [
+    {
+      "label": "Marca",
+      "value": "RPE (Italia)"
+    },
+    {
+      "label": "Tipo de Producto",
+      "value": "Áreas Verdes"
+    }
+  ],
+  "chip_label": "Válvulas",
+  "original_url": "https://surerain.com/catalogo?producto=valvula-solenoide-rpe-2da-serie",
+  "outer_html": "<div class=\"card product-card cursor-pointer\" data-category=\"valvulas\" data-ficha=\"assets/productos-fichas/108imgdesc1.webp\" data-marca=\"RPE (Italia)\" data-vertical=\"av\" onclick=\"openProductModal('Válvula Solenoide RPE 2da. Serie','CARACTERÍSTICAS: – Diámetros: 1″ rosca hembra, 1″ rosca macho – Presión de trabajo: 0.5 – 10 bar. – Temperatura máxima del fluido: 75° C – Posición de trabajo: Cualquiera – Materiales constitutivos: Cuerpo de poliamida de fibra de vidrio, membrana de NBR (Buna) y núcleo de acero inoxidable.','<tr><td>Marca</td><td>RPE (Italia)</td></tr><tr><td>Tipo de Producto</td><td>Áreas Verdes</td></tr>')\"><img width=\"195\" height=\"130\" alt=\"Válvula Solenoide RPE 2da. Serie\" class=\"w-full object-cover\" loading=\"lazy\" src=\"assets/productos-importados/valvula-solenoide-rpe-2da-serie.webp\" style=\"height:130px;\"><div class=\"p-3\"><span class=\"chip chip-av mb-1.5\">Válvulas</span><h4 class=\"font-semibold text-gray-900 text-xs mb-1\">Válvula Solenoide RPE 2da. Serie</h4><p class=\"text-xs text-gray-400 mb-2\">RPE (Italia)</p><div class=\"flex gap-1.5\"><span class=\"text-xs text-sr-green font-semibold cursor-pointer\">Ver ficha</span><span class=\"text-gray-300\">·</span><a class=\"text-xs text-gray-400 hover:text-sr-green\" href=\"contacto.html\">Dónde comprar</a></div></div></div>",
+  "onclick_raw": "openProductModal('Válvula Solenoide RPE 2da. Serie','CARACTERÍSTICAS: – Diámetros: 1″ rosca hembra, 1″ rosca macho – Presión de trabajo: 0.5 – 10 bar. – Temperatura máxima del fluido: 75° C – Posición de trabajo: Cualquiera – Materiales constitutivos: Cuerpo de poliamida de fibra de vidrio, membrana de NBR (Buna) y núcleo de acero inoxidable.','<tr><td>Marca</td><td>RPE (Italia)</td></tr><tr><td>Tipo de Producto</td><td>Áreas Verdes</td></tr>')",
+  "content_hash": "c9cdb276631912705d541829a154449fe8df5bd93a9b2d95e34585afe737ea20",
+  "provenance": {
+    "source_url": "file://C:\\proyectos\\SURERAIN-CLONE\\data\\raw\\catalogo.source.html",
+    "source_page": "https://surerain.com/catalogo",
+    "source_selector": ".product-card:nth-of-type(209)",
+    "extracted_at": "2026-08-13T22:03:32.860Z",
+    "raw_fields": [
+      "data-category",
+      "data-marca",
+      "data-tipo",
+      "data-vertical",
+      "data-ficha",
+      "img[src]",
+      "h4",
+      "openProductModal(name,description,specsHtml)"
+    ]
+  }
+}

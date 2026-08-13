@@ -1,0 +1,44 @@
+{
+  "source_index": 128,
+  "source_id": "img:plunger-roscado-p-componentes-hembra",
+  "name": "Tavlit 1082-4 – Conector rosca hembra – hembra",
+  "slug": "tavlit-1082-4-conector-rosca-hembra-hembra",
+  "category_slug": "microaspersion",
+  "brand_name": "Tavlit (Israel)",
+  "product_type_slug": null,
+  "markets": [
+    "agro"
+  ],
+  "image_url": "https://surerain.com/assets/productos-importados/plunger-roscado-p-componentes-hembra.webp",
+  "image_alt": "Tavlit 1082-4 – Conector rosca hembra – hembra",
+  "ficha_url": null,
+  "description": "Conector rosca hembra 1/2” para componentes hembra",
+  "specs_html": "<tr><td>Tipo de Producto</td><td>Agro</td></tr>",
+  "specs_rows": [
+    {
+      "label": "Tipo de Producto",
+      "value": "Agro"
+    }
+  ],
+  "chip_label": "Microaspersión",
+  "original_url": "https://surerain.com/catalogo?producto=tavlit-1082-4-conector-rosca-hembra-hembra",
+  "outer_html": "<div class=\"card product-card cursor-pointer\" data-category=\"microaspersion\" data-marca=\"Tavlit (Israel)\" data-vertical=\"agro\" onclick=\"openProductModal('Tavlit 1082-4 – Conector rosca hembra – hembra','Conector rosca hembra 1/2” para componentes hembra','<tr><td>Tipo de Producto</td><td>Agro</td></tr>')\"><img width=\"195\" height=\"130\" alt=\"Tavlit 1082-4 – Conector rosca hembra – hembra\" class=\"w-full object-cover\" loading=\"lazy\" src=\"assets/productos-importados/plunger-roscado-p-componentes-hembra.webp\" style=\"height:130px;\"><div class=\"p-3\"><span class=\"chip chip-agro mb-1.5\">Microaspersión</span><h4 class=\"font-semibold text-gray-900 text-xs mb-1\">Tavlit 1082-4 – Conector rosca hembra – hembra</h4><p class=\"text-xs text-gray-400 mb-2\">Conectores y Válvulas</p><div class=\"flex gap-1.5\"><span class=\"text-xs text-sr-green font-semibold cursor-pointer\">Ver ficha</span><span class=\"text-gray-300\">·</span><a class=\"text-xs text-gray-400 hover:text-sr-green\" href=\"contacto.html\">Dónde comprar</a></div></div></div>",
+  "onclick_raw": "openProductModal('Tavlit 1082-4 – Conector rosca hembra – hembra','Conector rosca hembra 1/2” para componentes hembra','<tr><td>Tipo de Producto</td><td>Agro</td></tr>')",
+  "content_hash": "3e552ef2cd75f989a76a067b726c7b67983dbbfb899f29eb91ff8a7f7fd9c0ea",
+  "provenance": {
+    "source_url": "file://C:\\proyectos\\SURERAIN-CLONE\\data\\raw\\catalogo.source.html",
+    "source_page": "https://surerain.com/catalogo",
+    "source_selector": ".product-card:nth-of-type(129)",
+    "extracted_at": "2026-08-13T22:03:32.860Z",
+    "raw_fields": [
+      "data-category",
+      "data-marca",
+      "data-tipo",
+      "data-vertical",
+      "data-ficha",
+      "img[src]",
+      "h4",
+      "openProductModal(name,description,specsHtml)"
+    ]
+  }
+}

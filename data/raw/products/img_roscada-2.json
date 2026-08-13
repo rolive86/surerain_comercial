@@ -1,0 +1,46 @@
+{
+  "source_index": 194,
+  "source_id": "img:roscada-2",
+  "name": "Válvula esférica roscada – Sin unión doble",
+  "slug": "valvula-esferica-roscada-sin-union-doble",
+  "category_slug": "valvulas",
+  "brand_name": "ERA",
+  "product_type_slug": null,
+  "markets": [
+    "agro",
+    "av",
+    "infra"
+  ],
+  "image_url": "https://surerain.com/assets/productos-importados/roscada-2.webp",
+  "image_alt": "Válvula esférica roscada – Sin unión doble",
+  "ficha_url": null,
+  "description": "CARACTERÍSTICAS: – Roscadas, rosca hembra (BSP). – Medidas disponibles: ½», ¾»,1″, 1 ¼», 1 ½», 2″. – Presión máxima de trabajo: 10 bares (PN10) – Material: PVC, O-Rings (EPDM)",
+  "specs_html": "<tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes, Infraestructura</td></tr>",
+  "specs_rows": [
+    {
+      "label": "Tipo de Producto",
+      "value": "Agro, Áreas Verdes, Infraestructura"
+    }
+  ],
+  "chip_label": "Válvulas",
+  "original_url": "https://surerain.com/catalogo?producto=valvula-esferica-roscada-sin-union-doble",
+  "outer_html": "<div class=\"card product-card cursor-pointer\" data-category=\"valvulas\" data-marca=\"ERA\" data-vertical=\"agro av infra\" onclick=\"openProductModal('Válvula esférica roscada – Sin unión doble','CARACTERÍSTICAS: – Roscadas, rosca hembra (BSP). – Medidas disponibles: ½», ¾»,1″, 1 ¼», 1 ½», 2″. – Presión máxima de trabajo: 10 bares (PN10) – Material: PVC, O-Rings (EPDM)','<tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes, Infraestructura</td></tr>')\"><img width=\"195\" height=\"130\" alt=\"Válvula esférica roscada – Sin unión doble\" class=\"w-full object-cover\" loading=\"lazy\" src=\"assets/productos-importados/roscada-2.webp\" style=\"height:130px;\"><div class=\"p-3\"><span class=\"chip chip-agro mb-1.5\">Válvulas</span><h4 class=\"font-semibold text-gray-900 text-xs mb-1\">Válvula esférica roscada – Sin unión doble</h4><p class=\"text-xs text-gray-400 mb-2\">Válvulas</p><div class=\"flex gap-1.5\"><span class=\"text-xs text-sr-green font-semibold cursor-pointer\">Ver ficha</span><span class=\"text-gray-300\">·</span><a class=\"text-xs text-gray-400 hover:text-sr-green\" href=\"contacto.html\">Dónde comprar</a></div></div></div>",
+  "onclick_raw": "openProductModal('Válvula esférica roscada – Sin unión doble','CARACTERÍSTICAS: – Roscadas, rosca hembra (BSP). – Medidas disponibles: ½», ¾»,1″, 1 ¼», 1 ½», 2″. – Presión máxima de trabajo: 10 bares (PN10) – Material: PVC, O-Rings (EPDM)','<tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes, Infraestructura</td></tr>')",
+  "content_hash": "d8695c47ed6eeebd09821d38e81b55ff321784b4f55f1b0e708f8eade87d509c",
+  "provenance": {
+    "source_url": "file://C:\\proyectos\\SURERAIN-CLONE\\data\\raw\\catalogo.source.html",
+    "source_page": "https://surerain.com/catalogo",
+    "source_selector": ".product-card:nth-of-type(195)",
+    "extracted_at": "2026-08-13T22:03:32.860Z",
+    "raw_fields": [
+      "data-category",
+      "data-marca",
+      "data-tipo",
+      "data-vertical",
+      "data-ficha",
+      "img[src]",
+      "h4",
+      "openProductModal(name,description,specsHtml)"
+    ]
+  }
+}

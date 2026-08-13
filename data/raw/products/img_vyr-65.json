@@ -1,0 +1,49 @@
+{
+  "source_index": 14,
+  "source_id": "img:vyr-65",
+  "name": "VYR-65",
+  "slug": "vyr-65",
+  "category_slug": "aspersores",
+  "brand_name": "Vyrsa (España)",
+  "product_type_slug": "impacto",
+  "markets": [
+    "agro",
+    "av"
+  ],
+  "image_url": "https://surerain.com/assets/productos-importados/vyr-65.webp",
+  "image_alt": "VYR-65",
+  "ficha_url": null,
+  "description": "CARACTERÍSTICAS: – Fabricado en latón. – Sectorizable. – Rosca 1″ macho – Arandela reguladora del sector de cobertura. – Dos toberas. – Tornillo difusor opcional.",
+  "specs_html": "<tr><td>Marca</td><td>Vyrsa (España)</td></tr><tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes</td></tr>",
+  "specs_rows": [
+    {
+      "label": "Marca",
+      "value": "Vyrsa (España)"
+    },
+    {
+      "label": "Tipo de Producto",
+      "value": "Agro, Áreas Verdes"
+    }
+  ],
+  "chip_label": "Aspersores",
+  "original_url": "https://surerain.com/catalogo?producto=vyr-65",
+  "outer_html": "<div class=\"card product-card cursor-pointer\" data-category=\"aspersores\" data-marca=\"Vyrsa (España)\" data-tipo=\"impacto\" data-vertical=\"agro av\" onclick=\"openProductModal('VYR-65','CARACTERÍSTICAS: – Fabricado en latón. – Sectorizable. – Rosca 1″ macho – Arandela reguladora del sector de cobertura. – Dos toberas. – Tornillo difusor opcional.','<tr><td>Marca</td><td>Vyrsa (España)</td></tr><tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes</td></tr>')\"><img width=\"195\" height=\"130\" alt=\"VYR-65\" class=\"w-full object-cover\" loading=\"lazy\" src=\"assets/productos-importados/vyr-65.webp\" style=\"height:130px;\"><div class=\"p-3\"><span class=\"chip chip-agro mb-1.5\">Aspersores</span><h4 class=\"font-semibold text-gray-900 text-xs mb-1\">VYR-65</h4><p class=\"text-xs text-gray-400 mb-2\">Vyrsa (España)</p><div class=\"flex gap-1.5\"><span class=\"text-xs text-sr-green font-semibold cursor-pointer\">Ver ficha</span><span class=\"text-gray-300\">·</span><a class=\"text-xs text-gray-400 hover:text-sr-green\" href=\"contacto.html\">Dónde comprar</a></div></div></div>",
+  "onclick_raw": "openProductModal('VYR-65','CARACTERÍSTICAS: – Fabricado en latón. – Sectorizable. – Rosca 1″ macho – Arandela reguladora del sector de cobertura. – Dos toberas. – Tornillo difusor opcional.','<tr><td>Marca</td><td>Vyrsa (España)</td></tr><tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes</td></tr>')",
+  "content_hash": "48d72fa55b9d73766cf7381e37260f8c1454c37afa0545a4ff9983ab18ea0471",
+  "provenance": {
+    "source_url": "file://C:\\proyectos\\SURERAIN-CLONE\\data\\raw\\catalogo.source.html",
+    "source_page": "https://surerain.com/catalogo",
+    "source_selector": ".product-card:nth-of-type(15)",
+    "extracted_at": "2026-08-13T22:03:32.860Z",
+    "raw_fields": [
+      "data-category",
+      "data-marca",
+      "data-tipo",
+      "data-vertical",
+      "data-ficha",
+      "img[src]",
+      "h4",
+      "openProductModal(name,description,specsHtml)"
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "source_index": 75,
+  "source_id": "img:microtubo-de-pvc-semiflexible",
+  "name": "Microtubo de PVC (semiflexible)",
+  "slug": "microtubo-de-pvc-semiflexible",
+  "category_slug": "goteo",
+  "brand_name": "GreenPlains",
+  "product_type_slug": null,
+  "markets": [
+    "agro",
+    "av"
+  ],
+  "image_url": "https://surerain.com/assets/productos-importados/microtubo-de-pvc-semiflexible.webp",
+  "image_alt": "Microtubo de PVC (semiflexible)",
+  "ficha_url": null,
+  "description": "Medidas disponibles: 3 mm x 5,5 mm (Ø int. 3 mm x Ø ext. 5,5 mm) 4 mm x 6 mm (Ø int. 4 mm x Ø ext. 6 mm) Características – Utlizado en microaspersión – Semiflexible – Presión máxima: 5 bar",
+  "specs_html": "<tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes</td></tr>",
+  "specs_rows": [
+    {
+      "label": "Tipo de Producto",
+      "value": "Agro, Áreas Verdes"
+    }
+  ],
+  "chip_label": "Goteo",
+  "original_url": "https://surerain.com/catalogo?producto=microtubo-de-pvc-semiflexible",
+  "outer_html": "<div class=\"card product-card cursor-pointer\" data-category=\"goteo\" data-marca=\"GreenPlains\" data-vertical=\"agro av\" onclick=\"openProductModal('Microtubo de PVC (semiflexible)','Medidas disponibles: 3 mm x 5,5 mm (Ø int. 3 mm x&nbsp;Ø ext. 5,5 mm) 4 mm x 6 mm (Ø int. 4 mm x&nbsp;Ø ext. 6 mm) Características – Utlizado en microaspersión – Semiflexible – Presión máxima: 5 bar','<tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes</td></tr>')\"><img width=\"195\" height=\"130\" alt=\"Microtubo de PVC (semiflexible)\" class=\"w-full object-cover\" loading=\"lazy\" src=\"assets/productos-importados/microtubo-de-pvc-semiflexible.webp\" style=\"height:130px;\"><div class=\"p-3\"><span class=\"chip chip-agro mb-1.5\">Goteo</span><h4 class=\"font-semibold text-gray-900 text-xs mb-1\">Microtubo de PVC (semiflexible)</h4><p class=\"text-xs text-gray-400 mb-2\">Goteo</p><div class=\"flex gap-1.5\"><span class=\"text-xs text-sr-green font-semibold cursor-pointer\">Ver ficha</span><span class=\"text-gray-300\">·</span><a class=\"text-xs text-gray-400 hover:text-sr-green\" href=\"contacto.html\">Dónde comprar</a></div></div></div>",
+  "onclick_raw": "openProductModal('Microtubo de PVC (semiflexible)','Medidas disponibles: 3 mm x 5,5 mm (Ø int. 3 mm x Ø ext. 5,5 mm) 4 mm x 6 mm (Ø int. 4 mm x Ø ext. 6 mm) Características – Utlizado en microaspersión – Semiflexible – Presión máxima: 5 bar','<tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes</td></tr>')",
+  "content_hash": "5f9e76ede1fa3ee055cae9986f5c13c0bf2e2274180a12445f214192e6d1193c",
+  "provenance": {
+    "source_url": "file://C:\\proyectos\\SURERAIN-CLONE\\data\\raw\\catalogo.source.html",
+    "source_page": "https://surerain.com/catalogo",
+    "source_selector": ".product-card:nth-of-type(76)",
+    "extracted_at": "2026-08-13T22:03:32.860Z",
+    "raw_fields": [
+      "data-category",
+      "data-marca",
+      "data-tipo",
+      "data-vertical",
+      "data-ficha",
+      "img[src]",
+      "h4",
+      "openProductModal(name,description,specsHtml)"
+    ]
+  }
+}

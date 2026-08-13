@@ -1,0 +1,45 @@
+{
+  "source_index": 125,
+  "source_id": "img:estaca-plastica-para-microaspesores",
+  "name": "Estaca plástica para microaspesores",
+  "slug": "estaca-plastica-para-microaspesores",
+  "category_slug": "microaspersion",
+  "brand_name": "Plásticos Coorp",
+  "product_type_slug": null,
+  "markets": [
+    "agro",
+    "av"
+  ],
+  "image_url": "https://surerain.com/assets/productos-importados/estaca-plastica-para-microaspesores.webp",
+  "image_alt": "Estaca plástica para microaspesores",
+  "ficha_url": null,
+  "description": "Descripción técnica: – MIRSESTACA/60CM – Estaca plástica para microaspersores de 60 cm",
+  "specs_html": "<tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes</td></tr>",
+  "specs_rows": [
+    {
+      "label": "Tipo de Producto",
+      "value": "Agro, Áreas Verdes"
+    }
+  ],
+  "chip_label": "Microaspersión",
+  "original_url": "https://surerain.com/catalogo?producto=estaca-plastica-para-microaspesores",
+  "outer_html": "<div class=\"card product-card cursor-pointer\" data-category=\"microaspersion\" data-marca=\"Plásticos Coorp\" data-vertical=\"agro av\" onclick=\"openProductModal('Estaca plástica para microaspesores','Descripción técnica: – MIRSESTACA/60CM – Estaca plástica para microaspersores de 60 cm','<tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes</td></tr>')\"><img width=\"195\" height=\"130\" alt=\"Estaca plástica para microaspesores\" class=\"w-full object-cover\" loading=\"lazy\" src=\"assets/productos-importados/estaca-plastica-para-microaspesores.webp\" style=\"height:130px;\"><div class=\"p-3\"><span class=\"chip chip-agro mb-1.5\">Microaspersión</span><h4 class=\"font-semibold text-gray-900 text-xs mb-1\">Estaca plástica para microaspesores</h4><p class=\"text-xs text-gray-400 mb-2\">Accesorios para Microaspersores</p><div class=\"flex gap-1.5\"><span class=\"text-xs text-sr-green font-semibold cursor-pointer\">Ver ficha</span><span class=\"text-gray-300\">·</span><a class=\"text-xs text-gray-400 hover:text-sr-green\" href=\"contacto.html\">Dónde comprar</a></div></div></div>",
+  "onclick_raw": "openProductModal('Estaca plástica para microaspesores','Descripción técnica: – MIRSESTACA/60CM – Estaca plástica para microaspersores de 60 cm','<tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes</td></tr>')",
+  "content_hash": "7c8e93261c223a4047b98f79ceca9cdf8ea0380c0442da1464c7e715e66d4ba3",
+  "provenance": {
+    "source_url": "file://C:\\proyectos\\SURERAIN-CLONE\\data\\raw\\catalogo.source.html",
+    "source_page": "https://surerain.com/catalogo",
+    "source_selector": ".product-card:nth-of-type(126)",
+    "extracted_at": "2026-08-13T22:03:32.860Z",
+    "raw_fields": [
+      "data-category",
+      "data-marca",
+      "data-tipo",
+      "data-vertical",
+      "data-ficha",
+      "img[src]",
+      "h4",
+      "openProductModal(name,description,specsHtml)"
+    ]
+  }
+}

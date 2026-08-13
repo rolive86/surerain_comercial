@@ -1,0 +1,45 @@
+{
+  "source_index": 254,
+  "source_id": "img:codo",
+  "name": "Codo",
+  "slug": "codo",
+  "category_slug": "valvulas",
+  "brand_name": "GreenPlains",
+  "product_type_slug": null,
+  "markets": [
+    "agro",
+    "infra"
+  ],
+  "image_url": "https://surerain.com/assets/productos-importados/codo.webp",
+  "image_alt": "Codo",
+  "ficha_url": "https://surerain.com/assets/productos-fichas/Codo-90.webp",
+  "description": "Codo Medidas disponibles: 6 mm x 1/8″ 6 mm x 1/4″ 8 mm x 1/8″ 8 mm x 1/4″",
+  "specs_html": "<tr><td>Tipo de Producto</td><td>Agro, Infraestructura</td></tr>",
+  "specs_rows": [
+    {
+      "label": "Tipo de Producto",
+      "value": "Agro, Infraestructura"
+    }
+  ],
+  "chip_label": "Válvulas",
+  "original_url": "https://surerain.com/catalogo?producto=codo",
+  "outer_html": "<div class=\"card product-card cursor-pointer\" data-ficha=\"assets/productos-fichas/Codo-90.webp\" data-category=\"valvulas\" data-marca=\"GreenPlains\" data-vertical=\"agro infra\" onclick=\"openProductModal('Codo','Codo Medidas disponibles: 6 mm x 1/8″ 6 mm x 1/4″ 8 mm x 1/8″ 8 mm x 1/4″','<tr><td>Tipo de Producto</td><td>Agro, Infraestructura</td></tr>')\"><img width=\"195\" height=\"130\" alt=\"Codo\" class=\"w-full object-cover\" loading=\"lazy\" src=\"assets/productos-importados/codo.webp\" style=\"height:130px;\"><div class=\"p-3\"><span class=\"chip chip-agro mb-1.5\">Válvulas</span><h4 class=\"font-semibold text-gray-900 text-xs mb-1\">Codo</h4><p class=\"text-xs text-gray-400 mb-2\">Accesorios y Repuestos</p><div class=\"flex gap-1.5\"><span class=\"text-xs text-sr-green font-semibold cursor-pointer\">Ver ficha</span><span class=\"text-gray-300\">·</span><a class=\"text-xs text-gray-400 hover:text-sr-green\" href=\"contacto.html\">Dónde comprar</a></div></div></div>",
+  "onclick_raw": "openProductModal('Codo','Codo Medidas disponibles: 6 mm x 1/8″ 6 mm x 1/4″ 8 mm x 1/8″ 8 mm x 1/4″','<tr><td>Tipo de Producto</td><td>Agro, Infraestructura</td></tr>')",
+  "content_hash": "80ab6bcbec4a20f872777a3a5eb89002016634efcac701086a6676172ad01fb7",
+  "provenance": {
+    "source_url": "file://C:\\proyectos\\SURERAIN-CLONE\\data\\raw\\catalogo.source.html",
+    "source_page": "https://surerain.com/catalogo",
+    "source_selector": ".product-card:nth-of-type(255)",
+    "extracted_at": "2026-08-13T22:03:32.860Z",
+    "raw_fields": [
+      "data-category",
+      "data-marca",
+      "data-tipo",
+      "data-vertical",
+      "data-ficha",
+      "img[src]",
+      "h4",
+      "openProductModal(name,description,specsHtml)"
+    ]
+  }
+}

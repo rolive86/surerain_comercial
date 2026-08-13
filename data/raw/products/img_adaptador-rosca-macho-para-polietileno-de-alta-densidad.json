@@ -1,0 +1,50 @@
+{
+  "source_index": 403,
+  "source_id": "img:adaptador-rosca-macho-para-polietileno-de-alta-densidad",
+  "name": "Adaptador rosca macho para PEAD",
+  "slug": "adaptador-rosca-macho-para-pead",
+  "category_slug": "conectores",
+  "brand_name": "Origen China",
+  "product_type_slug": null,
+  "markets": [
+    "agro",
+    "av",
+    "infra"
+  ],
+  "image_url": "https://surerain.com/assets/productos-importados/adaptador-rosca-macho-para-polietileno-de-alta-densidad.webp",
+  "image_alt": "Adaptador rosca macho para PEAD",
+  "ficha_url": "https://surerain.com/assets/productos-fichas/Adap-RM.webp",
+  "description": "CARACTERÍSTICAS GENERALES: – Confeccionados en Polipropileno. – Presión máxima de trabajo a 20°c.; 10 Bar (PN 10)",
+  "specs_html": "<tr><td>Marca</td><td>Origen China</td></tr><tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes, Infraestructura</td></tr>",
+  "specs_rows": [
+    {
+      "label": "Marca",
+      "value": "Origen China"
+    },
+    {
+      "label": "Tipo de Producto",
+      "value": "Agro, Áreas Verdes, Infraestructura"
+    }
+  ],
+  "chip_label": "Conectores",
+  "original_url": "https://surerain.com/catalogo?producto=adaptador-rosca-macho-para-pead",
+  "outer_html": "<div class=\"card product-card cursor-pointer\" data-category=\"conectores\" data-ficha=\"assets/productos-fichas/Adap-RM.webp\" data-marca=\"Origen China\" data-vertical=\"agro av infra\" onclick=\"openProductModal('Adaptador rosca macho para PEAD','CARACTERÍSTICAS GENERALES: – Confeccionados en Polipropileno. – Presión máxima de trabajo a 20°c.; 10 Bar (PN 10)','<tr><td>Marca</td><td>Origen China</td></tr><tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes, Infraestructura</td></tr>')\"><img width=\"195\" height=\"130\" alt=\"Adaptador rosca macho para PEAD\" class=\"w-full object-cover\" loading=\"lazy\" src=\"assets/productos-importados/adaptador-rosca-macho-para-polietileno-de-alta-densidad.webp\" style=\"height:130px;\"><div class=\"p-3\"><span class=\"chip chip-agro mb-1.5\">Conectores</span><h4 class=\"font-semibold text-gray-900 text-xs mb-1\">Adaptador rosca macho para PEAD</h4><p class=\"text-xs text-gray-400 mb-2\">Origen China</p><div class=\"flex gap-1.5\"><span class=\"text-xs text-sr-green font-semibold cursor-pointer\">Ver ficha</span><span class=\"text-gray-300\">·</span><a class=\"text-xs text-gray-400 hover:text-sr-green\" href=\"contacto.html\">Dónde comprar</a></div></div></div>",
+  "onclick_raw": "openProductModal('Adaptador rosca macho para PEAD','CARACTERÍSTICAS GENERALES: – Confeccionados en Polipropileno. – Presión máxima de trabajo a 20°c.; 10 Bar (PN 10)','<tr><td>Marca</td><td>Origen China</td></tr><tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes, Infraestructura</td></tr>')",
+  "content_hash": "bdde3e85fbdad60af99da05ba249837b0e88e7e555f7290e678fcef164a5981c",
+  "provenance": {
+    "source_url": "file://C:\\proyectos\\SURERAIN-CLONE\\data\\raw\\catalogo.source.html",
+    "source_page": "https://surerain.com/catalogo",
+    "source_selector": ".product-card:nth-of-type(404)",
+    "extracted_at": "2026-08-13T22:03:32.860Z",
+    "raw_fields": [
+      "data-category",
+      "data-marca",
+      "data-tipo",
+      "data-vertical",
+      "data-ficha",
+      "img[src]",
+      "h4",
+      "openProductModal(name,description,specsHtml)"
+    ]
+  }
+}

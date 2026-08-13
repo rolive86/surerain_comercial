@@ -1,0 +1,46 @@
+{
+  "source_index": 218,
+  "source_id": "img:valvulas-de-retencion-verticales-roscadas",
+  "name": "Válvulas de retención verticales metálicas",
+  "slug": "valvulas-de-retencion-verticales-metalicas",
+  "category_slug": "valvulas",
+  "brand_name": "Taizhou",
+  "product_type_slug": null,
+  "markets": [
+    "agro",
+    "av",
+    "infra"
+  ],
+  "image_url": "https://surerain.com/assets/productos-importados/valvulas-de-retencion-verticales-roscadas.webp",
+  "image_alt": "Válvulas de retención verticales metálicas",
+  "ficha_url": "https://surerain.com/assets/productos-fichas/795imgdesc1.webp",
+  "description": "CARACTERÍSTICAS: – VÁLVULA VERTICAL CON PASO TOTAL – CUERPO Y VÁSTAGO DE LATÓN – EXTREMOS ROSCA BSP H-H – JUNTA DE NBR – PRESIÓN NOMINAL: 16 BAR – TEMPERATURA:-20 a 150°C",
+  "specs_html": "<tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes, Infraestructura</td></tr>",
+  "specs_rows": [
+    {
+      "label": "Tipo de Producto",
+      "value": "Agro, Áreas Verdes, Infraestructura"
+    }
+  ],
+  "chip_label": "Válvulas",
+  "original_url": "https://surerain.com/catalogo?producto=valvulas-de-retencion-verticales-metalicas",
+  "outer_html": "<div class=\"card product-card cursor-pointer\" data-category=\"valvulas\" data-ficha=\"assets/productos-fichas/795imgdesc1.webp\" data-marca=\"Taizhou\" data-vertical=\"agro av infra\" onclick=\"openProductModal('Válvulas de retención verticales metálicas','CARACTERÍSTICAS: – VÁLVULA VERTICAL CON PASO TOTAL – CUERPO Y VÁSTAGO DE LATÓN – EXTREMOS ROSCA BSP H-H – JUNTA DE NBR – PRESIÓN NOMINAL: 16 BAR – TEMPERATURA:-20 a 150°C','<tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes, Infraestructura</td></tr>')\"><img width=\"195\" height=\"130\" alt=\"Válvulas de retención verticales metálicas\" class=\"w-full object-cover\" loading=\"lazy\" src=\"assets/productos-importados/valvulas-de-retencion-verticales-roscadas.webp\" style=\"height:130px;\"><div class=\"p-3\"><span class=\"chip chip-agro mb-1.5\">Válvulas</span><h4 class=\"font-semibold text-gray-900 text-xs mb-1\">Válvulas de retención verticales metálicas</h4><p class=\"text-xs text-gray-400 mb-2\">Válvulas</p><div class=\"flex gap-1.5\"><span class=\"text-xs text-sr-green font-semibold cursor-pointer\">Ver ficha</span><span class=\"text-gray-300\">·</span><a class=\"text-xs text-gray-400 hover:text-sr-green\" href=\"contacto.html\">Dónde comprar</a></div></div></div>",
+  "onclick_raw": "openProductModal('Válvulas de retención verticales metálicas','CARACTERÍSTICAS: – VÁLVULA VERTICAL CON PASO TOTAL – CUERPO Y VÁSTAGO DE LATÓN – EXTREMOS ROSCA BSP H-H – JUNTA DE NBR – PRESIÓN NOMINAL: 16 BAR – TEMPERATURA:-20 a 150°C','<tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes, Infraestructura</td></tr>')",
+  "content_hash": "3dc330591c368ba20272f35330b5f100cc11c28fc833cc9a8f9d51a6fbea4f7c",
+  "provenance": {
+    "source_url": "file://C:\\proyectos\\SURERAIN-CLONE\\data\\raw\\catalogo.source.html",
+    "source_page": "https://surerain.com/catalogo",
+    "source_selector": ".product-card:nth-of-type(219)",
+    "extracted_at": "2026-08-13T22:03:32.860Z",
+    "raw_fields": [
+      "data-category",
+      "data-marca",
+      "data-tipo",
+      "data-vertical",
+      "data-ficha",
+      "img[src]",
+      "h4",
+      "openProductModal(name,description,specsHtml)"
+    ]
+  }
+}

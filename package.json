@@ -1,0 +1,37 @@
+{
+  "name": "surerain-catalog-archive",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Archivo local estructurado del catálogo público de Sure Rain (surerain.com/catalogo)",
+  "type": "module",
+  "scripts": {
+    "discover": "tsx scripts/discover.ts",
+    "crawl": "tsx scripts/crawl.ts",
+    "extract": "tsx scripts/extract.ts",
+    "normalize": "tsx scripts/normalize.ts",
+    "download-media": "tsx scripts/download-media.ts",
+    "validate": "tsx scripts/validate.ts",
+    "export:supabase": "tsx scripts/export-supabase.ts",
+    "import:supabase": "tsx scripts/import-supabase.ts",
+    "validate:supabase": "tsx scripts/validate-supabase.ts",
+    "smoke": "tsx scripts/smoke.ts",
+    "all": "tsx scripts/all.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.112.3",
+    "cheerio": "^1.0.0",
+    "csv-stringify": "^6.5.2",
+    "dotenv": "^17.4.2",
+    "p-limit": "^6.2.0",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.1",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2"
+  }
+}

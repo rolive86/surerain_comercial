@@ -1,0 +1,48 @@
+{
+  "source_index": 156,
+  "source_id": "img:filtro-tipo-t-plastico-anilla-plastica",
+  "name": "Filtro tipo T plástico, anilla plástica",
+  "slug": "filtro-tipo-t-plastico-anilla-plastica",
+  "category_slug": "filtros",
+  "brand_name": "Origen China",
+  "product_type_slug": null,
+  "markets": [
+    "agro"
+  ],
+  "image_url": "https://surerain.com/assets/productos-importados/filtro-tipo-t-plastico-anilla-plastica.webp",
+  "image_alt": "Filtro tipo T plástico, anilla plástica",
+  "ficha_url": "https://surerain.com/assets/productos-fichas/785imgdesc1.webp",
+  "description": "CARACTERÍSTICAS: – Disponibles en 3″ rosca macho, con tapón de purga y toma para manómetro. – Cuerpo de nylon reforzado con fibra de vidrio. – Elemento filtrante, anillas de 130 micrones. – Cierre metálico. – Caudal máximo de filtrado: 45 m3/h, con pérdida de carga de 0,3 bar. – Presión máxima: 10 bar.",
+  "specs_html": "<tr><td>Marca</td><td>Origen China</td></tr><tr><td>Tipo de Producto</td><td>Agro</td></tr>",
+  "specs_rows": [
+    {
+      "label": "Marca",
+      "value": "Origen China"
+    },
+    {
+      "label": "Tipo de Producto",
+      "value": "Agro"
+    }
+  ],
+  "chip_label": "Filtros",
+  "original_url": "https://surerain.com/catalogo?producto=filtro-tipo-t-plastico-anilla-plastica",
+  "outer_html": "<div class=\"card product-card cursor-pointer\" data-category=\"filtros\" data-ficha=\"assets/productos-fichas/785imgdesc1.webp\" data-marca=\"Origen China\" data-vertical=\"agro\" onclick=\"openProductModal('Filtro tipo T plástico, anilla plástica','CARACTERÍSTICAS: – Disponibles en 3″ rosca macho, con tapón de purga y toma para manómetro. – Cuerpo de nylon reforzado con fibra de vidrio. – Elemento filtrante, anillas de 130 micrones. – Cierre metálico. – Caudal máximo de filtrado: 45 m3/h, con pérdida de carga de 0,3 bar. – Presión máxima: 10 bar.','<tr><td>Marca</td><td>Origen China</td></tr><tr><td>Tipo de Producto</td><td>Agro</td></tr>')\"><img width=\"195\" height=\"130\" alt=\"Filtro tipo T plástico, anilla plástica\" class=\"w-full object-cover\" loading=\"lazy\" src=\"assets/productos-importados/filtro-tipo-t-plastico-anilla-plastica.webp\" style=\"height:130px;\"><div class=\"p-3\"><span class=\"chip chip-agro mb-1.5\">Filtros</span><h4 class=\"font-semibold text-gray-900 text-xs mb-1\">Filtro tipo T plástico, anilla plástica</h4><p class=\"text-xs text-gray-400 mb-2\">Origen China</p><div class=\"flex gap-1.5\"><span class=\"text-xs text-sr-green font-semibold cursor-pointer\">Ver ficha</span><span class=\"text-gray-300\">·</span><a class=\"text-xs text-gray-400 hover:text-sr-green\" href=\"contacto.html\">Dónde comprar</a></div></div></div>",
+  "onclick_raw": "openProductModal('Filtro tipo T plástico, anilla plástica','CARACTERÍSTICAS: – Disponibles en 3″ rosca macho, con tapón de purga y toma para manómetro. – Cuerpo de nylon reforzado con fibra de vidrio. – Elemento filtrante, anillas de 130 micrones. – Cierre metálico. – Caudal máximo de filtrado: 45 m3/h, con pérdida de carga de 0,3 bar. – Presión máxima: 10 bar.','<tr><td>Marca</td><td>Origen China</td></tr><tr><td>Tipo de Producto</td><td>Agro</td></tr>')",
+  "content_hash": "d2fae53c58e45ae8610d950f0c23c5d9dcf6bed2fce6c6ac45e86ad4654926df",
+  "provenance": {
+    "source_url": "file://C:\\proyectos\\SURERAIN-CLONE\\data\\raw\\catalogo.source.html",
+    "source_page": "https://surerain.com/catalogo",
+    "source_selector": ".product-card:nth-of-type(157)",
+    "extracted_at": "2026-08-13T22:03:32.860Z",
+    "raw_fields": [
+      "data-category",
+      "data-marca",
+      "data-tipo",
+      "data-vertical",
+      "data-ficha",
+      "img[src]",
+      "h4",
+      "openProductModal(name,description,specsHtml)"
+    ]
+  }
+}

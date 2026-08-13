@@ -1,0 +1,48 @@
+{
+  "source_index": 351,
+  "source_id": "img:inyectores-de-fertilizantes-venturi-alfa",
+  "name": "Inyectores de Fertilizantes Venturi Alfa",
+  "slug": "inyectores-de-fertilizantes-venturi-alfa",
+  "category_slug": "conectores",
+  "brand_name": "Plástica Alfa (Italia)",
+  "product_type_slug": null,
+  "markets": [
+    "agro"
+  ],
+  "image_url": "https://surerain.com/assets/productos-importados/inyectores-de-fertilizantes-venturi-alfa.webp",
+  "image_alt": "Inyectores de Fertilizantes Venturi Alfa",
+  "ficha_url": "https://surerain.com/assets/productos-fichas/152imgdesc1.webp",
+  "description": "CARACTERÍSTICAS: – Confeccionado en material de alta calidad, resistente a la mayoría de los químicos utilizados como fertilizante. – Libre de mantenimiento. – No requiere energía eléctrica, funciona por un diferencial de presión entre la entrada y la salida del Venturi.",
+  "specs_html": "<tr><td>Marca</td><td>Plástica Alfa (Italia)</td></tr><tr><td>Tipo de Producto</td><td>Agro</td></tr>",
+  "specs_rows": [
+    {
+      "label": "Marca",
+      "value": "Plástica Alfa (Italia)"
+    },
+    {
+      "label": "Tipo de Producto",
+      "value": "Agro"
+    }
+  ],
+  "chip_label": "Conectores",
+  "original_url": "https://surerain.com/catalogo?producto=inyectores-de-fertilizantes-venturi-alfa",
+  "outer_html": "<div class=\"card product-card cursor-pointer\" data-category=\"conectores\" data-ficha=\"assets/productos-fichas/152imgdesc1.webp\" data-marca=\"Plástica Alfa (Italia)\" data-vertical=\"agro\" onclick=\"openProductModal('Inyectores de Fertilizantes Venturi Alfa','CARACTERÍSTICAS: – Confeccionado en material de alta calidad, resistente a la mayoría de los químicos utilizados como fertilizante. – Libre de mantenimiento. – No requiere energía eléctrica, funciona por un diferencial de presión entre la entrada y la salida del Venturi.','<tr><td>Marca</td><td>Plástica Alfa (Italia)</td></tr><tr><td>Tipo de Producto</td><td>Agro</td></tr>')\"><img width=\"195\" height=\"130\" alt=\"Inyectores de Fertilizantes Venturi Alfa\" class=\"w-full object-cover\" loading=\"lazy\" src=\"assets/productos-importados/inyectores-de-fertilizantes-venturi-alfa.webp\" style=\"height:130px;\"><div class=\"p-3\"><span class=\"chip chip-agro mb-1.5\">Conectores</span><h4 class=\"font-semibold text-gray-900 text-xs mb-1\">Inyectores de Fertilizantes Venturi Alfa</h4><p class=\"text-xs text-gray-400 mb-2\">Plástica Alfa (Italia)</p><div class=\"flex gap-1.5\"><span class=\"text-xs text-sr-green font-semibold cursor-pointer\">Ver ficha</span><span class=\"text-gray-300\">·</span><a class=\"text-xs text-gray-400 hover:text-sr-green\" href=\"contacto.html\">Dónde comprar</a></div></div></div>",
+  "onclick_raw": "openProductModal('Inyectores de Fertilizantes Venturi Alfa','CARACTERÍSTICAS: – Confeccionado en material de alta calidad, resistente a la mayoría de los químicos utilizados como fertilizante. – Libre de mantenimiento. – No requiere energía eléctrica, funciona por un diferencial de presión entre la entrada y la salida del Venturi.','<tr><td>Marca</td><td>Plástica Alfa (Italia)</td></tr><tr><td>Tipo de Producto</td><td>Agro</td></tr>')",
+  "content_hash": "57ff44e022c3c2ac3fddf932f79458c5af81f9131018f08980a70d0f24809d99",
+  "provenance": {
+    "source_url": "file://C:\\proyectos\\SURERAIN-CLONE\\data\\raw\\catalogo.source.html",
+    "source_page": "https://surerain.com/catalogo",
+    "source_selector": ".product-card:nth-of-type(352)",
+    "extracted_at": "2026-08-13T22:03:32.860Z",
+    "raw_fields": [
+      "data-category",
+      "data-marca",
+      "data-tipo",
+      "data-vertical",
+      "data-ficha",
+      "img[src]",
+      "h4",
+      "openProductModal(name,description,specsHtml)"
+    ]
+  }
+}

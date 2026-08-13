@@ -1,0 +1,48 @@
+{
+  "source_index": 106,
+  "source_id": "img:tuberia-de-riego-por-goteo-novodrip-vimi",
+  "name": "Tubería de Riego por goteo Novodrip Vimi",
+  "slug": "tuberia-de-riego-por-goteo-novodrip-vimi",
+  "category_slug": "goteo",
+  "brand_name": "GreenPlains",
+  "product_type_slug": null,
+  "markets": [
+    "agro"
+  ],
+  "image_url": "https://surerain.com/assets/productos-importados/tuberia-de-riego-por-goteo-novodrip-vimi.webp",
+  "image_alt": "Tubería de Riego por goteo Novodrip Vimi",
+  "ficha_url": "https://surerain.com/assets/productos-fichas/vimi.webp",
+  "description": "La cinta de goteo VIMI incorpora un innovador gotero plano ultracompacto, diseñado para generar pérdidas prácticamente nulas.",
+  "specs_html": "<tr><td>Marca</td><td>GreenPlains</td></tr><tr><td>Tipo de Producto</td><td>Agro</td></tr>",
+  "specs_rows": [
+    {
+      "label": "Marca",
+      "value": "GreenPlains"
+    },
+    {
+      "label": "Tipo de Producto",
+      "value": "Agro"
+    }
+  ],
+  "chip_label": "Goteo",
+  "original_url": "https://surerain.com/catalogo?producto=tuberia-de-riego-por-goteo-novodrip-vimi",
+  "outer_html": "<div class=\"card product-card cursor-pointer\" data-category=\"goteo\" data-ficha=\"assets/productos-fichas/vimi.webp\" data-marca=\"GreenPlains\" data-vertical=\"agro\" onclick=\"openProductModal('Tubería de Riego por goteo Novodrip Vimi','La cinta de goteo VIMI incorpora un innovador gotero plano ultracompacto, diseñado para generar pérdidas prácticamente nulas.','<tr><td>Marca</td><td>GreenPlains</td></tr><tr><td>Tipo de Producto</td><td>Agro</td></tr>')\"><img width=\"195\" height=\"130\" alt=\"Tubería de Riego por goteo Novodrip Vimi\" class=\"w-full object-cover\" loading=\"lazy\" src=\"assets/productos-importados/tuberia-de-riego-por-goteo-novodrip-vimi.webp\" style=\"height:130px;\"><div class=\"p-3\"><span class=\"chip chip-agro mb-1.5\">Goteo</span><h4 class=\"font-semibold text-gray-900 text-xs mb-1\">Tubería de Riego por goteo Novodrip Vimi</h4><p class=\"text-xs text-gray-400 mb-2\">GreenPlains</p><div class=\"flex gap-1.5\"><span class=\"text-xs text-sr-green font-semibold cursor-pointer\">Ver ficha</span><span class=\"text-gray-300\">·</span><a class=\"text-xs text-gray-400 hover:text-sr-green\" href=\"contacto.html\">Dónde comprar</a></div></div></div>",
+  "onclick_raw": "openProductModal('Tubería de Riego por goteo Novodrip Vimi','La cinta de goteo VIMI incorpora un innovador gotero plano ultracompacto, diseñado para generar pérdidas prácticamente nulas.','<tr><td>Marca</td><td>GreenPlains</td></tr><tr><td>Tipo de Producto</td><td>Agro</td></tr>')",
+  "content_hash": "25296abfe504b5f4fa9de3282f7ccd6212b62fe60990f0578ca9e1827010577e",
+  "provenance": {
+    "source_url": "file://C:\\proyectos\\SURERAIN-CLONE\\data\\raw\\catalogo.source.html",
+    "source_page": "https://surerain.com/catalogo",
+    "source_selector": ".product-card:nth-of-type(107)",
+    "extracted_at": "2026-08-13T22:03:32.860Z",
+    "raw_fields": [
+      "data-category",
+      "data-marca",
+      "data-tipo",
+      "data-vertical",
+      "data-ficha",
+      "img[src]",
+      "h4",
+      "openProductModal(name,description,specsHtml)"
+    ]
+  }
+}

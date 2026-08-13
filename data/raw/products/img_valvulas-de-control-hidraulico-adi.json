@@ -1,0 +1,49 @@
+{
+  "source_index": 271,
+  "source_id": "img:valvulas-de-control-hidraulico-adi",
+  "name": "Válvulas de control hidráulico ADI",
+  "slug": "valvulas-de-control-hidraulico-adi",
+  "category_slug": "valvulas",
+  "brand_name": "GreenPlains",
+  "product_type_slug": null,
+  "markets": [
+    "agro",
+    "infra"
+  ],
+  "image_url": "https://surerain.com/assets/productos-importados/valvulas-de-control-hidraulico-adi.webp",
+  "image_alt": "Válvulas de control hidráulico ADI",
+  "ficha_url": "https://surerain.com/assets/productos-fichas/ADI_tec.webp",
+  "description": "",
+  "specs_html": "<tr><td>Marca</td><td>GreenPlains</td></tr><tr><td>Tipo de Producto</td><td>Agro, Infraestructura</td></tr>",
+  "specs_rows": [
+    {
+      "label": "Marca",
+      "value": "GreenPlains"
+    },
+    {
+      "label": "Tipo de Producto",
+      "value": "Agro, Infraestructura"
+    }
+  ],
+  "chip_label": "Válvulas",
+  "original_url": "https://surerain.com/catalogo?producto=valvulas-de-control-hidraulico-adi",
+  "outer_html": "<div class=\"card product-card cursor-pointer\" data-category=\"valvulas\" data-ficha=\"assets/productos-fichas/ADI_tec.webp\" data-marca=\"GreenPlains\" data-vertical=\"agro infra\" onclick=\"openProductModal('Válvulas de control hidráulico ADI','','<tr><td>Marca</td><td>GreenPlains</td></tr><tr><td>Tipo de Producto</td><td>Agro, Infraestructura</td></tr>')\"><img width=\"195\" height=\"130\" alt=\"Válvulas de control hidráulico ADI\" class=\"w-full object-cover\" loading=\"lazy\" src=\"assets/productos-importados/valvulas-de-control-hidraulico-adi.webp\" style=\"height:130px;\"><div class=\"p-3\"><span class=\"chip chip-agro mb-1.5\">Válvulas</span><h4 class=\"font-semibold text-gray-900 text-xs mb-1\">Válvulas de control hidráulico ADI</h4><p class=\"text-xs text-gray-400 mb-2\">GreenPlains</p><div class=\"flex gap-1.5\"><span class=\"text-xs text-sr-green font-semibold cursor-pointer\">Ver ficha</span><span class=\"text-gray-300\">·</span><a class=\"text-xs text-gray-400 hover:text-sr-green\" href=\"contacto.html\">Dónde comprar</a></div></div></div>",
+  "onclick_raw": "openProductModal('Válvulas de control hidráulico ADI','','<tr><td>Marca</td><td>GreenPlains</td></tr><tr><td>Tipo de Producto</td><td>Agro, Infraestructura</td></tr>')",
+  "content_hash": "f92406ce2778b1bf9f929ea9524d2cbae746c8b7fdd6e4442ba9178b955a19ff",
+  "provenance": {
+    "source_url": "file://C:\\proyectos\\SURERAIN-CLONE\\data\\raw\\catalogo.source.html",
+    "source_page": "https://surerain.com/catalogo",
+    "source_selector": ".product-card:nth-of-type(272)",
+    "extracted_at": "2026-08-13T22:03:32.860Z",
+    "raw_fields": [
+      "data-category",
+      "data-marca",
+      "data-tipo",
+      "data-vertical",
+      "data-ficha",
+      "img[src]",
+      "h4",
+      "openProductModal(name,description,specsHtml)"
+    ]
+  }
+}

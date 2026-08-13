@@ -1,0 +1,49 @@
+{
+  "source_index": 296,
+  "source_id": "img:k-rain-pro-ex-2-0",
+  "name": "K-RAIN Pro EX 2.0",
+  "slug": "k-rain-pro-ex-2-0",
+  "category_slug": "programadores",
+  "brand_name": "K-Rain (USA)",
+  "product_type_slug": null,
+  "markets": [
+    "agro",
+    "av"
+  ],
+  "image_url": "https://surerain.com/assets/productos-importados/k-rain-pro-ex-2-0.webp",
+  "image_alt": "K-RAIN Pro EX 2.0",
+  "ficha_url": "https://surerain.com/assets/productos-fichas/599imgdesc1.webp",
+  "description": "El programador de riego modular K-Rain Pro EX 2.0, le permite expandir fácilmente de 4 a 16 zonas. Su pantalla retroiluminada (la más grande en el Mercado), su programación fácil de usar y los botones táctiles, elevan al Pro EX 2.0 a un nivel completamente nuevo en el area de los programadores de riego.",
+  "specs_html": "<tr><td>Marca</td><td>K-Rain (USA)</td></tr><tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes</td></tr>",
+  "specs_rows": [
+    {
+      "label": "Marca",
+      "value": "K-Rain (USA)"
+    },
+    {
+      "label": "Tipo de Producto",
+      "value": "Agro, Áreas Verdes"
+    }
+  ],
+  "chip_label": "Programadores",
+  "original_url": "https://surerain.com/catalogo?producto=k-rain-pro-ex-2-0",
+  "outer_html": "<div class=\"card product-card cursor-pointer\" data-category=\"programadores\" data-ficha=\"assets/productos-fichas/599imgdesc1.webp\" data-marca=\"K-Rain (USA)\" data-vertical=\"agro av\" onclick=\"openProductModal('K-RAIN Pro EX 2.0','El programador de riego modular K-Rain Pro EX 2.0, le permite expandir fácilmente de 4 a 16 zonas. Su pantalla retroiluminada (la más grande en el Mercado),&nbsp;su programación fácil de usar y los botones táctiles, elevan al Pro EX 2.0 a un nivel completamente nuevo en el area de los programadores de riego.','<tr><td>Marca</td><td>K-Rain (USA)</td></tr><tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes</td></tr>')\"><img width=\"195\" height=\"130\" alt=\"K-RAIN Pro EX 2.0\" class=\"w-full object-cover\" loading=\"lazy\" src=\"assets/productos-importados/k-rain-pro-ex-2-0.webp\" style=\"height:130px;\"><div class=\"p-3\"><span class=\"chip chip-agro mb-1.5\">Programadores</span><h4 class=\"font-semibold text-gray-900 text-xs mb-1\">K-RAIN Pro EX 2.0</h4><p class=\"text-xs text-gray-400 mb-2\">K-Rain (USA)</p><div class=\"flex gap-1.5\"><span class=\"text-xs text-sr-green font-semibold cursor-pointer\">Ver ficha</span><span class=\"text-gray-300\">·</span><a class=\"text-xs text-gray-400 hover:text-sr-green\" href=\"contacto.html\">Dónde comprar</a></div></div></div>",
+  "onclick_raw": "openProductModal('K-RAIN Pro EX 2.0','El programador de riego modular K-Rain Pro EX 2.0, le permite expandir fácilmente de 4 a 16 zonas. Su pantalla retroiluminada (la más grande en el Mercado), su programación fácil de usar y los botones táctiles, elevan al Pro EX 2.0 a un nivel completamente nuevo en el area de los programadores de riego.','<tr><td>Marca</td><td>K-Rain (USA)</td></tr><tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes</td></tr>')",
+  "content_hash": "4cac71a353bdc8ffa38e7c1039fb05e91364b27a28db43816e0fbcbd4d322153",
+  "provenance": {
+    "source_url": "file://C:\\proyectos\\SURERAIN-CLONE\\data\\raw\\catalogo.source.html",
+    "source_page": "https://surerain.com/catalogo",
+    "source_selector": ".product-card:nth-of-type(297)",
+    "extracted_at": "2026-08-13T22:03:32.860Z",
+    "raw_fields": [
+      "data-category",
+      "data-marca",
+      "data-tipo",
+      "data-vertical",
+      "data-ficha",
+      "img[src]",
+      "h4",
+      "openProductModal(name,description,specsHtml)"
+    ]
+  }
+}

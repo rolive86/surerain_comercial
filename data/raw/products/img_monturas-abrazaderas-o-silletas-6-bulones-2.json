@@ -1,0 +1,46 @@
+{
+  "source_index": 300,
+  "source_id": "img:monturas-abrazaderas-o-silletas-6-bulones-2",
+  "name": "Monturas, abrazaderas o silletas, 6 bulones",
+  "slug": "monturas-abrazaderas-o-silletas-6-bulones",
+  "category_slug": "accesorios",
+  "brand_name": "Kexing",
+  "product_type_slug": null,
+  "markets": [
+    "agro",
+    "av",
+    "infra"
+  ],
+  "image_url": "https://surerain.com/assets/productos-importados/monturas-abrazaderas-o-silletas-6-bulones-2.webp",
+  "image_alt": "Monturas, abrazaderas o silletas, 6 bulones",
+  "ficha_url": null,
+  "description": "– Material plástico. MEDIDAS DISPONIBLES: 110×3”, 125×11/2”, 125×2”, 140×3/4”, 140×1”, 140×11/2”, 140×2”, 140×3”, 160×1/2”, 160×3/4”, 160×1”, 160×11/2”, 160×2”, 160×3”, 160×4”, 200×2”, 200×3”, 200×4”, 225×2”, 225×3”, 250×2”, 250×3”, 250×4”, 315×2”, 315×3”, 315×4”",
+  "specs_html": "<tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes, Infraestructura</td></tr>",
+  "specs_rows": [
+    {
+      "label": "Tipo de Producto",
+      "value": "Agro, Áreas Verdes, Infraestructura"
+    }
+  ],
+  "chip_label": "Accesorios",
+  "original_url": "https://surerain.com/catalogo?producto=monturas-abrazaderas-o-silletas-6-bulones",
+  "outer_html": "<div class=\"card product-card cursor-pointer\" data-category=\"accesorios\" data-marca=\"Kexing\" data-vertical=\"agro av infra\" onclick=\"openProductModal('Monturas, abrazaderas o silletas, 6 bulones','– Material plástico. MEDIDAS DISPONIBLES: 110×3”, 125×11/2”, 125×2”, 140×3/4”, 140×1”, 140×11/2”, 140×2”, 140×3”, 160×1/2”, 160×3/4”, 160×1”, 160×11/2”, 160×2”, 160×3”, 160×4”, 200×2”, 200×3”, 200×4”, 225×2”, 225×3”, 250×2”, 250×3”, 250×4”, 315×2”, 315×3”, 315×4”','<tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes, Infraestructura</td></tr>')\"><img width=\"195\" height=\"130\" alt=\"Monturas, abrazaderas o silletas, 6 bulones\" class=\"w-full object-cover\" loading=\"lazy\" src=\"assets/productos-importados/monturas-abrazaderas-o-silletas-6-bulones-2.webp\" style=\"height:130px;\"><div class=\"p-3\"><span class=\"chip chip-agro mb-1.5\">Accesorios</span><h4 class=\"font-semibold text-gray-900 text-xs mb-1\">Monturas, abrazaderas o silletas, 6 bulones</h4><p class=\"text-xs text-gray-400 mb-2\">Accesorios para Tuberías</p><div class=\"flex gap-1.5\"><span class=\"text-xs text-sr-green font-semibold cursor-pointer\">Ver ficha</span><span class=\"text-gray-300\">·</span><a class=\"text-xs text-gray-400 hover:text-sr-green\" href=\"contacto.html\">Dónde comprar</a></div></div></div>",
+  "onclick_raw": "openProductModal('Monturas, abrazaderas o silletas, 6 bulones','– Material plástico. MEDIDAS DISPONIBLES: 110×3”, 125×11/2”, 125×2”, 140×3/4”, 140×1”, 140×11/2”, 140×2”, 140×3”, 160×1/2”, 160×3/4”, 160×1”, 160×11/2”, 160×2”, 160×3”, 160×4”, 200×2”, 200×3”, 200×4”, 225×2”, 225×3”, 250×2”, 250×3”, 250×4”, 315×2”, 315×3”, 315×4”','<tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes, Infraestructura</td></tr>')",
+  "content_hash": "5ae6b018aae4e3e6d8ff187261201cef90d303564a6f3eeb0886fb07329f54f6",
+  "provenance": {
+    "source_url": "file://C:\\proyectos\\SURERAIN-CLONE\\data\\raw\\catalogo.source.html",
+    "source_page": "https://surerain.com/catalogo",
+    "source_selector": ".product-card:nth-of-type(301)",
+    "extracted_at": "2026-08-13T22:03:32.860Z",
+    "raw_fields": [
+      "data-category",
+      "data-marca",
+      "data-tipo",
+      "data-vertical",
+      "data-ficha",
+      "img[src]",
+      "h4",
+      "openProductModal(name,description,specsHtml)"
+    ]
+  }
+}

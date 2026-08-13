@@ -1,0 +1,45 @@
+{
+  "source_index": 371,
+  "source_id": "img:codo-espiga-x-rosca-macho",
+  "name": "Codo espiga x rosca macho",
+  "slug": "codo-espiga-x-rosca-macho",
+  "category_slug": "conectores",
+  "brand_name": "GreenPlains",
+  "product_type_slug": null,
+  "markets": [
+    "agro",
+    "av"
+  ],
+  "image_url": "https://surerain.com/assets/productos-importados/codo-espiga-x-rosca-macho.webp",
+  "image_alt": "Codo espiga x rosca macho",
+  "ficha_url": null,
+  "description": "Codo espiga x rosca macho Diámetro: 16 mm x 1/2” (ACIR0IP.641.16B) 16 mm x 3/4” (ACIR0IP.641.16C) 20 mm x 1/2” (ACIR0IP.641.20B) 20 mm x 3/4” (ACIR0IP.641.20C)",
+  "specs_html": "<tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes</td></tr>",
+  "specs_rows": [
+    {
+      "label": "Tipo de Producto",
+      "value": "Agro, Áreas Verdes"
+    }
+  ],
+  "chip_label": "Conectores",
+  "original_url": "https://surerain.com/catalogo?producto=codo-espiga-x-rosca-macho",
+  "outer_html": "<div class=\"card product-card cursor-pointer\" data-category=\"conectores\" data-marca=\"GreenPlains\" data-vertical=\"agro av\" onclick=\"openProductModal('Codo espiga x rosca macho','Codo espiga x rosca macho Diámetro: 16 mm x 1/2” (ACIR0IP.641.16B) 16 mm x 3/4” (ACIR0IP.641.16C) 20 mm x 1/2” (ACIR0IP.641.20B) 20 mm x 3/4” (ACIR0IP.641.20C)','<tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes</td></tr>')\"><img width=\"195\" height=\"130\" alt=\"Codo espiga x rosca macho\" class=\"w-full object-cover\" loading=\"lazy\" src=\"assets/productos-importados/codo-espiga-x-rosca-macho.webp\" style=\"height:130px;\"><div class=\"p-3\"><span class=\"chip chip-agro mb-1.5\">Conectores</span><h4 class=\"font-semibold text-gray-900 text-xs mb-1\">Codo espiga x rosca macho</h4><p class=\"text-xs text-gray-400 mb-2\">Conectores y Accesorios</p><div class=\"flex gap-1.5\"><span class=\"text-xs text-sr-green font-semibold cursor-pointer\">Ver ficha</span><span class=\"text-gray-300\">·</span><a class=\"text-xs text-gray-400 hover:text-sr-green\" href=\"contacto.html\">Dónde comprar</a></div></div></div>",
+  "onclick_raw": "openProductModal('Codo espiga x rosca macho','Codo espiga x rosca macho Diámetro: 16 mm x 1/2” (ACIR0IP.641.16B) 16 mm x 3/4” (ACIR0IP.641.16C) 20 mm x 1/2” (ACIR0IP.641.20B) 20 mm x 3/4” (ACIR0IP.641.20C)','<tr><td>Tipo de Producto</td><td>Agro, Áreas Verdes</td></tr>')",
+  "content_hash": "3637a38123eb12ca75207c0b1517b313f02be778fa791e006b60868cc7b60d95",
+  "provenance": {
+    "source_url": "file://C:\\proyectos\\SURERAIN-CLONE\\data\\raw\\catalogo.source.html",
+    "source_page": "https://surerain.com/catalogo",
+    "source_selector": ".product-card:nth-of-type(372)",
+    "extracted_at": "2026-08-13T22:03:32.860Z",
+    "raw_fields": [
+      "data-category",
+      "data-marca",
+      "data-tipo",
+      "data-vertical",
+      "data-ficha",
+      "img[src]",
+      "h4",
+      "openProductModal(name,description,specsHtml)"
+    ]
+  }
+}
