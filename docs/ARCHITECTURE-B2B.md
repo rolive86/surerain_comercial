@@ -498,7 +498,7 @@ Ajusté ligeramente tu A–H (secuencia más segura):
 - **Fase C — Carrito + pedido.** `carts`/`cart_items` DB-backed, merge desde localStorage, `Confirmar pedido` → `orders`+`order_items` con snapshot + `order_status_history`. Pantalla de confirmación.
 - **Fase D — Mis pedidos.** Lista + detalle + historial de estados (vista cliente).
 - **Fase E — Backoffice.** Shell `(backoffice)` + panel de pedidos (lista/filtros por cliente/vendedor/fecha/estado/número) + cambio de estado con history + audit.
-- **Fase F — Clientes / vendedores / asignaciones.** ABM + vistas scoped por vendedor (RLS probada) + histórico de asignación.
+- **Fase F — Clientes / vendedores / asignaciones.** ✅ ABM + vistas scoped por vendedor (RLS writes 0007/0008) + histórico de asignación (`/gestion/clientes`, `/gestion/vendedores`).
 - **Fase G — Scaffold connector Tango.** Integration layer, `sync_runs`, mapping, dry-run. (Los external-id ya vienen de Fase A.)
 - **Fase H — Integración Tango real.** Sólo cuando haya endpoints/credenciales reales.
 

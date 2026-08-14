@@ -1,6 +1,6 @@
 # CONTEXT — Sure Rain (SURERAIN-CLONE)
 
-> Documento de handoff. Estado al **13/08/2026**. Para retomar el proyecto en otra sesión sin re-litigar decisiones ya cerradas.
+> Documento de handoff. Estado al **14/08/2026**. Para retomar el proyecto en otra sesión sin re-litigar decisiones ya cerradas.
 
 ---
 
@@ -16,9 +16,10 @@ Archivo local + ecommerce del catálogo público de [surerain.com/catalogo](http
 6. **Fase C B2B** — Carrito DB + confirmar pedido (snapshot, sin precios/pago) ✅  
 7. **Fase D B2B** — Mis pedidos (lista + detalle + historial de estados) ✅  
 8. **Fase E B2B** — Backoffice `/gestion` pedidos (filtros, cambio estado, audit) ✅  
+9. **Fase F B2B** — ABM clientes / vendedores / asignaciones + historial + RLS writes ✅  
 
 **Fuente de verdad catálogo:** `sure_rain_ecommerce_db`.  
-**Fuente de verdad comercial/Auth:** `sure_rain_commercial_db`.  
+**Fuente de verdad comercial/Auth:** `sure_rain_commercial_db` (MCP `user-supabase-sure_rain_commercial_db`).  
 No re-crawlear ni re-importar salvo actualización real del catálogo fuente.
 
 ---
@@ -200,11 +201,11 @@ Origen: HTML estático en `/catalogo` (product-cards + `data-*`); **sin API JSON
 
 ## 8. Próximos pasos naturales (cuando se pida)
 
-- Mejorar performance del catálogo (paginación / lazy / less HTML en SSR)
-- Pixel-closer a surerain.com
-- Precios / inventario reales → tablas `prices` / `inventory` + UI
-- Carrito / checkout / auth
-- Deploy (Vercel) con env de producción
+- **Fase G+** según `docs/ARCHITECTURE-B2B.md` (precios B2B, sync Tango, etc.)
+- Usuario demo `sales_manager` / `admin` (hoy writes CRM también permiten `sales_rep` scoped; alta de vendedores solo gerencia)
+- Mejorar performance del catálogo (paginación / lazy)
+- Deploy (Vercel) con env de producción  
+- **No** re-crawl / inventar precios / tocar ecommerce DB por B2B
 
 ---
 
