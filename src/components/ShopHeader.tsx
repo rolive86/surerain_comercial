@@ -61,6 +61,17 @@ export async function ShopHeader() {
                   </Link>
                 </>
               ) : null}
+              {session.claims.app_role &&
+              ["sales_rep", "sales_manager", "operations", "admin"].includes(
+                session.claims.app_role,
+              ) ? (
+                <Link
+                  href="/gestion/pedidos"
+                  className="rounded-md px-3 py-2 text-sm font-semibold text-sr-ink/80 transition hover:bg-sr-mist hover:text-sr-green"
+                >
+                  Gestión
+                </Link>
+              ) : null}
               <Link
                 href="/cuenta"
                 className="rounded-md px-3 py-2 text-sm font-semibold text-sr-ink/80 transition hover:bg-sr-mist hover:text-sr-green"
