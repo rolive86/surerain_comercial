@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "lib": ["ES2022", "DOM"],
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "declaration": false,
+    "outDir": "dist",
+    "rootDir": ".",
+    "types": ["node"],
+    "noEmit": true
+  },
+  "include": ["scripts/**/*.ts", "src/config.ts", "src/types.ts", "src/lib/**/*.ts"],
+  "exclude": ["node_modules", "dist", "src/app", "src/components", "src/lib/supabase", "src/lib/catalog.ts", "src/lib/storage.ts"]
+}

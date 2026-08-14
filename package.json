@@ -5,18 +5,22 @@
   "description": "Archivo local estructurado del catálogo público de Sure Rain (surerain.com/catalogo)",
   "type": "module",
   "scripts": {
-    "discover": "tsx scripts/discover.ts",
-    "crawl": "tsx scripts/crawl.ts",
-    "extract": "tsx scripts/extract.ts",
-    "normalize": "tsx scripts/normalize.ts",
-    "download-media": "tsx scripts/download-media.ts",
-    "validate": "tsx scripts/validate.ts",
-    "export:supabase": "tsx scripts/export-supabase.ts",
-    "import:supabase": "tsx scripts/import-supabase.ts",
-    "validate:supabase": "tsx scripts/validate-supabase.ts",
-    "smoke": "tsx scripts/smoke.ts",
-    "all": "tsx scripts/all.ts",
-    "typecheck": "tsc --noEmit"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "discover": "tsx --tsconfig tsconfig.scripts.json scripts/discover.ts",
+    "crawl": "tsx --tsconfig tsconfig.scripts.json scripts/crawl.ts",
+    "extract": "tsx --tsconfig tsconfig.scripts.json scripts/extract.ts",
+    "normalize": "tsx --tsconfig tsconfig.scripts.json scripts/normalize.ts",
+    "download-media": "tsx --tsconfig tsconfig.scripts.json scripts/download-media.ts",
+    "validate": "tsx --tsconfig tsconfig.scripts.json scripts/validate.ts",
+    "export:supabase": "tsx --tsconfig tsconfig.scripts.json scripts/export-supabase.ts",
+    "import:supabase": "tsx --tsconfig tsconfig.scripts.json scripts/import-supabase.ts",
+    "validate:supabase": "tsx --tsconfig tsconfig.scripts.json scripts/validate-supabase.ts",
+    "smoke": "tsx --tsconfig tsconfig.scripts.json scripts/smoke.ts",
+    "all": "tsx --tsconfig tsconfig.scripts.json scripts/all.ts",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "typecheck:scripts": "tsc --noEmit -p tsconfig.scripts.json"
   },
   "engines": {
     "node": ">=20"
@@ -26,11 +30,19 @@
     "cheerio": "^1.0.0",
     "csv-stringify": "^6.5.2",
     "dotenv": "^17.4.2",
+    "next": "^15.5.0",
     "p-limit": "^6.2.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
     "zod": "^3.24.2"
   },
   "devDependencies": {
     "@types/node": "^22.20.1",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^3.4.17",
     "tsx": "^4.19.3",
     "typescript": "^5.8.2"
   }

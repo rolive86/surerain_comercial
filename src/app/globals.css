@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Manrope:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: "Fraunces", Georgia, serif;
+  --font-sans: "Manrope", system-ui, sans-serif;
+  --sr-green: #006a46;
+  --sr-ink: #14201a;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-sr-sand text-sr-ink antialiased font-sans;
+  background-image:
+    radial-gradient(ellipse 80% 50% at 10% -10%, rgba(0, 106, 70, 0.12), transparent 55%),
+    radial-gradient(ellipse 60% 40% at 100% 0%, rgba(10, 138, 92, 0.08), transparent 50%),
+    linear-gradient(180deg, #f7f5f0 0%, #f3f1ec 40%, #eef2ef 100%);
+  min-height: 100vh;
+}
+
+@layer components {
+  .container-sr {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-md bg-sr-green px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-sr-green-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sr-green;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-md border border-sr-green/25 bg-white/70 px-5 py-2.5 text-sm font-semibold text-sr-green transition hover:border-sr-green hover:bg-white;
+  }
+
+  .chip {
+    @apply inline-flex items-center rounded-md bg-sr-mist px-2.5 py-1 text-xs font-medium text-sr-green-dark;
+  }
+
+  .surface {
+    @apply rounded-xl border border-black/5 bg-white/80 shadow-soft backdrop-blur-sm;
+  }
+}
