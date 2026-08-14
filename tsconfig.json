@@ -26,6 +26,7 @@
     "src/components/**/*.ts",
     "src/components/**/*.tsx",
     "src/lib/supabase/**/*.ts",
+    "src/lib/commercial/**/*.ts",
     "src/lib/catalog.ts",
     "src/lib/storage.ts",
     "src/middleware.ts",

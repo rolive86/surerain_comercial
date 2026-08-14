@@ -5,6 +5,7 @@ import {
   getFeaturedProducts,
 } from "@/lib/catalog";
 import { ProductGrid } from "@/components/ProductCard";
+import { getCommercialSession } from "@/lib/commercial/session";
 
 export const dynamic = "force-dynamic";
 
@@ -13,6 +14,7 @@ export default async function HomePage() {
   let featured: Awaited<ReturnType<typeof getFeaturedProducts>> = [];
   let stats = { products: 0, categories: 0, brands: 0 };
   let errorMessage: string | null = null;
+  const session = await getCommercialSession();
 
   try {
     [categories, featured, stats] = await Promise.all([
@@ -46,9 +48,15 @@ export default async function HomePage() {
               <Link href="/catalogo" className="btn-primary">
                 Ver catálogo completo
               </Link>
-              <Link href="/catalogo?categoria=aspersores" className="btn-secondary">
-                Aspersores
-              </Link>
+              {session ? (
+                <Link href="/cuenta" className="btn-secondary">
+                  Mi cuenta
+                </Link>
+              ) : (
+                <Link href="/login" className="btn-secondary">
+                  Ingresar al portal
+                </Link>
+              )}
             </div>
           </div>
           <div className="surface relative overflow-hidden p-6 sm:p-8">

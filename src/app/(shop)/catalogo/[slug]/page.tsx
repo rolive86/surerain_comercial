@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -21,7 +21,7 @@ export async function generateMetadata({
       title: product.name,
       description:
         product.short_description?.slice(0, 160) ||
-        `Ficha técnica de ${product.name} en el catálogo Sure Rain.`,
+        `Ficha t├®cnica de ${product.name} en el cat├ílogo Sure Rain.`,
     };
   } catch {
     return { title: "Producto" };
@@ -50,7 +50,7 @@ export default async function ProductPage({ params }: { params: Params }) {
     <div className="container-sr py-10 sm:py-14">
       <nav className="mb-6 text-sm text-sr-ink/50">
         <Link href="/catalogo" className="hover:text-sr-green">
-          Catálogo
+          Cat├ílogo
         </Link>
         {product.category_slug ? (
           <>
@@ -137,7 +137,7 @@ export default async function ProductPage({ params }: { params: Params }) {
           {product.description?.trim() ? (
             <div className="mt-6">
               <h2 className="text-sm font-semibold uppercase tracking-wider text-sr-ink/45">
-                Descripción
+                Descripci├│n
               </h2>
               <p className="mt-2 whitespace-pre-wrap text-sm leading-relaxed text-sr-ink/75 sm:text-base">
                 {product.description}
@@ -148,7 +148,7 @@ export default async function ProductPage({ params }: { params: Params }) {
           {features.length ? (
             <div className="mt-8">
               <h2 className="text-sm font-semibold uppercase tracking-wider text-sr-ink/45">
-                Características
+                Caracter├¡sticas
               </h2>
               <ul className="mt-3 space-y-2">
                 {features.map((f, idx) => (

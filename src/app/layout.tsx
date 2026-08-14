@@ -1,6 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import { SiteFooter, SiteHeader } from "@/components/SiteHeader";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -19,14 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body>
-        <SiteHeader />
-        <main className="min-h-[70vh]">{children}</main>
-        <SiteFooter />
-        <div className="sr-only">
-          <Link href="/catalogo">Ir al catálogo</Link>
-        </div>
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

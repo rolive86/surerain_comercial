@@ -45,7 +45,7 @@ function LoginForm() {
     <div className="mx-auto max-w-md px-4 py-16">
       <h1 className="font-display text-3xl font-bold text-sr-green">Ingresar</h1>
       <p className="mt-2 text-sm text-sr-ink/60">
-        Acceso B2B (proyecto comercial). El catálogo público no requiere login.
+        Acceso al portal B2B. El catálogo público no requiere login.
       </p>
 
       <form onSubmit={onSubmit} className="mt-8 space-y-4">

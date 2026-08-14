@@ -11,8 +11,12 @@ Archivo local + ecommerce del catálogo público de [surerain.com/catalogo](http
 1. **Fase 1** — Discovery / crawl / extract / normalize / media (local) ✅  
 2. **Fase 2** — Migración idempotente a Supabase (Postgres + Storage) ✅  
 3. **Fase 3** — Frontend Next.js local (catálogo navegable) ✅  
+4. **Fase A B2B** — Proyecto comercial + Auth + RBAC + RLS + login ✅  
+5. **Fase B B2B** — Portal autenticado `(shop)` + sesión en header + `/cuenta` enriquecida ✅  
 
-**Fuente de verdad actual:** Supabase (`sure_rain_ecommerce_db`). No re-crawlear ni re-importar salvo actualización real del catálogo fuente.
+**Fuente de verdad catálogo:** `sure_rain_ecommerce_db`.  
+**Fuente de verdad comercial/Auth:** `sure_rain_commercial_db`.  
+No re-crawlear ni re-importar salvo actualización real del catálogo fuente.
 
 ---
 
