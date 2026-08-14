@@ -13,6 +13,7 @@ Archivo local + ecommerce del catálogo público de [surerain.com/catalogo](http
 3. **Fase 3** — Frontend Next.js local (catálogo navegable) ✅  
 4. **Fase A B2B** — Proyecto comercial + Auth + RBAC + RLS + login ✅  
 5. **Fase B B2B** — Portal autenticado `(shop)` + sesión en header + `/cuenta` enriquecida ✅  
+6. **Fase C B2B** — Carrito DB + confirmar pedido (snapshot, sin precios/pago) ✅  
 
 **Fuente de verdad catálogo:** `sure_rain_ecommerce_db`.  
 **Fuente de verdad comercial/Auth:** `sure_rain_commercial_db`.  

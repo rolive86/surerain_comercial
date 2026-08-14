@@ -1,0 +1,42 @@
+import type { Metadata } from "next";
+import { redirect } from "next/navigation";
+import { CartClient } from "@/components/CartClient";
+import { getOrCreateOpenCart } from "@/lib/commercial/cart";
+import { getCommercialSession } from "@/lib/commercial/session";
+
+export const metadata: Metadata = {
+  title: "Carrito",
+  description: "Carrito B2B Sure Rain — confirmar pedido sin pago.",
+};
+
+export default async function CarritoPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ error?: string }>;
+}) {
+  const session = await getCommercialSession();
+  if (!session) redirect("/login?next=/carrito");
+  if (session.claims.app_role !== "customer_user") {
+    redirect("/cuenta?error=cart_customer_only");
+  }
+
+  const params = await searchParams;
+  let cart;
+  try {
+    cart = await getOrCreateOpenCart();
+  } catch (err) {
+    throw new Error(err instanceof Error ? err.message : "No se pudo cargar el carrito");
+  }
+
+  return (
+    <div className="container-sr py-12">
+      <h1 className="font-display text-3xl font-bold text-sr-green">Carrito</h1>
+      <p className="mt-2 text-sm text-sr-ink/60">
+        {cart.itemCount} ítem(s) · precios no publicados en esta etapa
+      </p>
+      <div className="mt-8">
+        <CartClient cart={cart} error={params.error ?? null} />
+      </div>
+    </div>
+  );
+}

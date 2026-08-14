@@ -87,6 +87,82 @@ export type Database = {
         }
         Relationships: []
       }
+      cart_items: {
+        Row: {
+          added_at: string
+          cart_id: string
+          id: string
+          product_name_snapshot: string
+          product_slug_snapshot: string | null
+          product_source_id: string
+          quantity: number
+          unit_snapshot: string | null
+        }
+        Insert: {
+          added_at?: string
+          cart_id: string
+          id?: string
+          product_name_snapshot: string
+          product_slug_snapshot?: string | null
+          product_source_id: string
+          quantity: number
+          unit_snapshot?: string | null
+        }
+        Update: {
+          added_at?: string
+          cart_id?: string
+          id?: string
+          product_name_snapshot?: string
+          product_slug_snapshot?: string | null
+          product_source_id?: string
+          quantity?: number
+          unit_snapshot?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "cart_items_cart_id_fkey"
+            columns: ["cart_id"]
+            isOneToOne: false
+            referencedRelation: "carts"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      carts: {
+        Row: {
+          created_at: string
+          customer_id: string
+          id: string
+          status: string
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          customer_id: string
+          id?: string
+          status?: string
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          customer_id?: string
+          id?: string
+          status?: string
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "carts_customer_id_fkey"
+            columns: ["customer_id"]
+            isOneToOne: false
+            referencedRelation: "customers"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       customer_contacts: {
         Row: {
           active: boolean
@@ -242,6 +318,193 @@ export type Database = {
         }
         Relationships: []
       }
+      order_addresses: {
+        Row: {
+          address: string | null
+          city: string | null
+          company: string | null
+          contact: string | null
+          id: string
+          kind: string
+          observations: string | null
+          order_id: string
+          postal_code: string | null
+          province: string | null
+        }
+        Insert: {
+          address?: string | null
+          city?: string | null
+          company?: string | null
+          contact?: string | null
+          id?: string
+          kind?: string
+          observations?: string | null
+          order_id: string
+          postal_code?: string | null
+          province?: string | null
+        }
+        Update: {
+          address?: string | null
+          city?: string | null
+          company?: string | null
+          contact?: string | null
+          id?: string
+          kind?: string
+          observations?: string | null
+          order_id?: string
+          postal_code?: string | null
+          province?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "order_addresses_order_id_fkey"
+            columns: ["order_id"]
+            isOneToOne: false
+            referencedRelation: "orders"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      order_items: {
+        Row: {
+          description_snapshot: string | null
+          discount_snapshot: number | null
+          id: string
+          metadata_snapshot: Json
+          order_id: string
+          product_name_snapshot: string
+          product_slug_snapshot: string | null
+          product_source_id: string
+          quantity: number
+          sku_snapshot: string | null
+          unit_price_snapshot: number | null
+          unit_snapshot: string | null
+        }
+        Insert: {
+          description_snapshot?: string | null
+          discount_snapshot?: number | null
+          id?: string
+          metadata_snapshot?: Json
+          order_id: string
+          product_name_snapshot: string
+          product_slug_snapshot?: string | null
+          product_source_id: string
+          quantity: number
+          sku_snapshot?: string | null
+          unit_price_snapshot?: number | null
+          unit_snapshot?: string | null
+        }
+        Update: {
+          description_snapshot?: string | null
+          discount_snapshot?: number | null
+          id?: string
+          metadata_snapshot?: Json
+          order_id?: string
+          product_name_snapshot?: string
+          product_slug_snapshot?: string | null
+          product_source_id?: string
+          quantity?: number
+          sku_snapshot?: string | null
+          unit_price_snapshot?: number | null
+          unit_snapshot?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "order_items_order_id_fkey"
+            columns: ["order_id"]
+            isOneToOne: false
+            referencedRelation: "orders"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      order_notes: {
+        Row: {
+          author_user_id: string | null
+          body: string
+          created_at: string
+          id: string
+          note_type: string
+          order_id: string
+        }
+        Insert: {
+          author_user_id?: string | null
+          body: string
+          created_at?: string
+          id?: string
+          note_type: string
+          order_id: string
+        }
+        Update: {
+          author_user_id?: string | null
+          body?: string
+          created_at?: string
+          id?: string
+          note_type?: string
+          order_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "order_notes_order_id_fkey"
+            columns: ["order_id"]
+            isOneToOne: false
+            referencedRelation: "orders"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      order_status_history: {
+        Row: {
+          changed_by: string | null
+          comment: string | null
+          created_at: string
+          from_status: string | null
+          id: string
+          order_id: string
+          to_status: string
+        }
+        Insert: {
+          changed_by?: string | null
+          comment?: string | null
+          created_at?: string
+          from_status?: string | null
+          id?: string
+          order_id: string
+          to_status: string
+        }
+        Update: {
+          changed_by?: string | null
+          comment?: string | null
+          created_at?: string
+          from_status?: string | null
+          id?: string
+          order_id?: string
+          to_status?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "order_status_history_from_status_fkey"
+            columns: ["from_status"]
+            isOneToOne: false
+            referencedRelation: "order_statuses"
+            referencedColumns: ["code"]
+          },
+          {
+            foreignKeyName: "order_status_history_order_id_fkey"
+            columns: ["order_id"]
+            isOneToOne: false
+            referencedRelation: "orders"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "order_status_history_to_status_fkey"
+            columns: ["to_status"]
+            isOneToOne: false
+            referencedRelation: "order_statuses"
+            referencedColumns: ["code"]
+          },
+        ]
+      }
       order_statuses: {
         Row: {
           active: boolean
@@ -265,6 +528,79 @@ export type Database = {
           sort_order?: number
         }
         Relationships: []
+      }
+      orders: {
+        Row: {
+          created_at: string
+          customer_id: string
+          external_id: string | null
+          id: string
+          last_synced_at: string | null
+          order_number: string
+          sales_rep_id: string | null
+          source: string
+          status: string
+          submitted_at: string | null
+          sync_status: string | null
+          tango_id: string | null
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          customer_id: string
+          external_id?: string | null
+          id?: string
+          last_synced_at?: string | null
+          order_number: string
+          sales_rep_id?: string | null
+          source?: string
+          status: string
+          submitted_at?: string | null
+          sync_status?: string | null
+          tango_id?: string | null
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          customer_id?: string
+          external_id?: string | null
+          id?: string
+          last_synced_at?: string | null
+          order_number?: string
+          sales_rep_id?: string | null
+          source?: string
+          status?: string
+          submitted_at?: string | null
+          sync_status?: string | null
+          tango_id?: string | null
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "orders_customer_id_fkey"
+            columns: ["customer_id"]
+            isOneToOne: false
+            referencedRelation: "customers"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "orders_sales_rep_id_fkey"
+            columns: ["sales_rep_id"]
+            isOneToOne: false
+            referencedRelation: "sales_reps"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "orders_status_fkey"
+            columns: ["status"]
+            isOneToOne: false
+            referencedRelation: "order_statuses"
+            referencedColumns: ["code"]
+          },
+        ]
       }
       sales_reps: {
         Row: {
@@ -314,6 +650,7 @@ export type Database = {
       current_rep_customer_ids: { Args: never; Returns: string[] }
       current_role: { Args: never; Returns: string }
       custom_access_token_hook: { Args: { event: Json }; Returns: Json }
+      next_order_number: { Args: never; Returns: string }
     }
     Enums: {
       [_ in never]: never

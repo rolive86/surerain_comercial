@@ -2,7 +2,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { AddToCartButton } from "@/components/AddToCartButton";
 import { getProductBySlug } from "@/lib/catalog";
+import { getCommercialSession } from "@/lib/commercial/session";
 
 export const dynamic = "force-dynamic";
 
@@ -30,6 +32,7 @@ export async function generateMetadata({
 
 export default async function ProductPage({ params }: { params: Params }) {
   const { slug } = await params;
+  const session = await getCommercialSession();
   let product: Awaited<ReturnType<typeof getProductBySlug>> = null;
   try {
     product = await getProductBySlug(slug);
@@ -133,6 +136,15 @@ export default async function ProductPage({ params }: { params: Params }) {
           {product.brand_name ? (
             <p className="mt-2 text-base text-sr-ink/55">{product.brand_name}</p>
           ) : null}
+
+          <div className="mt-6">
+            <AddToCartButton
+              productSourceId={product.source_id}
+              productName={product.name}
+              productSlug={product.slug}
+              authenticated={Boolean(session)}
+            />
+          </div>
 
           {product.description?.trim() ? (
             <div className="mt-6">

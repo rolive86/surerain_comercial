@@ -19,6 +19,7 @@ export type MediaInfo = {
 
 export type ProductListItem = {
   id: string;
+  source_id: string;
   name: string;
   slug: string;
   short_description: string | null;
@@ -117,6 +118,7 @@ export async function getCatalogProducts(
     .select(
       `
       id,
+      source_id,
       name,
       slug,
       short_description,
@@ -189,6 +191,7 @@ export async function getCatalogProducts(
 
       return {
         id: row.id,
+        source_id: row.source_id,
         name: row.name,
         slug: row.slug,
         short_description: row.short_description,
@@ -239,6 +242,7 @@ export async function getProductBySlug(
     .select(
       `
       id,
+      source_id,
       name,
       slug,
       description,
@@ -335,6 +339,7 @@ export async function getProductBySlug(
 
   return {
     id: data.id,
+    source_id: data.source_id,
     name: data.name,
     slug: data.slug,
     description: data.description,
