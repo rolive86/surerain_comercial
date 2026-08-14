@@ -28,7 +28,9 @@
     "src/lib/supabase/**/*.ts",
     "src/lib/catalog.ts",
     "src/lib/storage.ts",
+    "src/middleware.ts",
     "src/types/database.types.ts",
+    "src/types/commercial.types.ts",
     ".next/types/**/*.ts"
   ],
   "exclude": [

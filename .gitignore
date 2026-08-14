@@ -11,6 +11,7 @@ tmp-mig.json
 tmp-migration-query.txt
 .next/
 out/
+tsconfig.tsbuildinfo
 
 # Pipeline artifacts (regenerable)
 data/
