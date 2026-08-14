@@ -102,6 +102,9 @@ export default async function CuentaPage() {
           </p>
         </div>
         <div className="flex flex-wrap gap-2">
+          <Link href="/mis-pedidos" className="btn-secondary">
+            Mis pedidos
+          </Link>
           <Link href="/catalogo" className="btn-secondary">
             Ir al catálogo
           </Link>

@@ -14,6 +14,7 @@ Archivo local + ecommerce del catálogo público de [surerain.com/catalogo](http
 4. **Fase A B2B** — Proyecto comercial + Auth + RBAC + RLS + login ✅  
 5. **Fase B B2B** — Portal autenticado `(shop)` + sesión en header + `/cuenta` enriquecida ✅  
 6. **Fase C B2B** — Carrito DB + confirmar pedido (snapshot, sin precios/pago) ✅  
+7. **Fase D B2B** — Mis pedidos (lista + detalle + historial de estados) ✅  
 
 **Fuente de verdad catálogo:** `sure_rain_ecommerce_db`.  
 **Fuente de verdad comercial/Auth:** `sure_rain_commercial_db`.  

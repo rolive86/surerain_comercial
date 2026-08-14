@@ -41,17 +41,25 @@ export async function ShopHeader() {
           {session ? (
             <>
               {isCustomer ? (
-                <Link
-                  href="/carrito"
-                  className="rounded-md px-3 py-2 text-sm font-semibold text-sr-ink/80 transition hover:bg-sr-mist hover:text-sr-green"
-                >
-                  Carrito
-                  {cart && cart.itemCount > 0 ? (
-                    <span className="ml-1 inline-flex min-w-[1.25rem] justify-center rounded-full bg-sr-green px-1.5 text-[11px] font-bold text-white">
-                      {cart.itemCount}
-                    </span>
-                  ) : null}
-                </Link>
+                <>
+                  <Link
+                    href="/carrito"
+                    className="rounded-md px-3 py-2 text-sm font-semibold text-sr-ink/80 transition hover:bg-sr-mist hover:text-sr-green"
+                  >
+                    Carrito
+                    {cart && cart.itemCount > 0 ? (
+                      <span className="ml-1 inline-flex min-w-[1.25rem] justify-center rounded-full bg-sr-green px-1.5 text-[11px] font-bold text-white">
+                        {cart.itemCount}
+                      </span>
+                    ) : null}
+                  </Link>
+                  <Link
+                    href="/mis-pedidos"
+                    className="rounded-md px-3 py-2 text-sm font-semibold text-sr-ink/80 transition hover:bg-sr-mist hover:text-sr-green"
+                  >
+                    Mis pedidos
+                  </Link>
+                </>
               ) : null}
               <Link
                 href="/cuenta"

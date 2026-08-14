@@ -76,8 +76,13 @@ export async function middleware(request: NextRequest) {
     }
   }
 
-  // /carrito and /pedido require authenticated commercial user.
-  if ((path.startsWith("/carrito") || path.startsWith("/pedido")) && !user) {
+  // Protected customer portal routes.
+  if (
+    (path.startsWith("/carrito") ||
+      path.startsWith("/pedido") ||
+      path.startsWith("/mis-pedidos")) &&
+    !user
+  ) {
     const redirectUrl = request.nextUrl.clone();
     redirectUrl.pathname = "/login";
     redirectUrl.searchParams.set("next", path);
