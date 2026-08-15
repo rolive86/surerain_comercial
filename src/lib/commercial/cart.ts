@@ -19,6 +19,8 @@ export type CartView = {
     product_slug_snapshot: string | null;
     quantity: number;
     unit_snapshot: string | null;
+    image_url?: string | null;
+    image_alt?: string | null;
   }>;
   itemCount: number;
 };

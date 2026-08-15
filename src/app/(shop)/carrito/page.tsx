@@ -3,6 +3,7 @@ import { redirect } from "next/navigation";
 import { CartClient } from "@/components/CartClient";
 import { getOrCreateOpenCart } from "@/lib/commercial/cart";
 import { getCommercialSession } from "@/lib/commercial/session";
+import { getProductThumbnailsBySourceIds } from "@/lib/catalog";
 
 export const metadata: Metadata = {
   title: "Carrito",
@@ -28,6 +29,21 @@ export default async function CarritoPage({
     throw new Error(err instanceof Error ? err.message : "No se pudo cargar el carrito");
   }
 
+  const thumbs = await getProductThumbnailsBySourceIds(
+    cart.items.map((item) => item.product_source_id),
+  );
+  const cartWithImages = {
+    ...cart,
+    items: cart.items.map((item) => {
+      const thumb = thumbs.get(item.product_source_id);
+      return {
+        ...item,
+        image_url: thumb?.url ?? null,
+        image_alt: thumb?.alt ?? item.product_name_snapshot,
+      };
+    }),
+  };
+
   return (
     <div className="container-sr py-12">
       <h1 className="font-display text-3xl font-bold text-sr-green">Carrito</h1>
@@ -35,7 +51,7 @@ export default async function CarritoPage({
         {cart.itemCount} ítem(s) · precios no publicados en esta etapa
       </p>
       <div className="mt-8">
-        <CartClient cart={cart} error={params.error ?? null} />
+        <CartClient cart={cartWithImages} error={params.error ?? null} />
       </div>
     </div>
   );

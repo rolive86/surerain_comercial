@@ -233,6 +233,43 @@ export async function getFeaturedProducts(limit = 8): Promise<ProductListItem[]>
   return all.slice(0, limit);
 }
 
+/** Thumbnails del catálogo por `source_id` (p.ej. ítems de carrito/pedido). */
+export async function getProductThumbnailsBySourceIds(
+  sourceIds: string[],
+): Promise<Map<string, { url: string; alt: string | null }>> {
+  const unique = [...new Set(sourceIds.filter(Boolean))];
+  const map = new Map<string, { url: string; alt: string | null }>();
+  if (!unique.length) return map;
+
+  const supabase = createServerSupabaseClient();
+  const { data, error } = await supabase
+    .from("products")
+    .select(
+      `
+      source_id,
+      name,
+      featured_image:media!products_featured_image_id_fkey (
+        alt_text, bucket, storage_path
+      )
+    `,
+    )
+    .in("source_id", unique);
+  if (error) throw new Error(error.message);
+
+  for (const row of data ?? []) {
+    const featured = Array.isArray(row.featured_image)
+      ? row.featured_image[0]
+      : row.featured_image;
+    const url = publicStorageUrl(featured?.bucket, featured?.storage_path);
+    if (!url) continue;
+    map.set(row.source_id, {
+      url,
+      alt: featured?.alt_text ?? row.name ?? null,
+    });
+  }
+  return map;
+}
+
 export async function getProductBySlug(
   slug: string,
 ): Promise<ProductDetail | null> {

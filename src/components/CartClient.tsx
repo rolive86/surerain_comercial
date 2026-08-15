@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useTransition } from "react";
 import {
@@ -56,52 +57,70 @@ export function CartClient({
       ) : null}
 
       <ul className="divide-y divide-black/5 overflow-hidden rounded-xl border border-black/5 bg-white">
-        {cart.items.map((item) => (
-          <li
-            key={item.id}
-            className="flex flex-col gap-3 px-4 py-4 sm:flex-row sm:items-center sm:justify-between"
-          >
-            <div>
-              <a
-                href={
-                  item.product_slug_snapshot
-                    ? `/catalogo/${item.product_slug_snapshot}`
-                    : "/catalogo"
-                }
-                className="font-display text-lg font-semibold text-sr-ink hover:text-sr-green"
-              >
-                {item.product_name_snapshot}
-              </a>
-              <p className="mt-1 font-mono text-xs text-sr-ink/45">{item.product_source_id}</p>
-            </div>
-            <div className="flex items-center gap-3">
-              <label className="text-xs font-semibold uppercase tracking-wider text-sr-ink/45">
-                Cant.
-                <input
-                  type="number"
-                  min={1}
-                  step={1}
-                  defaultValue={item.quantity}
+        {cart.items.map((item) => {
+          const href = item.product_slug_snapshot
+            ? `/catalogo/${item.product_slug_snapshot}`
+            : "/catalogo";
+          return (
+            <li
+              key={item.id}
+              className="flex flex-col gap-3 px-4 py-4 sm:flex-row sm:items-center sm:justify-between"
+            >
+              <div className="flex min-w-0 items-center gap-3">
+                <a
+                  href={href}
+                  className="relative h-16 w-16 shrink-0 overflow-hidden rounded-md bg-sr-mist"
+                >
+                  {item.image_url ? (
+                    <Image
+                      src={item.image_url}
+                      alt={item.image_alt || item.product_name_snapshot}
+                      fill
+                      sizes="64px"
+                      className="object-cover"
+                    />
+                  ) : (
+                    <span className="flex h-full w-full items-center justify-center px-1 text-center text-[10px] font-semibold leading-tight text-sr-green/45">
+                      {item.product_name_snapshot.slice(0, 18)}
+                    </span>
+                  )}
+                </a>
+                <a
+                  href={href}
+                  className="font-display text-lg font-semibold text-sr-ink hover:text-sr-green"
+                >
+                  {item.product_name_snapshot}
+                </a>
+              </div>
+              <div className="flex items-center gap-3 sm:pl-0 pl-[4.75rem]">
+                <label className="text-xs font-semibold uppercase tracking-wider text-sr-ink/45">
+                  Cant.
+                  <input
+                    type="number"
+                    min={1}
+                    step={1}
+                    defaultValue={item.quantity}
+                    disabled={pending}
+                    onBlur={(e) => {
+                      const value = Number(e.target.value);
+                      if (!Number.isFinite(value) || value === item.quantity) return;
+                      changeQty(item.id, value);
+                    }}
+                    className="ml-2 w-20 rounded-md border border-black/10 px-2 py-1.5 text-sm"
+                  />
+                </label>
+                <button
+                  type="button"
                   disabled={pending}
-                  onBlur={(e) => {
-                    const value = Number(e.target.value);
-                    if (!Number.isFinite(value) || value === item.quantity) return;
-                    changeQty(item.id, value);
-                  }}
-                  className="ml-2 w-20 rounded-md border border-black/10 px-2 py-1.5 text-sm"
-                />
-              </label>
-              <button
-                type="button"
-                disabled={pending}
-                onClick={() => removeItem(item.id)}
-                className="text-sm font-semibold text-sr-ink/50 hover:text-red-700"
-              >
-                Quitar
-              </button>
-            </div>
-          </li>
-        ))}
+                  onClick={() => removeItem(item.id)}
+                  className="text-sm font-semibold text-sr-ink/50 hover:text-red-700"
+                >
+                  Quitar
+                </button>
+              </div>
+            </li>
+          );
+        })}
       </ul>
 
       <form action={confirmCartAction} className="surface space-y-4 p-6">
