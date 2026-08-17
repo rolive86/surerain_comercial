@@ -2,7 +2,8 @@
 
 import { useState, useTransition } from "react";
 import { saveProfileAction } from "@/lib/commercial/profile-actions";
-import { PROFILE_INTERESTS, type UserProfile } from "@/lib/commercial/profile";
+import { PROFILE_INTERESTS } from "@/lib/commercial/profile-constants";
+import type { UserProfile } from "@/lib/commercial/profile";
 
 export function ProfileForm({ profile }: { profile: UserProfile | null }) {
   const [pending, startTransition] = useTransition();

@@ -3,7 +3,7 @@
 import { revalidatePath } from "next/cache";
 import { createCommercialServerClient } from "@/lib/supabase/commercial/server";
 import { getCommercialSession } from "@/lib/commercial/session";
-import { PROFILE_INTERESTS } from "@/lib/commercial/profile";
+import { PROFILE_INTERESTS } from "@/lib/commercial/profile-constants";
 
 export async function saveProfileAction(formData: FormData): Promise<{ ok: true } | { ok: false; error: string }> {
   try {

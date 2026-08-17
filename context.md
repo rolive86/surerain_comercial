@@ -1,6 +1,6 @@
 # CONTEXT — Sure Rain (SURERAIN-CLONE)
 
-> Documento de handoff. Estado al **14/08/2026**. Para retomar el proyecto en otra sesión sin re-litigar decisiones ya cerradas.
+> Documento de handoff. Estado al **17/08/2026**. Para retomar el proyecto en otra sesión sin re-litigar decisiones ya cerradas.
 
 ---
 
@@ -17,7 +17,7 @@ Archivo local + ecommerce del catálogo público de [surerain.com/catalogo](http
 7. **Fase D B2B** — Mis pedidos (lista + detalle + historial de estados) ✅  
 8. **Fase E B2B** — Backoffice `/gestion` pedidos (filtros, cambio estado, audit) ✅  
 9. **Fase F B2B** — ABM clientes / vendedores / asignaciones + historial + RLS writes ✅  
-10. **UX ecommerce-grade (en curso)** — piel Sure Rain, search-first, tab bar mobile, preview Vercel protegido.
+10. **UX ecommerce-grade (Pases 1–6 ✅, Pass 7 preview pendiente de login Vercel)** — piel Sure Rain, search-first, tab bar mobile.
 
 Landing de marca para el portal: **`/clientes`**. El enlace desde [surerain.com](https://surerain.com) hacia este portal es un cambio **externo** (fuera de este repo).  
 
@@ -204,11 +204,11 @@ Origen: HTML estático en `/catalogo` (product-cards + `data-*`); **sin API JSON
 
 ## 8. Próximos pasos naturales (cuando se pida)
 
+- **Preview Vercel protegido (Pass 7 — falta login de Rodrigo):** el CLI local está autenticado como `fiscalizar2025`. Para el preview de este repo hay que `npx vercel login` con la cuenta dueña, `npx vercel link` (sin `--prod`), cargar env **solo Preview**, `npx vercel` (sin `--prod`), activar Deployment Protection, y agregar redirect URLs en Auth comercial: `https://<project>-*.vercel.app/**`.
 - **Fase G+** según `docs/ARCHITECTURE-B2B.md` (precios B2B, sync Tango, etc.)
-- Usuario demo `sales_manager` / `admin` (hoy writes CRM también permiten `sales_rep` scoped; alta de vendedores solo gerencia)
-- Mejorar performance del catálogo (paginación / lazy)
-- Deploy (Vercel) con env de producción  
+- Usuario demo `sales_manager` / `admin`
 - **No** re-crawl / inventar precios / tocar ecommerce DB por B2B
+- **No** promover a producción ni dominio custom en esta etapa
 
 ---
 
