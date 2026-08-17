@@ -3,15 +3,13 @@ import { MobileTabBarNav } from "@/components/MobileTabBar";
 import { ShopHeaderClient } from "@/components/ShopHeaderClient";
 import { getOpenCartOrNull } from "@/lib/commercial/cart";
 import { getHeaderIdentity } from "@/lib/commercial/profile";
+import { isCustomerRole, isStaffRole } from "@/lib/commercial/roles";
 import { getCommercialSession, roleLabel } from "@/lib/commercial/session";
 
 export async function ShopHeader({ searchDefault = "" }: { searchDefault?: string }) {
   const session = await getCommercialSession();
-  const isCustomer = session?.claims.app_role === "customer_user";
-  const isStaff = Boolean(
-    session?.claims.app_role &&
-      ["sales_rep", "sales_manager", "operations", "admin"].includes(session.claims.app_role),
-  );
+  const isCustomer = isCustomerRole(session?.claims.app_role);
+  const isStaff = isStaffRole(session?.claims.app_role);
   const cart = isCustomer ? await getOpenCartOrNull() : null;
   const identity = session ? await getHeaderIdentity() : null;
 
@@ -35,7 +33,7 @@ export async function ShopHeader({ searchDefault = "" }: { searchDefault?: strin
 
 export async function MobileTabBar() {
   const session = await getCommercialSession();
-  const isCustomer = session?.claims.app_role === "customer_user";
+  const isCustomer = isCustomerRole(session?.claims.app_role);
   const cart = isCustomer ? await getOpenCartOrNull() : null;
   return <MobileTabBarNav cartCount={cart?.itemCount ?? 0} />;
 }

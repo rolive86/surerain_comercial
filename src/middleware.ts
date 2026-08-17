@@ -1,7 +1,11 @@
 import { createServerClient } from "@supabase/ssr";
 import { NextResponse, type NextRequest } from "next/server";
-
-const STAFF_ROLES = new Set(["sales_rep", "sales_manager", "operations", "admin"]);
+import { claimsFromAccessToken } from "@/lib/commercial/claims";
+import {
+  isBackofficePath,
+  isCustomerPortalPath,
+  isStaffRole,
+} from "@/lib/commercial/roles";
 
 function getCommercialEnv() {
   const url = process.env.NEXT_PUBLIC_COMMERCIAL_SUPABASE_URL;
@@ -12,6 +16,27 @@ function getCommercialEnv() {
     );
   }
   return { url, anonKey };
+}
+
+function redirectWithCookies(
+  request: NextRequest,
+  supabaseResponse: NextResponse,
+  pathname: string,
+  search?: Record<string, string>,
+) {
+  const url = request.nextUrl.clone();
+  url.pathname = pathname;
+  url.search = "";
+  if (search) {
+    for (const [key, value] of Object.entries(search)) {
+      url.searchParams.set(key, value);
+    }
+  }
+  const response = NextResponse.redirect(url);
+  supabaseResponse.cookies.getAll().forEach((cookie) => {
+    response.cookies.set(cookie.name, cookie.value);
+  });
+  return response;
 }
 
 export async function middleware(request: NextRequest) {
@@ -41,81 +66,42 @@ export async function middleware(request: NextRequest) {
   } = await supabase.auth.getUser();
 
   const path = request.nextUrl.pathname;
+  let role: string | null = null;
+  if (user) {
+    const { data: sessionData } = await supabase.auth.getSession();
+    role = claimsFromAccessToken(sessionData.session?.access_token).app_role;
+  }
 
-  // Public catalog routes — never block.
-  if (
-    path === "/" ||
-    path === "/clientes" ||
-    path === "/catalogo" ||
-    path.startsWith("/catalogo/")
-  ) {
+  const bounce = (pathname: string, search?: Record<string, string>) =>
+    redirectWithCookies(request, supabaseResponse, pathname, search);
+
+  // Staff does not land on the customer home (public catalog stays reachable).
+  if (user && isStaffRole(role) && path === "/") {
+    return bounce("/gestion");
+  }
+
+  if (isBackofficePath(path)) {
+    if (!user) {
+      return bounce("/login", { next: path });
+    }
+    if (!isStaffRole(role)) {
+      return bounce("/");
+    }
     return supabaseResponse;
   }
 
-  // /gestion/* requires authenticated staff role (placeholder for backoffice).
-  if (path.startsWith("/gestion")) {
+  // Customer portal: login required; staff is sent to backoffice (not just hidden UI).
+  if (isCustomerPortalPath(path)) {
     if (!user) {
-      const redirectUrl = request.nextUrl.clone();
-      redirectUrl.pathname = "/login";
-      redirectUrl.searchParams.set("next", path);
-      return NextResponse.redirect(redirectUrl);
+      return bounce("/login", { next: path });
     }
-
-    const role =
-      (user.app_metadata?.app_role as string | undefined) ??
-      ((user as { app_role?: string }).app_role) ??
-      null;
-
-    // Prefer JWT custom claim via getSession if present
-    const { data: sessionData } = await supabase.auth.getSession();
-    const jwtRole =
-      (sessionData.session?.access_token
-        ? decodeJwtPayload(sessionData.session.access_token)?.app_role
-        : null) ?? role;
-
-    if (!jwtRole || !STAFF_ROLES.has(String(jwtRole))) {
-      const redirectUrl = request.nextUrl.clone();
-      redirectUrl.pathname = "/login";
-      redirectUrl.searchParams.set("error", "staff_required");
-      return NextResponse.redirect(redirectUrl);
+    if (isStaffRole(role)) {
+      return bounce("/gestion");
     }
-  }
-
-  // Protected customer portal routes.
-  if (
-    (path.startsWith("/carrito") ||
-      path.startsWith("/pedido") ||
-      path.startsWith("/mis-pedidos")) &&
-    !user
-  ) {
-    const redirectUrl = request.nextUrl.clone();
-    redirectUrl.pathname = "/login";
-    redirectUrl.searchParams.set("next", path);
-    return NextResponse.redirect(redirectUrl);
-  }
-
-  // /cuenta requires any authenticated commercial user.
-  if (path.startsWith("/cuenta") && !user) {
-    const redirectUrl = request.nextUrl.clone();
-    redirectUrl.pathname = "/login";
-    redirectUrl.searchParams.set("next", path);
-    return NextResponse.redirect(redirectUrl);
+    return supabaseResponse;
   }
 
   return supabaseResponse;
-}
-
-function decodeJwtPayload(token: string): Record<string, unknown> | null {
-  try {
-    const payload = token.split(".")[1];
-    if (!payload) return null;
-    const json = Buffer.from(payload.replace(/-/g, "+").replace(/_/g, "/"), "base64").toString(
-      "utf8",
-    );
-    return JSON.parse(json) as Record<string, unknown>;
-  } catch {
-    return null;
-  }
 }
 
 export const config = {

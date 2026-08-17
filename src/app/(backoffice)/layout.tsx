@@ -1,9 +1,8 @@
 import Link from "next/link";
 import { redirect } from "next/navigation";
-import { getCommercialSession, roleLabel } from "@/lib/commercial/session";
 import { signOutCommercial } from "@/lib/commercial/auth-actions";
-
-const STAFF = new Set(["sales_rep", "sales_manager", "operations", "admin"]);
+import { isStaffRole } from "@/lib/commercial/roles";
+import { getCommercialSession, roleLabel } from "@/lib/commercial/session";
 
 const nav = [
   { href: "/gestion/pedidos", label: "Pedidos" },
@@ -15,9 +14,9 @@ export default async function BackofficeLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   const session = await getCommercialSession();
-  if (!session) redirect("/login?next=/gestion/pedidos");
-  if (!session.claims.app_role || !STAFF.has(session.claims.app_role)) {
-    redirect("/login?error=staff_required&next=/gestion/pedidos");
+  if (!session) redirect("/login?next=/gestion");
+  if (!isStaffRole(session.claims.app_role)) {
+    redirect("/");
   }
 
   return (
@@ -41,8 +40,8 @@ export default async function BackofficeLayout({
             </nav>
           </div>
           <div className="flex items-center gap-3 text-sm">
-            <Link href="/" className="text-white/55 hover:text-white">
-              Catálogo
+            <Link href="/catalogo" className="text-white/55 hover:text-white">
+              Volver al catálogo
             </Link>
             <span className="hidden text-white/40 sm:inline">|</span>
             <span className="hidden text-white/70 sm:inline">{session.user.email}</span>

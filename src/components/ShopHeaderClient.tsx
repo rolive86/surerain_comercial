@@ -82,7 +82,11 @@ export function ShopHeaderClient({
             compact ? "max-h-0 py-0 opacity-0 lg:py-3" : "max-h-16 py-3"
           }`}
         >
-          <Link href="/" className="flex min-h-11 items-center" aria-label="Sure Rain — inicio">
+          <Link
+            href={isStaff ? "/gestion" : "/"}
+            className="flex min-h-11 items-center"
+            aria-label="Sure Rain — inicio"
+          >
             <LogoMark className="h-7 w-auto sm:h-8" />
           </Link>
 
@@ -95,8 +99,8 @@ export function ShopHeaderClient({
               <>
                 {isStaff ? (
                   <Link
-                    href="/gestion/pedidos"
-                    className="hidden min-h-11 items-center rounded-md px-3 text-sm font-semibold text-sr-ink/80 hover:bg-sr-mist hover:text-sr-green lg:inline-flex"
+                    href="/gestion"
+                    className="inline-flex min-h-11 items-center rounded-md px-3 text-sm font-semibold text-sr-ink/80 hover:bg-sr-mist hover:text-sr-green"
                   >
                     Gestión
                   </Link>
@@ -116,7 +120,7 @@ export function ShopHeaderClient({
                   </Link>
                 ) : null}
                 <Link
-                  href="/cuenta"
+                  href={isStaff ? "/gestion" : "/cuenta"}
                   className="flex min-h-11 items-center gap-2 rounded-full py-1 pl-1 pr-2 hover:bg-sr-mist"
                 >
                   <AvatarMark name={hello} url={avatarUrl} />

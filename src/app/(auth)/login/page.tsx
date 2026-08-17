@@ -2,12 +2,14 @@
 
 import { useRouter, useSearchParams } from "next/navigation";
 import { FormEvent, Suspense, useState } from "react";
+import { claimsFromAccessToken } from "@/lib/commercial/claims";
+import { postLoginPath } from "@/lib/commercial/roles";
 import { createCommercialBrowserClient } from "@/lib/supabase/commercial/client";
 
 function LoginForm() {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const nextPath = searchParams.get("next") || "/cuenta";
+  const nextPath = searchParams.get("next");
   const staffError = searchParams.get("error") === "staff_required";
 
   const [email, setEmail] = useState("");
@@ -33,7 +35,9 @@ function LoginForm() {
         setLoading(false);
         return;
       }
-      router.replace(nextPath);
+      const { data: sessionData } = await supabase.auth.getSession();
+      const role = claimsFromAccessToken(sessionData.session?.access_token).app_role;
+      router.replace(postLoginPath(role, nextPath));
       router.refresh();
     } catch (err) {
       setError(err instanceof Error ? err.message : "Error de login");
