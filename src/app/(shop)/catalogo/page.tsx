@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Suspense } from "react";
 import { CatalogFilters } from "@/components/CatalogFilters";
 import { ProductGrid } from "@/components/ProductCard";
@@ -9,6 +10,7 @@ import {
   getMarkets,
   getProductTypes,
 } from "@/lib/catalog";
+import { getCommercialSession } from "@/lib/commercial/session";
 
 export const metadata: Metadata = {
   title: "Catálogo",
@@ -17,6 +19,8 @@ export const metadata: Metadata = {
 };
 
 export const dynamic = "force-dynamic";
+
+const PAGE_SIZE = 24;
 
 type SearchParams = Promise<Record<string, string | string[] | undefined>>;
 
@@ -33,6 +37,10 @@ export default async function CatalogoPage({
     market: typeof sp.mercado === "string" ? sp.mercado : undefined,
     type: typeof sp.tipo === "string" ? sp.tipo : undefined,
   };
+  const page = Math.max(1, Number(typeof sp.page === "string" ? sp.page : 1) || 1);
+
+  const session = await getCommercialSession();
+  const authenticated = session?.claims.app_role === "customer_user";
 
   let products: Awaited<ReturnType<typeof getCatalogProducts>> = [];
   let categories: Awaited<ReturnType<typeof getCategories>> = [];
@@ -54,18 +62,35 @@ export default async function CatalogoPage({
       err instanceof Error ? err.message : "Error al cargar el catálogo.";
   }
 
+  const totalPages = Math.max(1, Math.ceil(products.length / PAGE_SIZE));
+  const safePage = Math.min(page, totalPages);
+  const pageItems = products.slice((safePage - 1) * PAGE_SIZE, safePage * PAGE_SIZE);
+
+  const qs = new URLSearchParams();
+  if (filters.q) qs.set("q", filters.q);
+  if (filters.category) qs.set("categoria", filters.category);
+  if (filters.brand) qs.set("marca", filters.brand);
+  if (filters.market) qs.set("mercado", filters.market);
+  if (filters.type) qs.set("tipo", filters.type);
+  const base = qs.toString();
+  const hrefFor = (p: number) => {
+    const next = new URLSearchParams(base);
+    if (p > 1) next.set("page", String(p));
+    const s = next.toString();
+    return s ? `/catalogo?${s}` : "/catalogo";
+  };
+
   return (
-    <div className="container-sr py-10 sm:py-14">
-      <div className="mb-8 max-w-3xl">
+    <div className="container-sr py-8 sm:py-12">
+      <div className="mb-6 max-w-3xl">
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-sr-green">
           Productos
         </p>
         <h1 className="mt-2 font-display text-3xl font-bold text-sr-ink sm:text-4xl">
-          Catálogo completo
+          Catálogo
         </h1>
         <p className="mt-3 text-sr-ink/60">
-          Consultá el inventario publicado. Filtrá por categoría, marca, mercado
-          o tipo, o buscá por nombre.
+          Consultá el inventario publicado. Armá tu pedido; un vendedor lo confirma.
         </p>
       </div>
 
@@ -74,8 +99,8 @@ export default async function CatalogoPage({
           {errorMessage}
         </div>
       ) : (
-        <div className="space-y-6">
-          <Suspense fallback={<div className="surface h-40 animate-pulse" />}>
+        <div className="lg:grid lg:grid-cols-[16rem_minmax(0,1fr)] lg:gap-8">
+          <Suspense fallback={<div className="skeleton h-40" />}>
             <CatalogFilters
               categories={categories}
               brands={brands}
@@ -84,10 +109,33 @@ export default async function CatalogoPage({
               total={products.length}
             />
           </Suspense>
-          <ProductGrid
-            products={products}
-            emptyMessage="Ningún producto coincide con los filtros."
-          />
+          <div className="space-y-6">
+            <ProductGrid
+              products={pageItems}
+              authenticated={authenticated}
+              emptyMessage="Ningún producto coincide con los filtros."
+            />
+            {totalPages > 1 ? (
+              <nav
+                className="flex flex-wrap items-center justify-center gap-2 pb-4"
+                aria-label="Paginación"
+              >
+                {safePage > 1 ? (
+                  <Link href={hrefFor(safePage - 1)} className="btn-secondary !min-h-11">
+                    Anterior
+                  </Link>
+                ) : null}
+                <span className="px-3 text-sm text-sr-ink/55">
+                  {safePage} / {totalPages}
+                </span>
+                {safePage < totalPages ? (
+                  <Link href={hrefFor(safePage + 1)} className="btn-secondary !min-h-11">
+                    Siguiente
+                  </Link>
+                ) : null}
+              </nav>
+            ) : null}
+          </div>
         </div>
       )}
     </div>

@@ -1,7 +1,7 @@
 "use client";
 
 import { useRouter, usePathname, useSearchParams } from "next/navigation";
-import { useCallback, useEffect, useRef, useState, useTransition } from "react";
+import { useCallback, useState, useTransition } from "react";
 
 type Option = { slug: string; name: string };
 
@@ -24,17 +24,13 @@ export function CatalogFilters({
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const [pending, startTransition] = useTransition();
-  const [q, setQ] = useState(searchParams.get("q") ?? "");
-  const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-
-  useEffect(() => {
-    setQ(searchParams.get("q") ?? "");
-  }, [searchParams]);
+  const [open, setOpen] = useState(false);
 
   const pushParams = useCallback(
     (mutate: (params: URLSearchParams) => void) => {
       const params = new URLSearchParams(searchParams.toString());
       mutate(params);
+      params.delete("page");
       const qs = params.toString();
       startTransition(() => {
         router.push(qs ? `${pathname}?${qs}` : pathname);
@@ -50,81 +46,101 @@ export function CatalogFilters({
     });
   };
 
-  const onSearchChange = (value: string) => {
-    setQ(value);
-    if (debounceRef.current) clearTimeout(debounceRef.current);
-    debounceRef.current = setTimeout(() => update("q", value.trim()), 300);
-  };
-
   const clear = () => {
-    setQ("");
     startTransition(() => router.push(pathname));
+    setOpen(false);
   };
 
   const hasFilters = ["q", "categoria", "marca", "mercado", "tipo"].some((k) =>
     searchParams.get(k),
   );
 
+  const fields = (
+    <div className="space-y-3">
+      <p className="text-sm text-sr-ink/55">
+        <span className="font-semibold text-sr-green">{total}</span> productos
+        {pending ? " · actualizando…" : ""}
+      </p>
+      <FilterSelect
+        label="Categoría"
+        value={searchParams.get("categoria") ?? "all"}
+        options={categories}
+        onChange={(v) => update("categoria", v)}
+      />
+      <FilterSelect
+        label="Marca"
+        value={searchParams.get("marca") ?? "all"}
+        options={brands}
+        onChange={(v) => update("marca", v)}
+      />
+      <FilterSelect
+        label="Mercado"
+        value={searchParams.get("mercado") ?? "all"}
+        options={markets}
+        onChange={(v) => update("mercado", v)}
+      />
+      <FilterSelect
+        label="Tipo"
+        value={searchParams.get("tipo") ?? "all"}
+        options={types}
+        onChange={(v) => update("tipo", v)}
+      />
+      {hasFilters ? (
+        <button type="button" onClick={clear} className="btn-secondary w-full text-xs">
+          Limpiar filtros
+        </button>
+      ) : null}
+    </div>
+  );
+
   return (
-    <section className="surface p-4 sm:p-5">
-      <div className="mb-4 flex flex-wrap items-end justify-between gap-3">
-        <div>
-          <label
-            htmlFor="catalog-search"
-            className="mb-1 block text-xs font-semibold uppercase tracking-wider text-sr-ink/45"
-          >
-            Buscar producto
-          </label>
-          <input
-            id="catalog-search"
-            type="search"
-            value={q}
-            placeholder="Ej: VYR-26, aspersor, K-Rain…"
-            className="w-full min-w-[240px] rounded-md border border-black/10 bg-white px-3 py-2.5 text-sm outline-none ring-sr-green/30 focus:ring-2 sm:min-w-[320px]"
-            onChange={(e) => onSearchChange(e.target.value)}
-          />
-        </div>
+    <>
+      <div className="mb-4 flex items-center justify-between gap-3 lg:hidden">
         <p className="text-sm text-sr-ink/55">
           <span className="font-semibold text-sr-green">{total}</span> productos
-          {pending ? " · actualizando…" : ""}
         </p>
+        <button
+          type="button"
+          className="btn-secondary !min-h-11 !px-4"
+          onClick={() => setOpen(true)}
+        >
+          Filtros
+        </button>
       </div>
 
-      <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
-        <FilterSelect
-          label="Categoría"
-          value={searchParams.get("categoria") ?? "all"}
-          options={categories}
-          onChange={(v) => update("categoria", v)}
-        />
-        <FilterSelect
-          label="Marca"
-          value={searchParams.get("marca") ?? "all"}
-          options={brands}
-          onChange={(v) => update("marca", v)}
-        />
-        <FilterSelect
-          label="Mercado"
-          value={searchParams.get("mercado") ?? "all"}
-          options={markets}
-          onChange={(v) => update("mercado", v)}
-        />
-        <FilterSelect
-          label="Tipo"
-          value={searchParams.get("tipo") ?? "all"}
-          options={types}
-          onChange={(v) => update("tipo", v)}
-        />
-      </div>
+      <aside className="hidden lg:sticky lg:top-24 lg:block">{fields}</aside>
 
-      {hasFilters ? (
-        <div className="mt-4">
-          <button type="button" onClick={clear} className="btn-secondary text-xs">
-            Limpiar filtros
-          </button>
+      {open ? (
+        <div className="fixed inset-0 z-50 lg:hidden">
+          <button
+            type="button"
+            aria-label="Cerrar filtros"
+            className="absolute inset-0 bg-black/40"
+            onClick={() => setOpen(false)}
+          />
+          <div className="absolute inset-y-0 right-0 flex w-[88%] max-w-sm flex-col bg-[#f7f5f0] p-5 shadow-card tab-bar-safe">
+            <div className="mb-4 flex items-center justify-between">
+              <h2 className="font-display text-lg font-semibold">Filtros</h2>
+              <button
+                type="button"
+                className="min-h-11 min-w-11 rounded-md text-sr-ink/55"
+                onClick={() => setOpen(false)}
+              >
+                Cerrar
+              </button>
+            </div>
+            {fields}
+            <button
+              type="button"
+              className="btn-primary mt-6"
+              onClick={() => setOpen(false)}
+            >
+              Ver resultados
+            </button>
+          </div>
         </div>
       ) : null}
-    </section>
+    </>
   );
 }
 
@@ -145,7 +161,7 @@ function FilterSelect({
         {label}
       </label>
       <select
-        className="w-full rounded-md border border-black/10 bg-white px-3 py-2.5 text-sm outline-none ring-sr-green/30 focus:ring-2"
+        className="h-11 w-full rounded-md border border-black/10 bg-white px-3 text-sm outline-none ring-sr-green/30 focus:ring-2"
         value={value}
         onChange={(e) => onChange(e.target.value)}
       >

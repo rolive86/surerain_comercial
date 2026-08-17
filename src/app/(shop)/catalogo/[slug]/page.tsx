@@ -3,8 +3,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { AddToCartButton } from "@/components/AddToCartButton";
-import { getProductBySlug } from "@/lib/catalog";
+import { ProductRail } from "@/components/ProductRail";
+import {
+  getCatalogProducts,
+  getCatalogProductsBySourceIds,
+  getProductBySlug,
+} from "@/lib/catalog";
 import { getCommercialSession } from "@/lib/commercial/session";
+import { getAlsoBoughtSourceIds } from "@/lib/recommendations";
 
 export const dynamic = "force-dynamic";
 
@@ -23,7 +29,7 @@ export async function generateMetadata({
       title: product.name,
       description:
         product.short_description?.slice(0, 160) ||
-        `Ficha t├®cnica de ${product.name} en el cat├ílogo Sure Rain.`,
+        `Ficha técnica de ${product.name} en el catálogo Sure Rain.`,
     };
   } catch {
     return { title: "Producto" };
@@ -33,6 +39,7 @@ export async function generateMetadata({
 export default async function ProductPage({ params }: { params: Params }) {
   const { slug } = await params;
   const session = await getCommercialSession();
+  const authenticated = session?.claims.app_role === "customer_user";
   let product: Awaited<ReturnType<typeof getProductBySlug>> = null;
   try {
     product = await getProductBySlug(slug);
@@ -49,11 +56,38 @@ export default async function ProductPage({ params }: { params: Params }) {
     (a) => a.slug === "caracteristica" && a.value_text,
   );
 
+  const togetherIds = await getAlsoBoughtSourceIds(product.source_id, 8);
+  let together = await getCatalogProductsBySourceIds(
+    togetherIds.filter((id) => id !== product.source_id),
+  );
+  if (together.length < 3 && product.category_slug) {
+    const sameCat = await getCatalogProducts({ category: product.category_slug });
+    const used = new Set(together.map((p) => p.source_id));
+    used.add(product.source_id);
+    for (const p of sameCat) {
+      if (!used.has(p.source_id)) {
+        together.push(p);
+        used.add(p.source_id);
+      }
+      if (together.length >= 8) break;
+    }
+  }
+
+  const addControl = (
+    <AddToCartButton
+      productSourceId={product.source_id}
+      productName={product.name}
+      productSlug={product.slug}
+      authenticated={authenticated}
+      withStepper
+    />
+  );
+
   return (
-    <div className="container-sr py-10 sm:py-14">
+    <div className="container-sr py-8 sm:py-12">
       <nav className="mb-6 text-sm text-sr-ink/50">
         <Link href="/catalogo" className="hover:text-sr-green">
-          Cat├ílogo
+          Catálogo
         </Link>
         {product.category_slug ? (
           <>
@@ -115,16 +149,14 @@ export default async function ProductPage({ params }: { params: Params }) {
           ) : null}
         </div>
 
-        <div>
+        <div className="pb-28 lg:pb-0">
           <div className="flex flex-wrap gap-2">
             {product.category_name ? (
-              <span className="chip">{product.category_name}</span>
+              <span className="chip-vertical">{product.category_name}</span>
             ) : null}
-            {product.type_name ? (
-              <span className="chip bg-white">{product.type_name}</span>
-            ) : null}
+            {product.type_name ? <span className="chip">{product.type_name}</span> : null}
             {product.markets.map((m) => (
-              <span key={m.slug} className="chip bg-sr-green/10 text-sr-green-dark">
+              <span key={m.slug} className="chip-vertical">
                 {m.name}
               </span>
             ))}
@@ -137,19 +169,12 @@ export default async function ProductPage({ params }: { params: Params }) {
             <p className="mt-2 text-base text-sr-ink/55">{product.brand_name}</p>
           ) : null}
 
-          <div className="mt-6">
-            <AddToCartButton
-              productSourceId={product.source_id}
-              productName={product.name}
-              productSlug={product.slug}
-              authenticated={Boolean(session)}
-            />
-          </div>
+          <div className="mt-6 hidden lg:block">{addControl}</div>
 
           {product.description?.trim() ? (
             <div className="mt-6">
               <h2 className="text-sm font-semibold uppercase tracking-wider text-sr-ink/45">
-                Descripci├│n
+                Descripción
               </h2>
               <p className="mt-2 whitespace-pre-wrap text-sm leading-relaxed text-sr-ink/75 sm:text-base">
                 {product.description}
@@ -160,14 +185,11 @@ export default async function ProductPage({ params }: { params: Params }) {
           {features.length ? (
             <div className="mt-8">
               <h2 className="text-sm font-semibold uppercase tracking-wider text-sr-ink/45">
-                Caracter├¡sticas
+                Características
               </h2>
               <ul className="mt-3 space-y-2">
                 {features.map((f, idx) => (
-                  <li
-                    key={`${f.slug}-${idx}`}
-                    className="flex gap-2 text-sm text-sr-ink/75"
-                  >
+                  <li key={`${f.slug}-${idx}`} className="flex gap-2 text-sm text-sr-ink/75">
                     <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-sr-green" />
                     <span>{f.value_text}</span>
                   </li>
@@ -188,9 +210,7 @@ export default async function ProductPage({ params }: { params: Params }) {
                     className="flex items-baseline justify-between gap-4 px-4 py-3 text-sm"
                   >
                     <dt className="text-sr-ink/50">{s.name}</dt>
-                    <dd className="text-right font-medium text-sr-ink">
-                      {s.value_text}
-                    </dd>
+                    <dd className="text-right font-medium text-sr-ink">{s.value_text}</dd>
                   </div>
                 ))}
               </dl>
@@ -222,6 +242,20 @@ export default async function ProductPage({ params }: { params: Params }) {
             </div>
           ) : null}
         </div>
+      </div>
+
+      {together.length ? (
+        <div className="mt-12">
+          <ProductRail
+            title="Clientes también pidieron"
+            products={together}
+            authenticated={authenticated}
+          />
+        </div>
+      ) : null}
+
+      <div className="fixed inset-x-0 bottom-[calc(3.65rem+env(safe-area-inset-bottom))] z-40 border-t border-black/5 bg-[#f7f5f0]/95 px-4 py-3 backdrop-blur-md lg:hidden">
+        {addControl}
       </div>
     </div>
   );

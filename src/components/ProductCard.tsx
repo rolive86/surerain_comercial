@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { AddToCartButton } from "@/components/AddToCartButton";
 import type { ProductListItem } from "@/lib/catalog";
 
 function FallbackImage({ name }: { name: string }) {
@@ -10,51 +11,65 @@ function FallbackImage({ name }: { name: string }) {
   );
 }
 
-export function ProductCard({ product }: { product: ProductListItem }) {
+export function ProductCard({
+  product,
+  authenticated = false,
+}: {
+  product: ProductListItem;
+  authenticated?: boolean;
+}) {
   return (
-    <Link
-      href={`/catalogo/${product.slug}`}
-      className="surface group flex flex-col overflow-hidden transition hover:-translate-y-0.5 hover:border-sr-green/20"
-    >
-      <div className="relative aspect-[4/3] overflow-hidden bg-sr-mist">
+    <article className="surface group flex flex-col overflow-hidden transition hover:-translate-y-0.5 hover:border-sr-green/20 hover:shadow-card-hover">
+      <Link href={`/catalogo/${product.slug}`} className="relative aspect-[4/3] overflow-hidden bg-sr-mist">
         {product.image?.url ? (
           <Image
             src={product.image.url}
             alt={product.image.alt_text || product.name}
             fill
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+            sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
             className="object-cover transition duration-500 group-hover:scale-[1.03]"
           />
         ) : (
           <FallbackImage name={product.name} />
         )}
-      </div>
-      <div className="flex flex-1 flex-col gap-2 p-4">
-        <div className="flex flex-wrap gap-1.5">
+      </Link>
+      <div className="flex flex-1 flex-col gap-2 p-3 sm:p-4">
+        <div className="flex flex-wrap gap-1">
           {product.category_name ? (
-            <span className="chip">{product.category_name}</span>
+            <span className="chip-vertical">{product.category_name}</span>
           ) : null}
-          {product.type_name ? (
-            <span className="chip bg-white text-sr-ink/70">{product.type_name}</span>
+          {product.brand_name ? (
+            <span className="chip-brand">{product.brand_name}</span>
           ) : null}
         </div>
-        <h3 className="font-display text-lg font-semibold leading-snug text-sr-ink group-hover:text-sr-green">
-          {product.name}
-        </h3>
-        {product.brand_name ? (
-          <p className="text-sm text-sr-ink/55">{product.brand_name}</p>
-        ) : null}
+        <Link href={`/catalogo/${product.slug}`}>
+          <h3 className="font-display text-sm font-semibold leading-snug text-sr-ink sm:text-base group-hover:text-sr-green">
+            {product.name}
+          </h3>
+        </Link>
+        <div className="mt-auto pt-1">
+          <AddToCartButton
+            productSourceId={product.source_id}
+            productName={product.name}
+            productSlug={product.slug}
+            authenticated={authenticated}
+            compact
+            withStepper
+          />
+        </div>
       </div>
-    </Link>
+    </article>
   );
 }
 
 export function ProductGrid({
   products,
   emptyMessage = "No hay productos para mostrar.",
+  authenticated = false,
 }: {
   products: ProductListItem[];
   emptyMessage?: string;
+  authenticated?: boolean;
 }) {
   if (!products.length) {
     return (
@@ -68,9 +83,9 @@ export function ProductGrid({
   }
 
   return (
-    <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+    <div className="grid grid-cols-2 gap-3 lg:grid-cols-3 lg:gap-5 xl:grid-cols-4">
       {products.map((product) => (
-        <ProductCard key={product.id} product={product} />
+        <ProductCard key={product.id} product={product} authenticated={authenticated} />
       ))}
     </div>
   );
