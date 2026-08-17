@@ -5,6 +5,8 @@ tmp-discovery/
 *.log
 .env
 .env.local
+.env*.local
+.vercel
 .DS_Store
 Thumbs.db
 tmp-mig.json

@@ -6,6 +6,8 @@ import {
 } from "@/lib/commercial/session";
 import type { Json } from "@/types/commercial.types";
 
+export const PROFILE_INTERESTS = ["Agro", "Áreas Verdes", "Infraestructura", "Hogar"] as const;
+
 export type UserProfile = {
   user_id: string;
   full_name: string | null;

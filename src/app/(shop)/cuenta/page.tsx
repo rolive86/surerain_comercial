@@ -1,24 +1,33 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { redirect } from "next/navigation";
+import { AvatarUploader } from "@/components/AvatarUploader";
+import { ChangePasswordForm } from "@/components/ChangePasswordForm";
+import { ProfileForm } from "@/components/ProfileForm";
 import { signOutCommercial } from "@/lib/commercial/auth-actions";
-import { getCommercialSession, roleLabel } from "@/lib/commercial/session";
+import { getOwnProfile } from "@/lib/commercial/profile";
+import { displayNameFromEmail, getCommercialSession, roleLabel } from "@/lib/commercial/session";
 import { createCommercialServerClient } from "@/lib/supabase/commercial/server";
 
 export const metadata: Metadata = {
   title: "Mi cuenta",
-  description: "Portal B2B Sure Rain — datos de tu empresa y sesión.",
+  description: "Perfil y empresa del portal de pedidos Sure Rain.",
 };
+
+function dash(value: string | null | undefined): string {
+  const t = value?.trim();
+  return t ? t : "—";
+}
 
 export default async function CuentaPage() {
   const session = await getCommercialSession();
-  if (!session) {
-    redirect("/login?next=/cuenta");
-  }
+  if (!session) redirect("/login?next=/cuenta");
 
   const supabase = await createCommercialServerClient();
   const { claims, user } = session;
   const role = claims.app_role;
+  const profile = await getOwnProfile();
+  const hello = profile?.full_name?.split(/\s+/)[0] || displayNameFromEmail(user.email);
 
   const { data: link } = await supabase
     .from("app_user_links")
@@ -38,9 +47,8 @@ export default async function CuentaPage() {
     province: string | null;
     postal_code: string | null;
   } | null = null;
-
-  let salesRep: { name: string; email: string | null } | null = null;
   let assignedRep: { name: string; email: string | null } | null = null;
+  let salesRep: { name: string; email: string | null } | null = null;
 
   if (role === "customer_user" && claims.customer_id) {
     const { data } = await supabase
@@ -60,7 +68,6 @@ export default async function CuentaPage() {
       .is("valid_to", null)
       .limit(1)
       .maybeSingle();
-
     if (csr?.sales_rep_id) {
       const { data: rep } = await supabase
         .from("sales_reps")
@@ -87,134 +94,89 @@ export default async function CuentaPage() {
     : "";
 
   return (
-    <div className="container-sr py-12">
+    <div className="container-sr space-y-6 py-10 sm:py-12">
       <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
         <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-sr-green">
-            Portal B2B
-          </p>
-          <h1 className="mt-1 font-display text-3xl font-bold text-sr-green sm:text-4xl">
-            Mi cuenta
-          </h1>
-          <p className="mt-2 max-w-xl text-sm text-sr-ink/60">
-            Sesión autenticada del proyecto comercial. El catálogo sigue siendo público; carrito y
-            pedidos llegan en fases siguientes.
+          <h1 className="font-display text-3xl font-bold text-sr-ink sm:text-4xl">Mi cuenta</h1>
+          <p className="mt-1 text-sm text-sr-ink/55">
+            {roleLabel(role)} · {user.email}
           </p>
         </div>
-        <div className="flex flex-wrap gap-2">
-          <Link href="/mis-pedidos" className="btn-secondary">
-            Mis pedidos
-          </Link>
-          <Link href="/catalogo" className="btn-secondary">
-            Ir al catálogo
-          </Link>
-          <form action={signOutCommercial}>
-            <button type="submit" className="btn-secondary">
-              Cerrar sesión
-            </button>
-          </form>
+        <form action={signOutCommercial}>
+          <button type="submit" className="btn-secondary">
+            Cerrar sesión
+          </button>
+        </form>
+      </div>
+
+      <section className="surface p-5 sm:p-8">
+        <h2 className="font-display text-xl font-semibold">Perfil</h2>
+        <div className="mt-5">
+          <AvatarUploader
+            userId={user.id}
+            currentUrl={profile?.avatar_url ?? null}
+            initial={hello.slice(0, 1).toUpperCase()}
+          />
         </div>
-      </div>
+        <div className="mt-8">
+          <ProfileForm profile={profile} />
+        </div>
+      </section>
 
-      <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        <InfoCard label="Email" value={user.email ?? "—"} />
-        <InfoCard label="Rol" value={roleLabel(role)} />
-        <InfoCard
-          label="Estado del vínculo"
-          value={link?.active ? "Activo" : link ? "Inactivo" : "Sin vínculo"}
-        />
-      </div>
-
-      {customer ? (
-        <section className="surface mt-8 p-6 sm:p-8">
-          <h2 className="font-display text-xl font-semibold text-sr-ink">Tu empresa</h2>
-          <p className="mt-1 text-sm text-sr-ink/55">Datos visibles vía RLS de customers.</p>
+      {role === "customer_user" ? (
+        <section className="surface p-5 sm:p-8">
+          <h2 className="font-display text-xl font-semibold">Empresa</h2>
+          <p className="mt-1 text-sm text-sr-ink/55">
+            Se sincroniza desde el sistema de Sure Rain (Tango). Solo lectura.
+          </p>
           <dl className="mt-6 grid gap-4 sm:grid-cols-2">
-            <InfoCard label="Razón social" value={customer.legal_name} bare />
-            {customer.trade_name ? (
-              <InfoCard label="Nombre comercial" value={customer.trade_name} bare />
-            ) : null}
-            {customer.cuit ? <InfoCard label="CUIT" value={customer.cuit} bare /> : null}
-            {customer.tax_condition ? (
-              <InfoCard label="Condición fiscal" value={customer.tax_condition} bare />
-            ) : null}
-            {customer.email ? <InfoCard label="Email empresa" value={customer.email} bare /> : null}
-            {customer.phone ? <InfoCard label="Teléfono" value={customer.phone} bare /> : null}
-            {addressLine ? (
-              <div className="sm:col-span-2">
-                <InfoCard label="Dirección" value={addressLine} bare />
-              </div>
-            ) : null}
+            <Field label="Razón social" value={dash(customer?.legal_name)} />
+            <Field label="Nombre comercial" value={dash(customer?.trade_name)} />
+            <Field label="CUIT" value={dash(customer?.cuit)} />
+            <Field label="Condición fiscal" value={dash(customer?.tax_condition)} />
+            <Field label="Email empresa" value={dash(customer?.email)} />
+            <Field label="Teléfono" value={dash(customer?.phone)} />
+            <div className="sm:col-span-2">
+              <Field label="Dirección" value={dash(addressLine)} />
+            </div>
           </dl>
           {assignedRep ? (
             <div className="mt-6 rounded-lg border border-sr-green/15 bg-sr-mist/60 px-4 py-3">
               <p className="text-xs font-semibold uppercase tracking-wider text-sr-ink/45">
                 Vendedor asignado
               </p>
-              <p className="mt-1 text-sm font-semibold text-sr-ink">{assignedRep.name}</p>
-              {assignedRep.email ? (
-                <p className="text-sm text-sr-ink/60">{assignedRep.email}</p>
-              ) : null}
+              <p className="mt-1 text-sm font-semibold">{assignedRep.name}</p>
+              <p className="text-sm text-sr-ink/60">{dash(assignedRep.email)}</p>
             </div>
           ) : null}
         </section>
       ) : null}
 
       {salesRep ? (
-        <section className="surface mt-8 p-6 sm:p-8">
-          <h2 className="font-display text-xl font-semibold text-sr-ink">Perfil de vendedor</h2>
+        <section className="surface p-5 sm:p-8">
+          <h2 className="font-display text-xl font-semibold">Perfil de vendedor</h2>
           <dl className="mt-6 grid gap-4 sm:grid-cols-2">
-            <InfoCard label="Nombre" value={salesRep.name} bare />
-            {salesRep.email ? <InfoCard label="Email" value={salesRep.email} bare /> : null}
+            <Field label="Nombre" value={salesRep.name} />
+            <Field label="Email" value={dash(salesRep.email)} />
           </dl>
-          <p className="mt-4 text-sm text-sr-ink/55">
-            La cartera de clientes se muestra con RLS (`current_rep_customer_ids`). Pedidos y
-            backoffice llegan en fases posteriores.
-          </p>
         </section>
       ) : null}
 
-      <details className="surface mt-8 p-5">
-        <summary className="cursor-pointer text-sm font-semibold text-sr-ink/70">
-          Detalle técnico de sesión (JWT / links)
-        </summary>
-        <dl className="mt-4 grid gap-3 sm:grid-cols-2">
-          <InfoCard label="app_role (JWT)" value={claims.app_role ?? "—"} bare mono />
-          <InfoCard label="customer_id (JWT)" value={claims.customer_id ?? "—"} bare mono />
-          <InfoCard label="sales_rep_id (JWT)" value={claims.sales_rep_id ?? "—"} bare mono />
-          <div className="sm:col-span-2">
-            <p className="text-xs font-semibold uppercase tracking-wider text-sr-ink/45">
-              app_user_links
-            </p>
-            <pre className="mt-2 overflow-x-auto rounded-md bg-sr-ink/[0.03] p-3 font-mono text-xs text-sr-ink/80">
-              {link ? JSON.stringify(link, null, 2) : "sin fila / sin permiso"}
-            </pre>
-          </div>
-        </dl>
-      </details>
+      <section className="surface p-5 sm:p-8">
+        <h2 className="font-display text-xl font-semibold">Sesión</h2>
+        <div className="mt-4 max-w-md">
+          <ChangePasswordForm />
+        </div>
+      </section>
     </div>
   );
 }
 
-function InfoCard({
-  label,
-  value,
-  bare = false,
-  mono = false,
-}: {
-  label: string;
-  value: string;
-  bare?: boolean;
-  mono?: boolean;
-}) {
-  const body = (
-    <>
+function Field({ label, value }: { label: string; value: string }) {
+  return (
+    <div>
       <dt className="text-xs font-semibold uppercase tracking-wider text-sr-ink/45">{label}</dt>
-      <dd className={`mt-1 text-sm font-medium ${mono ? "break-all font-mono text-xs" : ""}`}>
-        {value}
-      </dd>
-    </>
+      <dd className="mt-1 text-sm font-medium">{value}</dd>
+    </div>
   );
-  if (bare) return <div>{body}</div>;
-  return <div className="rounded-lg border border-black/5 bg-white p-4">{body}</div>;
 }
