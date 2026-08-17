@@ -30,18 +30,46 @@ body {
   }
 
   .btn-primary {
-    @apply inline-flex items-center justify-center rounded-md bg-sr-green px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-sr-green-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sr-green;
+    @apply inline-flex min-h-11 items-center justify-center rounded-md bg-sr-green px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-sr-green-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sr-green;
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center rounded-md border border-sr-green/25 bg-white/70 px-5 py-2.5 text-sm font-semibold text-sr-green transition hover:border-sr-green hover:bg-white;
+    @apply inline-flex min-h-11 items-center justify-center rounded-md border border-sr-green/25 bg-white/70 px-5 py-2.5 text-sm font-semibold text-sr-green transition hover:border-sr-green hover:bg-white;
   }
 
   .chip {
     @apply inline-flex items-center rounded-md bg-sr-mist px-2.5 py-1 text-xs font-medium text-sr-green-dark;
   }
 
+  .chip-vertical {
+    @apply chip bg-sr-green/10 text-sr-green-dark;
+  }
+
+  .chip-brand {
+    @apply chip border border-black/5 bg-white text-sr-ink/70;
+  }
+
   .surface {
-    @apply rounded-xl border border-black/5 bg-white/80 shadow-soft backdrop-blur-sm;
+    @apply rounded-2xl border border-black/5 bg-white/80 shadow-card backdrop-blur-sm;
+  }
+
+  .rail {
+    @apply flex gap-3 overflow-x-auto snap-x snap-mandatory pb-1 [-ms-overflow-style:none] [scrollbar-width:none];
+  }
+
+  .rail::-webkit-scrollbar {
+    display: none;
+  }
+
+  .rail > * {
+    @apply shrink-0 snap-start;
+  }
+
+  .skeleton {
+    @apply animate-pulse rounded-lg bg-black/5;
+  }
+
+  .tab-bar-safe {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
   }
 }

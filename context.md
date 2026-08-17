@@ -17,6 +17,9 @@ Archivo local + ecommerce del catálogo público de [surerain.com/catalogo](http
 7. **Fase D B2B** — Mis pedidos (lista + detalle + historial de estados) ✅  
 8. **Fase E B2B** — Backoffice `/gestion` pedidos (filtros, cambio estado, audit) ✅  
 9. **Fase F B2B** — ABM clientes / vendedores / asignaciones + historial + RLS writes ✅  
+10. **UX ecommerce-grade (en curso)** — piel Sure Rain, search-first, tab bar mobile, preview Vercel protegido.
+
+Landing de marca para el portal: **`/clientes`**. El enlace desde [surerain.com](https://surerain.com) hacia este portal es un cambio **externo** (fuera de este repo).  
 
 **Fuente de verdad catálogo:** `sure_rain_ecommerce_db`.  
 **Fuente de verdad comercial/Auth:** `sure_rain_commercial_db` (MCP `user-supabase-sure_rain_commercial_db`).  

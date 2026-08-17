@@ -56,6 +56,15 @@ export async function getCommercialSession(): Promise<CommercialSession | null> 
   };
 }
 
+/** Nombre corto para saludo. Hasta user_profiles (Pass 2): parte local del email. */
+export function displayNameFromEmail(email: string | null | undefined): string {
+  if (!email) return "ahí";
+  const local = email.split("@")[0] ?? "";
+  const token = local.split(/[._-]/)[0] || local;
+  if (!token) return "ahí";
+  return token.charAt(0).toUpperCase() + token.slice(1);
+}
+
 export function roleLabel(role: string | null | undefined): string {
   switch (role) {
     case "customer_user":

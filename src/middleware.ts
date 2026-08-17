@@ -43,7 +43,12 @@ export async function middleware(request: NextRequest) {
   const path = request.nextUrl.pathname;
 
   // Public catalog routes — never block.
-  if (path === "/" || path === "/catalogo" || path.startsWith("/catalogo/")) {
+  if (
+    path === "/" ||
+    path === "/clientes" ||
+    path === "/catalogo" ||
+    path.startsWith("/catalogo/")
+  ) {
     return supabaseResponse;
   }
 
