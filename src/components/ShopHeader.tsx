@@ -2,11 +2,8 @@ import { GuestCartMerger } from "@/components/GuestCartMerger";
 import { MobileTabBarNav } from "@/components/MobileTabBar";
 import { ShopHeaderClient } from "@/components/ShopHeaderClient";
 import { getOpenCartOrNull } from "@/lib/commercial/cart";
-import {
-  displayNameFromEmail,
-  getCommercialSession,
-  roleLabel,
-} from "@/lib/commercial/session";
+import { getHeaderIdentity } from "@/lib/commercial/profile";
+import { getCommercialSession, roleLabel } from "@/lib/commercial/session";
 
 export async function ShopHeader({ searchDefault = "" }: { searchDefault?: string }) {
   const session = await getCommercialSession();
@@ -16,13 +13,14 @@ export async function ShopHeader({ searchDefault = "" }: { searchDefault?: strin
       ["sales_rep", "sales_manager", "operations", "admin"].includes(session.claims.app_role),
   );
   const cart = isCustomer ? await getOpenCartOrNull() : null;
-  const displayName = session ? displayNameFromEmail(session.user.email) : null;
+  const identity = session ? await getHeaderIdentity() : null;
 
   return (
     <>
       <GuestCartMerger enabled={Boolean(isCustomer)} />
       <ShopHeaderClient
-        displayName={displayName}
+        displayName={identity?.displayName ?? null}
+        avatarUrl={identity?.avatarUrl ?? null}
         email={session?.user.email ?? null}
         signedIn={Boolean(session)}
         isCustomer={isCustomer}

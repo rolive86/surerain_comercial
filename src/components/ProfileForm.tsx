@@ -1,11 +1,13 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import { useState, useTransition } from "react";
 import { saveProfileAction } from "@/lib/commercial/profile-actions";
 import { PROFILE_INTERESTS } from "@/lib/commercial/profile-constants";
 import type { UserProfile } from "@/lib/commercial/profile";
 
 export function ProfileForm({ profile }: { profile: UserProfile | null }) {
+  const router = useRouter();
   const [pending, startTransition] = useTransition();
   const [message, setMessage] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -19,7 +21,10 @@ export function ProfileForm({ profile }: { profile: UserProfile | null }) {
         startTransition(async () => {
           const result = await saveProfileAction(fd);
           if (!result.ok) setError(result.error);
-          else setMessage("Perfil guardado.");
+          else {
+            setMessage("Perfil guardado.");
+            router.refresh();
+          }
         });
       }}
       className="space-y-4"

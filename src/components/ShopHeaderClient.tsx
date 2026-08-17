@@ -7,6 +7,7 @@ import { signOutCommercial } from "@/lib/commercial/auth-actions";
 
 export type ShopHeaderClientProps = {
   displayName: string | null;
+  avatarUrl: string | null;
   email: string | null;
   signedIn: boolean;
   isCustomer: boolean;
@@ -37,8 +38,23 @@ function AvatarInitial({ name }: { name: string }) {
   );
 }
 
+function AvatarMark({ name, url }: { name: string; url: string | null }) {
+  if (url) {
+    return (
+      // eslint-disable-next-line @next/next/no-img-element
+      <img
+        src={url}
+        alt=""
+        className="h-9 w-9 shrink-0 rounded-full object-cover"
+      />
+    );
+  }
+  return <AvatarInitial name={name} />;
+}
+
 export function ShopHeaderClient({
   displayName,
+  avatarUrl,
   email,
   signedIn,
   isCustomer,
@@ -103,7 +119,7 @@ export function ShopHeaderClient({
                   href="/cuenta"
                   className="flex min-h-11 items-center gap-2 rounded-full py-1 pl-1 pr-2 hover:bg-sr-mist"
                 >
-                  <AvatarInitial name={hello} />
+                  <AvatarMark name={hello} url={avatarUrl} />
                   <span className="hidden max-w-[10rem] truncate text-sm font-semibold text-sr-ink lg:inline">
                     Hola, {hello}
                   </span>

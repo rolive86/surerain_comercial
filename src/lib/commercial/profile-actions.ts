@@ -24,8 +24,8 @@ export async function saveProfileAction(formData: FormData): Promise<{ ok: true 
       { onConflict: "user_id" },
     );
     if (error) return { ok: false, error: error.message };
+    revalidatePath("/", "layout");
     revalidatePath("/cuenta");
-    revalidatePath("/");
     return { ok: true };
   } catch (e) {
     return { ok: false, error: e instanceof Error ? e.message : "Error al guardar." };
@@ -52,8 +52,8 @@ export async function saveAvatarPathAction(path: string): Promise<{ ok: true } |
           avatar_path: path,
         });
     if (error) return { ok: false, error: error.message };
+    revalidatePath("/", "layout");
     revalidatePath("/cuenta");
-    revalidatePath("/");
     return { ok: true };
   } catch (e) {
     return { ok: false, error: e instanceof Error ? e.message : "Error al guardar el avatar." };
