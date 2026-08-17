@@ -207,6 +207,66 @@ export type Database = {
           },
         ]
       }
+      customer_price_list: {
+        Row: {
+          active: boolean
+          created_at: string
+          customer_id: string
+          external_id: string | null
+          id: string
+          last_synced_at: string | null
+          price_list_id: string
+          source_system: string
+          sync_status: string | null
+          tango_id: string | null
+          valid_from: string
+          valid_to: string | null
+        }
+        Insert: {
+          active?: boolean
+          created_at?: string
+          customer_id: string
+          external_id?: string | null
+          id?: string
+          last_synced_at?: string | null
+          price_list_id: string
+          source_system?: string
+          sync_status?: string | null
+          tango_id?: string | null
+          valid_from?: string
+          valid_to?: string | null
+        }
+        Update: {
+          active?: boolean
+          created_at?: string
+          customer_id?: string
+          external_id?: string | null
+          id?: string
+          last_synced_at?: string | null
+          price_list_id?: string
+          source_system?: string
+          sync_status?: string | null
+          tango_id?: string | null
+          valid_from?: string
+          valid_to?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "customer_price_list_customer_id_fkey"
+            columns: ["customer_id"]
+            isOneToOne: false
+            referencedRelation: "customers"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "customer_price_list_price_list_id_fkey"
+            columns: ["price_list_id"]
+            isOneToOne: false
+            referencedRelation: "price_lists"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       customer_sales_rep: {
         Row: {
           active: boolean
@@ -602,6 +662,107 @@ export type Database = {
           },
         ]
       }
+      price_lists: {
+        Row: {
+          active: boolean
+          code: string
+          created_at: string
+          currency: string
+          external_id: string | null
+          id: string
+          last_synced_at: string | null
+          name: string
+          source_system: string
+          sync_status: string | null
+          tango_price_list_id: string | null
+          updated_at: string
+        }
+        Insert: {
+          active?: boolean
+          code: string
+          created_at?: string
+          currency?: string
+          external_id?: string | null
+          id?: string
+          last_synced_at?: string | null
+          name: string
+          source_system?: string
+          sync_status?: string | null
+          tango_price_list_id?: string | null
+          updated_at?: string
+        }
+        Update: {
+          active?: boolean
+          code?: string
+          created_at?: string
+          currency?: string
+          external_id?: string | null
+          id?: string
+          last_synced_at?: string | null
+          name?: string
+          source_system?: string
+          sync_status?: string | null
+          tango_price_list_id?: string | null
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      prices: {
+        Row: {
+          amount: number
+          compare_at_amount: number | null
+          created_at: string
+          external_id: string | null
+          id: string
+          last_synced_at: string | null
+          price_list_id: string
+          product_source_id: string
+          sync_status: string | null
+          tango_id: string | null
+          unit: string | null
+          valid_from: string
+          valid_to: string | null
+        }
+        Insert: {
+          amount: number
+          compare_at_amount?: number | null
+          created_at?: string
+          external_id?: string | null
+          id?: string
+          last_synced_at?: string | null
+          price_list_id: string
+          product_source_id: string
+          sync_status?: string | null
+          tango_id?: string | null
+          unit?: string | null
+          valid_from?: string
+          valid_to?: string | null
+        }
+        Update: {
+          amount?: number
+          compare_at_amount?: number | null
+          created_at?: string
+          external_id?: string | null
+          id?: string
+          last_synced_at?: string | null
+          price_list_id?: string
+          product_source_id?: string
+          sync_status?: string | null
+          tango_id?: string | null
+          unit?: string | null
+          valid_from?: string
+          valid_to?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "prices_price_list_id_fkey"
+            columns: ["price_list_id"]
+            isOneToOne: false
+            referencedRelation: "price_lists"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       sales_reps: {
         Row: {
           active: boolean
@@ -702,6 +863,7 @@ export type Database = {
     }
     Functions: {
       current_customer_id: { Args: never; Returns: string }
+      current_customer_price_list_ids: { Args: never; Returns: string[] }
       current_rep_customer_ids: { Args: never; Returns: string[] }
       current_role: { Args: never; Returns: string }
       custom_access_token_hook: { Args: { event: Json }; Returns: Json }
