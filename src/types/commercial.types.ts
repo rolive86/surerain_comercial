@@ -641,9 +641,64 @@ export type Database = {
         }
         Relationships: []
       }
+      user_profiles: {
+        Row: {
+          avatar_path: string | null
+          created_at: string
+          full_name: string | null
+          interests: Json
+          marketing_opt_in: boolean
+          phone: string | null
+          position: string | null
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          avatar_path?: string | null
+          created_at?: string
+          full_name?: string | null
+          interests?: Json
+          marketing_opt_in?: boolean
+          phone?: string | null
+          position?: string | null
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          avatar_path?: string | null
+          created_at?: string
+          full_name?: string | null
+          interests?: Json
+          marketing_opt_in?: boolean
+          phone?: string | null
+          position?: string | null
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
-      [_ in never]: never
+      v_customer_product_frequency: {
+        Row: {
+          customer_id: string | null
+          primera_vez: string | null
+          product_source_id: string | null
+          ultima_vez: string | null
+          unidades_totales: number | null
+          veces_pedido: number | null
+        }
+        Relationships: []
+      }
+      v_customer_product_pairs: {
+        Row: {
+          customer_id: string | null
+          juntos: number | null
+          product_a: string | null
+          product_b: string | null
+        }
+        Relationships: []
+      }
     }
     Functions: {
       current_customer_id: { Args: never; Returns: string }

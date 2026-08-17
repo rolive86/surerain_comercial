@@ -233,6 +233,71 @@ export async function getFeaturedProducts(limit = 8): Promise<ProductListItem[]>
   return all.slice(0, limit);
 }
 
+/** Resuelve cards del catálogo por `source_id` (recomendaciones / rieles). */
+export async function getCatalogProductsBySourceIds(
+  sourceIds: string[],
+): Promise<ProductListItem[]> {
+  const unique = [...new Set(sourceIds.filter(Boolean))];
+  if (!unique.length) return [];
+
+  const supabase = createServerSupabaseClient();
+  const { data, error } = await supabase
+    .from("products")
+    .select(
+      `
+      id,
+      source_id,
+      name,
+      slug,
+      short_description,
+      brands ( name, slug ),
+      product_types ( name, slug ),
+      featured_image:media!products_featured_image_id_fkey (
+        id, alt_text, bucket, storage_path
+      ),
+      product_categories (
+        is_primary,
+        categories ( name, slug )
+      )
+    `,
+    )
+    .in("source_id", unique)
+    .eq("published", true)
+    .eq("source_active", true);
+  if (error) throw new Error(error.message);
+
+  const mapped = (data ?? []).map((row) => {
+    const brand = Array.isArray(row.brands) ? row.brands[0] : row.brands;
+    const type = Array.isArray(row.product_types)
+      ? row.product_types[0]
+      : row.product_types;
+    const featured = Array.isArray(row.featured_image)
+      ? row.featured_image[0]
+      : row.featured_image;
+    const pcs = row.product_categories ?? [];
+    const primary =
+      pcs.find((pc) => pc.is_primary)?.categories ?? pcs[0]?.categories ?? null;
+    const categoryObj = Array.isArray(primary) ? primary[0] : primary;
+    return {
+      id: row.id,
+      source_id: row.source_id,
+      name: row.name,
+      slug: row.slug,
+      short_description: row.short_description,
+      brand_name: brand?.name ?? null,
+      brand_slug: brand?.slug ?? null,
+      category_name: categoryObj?.name ?? null,
+      category_slug: categoryObj?.slug ?? null,
+      type_name: type?.name ?? null,
+      type_slug: type?.slug ?? null,
+      image: mapMedia(featured),
+    } satisfies ProductListItem;
+  });
+
+  const byId = new Map(mapped.map((p) => [p.source_id, p]));
+  return unique.map((id) => byId.get(id)).filter((p): p is ProductListItem => Boolean(p));
+}
+
 /** Thumbnails del catálogo por `source_id` (p.ej. ítems de carrito/pedido). */
 export async function getProductThumbnailsBySourceIds(
   sourceIds: string[],
