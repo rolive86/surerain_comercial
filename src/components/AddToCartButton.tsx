@@ -3,6 +3,7 @@
 import { useRouter } from "next/navigation";
 import { useState, useTransition } from "react";
 import { addToCartAction } from "@/lib/commercial/cart-actions";
+import { QuantityStepper } from "@/components/QuantityStepper";
 
 const GUEST_CART_KEY = "sr_guest_cart_v1";
 
@@ -41,35 +42,40 @@ export function AddToCartButton({
   productName,
   productSlug,
   authenticated,
+  compact = false,
+  withStepper = false,
 }: {
   productSourceId: string;
   productName: string;
   productSlug: string;
   authenticated: boolean;
+  compact?: boolean;
+  withStepper?: boolean;
 }) {
   const router = useRouter();
   const [pending, startTransition] = useTransition();
+  const [qty, setQty] = useState(1);
   const [message, setMessage] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
 
-  function onClick() {
+  function add(quantity: number) {
     setMessage(null);
     setError(null);
 
     if (!authenticated) {
       const items = readGuestCart();
       const idx = items.findIndex((i) => i.product_source_id === productSourceId);
-      if (idx >= 0) items[idx].quantity += 1;
+      if (idx >= 0) items[idx].quantity += quantity;
       else {
         items.push({
           product_source_id: productSourceId,
           product_name_snapshot: productName,
           product_slug_snapshot: productSlug,
-          quantity: 1,
+          quantity,
         });
       }
       writeGuestCart(items);
-      setMessage("Guardado. Ingresá para sincronizar el carrito.");
+      setMessage("Guardado. Ingresá para sincronizar el pedido.");
       return;
     }
 
@@ -78,7 +84,7 @@ export function AddToCartButton({
         product_source_id: productSourceId,
         product_name_snapshot: productName,
         product_slug_snapshot: productSlug,
-        quantity: 1,
+        quantity,
       });
       if (!result.ok) {
         if (result.error.includes("ingresar")) {
@@ -88,28 +94,46 @@ export function AddToCartButton({
         setError(result.error);
         return;
       }
-      setMessage("Agregado al carrito");
+      setMessage("Agregado al pedido");
       router.refresh();
     });
   }
 
+  const btnClass = compact
+    ? "btn-primary w-full !min-h-11 !px-3 !py-2 text-xs disabled:opacity-60"
+    : "btn-primary disabled:opacity-60";
+
   return (
     <div className="space-y-2">
-      <button
-        type="button"
-        onClick={onClick}
-        disabled={pending}
-        className="btn-primary disabled:opacity-60"
-      >
-        {pending ? "Agregando…" : "Agregar al carrito"}
-      </button>
-      {message ? <p className="text-sm text-sr-green">{message}</p> : null}
-      {error ? <p className="text-sm text-red-700">{error}</p> : null}
-      {!authenticated ? (
-        <p className="text-xs text-sr-ink/50">
-          Sin sesión se guarda localmente y se fusiona al ingresar.
-        </p>
-      ) : null}
+      {withStepper ? (
+        <div className="flex flex-wrap items-center gap-2">
+          <QuantityStepper
+            value={qty}
+            onChange={setQty}
+            disabled={pending}
+            id={`qty-${productSourceId}`}
+          />
+          <button
+            type="button"
+            onClick={() => add(qty)}
+            disabled={pending}
+            className={btnClass}
+          >
+            {pending ? "Agregando…" : "Agregar al pedido"}
+          </button>
+        </div>
+      ) : (
+        <button
+          type="button"
+          onClick={() => add(1)}
+          disabled={pending}
+          className={btnClass}
+        >
+          {pending ? "Agregando…" : "Agregar al pedido"}
+        </button>
+      )}
+      {message ? <p className="text-xs text-sr-green">{message}</p> : null}
+      {error ? <p className="text-xs text-red-700">{error}</p> : null}
     </div>
   );
 }

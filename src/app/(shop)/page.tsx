@@ -5,16 +5,102 @@ import {
   getFeaturedProducts,
 } from "@/lib/catalog";
 import { ProductGrid } from "@/components/ProductCard";
+import { EmptyState, ProductRail, ReorderRail } from "@/components/ProductRail";
 import { getCommercialSession } from "@/lib/commercial/session";
+import { getGreetingName } from "@/lib/commercial/profile";
+import { getDashboardRecommendations } from "@/lib/recommendations";
+import { createCommercialServerClient } from "@/lib/supabase/commercial/server";
 
 export const dynamic = "force-dynamic";
 
 export default async function HomePage() {
+  const session = await getCommercialSession();
+  const isCustomer = session?.claims.app_role === "customer_user";
+
+  if (session && isCustomer) {
+    return <CustomerDashboard email={session.user.email} customerId={session.claims.customer_id} />;
+  }
+
+  return <PublicHome signedIn={Boolean(session)} />;
+}
+
+async function CustomerDashboard({
+  email,
+  customerId,
+}: {
+  email: string | null;
+  customerId: string | null;
+}) {
+  const [name, recs, company] = await Promise.all([
+    getGreetingName(email),
+    getDashboardRecommendations(),
+    loadCompanyLabel(customerId),
+  ]);
+
+  const hasAny = recs.reorder.length + recs.habitual.length + recs.recommended.length > 0;
+
+  return (
+    <div className="container-sr space-y-10 py-8 sm:py-12">
+      <section>
+        <h1 className="font-display text-3xl font-bold text-sr-ink sm:text-4xl">
+          Hola, {name} 👋
+        </h1>
+        <p className="mt-1 text-sm text-sr-ink/55">{company}</p>
+        <div className="mt-5 flex flex-wrap gap-2">
+          <Link href="/catalogo" className="btn-primary">
+            Catálogo
+          </Link>
+          <Link href="/mis-pedidos" className="btn-secondary">
+            Mis compras
+          </Link>
+          <Link href="/carrito" className="btn-secondary">
+            Pedido
+          </Link>
+        </div>
+      </section>
+
+      {!hasAny ? (
+        <EmptyState
+          title="Todavía no hay historial. Empezá por el catálogo."
+          ctaHref="/catalogo"
+          ctaLabel="Ver catálogo"
+        />
+      ) : (
+        <>
+          <ReorderRail items={recs.reorder} authenticated />
+          <ProductRail
+            title="Tus productos habituales"
+            products={recs.habitual}
+            authenticated
+          />
+          <ProductRail
+            title="Recomendados para vos"
+            subtitle={recs.coldStart ? "Destacados del catálogo" : undefined}
+            products={recs.recommended}
+            authenticated
+          />
+        </>
+      )}
+    </div>
+  );
+}
+
+async function loadCompanyLabel(customerId: string | null): Promise<string> {
+  if (!customerId) return "—";
+  const supabase = await createCommercialServerClient();
+  const { data } = await supabase
+    .from("customers")
+    .select("legal_name, trade_name")
+    .eq("id", customerId)
+    .maybeSingle();
+  return data?.trade_name || data?.legal_name || "—";
+}
+
+async function PublicHome({ signedIn }: { signedIn: boolean }) {
   let categories: Awaited<ReturnType<typeof getCategories>> = [];
   let featured: Awaited<ReturnType<typeof getFeaturedProducts>> = [];
   let stats = { products: 0, categories: 0, brands: 0 };
   let errorMessage: string | null = null;
-  const session = await getCommercialSession();
 
   try {
     [categories, featured, stats] = await Promise.all([
@@ -48,7 +134,7 @@ export default async function HomePage() {
               <Link href="/catalogo" className="btn-primary">
                 Ver catálogo completo
               </Link>
-              {session ? (
+              {signedIn ? (
                 <Link href="/cuenta" className="btn-secondary">
                   Mi cuenta
                 </Link>
@@ -96,7 +182,7 @@ export default async function HomePage() {
               <Link
                 key={cat.id}
                 href={`/catalogo?categoria=${cat.slug}`}
-                className="surface px-4 py-5 transition hover:border-sr-green/25 hover:shadow-soft"
+                className="surface px-4 py-5 transition hover:border-sr-green/25 hover:shadow-card"
               >
                 <span className="font-display text-lg font-semibold text-sr-ink">
                   {cat.name}
