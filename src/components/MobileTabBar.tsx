@@ -111,6 +111,7 @@ export function MobileTabBarNav({ cartCount }: { cartCount: number }) {
   return (
     <nav
       aria-label="Navegación principal"
+      data-testid="shop-tab-bar"
       className="fixed inset-x-0 bottom-0 z-50 border-t border-black/5 bg-[#f7f5f0]/95 backdrop-blur-md tab-bar-safe lg:hidden"
     >
       <ul className="grid grid-cols-5">

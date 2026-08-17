@@ -254,7 +254,10 @@ export default async function ProductPage({ params }: { params: Params }) {
         </div>
       ) : null}
 
-      <div className="fixed inset-x-0 bottom-[calc(3.65rem+env(safe-area-inset-bottom))] z-40 border-t border-black/5 bg-[#f7f5f0]/95 px-4 py-3 backdrop-blur-md lg:hidden">
+      <div
+        data-testid="product-sticky-cta"
+        className="fixed inset-x-0 bottom-[calc(3.65rem+env(safe-area-inset-bottom))] z-40 border-t border-black/5 bg-[#f7f5f0]/95 px-4 py-3 backdrop-blur-md lg:hidden"
+      >
         {addControl}
       </div>
     </div>

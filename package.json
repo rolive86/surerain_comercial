@@ -20,7 +20,9 @@
     "smoke": "tsx --tsconfig tsconfig.scripts.json scripts/smoke.ts",
     "all": "tsx --tsconfig tsconfig.scripts.json scripts/all.ts",
     "typecheck": "tsc --noEmit -p tsconfig.json",
-    "typecheck:scripts": "tsc --noEmit -p tsconfig.scripts.json"
+    "typecheck:scripts": "tsc --noEmit -p tsconfig.scripts.json",
+    "test:avatars-rls": "tsx --tsconfig tsconfig.scripts.json scripts/verify-avatars-rls.ts",
+    "test:responsive": "tsx --tsconfig tsconfig.scripts.json scripts/verify-responsive.ts"
   },
   "engines": {
     "node": ">=20"
@@ -43,6 +45,7 @@
     "@types/react": "^19.1.0",
     "@types/react-dom": "^19.1.0",
     "autoprefixer": "^10.4.21",
+    "playwright": "^1.62.1",
     "postcss": "^8.5.3",
     "tailwindcss": "^3.4.17",
     "tsx": "^4.19.3",

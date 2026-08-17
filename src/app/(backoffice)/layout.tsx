@@ -21,46 +21,59 @@ export default async function BackofficeLayout({
 
   return (
     <div className="min-h-screen bg-[#eef1ef]">
-      <header className="border-b border-black/10 bg-[#0f1f18] text-white">
-        <div className="mx-auto flex h-14 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center gap-6">
-            <Link href="/gestion/pedidos" className="font-display text-lg font-bold tracking-tight">
-              Sure Rain <span className="font-sans text-xs font-medium uppercase tracking-[0.16em] text-white/50">Gestión</span>
+      <header className="sticky top-0 z-40 border-b border-black/10 bg-[#0f1f18] text-white">
+        <div className="mx-auto flex min-h-14 max-w-7xl flex-wrap items-center justify-between gap-x-2 gap-y-1 px-4 py-1 sm:px-6 lg:px-8">
+          <div className="flex min-w-0 items-center gap-2 lg:gap-4">
+            <Link
+              href="/gestion/pedidos"
+              className="inline-flex min-h-11 items-center font-display text-lg font-bold tracking-tight"
+            >
+              Sure Rain{" "}
+              <span className="ml-1 font-sans text-xs font-medium uppercase tracking-[0.16em] text-white/50">
+                Gestión
+              </span>
             </Link>
-            <nav className="hidden items-center gap-1 sm:flex">
+            <nav className="hidden items-center gap-1 lg:flex">
               {nav.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="rounded-md px-3 py-1.5 text-sm font-medium text-white/75 transition hover:bg-white/10 hover:text-white"
+                  className="inline-flex min-h-11 items-center rounded-md px-3 text-sm font-medium text-white/75 transition hover:bg-white/10 hover:text-white"
                 >
                   {item.label}
                 </Link>
               ))}
             </nav>
           </div>
-          <div className="flex items-center gap-3 text-sm">
-            <Link href="/catalogo" className="text-white/55 hover:text-white">
+          <div className="flex min-w-0 items-center gap-1 text-sm">
+            <Link
+              href="/catalogo"
+              className="inline-flex min-h-11 items-center rounded-md px-3 text-white/70 hover:bg-white/10 hover:text-white"
+            >
               Volver al catálogo
             </Link>
-            <span className="hidden text-white/40 sm:inline">|</span>
-            <span className="hidden text-white/70 sm:inline">{session.user.email}</span>
-            <span className="rounded bg-white/10 px-2 py-0.5 text-xs">
+            <span className="hidden max-w-[12rem] truncate px-2 text-white/70 lg:inline">
+              {session.user.email}
+            </span>
+            <span className="hidden rounded bg-white/10 px-2 py-0.5 text-xs sm:inline">
               {roleLabel(session.claims.app_role)}
             </span>
             <form action={signOutCommercial}>
-              <button type="submit" className="text-white/60 hover:text-white">
+              <button
+                type="submit"
+                className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-md px-3 text-white/70 hover:bg-white/10 hover:text-white"
+              >
                 Salir
               </button>
             </form>
           </div>
         </div>
-        <nav className="flex gap-1 border-t border-white/10 px-4 py-2 sm:hidden">
+        <nav className="flex gap-1 border-t border-white/10 px-2 py-1 lg:hidden">
           {nav.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className="rounded-md px-3 py-1.5 text-sm text-white/75 hover:bg-white/10"
+              className="inline-flex min-h-11 flex-1 items-center justify-center rounded-md px-2 text-sm text-white/75 hover:bg-white/10"
             >
               {item.label}
             </Link>

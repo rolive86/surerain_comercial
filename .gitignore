@@ -17,4 +17,7 @@ tsconfig.tsbuildinfo
 
 # Pipeline artifacts (regenerable)
 data/
-reports/
+reports/*
+!reports/responsive/
+!reports/responsive/**
+!reports/avatars-rls.md
