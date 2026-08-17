@@ -20,6 +20,11 @@ export type OrderListItem = {
   created_at: string;
   item_count: number;
   total_quantity: number;
+  preview_items: Array<{
+    product_source_id: string;
+    product_name_snapshot: string;
+    quantity: number;
+  }>;
 };
 
 export type OrderDetail = {
@@ -65,6 +70,7 @@ async function loadStatusMap(): Promise<Map<string, string>> {
 
 export async function listCustomerOrders(filters?: {
   status?: string;
+  q?: string;
 }): Promise<OrderListItem[]> {
   const session = await getCommercialSession();
   requireCustomerSession(session);
@@ -76,13 +82,16 @@ export async function listCustomerOrders(filters?: {
     .select(
       `
       id, order_number, status, submitted_at, created_at,
-      order_items ( id, quantity )
+      order_items ( id, quantity, product_source_id, product_name_snapshot )
     `,
     )
     .order("created_at", { ascending: false });
 
   if (filters?.status) {
     query = query.eq("status", filters.status);
+  }
+  if (filters?.q?.trim()) {
+    query = query.ilike("order_number", `%${filters.q.trim()}%`);
   }
 
   const { data, error } = await query;
@@ -99,6 +108,11 @@ export async function listCustomerOrders(filters?: {
       created_at: row.created_at,
       item_count: items.length,
       total_quantity: items.reduce((sum, i) => sum + Number(i.quantity), 0),
+      preview_items: items.slice(0, 4).map((i) => ({
+        product_source_id: i.product_source_id,
+        product_name_snapshot: i.product_name_snapshot,
+        quantity: Number(i.quantity),
+      })),
     };
   });
 }

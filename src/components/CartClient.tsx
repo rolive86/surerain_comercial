@@ -13,9 +13,13 @@ import type { CartView } from "@/lib/commercial/cart";
 export function CartClient({
   cart,
   error,
+  searchOk,
+  searchMissing,
 }: {
   cart: CartView;
   error?: string | null;
+  searchOk?: string | null;
+  searchMissing?: string | null;
 }) {
   const router = useRouter();
   const [pending, startTransition] = useTransition();
@@ -53,6 +57,11 @@ export function CartClient({
       {error ? (
         <p className="rounded-md bg-red-50 px-3 py-2 text-sm text-red-700" role="alert">
           {error}
+        </p>
+      ) : null}
+      {searchOk === "reorder" ? (
+        <p className="rounded-md bg-emerald-50 px-3 py-2 text-sm text-emerald-800">
+          Volviste a cargar el pedido.{searchMissing ? ` ${searchMissing} producto(s) ya no están disponibles.` : ""}
         </p>
       ) : null}
 

@@ -1,8 +1,12 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
+import { OrderTimeline, orderStatusClass } from "@/components/OrderTimeline";
+import { reorderOrderAction } from "@/lib/commercial/cart-actions";
 import { getCustomerOrderDetail } from "@/lib/commercial/orders";
 import { getCommercialSession } from "@/lib/commercial/session";
+import { getProductThumbnailsBySourceIds } from "@/lib/catalog";
 
 type Params = Promise<{ id: string }>;
 
@@ -29,7 +33,13 @@ function formatDate(value: string | null) {
   return new Date(value).toLocaleString("es-AR");
 }
 
-export default async function PedidoPage({ params }: { params: Params }) {
+export default async function PedidoPage({
+  params,
+  searchParams,
+}: {
+  params: Params;
+  searchParams: Promise<{ error?: string }>;
+}) {
   const session = await getCommercialSession();
   if (!session) redirect("/login?next=/mis-pedidos");
   if (session.claims.app_role !== "customer_user") {
@@ -37,75 +47,82 @@ export default async function PedidoPage({ params }: { params: Params }) {
   }
 
   const { id } = await params;
+  const flash = await searchParams;
   const order = await getCustomerOrderDetail(id);
   if (!order) notFound();
 
+  const thumbs = await getProductThumbnailsBySourceIds(
+    order.items.map((i) => i.product_source_id),
+  );
+
   return (
-    <div className="container-sr py-12">
+    <div className="container-sr py-10 sm:py-12">
       <nav className="mb-6 text-sm text-sr-ink/50">
         <Link href="/mis-pedidos" className="hover:text-sr-green">
-          Mis pedidos
+          Mis compras
         </Link>
         <span className="mx-2">/</span>
         <span className="text-sr-ink/80">{order.order_number}</span>
       </nav>
 
+      {flash.error ? (
+        <p className="mb-4 rounded-md bg-red-50 px-3 py-2 text-sm text-red-700">{flash.error}</p>
+      ) : null}
+
       <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
         <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-sr-green">
-            Detalle de pedido
-          </p>
-          <h1 className="mt-1 font-display text-3xl font-bold text-sr-green sm:text-4xl">
+          <h1 className="font-display text-3xl font-bold text-sr-ink sm:text-4xl">
             {order.order_number}
           </h1>
           <p className="mt-2 text-sm text-sr-ink/60">
-            <span className="chip">{order.status_label}</span>
-            <span className="ml-2">
-              Enviado: {formatDate(order.submitted_at ?? order.created_at)}
-            </span>
+            <span className={`chip ${orderStatusClass(order.status)}`}>{order.status_label}</span>
+            <span className="ml-2">Enviado: {formatDate(order.submitted_at ?? order.created_at)}</span>
           </p>
         </div>
-        <div className="flex flex-wrap gap-2">
-          <Link href="/mis-pedidos" className="btn-secondary">
-            Volver al listado
-          </Link>
-          <Link href="/catalogo" className="btn-primary">
-            Seguir comprando
-          </Link>
-        </div>
+        <form action={reorderOrderAction}>
+          <input type="hidden" name="order_id" value={order.id} />
+          <button type="submit" className="btn-primary">
+            Volver a pedir
+          </button>
+        </form>
       </div>
 
       <section className="surface mt-8 p-6">
         <h2 className="font-display text-xl font-semibold">Ítems</h2>
-        {order.items.length === 0 ? (
-          <p className="mt-4 text-sm text-sr-ink/55">Sin ítems.</p>
-        ) : (
-          <ul className="mt-4 divide-y divide-black/5">
-            {order.items.map((item) => (
-              <li key={item.id} className="flex items-baseline justify-between gap-4 py-3">
-                <div>
-                  {item.product_slug_snapshot ? (
-                    <Link
-                      href={`/catalogo/${item.product_slug_snapshot}`}
-                      className="font-medium hover:text-sr-green"
-                    >
-                      {item.product_name_snapshot}
-                    </Link>
-                  ) : (
-                    <p className="font-medium">{item.product_name_snapshot}</p>
-                  )}
-                  <p className="font-mono text-xs text-sr-ink/45">{item.product_source_id}</p>
+        <ul className="mt-4 divide-y divide-black/5">
+          {order.items.map((item) => {
+            const thumb = thumbs.get(item.product_source_id);
+            const href = item.product_slug_snapshot
+              ? `/catalogo/${item.product_slug_snapshot}`
+              : "/catalogo";
+            return (
+              <li key={item.id} className="flex items-center gap-3 py-3">
+                <span className="relative h-14 w-14 shrink-0 overflow-hidden rounded-md bg-sr-mist">
+                  {thumb?.url ? (
+                    <Image
+                      src={thumb.url}
+                      alt={item.product_name_snapshot}
+                      fill
+                      sizes="56px"
+                      className="object-cover"
+                    />
+                  ) : null}
+                </span>
+                <div className="min-w-0 flex-1">
+                  <Link href={href} className="font-medium hover:text-sr-green">
+                    {item.product_name_snapshot}
+                  </Link>
                 </div>
                 <p className="text-sm font-semibold">× {item.quantity}</p>
               </li>
-            ))}
-          </ul>
-        )}
+            );
+          })}
+        </ul>
       </section>
 
       {order.customer_notes.length ? (
         <section className="surface mt-4 p-6">
-          <h2 className="font-display text-xl font-semibold">Tus notas</h2>
+          <h2 className="font-display text-xl font-semibold">Observaciones</h2>
           <ul className="mt-4 space-y-3">
             {order.customer_notes.map((n) => (
               <li key={n.id} className="rounded-md bg-sr-mist/50 px-3 py-2 text-sm text-sr-ink/75">
@@ -118,26 +135,11 @@ export default async function PedidoPage({ params }: { params: Params }) {
       ) : null}
 
       <section className="surface mt-4 p-6">
-        <h2 className="font-display text-xl font-semibold">Historial de estado</h2>
-        {order.history.length === 0 ? (
-          <p className="mt-4 text-sm text-sr-ink/55">Sin historial.</p>
-        ) : (
-          <ol className="mt-4 space-y-3 border-l border-sr-green/20 pl-4">
-            {order.history.map((h) => (
-              <li key={h.id} className="relative text-sm text-sr-ink/70">
-                <span className="absolute -left-[1.35rem] top-1.5 h-2.5 w-2.5 rounded-full bg-sr-green" />
-                <p>
-                  <span className="font-semibold text-sr-ink">{h.to_status_label}</span>
-                  {h.from_status ? (
-                    <span className="text-sr-ink/40"> ← {h.from_status}</span>
-                  ) : null}
-                </p>
-                <p className="text-xs text-sr-ink/40">{formatDate(h.created_at)}</p>
-                {h.comment ? <p className="mt-1 text-sr-ink/55">{h.comment}</p> : null}
-              </li>
-            ))}
-          </ol>
-        )}
+        <h2 className="font-display text-xl font-semibold">Seguir pedido</h2>
+        <OrderTimeline history={order.history} />
+        <p className="mt-6 rounded-lg bg-sr-mist/70 px-3 py-2 text-sm text-sr-ink/60">
+          Seguimiento logístico próximamente.
+        </p>
       </section>
     </div>
   );

@@ -1,14 +1,17 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { redirect } from "next/navigation";
+import { orderStatusClass } from "@/components/OrderTimeline";
 import {
   listActiveOrderStatuses,
   listCustomerOrders,
 } from "@/lib/commercial/orders";
 import { getCommercialSession } from "@/lib/commercial/session";
+import { getProductThumbnailsBySourceIds } from "@/lib/catalog";
 
 export const metadata: Metadata = {
-  title: "Mis pedidos",
+  title: "Mis compras",
   description: "Historial de pedidos B2B Sure Rain.",
 };
 
@@ -20,7 +23,7 @@ function formatDate(value: string | null) {
 export default async function MisPedidosPage({
   searchParams,
 }: {
-  searchParams: Promise<{ estado?: string }>;
+  searchParams: Promise<{ estado?: string; q?: string }>;
 }) {
   const session = await getCommercialSession();
   if (!session) redirect("/login?next=/mis-pedidos");
@@ -30,39 +33,61 @@ export default async function MisPedidosPage({
 
   const params = await searchParams;
   const statusFilter = params.estado?.trim() || undefined;
+  const q = params.q?.trim() || undefined;
 
   const [orders, statuses] = await Promise.all([
-    listCustomerOrders({ status: statusFilter }),
+    listCustomerOrders({ status: statusFilter, q }),
     listActiveOrderStatuses(),
   ]);
 
+  const thumbs = await getProductThumbnailsBySourceIds(
+    orders.flatMap((o) => o.preview_items.map((i) => i.product_source_id)),
+  );
+
   return (
-    <div className="container-sr py-12">
+    <div className="container-sr py-10 sm:py-12">
       <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
         <div>
           <p className="text-xs font-semibold uppercase tracking-[0.18em] text-sr-green">
-            Portal B2B
+            Portal de pedidos
           </p>
-          <h1 className="mt-1 font-display text-3xl font-bold text-sr-green sm:text-4xl">
-            Mis pedidos
+          <h1 className="mt-1 font-display text-3xl font-bold text-sr-ink sm:text-4xl">
+            Mis compras
           </h1>
           <p className="mt-2 text-sm text-sr-ink/60">
-            Pedidos de tu empresa (RLS). Sin precios inventados.
+            Pedidos de tu empresa. Sin precios publicados en esta etapa.
           </p>
         </div>
         <Link href="/carrito" className="btn-secondary">
-          Ir al carrito
+          Ir al pedido
         </Link>
       </div>
 
-      <div className="mt-8 flex flex-wrap gap-2">
+      <form className="mt-6" action="/mis-pedidos" method="get">
+        {statusFilter ? (
+          <input type="hidden" name="estado" value={statusFilter} />
+        ) : null}
+        <label className="sr-only" htmlFor="order-search">
+          Buscar por número
+        </label>
+        <input
+          id="order-search"
+          name="q"
+          defaultValue={q ?? ""}
+          placeholder="Buscar por número…"
+          className="h-11 w-full max-w-md rounded-xl border border-black/10 bg-white px-3 text-sm outline-none ring-sr-green/30 focus:ring-2"
+        />
+      </form>
+
+      <div className="mt-4 flex flex-wrap gap-2">
         <FilterChip href="/mis-pedidos" active={!statusFilter} label="Todos" />
         {statuses.map((s) => (
           <FilterChip
             key={s.code}
-            href={`/mis-pedidos?estado=${encodeURIComponent(s.code)}`}
+            href={`/mis-pedidos?estado=${encodeURIComponent(s.code)}${q ? `&q=${encodeURIComponent(q)}` : ""}`}
             active={statusFilter === s.code}
             label={s.label}
+            status={s.code}
           />
         ))}
       </div>
@@ -70,33 +95,53 @@ export default async function MisPedidosPage({
       {orders.length === 0 ? (
         <div className="surface mt-8 px-6 py-16 text-center">
           <p className="font-display text-xl text-sr-ink/70">
-            {statusFilter ? "No hay pedidos con ese estado." : "Todavía no tenés pedidos."}
-          </p>
-          <p className="mt-2 text-sm text-sr-ink/45">
-            Confirmá un pedido desde el carrito para verlo acá.
+            {statusFilter || q ? "No hay pedidos con ese criterio." : "Todavía no tenés compras."}
           </p>
           <Link href="/catalogo" className="btn-primary mt-6 inline-flex">
             Ir al catálogo
           </Link>
         </div>
       ) : (
-        <ul className="mt-8 divide-y divide-black/5 overflow-hidden rounded-xl border border-black/5 bg-white">
+        <ul className="mt-8 space-y-3">
           {orders.map((order) => (
             <li key={order.id}>
               <Link
                 href={`/pedido/${order.id}`}
-                className="flex flex-col gap-2 px-4 py-4 transition hover:bg-sr-mist/50 sm:flex-row sm:items-center sm:justify-between"
+                className="surface flex flex-col gap-3 p-4 transition hover:shadow-card-hover sm:flex-row sm:items-center sm:justify-between"
               >
-                <div>
+                <div className="min-w-0">
                   <p className="font-display text-lg font-semibold text-sr-ink">
                     {order.order_number}
                   </p>
                   <p className="mt-1 text-sm text-sr-ink/55">
                     {formatDate(order.submitted_at ?? order.created_at)} · {order.item_count}{" "}
-                    producto(s) · cant. {order.total_quantity}
+                    producto(s)
                   </p>
+                  <div className="mt-2 flex gap-1">
+                    {order.preview_items.map((item) => {
+                      const thumb = thumbs.get(item.product_source_id);
+                      return (
+                        <span
+                          key={item.product_source_id}
+                          className="relative h-10 w-10 overflow-hidden rounded-md bg-sr-mist"
+                        >
+                          {thumb?.url ? (
+                            <Image
+                              src={thumb.url}
+                              alt={item.product_name_snapshot}
+                              fill
+                              sizes="40px"
+                              className="object-cover"
+                            />
+                          ) : null}
+                        </span>
+                      );
+                    })}
+                  </div>
                 </div>
-                <span className="chip w-fit">{order.status_label}</span>
+                <span className={`chip w-fit ${orderStatusClass(order.status)}`}>
+                  {order.status_label}
+                </span>
               </Link>
             </li>
           ))}
@@ -110,18 +155,20 @@ function FilterChip({
   href,
   label,
   active,
+  status,
 }: {
   href: string;
   label: string;
   active: boolean;
+  status?: string;
 }) {
   return (
     <Link
       href={href}
       className={
         active
-          ? "chip bg-sr-green text-white"
-          : "chip bg-white text-sr-ink/70 hover:border-sr-green/30"
+          ? `chip min-h-11 px-3 ${status ? orderStatusClass(status) : "bg-sr-green text-white"}`
+          : "chip min-h-11 bg-white px-3 text-sr-ink/70"
       }
     >
       {label}

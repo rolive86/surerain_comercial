@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default async function CarritoPage({
   searchParams,
 }: {
-  searchParams: Promise<{ error?: string }>;
+  searchParams: Promise<{ error?: string; ok?: string; faltan?: string }>;
 }) {
   const session = await getCommercialSession();
   if (!session) redirect("/login?next=/carrito");
@@ -51,7 +51,12 @@ export default async function CarritoPage({
         {cart.itemCount} ítem(s) · precios no publicados en esta etapa
       </p>
       <div className="mt-8">
-        <CartClient cart={cartWithImages} error={params.error ?? null} />
+        <CartClient
+          cart={cartWithImages}
+          error={params.error ?? null}
+          searchOk={params.ok ?? null}
+          searchMissing={params.faltan ?? null}
+        />
       </div>
     </div>
   );
