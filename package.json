@@ -22,7 +22,8 @@
     "typecheck": "tsc --noEmit -p tsconfig.json",
     "typecheck:scripts": "tsc --noEmit -p tsconfig.scripts.json",
     "test:avatars-rls": "tsx --tsconfig tsconfig.scripts.json scripts/verify-avatars-rls.ts",
-    "test:responsive": "tsx --tsconfig tsconfig.scripts.json scripts/verify-responsive.ts"
+    "test:responsive": "tsx --tsconfig tsconfig.scripts.json scripts/verify-responsive.ts",
+    "tango:load": "tsx --tsconfig tsconfig.scripts.json scripts/tango/load-json.ts"
   },
   "engines": {
     "node": ">=20"
