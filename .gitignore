@@ -21,3 +21,4 @@ reports/*
 !reports/responsive/
 !reports/responsive/**
 !reports/avatars-rls.md
+!reports/product-map.md

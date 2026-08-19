@@ -48,7 +48,7 @@ export default async function CarritoPage({
     <div className="container-sr py-12">
       <h1 className="font-display text-3xl font-bold text-sr-green">Carrito</h1>
       <p className="mt-2 text-sm text-sr-ink/60">
-        {cart.itemCount} ítem(s) · precios no publicados en esta etapa
+        {cart.itemCount} ítem(s)
       </p>
       <div className="mt-8">
         <CartClient

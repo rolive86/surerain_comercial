@@ -30,6 +30,7 @@ export type ProductListItem = {
   type_name: string | null;
   type_slug: string | null;
   image: MediaInfo | null;
+  finalPrice?: { amount: number; currency: string } | null;
 };
 
 export type ProductDetail = ProductListItem & {

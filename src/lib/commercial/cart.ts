@@ -1,5 +1,6 @@
 import { createCommercialServerClient } from "@/lib/supabase/commercial/server";
 import { getCommercialSession } from "@/lib/commercial/session";
+import { getFinalPricesBySourceIds } from "@/lib/commercial/pricing";
 
 export type CartItemInput = {
   product_source_id: string;
@@ -21,6 +22,7 @@ export type CartView = {
     unit_snapshot: string | null;
     image_url?: string | null;
     image_alt?: string | null;
+    unit_price?: number | null;
   }>;
   itemCount: number;
 };
@@ -87,11 +89,17 @@ async function loadCartView(cartId: string): Promise<CartView> {
     quantity: Number(item.quantity),
   }));
 
+  const prices = await getFinalPricesBySourceIds(mapped.map((i) => i.product_source_id));
+  const withPrices = mapped.map((item) => ({
+    ...item,
+    unit_price: prices.get(item.product_source_id)?.amount ?? null,
+  }));
+
   return {
     id: cart.id,
     customer_id: cart.customer_id,
-    items: mapped,
-    itemCount: mapped.reduce((sum, item) => sum + Number(item.quantity), 0),
+    items: withPrices,
+    itemCount: withPrices.reduce((sum, item) => sum + Number(item.quantity), 0),
   };
 }
 
@@ -226,7 +234,7 @@ export async function confirmOpenCart(customerNote?: string): Promise<{
       product_slug_snapshot: item.product_slug_snapshot,
       unit_snapshot: item.unit_snapshot,
       quantity: item.quantity,
-      unit_price_snapshot: null,
+      unit_price_snapshot: item.unit_price ?? null,
       discount_snapshot: null,
       metadata_snapshot: {},
     })),

@@ -11,6 +11,7 @@ import {
 } from "@/lib/catalog";
 import { getCommercialSession } from "@/lib/commercial/session";
 import { getAlsoBoughtSourceIds } from "@/lib/recommendations";
+import { formatFinalUsd, getFinalPriceForSourceId, withFinalPrices } from "@/lib/commercial/pricing";
 
 export const dynamic = "force-dynamic";
 
@@ -72,6 +73,11 @@ export default async function ProductPage({ params }: { params: Params }) {
       if (together.length >= 8) break;
     }
   }
+  if (authenticated) {
+    together = await withFinalPrices(together);
+  }
+
+  const finalPrice = authenticated ? await getFinalPriceForSourceId(product.source_id) : null;
 
   const addControl = (
     <AddToCartButton
@@ -167,6 +173,12 @@ export default async function ProductPage({ params }: { params: Params }) {
           </h1>
           {product.brand_name ? (
             <p className="mt-2 text-base text-sr-ink/55">{product.brand_name}</p>
+          ) : null}
+
+          {authenticated ? (
+            <p className="mt-4 font-display text-2xl font-semibold text-sr-green">
+              {finalPrice ? formatFinalUsd(finalPrice.amount) : "Precio a confirmar"}
+            </p>
           ) : null}
 
           <div className="mt-6 hidden lg:block">{addControl}</div>

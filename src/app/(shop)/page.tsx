@@ -10,6 +10,7 @@ import { getCommercialSession } from "@/lib/commercial/session";
 import { getGreetingName } from "@/lib/commercial/profile";
 import { getDashboardRecommendations } from "@/lib/recommendations";
 import { createCommercialServerClient } from "@/lib/supabase/commercial/server";
+import { withFinalPrices } from "@/lib/commercial/pricing";
 
 export const dynamic = "force-dynamic";
 
@@ -35,6 +36,11 @@ async function CustomerDashboard({
     getGreetingName(email),
     getDashboardRecommendations(),
     loadCompanyLabel(customerId),
+  ]);
+  const [reorder, habitual, recommended] = await Promise.all([
+    withFinalPrices(recs.reorder),
+    withFinalPrices(recs.habitual),
+    withFinalPrices(recs.recommended),
   ]);
 
   const hasAny = recs.reorder.length + recs.habitual.length + recs.recommended.length > 0;
@@ -67,16 +73,16 @@ async function CustomerDashboard({
         />
       ) : (
         <>
-          <ReorderRail items={recs.reorder} authenticated />
+          <ReorderRail items={reorder} authenticated />
           <ProductRail
             title="Tus productos habituales"
-            products={recs.habitual}
+            products={habitual}
             authenticated
           />
           <ProductRail
             title="Recomendados para vos"
             subtitle={recs.coldStart ? "Destacados del catálogo" : undefined}
-            products={recs.recommended}
+            products={recommended}
             authenticated
           />
         </>

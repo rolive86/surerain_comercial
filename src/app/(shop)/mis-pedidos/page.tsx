@@ -55,7 +55,7 @@ export default async function MisPedidosPage({
             Mis compras
           </h1>
           <p className="mt-2 text-sm text-sr-ink/60">
-            Pedidos de tu empresa. Sin precios publicados en esta etapa.
+            Pedidos de tu empresa. El precio queda congelado al confirmar.
           </p>
         </div>
         <Link href="/carrito" className="btn-secondary">

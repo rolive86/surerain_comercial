@@ -9,6 +9,7 @@ import {
   updateCartQtyAction,
 } from "@/lib/commercial/cart-actions";
 import type { CartView } from "@/lib/commercial/cart";
+import { formatFinalUsd } from "@/lib/commercial/money";
 
 export function CartClient({
   cart,
@@ -43,7 +44,7 @@ export function CartClient({
       <div className="surface px-6 py-16 text-center">
         <p className="font-display text-xl text-sr-ink/70">Tu carrito está vacío</p>
         <p className="mt-2 text-sm text-sr-ink/45">
-          Agregá productos desde el catálogo. No hay precios en esta etapa.
+          Agregá productos desde el catálogo.
         </p>
         <a href="/catalogo" className="btn-primary mt-6 inline-flex">
           Ir al catálogo
@@ -94,12 +95,19 @@ export function CartClient({
                     </span>
                   )}
                 </a>
-                <a
-                  href={href}
-                  className="font-display text-lg font-semibold text-sr-ink hover:text-sr-green"
-                >
-                  {item.product_name_snapshot}
-                </a>
+                <div className="min-w-0">
+                  <a
+                    href={href}
+                    className="font-display text-lg font-semibold text-sr-ink hover:text-sr-green"
+                  >
+                    {item.product_name_snapshot}
+                  </a>
+                  <p className="text-sm font-semibold text-sr-green">
+                    {item.unit_price != null
+                      ? formatFinalUsd(item.unit_price)
+                      : "Precio a confirmar"}
+                  </p>
+                </div>
               </div>
               <div className="flex items-center gap-3 sm:pl-0 pl-[4.75rem]">
                 <label className="text-xs font-semibold uppercase tracking-wider text-sr-ink/45">
@@ -136,8 +144,8 @@ export function CartClient({
         <div>
           <h2 className="font-display text-xl font-semibold text-sr-ink">Confirmar pedido</h2>
           <p className="mt-1 text-sm text-sr-ink/55">
-            Se crea un pedido en estado <strong>Enviado</strong> con snapshot de productos. Sin
-            pago online.
+            Se crea un pedido en estado <strong>Enviado</strong> con el precio final
+            congelado. Sin pago online.
           </p>
         </div>
         <label className="block">

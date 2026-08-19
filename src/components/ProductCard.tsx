@@ -2,12 +2,28 @@ import Image from "next/image";
 import Link from "next/link";
 import { AddToCartButton } from "@/components/AddToCartButton";
 import type { ProductListItem } from "@/lib/catalog";
+import { formatFinalUsd } from "@/lib/commercial/money";
 
 function FallbackImage({ name }: { name: string }) {
   return (
     <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-sr-mist to-white text-sm font-semibold text-sr-green/50">
       {name.slice(0, 24)}
     </div>
+  );
+}
+
+function PriceLine({
+  product,
+  authenticated,
+}: {
+  product: ProductListItem;
+  authenticated: boolean;
+}) {
+  if (!authenticated) return null;
+  return (
+    <p className="text-sm font-semibold text-sr-green">
+      {product.finalPrice ? formatFinalUsd(product.finalPrice.amount) : "A confirmar"}
+    </p>
   );
 }
 
@@ -47,6 +63,7 @@ export function ProductCard({
             {product.name}
           </h3>
         </Link>
+        <PriceLine product={product} authenticated={authenticated} />
         <div className="mt-auto pt-1">
           <AddToCartButton
             productSourceId={product.source_id}

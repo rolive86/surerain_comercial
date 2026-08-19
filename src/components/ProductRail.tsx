@@ -4,6 +4,7 @@ import { AddToCartButton } from "@/components/AddToCartButton";
 import type { ProductListItem } from "@/lib/catalog";
 import type { ReorderCandidate } from "@/lib/recommendations";
 import { daysAgoLabel } from "@/lib/recommendations";
+import { formatFinalUsd } from "@/lib/commercial/money";
 
 export function RailSkeleton() {
   return (
@@ -70,6 +71,11 @@ function CardShell({
         >
           {product.name}
         </Link>
+        {authenticated ? (
+          <p className="text-xs font-semibold text-sr-green">
+            {product.finalPrice ? formatFinalUsd(product.finalPrice.amount) : "A confirmar"}
+          </p>
+        ) : null}
         {extra}
         <AddToCartButton
           productSourceId={product.source_id}

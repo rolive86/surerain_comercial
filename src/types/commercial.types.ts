@@ -378,6 +378,77 @@ export type Database = {
         }
         Relationships: []
       }
+      effective_prices: {
+        Row: {
+          cod_articulo: string
+          computed_at: string
+          currency: string
+          customer_id: string | null
+          final_amount: number
+          id: string
+        }
+        Insert: {
+          cod_articulo: string
+          computed_at?: string
+          currency?: string
+          customer_id?: string | null
+          final_amount: number
+          id?: string
+        }
+        Update: {
+          cod_articulo?: string
+          computed_at?: string
+          currency?: string
+          customer_id?: string | null
+          final_amount?: number
+          id?: string
+        }
+        Relationships: []
+      }
+      margins: {
+        Row: {
+          active: boolean
+          category: string | null
+          cod_articulo: string | null
+          created_at: string
+          customer_id: string | null
+          id: string
+          percent: number
+          scope: string
+          updated_at: string
+        }
+        Insert: {
+          active?: boolean
+          category?: string | null
+          cod_articulo?: string | null
+          created_at?: string
+          customer_id?: string | null
+          id?: string
+          percent: number
+          scope: string
+          updated_at?: string
+        }
+        Update: {
+          active?: boolean
+          category?: string | null
+          cod_articulo?: string | null
+          created_at?: string
+          customer_id?: string | null
+          id?: string
+          percent?: number
+          scope?: string
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "margins_customer_id_fkey"
+            columns: ["customer_id"]
+            isOneToOne: false
+            referencedRelation: "customers"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       order_addresses: {
         Row: {
           address: string | null
@@ -763,6 +834,42 @@ export type Database = {
           },
         ]
       }
+      product_map: {
+        Row: {
+          barcode: string | null
+          catalog_name: string | null
+          cod_articulo: string
+          confidence: number | null
+          confirmed: boolean
+          created_at: string
+          match_method: string | null
+          source_id: string
+          tango_desc: string | null
+        }
+        Insert: {
+          barcode?: string | null
+          catalog_name?: string | null
+          cod_articulo: string
+          confidence?: number | null
+          confirmed?: boolean
+          created_at?: string
+          match_method?: string | null
+          source_id: string
+          tango_desc?: string | null
+        }
+        Update: {
+          barcode?: string | null
+          catalog_name?: string | null
+          cod_articulo?: string
+          confidence?: number | null
+          confirmed?: boolean
+          created_at?: string
+          match_method?: string | null
+          source_id?: string
+          tango_desc?: string | null
+        }
+        Relationships: []
+      }
       sales_reps: {
         Row: {
           active: boolean
@@ -868,6 +975,36 @@ export type Database = {
       current_role: { Args: never; Returns: string }
       custom_access_token_hook: { Args: { event: Json }; Returns: Json }
       next_order_number: { Args: never; Returns: string }
+      catalog_final_prices: {
+        Args: { p_source_ids: string[] }
+        Returns: {
+          source_id: string
+          final_amount: number
+          currency: string
+        }[]
+      }
+      recompute_effective_prices: { Args: never; Returns: undefined }
+      tango_specs_upsert: { Args: { p_rows: Json }; Returns: Json }
+      tango_staging_fetch: { Args: { p_entity: string }; Returns: Json }
+      tango_staging_run_finish: {
+        Args: {
+          p_error?: string
+          p_failed?: number
+          p_id: string
+          p_read?: number
+          p_status: string
+          p_upserted?: number
+        }
+        Returns: undefined
+      }
+      tango_staging_run_start: {
+        Args: { p_entity: string; p_meta?: Json; p_source?: string }
+        Returns: string
+      }
+      tango_staging_upsert: {
+        Args: { p_entity: string; p_rows: Json }
+        Returns: Json
+      }
     }
     Enums: {
       [_ in never]: never

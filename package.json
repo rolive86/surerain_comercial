@@ -23,7 +23,11 @@
     "typecheck:scripts": "tsc --noEmit -p tsconfig.scripts.json",
     "test:avatars-rls": "tsx --tsconfig tsconfig.scripts.json scripts/verify-avatars-rls.ts",
     "test:responsive": "tsx --tsconfig tsconfig.scripts.json scripts/verify-responsive.ts",
-    "tango:load": "tsx --tsconfig tsconfig.scripts.json scripts/tango/load-json.ts"
+    "tango:load": "tsx --tsconfig tsconfig.scripts.json scripts/tango/load-json.ts",
+    "tango:normalize-precios": "tsx --tsconfig tsconfig.scripts.json scripts/tango/normalize-precios.ts",
+    "tango:map": "tsx --tsconfig tsconfig.scripts.json scripts/tango/map-catalog.ts",
+    "tango:load-xlsx": "tsx --tsconfig tsconfig.scripts.json scripts/tango/load-xlsx.ts",
+    "tango:verify-pricing-rls": "tsx --tsconfig tsconfig.scripts.json scripts/tango/verify-pricing-rls.ts"
   },
   "engines": {
     "node": ">=20"
@@ -39,6 +43,7 @@
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "server-only": "^0.0.1",
+    "xlsx": "^0.18.5",
     "zod": "^3.24.2"
   },
   "devDependencies": {
