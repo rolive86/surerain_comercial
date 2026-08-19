@@ -6,6 +6,7 @@ import { OrderTimeline, orderStatusClass } from "@/components/OrderTimeline";
 import { reorderOrderAction } from "@/lib/commercial/cart-actions";
 import { getCustomerOrderDetail } from "@/lib/commercial/orders";
 import { getCommercialSession } from "@/lib/commercial/session";
+import { displayFinalUsd } from "@/lib/commercial/money";
 import { getProductCodesBySourceIds } from "@/lib/commercial/product-codes";
 import { getProductThumbnailsBySourceIds } from "@/lib/catalog";
 
@@ -121,7 +122,12 @@ export default async function PedidoPage({
                     </p>
                   ) : null}
                 </div>
-                <p className="text-sm font-semibold">× {item.quantity}</p>
+                <div className="shrink-0 text-right">
+                  <p className="text-sm font-semibold">× {item.quantity}</p>
+                  <p className="text-xs font-semibold text-sr-green">
+                    {displayFinalUsd(item.unit_price_snapshot)}
+                  </p>
+                </div>
               </li>
             );
           })}

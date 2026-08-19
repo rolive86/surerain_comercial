@@ -9,7 +9,12 @@ import {
   updateCartQtyAction,
 } from "@/lib/commercial/cart-actions";
 import type { CartView } from "@/lib/commercial/cart";
-import { formatFinalUsd } from "@/lib/commercial/money";
+import {
+  displayFinalUsd,
+  formatFinalUsd,
+  isValidFinalAmount,
+  PRICE_TO_CONFIRM,
+} from "@/lib/commercial/money";
 
 export function CartClient({
   cart,
@@ -106,9 +111,7 @@ export function CartClient({
                     <p className="font-mono text-xs text-sr-ink/50">{item.tango_code}</p>
                   ) : null}
                   <p className="text-sm font-semibold text-sr-green">
-                    {item.unit_price != null
-                      ? formatFinalUsd(item.unit_price)
-                      : "Precio a confirmar"}
+                    {displayFinalUsd(item.unit_price)}
                   </p>
                 </div>
               </div>
@@ -144,11 +147,12 @@ export function CartClient({
       </ul>
 
       <form action={confirmCartAction} className="surface space-y-4 p-6">
+        <CartTotals items={cart.items} />
         <div>
           <h2 className="font-display text-xl font-semibold text-sr-ink">Confirmar pedido</h2>
           <p className="mt-1 text-sm text-sr-ink/55">
-            Se crea un pedido en estado <strong>Enviado</strong> con el precio final
-            congelado. Sin pago online.
+            Se crea un pedido en estado <strong>Enviado</strong>. Podés confirmar aunque
+            haya ítems a confirmar: el vendedor cierra esos precios después. Sin pago online.
           </p>
         </div>
         <label className="block">
@@ -165,5 +169,27 @@ export function CartClient({
         </button>
       </form>
     </div>
+  );
+}
+
+function CartTotals({
+  items,
+}: {
+  items: CartView["items"];
+}) {
+  const priced = items.filter((i) => isValidFinalAmount(i.unit_price));
+  const pendingCount = items.length - priced.length;
+  const subtotal = priced.reduce((sum, i) => sum + Number(i.unit_price) * i.quantity, 0);
+  const parts: string[] = [];
+  if (priced.length) {
+    parts.push(`Subtotal: ${formatFinalUsd(subtotal)} (${priced.length} ítem${priced.length === 1 ? "" : "s"})`);
+  }
+  if (pendingCount) {
+    parts.push(`${pendingCount} ítem${pendingCount === 1 ? "" : "s"} a confirmar`);
+  }
+  return (
+    <p className="rounded-md bg-sr-mist/70 px-3 py-2 text-sm text-sr-ink/75">
+      {parts.join(" · ") || PRICE_TO_CONFIRM}
+    </p>
   );
 }

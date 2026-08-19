@@ -2,8 +2,10 @@ export function historyEventTitle(entry: {
   from_status: string | null;
   to_status: string;
   to_status_label: string;
+  comment?: string | null;
 }): string {
   if (entry.from_status && entry.from_status === entry.to_status) {
+    if ((entry.comment ?? "").toLowerCase().includes("precio")) return "Precio fijado";
     return "Ajuste de cantidades";
   }
   return entry.to_status_label;

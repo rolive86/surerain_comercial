@@ -116,6 +116,9 @@ export default async function MisPedidosPage({
                   <p className="mt-1 text-sm text-sr-ink/55">
                     {formatDate(order.submitted_at ?? order.created_at)} · {order.item_count}{" "}
                     producto(s)
+                    {order.pending_price_count
+                      ? ` · ${order.pending_price_count} a confirmar`
+                      : ""}
                   </p>
                   <div className="mt-2 flex gap-1">
                     {order.preview_items.map((item) => {

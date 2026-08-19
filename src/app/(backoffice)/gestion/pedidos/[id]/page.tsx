@@ -6,8 +6,10 @@ import { historyEventTitle } from "@/components/OrderTimeline";
 import {
   addInternalNoteAction,
   changeOrderStatusAction,
+  setOrderItemPriceAction,
   updateOrderQuantitiesAction,
 } from "@/lib/commercial/backoffice-actions";
+import { displayFinalUsd, isValidFinalAmount } from "@/lib/commercial/money";
 import {
   getBackofficeOrderDetail,
   listFilterOptions,
@@ -78,7 +80,9 @@ export default async function GestionPedidoDetailPage({
             ? "Nota interna guardada."
             : flash.ok === "qty"
               ? "Cantidades actualizadas."
-              : "Estado actualizado."}
+              : flash.ok === "price"
+                ? "Precio fijado."
+                : "Estado actualizado."}
         </p>
       ) : null}
 
@@ -101,59 +105,88 @@ export default async function GestionPedidoDetailPage({
       <div className="mt-8 grid gap-4 lg:grid-cols-[1.2fr_0.8fr]">
         <section className="rounded-xl border border-black/5 bg-white p-5">
           <h2 className="font-display text-lg font-semibold">Ítems</h2>
-          <form action={updateOrderQuantitiesAction}>
+          <form id="order-qty" action={updateOrderQuantitiesAction}>
             <input type="hidden" name="order_id" value={order.id} />
-            <ul className="mt-3 divide-y divide-black/5">
-              {order.items.map((item) => {
-                const thumb = thumbs.get(item.product_source_id);
-                const tangoCode = item.sku_snapshot || codes.get(item.product_source_id) || null;
-                return (
-                  <li key={item.id} className="flex items-center gap-3 py-3 text-sm">
-                    <span className="relative h-14 w-14 shrink-0 overflow-hidden rounded-md bg-sr-mist">
-                      {thumb?.url ? (
-                        <Image
-                          src={thumb.url}
-                          alt={item.product_name_snapshot}
-                          fill
-                          sizes="56px"
-                          className="object-cover"
-                        />
-                      ) : null}
-                    </span>
-                    <div className="min-w-0 flex-1">
-                      <p className="font-medium">{item.product_name_snapshot}</p>
-                      {tangoCode ? (
-                        <p className="font-mono text-xs text-sr-ink/55">{tangoCode}</p>
-                      ) : (
-                        <p className="text-xs text-sr-ink/40">Sin código Tango mapeado</p>
-                      )}
-                    </div>
-                    {order.status_is_terminal ? (
-                      <p className="font-semibold">× {item.quantity}</p>
+          </form>
+          <ul className="mt-3 divide-y divide-black/5">
+            {order.items.map((item) => {
+              const thumb = thumbs.get(item.product_source_id);
+              const tangoCode = item.sku_snapshot || codes.get(item.product_source_id) || null;
+              const priced = isValidFinalAmount(item.unit_price_snapshot);
+              return (
+                <li key={item.id} className="flex flex-col gap-2 py-3 text-sm sm:flex-row sm:items-center">
+                  <span className="relative h-14 w-14 shrink-0 overflow-hidden rounded-md bg-sr-mist">
+                    {thumb?.url ? (
+                      <Image
+                        src={thumb.url}
+                        alt={item.product_name_snapshot}
+                        fill
+                        sizes="56px"
+                        className="object-cover"
+                      />
+                    ) : null}
+                  </span>
+                  <div className="min-w-0 flex-1">
+                    <p className="font-medium">{item.product_name_snapshot}</p>
+                    {tangoCode ? (
+                      <p className="font-mono text-xs text-sr-ink/55">{tangoCode}</p>
                     ) : (
-                      <label className="shrink-0 text-xs font-semibold uppercase tracking-wider text-sr-ink/45">
-                        Cant.
+                      <p className="text-xs text-sr-ink/40">Sin código Tango mapeado</p>
+                    )}
+                    {priced ? (
+                      <p className="mt-1 text-sm font-semibold text-sr-green">
+                        {displayFinalUsd(item.unit_price_snapshot)}
+                      </p>
+                    ) : (
+                      <p className="mt-1 text-xs font-semibold text-amber-800">Precio a confirmar</p>
+                    )}
+                  </div>
+                  {order.status_is_terminal ? (
+                    <p className="font-semibold">× {item.quantity}</p>
+                  ) : (
+                    <label className="shrink-0 text-xs font-semibold uppercase tracking-wider text-sr-ink/45">
+                      Cant.
+                      <input
+                        form="order-qty"
+                        type="number"
+                        name={`qty_${item.id}`}
+                        min={1}
+                        step={1}
+                        defaultValue={item.quantity}
+                        required
+                        className="ml-2 w-20 rounded-md border border-black/10 px-2 py-1.5 text-sm font-normal normal-case tracking-normal"
+                      />
+                    </label>
+                  )}
+                  {!priced && !order.status_is_terminal ? (
+                    <form action={setOrderItemPriceAction} className="flex shrink-0 items-end gap-2">
+                      <input type="hidden" name="order_id" value={order.id} />
+                      <input type="hidden" name="item_id" value={item.id} />
+                      <label className="text-xs font-semibold uppercase tracking-wider text-sr-ink/45">
+                        USD
                         <input
+                          name="amount"
                           type="number"
-                          name={`qty_${item.id}`}
-                          min={1}
-                          step={1}
-                          defaultValue={item.quantity}
+                          min="0.01"
+                          step="0.01"
                           required
-                          className="ml-2 w-20 rounded-md border border-black/10 px-2 py-1.5 text-sm font-normal normal-case tracking-normal"
+                          className="ml-2 w-24 rounded-md border border-black/10 px-2 py-1.5 text-sm font-normal normal-case tracking-normal"
                         />
                       </label>
-                    )}
-                  </li>
-                );
-              })}
-            </ul>
-            {!order.status_is_terminal ? (
-              <button type="submit" className="btn-primary mt-4">
-                Guardar cantidades
-              </button>
-            ) : null}
-          </form>
+                      <button type="submit" className="btn-secondary px-3 py-1.5 text-xs">
+                        Fijar
+                      </button>
+                    </form>
+                  ) : null}
+                </li>
+              );
+            })}
+          </ul>
+          {!order.status_is_terminal ? (
+            <button type="submit" form="order-qty" className="btn-primary mt-4">
+              Guardar cantidades
+            </button>
+          ) : null}
         </section>
 
         <section className="rounded-xl border border-black/5 bg-white p-5">

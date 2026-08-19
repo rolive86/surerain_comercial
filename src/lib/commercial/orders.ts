@@ -1,5 +1,6 @@
 import { createCommercialServerClient } from "@/lib/supabase/commercial/server";
 import { getCommercialSession } from "@/lib/commercial/session";
+import { isValidFinalAmount } from "@/lib/commercial/money";
 
 function requireCustomerSession(
   session: Awaited<ReturnType<typeof getCommercialSession>>,
@@ -25,6 +26,7 @@ export type OrderListItem = {
     product_name_snapshot: string;
     quantity: number;
   }>;
+  pending_price_count: number;
 };
 
 export type OrderDetail = {
@@ -43,6 +45,7 @@ export type OrderDetail = {
     sku_snapshot: string | null;
     quantity: number;
     unit_snapshot: string | null;
+    unit_price_snapshot: number | null;
   }>;
   history: Array<{
     id: string;
@@ -83,7 +86,7 @@ export async function listCustomerOrders(filters?: {
     .select(
       `
       id, order_number, status, submitted_at, created_at,
-      order_items ( id, quantity, product_source_id, product_name_snapshot )
+      order_items ( id, quantity, product_source_id, product_name_snapshot, unit_price_snapshot )
     `,
     )
     .order("created_at", { ascending: false });
@@ -114,6 +117,9 @@ export async function listCustomerOrders(filters?: {
         product_name_snapshot: i.product_name_snapshot,
         quantity: Number(i.quantity),
       })),
+      pending_price_count: items.filter(
+        (i) => !isValidFinalAmount(i.unit_price_snapshot == null ? null : Number(i.unit_price_snapshot)),
+      ).length,
     };
   });
 }
@@ -131,7 +137,7 @@ export async function getCustomerOrderDetail(orderId: string): Promise<OrderDeta
       id, order_number, status, submitted_at, created_at, customer_id,
       order_items (
         id, product_source_id, product_name_snapshot, product_slug_snapshot,
-        sku_snapshot, quantity, unit_snapshot
+        sku_snapshot, quantity, unit_snapshot, unit_price_snapshot
       ),
       order_status_history (
         id, from_status, to_status, comment, created_at
@@ -150,6 +156,8 @@ export async function getCustomerOrderDetail(orderId: string): Promise<OrderDeta
   const items = (Array.isArray(order.order_items) ? order.order_items : []).map((item) => ({
     ...item,
     quantity: Number(item.quantity),
+    unit_price_snapshot:
+      item.unit_price_snapshot == null ? null : Number(item.unit_price_snapshot),
   }));
 
   const history = (Array.isArray(order.order_status_history) ? order.order_status_history : [])

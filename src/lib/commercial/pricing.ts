@@ -1,5 +1,6 @@
 import { createCommercialServerClient } from "@/lib/supabase/commercial/server";
 import { getCommercialSession } from "@/lib/commercial/session";
+import { isValidFinalAmount } from "@/lib/commercial/money";
 
 export type FinalPrice = {
   amount: number;
@@ -35,8 +36,10 @@ export async function getFinalPricesBySourceIds(
   });
   if (error) throw new Error(error.message);
   for (const row of data ?? []) {
+    const amount = Number(row.final_amount);
+    if (!isValidFinalAmount(amount)) continue;
     out.set(row.source_id, {
-      amount: Number(row.final_amount),
+      amount,
       currency: row.currency,
     });
   }

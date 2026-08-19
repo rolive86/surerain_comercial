@@ -4,7 +4,7 @@ import { AddToCartButton } from "@/components/AddToCartButton";
 import type { ProductListItem } from "@/lib/catalog";
 import type { ReorderCandidate } from "@/lib/recommendations";
 import { daysAgoLabel } from "@/lib/recommendations";
-import { formatFinalUsd } from "@/lib/commercial/money";
+import { displayFinalUsd } from "@/lib/commercial/money";
 
 export function RailSkeleton() {
   return (
@@ -76,7 +76,7 @@ function CardShell({
         ) : null}
         {authenticated ? (
           <p className="text-xs font-semibold text-sr-green">
-            {product.finalPrice ? formatFinalUsd(product.finalPrice.amount) : "A confirmar"}
+            {displayFinalUsd(product.finalPrice?.amount)}
           </p>
         ) : null}
         {extra}

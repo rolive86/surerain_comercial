@@ -11,7 +11,8 @@ import {
 } from "@/lib/catalog";
 import { getCommercialSession } from "@/lib/commercial/session";
 import { getAlsoBoughtSourceIds } from "@/lib/recommendations";
-import { formatFinalUsd, getFinalPriceForSourceId, withFinalPrices } from "@/lib/commercial/pricing";
+import { getFinalPriceForSourceId, withFinalPrices } from "@/lib/commercial/pricing";
+import { displayFinalUsd } from "@/lib/commercial/money";
 import { getProductCodesBySourceIds, withProductCodes } from "@/lib/commercial/product-codes";
 
 export const dynamic = "force-dynamic";
@@ -186,7 +187,7 @@ export default async function ProductPage({ params }: { params: Params }) {
 
           {authenticated ? (
             <p className="mt-4 font-display text-2xl font-semibold text-sr-green">
-              {finalPrice ? formatFinalUsd(finalPrice.amount) : "Precio a confirmar"}
+              {displayFinalUsd(finalPrice?.amount)}
             </p>
           ) : null}
 

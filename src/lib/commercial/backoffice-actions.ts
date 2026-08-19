@@ -5,6 +5,7 @@ import { redirect } from "next/navigation";
 import {
   addInternalOrderNote,
   changeOrderStatus,
+  setOrderItemPrice,
   updateOrderItemQuantities,
 } from "@/lib/commercial/backoffice";
 
@@ -29,6 +30,8 @@ function mapError(err: unknown): string {
       return "La cantidad tiene que ser un entero mayor a 0.";
     case "QUANTITY_UNCHANGED":
       return "No hay cambios de cantidad para guardar.";
+    case "INVALID_PRICE":
+      return "El precio tiene que ser un número mayor a 0 (USD).";
     default:
       return msg;
   }
@@ -66,6 +69,22 @@ export async function updateOrderQuantitiesAction(formData: FormData) {
     revalidatePath(`/gestion/pedidos/${orderId}`);
     revalidatePath(`/pedido/${orderId}`);
     redirect(`/gestion/pedidos/${orderId}?ok=qty`);
+  } catch (err) {
+    if (isNextRedirect(err)) throw err;
+    redirect(`/gestion/pedidos/${orderId}?error=${encodeURIComponent(mapError(err))}`);
+  }
+}
+
+export async function setOrderItemPriceAction(formData: FormData) {
+  const orderId = String(formData.get("order_id") ?? "");
+  const itemId = String(formData.get("item_id") ?? "");
+  const amount = Number(String(formData.get("amount") ?? "").replace(",", "."));
+  try {
+    await setOrderItemPrice(orderId, itemId, amount);
+    revalidatePath("/gestion/pedidos");
+    revalidatePath(`/gestion/pedidos/${orderId}`);
+    revalidatePath(`/pedido/${orderId}`);
+    redirect(`/gestion/pedidos/${orderId}?ok=price`);
   } catch (err) {
     if (isNextRedirect(err)) throw err;
     redirect(`/gestion/pedidos/${orderId}?error=${encodeURIComponent(mapError(err))}`);

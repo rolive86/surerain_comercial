@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { AddToCartButton } from "@/components/AddToCartButton";
 import type { ProductListItem } from "@/lib/catalog";
-import { formatFinalUsd } from "@/lib/commercial/money";
+import { displayFinalUsd } from "@/lib/commercial/money";
 
 function FallbackImage({ name }: { name: string }) {
   return (
@@ -22,7 +22,7 @@ function PriceLine({
   if (!authenticated) return null;
   return (
     <p className="text-sm font-semibold text-sr-green">
-      {product.finalPrice ? formatFinalUsd(product.finalPrice.amount) : "A confirmar"}
+      {displayFinalUsd(product.finalPrice?.amount)}
     </p>
   );
 }

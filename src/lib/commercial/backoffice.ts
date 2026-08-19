@@ -1,5 +1,7 @@
 import { createCommercialServerClient } from "@/lib/supabase/commercial/server";
+import { createCommercialAdminClient } from "@/lib/supabase/commercial/admin";
 import { getCommercialSession, type CommercialSession } from "@/lib/commercial/session";
+import { displayFinalUsd, isValidFinalAmount } from "@/lib/commercial/money";
 
 const STAFF_ROLES = new Set(["sales_rep", "sales_manager", "operations", "admin"]);
 
@@ -55,6 +57,7 @@ export type BackofficeOrderDetail = BackofficeOrderListItem & {
     product_slug_snapshot: string | null;
     sku_snapshot: string | null;
     quantity: number;
+    unit_price_snapshot: number | null;
   }>;
   history: Array<{
     id: string;
@@ -150,7 +153,7 @@ export async function getBackofficeOrderDetail(
       sales_reps ( name ),
       order_items (
         id, product_source_id, product_name_snapshot, product_slug_snapshot,
-        sku_snapshot, quantity
+        sku_snapshot, quantity, unit_price_snapshot
       ),
       order_status_history (
         id, from_status, to_status, comment, created_at, changed_by
@@ -171,6 +174,8 @@ export async function getBackofficeOrderDetail(
   const items = (Array.isArray(row.order_items) ? row.order_items : []).map((i) => ({
     ...i,
     quantity: Number(i.quantity),
+    unit_price_snapshot:
+      i.unit_price_snapshot == null ? null : Number(i.unit_price_snapshot),
   }));
   const history = (Array.isArray(row.order_status_history) ? row.order_status_history : [])
     .slice()
@@ -354,6 +359,74 @@ export async function updateOrderItemQuantities(
       order_number: order.order_number,
       items: changes.map((c) => ({ id: c.id, quantity: c.toQty })),
     },
+  });
+  if (auditErr) throw new Error(auditErr.message);
+}
+
+export async function setOrderItemPrice(orderId: string, itemId: string, amount: number): Promise<void> {
+  const session = await getCommercialSession();
+  const staff = requireStaffSession(session);
+  if (!isValidFinalAmount(amount)) throw new Error("INVALID_PRICE");
+
+  const supabase = await createCommercialServerClient();
+  const { data: order, error: findErr } = await supabase
+    .from("orders")
+    .select("id, status, order_number")
+    .eq("id", orderId)
+    .maybeSingle();
+  if (findErr) throw new Error(findErr.message);
+  if (!order) throw new Error("ORDER_NOT_FOUND");
+
+  const { data: statusMeta, error: stErr } = await supabase
+    .from("order_statuses")
+    .select("is_terminal")
+    .eq("code", order.status)
+    .maybeSingle();
+  if (stErr) throw new Error(stErr.message);
+  if (statusMeta?.is_terminal) throw new Error("ORDER_LOCKED");
+
+  const { data: item, error: itemErr } = await supabase
+    .from("order_items")
+    .select("id, product_name_snapshot, unit_price_snapshot")
+    .eq("id", itemId)
+    .eq("order_id", order.id)
+    .maybeSingle();
+  if (itemErr) throw new Error(itemErr.message);
+  if (!item) throw new Error("ORDER_NOT_FOUND");
+
+  const admin = createCommercialAdminClient();
+  const { error: updErr } = await admin
+    .from("order_items")
+    .update({ unit_price_snapshot: amount })
+    .eq("id", item.id)
+    .eq("order_id", order.id);
+  if (updErr) throw new Error(updErr.message);
+
+  const fromLabel = displayFinalUsd(
+    item.unit_price_snapshot == null ? null : Number(item.unit_price_snapshot),
+  );
+  const comment = `Precio de ${item.product_name_snapshot}: ${fromLabel} → ${displayFinalUsd(amount)}`;
+
+  const { error: histErr } = await supabase.from("order_status_history").insert({
+    order_id: order.id,
+    from_status: order.status,
+    to_status: order.status,
+    changed_by: staff.user.id,
+    comment,
+  });
+  if (histErr) throw new Error(histErr.message);
+
+  const { error: auditErr } = await supabase.from("audit_log").insert({
+    actor_user_id: staff.user.id,
+    action: "price_set",
+    entity_type: "order",
+    entity_id: order.id,
+    before: {
+      order_number: order.order_number,
+      item_id: item.id,
+      unit_price_snapshot: item.unit_price_snapshot,
+    },
+    after: { order_number: order.order_number, item_id: item.id, unit_price_snapshot: amount },
   });
   if (auditErr) throw new Error(auditErr.message);
 }

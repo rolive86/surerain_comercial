@@ -1,5 +1,6 @@
 import { createCommercialServerClient } from "@/lib/supabase/commercial/server";
 import { getCommercialSession } from "@/lib/commercial/session";
+import { isValidFinalAmount } from "@/lib/commercial/money";
 import { getFinalPricesBySourceIds } from "@/lib/commercial/pricing";
 import { getProductCodesBySourceIds } from "@/lib/commercial/product-codes";
 
@@ -98,7 +99,9 @@ async function loadCartView(cartId: string): Promise<CartView> {
   ]);
   const withPrices = mapped.map((item) => ({
     ...item,
-    unit_price: prices.get(item.product_source_id)?.amount ?? null,
+    unit_price: isValidFinalAmount(prices.get(item.product_source_id)?.amount)
+      ? prices.get(item.product_source_id)!.amount
+      : null,
     tango_code: codes.get(item.product_source_id) ?? null,
   }));
 
