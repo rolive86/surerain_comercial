@@ -14,6 +14,7 @@ export type ShopHeaderClientProps = {
   isStaff: boolean;
   cartCount: number;
   roleChip: string | null;
+  visible: Record<string, boolean>;
   searchDefault?: string;
 };
 
@@ -61,6 +62,7 @@ export function ShopHeaderClient({
   isStaff,
   cartCount,
   roleChip,
+  visible,
   searchDefault = "",
 }: ShopHeaderClientProps) {
   const [compact, setCompact] = useState(false);
@@ -97,7 +99,7 @@ export function ShopHeaderClient({
           <div className="flex items-center gap-1 sm:gap-2">
             {signedIn ? (
               <>
-                {isStaff ? (
+                {isStaff && visible.gestion_pedidos !== false ? (
                   <Link
                     href="/gestion"
                     className="inline-flex min-h-11 items-center rounded-md px-3 text-sm font-semibold text-sr-ink/80 hover:bg-sr-mist hover:text-sr-green"
@@ -105,7 +107,7 @@ export function ShopHeaderClient({
                     Gestión
                   </Link>
                 ) : null}
-                {isCustomer ? (
+                {isCustomer && visible.carrito !== false ? (
                   <Link
                     href="/carrito"
                     className="relative hidden min-h-11 min-w-11 items-center justify-center rounded-md px-3 text-sm font-semibold text-sr-ink/80 hover:bg-sr-mist hover:text-sr-green lg:inline-flex"

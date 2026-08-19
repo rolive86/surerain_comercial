@@ -87,6 +87,13 @@ export async function middleware(request: NextRequest) {
     if (!isStaffRole(role)) {
       return bounce("/");
     }
+    if (
+      (path === "/gestion/admin" || path.startsWith("/gestion/admin/")) &&
+      role !== "admin" &&
+      role !== "sales_manager"
+    ) {
+      return bounce("/gestion", { error: "admin_only" });
+    }
     return supabaseResponse;
   }
 

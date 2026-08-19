@@ -12,6 +12,24 @@ export type Database = {
   }
   public: {
     Tables: {
+      app_modules: {
+        Row: {
+          code: string
+          label: string
+          sort_order: number
+        }
+        Insert: {
+          code: string
+          label: string
+          sort_order?: number
+        }
+        Update: {
+          code?: string
+          label?: string
+          sort_order?: number
+        }
+        Relationships: []
+      }
       app_user_links: {
         Row: {
           active: boolean
@@ -446,6 +464,35 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "customers"
             referencedColumns: ["id"]
+          },
+        ]
+      }
+      module_permissions: {
+        Row: {
+          can_edit: boolean
+          can_view: boolean
+          module: string
+          role: string
+        }
+        Insert: {
+          can_edit?: boolean
+          can_view?: boolean
+          module: string
+          role: string
+        }
+        Update: {
+          can_edit?: boolean
+          can_view?: boolean
+          module?: string
+          role?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "module_permissions_module_fkey"
+            columns: ["module"]
+            isOneToOne: false
+            referencedRelation: "app_modules"
+            referencedColumns: ["code"]
           },
         ]
       }

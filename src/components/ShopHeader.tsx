@@ -3,6 +3,7 @@ import { MobileTabBarNav } from "@/components/MobileTabBar";
 import { ShopHeaderClient } from "@/components/ShopHeaderClient";
 import { getOpenCartOrNull } from "@/lib/commercial/cart";
 import { getHeaderIdentity } from "@/lib/commercial/profile";
+import { getModuleViewFlags } from "@/lib/commercial/modules";
 import { isCustomerRole, isStaffRole } from "@/lib/commercial/roles";
 import { getCommercialSession, roleLabel } from "@/lib/commercial/session";
 
@@ -12,6 +13,7 @@ export async function ShopHeader({ searchDefault = "" }: { searchDefault?: strin
   const isStaff = isStaffRole(session?.claims.app_role);
   const cart = isCustomer ? await getOpenCartOrNull() : null;
   const identity = session ? await getHeaderIdentity() : null;
+  const visible = await getModuleViewFlags(session?.claims.app_role);
 
   return (
     <>
@@ -25,6 +27,7 @@ export async function ShopHeader({ searchDefault = "" }: { searchDefault?: strin
         isStaff={isStaff}
         cartCount={cart?.itemCount ?? 0}
         roleChip={session ? roleLabel(session.claims.app_role) : null}
+        visible={visible}
         searchDefault={searchDefault}
       />
     </>
@@ -35,7 +38,8 @@ export async function MobileTabBar() {
   const session = await getCommercialSession();
   const isCustomer = isCustomerRole(session?.claims.app_role);
   const cart = isCustomer ? await getOpenCartOrNull() : null;
-  return <MobileTabBarNav cartCount={cart?.itemCount ?? 0} />;
+  const visible = await getModuleViewFlags(session?.claims.app_role);
+  return <MobileTabBarNav cartCount={cart?.itemCount ?? 0} visible={visible} />;
 }
 
 export function ShopFooter() {

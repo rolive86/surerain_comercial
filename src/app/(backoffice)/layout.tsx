@@ -1,13 +1,15 @@
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import { signOutCommercial } from "@/lib/commercial/auth-actions";
-import { isStaffRole } from "@/lib/commercial/roles";
+import { canViewModule, getModuleViewFlags } from "@/lib/commercial/modules";
+import { isAdminConsoleRole, isStaffRole } from "@/lib/commercial/roles";
 import { getCommercialSession, roleLabel } from "@/lib/commercial/session";
 
-const nav = [
-  { href: "/gestion/pedidos", label: "Pedidos" },
-  { href: "/gestion/clientes", label: "Clientes" },
-  { href: "/gestion/vendedores", label: "Vendedores" },
+const NAV = [
+  { href: "/gestion/pedidos", label: "Pedidos", module: "gestion_pedidos" as const },
+  { href: "/gestion/clientes", label: "Clientes", module: "gestion_clientes" as const },
+  { href: "/gestion/vendedores", label: "Vendedores", module: "gestion_vendedores" as const },
+  { href: "/gestion/admin", label: "Admin", module: "admin_console" as const },
 ];
 
 export default async function BackofficeLayout({
@@ -18,6 +20,13 @@ export default async function BackofficeLayout({
   if (!isStaffRole(session.claims.app_role)) {
     redirect("/");
   }
+  const flags = await getModuleViewFlags(session.claims.app_role);
+  const nav = NAV.filter((item) => {
+    if (item.module === "admin_console" && !isAdminConsoleRole(session.claims.app_role)) {
+      return false;
+    }
+    return canViewModule(flags, item.module, session.claims.app_role);
+  });
 
   return (
     <div className="min-h-screen bg-[#eef1ef]">

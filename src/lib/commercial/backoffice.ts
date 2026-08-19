@@ -13,6 +13,16 @@ export function requireStaffSession(
   return session;
 }
 
+export function requireAdminConsoleSession(
+  session: CommercialSession | null,
+): CommercialSession {
+  const staff = requireStaffSession(session);
+  if (staff.claims.app_role !== "admin" && staff.claims.app_role !== "sales_manager") {
+    throw new Error("ADMIN_CONSOLE_REQUIRED");
+  }
+  return staff;
+}
+
 export type BackofficeOrderFilters = {
   q?: string;
   status?: string;

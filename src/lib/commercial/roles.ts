@@ -9,6 +9,10 @@ export type StaffRole = (typeof STAFF_ROLES)[number];
 
 export const CUSTOMER_ROLE = "customer_user";
 
+export function isAdminConsoleRole(role: string | null | undefined): boolean {
+  return role === "admin" || role === "sales_manager";
+}
+
 export function isStaffRole(role: string | null | undefined): boolean {
   return Boolean(role && (STAFF_ROLES as readonly string[]).includes(role));
 }
