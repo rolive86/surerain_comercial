@@ -5,6 +5,7 @@ import { redirect } from "next/navigation";
 import { createCommercialAdminClient } from "@/lib/supabase/commercial/admin";
 import { getCommercialSession } from "@/lib/commercial/session";
 import { requireAdminConsoleSession } from "@/lib/commercial/backoffice";
+import { previewMarginImpact } from "@/lib/commercial/admin-console";
 
 function mapError(err: unknown): string {
   const msg = err instanceof Error ? err.message : "Error desconocido";
@@ -38,6 +39,27 @@ function emptyToNull(v: FormDataEntryValue | null): string | null {
   return s.length ? s : null;
 }
 
+export async function previewMarginImpactAction(formData: FormData) {
+  try {
+    const session = await getCommercialSession();
+    requireAdminConsoleSession(session);
+    const percent = Number(String(formData.get("percent") ?? "").replace(",", "."));
+    if (!Number.isFinite(percent)) throw new Error("El % es obligatorio.");
+    if (percent < -100 || percent > 500) throw new Error("El % tiene que estar entre −100 y 500.");
+    const preview = await previewMarginImpact({
+      id: emptyToNull(formData.get("id")),
+      scope: String(formData.get("scope") ?? "global"),
+      percent,
+      category: emptyToNull(formData.get("category")),
+      cod_articulo: emptyToNull(formData.get("cod_articulo")),
+      customer_id: emptyToNull(formData.get("customer_id")),
+    });
+    return { preview, error: null as string | null };
+  } catch (err) {
+    return { preview: null, error: mapError(err) };
+  }
+}
+
 export async function upsertMarginAction(formData: FormData) {
   const session = await getCommercialSession();
   try {
@@ -46,6 +68,10 @@ export async function upsertMarginAction(formData: FormData) {
     const scope = String(formData.get("scope") ?? "global");
     const percent = Number(String(formData.get("percent") ?? "").replace(",", "."));
     if (!Number.isFinite(percent)) throw new Error("El % es obligatorio.");
+    if (percent < -100 || percent > 500) throw new Error("El % tiene que estar entre −100 y 500.");
+    if ((percent < 0 || percent > 100) && formData.get("confirm_extreme") !== "on") {
+      throw new Error("Confirmá el margen excepcional (negativo o mayor a 100).");
+    }
     const supabase = createCommercialAdminClient();
     const payload = {
       scope,

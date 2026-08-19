@@ -1,8 +1,6 @@
-import {
-  deleteMarginAction,
-  upsertMarginAction,
-} from "@/lib/commercial/admin-actions";
-import { listCustomersBrief, listMargins } from "@/lib/commercial/admin-console";
+import { deleteMarginAction } from "@/lib/commercial/admin-actions";
+import { listCustomersBrief, listMargins, listTangoFamilies } from "@/lib/commercial/admin-console";
+import { MarginEditor } from "@/components/MarginEditor";
 
 export const dynamic = "force-dynamic";
 
@@ -12,7 +10,11 @@ export default async function AdminMargenesPage({
   searchParams: Promise<{ ok?: string; error?: string }>;
 }) {
   const params = await searchParams;
-  const [margins, customers] = await Promise.all([listMargins(), listCustomersBrief()]);
+  const [margins, customers, families] = await Promise.all([
+    listMargins(),
+    listCustomersBrief(),
+    listTangoFamilies(),
+  ]);
   const global = margins.find((m) => m.scope === "global" && m.active);
 
   return (
@@ -29,80 +31,27 @@ export default async function AdminMargenesPage({
       <section className="rounded-xl border border-sr-green/20 bg-white p-5">
         <h2 className="font-display text-xl font-semibold text-sr-ink">Margen global</h2>
         <p className="mt-1 text-sm text-sr-ink/55">
-          El margen global aplica a lo que no tenga regla más específica (producto → categoría →
-          global).
+          El margen global aplica a lo que no tenga regla más específica (producto → familia Tango →
+          global). La familia sale de `articulos_raw.familia` (o categoría Excel si falta).
         </p>
-        <form action={upsertMarginAction} className="mt-4 flex flex-wrap items-end gap-3">
-          {global ? <input type="hidden" name="id" value={global.id} /> : null}
-          <input type="hidden" name="scope" value="global" />
-          <label className="text-sm font-semibold text-sr-ink/70">
-            %
-            <input
-              name="percent"
-              type="number"
-              step="0.1"
-              defaultValue={global?.percent ?? 35}
-              className="ml-2 w-28 rounded-md border border-black/10 px-3 py-2"
-              required
-            />
-          </label>
-          <button type="submit" className="btn-primary">
-            Guardar global
-          </button>
-        </form>
+        <MarginEditor
+          id={global?.id}
+          scope="global"
+          percent={global?.percent ?? 35}
+          customers={customers}
+          families={families}
+          submitLabel="Guardar global"
+        />
       </section>
 
       <section className="rounded-xl border border-black/5 bg-white p-5">
         <h2 className="font-display text-lg font-semibold text-sr-ink">Nueva regla</h2>
-        <form action={upsertMarginAction} className="mt-4 grid gap-3 sm:grid-cols-2">
-          <label className="text-sm font-semibold">
-            Alcance
-            <select name="scope" className="mt-1 w-full rounded-md border border-black/10 px-3 py-2">
-              <option value="category">Categoría</option>
-              <option value="product">Producto (cod Tango)</option>
-              <option value="customer">Cliente</option>
-            </select>
-          </label>
-          <label className="text-sm font-semibold">
-            %
-            <input
-              name="percent"
-              type="number"
-              step="0.1"
-              className="mt-1 w-full rounded-md border border-black/10 px-3 py-2"
-              required
-            />
-          </label>
-          <label className="text-sm font-semibold">
-            Categoría
-            <input
-              name="category"
-              placeholder="familia / categoría"
-              className="mt-1 w-full rounded-md border border-black/10 px-3 py-2"
-            />
-          </label>
-          <label className="text-sm font-semibold">
-            Código Tango
-            <input
-              name="cod_articulo"
-              className="mt-1 w-full rounded-md border border-black/10 px-3 py-2 font-mono text-sm"
-            />
-          </label>
-          <label className="text-sm font-semibold sm:col-span-2">
-            Cliente
-            <select name="customer_id" className="mt-1 w-full rounded-md border border-black/10 px-3 py-2">
-              <option value="">—</option>
-              {customers.map((c) => (
-                <option key={c.id} value={c.id}>
-                  {c.trade_name || c.legal_name}
-                </option>
-              ))}
-            </select>
-          </label>
-          <button type="submit" className="btn-secondary sm:col-span-2 w-fit">
-            Crear regla
-          </button>
-        </form>
+        <MarginEditor
+          scope="category"
+          customers={customers}
+          families={families}
+          submitLabel="Crear regla"
+        />
       </section>
 
       <div className="overflow-x-auto rounded-xl border border-black/5 bg-white">

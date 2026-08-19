@@ -52,6 +52,7 @@ export default async function AdminPreciosPage({
               <th className="px-3 py-3">Base USD</th>
               <th className="px-3 py-3">Margen %</th>
               <th className="px-3 py-3">Final USD</th>
+              <th className="px-3 py-3">Regla aplicada</th>
               <th className="px-3 py-3">Mapa</th>
             </tr>
           </thead>
@@ -71,6 +72,7 @@ export default async function AdminPreciosPage({
                 <td className="px-3 py-2 font-semibold">
                   {r.final != null ? formatFinalUsd(r.final) : "—"}
                 </td>
+                <td className="px-3 py-2 text-xs text-sr-ink/60">{r.applied_rule}</td>
                 <td className="px-3 py-2 text-xs text-sr-ink/55">
                   {r.mapped ? "mapeado" : "sin map"}
                 </td>

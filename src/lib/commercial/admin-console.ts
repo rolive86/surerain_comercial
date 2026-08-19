@@ -4,6 +4,7 @@ import { createCommercialAdminClient } from "@/lib/supabase/commercial/admin";
 import { getCommercialSession } from "@/lib/commercial/session";
 import { requireAdminConsoleSession } from "@/lib/commercial/backoffice";
 import type { Json } from "@/types/commercial.types";
+import type { MarginPreview } from "@/lib/commercial/admin-types";
 
 export type MarginRow = {
   id: string;
@@ -26,22 +27,47 @@ export type PriceRow = {
   final: number | null;
   mapped: boolean;
   source_id: string | null;
+  applied_rule: string;
 };
 
-function pickMarginPercent(
+type MarginLite = {
+  id?: string;
+  scope: string;
+  category: string | null;
+  cod_articulo: string | null;
+  percent: number;
+  active: boolean;
+  customer_id: string | null;
+};
+
+function articleFamily(familia: string | null | undefined, specCat: string | null | undefined): string | null {
+  const f = familia?.trim();
+  if (f) return f;
+  const c = specCat?.trim();
+  return c || null;
+}
+
+function pickAppliedMargin(
   cod: string,
-  category: string | null,
-  margins: Array<{ scope: string; category: string | null; cod_articulo: string | null; percent: number; active: boolean; customer_id: string | null }>,
-): number | null {
+  family: string | null,
+  margins: MarginLite[],
+): MarginLite | null {
   const active = margins.filter((m) => m.active && m.customer_id == null);
   const product = active.find((m) => m.scope === "product" && m.cod_articulo === cod);
-  if (product) return Number(product.percent);
-  const cat = category
-    ? active.find((m) => m.scope === "category" && m.category === category)
-    : undefined;
-  if (cat) return Number(cat.percent);
+  if (product) return product;
+  const cat =
+    family ? active.find((m) => m.scope === "category" && m.category === family) : undefined;
+  if (cat) return cat;
   const global = active.find((m) => m.scope === "global");
-  return global ? Number(global.percent) : null;
+  return global ?? null;
+}
+
+function appliedRuleLabel(rule: MarginLite | null, family: string | null): string {
+  if (!rule) return "sin regla";
+  if (rule.scope === "product") return `producto ${rule.cod_articulo}`;
+  if (rule.scope === "category") return `categoría ${rule.category ?? family ?? ""}`.trim();
+  if (rule.scope === "global") return "global";
+  return rule.scope;
 }
 
 export async function listMargins(): Promise<MarginRow[]> {
@@ -95,13 +121,14 @@ export async function listAdminPrices(opts: {
   requireAdminConsoleSession(session);
   const supabase = createCommercialAdminClient();
 
-  const [{ data: prices, error: pErr }, { data: eff, error: eErr }, { data: maps, error: mErr }, { data: margins, error: gErr }, { data: specsJson }] =
+  const [{ data: prices, error: pErr }, { data: eff, error: eErr }, { data: maps, error: mErr }, { data: margins, error: gErr }, { data: specsJson }, { data: artsJson }] =
     await Promise.all([
       supabase.from("prices").select("product_source_id, amount"),
       supabase.from("effective_prices").select("cod_articulo, final_amount, customer_id").is("customer_id", null),
       supabase.from("product_map").select("source_id, cod_articulo, tango_desc, catalog_name"),
-      supabase.from("margins").select("scope, category, cod_articulo, percent, active, customer_id"),
+      supabase.from("margins").select("id, scope, category, cod_articulo, percent, active, customer_id"),
       supabase.rpc("tango_staging_fetch", { p_entity: "articulos_specs" }),
+      supabase.rpc("tango_staging_fetch", { p_entity: "articulos" }),
     ]);
   if (pErr) throw new Error(pErr.message);
   if (eErr) throw new Error(eErr.message);
@@ -121,6 +148,16 @@ export async function listAdminPrices(opts: {
     });
   }
 
+  const familiaByCode = new Map<string, string | null>();
+  const arts = Array.isArray(artsJson) ? (artsJson as Json[]) : [];
+  for (const raw of arts) {
+    if (!raw || typeof raw !== "object") continue;
+    const r = raw as Record<string, unknown>;
+    const cod = String(r.cod_articulo ?? "").trim();
+    if (!cod) continue;
+    familiaByCode.set(cod, r.familia ? String(r.familia) : null);
+  }
+
   const baseBy = new Map((prices ?? []).map((p) => [p.product_source_id, Number(p.amount)]));
   const finalBy = new Map((eff ?? []).map((p) => [p.cod_articulo, Number(p.final_amount)]));
   const mapByCode = new Map((maps ?? []).map((m) => [m.cod_articulo, m]));
@@ -132,7 +169,11 @@ export async function listAdminPrices(opts: {
     ...specByCode.keys(),
   ]);
 
-  const categories = [...new Set([...specByCode.values()].map((s) => s.categoria).filter(Boolean))] as string[];
+  const categories = [
+    ...new Set(
+      [...specByCode.entries()].map(([cod, s]) => articleFamily(familiaByCode.get(cod), s.categoria)),
+    ),
+  ].filter(Boolean) as string[];
   categories.sort((a, b) => a.localeCompare(b, "es"));
 
   const q = opts.q?.trim().toLowerCase() ?? "";
@@ -143,15 +184,16 @@ export async function listAdminPrices(opts: {
     const spec = specByCode.get(cod);
     const mapped = mapByCode.get(cod);
     const descripcion = mapped?.tango_desc || spec?.descripcion || mapped?.catalog_name || null;
-    const categoria = spec?.categoria ?? mapped?.tango_desc ?? null;
+    const familia = articleFamily(familiaByCode.get(cod), spec?.categoria ?? null);
+    const categoria = familia;
     if (cat && categoria !== cat) continue;
     if (q) {
       const hay = `${cod} ${descripcion ?? ""} ${mapped?.source_id ?? ""}`.toLowerCase();
       if (!hay.includes(q)) continue;
     }
     const base = baseBy.get(cod) ?? null;
-    const categoryForMargin = mapped?.tango_desc ?? categoria;
-    const margin_percent = pickMarginPercent(cod, categoryForMargin, margins ?? []);
+    const rule = pickAppliedMargin(cod, familia, (margins ?? []) as MarginLite[]);
+    const margin_percent = rule ? Number(rule.percent) : null;
     rows.push({
       cod_articulo: cod,
       descripcion,
@@ -161,6 +203,7 @@ export async function listAdminPrices(opts: {
       final: finalBy.get(cod) ?? null,
       mapped: Boolean(mapped),
       source_id: mapped?.source_id ?? null,
+      applied_rule: appliedRuleLabel(rule, familia),
     });
   }
 
@@ -172,6 +215,119 @@ export async function listAdminPrices(opts: {
   });
 
   return { rows: rows.slice(0, 500), categories, tangoPriceCount: baseBy.size };
+}
+
+export async function listTangoFamilies(): Promise<string[]> {
+  const session = await getCommercialSession();
+  requireAdminConsoleSession(session);
+  const supabase = createCommercialAdminClient();
+  const [{ data: arts }, { data: specs }] = await Promise.all([
+    supabase.rpc("tango_staging_fetch", { p_entity: "articulos" }),
+    supabase.rpc("tango_staging_fetch", { p_entity: "articulos_specs" }),
+  ]);
+  const set = new Set<string>();
+  for (const raw of Array.isArray(arts) ? (arts as Json[]) : []) {
+    if (!raw || typeof raw !== "object") continue;
+    const f = String((raw as Record<string, unknown>).familia ?? "").trim();
+    if (f) set.add(f);
+  }
+  for (const raw of Array.isArray(specs) ? (specs as Json[]) : []) {
+    if (!raw || typeof raw !== "object") continue;
+    const f = String((raw as Record<string, unknown>).categoria ?? "").trim();
+    if (f) set.add(f);
+  }
+  return [...set].sort((a, b) => a.localeCompare(b, "es"));
+}
+
+export type { MarginPreview } from "@/lib/commercial/admin-types";
+
+export async function previewMarginImpact(input: {
+  id?: string | null;
+  scope: string;
+  percent: number;
+  category?: string | null;
+  cod_articulo?: string | null;
+  customer_id?: string | null;
+}): Promise<MarginPreview> {
+  const session = await getCommercialSession();
+  requireAdminConsoleSession(session);
+  if (input.scope === "customer") {
+    return {
+      count: 0,
+      examples: [],
+      note: "El margen por cliente no entra en el listado general; se aplica al precio de ese cliente.",
+    };
+  }
+
+  const supabase = createCommercialAdminClient();
+  const [{ data: prices, error: pErr }, { data: maps }, { data: margins, error: gErr }, { data: specsJson }, { data: artsJson }] =
+    await Promise.all([
+      supabase.from("prices").select("product_source_id, amount"),
+      supabase.from("product_map").select("cod_articulo, tango_desc, catalog_name"),
+      supabase.from("margins").select("id, scope, category, cod_articulo, percent, active, customer_id"),
+      supabase.rpc("tango_staging_fetch", { p_entity: "articulos_specs" }),
+      supabase.rpc("tango_staging_fetch", { p_entity: "articulos" }),
+    ]);
+  if (pErr) throw new Error(pErr.message);
+  if (gErr) throw new Error(gErr.message);
+
+  const proposedId = input.id?.trim() || "__preview__";
+  const proposed: MarginLite = {
+    id: proposedId,
+    scope: input.scope,
+    category: input.scope === "category" ? input.category ?? null : null,
+    cod_articulo: input.scope === "product" ? input.cod_articulo ?? null : null,
+    percent: input.percent,
+    active: true,
+    customer_id: null,
+  };
+
+  const simulated: MarginLite[] = ((margins ?? []) as MarginLite[])
+    .filter((m) => m.id !== proposedId)
+    .concat(proposed);
+
+  const specByCode = new Map<string, { categoria: string | null; descripcion: string | null }>();
+  for (const raw of Array.isArray(specsJson) ? (specsJson as Json[]) : []) {
+    if (!raw || typeof raw !== "object") continue;
+    const r = raw as Record<string, unknown>;
+    const cod = String(r.cod_articulo ?? "").trim();
+    if (!cod) continue;
+    specByCode.set(cod, {
+      categoria: r.categoria ? String(r.categoria) : null,
+      descripcion: r.descripcion ? String(r.descripcion) : null,
+    });
+  }
+  const familiaByCode = new Map<string, string | null>();
+  for (const raw of Array.isArray(artsJson) ? (artsJson as Json[]) : []) {
+    if (!raw || typeof raw !== "object") continue;
+    const r = raw as Record<string, unknown>;
+    const cod = String(r.cod_articulo ?? "").trim();
+    if (!cod) continue;
+    familiaByCode.set(cod, r.familia ? String(r.familia) : null);
+  }
+  const descBy = new Map((maps ?? []).map((m) => [m.cod_articulo, m.tango_desc || m.catalog_name]));
+
+  const hits: MarginPreview["examples"] = [];
+  for (const p of prices ?? []) {
+    const cod = p.product_source_id;
+    const family = articleFamily(familiaByCode.get(cod), specByCode.get(cod)?.categoria ?? null);
+    const rule = pickAppliedMargin(cod, family, simulated);
+    if (!rule || rule.id !== proposedId) continue;
+    const base = Number(p.amount);
+    if (!Number.isFinite(base) || base <= 0) continue;
+    hits.push({
+      cod_articulo: cod,
+      descripcion: descBy.get(cod) || specByCode.get(cod)?.descripcion || null,
+      base,
+      final: Math.round(base * (1 + input.percent / 100) * 100) / 100,
+    });
+  }
+
+  return {
+    count: hits.length,
+    examples: hits.slice(0, 3),
+    note: null,
+  };
 }
 
 export async function listTangoArticles(): Promise<Array<{ cod_articulo: string; descripcion: string | null }>> {
