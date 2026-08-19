@@ -2,12 +2,11 @@
 
 - Catálogo publicados: **420**
 - Artículos Tango: **1594**
-- Matcheados (alta confianza): **126** (30% del catálogo)
-- Dudosos (nombre 0.55–0.75, no auto-confirmados): **55**
-- Sin match: **197**
-- Descartados por `cod_articulo` ya asignado: **42**
+- Matcheados (alta confianza): **142** (33.8% del catálogo)
+- Dudosos (nombre 0.55–0.75, no auto-confirmados): **67**
+- Sin match: **164**
+- Descartados por `cod_articulo` ya asignado: **47**
 - `confirmed=false` en todos (revisión admin pendiente)
-- Con precio final hoy (lista 29 sample Tango, 30 filas): **1** producto. El resto del map espera el dump completo de `precios_raw`.
 
 ## Matcheados
 
@@ -84,7 +83,6 @@
 | img:t-rosca-hembra-para-polietileno-de-alta-densidad | T rosca hembra para polietileno de alta densidad | ACKE00TEERH40X1 | nombre | 1 |
 | img:te-rosca-macho-para-polietileno-de-alta-densidad | T rosca macho para polietileno de alta densidad | ACKE000TERM40X1 | nombre | 1 |
 | img:union-para-polietileno-de-alta-densidad | Unión para polietileno de alta densidad | ACKE000UNION110 | nombre | 1 |
-| img:codo-de-90-para-polietileno-de-alta-densidad | Codo 90° para polietileno de alta densidad | ACKE00000CODO32 | nombre | 1 |
 | img:te-para-polietileno-de-alta-densidad | T para polietileno de alta densidad | ACKE000000TEE20 | nombre | 1 |
 | img:conector-espiga-espiga-reforzado | Conector espiga – espiga reforzado | ACIR0IE.830.160 | nombre | 1 |
 | img:codo-espiga-x-rosca-macho | Codo espiga x rosca macho | ACIR01P.641.16B | nombre | 1 |
@@ -110,6 +108,23 @@
 | img:reduccion-para-polietileno-de-alta-densidad | Reducción polietileno de alta densidad | ACKE000RED25-20 | nombre | 0.833 |
 | img:estaca-para-sujetar-tuberia-de-polietileno | Estaca para sujetar tubería de polietileno | ACGR009030.0020 | nombre | 0.833 |
 | img:final-de-linea-para-lay-flat | Final de línea para Lay Flat | ACSA0773002G000 | nombre | 0.833 |
+| img:vyr-56 | VYR-56 | ASVY0564.362.38 | nombre | 0.82 |
+| img:vyr-66 | VYR-66 | ASVY0664.362.38 | nombre | 0.82 |
+| img:vyr-60 | VYR-60 | ASVY0604.362.38 | nombre | 0.82 |
+| img:vyr-86 | VYR-86 | ASVY0866.354.36 | nombre | 0.82 |
+| img:vyr-166 | VYR-166 | ASVY001666.33.2 | nombre | 0.82 |
+| img:vyr-155 | VYR-155 | ASVY155116.33.2 | nombre | 0.82 |
+| img:vyr-150 | VYR-150 | ASVY0150-11-3.2 | nombre | 0.82 |
+| img:assr-8427 | ZM 8427 | ASSR00000008427 | nombre | 0.82 |
+| img:assr-8022 | ZM 8022 | ASSR00000008022 | nombre | 0.82 |
+| img:assr-8028 | ZM 8028 | ASSR00000008028 | nombre | 0.82 |
+| img:assr-8044 | ZM 8044 | ASSR00000008044 | nombre | 0.82 |
+| img:assr-8046 | ZM 8046 | ASSR00000008046 | nombre | 0.82 |
+| img:assr-8041 | ZM 8041 | ASSR00000008041 | nombre | 0.82 |
+| img:assr-8019 | ZM 8019 | ASSR00000008019 | nombre | 0.82 |
+| img:valvula-antidrenaje-sport-plus-superrps75 | Válvula antidrenaje (Pro Sport, Pro Plus, Superpro, RPS75) | ASKA00P16009116 | nombre | 0.82 |
+| img:rps75 | RPS 75 | ASKA000000RPS75 | nombre | 0.82 |
+| img:manguera-c-enrollador-y-accesorios-de-20-metros | Manguera c/enrollador y accesorios de 20 Metros | ACIR0IEBC012022 | nombre | 0.82 |
 | img:valvula-cilindrica-lay-flat-a-cinta | Válvula cilíndrica Lay Flat x cinta | ACGR02130.0000F | nombre | 0.8 |
 | img:boquilla-ajustable-rosca-hembra | Boquilla Ajustable (rosca hembra) | ASSR0000000KVF4 | nombre | 0.8 |
 | img:valvula-antidrenaje-toberas-spray | Valvula antidrenaje (Toberas SPRAY) | ASKA00000053426 | nombre | 0.8 |
@@ -169,7 +184,6 @@
 | img:de-aire-doble-efecto | Válvula de aire-vacío doble efecto, RM 3/4″ y 1″ | VAGR004490.00DE | 0.667 |
 | img:valvula-cilindrica-compacta-inicial-4 | Válvula cilíndrica compacta c/rosca de ajuste | ACPO00000118562 | 0.667 |
 | img:relay-hidraulico-galit | Sensor hidráulico | VATE0GALITTECNI | 0.667 |
-| img:brida-giratoria-pn10 | Bridas giratorias (PN10) | ACSRBRIDAGIR110 | 0.667 |
 | img:union-alfa-rapid-plastica-victaulica | Unión alfa rapid-plástica (victaulica) | ACAL000AR1710-2 | 0.667 |
 | img:codo-90 | Codo 90° | ACYOELEF0CODO63 | 0.667 |
 | img:codo-45 | Codo 45° | ACYOELF45CODO63 | 0.667 |
@@ -199,48 +213,35 @@
 | img:manguera-reforzada-anti-torsion | Manguera para jardín reforzada (Anti-torsión) | MAPRMAREF1/2-20 | 0.571 |
 | img:valvula-aire-vacio-triple-efecto-rm-1-y-2 | Válvula aire-vacío triple efecto, RM 1″ y 2″ | VASR00AV0125B1" | 0.556 |
 | img:llave-de-ajuste-p-conectores-pead | Llave de ajuste para conectores PEAD | ACAL0000931-4-8 | 0.556 |
+| img:33820122-33820123-33830122 | Filtro largo Palaplast tipo Y 33820123 | FIPA00033820123 | 0.5 |
+| img:vyr-80-circular | VYR-80 Circular | ASVY00080018040 | 0.429 |
+| img:vyr-80-sectorizable | VYR-80 Sectorizable | ASVY00080048040 | 0.429 |
+| img:vyr-23 | VYR-23 | ASVYCAPVYR23/33 | 0.4 |
+| img:vyr-33-plastico | VYR-33 PLÁSTICO | ASVY00000333133 | 0.375 |
+| img:assr-8035-sec | ZM 8035 SEC | ASSR0008035SECT | 0.375 |
+| img:vyr-3260-azul-miniaspersor-circular | VYR-3260 AZUL Miniaspersor circular | ASVY03260-10AZU | 0.364 |
+| img:vyr-3260-rojo-miniaspersor-circular | VYR-3260 ROJO Miniaspersor circular | ASVY03260-10ROJ | 0.364 |
+| img:vyr-33 | VYR-33 | ASVY00094-TAPON | 0.333 |
+| img:pro-tap-100 | Pro-Tap 100 | PRKA0PRO-TAP100 | 0.333 |
+| img:wi-2526 | WI-25106 | PRKA03100BRIDGE | 0.125 |
+| img:r15 | R15 | ASRO00000000R15 | 0.111 |
+| img:r25 | R25 | ASRO00000000R25 | 0.1 |
 
 ## Sin match
 
 - `img:vyr-26` — VYR-26 (sku VYR-26)
-- `img:vyr-80-circular` — VYR-80 Circular (sku VYR-80)
 - `img:vyr-70-v` — VYR-70 (sku VYR-70)
 - `img:programadores-tic2f-4f-pi` — Programadores TIC2F/4F-PI
 - `img:caudalimetros-tecnidro` — Caudalímetros Tecnidro c/emisor de pulso
 - `img:pw-2220` — PW-2220 (sku PW-2220)
-- `img:wi-2526` — WI-25106 (sku WI-25106)
-- `img:vyr-80-sectorizable` — VYR-80 Sectorizable (sku VYR-80)
 - `img:vyr-37` — VYR-37 (sku VYR-37)
 - `img:vyr-802` — VYR-802 (sku VYR-802)
-- `img:vyr-56` — VYR-56 (sku VYR-56)
-- `img:vyr-66` — VYR-66 (sku VYR-66)
-- `img:vyr-23` — VYR-23 (sku VYR-23)
-- `img:vyr-33-plastico` — VYR-33 PLÁSTICO (sku VYR-33)
-- `img:vyr-33` — VYR-33 (sku VYR-33)
-- `img:vyr-60` — VYR-60 (sku VYR-60)
-- `img:vyr-86` — VYR-86 (sku VYR-86)
-- `img:vyr-166` — VYR-166 (sku VYR-166)
 - `img:vyr-65` — VYR-65 (sku VYR-65)
-- `img:vyr-155` — VYR-155 (sku VYR-155)
-- `img:vyr-150` — VYR-150 (sku VYR-150)
-- `img:assr-8427` — ZM 8427 (sku ZM-8427)
-- `img:assr-8022` — ZM 8022 (sku ZM-8022)
 - `img:pl-3100` — PL-3100 (sku PL-3100)
 - `img:aspersor-oscilante-de-angulo-ajustable` — Aspersor oscilante de ángulo ajustable
-- `img:assr-8028` — ZM 8028 (sku ZM-8028)
 - `img:assr-8035` — ZM 8035 (sku ZM-8035)
-- `img:assr-8035-sec` — ZM 8035 SEC (sku ZM-8035)
-- `img:r15` — R15 (sku R15)
-- `img:assr-8044` — ZM 8044 (sku ZM-8044)
-- `img:assr-8046` — ZM 8046 (sku ZM-8046)
 - `img:assr-8036` — ZM 8036 (sku ZM-8036)
-- `img:assr-8041` — ZM 8041 (sku ZM-8041)
-- `img:assr-8019` — ZM 8019 (sku ZM-8019)
 - `img:assr-8021-antihelada` — ZM 8021 (Antihelada) (sku ZM-8021)
-- `img:r25` — R25 (sku R25)
-- `img:r25-s` — R25 S (sku R25)
-- `img:r15-s` — R15 S (sku R15)
-- `img:valvula-antidrenaje-sport-plus-superrps75` — Válvula antidrenaje (Pro Sport, Pro Plus, Superpro, RPS75) (sku RPS75)
 - `img:rps-select` — RPS SELECT
 - `img:tobera-emergente-2-pulg-nps` — Tobera Emergente 2 Pulg. (NPS)
 - `img:tobera-emergente-4-pulg-nps` — Tobera Emergente 4 Pulg. (NPS)
@@ -261,13 +262,11 @@
 - `img:boquillas-giratorias-regulables` — Boquillas Giratorias
 - `img:super-pro` — Super PRO
 - `img:pro-sport` — PRO Sport
-- `img:rps75` — RPS 75 (sku RPS-75)
 - `img:mini-pro` — Mini PRO
 - `img:aspersor-emergente-plastico-de-impacto-sectorizable` — Aspersor emergente plástico, de impacto, sectorizable
 - `img:valvula-plastica-para-aspersor-3-4-y-1` — Válvula Plástica con acople rápido GreenPlains
 - `img:prolongador-o-bayoneta-3-4` — Prolongador o Bayoneta GreenPlains
 - `img:valvula-con-rosca-macho` — Válvula con rosca macho c/prolongador incluido
-- `img:wi-30320` — WI-30320 (sku WI-30320)
 - `img:valvulas-plasticas-con-acople-rapido-rosca-macho` — Válvulas plásticas c/acople rápido RM
 - `img:cinta-de-riego-por-goteo-novodrip-apollo` — Cinta de Riego por goteo Novodrip Apollo
 - `img:gotero-no-desarmable-autocompensado-antidrenante-autolimpiante` — Gotero no desarmable autocompensado antidrenante autolimpiante
@@ -282,8 +281,6 @@
 - `img:conector` — Conector
 - `img:miniaspersor-circular-vyr-3250` — VYR-3250 Miniaspersor circular (sku VYR-3250)
 - `img:vyr-3264-miniaspersor-circular` — VYR-3264 Miniaspersor circular (sku VYR-3264)
-- `img:vyr-3260-azul-miniaspersor-circular` — VYR-3260 AZUL Miniaspersor circular (sku VYR-3260)
-- `img:vyr-3260-rojo-miniaspersor-circular` — VYR-3260 ROJO Miniaspersor circular (sku VYR-3260)
 - `img:estaca-plastica-para-microaspesores` — Estaca plástica para microaspesores
 - `img:t` — T CONECTOR
 - `img:miniaspersor-rosca-hembra-1-2` — Tavlit 920 Miniaspersor RH 1/2”
@@ -304,8 +301,6 @@
 - `img:anillas-20535-45-20540-50-vortix` — Anillas filtros Alfa 20535/45/20540/50 (Vortix)
 - `img:20540-malla-anilla-anilla-vortix` — Filtro Alfa tipo T – 20540, (malla/anilla/anilla vortix)
 - `img:4608` — Filtro Alfa doble cuerpo 20545 (anilla/anilla vortix)
-- `img:33820122-33820123-33830122` — Filtro largo Palaplast tipo Y 33820123 (sku Y-33820123)
-- `img:33850123-33850124` — Filtro largo Palaplast tipo Y 33850123/33850124 (sku Y-33850123)
 - `img:34810120` — Malla metálica Palaplast para 1″ corto – 34810120
 - `img:34811060-34811120-34822242` — Malla y Anilla Palaplast para 34811060/34811120/34822242
 - `img:filtros-simples-en-t-y-dobles-de-malla-plastica-con-efecto-hidrociclon` — Filtros Erhas cortos y largos en T, Malla metálica
@@ -355,7 +350,6 @@
 - `img:programador-de-retrolavado-tic-dp` — Programador de Retrolavado TIC-DP
 - `img:pro-lc-8-y-12-estaciones-con-funcion-loop` — PRO LC 4, 8 y 12 estaciones con función loop
 - `img:pro-lc-8-y-12-estaciones` — PRO LC 8 y 12 estaciones
-- `img:pro-tap-100` — Pro-Tap 100
 - `img:k-rain-bl-kr-bluetooth` — K-Rain BL-KR Bluetooth
 - `img:valvula-selenoide-con-programador` — Válvula Solenoide con Programador
 - `img:k-rain-rps-46` — K-RAIN RPS 46 (sku RPS-46)
@@ -365,6 +359,7 @@
 - `img:abrazadera-metalica-greenplains` — Abrazadera metálica GreenPlains
 - `img:brida-ciega` — Brida ciega (PN10) (sku PN10)
 - `img:brida-pn10` — Bridas (PN10) (sku PN10)
+- `img:brida-giratoria-pn10` — Bridas giratorias (PN10) (sku PN10)
 - `img:sacabocado-lay-flat` — Sacabocado Lay Flat
 - `img:union-victaulica-hidroten-copia` — Manguito victaulico
 - `img:bridas-metalicas` — Bridas metálicas
@@ -375,6 +370,8 @@
 - `img:cruces-de-pvc` — Cruces de PVC
 - `img:inyectores-de-fertilizantes-venturi-alfa` — Inyectores de Fertilizantes Venturi Alfa
 - `img:conector-tipo-t` — Conector tipo T
+- `img:codo-de-90-para-polietileno-de-alta-densidad` — Codo 90° para polietileno de alta densidad
+- `img:codo-de-90-para-polietileno-de-alta-densidad-2` — Codo 90° para polietileno de alta densidad
 - `img:estaca-para-tuberia-16mm-y-20mm` — Estaca para tubería 16mm y 20mm
 - `img:t-espiga-x-espiga-x-espiga-2` — T espiga x espiga x espiga
 - `img:codo-roscado-para-polietileno-de-alta-densidad` — Codo roscado para PEAD
@@ -394,9 +391,6 @@
 - `img:pw-4350` — PW-4250 (sku PW-4250)
 - `img:manguera-c-enrollador-y-accesorios-de-10-metros` — Manguera c/enrollador y accesorios de 10 Metros
 - `img:manguera-c-enrollador-y-accesorios-de-15-metros` — Manguera c/enrollador y accesorios de 15 Metros
-- `img:manguera-c-enrollador-y-accesorios-de-20-metros` — Manguera c/enrollador y accesorios de 20 Metros
 - `img:manguera-c-enrollador-y-accesorios-de-50-metros` — Manguera c/enrollador y accesorios de 30 Metros
-- `img:wi-32100` — WI-32100 (sku WI-32100)
-- `img:wi-32120` — WI-32120 (sku WI-32120)
 - `img:pw-4815` — PW-4815 (sku PW-4815)
 

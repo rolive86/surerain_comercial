@@ -1030,6 +1030,13 @@ export type Database = {
           currency: string
         }[]
       }
+      catalog_product_codes: {
+        Args: { p_source_ids: string[] }
+        Returns: {
+          source_id: string
+          cod_articulo: string
+        }[]
+      }
       recompute_effective_prices: { Args: never; Returns: undefined }
       tango_specs_upsert: { Args: { p_rows: Json }; Returns: Json }
       tango_staging_fetch: { Args: { p_entity: string }; Returns: Json }

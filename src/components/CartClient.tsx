@@ -102,6 +102,9 @@ export function CartClient({
                   >
                     {item.product_name_snapshot}
                   </a>
+                  {item.tango_code ? (
+                    <p className="font-mono text-xs text-sr-ink/50">{item.tango_code}</p>
+                  ) : null}
                   <p className="text-sm font-semibold text-sr-green">
                     {item.unit_price != null
                       ? formatFinalUsd(item.unit_price)

@@ -11,6 +11,7 @@ import { getGreetingName } from "@/lib/commercial/profile";
 import { getDashboardRecommendations } from "@/lib/recommendations";
 import { createCommercialServerClient } from "@/lib/supabase/commercial/server";
 import { withFinalPrices } from "@/lib/commercial/pricing";
+import { withProductCodes } from "@/lib/commercial/product-codes";
 
 export const dynamic = "force-dynamic";
 
@@ -38,9 +39,9 @@ async function CustomerDashboard({
     loadCompanyLabel(customerId),
   ]);
   const [reorder, habitual, recommended] = await Promise.all([
-    withFinalPrices(recs.reorder),
-    withFinalPrices(recs.habitual),
-    withFinalPrices(recs.recommended),
+    withFinalPrices(await withProductCodes(recs.reorder)),
+    withFinalPrices(await withProductCodes(recs.habitual)),
+    withFinalPrices(await withProductCodes(recs.recommended)),
   ]);
 
   const hasAny = recs.reorder.length + recs.habitual.length + recs.recommended.length > 0;
@@ -219,7 +220,7 @@ async function PublicHome({ signedIn }: { signedIn: boolean }) {
         {errorMessage ? (
           <ErrorBox message={errorMessage} />
         ) : (
-          <ProductGrid products={featured} />
+          <ProductGrid products={await withProductCodes(featured)} />
         )}
       </section>
     </>

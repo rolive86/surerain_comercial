@@ -1,6 +1,7 @@
 import { createCommercialServerClient } from "@/lib/supabase/commercial/server";
 import { getCommercialSession } from "@/lib/commercial/session";
 import { getFinalPricesBySourceIds } from "@/lib/commercial/pricing";
+import { getProductCodesBySourceIds } from "@/lib/commercial/product-codes";
 
 export type CartItemInput = {
   product_source_id: string;
@@ -23,6 +24,7 @@ export type CartView = {
     image_url?: string | null;
     image_alt?: string | null;
     unit_price?: number | null;
+    tango_code?: string | null;
   }>;
   itemCount: number;
 };
@@ -89,10 +91,15 @@ async function loadCartView(cartId: string): Promise<CartView> {
     quantity: Number(item.quantity),
   }));
 
-  const prices = await getFinalPricesBySourceIds(mapped.map((i) => i.product_source_id));
+  const sourceIds = mapped.map((i) => i.product_source_id);
+  const [prices, codes] = await Promise.all([
+    getFinalPricesBySourceIds(sourceIds),
+    getProductCodesBySourceIds(sourceIds),
+  ]);
   const withPrices = mapped.map((item) => ({
     ...item,
     unit_price: prices.get(item.product_source_id)?.amount ?? null,
+    tango_code: codes.get(item.product_source_id) ?? null,
   }));
 
   return {
@@ -226,12 +233,17 @@ export async function confirmOpenCart(customerNote?: string): Promise<{
     .single();
   if (orderErr) throw new Error(orderErr.message);
 
+  const codes = await getProductCodesBySourceIds(
+    cart.items.map((item) => item.product_source_id),
+  );
+
   const { error: itemsErr } = await supabase.from("order_items").insert(
     cart.items.map((item) => ({
       order_id: order.id,
       product_source_id: item.product_source_id,
       product_name_snapshot: item.product_name_snapshot,
       product_slug_snapshot: item.product_slug_snapshot,
+      sku_snapshot: codes.get(item.product_source_id) ?? null,
       unit_snapshot: item.unit_snapshot,
       quantity: item.quantity,
       unit_price_snapshot: item.unit_price ?? null,

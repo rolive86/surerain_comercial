@@ -40,6 +40,7 @@ export type OrderDetail = {
     product_source_id: string;
     product_name_snapshot: string;
     product_slug_snapshot: string | null;
+    sku_snapshot: string | null;
     quantity: number;
     unit_snapshot: string | null;
   }>;
@@ -130,7 +131,7 @@ export async function getCustomerOrderDetail(orderId: string): Promise<OrderDeta
       id, order_number, status, submitted_at, created_at, customer_id,
       order_items (
         id, product_source_id, product_name_snapshot, product_slug_snapshot,
-        quantity, unit_snapshot
+        sku_snapshot, quantity, unit_snapshot
       ),
       order_status_history (
         id, from_status, to_status, comment, created_at

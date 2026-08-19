@@ -63,6 +63,9 @@ export function ProductCard({
             {product.name}
           </h3>
         </Link>
+        {product.tangoCode ? (
+          <p className="font-mono text-[11px] text-sr-ink/45">{product.tangoCode}</p>
+        ) : null}
         <PriceLine product={product} authenticated={authenticated} />
         <div className="mt-auto pt-1">
           <AddToCartButton

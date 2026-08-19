@@ -47,11 +47,13 @@ export type BackofficeOrderListItem = {
 };
 
 export type BackofficeOrderDetail = BackofficeOrderListItem & {
+  status_is_terminal: boolean;
   items: Array<{
     id: string;
     product_source_id: string;
     product_name_snapshot: string;
     product_slug_snapshot: string | null;
+    sku_snapshot: string | null;
     quantity: number;
   }>;
   history: Array<{
@@ -147,7 +149,8 @@ export async function getBackofficeOrderDetail(
       customers ( legal_name, trade_name ),
       sales_reps ( name ),
       order_items (
-        id, product_source_id, product_name_snapshot, product_slug_snapshot, quantity
+        id, product_source_id, product_name_snapshot, product_slug_snapshot,
+        sku_snapshot, quantity
       ),
       order_status_history (
         id, from_status, to_status, comment, created_at, changed_by
@@ -183,10 +186,17 @@ export async function getBackofficeOrderDetail(
     }));
   const notes = Array.isArray(row.order_notes) ? row.order_notes : [];
 
+  const { data: statusMeta } = await supabase
+    .from("order_statuses")
+    .select("is_terminal")
+    .eq("code", row.status)
+    .maybeSingle();
+
   return {
     id: row.id,
     order_number: row.order_number,
     status: row.status,
+    status_is_terminal: Boolean(statusMeta?.is_terminal),
     status_label: labels.get(row.status) ?? row.status,
     submitted_at: row.submitted_at,
     created_at: row.created_at,
@@ -251,6 +261,99 @@ export async function changeOrderStatus(input: {
     entity_id: order.id,
     before: { status: fromStatus, order_number: order.order_number },
     after: { status: input.toStatus, order_number: order.order_number },
+  });
+  if (auditErr) throw new Error(auditErr.message);
+}
+
+export async function updateOrderItemQuantities(
+  orderId: string,
+  quantities: Record<string, number>,
+): Promise<void> {
+  const session = await getCommercialSession();
+  const staff = requireStaffSession(session);
+  const supabase = await createCommercialServerClient();
+
+  const { data: order, error: findErr } = await supabase
+    .from("orders")
+    .select("id, status, order_number")
+    .eq("id", orderId)
+    .maybeSingle();
+  if (findErr) throw new Error(findErr.message);
+  if (!order) throw new Error("ORDER_NOT_FOUND");
+
+  const { data: statusMeta, error: stErr } = await supabase
+    .from("order_statuses")
+    .select("is_terminal")
+    .eq("code", order.status)
+    .maybeSingle();
+  if (stErr) throw new Error(stErr.message);
+  if (statusMeta?.is_terminal) throw new Error("ORDER_LOCKED");
+
+  const { data: items, error: itemsErr } = await supabase
+    .from("order_items")
+    .select("id, product_name_snapshot, quantity")
+    .eq("order_id", order.id);
+  if (itemsErr) throw new Error(itemsErr.message);
+
+  const changes: Array<{
+    id: string;
+    name: string;
+    fromQty: number;
+    toQty: number;
+  }> = [];
+
+  for (const item of items ?? []) {
+    const raw = quantities[item.id];
+    if (raw === undefined) continue;
+    const toQty = Math.floor(Number(raw));
+    if (!Number.isFinite(toQty) || toQty < 1) throw new Error("INVALID_QUANTITY");
+    const fromQty = Number(item.quantity);
+    if (toQty === fromQty) continue;
+    changes.push({
+      id: item.id,
+      name: item.product_name_snapshot,
+      fromQty,
+      toQty,
+    });
+  }
+
+  if (!changes.length) throw new Error("QUANTITY_UNCHANGED");
+
+  for (const change of changes) {
+    const { error: updErr } = await supabase
+      .from("order_items")
+      .update({ quantity: change.toQty })
+      .eq("id", change.id)
+      .eq("order_id", order.id);
+    if (updErr) throw new Error(updErr.message);
+  }
+
+  const comment = changes
+    .map((c) => `Cantidad de ${c.name}: ${c.fromQty} → ${c.toQty}`)
+    .join("\n");
+
+  const { error: histErr } = await supabase.from("order_status_history").insert({
+    order_id: order.id,
+    from_status: order.status,
+    to_status: order.status,
+    changed_by: staff.user.id,
+    comment,
+  });
+  if (histErr) throw new Error(histErr.message);
+
+  const { error: auditErr } = await supabase.from("audit_log").insert({
+    actor_user_id: staff.user.id,
+    action: "qty_change",
+    entity_type: "order",
+    entity_id: order.id,
+    before: {
+      order_number: order.order_number,
+      items: changes.map((c) => ({ id: c.id, quantity: c.fromQty })),
+    },
+    after: {
+      order_number: order.order_number,
+      items: changes.map((c) => ({ id: c.id, quantity: c.toQty })),
+    },
   });
   if (auditErr) throw new Error(auditErr.message);
 }

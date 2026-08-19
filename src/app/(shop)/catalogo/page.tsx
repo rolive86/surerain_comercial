@@ -12,6 +12,7 @@ import {
 } from "@/lib/catalog";
 import { getCommercialSession } from "@/lib/commercial/session";
 import { withFinalPrices } from "@/lib/commercial/pricing";
+import { withProductCodes } from "@/lib/commercial/product-codes";
 
 export const metadata: Metadata = {
   title: "Catálogo",
@@ -66,7 +67,8 @@ export default async function CatalogoPage({
   const totalPages = Math.max(1, Math.ceil(products.length / PAGE_SIZE));
   const safePage = Math.min(page, totalPages);
   const sliced = products.slice((safePage - 1) * PAGE_SIZE, safePage * PAGE_SIZE);
-  const pageItems = authenticated ? await withFinalPrices(sliced) : sliced;
+  const coded = await withProductCodes(sliced);
+  const pageItems = authenticated ? await withFinalPrices(coded) : coded;
 
   const qs = new URLSearchParams();
   if (filters.q) qs.set("q", filters.q);

@@ -31,6 +31,7 @@ export type ProductListItem = {
   type_slug: string | null;
   image: MediaInfo | null;
   finalPrice?: { amount: number; currency: string } | null;
+  tangoCode?: string | null;
 };
 
 export type ProductDetail = ProductListItem & {

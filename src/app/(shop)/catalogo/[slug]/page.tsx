@@ -12,6 +12,7 @@ import {
 import { getCommercialSession } from "@/lib/commercial/session";
 import { getAlsoBoughtSourceIds } from "@/lib/recommendations";
 import { formatFinalUsd, getFinalPriceForSourceId, withFinalPrices } from "@/lib/commercial/pricing";
+import { getProductCodesBySourceIds, withProductCodes } from "@/lib/commercial/product-codes";
 
 export const dynamic = "force-dynamic";
 
@@ -73,11 +74,16 @@ export default async function ProductPage({ params }: { params: Params }) {
       if (together.length >= 8) break;
     }
   }
+  together = await withProductCodes(together);
   if (authenticated) {
     together = await withFinalPrices(together);
   }
 
-  const finalPrice = authenticated ? await getFinalPriceForSourceId(product.source_id) : null;
+  const [finalPrice, productCodes] = await Promise.all([
+    authenticated ? getFinalPriceForSourceId(product.source_id) : Promise.resolve(null),
+    getProductCodesBySourceIds([product.source_id]),
+  ]);
+  const tangoCode = productCodes.get(product.source_id) ?? null;
 
   const addControl = (
     <AddToCartButton
@@ -171,8 +177,11 @@ export default async function ProductPage({ params }: { params: Params }) {
           <h1 className="mt-4 font-display text-3xl font-bold text-sr-ink sm:text-4xl">
             {product.name}
           </h1>
+          {tangoCode ? (
+            <p className="mt-2 font-mono text-sm text-sr-ink/55">Código: {tangoCode}</p>
+          ) : null}
           {product.brand_name ? (
-            <p className="mt-2 text-base text-sr-ink/55">{product.brand_name}</p>
+            <p className="mt-1 text-base text-sr-ink/55">{product.brand_name}</p>
           ) : null}
 
           {authenticated ? (

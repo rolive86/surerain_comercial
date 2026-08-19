@@ -39,6 +39,14 @@ function tokens(value: string): Set<string> {
   return new Set(normalizeName(value).split(" ").filter((w) => w.length > 1));
 }
 
+/** SKU o modelo del nombre (p. ej. VYR-80) para acotar artículos del Excel Tango. */
+function modelNeedle(name: string, sku: string | null): string | null {
+  if (sku?.trim()) return normalizeName(sku);
+  const m = name.match(/\b([a-z]{2,6})[\s-]*(\d{2,5})\b/i);
+  if (!m) return null;
+  return normalizeName(`${m[1]} ${m[2]}`);
+}
+
 function jaccard(a: Set<string>, b: Set<string>): number {
   if (!a.size || !b.size) return 0;
   let inter = 0;
@@ -145,19 +153,30 @@ async function main() {
       confidence = 0.99;
     } else {
       const pt = tokens(p.name);
+      const model = modelNeedle(p.name, sku);
+      const pool = model
+        ? tango.filter((a) => normalizeName(a.descripcion ?? "").includes(model))
+        : tango;
       let best = 0;
+      let second = 0;
       let bestArt: TangoArt | null = null;
-      for (const a of tango) {
+      const search = pool.length ? pool : tango;
+      for (const a of search) {
         const score = jaccard(pt, tokens(a.descripcion ?? ""));
         if (score > best) {
+          second = best;
           best = score;
           bestArt = a;
+        } else if (score > second) {
+          second = score;
         }
       }
-      if (bestArt && best >= NAME_WEAK) {
+      const uniquePool = Boolean(model) && pool.length === 1;
+      const uniqueLead = Boolean(model) && bestArt && best > 0 && best - second >= 0.08;
+      if (bestArt && (best >= NAME_WEAK || uniquePool || uniqueLead)) {
         hit = bestArt;
         method = "nombre";
-        confidence = Math.round(best * 1000) / 1000;
+        confidence = uniquePool && best < NAME_WEAK ? 0.82 : Math.round(best * 1000) / 1000;
       }
     }
 

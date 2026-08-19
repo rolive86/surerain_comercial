@@ -2,7 +2,11 @@
 
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
-import { addInternalOrderNote, changeOrderStatus } from "@/lib/commercial/backoffice";
+import {
+  addInternalOrderNote,
+  changeOrderStatus,
+  updateOrderItemQuantities,
+} from "@/lib/commercial/backoffice";
 
 function mapError(err: unknown): string {
   const msg = err instanceof Error ? err.message : "Error desconocido";
@@ -19,6 +23,12 @@ function mapError(err: unknown): string {
       return "Estado inválido.";
     case "EMPTY_NOTE":
       return "La nota no puede estar vacía.";
+    case "ORDER_LOCKED":
+      return "Este pedido ya no admite cambios de cantidad.";
+    case "INVALID_QUANTITY":
+      return "La cantidad tiene que ser un entero mayor a 0.";
+    case "QUANTITY_UNCHANGED":
+      return "No hay cambios de cantidad para guardar.";
     default:
       return msg;
   }
@@ -37,6 +47,25 @@ export async function changeOrderStatusAction(formData: FormData) {
     revalidatePath("/gestion/pedidos");
     revalidatePath(`/gestion/pedidos/${orderId}`);
     redirect(`/gestion/pedidos/${orderId}?ok=status`);
+  } catch (err) {
+    if (isNextRedirect(err)) throw err;
+    redirect(`/gestion/pedidos/${orderId}?error=${encodeURIComponent(mapError(err))}`);
+  }
+}
+
+export async function updateOrderQuantitiesAction(formData: FormData) {
+  const orderId = String(formData.get("order_id") ?? "");
+  const quantities: Record<string, number> = {};
+  for (const [key, value] of formData.entries()) {
+    if (!key.startsWith("qty_")) continue;
+    quantities[key.slice(4)] = Number(value);
+  }
+  try {
+    await updateOrderItemQuantities(orderId, quantities);
+    revalidatePath("/gestion/pedidos");
+    revalidatePath(`/gestion/pedidos/${orderId}`);
+    revalidatePath(`/pedido/${orderId}`);
+    redirect(`/gestion/pedidos/${orderId}?ok=qty`);
   } catch (err) {
     if (isNextRedirect(err)) throw err;
     redirect(`/gestion/pedidos/${orderId}?error=${encodeURIComponent(mapError(err))}`);

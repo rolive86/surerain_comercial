@@ -1,14 +1,19 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { historyEventTitle } from "@/components/OrderTimeline";
 import {
   addInternalNoteAction,
   changeOrderStatusAction,
+  updateOrderQuantitiesAction,
 } from "@/lib/commercial/backoffice-actions";
 import {
   getBackofficeOrderDetail,
   listFilterOptions,
 } from "@/lib/commercial/backoffice";
+import { getProductCodesBySourceIds } from "@/lib/commercial/product-codes";
+import { getProductThumbnailsBySourceIds } from "@/lib/catalog";
 
 type Params = Promise<{ id: string }>;
 
@@ -46,6 +51,12 @@ export default async function GestionPedidoDetailPage({
   ]);
   if (!order) notFound();
 
+  const sourceIds = order.items.map((i) => i.product_source_id);
+  const [thumbs, codes] = await Promise.all([
+    getProductThumbnailsBySourceIds(sourceIds),
+    getProductCodesBySourceIds(sourceIds),
+  ]);
+
   return (
     <div>
       <nav className="mb-4 text-sm text-sr-ink/50">
@@ -63,7 +74,11 @@ export default async function GestionPedidoDetailPage({
       ) : null}
       {flash.ok ? (
         <p className="mb-4 rounded-md bg-emerald-50 px-3 py-2 text-sm text-emerald-800">
-          {flash.ok === "note" ? "Nota interna guardada." : "Estado actualizado."}
+          {flash.ok === "note"
+            ? "Nota interna guardada."
+            : flash.ok === "qty"
+              ? "Cantidades actualizadas."
+              : "Estado actualizado."}
         </p>
       ) : null}
 
@@ -86,17 +101,59 @@ export default async function GestionPedidoDetailPage({
       <div className="mt-8 grid gap-4 lg:grid-cols-[1.2fr_0.8fr]">
         <section className="rounded-xl border border-black/5 bg-white p-5">
           <h2 className="font-display text-lg font-semibold">Ítems</h2>
-          <ul className="mt-3 divide-y divide-black/5">
-            {order.items.map((item) => (
-              <li key={item.id} className="flex justify-between gap-3 py-2 text-sm">
-                <div>
-                  <p className="font-medium">{item.product_name_snapshot}</p>
-                  <p className="font-mono text-xs text-sr-ink/40">{item.product_source_id}</p>
-                </div>
-                <p className="font-semibold">× {item.quantity}</p>
-              </li>
-            ))}
-          </ul>
+          <form action={updateOrderQuantitiesAction}>
+            <input type="hidden" name="order_id" value={order.id} />
+            <ul className="mt-3 divide-y divide-black/5">
+              {order.items.map((item) => {
+                const thumb = thumbs.get(item.product_source_id);
+                const tangoCode = item.sku_snapshot || codes.get(item.product_source_id) || null;
+                return (
+                  <li key={item.id} className="flex items-center gap-3 py-3 text-sm">
+                    <span className="relative h-14 w-14 shrink-0 overflow-hidden rounded-md bg-sr-mist">
+                      {thumb?.url ? (
+                        <Image
+                          src={thumb.url}
+                          alt={item.product_name_snapshot}
+                          fill
+                          sizes="56px"
+                          className="object-cover"
+                        />
+                      ) : null}
+                    </span>
+                    <div className="min-w-0 flex-1">
+                      <p className="font-medium">{item.product_name_snapshot}</p>
+                      {tangoCode ? (
+                        <p className="font-mono text-xs text-sr-ink/55">{tangoCode}</p>
+                      ) : (
+                        <p className="text-xs text-sr-ink/40">Sin código Tango mapeado</p>
+                      )}
+                    </div>
+                    {order.status_is_terminal ? (
+                      <p className="font-semibold">× {item.quantity}</p>
+                    ) : (
+                      <label className="shrink-0 text-xs font-semibold uppercase tracking-wider text-sr-ink/45">
+                        Cant.
+                        <input
+                          type="number"
+                          name={`qty_${item.id}`}
+                          min={1}
+                          step={1}
+                          defaultValue={item.quantity}
+                          required
+                          className="ml-2 w-20 rounded-md border border-black/10 px-2 py-1.5 text-sm font-normal normal-case tracking-normal"
+                        />
+                      </label>
+                    )}
+                  </li>
+                );
+              })}
+            </ul>
+            {!order.status_is_terminal ? (
+              <button type="submit" className="btn-primary mt-4">
+                Guardar cantidades
+              </button>
+            ) : null}
+          </form>
         </section>
 
         <section className="rounded-xl border border-black/5 bg-white p-5">
@@ -145,9 +202,11 @@ export default async function GestionPedidoDetailPage({
             {order.history.map((h) => (
               <li key={h.id} className="relative text-sm">
                 <span className="absolute -left-[1.35rem] top-1.5 h-2.5 w-2.5 rounded-full bg-sr-green" />
-                <p className="font-semibold text-sr-ink">{h.to_status_label}</p>
+                <p className="font-semibold text-sr-ink">{historyEventTitle(h)}</p>
                 <p className="text-xs text-sr-ink/40">{formatDate(h.created_at)}</p>
-                {h.comment ? <p className="mt-1 text-sr-ink/60">{h.comment}</p> : null}
+                {h.comment ? (
+                  <p className="mt-1 whitespace-pre-wrap text-sr-ink/60">{h.comment}</p>
+                ) : null}
               </li>
             ))}
           </ol>

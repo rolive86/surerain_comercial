@@ -6,6 +6,7 @@ import { OrderTimeline, orderStatusClass } from "@/components/OrderTimeline";
 import { reorderOrderAction } from "@/lib/commercial/cart-actions";
 import { getCustomerOrderDetail } from "@/lib/commercial/orders";
 import { getCommercialSession } from "@/lib/commercial/session";
+import { getProductCodesBySourceIds } from "@/lib/commercial/product-codes";
 import { getProductThumbnailsBySourceIds } from "@/lib/catalog";
 
 type Params = Promise<{ id: string }>;
@@ -51,9 +52,11 @@ export default async function PedidoPage({
   const order = await getCustomerOrderDetail(id);
   if (!order) notFound();
 
-  const thumbs = await getProductThumbnailsBySourceIds(
-    order.items.map((i) => i.product_source_id),
-  );
+  const sourceIds = order.items.map((i) => i.product_source_id);
+  const [thumbs, codes] = await Promise.all([
+    getProductThumbnailsBySourceIds(sourceIds),
+    getProductCodesBySourceIds(sourceIds),
+  ]);
 
   return (
     <div className="container-sr py-10 sm:py-12">
@@ -112,6 +115,11 @@ export default async function PedidoPage({
                   <Link href={href} className="font-medium hover:text-sr-green">
                     {item.product_name_snapshot}
                   </Link>
+                  {item.sku_snapshot || codes.get(item.product_source_id) ? (
+                    <p className="font-mono text-xs text-sr-ink/50">
+                      {item.sku_snapshot || codes.get(item.product_source_id)}
+                    </p>
+                  ) : null}
                 </div>
                 <p className="text-sm font-semibold">× {item.quantity}</p>
               </li>

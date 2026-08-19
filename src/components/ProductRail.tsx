@@ -71,6 +71,9 @@ function CardShell({
         >
           {product.name}
         </Link>
+        {product.tangoCode ? (
+          <p className="font-mono text-[11px] text-sr-ink/45">{product.tangoCode}</p>
+        ) : null}
         {authenticated ? (
           <p className="text-xs font-semibold text-sr-green">
             {product.finalPrice ? formatFinalUsd(product.finalPrice.amount) : "A confirmar"}
