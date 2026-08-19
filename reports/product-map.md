@@ -2,11 +2,12 @@
 
 - Catálogo publicados: **420**
 - Artículos Tango: **1594**
-- Matcheados (alta confianza): **142** (33.8% del catálogo)
-- Dudosos (nombre 0.55–0.75, no auto-confirmados): **67**
+- Protegidos (confirmados / manuales, no se pisan): **1**
+- Matcheados auto (alta confianza): **142**
+- Cobertura auto+protegidos: **143** (34% del catálogo)
+- Dudosos (nombre 0.55–0.75): **66**
 - Sin match: **164**
 - Descartados por `cod_articulo` ya asignado: **47**
-- `confirmed=false` en todos (revisión admin pendiente)
 
 ## Matcheados
 
@@ -214,7 +215,6 @@
 | img:valvula-aire-vacio-triple-efecto-rm-1-y-2 | Válvula aire-vacío triple efecto, RM 1″ y 2″ | VASR00AV0125B1" | 0.556 |
 | img:llave-de-ajuste-p-conectores-pead | Llave de ajuste para conectores PEAD | ACAL0000931-4-8 | 0.556 |
 | img:33820122-33820123-33830122 | Filtro largo Palaplast tipo Y 33820123 | FIPA00033820123 | 0.5 |
-| img:vyr-80-circular | VYR-80 Circular | ASVY00080018040 | 0.429 |
 | img:vyr-80-sectorizable | VYR-80 Sectorizable | ASVY00080048040 | 0.429 |
 | img:vyr-23 | VYR-23 | ASVYCAPVYR23/33 | 0.4 |
 | img:vyr-33-plastico | VYR-33 PLÁSTICO | ASVY00000333133 | 0.375 |

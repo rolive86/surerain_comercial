@@ -118,6 +118,27 @@ export async function deleteMarginAction(formData: FormData) {
   }
 }
 
+export async function bulkConfirmMapAction(formData: FormData) {
+  const session = await getCommercialSession();
+  try {
+    requireAdminConsoleSession(session);
+    const threshold = Number(String(formData.get("threshold") ?? "0.9").replace(",", "."));
+    const min = Number.isFinite(threshold) ? threshold : 0.9;
+    const supabase = createCommercialAdminClient();
+    const { error } = await supabase
+      .from("product_map")
+      .update({ confirmed: true })
+      .eq("confirmed", false)
+      .gte("confidence", min);
+    if (error) throw new Error(error.message);
+    revalidatePath("/gestion/admin/mapeo");
+    redirect("/gestion/admin/mapeo?ok=bulk");
+  } catch (err) {
+    if (isNextRedirect(err)) throw err;
+    bounce("/gestion/admin/mapeo", err);
+  }
+}
+
 export async function confirmMapAction(formData: FormData) {
   const session = await getCommercialSession();
   try {

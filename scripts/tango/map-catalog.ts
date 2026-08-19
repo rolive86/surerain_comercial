@@ -133,10 +133,21 @@ async function main() {
     if (a.cod_barra) byBarcode.set(a.cod_barra.replace(/\s+/g, "").toLowerCase(), a);
   }
 
+  const { data: existingMaps, error: existErr } = await commercial
+    .from("product_map")
+    .select("source_id, cod_articulo, confirmed, match_method");
+  if (existErr) throw new Error(existErr.message);
+  const protectedMaps = (existingMaps ?? []).filter(
+    (m) => m.confirmed || m.match_method === "manual",
+  );
+  const protectedSources = new Set(protectedMaps.map((m) => m.source_id));
+  const usedCodes = new Set(protectedMaps.map((m) => m.cod_articulo));
+
   const candidates: Candidate[] = [];
   const unmatched: CatalogProduct[] = [];
 
   for (const p of catalog) {
+    if (protectedSources.has(p.source_id)) continue;
     const sku = p.sku?.trim() || null;
     const skuKey = sku?.replace(/\s+/g, "").toLowerCase() ?? null;
     let hit: TangoArt | null = null;
@@ -197,7 +208,6 @@ async function main() {
   }
 
   candidates.sort((a, b) => b.confidence - a.confidence);
-  const usedCodes = new Set<string>();
   const kept: Candidate[] = [];
   const droppedDup: Candidate[] = [];
   for (const c of candidates) {
@@ -209,7 +219,7 @@ async function main() {
     kept.push(c);
   }
 
-  const { error: delErr } = await commercial.from("product_map").delete().neq("source_id", "__none__");
+  const { error: delErr } = await commercial.from("product_map").delete().eq("confirmed", false);
   if (delErr) throw new Error(delErr.message);
 
   if (kept.length) {
@@ -232,18 +242,22 @@ async function main() {
     (c) => c.match_method !== "nombre" || c.confidence >= NAME_OK,
   );
   const doubtful = kept.filter((c) => c.match_method === "nombre" && c.confidence < NAME_OK);
-  const matchPct = catalog.length ? Math.round((matched.length / catalog.length) * 1000) / 10 : 0;
+  const autoPlusProtected = matched.length + protectedMaps.length;
+  const matchPct = catalog.length
+    ? Math.round((autoPlusProtected / catalog.length) * 1000) / 10
+    : 0;
 
   const lines = [
     "# Product map — catálogo ↔ Tango",
     "",
     `- Catálogo publicados: **${catalog.length}**`,
     `- Artículos Tango: **${tango.length}**`,
-    `- Matcheados (alta confianza): **${matched.length}** (${matchPct}% del catálogo)`,
-    `- Dudosos (nombre ${NAME_WEAK}–${NAME_OK}, no auto-confirmados): **${doubtful.length}**`,
+    `- Protegidos (confirmados / manuales, no se pisan): **${protectedMaps.length}**`,
+    `- Matcheados auto (alta confianza): **${matched.length}**`,
+    `- Cobertura auto+protegidos: **${autoPlusProtected}** (${matchPct}% del catálogo)`,
+    `- Dudosos (nombre ${NAME_WEAK}–${NAME_OK}): **${doubtful.length}**`,
     `- Sin match: **${unmatched.length}**`,
     `- Descartados por \`cod_articulo\` ya asignado: **${droppedDup.length}**`,
-    `- \`confirmed=false\` en todos (revisión admin pendiente)`,
     "",
     "## Matcheados",
     "",
@@ -278,6 +292,7 @@ async function main() {
       {
         catalog: catalog.length,
         tango: tango.length,
+        protected: protectedMaps.length,
         matched: matched.length,
         doubtful: doubtful.length,
         unmatched: unmatched.length,
