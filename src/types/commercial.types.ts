@@ -294,6 +294,7 @@ export type Database = {
           sales_rep_id: string
           valid_from: string
           valid_to: string | null
+          source_system: string
         }
         Insert: {
           active?: boolean
@@ -303,6 +304,7 @@ export type Database = {
           sales_rep_id: string
           valid_from?: string
           valid_to?: string | null
+          source_system?: string
         }
         Update: {
           active?: boolean
@@ -312,6 +314,7 @@ export type Database = {
           sales_rep_id?: string
           valid_from?: string
           valid_to?: string | null
+          source_system?: string
         }
         Relationships: [
           {

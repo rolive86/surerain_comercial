@@ -25,6 +25,7 @@
     "test:responsive": "tsx --tsconfig tsconfig.scripts.json scripts/verify-responsive.ts",
     "tango:load": "tsx --tsconfig tsconfig.scripts.json scripts/tango/load-json.ts",
     "tango:normalize-precios": "tsx --tsconfig tsconfig.scripts.json scripts/tango/normalize-precios.ts",
+    "tango:normalize-comercial": "tsx --tsconfig tsconfig.scripts.json scripts/tango/normalize-comercial.ts",
     "tango:map": "tsx --tsconfig tsconfig.scripts.json scripts/tango/map-catalog.ts",
     "tango:load-xlsx": "tsx --tsconfig tsconfig.scripts.json scripts/tango/load-xlsx.ts",
     "tango:verify-pricing-rls": "tsx --tsconfig tsconfig.scripts.json scripts/tango/verify-pricing-rls.ts",
