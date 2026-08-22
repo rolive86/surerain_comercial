@@ -11,6 +11,7 @@ import {
 } from "@/lib/commercial/backoffice-actions";
 import { saveQuoteAction } from "@/lib/commercial/quote-actions";
 import { suggestedPricesForOrder } from "@/lib/commercial/quote";
+import { QuoteSendPanel } from "@/components/QuoteSendPanel";
 import { displayFinalUsd, isValidFinalAmount } from "@/lib/commercial/money";
 import {
   getBackofficeOrderDetail,
@@ -18,6 +19,7 @@ import {
 } from "@/lib/commercial/backoffice";
 import { getProductCodesBySourceIds } from "@/lib/commercial/product-codes";
 import { getProductThumbnailsBySourceIds } from "@/lib/catalog";
+import { createCommercialServerClient } from "@/lib/supabase/commercial/server";
 
 type Params = Promise<{ id: string }>;
 
@@ -45,7 +47,7 @@ export default async function GestionPedidoDetailPage({
   searchParams,
 }: {
   params: Params;
-  searchParams: Promise<{ error?: string; ok?: string }>;
+  searchParams: Promise<{ error?: string; ok?: string; wa?: string }>;
 }) {
   const { id } = await params;
   const flash = await searchParams;
@@ -54,6 +56,18 @@ export default async function GestionPedidoDetailPage({
     listFilterOptions(),
   ]);
   if (!order) notFound();
+
+  const supabase = await createCommercialServerClient();
+  const { data: customerPhone } = await supabase
+    .from("customers")
+    .select("phone")
+    .eq("id", order.customer_id)
+    .maybeSingle();
+  const { data: orderExtra } = await supabase
+    .from("orders")
+    .select("pdf_url, whatsapp_phone")
+    .eq("id", order.id)
+    .maybeSingle();
 
   const sourceIds = order.items.map((i) => i.product_source_id);
   const [thumbs, codes, suggested] = await Promise.all([
@@ -90,7 +104,11 @@ export default async function GestionPedidoDetailPage({
                 ? "Precio fijado."
                 : flash.ok === "quoted"
                   ? "Cotización guardada."
-                  : "Estado actualizado."}
+                  : flash.ok === "pdf"
+                    ? "PDF generado y subido."
+                    : flash.ok === "sent"
+                      ? "Cotización marcada como Enviada. Se abre WhatsApp…"
+                      : "Estado actualizado."}
         </p>
       ) : null}
 
@@ -246,6 +264,16 @@ export default async function GestionPedidoDetailPage({
             </form>
           </section>
         ) : null}
+
+        <div className="lg:col-span-2">
+          <QuoteSendPanel
+            orderId={order.id}
+            status={order.status}
+            pdfUrl={orderExtra?.pdf_url ?? null}
+            defaultPhone={orderExtra?.whatsapp_phone ?? customerPhone?.phone ?? null}
+            waUrl={flash.wa ? decodeURIComponent(flash.wa) : null}
+          />
+        </div>
 
         <section className="rounded-xl border border-black/5 bg-white p-5">
           <h2 className="font-display text-lg font-semibold">Cambiar estado</h2>

@@ -28,6 +28,10 @@ function mapError(err: unknown): string {
       return "Agregá al menos un artículo.";
     case "INVALID_PRICE":
       return "Hay un precio inválido.";
+    case "ORDER_NOT_QUOTED":
+      return "Guardá la cotización antes de generar el PDF.";
+    case "PHONE_REQUIRED":
+      return "Ingresá el teléfono del cliente.";
     default:
       return msg;
   }
@@ -101,6 +105,48 @@ export async function createTelephoneQuoteAction(formData: FormData) {
     if (isNextRedirect(err)) throw err;
     redirect(
       `/gestion/pedidos/nueva?error=${encodeURIComponent(mapError(err))}`,
+    );
+  }
+}
+
+export async function generateQuotePdfAction(formData: FormData) {
+  const orderId = String(formData.get("order_id") ?? "");
+  try {
+    const { generateAndStoreQuotePdf } = await import("@/lib/commercial/quote-pdf");
+    await generateAndStoreQuotePdf(orderId);
+    revalidatePath(`/gestion/pedidos/${orderId}`);
+    redirect(`/gestion/pedidos/${orderId}?ok=pdf`);
+  } catch (err) {
+    if (isNextRedirect(err)) throw err;
+    redirect(
+      `/gestion/pedidos/${orderId}?error=${encodeURIComponent(mapError(err))}`,
+    );
+  }
+}
+
+export async function sendQuoteWhatsAppAction(formData: FormData): Promise<void> {
+  const orderId = String(formData.get("order_id") ?? "");
+  const phone = String(formData.get("phone") ?? "");
+  try {
+    const { markQuoteSent } = await import("@/lib/commercial/quote-pdf");
+    const result = await markQuoteSent({
+      orderId,
+      phone: phone.trim() || null,
+    });
+    revalidatePath(`/gestion/pedidos/${orderId}`);
+    revalidatePath("/mis-pedidos");
+    redirect(
+      `/gestion/pedidos/${orderId}?ok=sent&wa=${encodeURIComponent(result.waUrl)}`,
+    );
+  } catch (err) {
+    if (isNextRedirect(err)) throw err;
+    const msg = mapError(err);
+    const mapped =
+      err instanceof Error && err.message === "PHONE_REQUIRED"
+        ? "Ingresá el teléfono del cliente (formato Argentina)."
+        : msg;
+    redirect(
+      `/gestion/pedidos/${orderId}?error=${encodeURIComponent(mapped)}`,
     );
   }
 }

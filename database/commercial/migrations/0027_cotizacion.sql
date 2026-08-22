@@ -134,3 +134,19 @@ revoke execute on function public.quote_unit_price(text, uuid) from public;
 revoke execute on function public.quote_unit_price(text, uuid) from anon;
 grant execute on function public.quote_unit_price(text, uuid) to authenticated;
 grant execute on function public.quote_unit_price(text, uuid) to service_role;
+
+-- Storage: PDF de cotizaciones (público de lectura)
+insert into storage.buckets (id, name, public, file_size_limit, allowed_mime_types)
+values ('cotizaciones', 'cotizaciones', true, 10485760, array['application/pdf'])
+on conflict (id) do update set public = true;
+
+drop policy if exists cotizaciones_public_read on storage.objects;
+create policy cotizaciones_public_read on storage.objects
+  for select to public
+  using (bucket_id = 'cotizaciones');
+
+drop policy if exists cotizaciones_service_write on storage.objects;
+create policy cotizaciones_service_write on storage.objects
+  for all to service_role
+  using (bucket_id = 'cotizaciones')
+  with check (bucket_id = 'cotizaciones');

@@ -29,7 +29,11 @@
     "tango:map": "tsx --tsconfig tsconfig.scripts.json scripts/tango/map-catalog.ts",
     "tango:load-xlsx": "tsx --tsconfig tsconfig.scripts.json scripts/tango/load-xlsx.ts",
     "tango:verify-pricing-rls": "tsx --tsconfig tsconfig.scripts.json scripts/tango/verify-pricing-rls.ts",
-    "seed:admin-demo": "tsx --tsconfig tsconfig.scripts.json scripts/seed-admin-demo.ts"
+    "seed:admin-demo": "tsx --tsconfig tsconfig.scripts.json scripts/seed-admin-demo.ts",
+    "espejo:setup": "tsx --tsconfig tsconfig.scripts.json scripts/espejo/setup.ts",
+    "espejo:inspect": "tsx --tsconfig tsconfig.scripts.json scripts/espejo/inspect.ts",
+    "espejo:normalize": "tsx --tsconfig tsconfig.scripts.json scripts/espejo/normalize.ts",
+    "espejo:refresh-products": "tsx --tsconfig tsconfig.scripts.json scripts/espejo/refresh-products.ts"
   },
   "engines": {
     "node": ">=20"
@@ -42,6 +46,9 @@
     "dotenv": "^17.4.2",
     "next": "^15.5.0",
     "p-limit": "^6.2.0",
+    "pdfkit": "^0.19.1",
+    "pg": "^8.23.0",
+    "postgres": "^3.4.9",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "server-only": "^0.0.1",
@@ -50,6 +57,7 @@
   },
   "devDependencies": {
     "@types/node": "^22.20.1",
+    "@types/pdfkit": "^0.17.6",
     "@types/react": "^19.1.0",
     "@types/react-dom": "^19.1.0",
     "autoprefixer": "^10.4.21",
