@@ -1,40 +1,47 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useState, useTransition } from "react";
 import { createTelephoneQuoteAction } from "@/lib/commercial/quote-actions";
+import {
+  searchTangoProductsAction,
+  type TangoProductSearchHit,
+} from "@/lib/commercial/tango-product-search";
 
 type CustomerOpt = { id: string; label: string };
-type ProductOpt = {
-  cod_articulo: string;
-  descripcion: string | null;
-};
 
 export function NuevaCotizacionForm({
   customers,
-  products,
 }: {
   customers: CustomerOpt[];
-  products: ProductOpt[];
 }) {
   const [customerId, setCustomerId] = useState(customers[0]?.id ?? "");
   const [q, setQ] = useState("");
+  const [hits, setHits] = useState<TangoProductSearchHit[]>([]);
+  const [searching, startSearch] = useTransition();
   const [lines, setLines] = useState<
     Array<{ cod_articulo: string; name: string; quantity: number }>
   >([]);
 
-  const filtered = useMemo(() => {
-    const needle = q.trim().toLowerCase();
-    if (!needle) return products.slice(0, 40);
-    return products
-      .filter(
-        (p) =>
-          p.cod_articulo.toLowerCase().includes(needle) ||
-          (p.descripcion ?? "").toLowerCase().includes(needle),
-      )
-      .slice(0, 40);
-  }, [products, q]);
+  useEffect(() => {
+    const needle = q.trim();
+    if (!needle) {
+      setHits([]);
+      return;
+    }
+    const handle = setTimeout(() => {
+      startSearch(async () => {
+        try {
+          const rows = await searchTangoProductsAction(needle);
+          setHits(rows);
+        } catch {
+          setHits([]);
+        }
+      });
+    }, 280);
+    return () => clearTimeout(handle);
+  }, [q]);
 
-  function addLine(p: ProductOpt) {
+  function addLine(p: TangoProductSearchHit) {
     setLines((prev) => {
       const existing = prev.find((l) => l.cod_articulo === p.cod_articulo);
       if (existing) {
@@ -80,25 +87,43 @@ export function NuevaCotizacionForm({
             onChange={(e) => setQ(e.target.value)}
             placeholder="Código o descripción"
             className="mt-1 w-full rounded-md border border-black/10 px-3 py-2 text-sm font-normal normal-case tracking-normal"
+            autoComplete="off"
           />
         </label>
-        <ul className="mt-3 max-h-80 divide-y divide-black/5 overflow-auto rounded-lg border border-black/5">
-          {filtered.map((p) => (
-            <li key={p.cod_articulo} className="flex items-center justify-between gap-2 px-3 py-2 text-sm">
-              <div className="min-w-0">
-                <p className="truncate font-medium">{p.descripcion || p.cod_articulo}</p>
-                <p className="font-mono text-xs text-sr-ink/45">{p.cod_articulo}</p>
-              </div>
-              <button
-                type="button"
-                className="btn-secondary shrink-0 px-3 py-1 text-xs"
-                onClick={() => addLine(p)}
-              >
-                Agregar
-              </button>
-            </li>
-          ))}
-        </ul>
+        {!q.trim() ? (
+          <p className="mt-3 rounded-lg border border-dashed border-black/10 px-3 py-6 text-center text-sm text-sr-ink/50">
+            Escribí para buscar
+          </p>
+        ) : (
+          <ul className="mt-3 max-h-80 divide-y divide-black/5 overflow-auto rounded-lg border border-black/5">
+            {searching && hits.length === 0 ? (
+              <li className="px-3 py-4 text-sm text-sr-ink/50">Buscando…</li>
+            ) : hits.length === 0 ? (
+              <li className="px-3 py-4 text-sm text-sr-ink/50">Sin resultados</li>
+            ) : (
+              hits.map((p) => (
+                <li
+                  key={p.cod_articulo}
+                  className="flex items-center justify-between gap-2 px-3 py-2 text-sm"
+                >
+                  <div className="min-w-0">
+                    <p className="truncate font-medium">
+                      {p.descripcion || p.cod_articulo}
+                    </p>
+                    <p className="font-mono text-xs text-sr-ink/45">{p.cod_articulo}</p>
+                  </div>
+                  <button
+                    type="button"
+                    className="btn-secondary shrink-0 px-3 py-1 text-xs"
+                    onClick={() => addLine(p)}
+                  >
+                    Agregar
+                  </button>
+                </li>
+              ))
+            )}
+          </ul>
+        )}
       </section>
 
       <section className="rounded-xl border border-black/5 bg-white p-5">

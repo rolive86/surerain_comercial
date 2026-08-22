@@ -22,20 +22,12 @@ export default async function NuevaCotizacionPage({
   requireStaffSession(session);
   const supabase = await createCommercialServerClient();
 
-  const [{ data: customers }, { data: products }] = await Promise.all([
-    supabase
-      .from("customers")
-      .select("id, legal_name, trade_name")
-      .eq("active", true)
-      .order("legal_name")
-      .limit(2000),
-    supabase
-      .from("products_tango")
-      .select("cod_articulo, descripcion")
-      .eq("active", true)
-      .order("descripcion")
-      .limit(3000),
-  ]);
+  const { data: customers } = await supabase
+    .from("customers")
+    .select("id, legal_name, trade_name")
+    .eq("active", true)
+    .order("legal_name")
+    .limit(2000);
 
   const customerOpts = (customers ?? []).map((c) => ({
     id: c.id,
@@ -63,10 +55,7 @@ export default async function NuevaCotizacionPage({
         {customerOpts.length === 0 ? (
           <p className="text-sm text-sr-ink/60">No hay clientes visibles en tu cartera.</p>
         ) : (
-          <NuevaCotizacionForm
-            customers={customerOpts}
-            products={products ?? []}
-          />
+          <NuevaCotizacionForm customers={customerOpts} />
         )}
       </div>
     </div>
