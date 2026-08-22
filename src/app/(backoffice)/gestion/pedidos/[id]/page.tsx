@@ -9,6 +9,8 @@ import {
   setOrderItemPriceAction,
   updateOrderQuantitiesAction,
 } from "@/lib/commercial/backoffice-actions";
+import { saveQuoteAction } from "@/lib/commercial/quote-actions";
+import { suggestedPricesForOrder } from "@/lib/commercial/quote";
 import { displayFinalUsd, isValidFinalAmount } from "@/lib/commercial/money";
 import {
   getBackofficeOrderDetail,
@@ -54,10 +56,14 @@ export default async function GestionPedidoDetailPage({
   if (!order) notFound();
 
   const sourceIds = order.items.map((i) => i.product_source_id);
-  const [thumbs, codes] = await Promise.all([
+  const [thumbs, codes, suggested] = await Promise.all([
     getProductThumbnailsBySourceIds(sourceIds),
     getProductCodesBySourceIds(sourceIds),
+    ["submitted", "quoted", "received"].includes(order.status)
+      ? suggestedPricesForOrder(order.id).catch(() => ({} as Record<string, number | null>))
+      : Promise.resolve({} as Record<string, number | null>),
   ]);
+  const canQuote = ["submitted", "quoted", "received"].includes(order.status);
 
   return (
     <div>
@@ -82,7 +88,9 @@ export default async function GestionPedidoDetailPage({
               ? "Cantidades actualizadas."
               : flash.ok === "price"
                 ? "Precio fijado."
-                : "Estado actualizado."}
+                : flash.ok === "quoted"
+                  ? "Cotización guardada."
+                  : "Estado actualizado."}
         </p>
       ) : null}
 
@@ -188,6 +196,56 @@ export default async function GestionPedidoDetailPage({
             </button>
           ) : null}
         </section>
+
+        {canQuote ? (
+          <section className="rounded-xl border border-sr-green/20 bg-white p-5 lg:col-span-2">
+            <h2 className="font-display text-lg font-semibold text-sr-ink">
+              Cotizar solicitud
+            </h2>
+            <p className="mt-1 text-sm text-sr-ink/55">
+              Precios sugeridos = base × (1 + markup del cliente). Editá si hace falta y guardá.
+            </p>
+            <form action={saveQuoteAction} className="mt-4 space-y-3">
+              <input type="hidden" name="order_id" value={order.id} />
+              <ul className="divide-y divide-black/5 rounded-lg border border-black/5">
+                {order.items.map((item) => {
+                  const suggestedAmt =
+                    suggested[item.id] ?? item.unit_price_snapshot ?? "";
+                  return (
+                    <li
+                      key={item.id}
+                      className="flex flex-col gap-2 px-3 py-3 sm:flex-row sm:items-center sm:justify-between"
+                    >
+                      <div className="min-w-0">
+                        <p className="font-medium">{item.product_name_snapshot}</p>
+                        <p className="text-xs text-sr-ink/50">
+                          × {item.quantity}
+                          {item.sku_snapshot || codes.get(item.product_source_id)
+                            ? ` · ${item.sku_snapshot || codes.get(item.product_source_id)}`
+                            : ""}
+                        </p>
+                      </div>
+                      <label className="text-xs font-semibold uppercase tracking-wider text-sr-ink/45">
+                        USD unit.
+                        <input
+                          name={`price_${item.id}`}
+                          type="number"
+                          min={0}
+                          step="0.01"
+                          defaultValue={suggestedAmt === null ? "" : suggestedAmt}
+                          className="ml-2 w-28 rounded-md border border-black/10 px-2 py-1.5 text-sm font-normal normal-case tracking-normal"
+                        />
+                      </label>
+                    </li>
+                  );
+                })}
+              </ul>
+              <button type="submit" className="btn-primary">
+                Guardar cotización
+              </button>
+            </form>
+          </section>
+        ) : null}
 
         <section className="rounded-xl border border-black/5 bg-white p-5">
           <h2 className="font-display text-lg font-semibold">Cambiar estado</h2>

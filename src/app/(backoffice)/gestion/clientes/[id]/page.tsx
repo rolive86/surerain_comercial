@@ -7,10 +7,12 @@ import {
   deactivateContactAction,
   updateCustomerAction,
 } from "@/lib/commercial/crm-actions";
+import { saveCustomerPricingAction } from "@/lib/commercial/quote-actions";
 import {
   canManageAssignments,
   getCrmCustomer,
 } from "@/lib/commercial/crm";
+import { getCustomerPricing } from "@/lib/commercial/quote";
 import { getCommercialSession } from "@/lib/commercial/session";
 import { listFilterOptions, requireStaffSession } from "@/lib/commercial/backoffice";
 
@@ -45,6 +47,7 @@ const okMsg: Record<string, string> = {
   contact: "Contacto agregado.",
   contact_off: "Contacto desactivado.",
   assign: "Asignación actualizada.",
+  pricing: "Markup del cliente guardado.",
 };
 
 export default async function ClienteDetailPage({
@@ -60,9 +63,10 @@ export default async function ClienteDetailPage({
   const staff = requireStaffSession(session);
   const manager = canManageAssignments(staff);
 
-  const [data, options] = await Promise.all([
+  const [data, options, pricing] = await Promise.all([
     getCrmCustomer(id),
     manager ? listFilterOptions() : Promise.resolve(null),
+    getCustomerPricing(id).catch(() => null),
   ]);
   if (!data) notFound();
   const { customer, contacts, assignments } = data;
@@ -195,6 +199,42 @@ export default async function ClienteDetailPage({
             <button type="submit" className="btn-primary">
               Guardar cambios
             </button>
+          </form>
+        </section>
+
+        <section className="rounded-xl border border-black/5 bg-white p-5">
+          <h2 className="font-display text-lg font-semibold">Cotización · markup</h2>
+          <p className="mt-1 text-sm text-sr-ink/55">
+            Precio al cliente = base lista 29 × (1 + % / 100). Moneda USD.
+          </p>
+          <form action={saveCustomerPricingAction} className="mt-3 grid gap-3 sm:grid-cols-3">
+            <input type="hidden" name="customer_id" value={customer.id} />
+            <label className="block text-xs font-semibold uppercase tracking-wider text-sr-ink/45">
+              Markup %
+              <input
+                name="markup_pct"
+                type="number"
+                min={0}
+                max={500}
+                step={0.01}
+                required
+                defaultValue={pricing?.markup_pct ?? 0}
+                className="mt-1 w-full rounded-md border border-black/10 px-3 py-2 text-sm font-normal normal-case tracking-normal"
+              />
+            </label>
+            <label className="block text-xs font-semibold uppercase tracking-wider text-sr-ink/45">
+              Moneda
+              <input
+                name="currency"
+                defaultValue={pricing?.currency ?? "USD"}
+                className="mt-1 w-full rounded-md border border-black/10 px-3 py-2 text-sm font-normal normal-case tracking-normal"
+              />
+            </label>
+            <div className="flex items-end">
+              <button type="submit" className="btn-primary w-full">
+                Guardar markup
+              </button>
+            </div>
           </form>
         </section>
 

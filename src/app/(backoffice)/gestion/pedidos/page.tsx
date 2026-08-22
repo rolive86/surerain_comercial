@@ -49,7 +49,12 @@ export default async function GestionPedidosPage({
             Filtros por número, cliente, vendedor, estado y fecha. Alcance según RLS.
           </p>
         </div>
-        <p className="text-sm font-semibold text-sr-ink/50">{orders.length} resultado(s)</p>
+        <div className="flex flex-wrap items-center gap-2">
+          <Link href="/gestion/pedidos/nueva" className="btn-primary">
+            Nueva cotización
+          </Link>
+          <p className="text-sm font-semibold text-sr-ink/50">{orders.length} resultado(s)</p>
+        </div>
       </div>
 
       <form className="mt-6 grid gap-3 rounded-xl border border-black/5 bg-white p-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
