@@ -85,7 +85,7 @@ export default async function PedidoPage({
           </p>
         </div>
         <div className="flex flex-wrap gap-2">
-          {order.status === "sent" && order.pdf_url ? (
+          {order.status === "quoted" && order.pdf_url ? (
             <a
               href={order.pdf_url}
               target="_blank"

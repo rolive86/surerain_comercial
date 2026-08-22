@@ -142,7 +142,7 @@ export default async function MisPedidosPage({
                   <span className={`chip w-fit ${orderStatusClass(order.status)}`}>
                     {order.status_label}
                   </span>
-                  {order.status === "sent" && order.pdf_url ? (
+                  {order.status === "quoted" && order.pdf_url ? (
                     <a
                       href={order.pdf_url}
                       target="_blank"

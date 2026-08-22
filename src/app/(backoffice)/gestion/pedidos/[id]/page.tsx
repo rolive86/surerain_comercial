@@ -121,12 +121,12 @@ export default async function GestionPedidoDetailPage({
               ? "Cantidades actualizadas."
               : flash.ok === "price"
                 ? "Precio fijado."
-                : flash.ok === "quoted"
-                  ? "Cotización guardada."
+                : flash.ok === "prices"
+                  ? "Precios guardados (el estado no cambia hasta enviar por WhatsApp)."
                   : flash.ok === "pdf"
                     ? "PDF generado y subido."
-                    : flash.ok === "sent"
-                      ? "Cotización marcada como Enviada. Se abre WhatsApp…"
+                    : flash.ok === "quoted"
+                      ? "Cotización enviada (Cotizada). Se abre WhatsApp…"
                       : "Estado actualizado."}
         </p>
       ) : null}

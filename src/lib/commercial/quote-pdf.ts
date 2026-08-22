@@ -47,7 +47,9 @@ export async function generateAndStoreQuotePdf(orderId: string): Promise<{
     .maybeSingle();
   if (error) throw new Error(error.message);
   if (!order) throw new Error("ORDER_NOT_FOUND");
-  if (!["quoted", "sent"].includes(order.status)) throw new Error("ORDER_NOT_QUOTED");
+  if (!["submitted", "quoted", "sent", "received"].includes(order.status)) {
+    throw new Error("ORDER_NOT_QUOTED");
+  }
 
   const customer = Array.isArray(order.customers) ? order.customers[0] : order.customers;
   const items = Array.isArray(order.order_items) ? order.order_items : [];
@@ -222,7 +224,7 @@ export async function markQuoteSent(input: {
   if (!order) throw new Error("ORDER_NOT_FOUND");
 
   let pdfUrl = order.pdf_url;
-  if (!pdfUrl || order.status === "quoted") {
+  if (!pdfUrl || ["submitted", "quoted", "received"].includes(order.status)) {
     const gen = await generateAndStoreQuotePdf(order.id);
     pdfUrl = gen.pdfUrl;
   }
@@ -278,18 +280,18 @@ export async function markQuoteSent(input: {
   const { error: updErr } = await admin
     .from("orders")
     .update({
-      status: "sent",
+      status: "quoted",
       pdf_url: pdfUrl,
       whatsapp_phone: phone,
     })
     .eq("id", order.id);
   if (updErr) throw new Error(updErr.message);
 
-  if (order.status !== "sent") {
+  if (order.status !== "quoted") {
     await admin.from("order_status_history").insert({
       order_id: order.id,
       from_status: order.status,
-      to_status: "sent",
+      to_status: "quoted",
       changed_by: staff.user.id,
       comment: `Cotización enviada por WhatsApp (${phone})`,
     });

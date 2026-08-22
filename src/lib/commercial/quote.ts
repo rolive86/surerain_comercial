@@ -114,7 +114,7 @@ export async function quoteUnitPrice(
   return Number.isFinite(n) ? n : null;
 }
 
-/** Autocompleta precios y deja la orden en quoted. */
+/** Guarda precios/snapshots sin cambiar el estado de la orden. */
 export async function saveQuoteForOrder(input: {
   orderId: string;
   prices: Record<string, number | null>;
@@ -147,7 +147,7 @@ export async function saveQuoteForOrder(input: {
   for (const item of items ?? []) {
     const raw = input.prices[item.id];
     let amount: number | null =
-      raw === undefined || raw === null || raw === ("" as unknown)
+      raw === undefined || raw === null || String(raw).trim() === ""
         ? null
         : Number(raw);
     if (amount == null || !Number.isFinite(amount)) {
@@ -171,34 +171,22 @@ export async function saveQuoteForOrder(input: {
 
   const validUntil = new Date();
   validUntil.setDate(validUntil.getDate() + (input.validDays ?? 15));
-  const fromStatus = order.status;
 
   const { error: ordErr } = await admin
     .from("orders")
     .update({
-      status: "quoted",
       quote_valid_until: validUntil.toISOString(),
     })
     .eq("id", order.id);
   if (ordErr) throw new Error(ordErr.message);
 
-  if (fromStatus !== "quoted") {
-    await admin.from("order_status_history").insert({
-      order_id: order.id,
-      from_status: fromStatus,
-      to_status: "quoted",
-      changed_by: staff.user.id,
-      comment: "Cotización guardada (precios por cliente)",
-    });
-  }
-
   await admin.from("audit_log").insert({
     actor_user_id: staff.user.id,
-    action: "quote_saved",
+    action: "quote_prices_saved",
     entity_type: "order",
     entity_id: order.id,
-    before: { status: fromStatus },
-    after: { status: "quoted", order_number: order.order_number },
+    before: { status: order.status },
+    after: { status: order.status, order_number: order.order_number },
   });
 }
 

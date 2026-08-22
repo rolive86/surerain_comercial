@@ -72,7 +72,7 @@ export async function saveQuoteAction(formData: FormData) {
     await saveQuoteForOrder({ orderId, prices });
     revalidatePath(`/gestion/pedidos/${orderId}`);
     revalidatePath("/gestion/pedidos");
-    redirect(`/gestion/pedidos/${orderId}?ok=quoted`);
+    redirect(`/gestion/pedidos/${orderId}?ok=prices`);
   } catch (err) {
     if (isNextRedirect(err)) throw err;
     redirect(
@@ -138,7 +138,7 @@ export async function sendQuoteWhatsAppAction(formData: FormData): Promise<void>
     revalidatePath(`/gestion/pedidos/${orderId}`);
     revalidatePath("/mis-pedidos");
     redirect(
-      `/gestion/pedidos/${orderId}?ok=sent&wa=${encodeURIComponent(result.waUrl)}`,
+      `/gestion/pedidos/${orderId}?ok=quoted&wa=${encodeURIComponent(result.waUrl)}`,
     );
   } catch (err) {
     if (isNextRedirect(err)) throw err;
