@@ -2,7 +2,6 @@ import { createCommercialServerClient } from "@/lib/supabase/commercial/server";
 import { getCommercialSession } from "@/lib/commercial/session";
 import {
   getCatalogProductsBySourceIds,
-  getFeaturedProducts,
   type ProductListItem,
 } from "@/lib/catalog";
 
@@ -34,7 +33,8 @@ export async function getDashboardRecommendations(): Promise<DashboardRecommenda
   };
 
   if (!session || session.claims.app_role !== "customer_user" || !session.claims.customer_id) {
-    const featured = await getFeaturedProducts(8);
+    const { getTangoProducts } = await import("@/lib/commercial/products-tango");
+    const featured = (await getTangoProducts()).slice(0, 8);
     return { ...empty, recommended: featured };
   }
 
@@ -52,7 +52,8 @@ export async function getDashboardRecommendations(): Promise<DashboardRecommenda
   const rows = (freq ?? []).filter((r) => r.product_source_id);
 
   if (!rows.length) {
-    const featured = await getFeaturedProducts(8);
+    const { getTangoProducts } = await import("@/lib/commercial/products-tango");
+    const featured = (await getTangoProducts()).filter((p) => p.hasPrice).slice(0, 8);
     return { ...empty, recommended: featured, coldStart: true };
   }
 
@@ -106,8 +107,14 @@ export async function getDashboardRecommendations(): Promise<DashboardRecommenda
     .slice(0, 8);
 
   const needed = [...new Set([...reorderIds, ...habitualIds, ...togetherIds])];
-  const products = await getCatalogProductsBySourceIds(needed);
-  const bySource = new Map(products.map((p) => [p.source_id, p]));
+  const { getTangoProductsByCodes } = await import("@/lib/commercial/products-tango");
+  const [catalogProducts, tangoProducts] = await Promise.all([
+    getCatalogProductsBySourceIds(needed),
+    getTangoProductsByCodes(needed),
+  ]);
+  const bySource = new Map<string, ProductListItem>();
+  for (const p of catalogProducts) bySource.set(p.source_id, p);
+  for (const p of tangoProducts) bySource.set(p.source_id, p);
 
   const freqById = new Map(rows.map((r) => [r.product_source_id as string, r]));
 
@@ -133,7 +140,8 @@ export async function getDashboardRecommendations(): Promise<DashboardRecommenda
     .filter((p): p is ProductListItem => Boolean(p));
 
   if (recommended.length < 4) {
-    const featured = await getFeaturedProducts(8);
+    const { getTangoProducts } = await import("@/lib/commercial/products-tango");
+    const featured = (await getTangoProducts()).filter((p) => p.hasPrice).slice(0, 12);
     const used = new Set([...habitual, ...recommended].map((p) => p.source_id));
     for (const p of featured) {
       if (!used.has(p.source_id)) {

@@ -90,25 +90,30 @@ export async function reorderOrderAction(formData: FormData): Promise<void> {
   const orderId = String(formData.get("order_id") ?? "");
   try {
     const { getCustomerOrderDetail } = await import("@/lib/commercial/orders");
+    const { getTangoProductsByCodes } = await import("@/lib/commercial/products-tango");
     const { getCatalogProductsBySourceIds } = await import("@/lib/catalog");
     const order = await getCustomerOrderDetail(orderId);
     if (!order) throw new Error("Pedido no encontrado.");
-    const products = await getCatalogProductsBySourceIds(
-      order.items.map((i) => i.product_source_id),
-    );
-    const available = new Set(products.map((p) => p.source_id));
+    const ids = order.items.map((i) => i.product_source_id);
+    const [tangoProducts, catalogProducts] = await Promise.all([
+      getTangoProductsByCodes(ids),
+      getCatalogProductsBySourceIds(ids),
+    ]);
+    const byId = new Map<string, { name: string; slug: string }>();
+    for (const p of catalogProducts) byId.set(p.source_id, { name: p.name, slug: p.slug });
+    for (const p of tangoProducts) byId.set(p.source_id, { name: p.name, slug: p.slug });
     let added = 0;
     let missing = 0;
     for (const item of order.items) {
-      if (!available.has(item.product_source_id)) {
+      const product = byId.get(item.product_source_id);
+      if (!product) {
         missing += 1;
         continue;
       }
-      const product = products.find((p) => p.source_id === item.product_source_id);
       await upsertCartItem({
         product_source_id: item.product_source_id,
-        product_name_snapshot: product?.name ?? item.product_name_snapshot,
-        product_slug_snapshot: product?.slug ?? item.product_slug_snapshot,
+        product_name_snapshot: product.name ?? item.product_name_snapshot,
+        product_slug_snapshot: product.slug ?? item.product_slug_snapshot,
         quantity: item.quantity,
       });
       added += 1;

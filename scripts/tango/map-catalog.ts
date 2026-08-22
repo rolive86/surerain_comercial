@@ -1,28 +1,31 @@
 /**
- * Map catalog source_id → tango.cod_articulo into public.product_map.
- * Writes reports/product-map.md. Does not auto-confirm low confidence.
+ * Map catalog source_id → espejo_src.articulos (empresa 3) into public.product_map.
+ * Primary match: barcode. Fallback: name. Does not overwrite confirmed/manual.
+ * Requires COMMERCIAL_DATABASE_URL for FDW read. Writes reports/product-map.md.
  */
 import { mkdirSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { createClient } from "@supabase/supabase-js";
 import { config as loadEnv } from "dotenv";
 import { ROOT } from "../../src/config.js";
-import type { Database, Json } from "../../src/types/commercial.types.js";
+import { commercialSql, requireEnv } from "../espejo/db.js";
 
 loadEnv({ path: path.join(ROOT, ".env.local") });
 
+const EMPRESA = "3";
 const NAME_OK = 0.75;
 const NAME_WEAK = 0.55;
-
-function requireEnv(name: string): string {
-  const v = process.env[name]?.trim();
-  if (!v) throw new Error(`Missing ${name}`);
-  return v;
-}
 
 function asText(value: unknown): string | null {
   if (value == null) return null;
   const s = String(value).trim();
+  return s.length ? s : null;
+}
+
+/** Identity codes from espejo: exact, no trim. */
+function asCode(value: unknown): string | null {
+  if (value == null) return null;
+  const s = String(value);
   return s.length ? s : null;
 }
 
@@ -39,7 +42,6 @@ function tokens(value: string): Set<string> {
   return new Set(normalizeName(value).split(" ").filter((w) => w.length > 1));
 }
 
-/** SKU o modelo del nombre (p. ej. VYR-80) para acotar artículos del Excel Tango. */
 function modelNeedle(name: string, sku: string | null): string | null {
   if (sku?.trim()) return normalizeName(sku);
   const m = name.match(/\b([a-z]{2,6})[\s-]*(\d{2,5})\b/i);
@@ -52,6 +54,11 @@ function jaccard(a: Set<string>, b: Set<string>): number {
   let inter = 0;
   for (const x of a) if (b.has(x)) inter += 1;
   return inter / new Set([...a, ...b]).size;
+}
+
+/** Lookup key for barcodes only (does not alter stored codes). */
+function barcodeKey(value: string): string {
+  return value.replace(/\s+/g, "").toLowerCase();
 }
 
 type CatalogProduct = { source_id: string; name: string; sku: string | null };
@@ -92,45 +99,48 @@ async function main() {
   const catalogKey = requireEnv("NEXT_PUBLIC_SUPABASE_ANON_KEY");
   const commercialUrl = requireEnv("NEXT_PUBLIC_COMMERCIAL_SUPABASE_URL");
   const service = requireEnv("COMMERCIAL_SUPABASE_SERVICE_ROLE_KEY");
+  requireEnv("COMMERCIAL_DATABASE_URL");
 
-  const commercial = createClient<Database>(commercialUrl, service, {
+  const commercial = createClient(commercialUrl, service, {
     auth: { persistSession: false, autoRefreshToken: false },
   });
 
   const catalog = await fetchAllCatalog(catalogUrl, catalogKey);
-  const { data: artsJson, error: artsErr } = await commercial.rpc("tango_staging_fetch", {
-    p_entity: "articulos",
-  });
-  if (artsErr) throw new Error(artsErr.message);
-  const artsRaw = (artsJson as Json[] | null) ?? [];
-  if (!Array.isArray(artsRaw)) throw new Error("articulos fetch is not an array");
 
-  const { data: specsJson, error: specsErr } = await commercial.rpc("tango_staging_fetch", {
-    p_entity: "articulos_specs",
-  });
-  if (specsErr) throw new Error(specsErr.message);
-  const specsRaw = Array.isArray(specsJson) ? (specsJson as Json[]) : [];
-
-  const tango: TangoArt[] = [];
-  const seen = new Set<string>();
-  for (const raw of [...artsRaw, ...specsRaw]) {
-    if (!raw || typeof raw !== "object") continue;
-    const r = raw as Record<string, unknown>;
-    const cod = asText(r.cod_articulo);
-    if (!cod || seen.has(cod)) continue;
-    seen.add(cod);
-    tango.push({
-      cod_articulo: cod,
-      cod_barra: asText(r.cod_barra),
-      descripcion: asText(r.descripcion),
-    });
+  const sql = commercialSql();
+  let tango: TangoArt[] = [];
+  try {
+    const arts = await sql<
+      Array<{ cod_sta11: string | null; cod_barra: string | null; descripcio: string | null }>
+    >`
+      select distinct on (cod_sta11)
+        cod_sta11, cod_barra, descripcio
+      from espejo_src.articulos
+      where empresa = ${EMPRESA}
+        and cod_sta11 is not null
+        and cod_sta11 <> ''
+      order by cod_sta11
+    `;
+    tango = arts
+      .map((r) => {
+        const cod = asCode(r.cod_sta11);
+        if (!cod) return null;
+        return {
+          cod_articulo: cod,
+          cod_barra: asCode(r.cod_barra),
+          descripcion: asText(r.descripcio),
+        };
+      })
+      .filter((x): x is TangoArt => x != null);
+  } finally {
+    await sql.end({ timeout: 5 });
   }
 
   const byBarcode = new Map<string, TangoArt>();
   const byCode = new Map<string, TangoArt>();
   for (const a of tango) {
     byCode.set(a.cod_articulo.toLowerCase(), a);
-    if (a.cod_barra) byBarcode.set(a.cod_barra.replace(/\s+/g, "").toLowerCase(), a);
+    if (a.cod_barra) byBarcode.set(barcodeKey(a.cod_barra), a);
   }
 
   const { data: existingMaps, error: existErr } = await commercial
@@ -149,7 +159,7 @@ async function main() {
   for (const p of catalog) {
     if (protectedSources.has(p.source_id)) continue;
     const sku = p.sku?.trim() || null;
-    const skuKey = sku?.replace(/\s+/g, "").toLowerCase() ?? null;
+    const skuKey = sku ? barcodeKey(sku) : null;
     let hit: TangoArt | null = null;
     let method: Candidate["match_method"] | null = null;
     let confidence = 0;
@@ -247,17 +257,26 @@ async function main() {
     ? Math.round((autoPlusProtected / catalog.length) * 1000) / 10
     : 0;
 
+  const byMethod = {
+    barcode: kept.filter((c) => c.match_method === "barcode").length,
+    sku: kept.filter((c) => c.match_method === "sku").length,
+    nombre: kept.filter((c) => c.match_method === "nombre").length,
+  };
+
   const lines = [
-    "# Product map — catálogo ↔ Tango",
+    "# Product map — catálogo ↔ Espejo Tango (empresa 3)",
     "",
+    `- Fuente: \`espejo_src.articulos\` where empresa='3'`,
     `- Catálogo publicados: **${catalog.length}**`,
-    `- Artículos Tango: **${tango.length}**`,
+    `- Artículos Tango (emp 3): **${tango.length}**`,
+    `- Con barcode: **${tango.filter((a) => a.cod_barra).length}**`,
     `- Protegidos (confirmados / manuales, no se pisan): **${protectedMaps.length}**`,
     `- Matcheados auto (alta confianza): **${matched.length}**`,
-    `- Cobertura auto+protegidos: **${autoPlusProtected}** (${matchPct}% del catálogo)`,
+    `- Cobertura auto+protegidos: **${autoPlusProtected}/${catalog.length}** (${matchPct}%)`,
     `- Dudosos (nombre ${NAME_WEAK}–${NAME_OK}): **${doubtful.length}**`,
     `- Sin match: **${unmatched.length}**`,
     `- Descartados por \`cod_articulo\` ya asignado: **${droppedDup.length}**`,
+    `- Métodos auto: barcode=${byMethod.barcode}, sku=${byMethod.sku}, nombre=${byMethod.nombre}`,
     "",
     "## Matcheados",
     "",
@@ -279,7 +298,9 @@ async function main() {
     "",
     "## Sin match",
     "",
-    ...unmatched.slice(0, 200).map((p) => `- \`${p.source_id}\` — ${p.name}${p.sku ? ` (sku ${p.sku})` : ""}`),
+    ...unmatched
+      .slice(0, 200)
+      .map((p) => `- \`${p.source_id}\` — ${p.name}${p.sku ? ` (sku ${p.sku})` : ""}`),
     unmatched.length > 200 ? `\n… y ${unmatched.length - 200} más` : "",
     "",
   ];
@@ -292,11 +313,14 @@ async function main() {
       {
         catalog: catalog.length,
         tango: tango.length,
+        tangoWithBarcode: tango.filter((a) => a.cod_barra).length,
         protected: protectedMaps.length,
         matched: matched.length,
+        coverage: `${autoPlusProtected}/${catalog.length}`,
+        matchPct,
         doubtful: doubtful.length,
         unmatched: unmatched.length,
-        matchPct,
+        byMethod,
         report: "reports/product-map.md",
       },
       null,

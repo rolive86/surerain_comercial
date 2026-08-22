@@ -32,6 +32,10 @@ export type ProductListItem = {
   image: MediaInfo | null;
   finalPrice?: { amount: number; currency: string } | null;
   tangoCode?: string | null;
+  /** Portal Tango-driven */
+  hasStock?: boolean;
+  hasPrice?: boolean;
+  stockQty?: number | null;
 };
 
 export type ProductDetail = ProductListItem & {

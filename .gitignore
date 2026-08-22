@@ -22,3 +22,4 @@ reports/*
 !reports/responsive/**
 !reports/avatars-rls.md
 !reports/product-map.md
+!reports/espejo-shapes.md

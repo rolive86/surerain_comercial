@@ -25,6 +25,9 @@ export async function withProductCodes<T extends { source_id: string }>(
   const codes = await getProductCodesBySourceIds(items.map((i) => i.source_id));
   return items.map((item) => ({
     ...item,
-    tangoCode: codes.get(item.source_id) ?? null,
+    tangoCode:
+      codes.get(item.source_id) ??
+      // Portal Tango-driven: source_id ya es cod_articulo
+      (item.source_id.startsWith("img:") ? null : item.source_id),
   }));
 }
