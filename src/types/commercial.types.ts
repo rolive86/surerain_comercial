@@ -232,6 +232,7 @@ export type Database = {
           markup_pct: number
           updated_at: string
           updated_by: string | null
+          whatsapp_phone: string | null
         }
         Insert: {
           currency?: string
@@ -239,6 +240,7 @@ export type Database = {
           markup_pct?: number
           updated_at?: string
           updated_by?: string | null
+          whatsapp_phone?: string | null
         }
         Update: {
           currency?: string
@@ -246,6 +248,7 @@ export type Database = {
           markup_pct?: number
           updated_at?: string
           updated_by?: string | null
+          whatsapp_phone?: string | null
         }
         Relationships: [
           {

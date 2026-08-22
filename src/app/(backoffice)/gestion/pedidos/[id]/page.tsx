@@ -13,6 +13,7 @@ import { saveQuoteAction } from "@/lib/commercial/quote-actions";
 import { suggestedPricesForOrder } from "@/lib/commercial/quote";
 import { QuoteSendPanel } from "@/components/QuoteSendPanel";
 import { displayFinalUsd, isValidFinalAmount } from "@/lib/commercial/money";
+import { normalizeArWhatsAppPhone } from "@/lib/commercial/phone";
 import {
   getBackofficeOrderDetail,
   listFilterOptions,
@@ -58,16 +59,34 @@ export default async function GestionPedidoDetailPage({
   if (!order) notFound();
 
   const supabase = await createCommercialServerClient();
-  const { data: customerPhone } = await supabase
-    .from("customers")
-    .select("phone")
-    .eq("id", order.customer_id)
-    .maybeSingle();
-  const { data: orderExtra } = await supabase
-    .from("orders")
-    .select("pdf_url, whatsapp_phone")
-    .eq("id", order.id)
-    .maybeSingle();
+  const [{ data: customerPhone }, { data: pricing }, { data: orderExtra }] =
+    await Promise.all([
+      supabase
+        .from("customers")
+        .select("phone")
+        .eq("id", order.customer_id)
+        .maybeSingle(),
+      supabase
+        .from("customer_pricing")
+        .select("whatsapp_phone")
+        .eq("customer_id", order.customer_id)
+        .maybeSingle(),
+      supabase
+        .from("orders")
+        .select("pdf_url, whatsapp_phone")
+        .eq("id", order.id)
+        .maybeSingle(),
+    ]);
+
+  const tangoPhone = customerPhone?.phone?.trim() || null;
+  const platformPhone = pricing?.whatsapp_phone?.trim() || null;
+  const defaultPhone = platformPhone || tangoPhone || null;
+  const knownPhones = [
+    normalizeArWhatsAppPhone(platformPhone),
+    normalizeArWhatsAppPhone(tangoPhone),
+  ].filter((p): p is string => Boolean(p));
+  // unique
+  const knownUnique = [...new Set(knownPhones)];
 
   const sourceIds = order.items.map((i) => i.product_source_id);
   const [thumbs, codes, suggested] = await Promise.all([
@@ -270,7 +289,8 @@ export default async function GestionPedidoDetailPage({
             orderId={order.id}
             status={order.status}
             pdfUrl={orderExtra?.pdf_url ?? null}
-            defaultPhone={orderExtra?.whatsapp_phone ?? customerPhone?.phone ?? null}
+            defaultPhone={defaultPhone}
+            knownPhones={knownUnique}
             waUrl={flash.wa ? decodeURIComponent(flash.wa) : null}
           />
         </div>

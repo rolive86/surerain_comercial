@@ -4,23 +4,9 @@ import { createCommercialAdminClient } from "@/lib/supabase/commercial/admin";
 import { createCommercialServerClient } from "@/lib/supabase/commercial/server";
 import { getCommercialSession } from "@/lib/commercial/session";
 import { requireStaffSession } from "@/lib/commercial/backoffice";
+import { normalizeArWhatsAppPhone } from "@/lib/commercial/phone";
 
-export function normalizeArWhatsAppPhone(raw: string | null | undefined): string | null {
-  if (!raw) return null;
-  let digits = raw.replace(/\D/g, "");
-  if (!digits) return null;
-  if (digits.startsWith("00")) digits = digits.slice(2);
-  if (!digits.startsWith("54")) {
-    if (digits.startsWith("0")) digits = digits.slice(1);
-    digits = `54${digits}`;
-  }
-  // AR mobile: 54 9 area…
-  if (digits.startsWith("54") && !digits.startsWith("549") && digits.length >= 12) {
-    digits = `549${digits.slice(2)}`;
-  }
-  if (digits.length < 11) return null;
-  return digits;
-}
+export { normalizeArWhatsAppPhone };
 
 async function fetchImageBuffer(url: string): Promise<Buffer | null> {
   try {
@@ -215,6 +201,7 @@ export async function generateAndStoreQuotePdf(orderId: string): Promise<{
 export async function markQuoteSent(input: {
   orderId: string;
   phone?: string | null;
+  savePhoneToCustomer?: boolean;
 }): Promise<{ pdfUrl: string; waUrl: string; phone: string }> {
   const session = await getCommercialSession();
   const staff = requireStaffSession(session);
@@ -240,12 +227,47 @@ export async function markQuoteSent(input: {
     pdfUrl = gen.pdfUrl;
   }
 
+  const { data: pricing } = await supabase
+    .from("customer_pricing")
+    .select("whatsapp_phone")
+    .eq("customer_id", order.customer_id)
+    .maybeSingle();
+
   const customer = Array.isArray(order.customers) ? order.customers[0] : order.customers;
   const phone =
     normalizeArWhatsAppPhone(input.phone) ||
-    normalizeArWhatsAppPhone(order.whatsapp_phone) ||
+    normalizeArWhatsAppPhone(pricing?.whatsapp_phone) ||
     normalizeArWhatsAppPhone(customer?.phone);
   if (!phone) throw new Error("PHONE_REQUIRED");
+
+  if (input.savePhoneToCustomer) {
+    const { data: existing } = await admin
+      .from("customer_pricing")
+      .select("customer_id")
+      .eq("customer_id", order.customer_id)
+      .maybeSingle();
+    if (existing) {
+      const { error: priceErr } = await admin
+        .from("customer_pricing")
+        .update({
+          whatsapp_phone: phone,
+          updated_by: staff.user.id,
+          updated_at: new Date().toISOString(),
+        })
+        .eq("customer_id", order.customer_id);
+      if (priceErr) throw new Error(priceErr.message);
+    } else {
+      const { error: priceErr } = await admin.from("customer_pricing").insert({
+        customer_id: order.customer_id,
+        whatsapp_phone: phone,
+        markup_pct: 0,
+        currency: "USD",
+        updated_by: staff.user.id,
+        updated_at: new Date().toISOString(),
+      });
+      if (priceErr) throw new Error(priceErr.message);
+    }
+  }
 
   const name = customer?.trade_name || customer?.legal_name || "cliente";
   const text = encodeURIComponent(

@@ -1,31 +1,38 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import {
   generateQuotePdfAction,
   sendQuoteWhatsAppAction,
 } from "@/lib/commercial/quote-actions";
+import { normalizeArWhatsAppPhone } from "@/lib/commercial/phone";
 
 export function QuoteSendPanel({
   orderId,
   status,
   pdfUrl,
   defaultPhone,
+  knownPhones,
   waUrl,
 }: {
   orderId: string;
   status: string;
   pdfUrl: string | null;
+  /** Prefill visible (platform override || tango). Vacío si no hay. */
   defaultPhone: string | null;
+  /** Números ya conocidos (normalizados) — no preguntar guardar si coincide. */
+  knownPhones: string[];
   waUrl?: string | null;
 }) {
+  const saveFlagRef = useRef<HTMLInputElement>(null);
+
   useEffect(() => {
     if (waUrl) {
       window.open(waUrl, "_blank", "noopener,noreferrer");
     }
   }, [waUrl]);
 
-  if (!["quoted", "sent"].includes(status)) return null;
+  if (!["quoted", "sent", "submitted", "received"].includes(status)) return null;
 
   return (
     <section className="rounded-xl border border-sr-green/25 bg-white p-5">
@@ -50,8 +57,28 @@ export function QuoteSendPanel({
           </button>
         </form>
       </div>
-      <form action={sendQuoteWhatsAppAction} className="mt-4 space-y-3">
+      <form
+        action={sendQuoteWhatsAppAction}
+        className="mt-4 space-y-3"
+        onSubmit={(e) => {
+          const form = e.currentTarget;
+          const raw = String(new FormData(form).get("phone") ?? "");
+          const entered = normalizeArWhatsAppPhone(raw);
+          if (saveFlagRef.current) saveFlagRef.current.value = "";
+          if (!entered) return;
+          const alreadyKnown = knownPhones.includes(entered);
+          if (!alreadyKnown) {
+            const ok = window.confirm(
+              "¿Agregar este número a los datos del cliente?",
+            );
+            if (ok && saveFlagRef.current) {
+              saveFlagRef.current.value = "1";
+            }
+          }
+        }}
+      >
         <input type="hidden" name="order_id" value={orderId} />
+        <input ref={saveFlagRef} type="hidden" name="save_phone_to_customer" value="" />
         <label className="block text-xs font-semibold uppercase tracking-wider text-sr-ink/45">
           Teléfono WhatsApp (Argentina)
           <input

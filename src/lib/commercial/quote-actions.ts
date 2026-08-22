@@ -127,11 +127,13 @@ export async function generateQuotePdfAction(formData: FormData) {
 export async function sendQuoteWhatsAppAction(formData: FormData): Promise<void> {
   const orderId = String(formData.get("order_id") ?? "");
   const phone = String(formData.get("phone") ?? "");
+  const savePhone = String(formData.get("save_phone_to_customer") ?? "") === "1";
   try {
     const { markQuoteSent } = await import("@/lib/commercial/quote-pdf");
     const result = await markQuoteSent({
       orderId,
       phone: phone.trim() || null,
+      savePhoneToCustomer: savePhone,
     });
     revalidatePath(`/gestion/pedidos/${orderId}`);
     revalidatePath("/mis-pedidos");
