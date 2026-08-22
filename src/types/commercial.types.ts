@@ -225,6 +225,38 @@ export type Database = {
           },
         ]
       }
+      customer_pricing: {
+        Row: {
+          currency: string
+          customer_id: string
+          markup_pct: number
+          updated_at: string
+          updated_by: string | null
+        }
+        Insert: {
+          currency?: string
+          customer_id: string
+          markup_pct?: number
+          updated_at?: string
+          updated_by?: string | null
+        }
+        Update: {
+          currency?: string
+          customer_id?: string
+          markup_pct?: number
+          updated_at?: string
+          updated_by?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "customer_pricing_customer_id_fkey"
+            columns: ["customer_id"]
+            isOneToOne: true
+            referencedRelation: "customers"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       customer_price_list: {
         Row: {
           active: boolean
@@ -718,6 +750,8 @@ export type Database = {
           id: string
           last_synced_at: string | null
           order_number: string
+          pdf_url: string | null
+          quote_valid_until: string | null
           sales_rep_id: string | null
           source: string
           status: string
@@ -726,6 +760,7 @@ export type Database = {
           tango_id: string | null
           updated_at: string
           user_id: string
+          whatsapp_phone: string | null
         }
         Insert: {
           created_at?: string
@@ -734,6 +769,8 @@ export type Database = {
           id?: string
           last_synced_at?: string | null
           order_number: string
+          pdf_url?: string | null
+          quote_valid_until?: string | null
           sales_rep_id?: string | null
           source?: string
           status: string
@@ -742,6 +779,7 @@ export type Database = {
           tango_id?: string | null
           updated_at?: string
           user_id: string
+          whatsapp_phone?: string | null
         }
         Update: {
           created_at?: string
@@ -750,6 +788,8 @@ export type Database = {
           id?: string
           last_synced_at?: string | null
           order_number?: string
+          pdf_url?: string | null
+          quote_valid_until?: string | null
           sales_rep_id?: string | null
           source?: string
           status?: string
@@ -758,6 +798,7 @@ export type Database = {
           tango_id?: string | null
           updated_at?: string
           user_id?: string
+          whatsapp_phone?: string | null
         }
         Relationships: [
           {
@@ -920,6 +961,51 @@ export type Database = {
         }
         Relationships: []
       }
+      products_tango: {
+        Row: {
+          active: boolean
+          catalog_source_id: string | null
+          cod_articulo: string
+          cod_barra: string | null
+          descripcion: string | null
+          familia: string | null
+          has_price: boolean
+          has_stock: boolean
+          image_url: string | null
+          stock_qty: number | null
+          unidad: string | null
+          updated_at: string
+        }
+        Insert: {
+          active?: boolean
+          catalog_source_id?: string | null
+          cod_articulo: string
+          cod_barra?: string | null
+          descripcion?: string | null
+          familia?: string | null
+          has_price?: boolean
+          has_stock?: boolean
+          image_url?: string | null
+          stock_qty?: number | null
+          unidad?: string | null
+          updated_at?: string
+        }
+        Update: {
+          active?: boolean
+          catalog_source_id?: string | null
+          cod_articulo?: string
+          cod_barra?: string | null
+          descripcion?: string | null
+          familia?: string | null
+          has_price?: boolean
+          has_stock?: boolean
+          image_url?: string | null
+          stock_qty?: number | null
+          unidad?: string | null
+          updated_at?: string
+        }
+        Relationships: []
+      }
       sales_reps: {
         Row: {
           active: boolean
@@ -1041,6 +1127,10 @@ export type Database = {
         }[]
       }
       recompute_effective_prices: { Args: never; Returns: undefined }
+      quote_unit_price: {
+        Args: { p_cod_articulo: string; p_customer: string }
+        Returns: number
+      }
       tango_specs_upsert: { Args: { p_rows: Json }; Returns: Json }
       tango_staging_fetch: { Args: { p_entity: string }; Returns: Json }
       tango_staging_run_finish: {
