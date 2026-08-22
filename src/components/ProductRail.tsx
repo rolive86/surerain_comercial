@@ -5,7 +5,6 @@ import { HorizontalRail } from "@/components/HorizontalRail";
 import type { ProductListItem } from "@/lib/catalog";
 import type { ReorderCandidate } from "@/lib/recommendations";
 import { daysAgoLabel } from "@/lib/recommendations";
-import { displayFinalUsd } from "@/lib/commercial/money";
 
 const railCardWidth =
   "w-[calc((100%-1rem)/2)] sm:w-[calc((100%-1.85rem)/3)] lg:w-[calc((100%-2.75rem)/4)] xl:w-[calc((100%-3.75rem)/5)]";
@@ -86,11 +85,6 @@ function CardShell({
         <p className="mt-1 min-h-4 font-mono text-[11px] leading-4 text-sr-ink/45">
           {product.tangoCode || "\u00a0"}
         </p>
-        {authenticated ? (
-          <p className="mt-1 min-h-4 text-xs font-semibold leading-4 text-sr-green">
-            {displayFinalUsd(product.finalPrice?.amount)}
-          </p>
-        ) : null}
         {extra ? <div className="mt-1 min-h-4">{extra}</div> : null}
         <div className="mt-auto pt-3">
           <AddToCartButton

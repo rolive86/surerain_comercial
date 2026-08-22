@@ -94,7 +94,7 @@ export function AddToCartButton({
         setError(result.error);
         return;
       }
-      setMessage("Agregado al pedido");
+      setMessage("Agregado a la solicitud");
       router.refresh();
     });
   }
@@ -102,6 +102,8 @@ export function AddToCartButton({
   const btnClass = compact
     ? "btn-primary w-full !min-h-11 !px-3 !py-2 text-xs disabled:opacity-60"
     : "btn-primary disabled:opacity-60";
+
+  const label = pending ? "Agregando…" : "Agregar a la solicitud";
 
   return (
     <div className="space-y-2">
@@ -119,7 +121,7 @@ export function AddToCartButton({
             disabled={pending}
             className={btnClass}
           >
-            {pending ? "Agregando…" : "Agregar al pedido"}
+            {label}
           </button>
         </div>
       ) : (
@@ -129,7 +131,7 @@ export function AddToCartButton({
           disabled={pending}
           className={btnClass}
         >
-          {pending ? "Agregando…" : "Agregar al pedido"}
+          {label}
         </button>
       )}
       {message ? <p className="text-xs text-sr-green">{message}</p> : null}

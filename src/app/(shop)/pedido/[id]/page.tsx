@@ -6,7 +6,6 @@ import { OrderTimeline, orderStatusClass } from "@/components/OrderTimeline";
 import { reorderOrderAction } from "@/lib/commercial/cart-actions";
 import { getCustomerOrderDetail } from "@/lib/commercial/orders";
 import { getCommercialSession } from "@/lib/commercial/session";
-import { displayFinalUsd } from "@/lib/commercial/money";
 import { getProductCodesBySourceIds } from "@/lib/commercial/product-codes";
 import { getProductThumbnailsBySourceIds } from "@/lib/catalog";
 
@@ -20,13 +19,13 @@ export async function generateMetadata({
   const { id } = await params;
   try {
     const order = await getCustomerOrderDetail(id);
-    if (!order) return { title: "Pedido" };
+    if (!order) return { title: "Cotización" };
     return {
-      title: `Pedido ${order.order_number}`,
-      description: `Detalle e historial del pedido ${order.order_number}.`,
+      title: `Cotización ${order.order_number}`,
+      description: `Detalle de la solicitud ${order.order_number}.`,
     };
   } catch {
-    return { title: "Pedido" };
+    return { title: "Cotización" };
   }
 }
 
@@ -63,7 +62,7 @@ export default async function PedidoPage({
     <div className="container-sr py-10 sm:py-12">
       <nav className="mb-6 text-sm text-sr-ink/50">
         <Link href="/mis-pedidos" className="hover:text-sr-green">
-          Mis compras
+          Mis cotizaciones
         </Link>
         <span className="mx-2">/</span>
         <span className="text-sr-ink/80">{order.order_number}</span>
@@ -80,19 +79,33 @@ export default async function PedidoPage({
           </h1>
           <p className="mt-2 text-sm text-sr-ink/60">
             <span className={`chip ${orderStatusClass(order.status)}`}>{order.status_label}</span>
-            <span className="ml-2">Enviado: {formatDate(order.submitted_at ?? order.created_at)}</span>
+            <span className="ml-2">
+              Enviada: {formatDate(order.submitted_at ?? order.created_at)}
+            </span>
           </p>
         </div>
-        <form action={reorderOrderAction}>
-          <input type="hidden" name="order_id" value={order.id} />
-          <button type="submit" className="btn-primary">
-            Volver a pedir
-          </button>
-        </form>
+        <div className="flex flex-wrap gap-2">
+          {order.status === "sent" && order.pdf_url ? (
+            <a
+              href={order.pdf_url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary"
+            >
+              Ver mi cotización (PDF)
+            </a>
+          ) : null}
+          <form action={reorderOrderAction}>
+            <input type="hidden" name="order_id" value={order.id} />
+            <button type="submit" className="btn-secondary">
+              Volver a solicitar
+            </button>
+          </form>
+        </div>
       </div>
 
       <section className="surface mt-8 p-6">
-        <h2 className="font-display text-xl font-semibold">Ítems</h2>
+        <h2 className="font-display text-xl font-semibold">Artículos</h2>
         <ul className="mt-4 divide-y divide-black/5">
           {order.items.map((item) => {
             const thumb = thumbs.get(item.product_source_id);
@@ -124,14 +137,14 @@ export default async function PedidoPage({
                 </div>
                 <div className="shrink-0 text-right">
                   <p className="text-sm font-semibold">× {item.quantity}</p>
-                  <p className="text-xs font-semibold text-sr-green">
-                    {displayFinalUsd(item.unit_price_snapshot)}
-                  </p>
                 </div>
               </li>
             );
           })}
         </ul>
+        <p className="mt-4 text-sm text-sr-ink/55">
+          Los precios se confirman en el PDF de cotización.
+        </p>
       </section>
 
       {order.customer_notes.length ? (
@@ -149,11 +162,8 @@ export default async function PedidoPage({
       ) : null}
 
       <section className="surface mt-4 p-6">
-        <h2 className="font-display text-xl font-semibold">Seguir pedido</h2>
+        <h2 className="font-display text-xl font-semibold">Seguimiento</h2>
         <OrderTimeline history={order.history} />
-        <p className="mt-6 rounded-lg bg-sr-mist/70 px-3 py-2 text-sm text-sr-ink/60">
-          Seguimiento logístico próximamente.
-        </p>
       </section>
     </div>
   );

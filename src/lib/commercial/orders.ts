@@ -1,6 +1,6 @@
 import { createCommercialServerClient } from "@/lib/supabase/commercial/server";
 import { getCommercialSession } from "@/lib/commercial/session";
-import { isValidFinalAmount } from "@/lib/commercial/money";
+import { customerQuoteStatusLabel } from "@/lib/commercial/quote-status";
 
 function requireCustomerSession(
   session: Awaited<ReturnType<typeof getCommercialSession>>,
@@ -21,12 +21,12 @@ export type OrderListItem = {
   created_at: string;
   item_count: number;
   total_quantity: number;
+  pdf_url: string | null;
   preview_items: Array<{
     product_source_id: string;
     product_name_snapshot: string;
     quantity: number;
   }>;
-  pending_price_count: number;
 };
 
 export type OrderDetail = {
@@ -37,6 +37,7 @@ export type OrderDetail = {
   submitted_at: string | null;
   created_at: string;
   customer_id: string;
+  pdf_url: string | null;
   items: Array<{
     id: string;
     product_source_id: string;
@@ -45,7 +46,6 @@ export type OrderDetail = {
     sku_snapshot: string | null;
     quantity: number;
     unit_snapshot: string | null;
-    unit_price_snapshot: number | null;
   }>;
   history: Array<{
     id: string;
@@ -85,8 +85,8 @@ export async function listCustomerOrders(filters?: {
     .from("orders")
     .select(
       `
-      id, order_number, status, submitted_at, created_at,
-      order_items ( id, quantity, product_source_id, product_name_snapshot, unit_price_snapshot )
+      id, order_number, status, submitted_at, created_at, pdf_url,
+      order_items ( id, quantity, product_source_id, product_name_snapshot )
     `,
     )
     .order("created_at", { ascending: false });
@@ -107,19 +107,20 @@ export async function listCustomerOrders(filters?: {
       id: row.id,
       order_number: row.order_number,
       status: row.status,
-      status_label: statusMap.get(row.status) ?? row.status,
+      status_label: customerQuoteStatusLabel(
+        row.status,
+        statusMap.get(row.status) ?? row.status,
+      ),
       submitted_at: row.submitted_at,
       created_at: row.created_at,
       item_count: items.length,
       total_quantity: items.reduce((sum, i) => sum + Number(i.quantity), 0),
+      pdf_url: row.pdf_url,
       preview_items: items.slice(0, 4).map((i) => ({
         product_source_id: i.product_source_id,
         product_name_snapshot: i.product_name_snapshot,
         quantity: Number(i.quantity),
       })),
-      pending_price_count: items.filter(
-        (i) => !isValidFinalAmount(i.unit_price_snapshot == null ? null : Number(i.unit_price_snapshot)),
-      ).length,
     };
   });
 }
@@ -134,10 +135,10 @@ export async function getCustomerOrderDetail(orderId: string): Promise<OrderDeta
     .from("orders")
     .select(
       `
-      id, order_number, status, submitted_at, created_at, customer_id,
+      id, order_number, status, submitted_at, created_at, customer_id, pdf_url,
       order_items (
         id, product_source_id, product_name_snapshot, product_slug_snapshot,
-        sku_snapshot, quantity, unit_snapshot, unit_price_snapshot
+        sku_snapshot, quantity, unit_snapshot
       ),
       order_status_history (
         id, from_status, to_status, comment, created_at
@@ -156,8 +157,6 @@ export async function getCustomerOrderDetail(orderId: string): Promise<OrderDeta
   const items = (Array.isArray(order.order_items) ? order.order_items : []).map((item) => ({
     ...item,
     quantity: Number(item.quantity),
-    unit_price_snapshot:
-      item.unit_price_snapshot == null ? null : Number(item.unit_price_snapshot),
   }));
 
   const history = (Array.isArray(order.order_status_history) ? order.order_status_history : [])
@@ -167,7 +166,10 @@ export async function getCustomerOrderDetail(orderId: string): Promise<OrderDeta
       id: h.id,
       from_status: h.from_status,
       to_status: h.to_status,
-      to_status_label: statusMap.get(h.to_status) ?? h.to_status,
+      to_status_label: customerQuoteStatusLabel(
+        h.to_status,
+        statusMap.get(h.to_status) ?? h.to_status,
+      ),
       comment: h.comment,
       created_at: h.created_at,
     }));
@@ -180,10 +182,14 @@ export async function getCustomerOrderDetail(orderId: string): Promise<OrderDeta
     id: order.id,
     order_number: order.order_number,
     status: order.status,
-    status_label: statusMap.get(order.status) ?? order.status,
+    status_label: customerQuoteStatusLabel(
+      order.status,
+      statusMap.get(order.status) ?? order.status,
+    ),
     submitted_at: order.submitted_at,
     created_at: order.created_at,
     customer_id: order.customer_id,
+    pdf_url: order.pdf_url,
     items,
     history,
     customer_notes,
@@ -196,7 +202,11 @@ export async function listActiveOrderStatuses(): Promise<Array<{ code: string; l
     .from("order_statuses")
     .select("code, label")
     .eq("active", true)
+    .in("code", ["submitted", "quoted", "sent"])
     .order("sort_order");
   if (error) throw new Error(error.message);
-  return data ?? [];
+  return (data ?? []).map((s) => ({
+    code: s.code,
+    label: customerQuoteStatusLabel(s.code, s.label),
+  }));
 }

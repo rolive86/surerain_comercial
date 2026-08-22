@@ -1,7 +1,5 @@
 import { createCommercialServerClient } from "@/lib/supabase/commercial/server";
 import { getCommercialSession } from "@/lib/commercial/session";
-import { isValidFinalAmount } from "@/lib/commercial/money";
-import { getFinalPricesBySourceIds } from "@/lib/commercial/pricing";
 import { getProductCodesBySourceIds } from "@/lib/commercial/product-codes";
 
 export type CartItemInput = {
@@ -93,23 +91,35 @@ async function loadCartView(cartId: string): Promise<CartView> {
   }));
 
   const sourceIds = mapped.map((i) => i.product_source_id);
-  const [prices, codes] = await Promise.all([
-    getFinalPricesBySourceIds(sourceIds),
+  const [codes, tangoRows] = await Promise.all([
     getProductCodesBySourceIds(sourceIds),
+    (async () => {
+      const { data } = await supabase
+        .from("products_tango")
+        .select("cod_articulo, image_url, descripcion")
+        .in("cod_articulo", sourceIds);
+      return data ?? [];
+    })(),
   ]);
-  const withPrices = mapped.map((item) => ({
-    ...item,
-    unit_price: isValidFinalAmount(prices.get(item.product_source_id)?.amount)
-      ? prices.get(item.product_source_id)!.amount
-      : null,
-    tango_code: codes.get(item.product_source_id) ?? null,
-  }));
+  const tangoByCode = new Map(tangoRows.map((r) => [r.cod_articulo, r]));
+  const withMeta = mapped.map((item) => {
+    const tango = tangoByCode.get(item.product_source_id);
+    return {
+      ...item,
+      unit_price: null as number | null,
+      tango_code:
+        codes.get(item.product_source_id) ??
+        (tango ? item.product_source_id : null),
+      image_url: tango?.image_url ?? null,
+      image_alt: tango?.descripcion ?? item.product_name_snapshot,
+    };
+  });
 
   return {
     id: cart.id,
     customer_id: cart.customer_id,
-    items: withPrices,
-    itemCount: withPrices.reduce((sum, item) => sum + Number(item.quantity), 0),
+    items: withMeta,
+    itemCount: withMeta.reduce((sum, item) => sum + Number(item.quantity), 0),
   };
 }
 
@@ -249,7 +259,7 @@ export async function confirmOpenCart(customerNote?: string): Promise<{
       sku_snapshot: codes.get(item.product_source_id) ?? null,
       unit_snapshot: item.unit_snapshot,
       quantity: item.quantity,
-      unit_price_snapshot: item.unit_price ?? null,
+      unit_price_snapshot: null,
       discount_snapshot: null,
       metadata_snapshot: {},
     })),
@@ -261,7 +271,7 @@ export async function confirmOpenCart(customerNote?: string): Promise<{
     from_status: null,
     to_status: "submitted",
     changed_by: userId,
-    comment: "Pedido confirmado desde portal",
+    comment: "Solicitud de cotización enviada desde portal",
   });
   if (histErr) throw new Error(histErr.message);
 

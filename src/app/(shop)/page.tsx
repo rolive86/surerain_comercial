@@ -10,7 +10,6 @@ import { getCommercialSession } from "@/lib/commercial/session";
 import { getGreetingName } from "@/lib/commercial/profile";
 import { getDashboardRecommendations } from "@/lib/recommendations";
 import { createCommercialServerClient } from "@/lib/supabase/commercial/server";
-import { withFinalPrices } from "@/lib/commercial/pricing";
 import { withProductCodes } from "@/lib/commercial/product-codes";
 
 export const dynamic = "force-dynamic";
@@ -39,9 +38,9 @@ async function CustomerDashboard({
     loadCompanyLabel(customerId),
   ]);
   const [reorder, habitual, recommended] = await Promise.all([
-    withFinalPrices(await withProductCodes(recs.reorder)),
-    withFinalPrices(await withProductCodes(recs.habitual)),
-    withFinalPrices(await withProductCodes(recs.recommended)),
+    withProductCodes(recs.reorder),
+    withProductCodes(recs.habitual),
+    withProductCodes(recs.recommended),
   ]);
 
   const hasAny = recs.reorder.length + recs.habitual.length + recs.recommended.length > 0;
@@ -58,10 +57,10 @@ async function CustomerDashboard({
             Catálogo
           </Link>
           <Link href="/mis-pedidos" className="btn-secondary">
-            Mis compras
+            Mis cotizaciones
           </Link>
           <Link href="/carrito" className="btn-secondary">
-            Pedido
+            Mi solicitud
           </Link>
         </div>
       </section>

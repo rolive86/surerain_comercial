@@ -111,9 +111,9 @@ export function ShopHeaderClient({
                   <Link
                     href="/carrito"
                     className="relative hidden min-h-11 min-w-11 items-center justify-center rounded-md px-3 text-sm font-semibold text-sr-ink/80 hover:bg-sr-mist hover:text-sr-green lg:inline-flex"
-                    aria-label={`Carrito${cartCount ? `, ${cartCount} ítems` : ""}`}
+                    aria-label={`Solicitud${cartCount ? `, ${cartCount} ítems` : ""}`}
                   >
-                    Pedido
+                    Solicitud
                     {cartCount > 0 ? (
                       <span className="ml-1.5 inline-flex min-h-5 min-w-5 items-center justify-center rounded-full bg-sr-green px-1.5 text-[11px] font-bold text-white">
                         {cartCount}

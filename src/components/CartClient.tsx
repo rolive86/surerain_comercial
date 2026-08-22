@@ -9,12 +9,6 @@ import {
   updateCartQtyAction,
 } from "@/lib/commercial/cart-actions";
 import type { CartView } from "@/lib/commercial/cart";
-import {
-  displayFinalUsd,
-  formatFinalUsd,
-  isValidFinalAmount,
-  PRICE_TO_CONFIRM,
-} from "@/lib/commercial/money";
 
 export function CartClient({
   cart,
@@ -47,9 +41,9 @@ export function CartClient({
   if (!cart.items.length) {
     return (
       <div className="surface px-6 py-16 text-center">
-        <p className="font-display text-xl text-sr-ink/70">Tu carrito está vacío</p>
+        <p className="font-display text-xl text-sr-ink/70">Tu solicitud está vacía</p>
         <p className="mt-2 text-sm text-sr-ink/45">
-          Agregá productos desde el catálogo.
+          Agregá artículos desde el catálogo.
         </p>
         <a href="/catalogo" className="btn-primary mt-6 inline-flex">
           Ir al catálogo
@@ -67,7 +61,8 @@ export function CartClient({
       ) : null}
       {searchOk === "reorder" ? (
         <p className="rounded-md bg-emerald-50 px-3 py-2 text-sm text-emerald-800">
-          Volviste a cargar el pedido.{searchMissing ? ` ${searchMissing} producto(s) ya no están disponibles.` : ""}
+          Volviste a cargar la solicitud.
+          {searchMissing ? ` ${searchMissing} artículo(s) ya no están disponibles.` : ""}
         </p>
       ) : null}
 
@@ -96,7 +91,7 @@ export function CartClient({
                     />
                   ) : (
                     <span className="flex h-full w-full items-center justify-center px-1 text-center text-[10px] font-semibold leading-tight text-sr-green/45">
-                      {item.product_name_snapshot.slice(0, 18)}
+                      Sure Rain
                     </span>
                   )}
                 </a>
@@ -110,9 +105,6 @@ export function CartClient({
                   {item.tango_code ? (
                     <p className="font-mono text-xs text-sr-ink/50">{item.tango_code}</p>
                   ) : null}
-                  <p className="text-sm font-semibold text-sr-green">
-                    {displayFinalUsd(item.unit_price)}
-                  </p>
                 </div>
               </div>
               <div className="flex items-center gap-3 sm:pl-0 pl-[4.75rem]">
@@ -147,49 +139,34 @@ export function CartClient({
       </ul>
 
       <form action={confirmCartAction} className="surface space-y-4 p-6">
-        <CartTotals items={cart.items} />
+        <p className="rounded-md bg-sr-mist/70 px-3 py-2 text-sm text-sr-ink/75">
+          {cart.items.length} artículo(s) · Sin precios en la solicitud; tu vendedor cotiza y te
+          envía el PDF.
+        </p>
         <div>
-          <h2 className="font-display text-xl font-semibold text-sr-ink">Confirmar pedido</h2>
+          <h2 className="font-display text-xl font-semibold text-sr-ink">
+            Enviar solicitud de cotización
+          </h2>
           <p className="mt-1 text-sm text-sr-ink/55">
-            Se crea un pedido en estado <strong>Enviado</strong>. Podés confirmar aunque
-            haya ítems a confirmar: el vendedor cierra esos precios después. Sin pago online.
+            Se crea en estado <strong>Pendiente</strong>. El precio lo vas a ver recién en el PDF
+            cuando el vendedor lo envíe.
           </p>
         </div>
         <label className="block">
-          <span className="text-sm font-semibold text-sr-ink/70">Nota para Sure Rain (opcional)</span>
+          <span className="text-sm font-semibold text-sr-ink/70">
+            Nota para Sure Rain (opcional)
+          </span>
           <textarea
             name="customer_note"
             rows={3}
             className="mt-1 w-full rounded-md border border-black/10 bg-white px-3 py-2 text-sm outline-none ring-sr-green/30 focus:ring-2"
-            placeholder="Observaciones de entrega, referencias, etc."
+            placeholder="Observaciones, referencias, etc."
           />
         </label>
         <button type="submit" className="btn-primary" disabled={pending}>
-          Confirmar pedido
+          Enviar solicitud
         </button>
       </form>
     </div>
-  );
-}
-
-function CartTotals({
-  items,
-}: {
-  items: CartView["items"];
-}) {
-  const priced = items.filter((i) => isValidFinalAmount(i.unit_price));
-  const pendingCount = items.length - priced.length;
-  const subtotal = priced.reduce((sum, i) => sum + Number(i.unit_price) * i.quantity, 0);
-  const parts: string[] = [];
-  if (priced.length) {
-    parts.push(`Subtotal: ${formatFinalUsd(subtotal)} (${priced.length} ítem${priced.length === 1 ? "" : "s"})`);
-  }
-  if (pendingCount) {
-    parts.push(`${pendingCount} ítem${pendingCount === 1 ? "" : "s"} a confirmar`);
-  }
-  return (
-    <p className="rounded-md bg-sr-mist/70 px-3 py-2 text-sm text-sr-ink/75">
-      {parts.join(" · ") || PRICE_TO_CONFIRM}
-    </p>
   );
 }

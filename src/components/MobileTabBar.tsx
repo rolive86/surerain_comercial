@@ -96,13 +96,13 @@ export function MobileTabBarNav({
     },
     {
       href: "/carrito",
-      label: "Carrito",
+      label: "Solicitud",
       match: (p: string) => p.startsWith("/carrito"),
       icon: <IconCart />,
     },
     {
       href: "/mis-pedidos",
-      label: "Mis compras",
+      label: "Cotizaciones",
       match: (p: string) => p.startsWith("/mis-pedidos") || p.startsWith("/pedido"),
       icon: <IconOrders />,
     },

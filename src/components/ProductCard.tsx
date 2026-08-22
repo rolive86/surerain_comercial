@@ -2,28 +2,17 @@ import Image from "next/image";
 import Link from "next/link";
 import { AddToCartButton } from "@/components/AddToCartButton";
 import type { ProductListItem } from "@/lib/catalog";
-import { displayFinalUsd } from "@/lib/commercial/money";
 
-function FallbackImage({ name }: { name: string }) {
+function BrandPlaceholder({ name }: { name: string }) {
   return (
-    <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-sr-mist to-white text-sm font-semibold text-sr-green/50">
-      {name.slice(0, 24)}
+    <div className="relative flex h-full w-full flex-col items-center justify-center gap-2 bg-gradient-to-br from-[#e8f0ea] via-white to-[#f3f7f4] px-3 text-center">
+      <span className="font-display text-lg font-bold tracking-wide text-sr-green/70">
+        Sure Rain
+      </span>
+      <span className="line-clamp-2 text-xs font-medium text-sr-ink/40">
+        {name.slice(0, 48)}
+      </span>
     </div>
-  );
-}
-
-function PriceLine({
-  product,
-  authenticated,
-}: {
-  product: ProductListItem;
-  authenticated: boolean;
-}) {
-  if (!authenticated) return null;
-  return (
-    <p className="text-sm font-semibold text-sr-green">
-      {displayFinalUsd(product.finalPrice?.amount)}
-    </p>
   );
 }
 
@@ -34,9 +23,11 @@ export function ProductCard({
   product: ProductListItem;
   authenticated?: boolean;
 }) {
+  const href = `/catalogo/${product.slug}`;
+
   return (
     <article className="surface group flex flex-col overflow-hidden transition hover:-translate-y-0.5 hover:border-sr-green/20 hover:shadow-card-hover">
-      <Link href={`/catalogo/${product.slug}`} className="relative aspect-[4/3] overflow-hidden bg-sr-mist">
+      <Link href={href} className="relative aspect-[4/3] overflow-hidden bg-sr-mist">
         {product.image?.url ? (
           <Image
             src={product.image.url}
@@ -46,8 +37,13 @@ export function ProductCard({
             className="object-cover transition duration-500 group-hover:scale-[1.03]"
           />
         ) : (
-          <FallbackImage name={product.name} />
+          <BrandPlaceholder name={product.name} />
         )}
+        {authenticated && product.hasStock ? (
+          <span className="absolute left-2 top-2 rounded bg-sr-green/90 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-white">
+            Stock
+          </span>
+        ) : null}
       </Link>
       <div className="flex flex-1 flex-col gap-2 p-3 sm:p-4">
         <div className="flex flex-wrap gap-1">
@@ -58,7 +54,7 @@ export function ProductCard({
             <span className="chip-brand">{product.brand_name}</span>
           ) : null}
         </div>
-        <Link href={`/catalogo/${product.slug}`}>
+        <Link href={href}>
           <h3 className="font-display text-sm font-semibold leading-snug text-sr-ink sm:text-base group-hover:text-sr-green">
             {product.name}
           </h3>
@@ -66,7 +62,6 @@ export function ProductCard({
         {product.tangoCode ? (
           <p className="font-mono text-[11px] text-sr-ink/45">{product.tangoCode}</p>
         ) : null}
-        <PriceLine product={product} authenticated={authenticated} />
         <div className="mt-auto pt-1">
           <AddToCartButton
             productSourceId={product.source_id}
