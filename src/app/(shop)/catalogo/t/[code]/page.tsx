@@ -53,8 +53,11 @@ export default async function TangoProductPage({ params }: { params: Params }) {
 
   let related: Awaited<ReturnType<typeof getTangoProducts>> = [];
   if (product.category_name && !staffMode) {
-    related = await getTangoProducts({ familia: product.category_name });
-    related = related.filter((p) => p.source_id !== product.source_id).slice(0, 8);
+    related = (
+      await getTangoProducts({ familia: product.category_name }, { limit: 12 })
+    )
+      .filter((p) => p.source_id !== product.source_id)
+      .slice(0, 8);
   }
 
   return (

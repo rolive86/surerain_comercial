@@ -21,6 +21,12 @@ export type TangoProductRow = {
   stock_qty: number | null;
 };
 
+const SELECT_COLS =
+  "cod_articulo, descripcion, familia, cod_barra, unidad, catalog_source_id, image_url, has_price, has_stock, stock_qty";
+
+/** Supabase/PostgREST default page size; we page past it when needed. */
+const REST_PAGE = 1000;
+
 /** Slug/path segment for portal ficha: /catalogo/t/[code] */
 export function tangoProductSlug(codArticulo: string): string {
   return `t/${encodeURIComponent(codArticulo)}`;
@@ -60,59 +66,133 @@ export function toListItem(row: TangoProductRow): ProductListItem {
   };
 }
 
+function escapeIlike(raw: string): string {
+  return raw.replace(/\\/g, "\\\\").replace(/%/g, "\\%").replace(/_/g, "\\_");
+}
+
+type FilterableQuery = {
+  eq: (col: string, val: unknown) => FilterableQuery;
+  or: (filters: string) => FilterableQuery;
+  order: (
+    col: string,
+    opts?: { ascending?: boolean; nullsFirst?: boolean },
+  ) => FilterableQuery;
+  range: (from: number, to: number) => FilterableQuery;
+};
+
+function applyFilters<T extends FilterableQuery>(
+  query: T,
+  filters: TangoProductFilters,
+): T {
+  let q = query;
+  if (filters.familia) {
+    q = q.eq("familia", filters.familia) as T;
+  }
+  if (filters.disponibilidad === "stock") {
+    q = q.eq("has_stock", true) as T;
+  } else if (filters.disponibilidad === "confirmar") {
+    q = q.eq("has_price", false).eq("has_stock", true) as T;
+  }
+  const term = filters.q?.trim();
+  if (term) {
+    const safe = escapeIlike(term);
+    q = q.or(
+      `cod_articulo.ilike.%${safe}%,descripcion.ilike.%${safe}%,familia.ilike.%${safe}%`,
+    ) as T;
+  }
+  return q;
+}
+
+/** Photos first (image_url not null), then description A→Z. */
+function applyCatalogOrder<T extends FilterableQuery>(query: T): T {
+  return query
+    .order("image_url", { ascending: false, nullsFirst: false })
+    .order("descripcion", { ascending: true, nullsFirst: false }) as T;
+}
+
 export async function getTangoFamilias(): Promise<Array<{ slug: string; name: string }>> {
   const supabase = await createCommercialServerClient();
-  const { data, error } = await supabase
-    .from("products_tango")
-    .select("familia")
-    .eq("active", true)
-    .not("familia", "is", null);
-  if (error) throw new Error(error.message);
   const set = new Set<string>();
-  for (const row of data ?? []) {
-    const f = row.familia?.trim();
-    if (f) set.add(f);
+  let from = 0;
+  for (;;) {
+    const { data, error } = await supabase
+      .from("products_tango")
+      .select("familia")
+      .eq("active", true)
+      .not("familia", "is", null)
+      .range(from, from + REST_PAGE - 1);
+    if (error) throw new Error(error.message);
+    const rows = data ?? [];
+    for (const row of rows) {
+      const f = row.familia?.trim();
+      if (f) set.add(f);
+    }
+    if (rows.length < REST_PAGE) break;
+    from += REST_PAGE;
   }
   return [...set]
     .sort((a, b) => a.localeCompare(b, "es"))
     .map((name) => ({ slug: name, name }));
 }
 
-export async function getTangoProducts(
+export async function getTangoProductsPaged(
   filters: TangoProductFilters = {},
-): Promise<ProductListItem[]> {
+  page = 1,
+  pageSize = 24,
+): Promise<{ items: ProductListItem[]; total: number }> {
   const supabase = await createCommercialServerClient();
+  const safePage = Math.max(1, page);
+  const size = Math.max(1, Math.min(pageSize, 100));
+  const from = (safePage - 1) * size;
+  const to = from + size - 1;
+
   let query = supabase
     .from("products_tango")
-    .select(
-      "cod_articulo, descripcion, familia, cod_barra, unidad, catalog_source_id, image_url, has_price, has_stock, stock_qty",
-    )
-    .eq("active", true)
-    .order("descripcion", { ascending: true, nullsFirst: false });
+    .select(SELECT_COLS, { count: "exact" })
+    .eq("active", true);
 
-  if (filters.familia) {
-    query = query.eq("familia", filters.familia);
-  }
-  if (filters.disponibilidad === "stock") {
-    query = query.eq("has_stock", true);
-  } else if (filters.disponibilidad === "confirmar") {
-    query = query.eq("has_price", false).eq("has_stock", true);
-  }
+  query = applyFilters(query as unknown as FilterableQuery, filters) as typeof query;
+  query = applyCatalogOrder(query as unknown as FilterableQuery) as typeof query;
 
-  const { data, error } = await query;
+  const { data, error, count } = await query.range(from, to);
   if (error) throw new Error(error.message);
-  let items = (data ?? []).map((row) => toListItem(row as TangoProductRow));
+  return {
+    items: (data ?? []).map((row) => toListItem(row as TangoProductRow)),
+    total: count ?? 0,
+  };
+}
 
-  const q = filters.q?.trim();
-  if (q) {
-    const qLower = q.toLowerCase();
-    items = items.filter(
-      (p) =>
-        p.source_id === q ||
-        p.tangoCode === q ||
-        p.name.toLowerCase().includes(qLower) ||
-        (p.category_name?.toLowerCase().includes(qLower) ?? false),
-    );
+export async function getTangoProducts(
+  filters: TangoProductFilters = {},
+  opts?: { limit?: number },
+): Promise<ProductListItem[]> {
+  const supabase = await createCommercialServerClient();
+  const limit = opts?.limit;
+  const items: ProductListItem[] = [];
+  let from = 0;
+
+  for (;;) {
+    const chunkSize = limit
+      ? Math.min(REST_PAGE, limit - items.length)
+      : REST_PAGE;
+    if (chunkSize <= 0) break;
+
+    let query = supabase
+      .from("products_tango")
+      .select(SELECT_COLS)
+      .eq("active", true);
+
+    query = applyFilters(query as unknown as FilterableQuery, filters) as typeof query;
+    query = applyCatalogOrder(query as unknown as FilterableQuery) as typeof query;
+
+    const { data, error } = await query.range(from, from + chunkSize - 1);
+    if (error) throw new Error(error.message);
+    const rows = data ?? [];
+    items.push(...rows.map((row) => toListItem(row as TangoProductRow)));
+
+    if (limit && items.length >= limit) return items.slice(0, limit);
+    if (rows.length < chunkSize) break;
+    from += chunkSize;
   }
   return items;
 }
@@ -123,9 +203,7 @@ export async function getTangoProductByCode(
   const supabase = await createCommercialServerClient();
   const { data, error } = await supabase
     .from("products_tango")
-    .select(
-      "cod_articulo, descripcion, familia, cod_barra, unidad, catalog_source_id, image_url, has_price, has_stock, stock_qty",
-    )
+    .select(SELECT_COLS)
     .eq("active", true)
     .eq("cod_articulo", codArticulo)
     .maybeSingle();
@@ -168,13 +246,16 @@ export async function getTangoProductsByCodes(
   const unique = [...new Set(codes.filter(Boolean))];
   if (!unique.length) return [];
   const supabase = await createCommercialServerClient();
-  const { data, error } = await supabase
-    .from("products_tango")
-    .select(
-      "cod_articulo, descripcion, familia, cod_barra, unidad, catalog_source_id, image_url, has_price, has_stock, stock_qty",
-    )
-    .eq("active", true)
-    .in("cod_articulo", unique);
-  if (error) throw new Error(error.message);
-  return (data ?? []).map((row) => toListItem(row as TangoProductRow));
+  const items: ProductListItem[] = [];
+  for (let i = 0; i < unique.length; i += REST_PAGE) {
+    const chunk = unique.slice(i, i + REST_PAGE);
+    const { data, error } = await supabase
+      .from("products_tango")
+      .select(SELECT_COLS)
+      .eq("active", true)
+      .in("cod_articulo", chunk);
+    if (error) throw new Error(error.message);
+    items.push(...(data ?? []).map((row) => toListItem(row as TangoProductRow)));
+  }
+  return items;
 }

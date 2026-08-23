@@ -93,9 +93,9 @@ export function TangoCatalogFilters({ familias, total }: Props) {
           value={searchParams.get("disp") ?? "all"}
           onChange={(e) => update("disp", e.target.value)}
         >
-          <option value="all">Todas</option>
-          <option value="stock">Con stock</option>
-          <option value="confirmar">Precio a confirmar</option>
+          <option value="all">Todos</option>
+          <option value="stock">En stock</option>
+          <option value="confirmar">A confirmar (sin precio)</option>
         </select>
       </label>
       {hasFilters ? (

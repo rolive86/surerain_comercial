@@ -15,7 +15,7 @@ import { getCommercialSession } from "@/lib/commercial/session";
 import { withProductCodes } from "@/lib/commercial/product-codes";
 import {
   getTangoFamilias,
-  getTangoProducts,
+  getTangoProductsPaged,
 } from "@/lib/commercial/products-tango";
 import { getStockAvailabilityMany } from "@/lib/commercial/stock";
 import { isCustomerRole, isStaffRole } from "@/lib/commercial/roles";
@@ -62,26 +62,33 @@ async function TangoCatalogView({
     familia: typeof sp.familia === "string" ? sp.familia : undefined,
     disponibilidad: typeof sp.disp === "string" ? sp.disp : undefined,
   };
-  const page = Math.max(1, Number(typeof sp.page === "string" ? sp.page : 1) || 1);
+  const pageReq = Math.max(1, Number(typeof sp.page === "string" ? sp.page : 1) || 1);
 
-  let products: Awaited<ReturnType<typeof getTangoProducts>> = [];
+  let pageItems: Awaited<ReturnType<typeof getTangoProductsPaged>>["items"] = [];
+  let total = 0;
   let familias: Awaited<ReturnType<typeof getTangoFamilias>> = [];
   let errorMessage: string | null = null;
+  let safePage = pageReq;
 
   try {
-    [products, familias] = await Promise.all([
-      getTangoProducts(filters),
+    const [paged, fams] = await Promise.all([
+      getTangoProductsPaged(filters, pageReq, PAGE_SIZE),
       getTangoFamilias(),
     ]);
+    total = paged.total;
+    familias = fams;
+    const totalPages = Math.max(1, Math.ceil(total / PAGE_SIZE));
+    safePage = Math.min(pageReq, totalPages);
+    pageItems =
+      safePage === pageReq
+        ? paged.items
+        : (await getTangoProductsPaged(filters, safePage, PAGE_SIZE)).items;
   } catch (err) {
     errorMessage =
       err instanceof Error ? err.message : "Error al cargar el catálogo Tango.";
   }
 
-  const totalPages = Math.max(1, Math.ceil(products.length / PAGE_SIZE));
-  const safePage = Math.min(page, totalPages);
-  const sliced = products.slice((safePage - 1) * PAGE_SIZE, safePage * PAGE_SIZE);
-  const pageItems = sliced;
+  const totalPages = Math.max(1, Math.ceil(total / PAGE_SIZE));
   const stockByCode = staffMode
     ? await getStockAvailabilityMany(
         pageItems.map((p) => p.tangoCode ?? p.source_id),
@@ -123,7 +130,7 @@ async function TangoCatalogView({
       ) : (
         <div className="lg:grid lg:grid-cols-[16rem_minmax(0,1fr)] lg:gap-8">
           <Suspense fallback={<div className="skeleton h-40" />}>
-            <TangoCatalogFilters familias={familias} total={products.length} />
+            <TangoCatalogFilters familias={familias} total={total} />
           </Suspense>
           <div className="space-y-6">
             <ProductGrid

@@ -34,7 +34,7 @@ export async function getDashboardRecommendations(): Promise<DashboardRecommenda
 
   if (!session || session.claims.app_role !== "customer_user" || !session.claims.customer_id) {
     const { getTangoProducts } = await import("@/lib/commercial/products-tango");
-    const featured = (await getTangoProducts()).slice(0, 8);
+    const featured = await getTangoProducts({}, { limit: 8 });
     return { ...empty, recommended: featured };
   }
 
@@ -68,7 +68,7 @@ export async function getDashboardRecommendations(): Promise<DashboardRecommenda
 
   if (!topRows.length && !dueReorder.length) {
     const { getTangoProducts } = await import("@/lib/commercial/products-tango");
-    const featured = (await getTangoProducts()).slice(0, 8);
+    const featured = await getTangoProducts({}, { limit: 8 });
     return { ...empty, recommended: featured, coldStart: true };
   }
 
@@ -143,7 +143,7 @@ export async function getDashboardRecommendations(): Promise<DashboardRecommenda
 
   if (recommended.length < 4) {
     const { getTangoProducts } = await import("@/lib/commercial/products-tango");
-    const featured = (await getTangoProducts()).slice(0, 12);
+    const featured = await getTangoProducts({}, { limit: 12 });
     const used = new Set([...habitual, ...recommended, ...reorder].map((p) => p.source_id));
     for (const p of featured) {
       if (!used.has(p.source_id)) {

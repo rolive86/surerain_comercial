@@ -132,25 +132,32 @@ async function PublicHome({ signedIn }: { signedIn: boolean }) {
               Sure Rain
             </p>
             <h1 className="font-display max-w-xl text-4xl font-bold leading-[1.05] text-sr-ink sm:text-5xl lg:text-6xl">
-              Catálogo técnico de riego, listo para consultar.
+              Sure Rain
             </h1>
             <p className="mt-5 max-w-lg text-base leading-relaxed text-sr-ink/65 sm:text-lg">
-              {stats.products} productos en {stats.categories} categorías y{" "}
-              {stats.brands} marcas. Filtrá por mercado, tipo y marca sin salir
-              del catálogo.
+              Catálogo completo y pedidos ingresando al portal. Esta vidriera es
+              una muestra pública; stock, precios y cotizaciones están en el
+              portal comercial.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Link href="/catalogo" className="btn-primary">
-                Ver catálogo completo
-              </Link>
               {signedIn ? (
-                <Link href="/cuenta" className="btn-secondary">
-                  Mi cuenta
-                </Link>
+                <>
+                  <Link href="/catalogo" className="btn-primary">
+                    Ir al catálogo del portal
+                  </Link>
+                  <Link href="/cuenta" className="btn-secondary">
+                    Mi cuenta
+                  </Link>
+                </>
               ) : (
-                <Link href="/login" className="btn-secondary">
-                  Ingresar al portal
-                </Link>
+                <>
+                  <Link href="/login" className="btn-primary">
+                    Ingresar al portal
+                  </Link>
+                  <Link href="/catalogo" className="btn-secondary">
+                    Ver catálogo completo
+                  </Link>
+                </>
               )}
             </div>
           </div>

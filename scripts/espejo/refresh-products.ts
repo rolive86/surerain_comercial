@@ -111,11 +111,11 @@ async function main() {
         union
         select cod from stocked
       ),
-      arts as (
+      arts_base as (
         select distinct on (a.cod_sta11)
           a.cod_sta11,
           nullif(btrim(a.descripcio), '') as descripcion,
-          nullif(btrim(a.familia), '') as familia,
+          nullif(btrim(a.familia), '') as familia_raw,
           nullif(a.cod_barra, '') as cod_barra,
           nullif(btrim(a.medida_stock_sigla), '') as unidad
         from espejo_src.articulos a
@@ -123,6 +123,37 @@ async function main() {
           and a.cod_sta11 is not null
           and a.cod_sta11 <> ''
         order by a.cod_sta11
+      ),
+      -- articulos.familia suele venir vacío en el espejo; fallback =
+      -- agrupaciones_articulos por prefijo (cod_sta29). Preferir líneas
+      -- (código sin espacios leading) vs marcas.
+      agr as (
+        select
+          btrim(cod_sta29) as cod,
+          nullif(btrim(nom_agr), '') as nom,
+          (cod_sta29 ~ '^\\s') as is_brandish
+        from espejo_src.agrupaciones_articulos
+        where empresa = ${EMPRESA}
+          and nullif(btrim(nom_agr), '') is not null
+          and nullif(btrim(cod_sta29), '') is not null
+      ),
+      arts_fam as (
+        select distinct on (a.cod_sta11)
+          a.cod_sta11,
+          g.nom as familia_agr
+        from arts_base a
+        join agr g on left(a.cod_sta11, length(g.cod)) = g.cod
+        order by a.cod_sta11, g.is_brandish asc, length(g.cod) desc
+      ),
+      arts as (
+        select
+          a.cod_sta11,
+          a.descripcion,
+          coalesce(a.familia_raw, f.familia_agr) as familia,
+          a.cod_barra,
+          a.unidad
+        from arts_base a
+        left join arts_fam f on f.cod_sta11 = a.cod_sta11
       ),
       mapped as (
         select distinct on (pm.cod_articulo)
@@ -250,7 +281,8 @@ async function main() {
         (select count(*)::int from public.products_tango where active and has_price) as with_price,
         (select count(*)::int from public.products_tango where active and has_stock) as with_stock,
         (select count(*)::int from public.products_tango where active and has_stock and not has_price) as stock_no_price,
-        (select count(*)::int from public.products_tango where active and has_price and not has_stock) as price_no_stock
+        (select count(*)::int from public.products_tango where active and has_price and not has_stock) as price_no_stock,
+        (select count(distinct familia)::int from public.products_tango where active and familia is not null) as distinct_familia
     `;
 
     if (runId) {
