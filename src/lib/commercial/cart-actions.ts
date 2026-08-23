@@ -10,6 +10,7 @@ import {
   upsertCartItem,
   type CartItemInput,
 } from "@/lib/commercial/cart";
+import { getCommercialSession } from "@/lib/commercial/session";
 
 export type ActionResult =
   | { ok: true; message?: string; orderId?: string; orderNumber?: string }
@@ -83,6 +84,66 @@ export async function confirmCartAction(formData: FormData): Promise<void> {
   } catch (err) {
     if (typeof err === "object" && err && "digest" in err) throw err; // next redirect
     redirect(`/carrito?error=${encodeURIComponent(mapError(err))}`);
+  }
+}
+
+export async function reorderFromSalesAction(formData: FormData): Promise<void> {
+  const nro = String(formData.get("nro_comprobante") ?? "").trim();
+  try {
+    const session = await getCommercialSession();
+    if (!session || session.claims.app_role !== "customer_user" || !session.claims.customer_id) {
+      throw new Error("AUTH_REQUIRED");
+    }
+    const { createCommercialServerClient } = await import(
+      "@/lib/supabase/commercial/server"
+    );
+    const { getTangoProductsByCodes } = await import("@/lib/commercial/products-tango");
+    const supabase = await createCommercialServerClient();
+    const { data: lines, error } = await supabase
+      .from("sales_history")
+      .select("cod_articulo, cantidad, tipo_comprobante")
+      .eq("customer_id", session.claims.customer_id)
+      .eq("nro_comprobante", nro);
+    if (error) throw new Error(error.message);
+    if (!lines?.length) throw new Error("Comprobante no encontrado.");
+
+    const codes = lines
+      .filter((l) => l.cod_articulo && !(l.tipo_comprobante ?? "").toUpperCase().startsWith("NC"))
+      .map((l) => l.cod_articulo as string);
+    const products = await getTangoProductsByCodes(codes);
+    const byCode = new Map(products.map((p) => [p.source_id, p]));
+
+    let added = 0;
+    let missing = 0;
+    for (const line of lines) {
+      if (!line.cod_articulo) continue;
+      if ((line.tipo_comprobante ?? "").toUpperCase().startsWith("NC")) continue;
+      const product = byCode.get(line.cod_articulo);
+      const qty = Math.max(1, Math.floor(Number(line.cantidad) || 1));
+      if (!product) {
+        missing += 1;
+        continue;
+      }
+      await upsertCartItem({
+        product_source_id: product.source_id,
+        product_name_snapshot: product.name,
+        product_slug_snapshot: product.slug,
+        quantity: qty,
+      });
+      added += 1;
+    }
+    revalidatePath("/carrito");
+    revalidatePath("/", "layout");
+    const params = new URLSearchParams();
+    if (added) params.set("ok", "reorder");
+    if (missing) params.set("faltan", String(missing));
+    if (!added) params.set("error", "Ningún artículo de ese comprobante está pedible hoy.");
+    redirect(`/carrito?${params.toString()}`);
+  } catch (err) {
+    if (typeof err === "object" && err && "digest" in err) throw err;
+    redirect(
+      `/mis-compras?error=${encodeURIComponent(mapError(err))}`,
+    );
   }
 }
 

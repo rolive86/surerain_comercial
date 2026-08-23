@@ -964,6 +964,57 @@ export type Database = {
         }
         Relationships: []
       }
+      sales_history: {
+        Row: {
+          id: string
+          content_hash: string
+          nro_comprobante: string | null
+          tipo_comprobante: string | null
+          fecha: string | null
+          cod_cliente: string | null
+          customer_id: string | null
+          cod_vendedor: string | null
+          cod_articulo: string | null
+          cantidad: number | null
+          precio_unitario_usd: number | null
+          total_facturado: number | null
+          moneda: string | null
+          created_at: string
+        }
+        Insert: {
+          id?: string
+          content_hash: string
+          nro_comprobante?: string | null
+          tipo_comprobante?: string | null
+          fecha?: string | null
+          cod_cliente?: string | null
+          customer_id?: string | null
+          cod_vendedor?: string | null
+          cod_articulo?: string | null
+          cantidad?: number | null
+          precio_unitario_usd?: number | null
+          total_facturado?: number | null
+          moneda?: string | null
+          created_at?: string
+        }
+        Update: {
+          id?: string
+          content_hash?: string
+          nro_comprobante?: string | null
+          tipo_comprobante?: string | null
+          fecha?: string | null
+          cod_cliente?: string | null
+          customer_id?: string | null
+          cod_vendedor?: string | null
+          cod_articulo?: string | null
+          cantidad?: number | null
+          precio_unitario_usd?: number | null
+          total_facturado?: number | null
+          moneda?: string | null
+          created_at?: string
+        }
+        Relationships: []
+      }
       products_tango: {
         Row: {
           active: boolean
@@ -1086,6 +1137,41 @@ export type Database = {
       }
     }
     Views: {
+      v_client_top_products: {
+        Row: {
+          customer_id: string | null
+          cod_articulo: string | null
+          lineas: number | null
+          veces: number | null
+          unidades: number | null
+          ultima_compra: string | null
+        }
+        Relationships: []
+      }
+      v_client_reorder: {
+        Row: {
+          customer_id: string | null
+          cod_articulo: string | null
+          compras: number | null
+          primera: string | null
+          ultima: string | null
+          avg_interval_days: number | null
+          days_since: number | null
+          due_for_reorder: boolean | null
+        }
+        Relationships: []
+      }
+      v_client_sales_summary: {
+        Row: {
+          customer_id: string | null
+          comprobantes: number | null
+          total_facturado: number | null
+          total_12m: number | null
+          ultima_compra: string | null
+          primera_compra: string | null
+        }
+        Relationships: []
+      }
       v_customer_product_frequency: {
         Row: {
           customer_id: string | null

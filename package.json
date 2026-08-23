@@ -33,7 +33,8 @@
     "espejo:setup": "tsx --tsconfig tsconfig.scripts.json scripts/espejo/setup.ts",
     "espejo:inspect": "tsx --tsconfig tsconfig.scripts.json scripts/espejo/inspect.ts",
     "espejo:normalize": "tsx --tsconfig tsconfig.scripts.json scripts/espejo/normalize.ts",
-    "espejo:refresh-products": "tsx --tsconfig tsconfig.scripts.json scripts/espejo/refresh-products.ts"
+    "espejo:refresh-products": "tsx --tsconfig tsconfig.scripts.json scripts/espejo/refresh-products.ts",
+    "espejo:refresh-sales": "tsx --tsconfig tsconfig.scripts.json scripts/espejo/refresh-sales.ts"
   },
   "engines": {
     "node": ">=20"

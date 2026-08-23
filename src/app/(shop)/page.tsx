@@ -56,6 +56,9 @@ async function CustomerDashboard({
           <Link href="/catalogo" className="btn-primary">
             Catálogo
           </Link>
+          <Link href="/mis-compras" className="btn-secondary">
+            Mis compras
+          </Link>
           <Link href="/mis-pedidos" className="btn-secondary">
             Mis cotizaciones
           </Link>

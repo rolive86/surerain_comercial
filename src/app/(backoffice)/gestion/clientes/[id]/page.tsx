@@ -13,8 +13,10 @@ import {
   getCrmCustomer,
 } from "@/lib/commercial/crm";
 import { getCustomerPricing } from "@/lib/commercial/quote";
+import { getStaffCustomerSales } from "@/lib/commercial/sales-history";
 import { getCommercialSession } from "@/lib/commercial/session";
 import { listFilterOptions, requireStaffSession } from "@/lib/commercial/backoffice";
+import { getTangoProductsByCodes } from "@/lib/commercial/products-tango";
 
 type Params = Promise<{ id: string }>;
 
@@ -55,22 +57,42 @@ export default async function ClienteDetailPage({
   searchParams,
 }: {
   params: Params;
-  searchParams: Promise<{ error?: string; ok?: string }>;
+  searchParams: Promise<{ error?: string; ok?: string; tab?: string }>;
 }) {
   const { id } = await params;
   const flash = await searchParams;
+  const tab = flash.tab === "historial" || flash.tab === "vendidos" ? flash.tab : "datos";
   const session = await getCommercialSession();
   const staff = requireStaffSession(session);
   const manager = canManageAssignments(staff);
 
-  const [data, options, pricing] = await Promise.all([
+  const [data, options, pricing, sales] = await Promise.all([
     getCrmCustomer(id),
     manager ? listFilterOptions() : Promise.resolve(null),
     getCustomerPricing(id).catch(() => null),
+    getStaffCustomerSales(id).catch(() => null),
   ]);
   if (!data) notFound();
   const { customer, contacts, assignments } = data;
   const hasActive = Boolean(customer.active_rep_id);
+
+  const topNames = sales?.topProducts.length
+    ? await getTangoProductsByCodes(sales.topProducts.map((t) => t.cod_articulo))
+    : [];
+  const topNameByCode = new Map(topNames.map((p) => [p.source_id, p.name]));
+
+  function moneyArs(n: number) {
+    return n.toLocaleString("es-AR", {
+      style: "currency",
+      currency: "ARS",
+      maximumFractionDigits: 0,
+    });
+  }
+
+  function formatDay(value: string | null) {
+    if (!value) return "—";
+    return new Date(value + "T12:00:00").toLocaleDateString("es-AR");
+  }
 
   return (
     <div>
@@ -110,7 +132,120 @@ export default async function ClienteDetailPage({
         <span className="chip">{customer.active ? "Activo" : "Inactivo"}</span>
       </div>
 
-      <div className="mt-8 grid gap-4 lg:grid-cols-[1.2fr_0.8fr]">
+      <div className="mt-6 flex flex-wrap gap-2">
+        {(
+          [
+            ["datos", "Datos"],
+            ["historial", "Historial"],
+            ["vendidos", "Vendidos"],
+          ] as const
+        ).map(([key, label]) => (
+          <Link
+            key={key}
+            href={`/gestion/clientes/${id}?tab=${key}`}
+            className={
+              tab === key
+                ? "chip min-h-10 bg-sr-green px-3 text-white"
+                : "chip min-h-10 bg-white px-3 text-sr-ink/70"
+            }
+          >
+            {label}
+          </Link>
+        ))}
+      </div>
+
+      {tab === "historial" ? (
+        <section className="mt-6 rounded-xl border border-black/5 bg-white p-5">
+          <h2 className="font-display text-lg font-semibold">Historial de comprobantes</h2>
+          {!sales?.comprobantes.length ? (
+            <p className="mt-4 text-sm text-sr-ink/55">Sin ventas en el historial local.</p>
+          ) : (
+            <div className="mt-4 overflow-x-auto">
+              <table className="w-full min-w-[36rem] text-left text-sm">
+                <thead className="text-xs uppercase tracking-wider text-sr-ink/45">
+                  <tr>
+                    <th className="pb-2 pr-3">Fecha</th>
+                    <th className="pb-2 pr-3">N°</th>
+                    <th className="pb-2 pr-3">Tipo</th>
+                    <th className="pb-2 pr-3">Líneas</th>
+                    <th className="pb-2 text-right">Total (ARS)</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-black/5">
+                  {sales.comprobantes.map((c) => (
+                    <tr key={c.nro_comprobante}>
+                      <td className="py-2 pr-3">{formatDay(c.fecha)}</td>
+                      <td className="py-2 pr-3 font-mono text-xs">{c.nro_comprobante}</td>
+                      <td className="py-2 pr-3">{c.tipo_comprobante ?? "—"}</td>
+                      <td className="py-2 pr-3">{c.line_count}</td>
+                      <td className="py-2 text-right font-medium">
+                        {moneyArs(c.total_signed)}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )}
+        </section>
+      ) : null}
+
+      {tab === "vendidos" ? (
+        <section className="mt-6 space-y-4">
+          <div className="rounded-xl border border-black/5 bg-white p-5">
+            <h2 className="font-display text-lg font-semibold">Resumen comercial</h2>
+            {sales?.summary ? (
+              <dl className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-4 text-sm">
+                <div>
+                  <dt className="text-xs uppercase tracking-wider text-sr-ink/45">Total facturado</dt>
+                  <dd className="mt-1 font-semibold">{moneyArs(sales.summary.total_facturado)}</dd>
+                </div>
+                <div>
+                  <dt className="text-xs uppercase tracking-wider text-sr-ink/45">Últimos 12m</dt>
+                  <dd className="mt-1 font-semibold">{moneyArs(sales.summary.total_12m)}</dd>
+                </div>
+                <div>
+                  <dt className="text-xs uppercase tracking-wider text-sr-ink/45">Comprobantes</dt>
+                  <dd className="mt-1 font-semibold">{sales.summary.comprobantes}</dd>
+                </div>
+                <div>
+                  <dt className="text-xs uppercase tracking-wider text-sr-ink/45">Última compra</dt>
+                  <dd className="mt-1 font-semibold">{formatDay(sales.summary.ultima_compra)}</dd>
+                </div>
+              </dl>
+            ) : (
+              <p className="mt-4 text-sm text-sr-ink/55">Sin datos de ventas.</p>
+            )}
+          </div>
+          <div className="rounded-xl border border-black/5 bg-white p-5">
+            <h2 className="font-display text-lg font-semibold">Top productos</h2>
+            {!sales?.topProducts.length ? (
+              <p className="mt-4 text-sm text-sr-ink/55">Sin productos vendidos.</p>
+            ) : (
+              <ul className="mt-4 divide-y divide-black/5 text-sm">
+                {sales.topProducts.map((t) => (
+                  <li key={t.cod_articulo} className="flex justify-between gap-3 py-2">
+                    <div className="min-w-0">
+                      <p className="font-medium truncate">
+                        {topNameByCode.get(t.cod_articulo) ?? t.cod_articulo}
+                      </p>
+                      <p className="font-mono text-xs text-sr-ink/45">{t.cod_articulo}</p>
+                    </div>
+                    <div className="shrink-0 text-right text-sr-ink/70">
+                      <p>× {t.unidades}</p>
+                      <p className="text-xs">{t.veces} veces · {formatDay(t.ultima_compra)}</p>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+        </section>
+      ) : null}
+
+      {tab === "datos" ? (
+        <>
+        <div className="mt-8 grid gap-4 lg:grid-cols-[1.2fr_0.8fr]">
         <section className="rounded-xl border border-black/5 bg-white p-5">
           <h2 className="font-display text-lg font-semibold">Datos</h2>
           <form action={updateCustomerAction} className="mt-3 space-y-3">
@@ -381,6 +516,8 @@ export default async function ClienteDetailPage({
           </div>
         </form>
       </section>
+        </>
+      ) : null}
     </div>
   );
 }
