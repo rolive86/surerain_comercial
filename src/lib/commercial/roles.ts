@@ -36,6 +36,8 @@ export function isCustomerPortalPath(path: string): boolean {
     path.startsWith("/carrito/") ||
     path === "/mis-pedidos" ||
     path.startsWith("/mis-pedidos/") ||
+    path === "/mis-compras" ||
+    path.startsWith("/mis-compras/") ||
     path === "/pedido" ||
     path.startsWith("/pedido/") ||
     path === "/cuenta" ||

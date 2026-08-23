@@ -6,6 +6,7 @@ import {
   searchTangoProductsAction,
   type TangoProductSearchHit,
 } from "@/lib/commercial/tango-product-search";
+import { StaffStockLine } from "@/components/StockBadges";
 
 type CustomerOpt = { id: string; label: string };
 
@@ -19,7 +20,14 @@ export function NuevaCotizacionForm({
   const [hits, setHits] = useState<TangoProductSearchHit[]>([]);
   const [searching, startSearch] = useTransition();
   const [lines, setLines] = useState<
-    Array<{ cod_articulo: string; name: string; quantity: number }>
+    Array<{
+      cod_articulo: string;
+      name: string;
+      quantity: number;
+      stock_real?: number;
+      comprometido?: number;
+      libre?: number;
+    }>
   >([]);
 
   useEffect(() => {
@@ -57,6 +65,9 @@ export function NuevaCotizacionForm({
           cod_articulo: p.cod_articulo,
           name: p.descripcion?.trim() || p.cod_articulo,
           quantity: 1,
+          stock_real: p.stock_real,
+          comprometido: p.comprometido,
+          libre: p.libre,
         },
       ];
     });
@@ -111,6 +122,14 @@ export function NuevaCotizacionForm({
                       {p.descripcion || p.cod_articulo}
                     </p>
                     <p className="font-mono text-xs text-sr-ink/45">{p.cod_articulo}</p>
+                    {p.libre != null ? (
+                      <StaffStockLine
+                        stockReal={p.stock_real ?? 0}
+                        comprometido={p.comprometido ?? 0}
+                        libre={p.libre}
+                        compact
+                      />
+                    ) : null}
                   </div>
                   <button
                     type="button"
@@ -140,6 +159,14 @@ export function NuevaCotizacionForm({
                   <input type="hidden" name="product_name" value={l.name} />
                   <p className="font-medium">{l.name}</p>
                   <p className="font-mono text-xs text-sr-ink/45">{l.cod_articulo}</p>
+                  {l.libre != null ? (
+                    <StaffStockLine
+                      stockReal={l.stock_real ?? 0}
+                      comprometido={l.comprometido ?? 0}
+                      libre={l.libre}
+                      compact
+                    />
+                  ) : null}
                   <label className="mt-2 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-sr-ink/45">
                     Cant.
                     <input

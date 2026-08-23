@@ -12,8 +12,10 @@ import {
 import { saveQuoteAction } from "@/lib/commercial/quote-actions";
 import { suggestedPricesForOrder } from "@/lib/commercial/quote";
 import { QuoteSendPanel } from "@/components/QuoteSendPanel";
+import { StaffStockLine } from "@/components/StockBadges";
 import { displayFinalUsd, isValidFinalAmount } from "@/lib/commercial/money";
 import { normalizeArWhatsAppPhone } from "@/lib/commercial/phone";
+import { getStockAvailabilityMany } from "@/lib/commercial/stock";
 import {
   getBackofficeOrderDetail,
   listFilterOptions,
@@ -97,6 +99,10 @@ export default async function GestionPedidoDetailPage({
       : Promise.resolve({} as Record<string, number | null>),
   ]);
   const canQuote = ["submitted", "quoted", "received"].includes(order.status);
+  const stockCodes = order.items.map(
+    (i) => i.sku_snapshot || codes.get(i.product_source_id) || i.product_source_id,
+  );
+  const stockByCode = await getStockAvailabilityMany(stockCodes);
 
   return (
     <div>
@@ -248,6 +254,11 @@ export default async function GestionPedidoDetailPage({
                 {order.items.map((item) => {
                   const suggestedAmt =
                     suggested[item.id] ?? item.unit_price_snapshot ?? "";
+                  const code =
+                    item.sku_snapshot ||
+                    codes.get(item.product_source_id) ||
+                    item.product_source_id;
+                  const stock = stockByCode.get(code);
                   return (
                     <li
                       key={item.id}
@@ -257,10 +268,16 @@ export default async function GestionPedidoDetailPage({
                         <p className="font-medium">{item.product_name_snapshot}</p>
                         <p className="text-xs text-sr-ink/50">
                           × {item.quantity}
-                          {item.sku_snapshot || codes.get(item.product_source_id)
-                            ? ` · ${item.sku_snapshot || codes.get(item.product_source_id)}`
-                            : ""}
+                          {code ? ` · ${code}` : ""}
                         </p>
+                        {stock ? (
+                          <StaffStockLine
+                            stockReal={stock.stock_real}
+                            comprometido={stock.comprometido}
+                            libre={stock.libre}
+                            compact
+                          />
+                        ) : null}
                       </div>
                       <label className="text-xs font-semibold uppercase tracking-wider text-sr-ink/45">
                         USD unit.

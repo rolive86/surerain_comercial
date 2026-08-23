@@ -3,10 +3,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
 import { AddToCartButton } from "@/components/AddToCartButton";
-import { getTangoProductByCode, getTangoProducts } from "@/lib/commercial/products-tango";
-import { isCustomerRole } from "@/lib/commercial/roles";
-import { getCommercialSession } from "@/lib/commercial/session";
+import { CustomerStockBadge, StaffStockLine } from "@/components/StockBadges";
 import { ProductRail } from "@/components/ProductRail";
+import { getTangoProductByCode, getTangoProducts } from "@/lib/commercial/products-tango";
+import { getStockAvailabilityMany } from "@/lib/commercial/stock";
+import { isCustomerRole, isStaffRole } from "@/lib/commercial/roles";
+import { getCommercialSession } from "@/lib/commercial/session";
 
 export const dynamic = "force-dynamic";
 
@@ -33,17 +35,24 @@ export async function generateMetadata({
 
 export default async function TangoProductPage({ params }: { params: Params }) {
   const session = await getCommercialSession();
-  if (!isCustomerRole(session?.claims.app_role)) {
+  const role = session?.claims.app_role;
+  if (!isCustomerRole(role) && !isStaffRole(role)) {
     redirect("/login?next=/catalogo");
   }
+  const staffMode = isStaffRole(role);
 
   const { code: raw } = await params;
   const code = decodeURIComponent(raw);
   const product = await getTangoProductByCode(code);
   if (!product) notFound();
 
+  const stockMap = staffMode
+    ? await getStockAvailabilityMany([product.tangoCode ?? product.source_id])
+    : null;
+  const stock = stockMap?.get(product.tangoCode ?? product.source_id) ?? null;
+
   let related: Awaited<ReturnType<typeof getTangoProducts>> = [];
-  if (product.category_name) {
+  if (product.category_name && !staffMode) {
     related = await getTangoProducts({ familia: product.category_name });
     related = related.filter((p) => p.source_id !== product.source_id).slice(0, 8);
   }
@@ -90,21 +99,26 @@ export default async function TangoProductPage({ params }: { params: Params }) {
           </h1>
           <p className="font-mono text-sm text-sr-ink/50">{product.tangoCode}</p>
 
-          {product.hasStock ? (
-            <span className="inline-block rounded bg-sr-green/10 px-2 py-1 text-xs font-semibold text-sr-green">
-              Con stock
-              {product.stockQty != null ? ` · ${product.stockQty}` : ""}
-            </span>
-          ) : null}
+          {staffMode && stock ? (
+            <StaffStockLine
+              stockReal={stock.stock_real}
+              comprometido={stock.comprometido}
+              libre={stock.libre}
+            />
+          ) : (
+            <CustomerStockBadge hasStock={Boolean(product.hasStock)} />
+          )}
 
-          <p className="text-sm text-sr-ink/60">
-            El precio se confirma en la cotización que te envía tu vendedor (PDF).
-          </p>
+          {!staffMode ? (
+            <p className="text-sm text-sr-ink/60">
+              El precio se confirma en la cotización que te envía tu vendedor (PDF).
+            </p>
+          ) : null}
 
           {product.attributes.length ? (
             <dl className="space-y-2 border-t border-sr-ink/10 pt-4 text-sm">
               {product.attributes
-                .filter((a) => a.slug !== "precio")
+                .filter((a) => a.slug !== "precio" && a.slug !== "stock")
                 .map((a) => (
                   <div key={a.slug} className="flex justify-between gap-4">
                     <dt className="text-sr-ink/50">{a.name}</dt>
@@ -114,13 +128,15 @@ export default async function TangoProductPage({ params }: { params: Params }) {
             </dl>
           ) : null}
 
-          <AddToCartButton
-            productSourceId={product.source_id}
-            productName={product.name}
-            productSlug={product.slug}
-            authenticated
-            withStepper
-          />
+          {!staffMode ? (
+            <AddToCartButton
+              productSourceId={product.source_id}
+              productName={product.name}
+              productSlug={product.slug}
+              authenticated
+              withStepper
+            />
+          ) : null}
         </div>
       </div>
 

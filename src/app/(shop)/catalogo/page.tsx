@@ -17,7 +17,8 @@ import {
   getTangoFamilias,
   getTangoProducts,
 } from "@/lib/commercial/products-tango";
-import { isCustomerRole } from "@/lib/commercial/roles";
+import { getStockAvailabilityMany } from "@/lib/commercial/stock";
+import { isCustomerRole, isStaffRole } from "@/lib/commercial/roles";
 
 export const metadata: Metadata = {
   title: "Catálogo",
@@ -38,10 +39,12 @@ export default async function CatalogoPage({
 }) {
   const sp = await searchParams;
   const session = await getCommercialSession();
-  const portalTango = isCustomerRole(session?.claims.app_role);
+  const portalTango =
+    isCustomerRole(session?.claims.app_role) || isStaffRole(session?.claims.app_role);
+  const staffMode = isStaffRole(session?.claims.app_role);
 
   if (portalTango) {
-    return <TangoCatalogView searchParams={sp} />;
+    return <TangoCatalogView searchParams={sp} staffMode={staffMode} />;
   }
 
   return <PublicCatalogView searchParams={sp} />;
@@ -49,8 +52,10 @@ export default async function CatalogoPage({
 
 async function TangoCatalogView({
   searchParams: sp,
+  staffMode = false,
 }: {
   searchParams: Record<string, string | string[] | undefined>;
+  staffMode?: boolean;
 }) {
   const filters = {
     q: typeof sp.q === "string" ? sp.q : undefined,
@@ -77,6 +82,11 @@ async function TangoCatalogView({
   const safePage = Math.min(page, totalPages);
   const sliced = products.slice((safePage - 1) * PAGE_SIZE, safePage * PAGE_SIZE);
   const pageItems = sliced;
+  const stockByCode = staffMode
+    ? await getStockAvailabilityMany(
+        pageItems.map((p) => p.tangoCode ?? p.source_id),
+      )
+    : undefined;
 
   const qs = new URLSearchParams();
   if (filters.q) qs.set("q", filters.q);
@@ -94,14 +104,15 @@ async function TangoCatalogView({
     <div className="container-sr py-8 sm:py-12">
       <div className="mb-6 max-w-3xl">
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-sr-green">
-          Pedido
+          {staffMode ? "Gestión" : "Pedido"}
         </p>
         <h1 className="mt-2 font-display text-3xl font-bold text-sr-ink sm:text-4xl">
           Catálogo Tango
         </h1>
         <p className="mt-3 text-sr-ink/60">
-          Artículos con precio o stock (empresa Sure Rain). Armá tu solicitud de cotización;
-          el vendedor te responde con el PDF.
+          {staffMode
+            ? "Disponibilidad: real (Tango), cotizado (órdenes vivas) y libre."
+            : "Artículos con precio o stock (empresa Sure Rain). Armá tu solicitud de cotización; el vendedor te responde con el PDF."}
         </p>
       </div>
 
@@ -117,7 +128,9 @@ async function TangoCatalogView({
           <div className="space-y-6">
             <ProductGrid
               products={pageItems}
-              authenticated
+              authenticated={!staffMode}
+              staffStock={staffMode}
+              stockByCode={stockByCode}
               emptyMessage="Ningún artículo coincide con los filtros."
             />
             {totalPages > 1 ? (

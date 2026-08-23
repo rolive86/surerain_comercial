@@ -1,7 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { AddToCartButton } from "@/components/AddToCartButton";
+import { CustomerStockBadge, StaffStockLine } from "@/components/StockBadges";
 import type { ProductListItem } from "@/lib/catalog";
+import type { StockAvailability } from "@/lib/commercial/stock";
 
 function BrandPlaceholder({ name }: { name: string }) {
   return (
@@ -19,9 +21,13 @@ function BrandPlaceholder({ name }: { name: string }) {
 export function ProductCard({
   product,
   authenticated = false,
+  staffStock = false,
+  stock = null,
 }: {
   product: ProductListItem;
   authenticated?: boolean;
+  staffStock?: boolean;
+  stock?: StockAvailability | null;
 }) {
   const href = `/catalogo/${product.slug}`;
 
@@ -39,9 +45,9 @@ export function ProductCard({
         ) : (
           <BrandPlaceholder name={product.name} />
         )}
-        {authenticated && product.hasStock ? (
-          <span className="absolute left-2 top-2 rounded bg-sr-green/90 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-white">
-            Stock
+        {authenticated && !staffStock ? (
+          <span className="absolute left-2 top-2">
+            <CustomerStockBadge hasStock={Boolean(product.hasStock)} />
           </span>
         ) : null}
       </Link>
@@ -62,16 +68,28 @@ export function ProductCard({
         {product.tangoCode ? (
           <p className="font-mono text-[11px] text-sr-ink/45">{product.tangoCode}</p>
         ) : null}
-        <div className="mt-auto pt-1">
-          <AddToCartButton
-            productSourceId={product.source_id}
-            productName={product.name}
-            productSlug={product.slug}
-            authenticated={authenticated}
+        {staffStock && stock ? (
+          <StaffStockLine
+            stockReal={stock.stock_real}
+            comprometido={stock.comprometido}
+            libre={stock.libre}
             compact
-            withStepper
           />
-        </div>
+        ) : null}
+        {!staffStock ? (
+          <div className="mt-auto pt-1">
+            <AddToCartButton
+              productSourceId={product.source_id}
+              productName={product.name}
+              productSlug={product.slug}
+              authenticated={authenticated}
+              compact
+              withStepper
+            />
+          </div>
+        ) : (
+          <div className="mt-auto pt-1" />
+        )}
       </div>
     </article>
   );
@@ -81,10 +99,14 @@ export function ProductGrid({
   products,
   emptyMessage = "No hay productos para mostrar.",
   authenticated = false,
+  staffStock = false,
+  stockByCode,
 }: {
   products: ProductListItem[];
   emptyMessage?: string;
   authenticated?: boolean;
+  staffStock?: boolean;
+  stockByCode?: Map<string, StockAvailability>;
 }) {
   if (!products.length) {
     return (
@@ -100,7 +122,15 @@ export function ProductGrid({
   return (
     <div className="grid grid-cols-2 gap-3 lg:grid-cols-3 lg:gap-5 xl:grid-cols-4">
       {products.map((product) => (
-        <ProductCard key={product.id} product={product} authenticated={authenticated} />
+        <ProductCard
+          key={product.id}
+          product={product}
+          authenticated={authenticated}
+          staffStock={staffStock}
+          stock={
+            stockByCode?.get(product.tangoCode ?? product.source_id) ?? null
+          }
+        />
       ))}
     </div>
   );

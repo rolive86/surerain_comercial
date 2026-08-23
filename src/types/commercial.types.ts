@@ -1220,6 +1220,23 @@ export type Database = {
         Args: { p_cod_articulo: string; p_customer: string }
         Returns: number
       }
+      stock_availability: {
+        Args: { p_cod_articulo: string }
+        Returns: {
+          stock_real: number
+          comprometido: number
+          libre: number
+        }[]
+      }
+      stock_availability_many: {
+        Args: { p_codes: string[] }
+        Returns: {
+          cod_articulo: string
+          stock_real: number
+          comprometido: number
+          libre: number
+        }[]
+      }
       tango_specs_upsert: { Args: { p_rows: Json }; Returns: Json }
       tango_staging_fetch: { Args: { p_entity: string }; Returns: Json }
       tango_staging_run_finish: {
