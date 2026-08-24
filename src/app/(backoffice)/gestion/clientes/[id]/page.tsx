@@ -378,9 +378,12 @@ export default async function ClienteDetailPage({
           <p className="mt-2 text-sm text-sr-ink/60">
             Actual:{" "}
             <strong>{customer.active_rep_name ?? "Sin asignar"}</strong>
+            {customer.active_rep_is_active === false ? (
+              <span className="ml-2 text-amber-700">(vendedor inactivo)</span>
+            ) : null}
           </p>
 
-          {(manager || !hasActive) && staff.claims.sales_rep_id ? (
+          {(manager && options) || (!hasActive && staff.claims.sales_rep_id) ? (
             <form action={assignSalesRepAction} className="mt-4 space-y-3">
               <input type="hidden" name="customer_id" value={customer.id} />
               {manager && options ? (
@@ -389,11 +392,15 @@ export default async function ClienteDetailPage({
                   <select
                     name="sales_rep_id"
                     required
-                    defaultValue={customer.active_rep_id ?? ""}
+                    defaultValue={
+                      customer.active_rep_is_active
+                        ? (customer.active_rep_id ?? "")
+                        : ""
+                    }
                     className="mt-1 w-full rounded-md border border-black/10 px-3 py-2 text-sm font-normal normal-case tracking-normal"
                   >
                     <option value="" disabled>
-                      Seleccionar…
+                      Seleccionar vendedor activo…
                     </option>
                     {options.salesReps.map((r) => (
                       <option key={r.id} value={r.id}>
@@ -406,7 +413,7 @@ export default async function ClienteDetailPage({
                 <input
                   type="hidden"
                   name="sales_rep_id"
-                  value={staff.claims.sales_rep_id}
+                  value={staff.claims.sales_rep_id!}
                 />
               )}
               <button type="submit" className="btn-secondary w-full">

@@ -27,6 +27,8 @@ function mapError(err: unknown): string {
       return "Seleccioná un vendedor.";
     case "REP_NAME_REQUIRED":
       return "El nombre del vendedor es obligatorio.";
+    case "REP_INACTIVE":
+      return "Ese vendedor no está activo. Elegí uno vigente.";
     case "REASSIGN_FORBIDDEN":
       return "Solo gerencia puede reasignar a otro vendedor.";
     case "ALREADY_ASSIGNED":
@@ -143,14 +145,24 @@ export async function deactivateContactAction(formData: FormData) {
 export async function assignSalesRepAction(formData: FormData) {
   const customerId = String(formData.get("customer_id") ?? "");
   const salesRepId = String(formData.get("sales_rep_id") ?? "");
+  const returnTo = String(formData.get("return_to") ?? "").trim();
   try {
     await assignSalesRep(customerId, salesRepId);
     revalidatePath("/gestion/clientes");
     revalidatePath(`/gestion/clientes/${customerId}`);
     revalidatePath("/gestion/vendedores");
+    if (returnTo.startsWith("/gestion/")) {
+      redirect(returnTo);
+    }
     redirect(`/gestion/clientes/${customerId}?ok=assign`);
   } catch (err) {
     if (isNextRedirect(err)) throw err;
+    if (returnTo.startsWith("/gestion/")) {
+      const sep = returnTo.includes("?") ? "&" : "?";
+      redirect(
+        `${returnTo}${sep}error=${encodeURIComponent(mapError(err))}`,
+      );
+    }
     redirect(
       `/gestion/clientes/${customerId}?error=${encodeURIComponent(mapError(err))}`,
     );

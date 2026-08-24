@@ -25,7 +25,8 @@ export default async function GestionVendedoresPage({
         <div>
           <h1 className="font-display text-3xl font-bold text-sr-ink">Vendedores</h1>
           <p className="mt-1 text-sm text-sr-ink/55">
-            Maestro de vendedores y cartera activa.
+            Vendedores activos y cartera. Los inactivos no se listan ni aparecen en
+            selectores (sí pueden figurar en historiales).
           </p>
         </div>
         {manager ? (
