@@ -36,6 +36,9 @@ export type ProductListItem = {
   hasStock?: boolean;
   hasPrice?: boolean;
   stockQty?: number | null;
+  /** Padre con N medidas */
+  variantCount?: number;
+  isVariantGroup?: boolean;
 };
 
 export type ProductDetail = ProductListItem & {

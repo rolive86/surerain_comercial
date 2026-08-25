@@ -249,3 +249,84 @@ export async function saveModulePermissionsAction(formData: FormData) {
     bounce("/gestion/admin/permisos", err);
   }
 }
+
+export async function saveProductGroupAction(formData: FormData) {
+  const session = await getCommercialSession();
+  const id = String(formData.get("id") ?? "");
+  try {
+    requireAdminConsoleSession(session);
+    const { updateProductGroupAdmin } = await import("@/lib/commercial/product-groups");
+    const name = String(formData.get("name") ?? "").trim();
+    if (!name) throw new Error("Nombre obligatorio.");
+    const codes = formData.getAll("cod_articulo").map(String);
+    const labels = formData.getAll("variant_label").map(String);
+    const orders = formData.getAll("sort_order").map((v) => Number(v));
+    const variants = codes.map((cod, i) => ({
+      cod_articulo: cod,
+      variant_label: labels[i] ?? cod,
+      sort_order: Number.isFinite(orders[i]) ? orders[i] : i,
+    }));
+    await updateProductGroupAdmin({
+      id,
+      name,
+      familia: emptyToNull(formData.get("familia")),
+      variants,
+    });
+    revalidatePath("/gestion/admin/variantes");
+    revalidatePath("/catalogo");
+    redirect(`/gestion/admin/variantes?id=${id}&ok=saved`);
+  } catch (err) {
+    if (isNextRedirect(err)) throw err;
+    bounce(`/gestion/admin/variantes${id ? `?id=${id}` : ""}`, err);
+  }
+}
+
+export async function moveVariantAction(formData: FormData) {
+  const session = await getCommercialSession();
+  const fromId = String(formData.get("from_id") ?? "");
+  try {
+    requireAdminConsoleSession(session);
+    const { moveVariantAdmin } = await import("@/lib/commercial/product-groups");
+    const cod = String(formData.get("cod_articulo") ?? "");
+    if (!cod) throw new Error("Código obligatorio.");
+    const dest = String(formData.get("to_group_id") ?? "").trim();
+    await moveVariantAdmin({
+      cod_articulo: cod,
+      to_group_id: dest === "" || dest === "none" ? null : dest,
+      variant_label: emptyToNull(formData.get("variant_label")),
+    });
+    revalidatePath("/gestion/admin/variantes");
+    revalidatePath("/catalogo");
+    redirect(
+      `/gestion/admin/variantes?${fromId ? `id=${fromId}&` : ""}ok=moved`,
+    );
+  } catch (err) {
+    if (isNextRedirect(err)) throw err;
+    bounce(`/gestion/admin/variantes${fromId ? `?id=${fromId}` : ""}`, err);
+  }
+}
+
+export async function createProductGroupAction(formData: FormData) {
+  const session = await getCommercialSession();
+  try {
+    requireAdminConsoleSession(session);
+    const { createProductGroupAdmin } = await import("@/lib/commercial/product-groups");
+    const name = String(formData.get("name") ?? "").trim();
+    const codesRaw = String(formData.get("codes") ?? "");
+    const codes = codesRaw
+      .split(/[\s,;]+/)
+      .map((c) => c.trim())
+      .filter(Boolean);
+    const id = await createProductGroupAdmin({
+      name,
+      familia: emptyToNull(formData.get("familia")),
+      codes,
+    });
+    revalidatePath("/gestion/admin/variantes");
+    revalidatePath("/catalogo");
+    redirect(`/gestion/admin/variantes?id=${id}&ok=created`);
+  } catch (err) {
+    if (isNextRedirect(err)) throw err;
+    bounce("/gestion/admin/variantes", err);
+  }
+}

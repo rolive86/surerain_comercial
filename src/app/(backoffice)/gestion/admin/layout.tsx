@@ -8,6 +8,7 @@ const TABS = [
   { href: "/gestion/admin/margenes", label: "Márgenes" },
   { href: "/gestion/admin/precios", label: "Precios" },
   { href: "/gestion/admin/mapeo", label: "Mapeo" },
+  { href: "/gestion/admin/variantes", label: "Productos/Variantes" },
   { href: "/gestion/admin/permisos", label: "Permisos" },
   { href: "/gestion/admin/metricas", label: "Métricas" },
 ];

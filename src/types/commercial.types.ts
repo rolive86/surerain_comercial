@@ -1015,6 +1015,60 @@ export type Database = {
         }
         Relationships: []
       }
+      product_groups: {
+        Row: {
+          id: string
+          slug: string | null
+          name: string
+          familia: string | null
+          needs_review: boolean
+          source: string
+          created_at: string
+          updated_at: string
+        }
+        Insert: {
+          id?: string
+          slug?: string | null
+          name: string
+          familia?: string | null
+          needs_review?: boolean
+          source?: string
+          created_at?: string
+          updated_at?: string
+        }
+        Update: {
+          id?: string
+          slug?: string | null
+          name?: string
+          familia?: string | null
+          needs_review?: boolean
+          source?: string
+          created_at?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      product_variants: {
+        Row: {
+          cod_articulo: string
+          group_id: string | null
+          variant_label: string | null
+          sort_order: number
+        }
+        Insert: {
+          cod_articulo: string
+          group_id?: string | null
+          variant_label?: string | null
+          sort_order?: number
+        }
+        Update: {
+          cod_articulo?: string
+          group_id?: string | null
+          variant_label?: string | null
+          sort_order?: number
+        }
+        Relationships: []
+      }
       products_tango: {
         Row: {
           active: boolean

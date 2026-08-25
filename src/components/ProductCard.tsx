@@ -68,7 +68,12 @@ export function ProductCard({
         {product.tangoCode ? (
           <p className="font-mono text-[11px] text-sr-ink/45">{product.tangoCode}</p>
         ) : null}
-        {staffStock && stock ? (
+        {product.isVariantGroup && (product.variantCount ?? 0) > 1 ? (
+          <p className="text-xs font-medium text-sr-green">
+            {product.variantCount} medidas disponibles
+          </p>
+        ) : null}
+        {staffStock && stock && !product.isVariantGroup ? (
           <StaffStockLine
             stockReal={stock.stock_real}
             comprometido={stock.comprometido}
@@ -76,7 +81,7 @@ export function ProductCard({
             compact
           />
         ) : null}
-        {!staffStock ? (
+        {!staffStock && !product.isVariantGroup ? (
           <div className="mt-auto pt-1">
             <AddToCartButton
               productSourceId={product.source_id}
@@ -86,6 +91,12 @@ export function ProductCard({
               compact
               withStepper
             />
+          </div>
+        ) : product.isVariantGroup ? (
+          <div className="mt-auto pt-1">
+            <Link href={href} className="btn-secondary !min-h-10 w-full text-center text-xs">
+              Elegir medida
+            </Link>
           </div>
         ) : (
           <div className="mt-auto pt-1" />

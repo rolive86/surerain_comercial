@@ -5,6 +5,7 @@ import { notFound, redirect } from "next/navigation";
 import { AddToCartButton } from "@/components/AddToCartButton";
 import { CustomerStockBadge, StaffStockLine } from "@/components/StockBadges";
 import { ProductRail } from "@/components/ProductRail";
+import { getVariantGroupByCode } from "@/lib/commercial/product-groups";
 import { getTangoProductByCode, getTangoProducts } from "@/lib/commercial/products-tango";
 import { getStockAvailabilityMany } from "@/lib/commercial/stock";
 import { isCustomerRole, isStaffRole } from "@/lib/commercial/roles";
@@ -43,6 +44,15 @@ export default async function TangoProductPage({ params }: { params: Params }) {
 
   const { code: raw } = await params;
   const code = decodeURIComponent(raw);
+
+  // Buscar por código → ficha del padre con esa variante seleccionada
+  const grouped = await getVariantGroupByCode(code);
+  if (grouped?.group.slug && grouped.variants.length > 1) {
+    redirect(
+      `/catalogo/g/${encodeURIComponent(grouped.group.slug)}?v=${encodeURIComponent(code)}`,
+    );
+  }
+
   const product = await getTangoProductByCode(code);
   if (!product) notFound();
 
@@ -56,7 +66,7 @@ export default async function TangoProductPage({ params }: { params: Params }) {
     related = (
       await getTangoProducts({ familia: product.category_name }, { limit: 12 })
     )
-      .filter((p) => p.source_id !== product.source_id)
+      .filter((p) => p.source_id !== product.source_id && !p.isVariantGroup)
       .slice(0, 8);
   }
 

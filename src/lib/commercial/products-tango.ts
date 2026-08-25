@@ -1,5 +1,6 @@
 import { createCommercialServerClient } from "@/lib/supabase/commercial/server";
 import type { ProductListItem, ProductDetail } from "@/lib/catalog";
+import { loadVariantIndex } from "@/lib/commercial/product-groups";
 
 export type TangoProductFilters = {
   q?: string;
@@ -63,6 +64,8 @@ export function toListItem(row: TangoProductRow): ProductListItem {
     hasStock: row.has_stock,
     hasPrice: row.has_price,
     stockQty: row.stock_qty,
+    variantCount: 1,
+    isVariantGroup: false,
   };
 }
 
@@ -110,6 +113,107 @@ function applyCatalogOrder<T extends FilterableQuery>(query: T): T {
     .order("descripcion", { ascending: true, nullsFirst: false }) as T;
 }
 
+async function fetchAllMatchingRows(
+  filters: TangoProductFilters,
+): Promise<TangoProductRow[]> {
+  const supabase = await createCommercialServerClient();
+  const items: TangoProductRow[] = [];
+  let from = 0;
+  for (;;) {
+    let query = supabase
+      .from("products_tango")
+      .select(SELECT_COLS)
+      .eq("active", true);
+    query = applyFilters(query as unknown as FilterableQuery, filters) as typeof query;
+    query = applyCatalogOrder(query as unknown as FilterableQuery) as typeof query;
+    const { data, error } = await query.range(from, from + REST_PAGE - 1);
+    if (error) throw new Error(error.message);
+    const rows = (data ?? []) as TangoProductRow[];
+    items.push(...rows);
+    if (rows.length < REST_PAGE) break;
+    from += REST_PAGE;
+  }
+  return items;
+}
+
+/**
+ * Colapsa variantes: un card por grupo (si ≥2 en el resultado) + singles.
+ * Si el filtro matchea una variante, el padre aparece igual.
+ */
+function collapseToCards(
+  rows: TangoProductRow[],
+  index: Awaited<ReturnType<typeof loadVariantIndex>>,
+): ProductListItem[] {
+  const { groupById, codeToGroupId } = index;
+  const seenGroups = new Set<string>();
+  const cards: ProductListItem[] = [];
+  const groupMembers = new Map<string, TangoProductRow[]>();
+
+  for (const row of rows) {
+    const gid = codeToGroupId.get(row.cod_articulo);
+    const meta = gid ? groupById.get(gid) : undefined;
+    if (gid && meta && meta.variant_count > 1) {
+      const list = groupMembers.get(gid) ?? [];
+      list.push(row);
+      groupMembers.set(gid, list);
+      continue;
+    }
+    cards.push(toListItem(row));
+  }
+
+  for (const [gid, members] of groupMembers) {
+    if (seenGroups.has(gid)) continue;
+    seenGroups.add(gid);
+    const meta = groupById.get(gid);
+    if (!meta?.slug) {
+      for (const m of members) cards.push(toListItem(m));
+      continue;
+    }
+    const rep =
+      members.find((m) => m.image_url) ??
+      members.slice().sort((a, b) => a.cod_articulo.localeCompare(b.cod_articulo))[0];
+    const hasStock = members.some((m) => m.has_stock);
+    const hasPrice = members.some((m) => m.has_price);
+    cards.push({
+      id: `group:${gid}`,
+      source_id: rep.cod_articulo,
+      name: meta.name,
+      slug: `g/${encodeURIComponent(meta.slug)}`,
+      short_description: null,
+      brand_name: null,
+      brand_slug: null,
+      category_name: meta.familia ?? rep.familia,
+      category_slug: meta.familia ?? rep.familia,
+      type_name: null,
+      type_slug: null,
+      image: rep.image_url
+        ? {
+            id: rep.cod_articulo,
+            alt_text: meta.name,
+            bucket: null,
+            storage_path: null,
+            url: rep.image_url,
+          }
+        : null,
+      tangoCode: null,
+      hasStock,
+      hasPrice,
+      stockQty: rep.stock_qty,
+      variantCount: meta.variant_count,
+      isVariantGroup: true,
+    });
+  }
+
+  cards.sort((a, b) => {
+    const ai = a.image?.url ? 0 : 1;
+    const bi = b.image?.url ? 0 : 1;
+    if (ai !== bi) return ai - bi;
+    return a.name.localeCompare(b.name, "es");
+  });
+
+  return cards;
+}
+
 export async function getTangoFamilias(): Promise<Array<{ slug: string; name: string }>> {
   const supabase = await createCommercialServerClient();
   const set = new Set<string>();
@@ -140,25 +244,17 @@ export async function getTangoProductsPaged(
   page = 1,
   pageSize = 24,
 ): Promise<{ items: ProductListItem[]; total: number }> {
-  const supabase = await createCommercialServerClient();
   const safePage = Math.max(1, page);
   const size = Math.max(1, Math.min(pageSize, 100));
+  const [rows, index] = await Promise.all([
+    fetchAllMatchingRows(filters),
+    loadVariantIndex(),
+  ]);
+  const cards = collapseToCards(rows, index);
   const from = (safePage - 1) * size;
-  const to = from + size - 1;
-
-  let query = supabase
-    .from("products_tango")
-    .select(SELECT_COLS, { count: "exact" })
-    .eq("active", true);
-
-  query = applyFilters(query as unknown as FilterableQuery, filters) as typeof query;
-  query = applyCatalogOrder(query as unknown as FilterableQuery) as typeof query;
-
-  const { data, error, count } = await query.range(from, to);
-  if (error) throw new Error(error.message);
   return {
-    items: (data ?? []).map((row) => toListItem(row as TangoProductRow)),
-    total: count ?? 0,
+    items: cards.slice(from, from + size),
+    total: cards.length,
   };
 }
 
@@ -166,35 +262,13 @@ export async function getTangoProducts(
   filters: TangoProductFilters = {},
   opts?: { limit?: number },
 ): Promise<ProductListItem[]> {
-  const supabase = await createCommercialServerClient();
-  const limit = opts?.limit;
-  const items: ProductListItem[] = [];
-  let from = 0;
-
-  for (;;) {
-    const chunkSize = limit
-      ? Math.min(REST_PAGE, limit - items.length)
-      : REST_PAGE;
-    if (chunkSize <= 0) break;
-
-    let query = supabase
-      .from("products_tango")
-      .select(SELECT_COLS)
-      .eq("active", true);
-
-    query = applyFilters(query as unknown as FilterableQuery, filters) as typeof query;
-    query = applyCatalogOrder(query as unknown as FilterableQuery) as typeof query;
-
-    const { data, error } = await query.range(from, from + chunkSize - 1);
-    if (error) throw new Error(error.message);
-    const rows = data ?? [];
-    items.push(...rows.map((row) => toListItem(row as TangoProductRow)));
-
-    if (limit && items.length >= limit) return items.slice(0, limit);
-    if (rows.length < chunkSize) break;
-    from += chunkSize;
-  }
-  return items;
+  const [rows, index] = await Promise.all([
+    fetchAllMatchingRows(filters),
+    loadVariantIndex(),
+  ]);
+  const cards = collapseToCards(rows, index);
+  if (opts?.limit) return cards.slice(0, opts.limit);
+  return cards;
 }
 
 export async function getTangoProductByCode(
