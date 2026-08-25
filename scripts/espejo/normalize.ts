@@ -59,6 +59,7 @@ async function main() {
     const cust = await sql`
       insert into public.customers as t (
         tango_customer_id, external_id, legal_name, cuit, email, phone, tax_condition,
+        city, postal_code, province,
         active, source_system, last_synced_at, sync_status
       )
       select distinct on (c.cod_gva14)
@@ -74,6 +75,9 @@ async function main() {
           nullif(btrim(c.telefono_2), '')
         )), ''),
         nullif(btrim(c.desc_categoria_iva), ''),
+        nullif(btrim(c.localidad), ''),
+        nullif(btrim(c.c_postal), ''),
+        public.province_from_postal_code(c.c_postal),
         coalesce(lower(btrim(c.habilitado)), 'true') in ('true', '1'),
         'tango',
         now(),
@@ -91,6 +95,9 @@ async function main() {
         email = excluded.email,
         phone = excluded.phone,
         tax_condition = excluded.tax_condition,
+        city = excluded.city,
+        postal_code = excluded.postal_code,
+        province = excluded.province,
         active = excluded.active,
         source_system = excluded.source_system,
         last_synced_at = excluded.last_synced_at,

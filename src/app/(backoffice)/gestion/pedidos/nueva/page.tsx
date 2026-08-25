@@ -15,7 +15,7 @@ export const dynamic = "force-dynamic";
 export default async function NuevaCotizacionPage({
   searchParams,
 }: {
-  searchParams: Promise<{ error?: string }>;
+  searchParams: Promise<{ error?: string; customer?: string; cod?: string; familia?: string }>;
 }) {
   const flash = await searchParams;
   const session = await getCommercialSession();
@@ -55,7 +55,11 @@ export default async function NuevaCotizacionPage({
         {customerOpts.length === 0 ? (
           <p className="text-sm text-sr-ink/60">No hay clientes visibles en tu cartera.</p>
         ) : (
-          <NuevaCotizacionForm customers={customerOpts} />
+          <NuevaCotizacionForm
+            customers={customerOpts}
+            initialCustomerId={flash.customer}
+            initialCodArticulo={flash.cod}
+          />
         )}
       </div>
     </div>

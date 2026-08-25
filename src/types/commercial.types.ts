@@ -1237,6 +1237,62 @@ export type Database = {
           libre: number
         }[]
       }
+      clientes_a_recontactar: {
+        Args: {
+          p_familia?: string | null
+          p_cod_articulo?: string | null
+          p_mes_desde?: number
+          p_mes_hasta?: number
+          p_anio_base?: number
+          p_localidad?: string | null
+          p_provincia?: string | null
+        }
+        Returns: {
+          customer_id: string
+          cliente: string
+          localidad: string | null
+          provincia: string | null
+          telefono: string | null
+          cant_anio_base: number
+          total_anio_base: number
+          ultima_compra: string
+          cant_anio_actual: number
+        }[]
+      }
+      cliente_comparativo_periodo: {
+        Args: {
+          p_customer_id: string
+          p_mes_desde?: number
+          p_mes_hasta?: number
+          p_anio_base?: number
+        }
+        Returns: {
+          cod_articulo: string
+          descripcion: string | null
+          familia: string | null
+          cant_anio_base: number
+          total_anio_base: number
+          cant_anio_actual: number
+          total_anio_actual: number
+          estado: string
+        }[]
+      }
+      ranking_zona_familia: {
+        Args: {
+          p_mes_desde?: number
+          p_mes_hasta?: number
+          p_anio_base?: number
+          p_agrupar_por?: string
+        }
+        Returns: {
+          zona: string
+          familia: string
+          cant_anio_base: number
+          total_anio_base: number
+          cant_anio_actual: number
+          total_anio_actual: number
+        }[]
+      }
       tango_specs_upsert: { Args: { p_rows: Json }; Returns: Json }
       tango_staging_fetch: { Args: { p_entity: string }; Returns: Json }
       tango_staging_run_finish: {

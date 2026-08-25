@@ -7,6 +7,7 @@ import { getCommercialSession, roleLabel } from "@/lib/commercial/session";
 
 const NAV = [
   { href: "/gestion/pedidos", label: "Pedidos", module: "gestion_pedidos" as const },
+  { href: "/gestion/inteligencia", label: "Inteligencia", module: "gestion_clientes" as const },
   { href: "/gestion/clientes", label: "Clientes", module: "gestion_clientes" as const },
   { href: "/gestion/vendedores", label: "Vendedores", module: "gestion_vendedores" as const },
   { href: "/gestion/admin", label: "Admin", module: "admin_console" as const },

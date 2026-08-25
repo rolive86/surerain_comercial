@@ -12,11 +12,19 @@ type CustomerOpt = { id: string; label: string };
 
 export function NuevaCotizacionForm({
   customers,
+  initialCustomerId,
+  initialCodArticulo,
 }: {
   customers: CustomerOpt[];
+  initialCustomerId?: string;
+  initialCodArticulo?: string;
 }) {
-  const [customerId, setCustomerId] = useState(customers[0]?.id ?? "");
-  const [q, setQ] = useState("");
+  const preferred =
+    initialCustomerId && customers.some((c) => c.id === initialCustomerId)
+      ? initialCustomerId
+      : (customers[0]?.id ?? "");
+  const [customerId, setCustomerId] = useState(preferred);
+  const [q, setQ] = useState(initialCodArticulo ?? "");
   const [hits, setHits] = useState<TangoProductSearchHit[]>([]);
   const [searching, startSearch] = useTransition();
   const [lines, setLines] = useState<
@@ -29,6 +37,12 @@ export function NuevaCotizacionForm({
       libre?: number;
     }>
   >([]);
+
+  useEffect(() => {
+    if (initialCustomerId && customers.some((c) => c.id === initialCustomerId)) {
+      setCustomerId(initialCustomerId);
+    }
+  }, [initialCustomerId, customers]);
 
   useEffect(() => {
     const needle = q.trim();
