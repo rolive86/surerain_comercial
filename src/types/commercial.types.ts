@@ -1293,6 +1293,25 @@ export type Database = {
           total_anio_actual: number
         }[]
       }
+      ventas_explorer: {
+        Args: {
+          p_group_by: string
+          p_metric: string
+          p_fecha_desde?: string | null
+          p_fecha_hasta?: string | null
+          p_familia?: string | null
+          p_cod_articulo?: string | null
+          p_localidad?: string | null
+          p_provincia?: string | null
+          p_comparar_interanual?: boolean
+        }
+        Returns: {
+          dimension: string
+          valor: number
+          valor_anio_anterior: number | null
+          variacion_pct: number | null
+        }[]
+      }
       tango_specs_upsert: { Args: { p_rows: Json }; Returns: Json }
       tango_staging_fetch: { Args: { p_entity: string }; Returns: Json }
       tango_staging_run_finish: {
