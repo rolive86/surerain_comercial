@@ -22,17 +22,17 @@ export function ExplorerBars({
         {top.map((r) => {
           const pct = Math.min(100, (Math.abs(r.valor) / max) * 100);
           return (
-            <li key={r.dimension} className="grid grid-cols-[minmax(0,9rem)_1fr_auto] items-center gap-2 text-sm">
+            <li key={r.dimension} className="grid grid-cols-[minmax(0,4.5rem)_1fr_auto] items-center gap-2 text-sm sm:grid-cols-[minmax(0,9rem)_1fr_auto]">
               <span className="truncate text-sr-ink/70" title={r.dimension}>
                 {r.dimension}
               </span>
-              <div className="h-3 overflow-hidden rounded bg-sr-mist">
+              <div className="h-3 min-w-0 overflow-hidden rounded bg-sr-mist">
                 <div
                   className="h-full rounded bg-sr-green/80"
                   style={{ width: `${pct}%` }}
                 />
               </div>
-              <span className="tabular-nums text-sr-ink/80">
+              <span className="shrink-0 tabular-nums text-sr-ink/80">
                 {formatExplorerValue(metric, r.valor)}
               </span>
             </li>

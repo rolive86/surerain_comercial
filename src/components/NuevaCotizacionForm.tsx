@@ -96,7 +96,7 @@ export function NuevaCotizacionForm({
           <select
             value={customerId}
             onChange={(e) => setCustomerId(e.target.value)}
-            className="mt-1 w-full rounded-md border border-black/10 px-3 py-2 text-sm font-normal normal-case tracking-normal"
+            className="mt-1 min-h-11 w-full rounded-md border border-black/10 px-3 py-2 text-sm font-normal normal-case tracking-normal"
           >
             {customers.map((c) => (
               <option key={c.id} value={c.id}>
@@ -111,7 +111,7 @@ export function NuevaCotizacionForm({
             value={q}
             onChange={(e) => setQ(e.target.value)}
             placeholder="Código o descripción"
-            className="mt-1 w-full rounded-md border border-black/10 px-3 py-2 text-sm font-normal normal-case tracking-normal"
+            className="mt-1 min-h-11 w-full rounded-md border border-black/10 px-3 py-2 text-sm font-normal normal-case tracking-normal"
             autoComplete="off"
           />
         </label>
@@ -147,7 +147,7 @@ export function NuevaCotizacionForm({
                   </div>
                   <button
                     type="button"
-                    className="btn-secondary shrink-0 px-3 py-1 text-xs"
+                    className="btn-secondary !min-h-11 shrink-0 px-3 text-xs"
                     onClick={() => addLine(p)}
                   >
                     Agregar
@@ -159,7 +159,7 @@ export function NuevaCotizacionForm({
         )}
       </section>
 
-      <section className="rounded-xl border border-black/5 bg-white p-5">
+      <section className="rounded-xl border border-black/5 bg-white p-4 sm:p-5">
         <h2 className="font-display text-lg font-semibold">Líneas</h2>
         <form action={createTelephoneQuoteAction} className="mt-3 space-y-3">
           <input type="hidden" name="customer_id" value={customerId} />
@@ -188,7 +188,7 @@ export function NuevaCotizacionForm({
                       type="number"
                       min={1}
                       defaultValue={l.quantity}
-                      className="w-20 rounded-md border border-black/10 px-2 py-1 text-sm font-normal normal-case tracking-normal"
+                      className="min-h-11 w-24 rounded-md border border-black/10 px-2 py-1 text-sm font-normal normal-case tracking-normal"
                     />
                   </label>
                 </li>

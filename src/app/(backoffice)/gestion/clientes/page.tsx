@@ -44,23 +44,23 @@ export default async function GestionClientesPage({
     <div>
       <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
         <div>
-          <h1 className="font-display text-3xl font-bold text-sr-ink">Clientes</h1>
+          <h1 className="font-display text-2xl font-bold text-sr-ink sm:text-3xl">Clientes</h1>
           <p className="mt-1 text-sm text-sr-ink/55">
             ABM y asignaciones. Alcance según RLS del vendedor.
           </p>
         </div>
-        <Link href="/gestion/clientes/nuevo" className="btn-primary">
+        <Link href="/gestion/clientes/nuevo" className="btn-primary w-full sm:w-auto">
           Nuevo cliente
         </Link>
       </div>
 
-      <div className="mt-6 flex flex-wrap gap-2">
+      <div className="-mx-1 mt-6 flex flex-nowrap gap-2 overflow-x-auto px-1 pb-1 md:flex-wrap md:overflow-visible">
         <Link
           href={qs("all")}
           className={
             filtro === "all"
-              ? "chip min-h-10 bg-sr-green px-3 text-white"
-              : "chip min-h-10 bg-white px-3 text-sr-ink/70"
+              ? "chip min-h-11 shrink-0 bg-sr-green px-3 text-white"
+              : "chip min-h-11 shrink-0 bg-white px-3 text-sr-ink/70"
           }
         >
           Todos
@@ -69,8 +69,8 @@ export default async function GestionClientesPage({
           href={qs("sin_vendedor_activo")}
           className={
             filtro === "sin_vendedor_activo"
-              ? "chip min-h-10 bg-amber-600 px-3 text-white"
-              : "chip min-h-10 bg-white px-3 text-sr-ink/70"
+              ? "chip min-h-11 shrink-0 bg-amber-600 px-3 text-white"
+              : "chip min-h-11 shrink-0 bg-white px-3 text-sr-ink/70"
           }
         >
           Sin vendedor activo
@@ -82,7 +82,7 @@ export default async function GestionClientesPage({
         </Link>
       </div>
 
-      <form className="mt-4 flex flex-wrap gap-2 rounded-xl border border-black/5 bg-white p-4">
+      <form className="mt-4 flex flex-col gap-2 rounded-xl border border-black/5 bg-white p-4 sm:flex-row sm:flex-wrap">
         {filtro === "sin_vendedor_activo" ? (
           <input type="hidden" name="filtro" value="sin_vendedor_activo" />
         ) : null}
@@ -90,9 +90,9 @@ export default async function GestionClientesPage({
           name="q"
           defaultValue={params.q ?? ""}
           placeholder="Buscar razón social, fantasia, CUIT…"
-          className="min-w-[16rem] flex-1 rounded-md border border-black/10 px-3 py-2 text-sm"
+          className="min-h-11 min-w-0 flex-1 rounded-md border border-black/10 px-3 py-2 text-sm sm:min-w-[16rem]"
         />
-        <button type="submit" className="btn-secondary">
+        <button type="submit" className="btn-secondary w-full sm:w-auto">
           Buscar
         </button>
       </form>
@@ -104,104 +104,177 @@ export default async function GestionClientesPage({
         </p>
       ) : null}
 
-      <div className="mt-4 overflow-x-auto rounded-xl border border-black/5 bg-white">
-        <table className="min-w-full text-left text-sm">
-          <thead className="border-b border-black/5 text-xs uppercase tracking-wider text-sr-ink/45">
-            <tr>
-              <th className="px-4 py-3 font-semibold">Cliente</th>
-              <th className="px-4 py-3 font-semibold">CUIT</th>
-              <th className="px-4 py-3 font-semibold">Vendedor</th>
-              <th className="px-4 py-3 font-semibold">Estado</th>
-              {manager && filtro === "sin_vendedor_activo" ? (
-                <th className="px-4 py-3 font-semibold">Reasignar</th>
-              ) : null}
-            </tr>
-          </thead>
-          <tbody className="divide-y divide-black/5">
-            {customers.length === 0 ? (
-              <tr>
-                <td
-                  colSpan={manager && filtro === "sin_vendedor_activo" ? 5 : 4}
-                  className="px-4 py-8 text-center text-sr-ink/45"
+      {customers.length === 0 ? (
+        <div className="mt-4 rounded-xl border border-black/5 bg-white px-4 py-8 text-center text-sm text-sr-ink/45">
+          {filtro === "sin_vendedor_activo"
+            ? "Ningún cliente con vendedor inactivo."
+            : "Sin clientes en alcance."}
+        </div>
+      ) : (
+        <>
+          <ul className="mt-4 space-y-3 md:hidden">
+            {customers.map((c) => (
+              <li key={c.id} className="rounded-xl border border-black/5 bg-white p-4">
+                <Link
+                  href={`/gestion/clientes/${c.id}`}
+                  className="font-display text-base font-semibold text-sr-ink"
                 >
-                  {filtro === "sin_vendedor_activo"
-                    ? "Ningún cliente con vendedor inactivo."
-                    : "Sin clientes en alcance."}
-                </td>
-              </tr>
-            ) : (
-              customers.map((c) => (
-                <tr key={c.id} className="hover:bg-sr-mist/40">
-                  <td className="px-4 py-3">
-                    <Link
-                      href={`/gestion/clientes/${c.id}`}
-                      className="font-semibold text-sr-ink hover:text-sr-green"
+                  {c.trade_name || c.legal_name}
+                </Link>
+                {c.trade_name ? (
+                  <p className="mt-0.5 text-xs text-sr-ink/45">{c.legal_name}</p>
+                ) : null}
+                <dl className="mt-3 space-y-2 text-sm">
+                  <div className="flex justify-between gap-3">
+                    <dt className="text-sr-ink/45">CUIT</dt>
+                    <dd className="font-mono text-xs text-sr-ink/60">{c.cuit ?? "—"}</dd>
+                  </div>
+                  <div className="flex justify-between gap-3">
+                    <dt className="text-sr-ink/45">Vendedor</dt>
+                    <dd className="text-right text-sr-ink/70">
+                      {c.active_rep_name ? (
+                        <>
+                          {c.active_rep_name}
+                          {c.active_rep_is_active === false ? (
+                            <span className="ml-1 text-xs font-semibold text-amber-700">
+                              inactivo
+                            </span>
+                          ) : null}
+                        </>
+                      ) : (
+                        "Sin asignar"
+                      )}
+                    </dd>
+                  </div>
+                  <div className="flex justify-between gap-3">
+                    <dt className="text-sr-ink/45">Estado</dt>
+                    <dd>
+                      <span className="chip">{c.active ? "Activo" : "Inactivo"}</span>
+                    </dd>
+                  </div>
+                </dl>
+                {manager && filtro === "sin_vendedor_activo" && options ? (
+                  <form
+                    action={assignSalesRepAction}
+                    className="mt-3 flex flex-col gap-2 border-t border-black/5 pt-3"
+                  >
+                    <input type="hidden" name="customer_id" value={c.id} />
+                    <input
+                      type="hidden"
+                      name="return_to"
+                      value="/gestion/clientes?filtro=sin_vendedor_activo&ok=assign"
+                    />
+                    <select
+                      name="sales_rep_id"
+                      required
+                      className="min-h-11 w-full rounded-md border border-black/10 px-2 py-1.5 text-sm"
+                      defaultValue=""
                     >
-                      {c.trade_name || c.legal_name}
-                    </Link>
-                    {c.trade_name ? (
-                      <p className="text-xs text-sr-ink/45">{c.legal_name}</p>
-                    ) : null}
-                  </td>
-                  <td className="px-4 py-3 font-mono text-xs text-sr-ink/60">
-                    {c.cuit ?? "—"}
-                  </td>
-                  <td className="px-4 py-3 text-sr-ink/70">
-                    {c.active_rep_name ? (
-                      <>
-                        {c.active_rep_name}
-                        {c.active_rep_is_active === false ? (
-                          <span className="ml-2 text-xs font-semibold text-amber-700">
-                            inactivo
-                          </span>
-                        ) : null}
-                      </>
-                    ) : (
-                      "Sin asignar"
-                    )}
-                  </td>
-                  <td className="px-4 py-3">
-                    <span className="chip">{c.active ? "Activo" : "Inactivo"}</span>
-                  </td>
-                  {manager && filtro === "sin_vendedor_activo" && options ? (
-                    <td className="px-4 py-3">
-                      <form
-                        action={assignSalesRepAction}
-                        className="flex min-w-[14rem] flex-wrap items-center gap-2"
-                      >
-                        <input type="hidden" name="customer_id" value={c.id} />
-                        <input
-                          type="hidden"
-                          name="return_to"
-                          value="/gestion/clientes?filtro=sin_vendedor_activo&ok=assign"
-                        />
-                        <select
-                          name="sales_rep_id"
-                          required
-                          className="min-w-[10rem] flex-1 rounded-md border border-black/10 px-2 py-1.5 text-sm"
-                          defaultValue=""
-                        >
-                          <option value="" disabled>
-                            Vendedor activo…
-                          </option>
-                          {options.salesReps.map((r) => (
-                            <option key={r.id} value={r.id}>
-                              {r.name}
-                            </option>
-                          ))}
-                        </select>
-                        <button type="submit" className="btn-secondary !min-h-9 !px-3 text-xs">
-                          Asignar
-                        </button>
-                      </form>
-                    </td>
+                      <option value="" disabled>
+                        Vendedor activo…
+                      </option>
+                      {options.salesReps.map((r) => (
+                        <option key={r.id} value={r.id}>
+                          {r.name}
+                        </option>
+                      ))}
+                    </select>
+                    <button type="submit" className="btn-secondary w-full">
+                      Asignar
+                    </button>
+                  </form>
+                ) : null}
+              </li>
+            ))}
+          </ul>
+
+          <div className="mt-4 hidden overflow-x-auto rounded-xl border border-black/5 bg-white md:block">
+            <table className="min-w-full text-left text-sm">
+              <thead className="border-b border-black/5 text-xs uppercase tracking-wider text-sr-ink/45">
+                <tr>
+                  <th className="px-4 py-3 font-semibold">Cliente</th>
+                  <th className="px-4 py-3 font-semibold">CUIT</th>
+                  <th className="px-4 py-3 font-semibold">Vendedor</th>
+                  <th className="px-4 py-3 font-semibold">Estado</th>
+                  {manager && filtro === "sin_vendedor_activo" ? (
+                    <th className="px-4 py-3 font-semibold">Reasignar</th>
                   ) : null}
                 </tr>
-              ))
-            )}
-          </tbody>
-        </table>
-      </div>
+              </thead>
+              <tbody className="divide-y divide-black/5">
+                {customers.map((c) => (
+                  <tr key={c.id} className="hover:bg-sr-mist/40">
+                    <td className="px-4 py-3">
+                      <Link
+                        href={`/gestion/clientes/${c.id}`}
+                        className="font-semibold text-sr-ink hover:text-sr-green"
+                      >
+                        {c.trade_name || c.legal_name}
+                      </Link>
+                      {c.trade_name ? (
+                        <p className="text-xs text-sr-ink/45">{c.legal_name}</p>
+                      ) : null}
+                    </td>
+                    <td className="px-4 py-3 font-mono text-xs text-sr-ink/60">
+                      {c.cuit ?? "—"}
+                    </td>
+                    <td className="px-4 py-3 text-sr-ink/70">
+                      {c.active_rep_name ? (
+                        <>
+                          {c.active_rep_name}
+                          {c.active_rep_is_active === false ? (
+                            <span className="ml-2 text-xs font-semibold text-amber-700">
+                              inactivo
+                            </span>
+                          ) : null}
+                        </>
+                      ) : (
+                        "Sin asignar"
+                      )}
+                    </td>
+                    <td className="px-4 py-3">
+                      <span className="chip">{c.active ? "Activo" : "Inactivo"}</span>
+                    </td>
+                    {manager && filtro === "sin_vendedor_activo" && options ? (
+                      <td className="px-4 py-3">
+                        <form
+                          action={assignSalesRepAction}
+                          className="flex min-w-[14rem] flex-wrap items-center gap-2"
+                        >
+                          <input type="hidden" name="customer_id" value={c.id} />
+                          <input
+                            type="hidden"
+                            name="return_to"
+                            value="/gestion/clientes?filtro=sin_vendedor_activo&ok=assign"
+                          />
+                          <select
+                            name="sales_rep_id"
+                            required
+                            className="min-w-[10rem] flex-1 rounded-md border border-black/10 px-2 py-1.5 text-sm"
+                            defaultValue=""
+                          >
+                            <option value="" disabled>
+                              Vendedor activo…
+                            </option>
+                            {options.salesReps.map((r) => (
+                              <option key={r.id} value={r.id}>
+                                {r.name}
+                              </option>
+                            ))}
+                          </select>
+                          <button type="submit" className="btn-secondary !min-h-9 !px-3 text-xs">
+                            Asignar
+                          </button>
+                        </form>
+                      </td>
+                    ) : null}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </>
+      )}
     </div>
   );
 }

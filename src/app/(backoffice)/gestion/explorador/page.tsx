@@ -112,7 +112,7 @@ export default async function ExploradorPage({
     return (
       <Link
         href={`/gestion/explorador?${p.toString()}`}
-        className="chip min-h-10 bg-white px-3 text-sr-ink/75 hover:border-sr-green/30"
+        className="chip min-h-11 shrink-0 bg-white px-3 text-sr-ink/75 hover:border-sr-green/30"
       >
         {label}
       </Link>
@@ -123,7 +123,7 @@ export default async function ExploradorPage({
     <div>
       <div className="mb-6 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
         <div>
-          <h1 className="font-display text-3xl font-bold text-sr-ink">Explorador</h1>
+          <h1 className="font-display text-2xl font-bold text-sr-ink sm:text-3xl">Explorador</h1>
           <p className="mt-1 text-sm text-sr-ink/55">
             Armá cruces con menús sobre tu historial de ventas. Solo tu cartera (admin ve todo).
           </p>
@@ -131,7 +131,7 @@ export default async function ExploradorPage({
         <ExplorerCsvButton csv={csv} filename={`explorador-${groupBy}-${metric}.csv`} />
       </div>
 
-      <div className="mb-4 flex flex-wrap gap-2">
+      <div className="-mx-1 mb-4 flex flex-nowrap gap-2 overflow-x-auto px-1 pb-1 md:flex-wrap md:overflow-visible">
         {preset("Facturación por familia (este año vs anterior)", {
           group: "familia",
           metric: "facturacion",
@@ -155,10 +155,13 @@ export default async function ExploradorPage({
         })}
       </div>
 
-      <form
-        method="get"
-        className="mb-6 grid gap-3 rounded-xl border border-black/5 bg-white p-4 sm:grid-cols-2 lg:grid-cols-4"
-      >
+      <form method="get">
+        <details open className="mb-6 rounded-xl border border-black/5 bg-white">
+          <summary className="flex min-h-11 cursor-pointer list-none items-center justify-between px-4 py-3 text-sm font-semibold text-sr-ink md:hidden">
+            Filtros
+            <span className="text-xs font-medium text-sr-ink/45">Mostrar / ocultar</span>
+          </summary>
+          <div className="grid gap-3 border-t border-black/5 p-4 md:border-0 sm:grid-cols-2 lg:grid-cols-4">
         <label className="block text-xs font-semibold uppercase tracking-wider text-sr-ink/45">
           Medir
           <select
@@ -274,6 +277,8 @@ export default async function ExploradorPage({
             Aplicar
           </button>
         </div>
+          </div>
+        </details>
       </form>
 
       {error ? (
@@ -290,64 +295,115 @@ export default async function ExploradorPage({
       </p>
 
       <div className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
-        <div className="overflow-x-auto rounded-xl border border-black/5 bg-white">
-          <table className="min-w-full text-left text-sm">
-            <thead className="border-b border-black/5 text-xs uppercase tracking-wider text-sr-ink/45">
-              <tr>
-                <th className="px-4 py-3 font-semibold">{groupLabel(groupBy)}</th>
-                <th className="px-4 py-3 font-semibold text-right">{metricLabel(metric)}</th>
-                {compararInteranual ? (
-                  <>
-                    <th className="px-4 py-3 font-semibold text-right">Año anterior</th>
-                    <th className="px-4 py-3 font-semibold text-right">Var %</th>
-                  </>
-                ) : null}
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-black/5">
-              {rows.length === 0 ? (
-                <tr>
-                  <td
-                    colSpan={compararInteranual ? 4 : 2}
-                    className="px-4 py-8 text-center text-sr-ink/45"
-                  >
-                    Sin datos para estos filtros.
-                  </td>
-                </tr>
-              ) : (
-                rows.map((r) => (
-                  <tr key={r.dimension} className="hover:bg-sr-mist/40">
-                    <td className="px-4 py-3 font-medium text-sr-ink">{r.dimension}</td>
-                    <td className="px-4 py-3 text-right tabular-nums">
-                      {formatExplorerValue(metric, r.valor)}
-                    </td>
+        <div>
+          <ul className="space-y-3 md:hidden">
+            {rows.length === 0 ? (
+              <li className="rounded-xl border border-black/5 bg-white px-4 py-8 text-center text-sm text-sr-ink/45">
+                Sin datos para estos filtros.
+              </li>
+            ) : (
+              rows.map((r) => (
+                <li key={r.dimension} className="rounded-xl border border-black/5 bg-white p-4 text-sm">
+                  <p className="font-semibold text-sr-ink">{r.dimension}</p>
+                  <dl className="mt-2 space-y-1.5">
+                    <div className="flex justify-between gap-2">
+                      <dt className="text-sr-ink/45">{metricLabel(metric)}</dt>
+                      <dd className="tabular-nums font-medium">
+                        {formatExplorerValue(metric, r.valor)}
+                      </dd>
+                    </div>
                     {compararInteranual ? (
                       <>
-                        <td className="px-4 py-3 text-right tabular-nums text-sr-ink/65">
-                          {r.valor_anio_anterior == null
-                            ? "—"
-                            : formatExplorerValue(metric, r.valor_anio_anterior)}
-                        </td>
-                        <td
-                          className={`px-4 py-3 text-right tabular-nums font-medium ${
-                            (r.variacion_pct ?? 0) > 0
-                              ? "text-sr-green"
-                              : (r.variacion_pct ?? 0) < 0
-                                ? "text-red-600"
-                                : "text-sr-ink/50"
-                          }`}
-                        >
-                          {r.variacion_pct == null
-                            ? "—"
-                            : `${r.variacion_pct > 0 ? "+" : ""}${r.variacion_pct}%`}
-                        </td>
+                        <div className="flex justify-between gap-2">
+                          <dt className="text-sr-ink/45">Año anterior</dt>
+                          <dd className="tabular-nums text-sr-ink/65">
+                            {r.valor_anio_anterior == null
+                              ? "—"
+                              : formatExplorerValue(metric, r.valor_anio_anterior)}
+                          </dd>
+                        </div>
+                        <div className="flex justify-between gap-2">
+                          <dt className="text-sr-ink/45">Var %</dt>
+                          <dd
+                            className={`tabular-nums font-medium ${
+                              (r.variacion_pct ?? 0) > 0
+                                ? "text-sr-green"
+                                : (r.variacion_pct ?? 0) < 0
+                                  ? "text-red-600"
+                                  : "text-sr-ink/50"
+                            }`}
+                          >
+                            {r.variacion_pct == null
+                              ? "—"
+                              : `${r.variacion_pct > 0 ? "+" : ""}${r.variacion_pct}%`}
+                          </dd>
+                        </div>
                       </>
                     ) : null}
+                  </dl>
+                </li>
+              ))
+            )}
+          </ul>
+          <div className="hidden overflow-x-auto rounded-xl border border-black/5 bg-white md:block">
+            <table className="min-w-full text-left text-sm">
+              <thead className="border-b border-black/5 text-xs uppercase tracking-wider text-sr-ink/45">
+                <tr>
+                  <th className="px-4 py-3 font-semibold">{groupLabel(groupBy)}</th>
+                  <th className="px-4 py-3 font-semibold text-right">{metricLabel(metric)}</th>
+                  {compararInteranual ? (
+                    <>
+                      <th className="px-4 py-3 font-semibold text-right">Año anterior</th>
+                      <th className="px-4 py-3 font-semibold text-right">Var %</th>
+                    </>
+                  ) : null}
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-black/5">
+                {rows.length === 0 ? (
+                  <tr>
+                    <td
+                      colSpan={compararInteranual ? 4 : 2}
+                      className="px-4 py-8 text-center text-sr-ink/45"
+                    >
+                      Sin datos para estos filtros.
+                    </td>
                   </tr>
-                ))
-              )}
-            </tbody>
-          </table>
+                ) : (
+                  rows.map((r) => (
+                    <tr key={r.dimension} className="hover:bg-sr-mist/40">
+                      <td className="px-4 py-3 font-medium text-sr-ink">{r.dimension}</td>
+                      <td className="px-4 py-3 text-right tabular-nums">
+                        {formatExplorerValue(metric, r.valor)}
+                      </td>
+                      {compararInteranual ? (
+                        <>
+                          <td className="px-4 py-3 text-right tabular-nums text-sr-ink/65">
+                            {r.valor_anio_anterior == null
+                              ? "—"
+                              : formatExplorerValue(metric, r.valor_anio_anterior)}
+                          </td>
+                          <td
+                            className={`px-4 py-3 text-right tabular-nums font-medium ${
+                              (r.variacion_pct ?? 0) > 0
+                                ? "text-sr-green"
+                                : (r.variacion_pct ?? 0) < 0
+                                  ? "text-red-600"
+                                  : "text-sr-ink/50"
+                            }`}
+                          >
+                            {r.variacion_pct == null
+                              ? "—"
+                              : `${r.variacion_pct > 0 ? "+" : ""}${r.variacion_pct}%`}
+                          </td>
+                        </>
+                      ) : null}
+                    </tr>
+                  ))
+                )}
+              </tbody>
+            </table>
+          </div>
         </div>
         <ExplorerBars rows={rows} metric={metric} />
       </div>

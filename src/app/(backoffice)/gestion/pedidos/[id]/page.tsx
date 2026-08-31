@@ -154,7 +154,7 @@ export default async function GestionPedidoDetailPage({
       </div>
 
       <div className="mt-8 grid gap-4 lg:grid-cols-[1.2fr_0.8fr]">
-        <section className="rounded-xl border border-black/5 bg-white p-5">
+        <section className="rounded-xl border border-black/5 bg-white p-4 sm:p-5">
           <h2 className="font-display text-lg font-semibold">Ítems</h2>
           <form id="order-qty" action={updateOrderQuantitiesAction}>
             <input type="hidden" name="order_id" value={order.id} />
@@ -205,12 +205,12 @@ export default async function GestionPedidoDetailPage({
                         step={1}
                         defaultValue={item.quantity}
                         required
-                        className="ml-2 w-20 rounded-md border border-black/10 px-2 py-1.5 text-sm font-normal normal-case tracking-normal"
+                        className="ml-2 min-h-11 w-24 rounded-md border border-black/10 px-2 py-1.5 text-sm font-normal normal-case tracking-normal"
                       />
                     </label>
                   )}
                   {!priced && !order.status_is_terminal ? (
-                    <form action={setOrderItemPriceAction} className="flex shrink-0 items-end gap-2">
+                    <form action={setOrderItemPriceAction} className="flex w-full shrink-0 flex-wrap items-end gap-2 sm:w-auto">
                       <input type="hidden" name="order_id" value={order.id} />
                       <input type="hidden" name="item_id" value={item.id} />
                       <label className="text-xs font-semibold uppercase tracking-wider text-sr-ink/45">
@@ -221,10 +221,10 @@ export default async function GestionPedidoDetailPage({
                           min="0.01"
                           step="0.01"
                           required
-                          className="ml-2 w-24 rounded-md border border-black/10 px-2 py-1.5 text-sm font-normal normal-case tracking-normal"
+                          className="ml-2 min-h-11 w-28 rounded-md border border-black/10 px-2 py-1.5 text-sm font-normal normal-case tracking-normal"
                         />
                       </label>
-                      <button type="submit" className="btn-secondary px-3 py-1.5 text-xs">
+                      <button type="submit" className="btn-secondary !min-h-11 px-4 text-sm">
                         Fijar
                       </button>
                     </form>
@@ -287,7 +287,7 @@ export default async function GestionPedidoDetailPage({
                           min={0}
                           step="0.01"
                           defaultValue={suggestedAmt === null ? "" : suggestedAmt}
-                          className="ml-2 w-28 rounded-md border border-black/10 px-2 py-1.5 text-sm font-normal normal-case tracking-normal"
+                          className="ml-2 min-h-11 w-28 rounded-md border border-black/10 px-2 py-1.5 text-sm font-normal normal-case tracking-normal"
                         />
                       </label>
                     </li>

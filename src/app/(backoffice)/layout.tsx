@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { redirect } from "next/navigation";
+import { GestionBottomNav } from "@/components/GestionBottomNav";
 import { signOutCommercial } from "@/lib/commercial/auth-actions";
 import { canViewModule, getModuleViewFlags } from "@/lib/commercial/modules";
 import { isAdminConsoleRole, isStaffRole } from "@/lib/commercial/roles";
@@ -29,23 +30,24 @@ export default async function BackofficeLayout({
     }
     return canViewModule(flags, item.module, session.claims.app_role);
   });
+  const navLinks = nav.map(({ href, label }) => ({ href, label }));
 
   return (
-    <div className="min-h-screen bg-[#eef1ef]">
+    <div className="min-h-screen overflow-x-hidden bg-[#eef1ef]">
       <header className="sticky top-0 z-40 border-b border-black/10 bg-[#0f1f18] text-white">
-        <div className="mx-auto flex min-h-14 max-w-7xl flex-wrap items-center justify-between gap-x-2 gap-y-1 px-4 py-1 sm:px-6 lg:px-8">
+        <div className="mx-auto flex min-h-14 max-w-7xl items-center justify-between gap-2 px-3 py-1 sm:px-6 lg:px-8">
           <div className="flex min-w-0 items-center gap-2 lg:gap-4">
             <Link
               href="/gestion/pedidos"
-              className="inline-flex min-h-11 items-center font-display text-lg font-bold tracking-tight"
+              className="inline-flex min-h-11 shrink-0 items-center font-display text-base font-bold tracking-tight sm:text-lg"
             >
               Sure Rain{" "}
-              <span className="ml-1 font-sans text-xs font-medium uppercase tracking-[0.16em] text-white/50">
+              <span className="ml-1 font-sans text-[10px] font-medium uppercase tracking-[0.16em] text-white/50 sm:text-xs">
                 Gestión
               </span>
             </Link>
             <nav className="hidden items-center gap-1 lg:flex">
-              {nav.map((item) => (
+              {navLinks.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
@@ -56,42 +58,35 @@ export default async function BackofficeLayout({
               ))}
             </nav>
           </div>
-          <div className="flex min-w-0 items-center gap-1 text-sm">
+          <div className="flex min-w-0 items-center gap-0.5 text-sm sm:gap-1">
             <Link
               href="/catalogo"
-              className="inline-flex min-h-11 items-center rounded-md px-3 text-white/70 hover:bg-white/10 hover:text-white"
+              className="inline-flex min-h-11 items-center rounded-md px-2 text-white/70 hover:bg-white/10 hover:text-white sm:px-3"
             >
-              Volver al catálogo
+              <span className="hidden sm:inline">Volver al catálogo</span>
+              <span className="sm:hidden">Catálogo</span>
             </Link>
             <span className="hidden max-w-[12rem] truncate px-2 text-white/70 lg:inline">
               {session.user.email}
             </span>
-            <span className="hidden rounded bg-white/10 px-2 py-0.5 text-xs sm:inline">
+            <span className="hidden rounded bg-white/10 px-2 py-0.5 text-xs md:inline">
               {roleLabel(session.claims.app_role)}
             </span>
             <form action={signOutCommercial}>
               <button
                 type="submit"
-                className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-md px-3 text-white/70 hover:bg-white/10 hover:text-white"
+                className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-md px-2 text-white/70 hover:bg-white/10 hover:text-white sm:px-3"
               >
                 Salir
               </button>
             </form>
           </div>
         </div>
-        <nav className="flex gap-1 border-t border-white/10 px-2 py-1 lg:hidden">
-          {nav.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className="inline-flex min-h-11 flex-1 items-center justify-center rounded-md px-2 text-sm text-white/75 hover:bg-white/10"
-            >
-              {item.label}
-            </Link>
-          ))}
-        </nav>
       </header>
-      <main className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">{children}</main>
+      <main className="mx-auto max-w-7xl px-3 pb-24 pt-6 sm:px-6 sm:pt-8 lg:px-8 lg:pb-8">
+        {children}
+      </main>
+      <GestionBottomNav items={navLinks} />
     </div>
   );
 }
