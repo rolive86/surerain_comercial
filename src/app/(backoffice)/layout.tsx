@@ -1,18 +1,47 @@
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import { GestionBottomNav } from "@/components/GestionBottomNav";
+import {
+  GESTION_NAV_ICONS,
+  GestionSidebarNav,
+} from "@/components/GestionSidebarNav";
 import { signOutCommercial } from "@/lib/commercial/auth-actions";
 import { canViewModule, getModuleViewFlags } from "@/lib/commercial/modules";
-import { isAdminConsoleRole, isStaffRole } from "@/lib/commercial/roles";
+import { homePathForRole, isAdminConsoleRole, isStaffRole } from "@/lib/commercial/roles";
 import { getCommercialSession, roleLabel } from "@/lib/commercial/session";
 
-const NAV = [
-  { href: "/gestion/pedidos", label: "Pedidos", module: "gestion_pedidos" as const },
-  { href: "/gestion/inteligencia", label: "Inteligencia", module: "gestion_clientes" as const },
-  { href: "/gestion/explorador", label: "Explorador", module: "gestion_clientes" as const },
-  { href: "/gestion/clientes", label: "Clientes", module: "gestion_clientes" as const },
-  { href: "/gestion/vendedores", label: "Vendedores", module: "gestion_vendedores" as const },
-  { href: "/gestion/admin", label: "Admin", module: "admin_console" as const },
+type NavDef = {
+  href: string;
+  label: keyof typeof GESTION_NAV_ICONS;
+  module: "gestion_pedidos" | "gestion_clientes" | "gestion_vendedores" | "admin_console" | null;
+  adminOnly?: boolean;
+};
+
+const NAV: NavDef[] = [
+  {
+    href: "/gestion/dashboard",
+    label: "Dashboard",
+    module: null,
+    adminOnly: true,
+  },
+  { href: "/gestion/pedidos", label: "Pedidos", module: "gestion_pedidos" },
+  {
+    href: "/gestion/inteligencia",
+    label: "Inteligencia",
+    module: "gestion_clientes",
+  },
+  {
+    href: "/gestion/explorador",
+    label: "Explorador",
+    module: "gestion_clientes",
+  },
+  { href: "/gestion/clientes", label: "Clientes", module: "gestion_clientes" },
+  {
+    href: "/gestion/vendedores",
+    label: "Vendedores",
+    module: "gestion_vendedores",
+  },
+  { href: "/gestion/admin", label: "Admin", module: "admin_console" },
 ];
 
 export default async function BackofficeLayout({
@@ -23,70 +52,108 @@ export default async function BackofficeLayout({
   if (!isStaffRole(session.claims.app_role)) {
     redirect("/");
   }
-  const flags = await getModuleViewFlags(session.claims.app_role);
+
+  const role = session.claims.app_role;
+  const flags = await getModuleViewFlags(role);
   const nav = NAV.filter((item) => {
-    if (item.module === "admin_console" && !isAdminConsoleRole(session.claims.app_role)) {
+    if (item.adminOnly) return role === "admin";
+    if (item.module === "admin_console" && !isAdminConsoleRole(role)) {
       return false;
     }
-    return canViewModule(flags, item.module, session.claims.app_role);
+    if (!item.module) return false;
+    return canViewModule(flags, item.module, role);
   });
-  const navLinks = nav.map(({ href, label }) => ({ href, label }));
+
+  const sidebarItems = nav.map((item) => ({
+    href: item.href,
+    label: item.label,
+    icon: GESTION_NAV_ICONS[item.label],
+  }));
+  const bottomItems = nav.map(({ href, label }) => ({ href, label }));
+  const homeHref = homePathForRole(role);
 
   return (
-    <div className="min-h-screen overflow-x-hidden bg-[#eef1ef]">
-      <header className="sticky top-0 z-40 border-b border-black/10 bg-[#0f1f18] text-white">
-        <div className="mx-auto flex min-h-14 max-w-7xl items-center justify-between gap-2 px-3 py-1 sm:px-6 lg:px-8">
-          <div className="flex min-w-0 items-center gap-2 lg:gap-4">
-            <Link
-              href="/gestion/pedidos"
-              className="inline-flex min-h-11 shrink-0 items-center font-display text-base font-bold tracking-tight sm:text-lg"
-            >
-              Sure Rain{" "}
-              <span className="ml-1 font-sans text-[10px] font-medium uppercase tracking-[0.16em] text-white/50 sm:text-xs">
-                Gestión
-              </span>
-            </Link>
-            <nav className="hidden items-center gap-1 lg:flex">
-              {navLinks.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className="inline-flex min-h-11 items-center rounded-md px-3 text-sm font-medium text-white/75 transition hover:bg-white/10 hover:text-white"
-                >
-                  {item.label}
-                </Link>
-              ))}
-            </nav>
+    <div className="flex min-h-screen bg-sr-sand text-sr-ink text-sm">
+      <aside className="sticky top-0 hidden h-screen w-[230px] shrink-0 flex-col bg-sr-ink px-4 py-6 lg:flex">
+        <Link href={homeHref} className="mb-[26px] flex items-center gap-2.5 px-2">
+          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-sr-green-light to-sr-green-dark text-[15px] font-bold text-white">
+            SR
           </div>
-          <div className="flex min-w-0 items-center gap-0.5 text-sm sm:gap-1">
+          <div>
+            <div className="font-display text-base font-bold leading-[1.15] text-white">
+              Sure Rain
+            </div>
+            <div className="text-[10.5px] font-semibold tracking-[0.08em] text-sr-green-light">
+              GESTIÓN
+            </div>
+          </div>
+        </Link>
+
+        <GestionSidebarNav items={sidebarItems} />
+
+        <div className="mt-auto px-2">
+          <div className="flex flex-col gap-2 border-t border-[#232f28] pt-4">
             <Link
               href="/catalogo"
-              className="inline-flex min-h-11 items-center rounded-md px-2 text-white/70 hover:bg-white/10 hover:text-white sm:px-3"
+              className="text-[11.5px] font-semibold text-sr-green-light hover:underline"
             >
-              <span className="hidden sm:inline">Volver al catálogo</span>
-              <span className="sm:hidden">Catálogo</span>
+              ← Volver al catálogo
             </Link>
-            <span className="hidden max-w-[12rem] truncate px-2 text-white/70 lg:inline">
+            <div className="break-all text-[11.5px] text-[#8f9993]">
               {session.user.email}
+            </div>
+            <div className="flex items-center justify-between">
+              <span className="rounded-md bg-[#232f28] px-2.5 py-0.5 text-[11px] font-semibold text-white">
+                {roleLabel(role)}
+              </span>
+              <form action={signOutCommercial}>
+                <button
+                  type="submit"
+                  className="text-[11.5px] text-[#8f9993] hover:text-white"
+                >
+                  Salir
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      {/* Mobile top bar — brand + salir (sidebar is desktop-only) */}
+      <div className="flex min-w-0 flex-1 flex-col">
+        <header className="sticky top-0 z-40 flex min-h-14 items-center justify-between gap-2 border-b border-black/10 bg-sr-ink px-3 text-white lg:hidden">
+          <Link
+            href={homeHref}
+            className="inline-flex min-h-11 items-center font-display text-base font-bold"
+          >
+            Sure Rain{" "}
+            <span className="ml-1 font-sans text-[10px] font-medium uppercase tracking-[0.16em] text-sr-green-light">
+              Gestión
             </span>
-            <span className="hidden rounded bg-white/10 px-2 py-0.5 text-xs md:inline">
-              {roleLabel(session.claims.app_role)}
-            </span>
+          </Link>
+          <div className="flex items-center gap-2">
+            <Link
+              href="/catalogo"
+              className="inline-flex min-h-11 items-center px-2 text-[12px] text-white/70"
+            >
+              Catálogo
+            </Link>
             <form action={signOutCommercial}>
               <button
                 type="submit"
-                className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-md px-2 text-white/70 hover:bg-white/10 hover:text-white sm:px-3"
+                className="inline-flex min-h-11 items-center px-2 text-[12px] text-white/70"
               >
                 Salir
               </button>
             </form>
           </div>
+        </header>
+
+        <div className="mx-auto w-full max-w-7xl flex-1 overflow-x-hidden px-3 pb-24 pt-6 sm:px-6 sm:pt-8 lg:max-w-none lg:px-8 lg:pb-8">
+          {children}
         </div>
-      </header>
-      <main className="mx-auto max-w-7xl px-3 pb-24 pt-6 sm:px-6 sm:pt-8 lg:px-8 lg:pb-8">
-        {children}
-      </main>
-      <GestionBottomNav items={navLinks} />
+        <GestionBottomNav items={bottomItems} />
+      </div>
     </div>
   );
 }

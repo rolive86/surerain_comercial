@@ -31,7 +31,7 @@ export default async function DashboardPage() {
   const error = result.error;
 
   return (
-    <main className="flex-1 overflow-x-hidden px-8 py-7">
+    <div>
       <div className="mb-6 flex items-start justify-between">
         <div>
           <div className="mb-1.5 text-[11.5px] font-bold tracking-[0.08em] text-sr-green">
@@ -68,7 +68,7 @@ export default async function DashboardPage() {
       ) : null}
 
       <DashboardBody data={data} />
-    </main>
+    </div>
   );
 }
 

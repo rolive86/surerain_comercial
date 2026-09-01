@@ -22,6 +22,7 @@ export function isCustomerRole(role: string | null | undefined): boolean {
 }
 
 export function homePathForRole(role: string | null | undefined): string {
+  if (role === "admin") return "/gestion/dashboard";
   return isStaffRole(role) ? "/gestion" : "/";
 }
 

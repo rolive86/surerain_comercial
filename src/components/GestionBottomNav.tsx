@@ -14,7 +14,7 @@ export function GestionBottomNav({ items }: { items: GestionNavItem[] }) {
   return (
     <nav
       aria-label="Navegación gestión"
-      className="fixed inset-x-0 bottom-0 z-50 border-t border-black/10 bg-[#0f1f18]/95 text-white backdrop-blur-md lg:hidden"
+      className="fixed inset-x-0 bottom-0 z-50 border-t border-black/10 bg-sr-ink/95 text-white backdrop-blur-md lg:hidden"
       style={{ paddingBottom: "env(safe-area-inset-bottom)" }}
     >
       <ul className="mx-auto flex max-w-7xl items-stretch">
