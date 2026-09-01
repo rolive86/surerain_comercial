@@ -1253,6 +1253,7 @@ export type Database = {
       current_rep_customer_ids: { Args: never; Returns: string[] }
       current_role: { Args: never; Returns: string }
       custom_access_token_hook: { Args: { event: Json }; Returns: Json }
+      dashboard_summary: { Args: never; Returns: Json }
       next_order_number: { Args: never; Returns: string }
       catalog_final_prices: {
         Args: { p_source_ids: string[] }

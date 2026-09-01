@@ -77,7 +77,7 @@ export async function middleware(request: NextRequest) {
 
   // Staff does not land on the customer home (public catalog stays reachable).
   if (user && isStaffRole(role) && path === "/") {
-    return bounce("/gestion");
+    return bounce(role === "admin" ? "/gestion/dashboard" : "/gestion");
   }
 
   if (isBackofficePath(path)) {
