@@ -5,7 +5,7 @@ import { getCommercialSession } from "@/lib/commercial/session";
 import { requireStaffSession } from "@/lib/commercial/backoffice";
 
 export const metadata: Metadata = {
-  title: "Vendedores · Gestión",
+  title: "Vendedores · Comercial",
 };
 
 export default async function GestionVendedoresPage({

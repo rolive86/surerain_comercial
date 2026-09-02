@@ -15,7 +15,7 @@ import { requireStaffSession } from "@/lib/commercial/backoffice";
 import { getCommercialSession } from "@/lib/commercial/session";
 
 export const metadata: Metadata = {
-  title: "Inteligencia · Gestión",
+  title: "Inteligencia · Comercial",
   description: "Clientes a recontactar por temporada vs año anterior.",
 };
 

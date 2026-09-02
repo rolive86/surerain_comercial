@@ -7,7 +7,7 @@ const ROLES = [
   { id: "customer_user", label: "Cliente" },
   { id: "sales_rep", label: "Vendedor" },
   { id: "sales_manager", label: "Gerente" },
-  { id: "operations", label: "Operaciones" },
+  { id: "operations", label: "Comercial" },
   { id: "admin", label: "Admin" },
 ];
 

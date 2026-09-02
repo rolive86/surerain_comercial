@@ -49,7 +49,7 @@ export function roleLabel(role: string | null | undefined): string {
     case "sales_manager":
       return "Gerente comercial";
     case "operations":
-      return "Operaciones";
+      return "Comercial";
     case "admin":
       return "Admin";
     default:

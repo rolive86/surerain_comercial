@@ -84,7 +84,7 @@ export default async function BackofficeLayout({
               Sure Rain
             </div>
             <div className="text-[10.5px] font-semibold tracking-[0.08em] text-sr-green-light">
-              GESTIÓN
+              COMERCIAL
             </div>
           </div>
         </Link>
@@ -128,7 +128,7 @@ export default async function BackofficeLayout({
           >
             Sure Rain{" "}
             <span className="ml-1 font-sans text-[10px] font-medium uppercase tracking-[0.16em] text-sr-green-light">
-              Gestión
+              Comercial
             </span>
           </Link>
           <div className="flex items-center gap-2">

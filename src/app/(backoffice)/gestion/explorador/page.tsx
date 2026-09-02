@@ -16,7 +16,7 @@ import { getCommercialSession } from "@/lib/commercial/session";
 import { ExplorerBars, ExplorerCsvButton } from "@/components/ExplorerWidgets";
 
 export const metadata: Metadata = {
-  title: "Explorador · Gestión",
+  title: "Explorador · Comercial",
   description: "Cruces dinámicos de ventas sobre historial Tango.",
 };
 

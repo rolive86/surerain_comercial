@@ -6,7 +6,7 @@ import {
 } from "@/lib/commercial/backoffice";
 
 export const metadata: Metadata = {
-  title: "Pedidos · Gestión",
+  title: "Pedidos · Comercial",
   description: "Panel de pedidos B2B Sure Rain.",
 };
 

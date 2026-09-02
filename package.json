@@ -30,6 +30,7 @@
     "tango:load-xlsx": "tsx --tsconfig tsconfig.scripts.json scripts/tango/load-xlsx.ts",
     "tango:verify-pricing-rls": "tsx --tsconfig tsconfig.scripts.json scripts/tango/verify-pricing-rls.ts",
     "seed:admin-demo": "tsx --tsconfig tsconfig.scripts.json scripts/seed-admin-demo.ts",
+    "seed:comercial-demo": "tsx --tsconfig tsconfig.scripts.json scripts/seed-comercial-demo.ts",
     "espejo:setup": "tsx --tsconfig tsconfig.scripts.json scripts/espejo/setup.ts",
     "espejo:inspect": "tsx --tsconfig tsconfig.scripts.json scripts/espejo/inspect.ts",
     "espejo:normalize": "tsx --tsconfig tsconfig.scripts.json scripts/espejo/normalize.ts",

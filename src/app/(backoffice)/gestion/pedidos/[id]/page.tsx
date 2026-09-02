@@ -34,7 +34,7 @@ export async function generateMetadata({
   const { id } = await params;
   try {
     const order = await getBackofficeOrderDetail(id);
-    return { title: order ? `${order.order_number} · Gestión` : "Pedido" };
+    return { title: order ? `${order.order_number} · Comercial` : "Pedido" };
   } catch {
     return { title: "Pedido" };
   }

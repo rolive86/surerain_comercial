@@ -111,7 +111,7 @@ async function TangoCatalogView({
     <div className="container-sr py-8 sm:py-12">
       <div className="mb-6 max-w-3xl">
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-sr-green">
-          {staffMode ? "Gestión" : "Pedido"}
+          {staffMode ? "Comercial" : "Pedido"}
         </p>
         <h1 className="mt-2 font-display text-3xl font-bold text-sr-ink sm:text-4xl">
           Catálogo Tango

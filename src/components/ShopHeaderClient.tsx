@@ -104,7 +104,7 @@ export function ShopHeaderClient({
                     href="/gestion"
                     className="inline-flex min-h-11 items-center rounded-md px-3 text-sm font-semibold text-sr-ink/80 hover:bg-sr-mist hover:text-sr-green"
                   >
-                    Gestión
+                    Comercial
                   </Link>
                 ) : null}
                 {isCustomer && visible.carrito !== false ? (
