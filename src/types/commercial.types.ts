@@ -1296,6 +1296,17 @@ export type Database = {
         Args: { p_empresa?: string }
         Returns: Json
       }
+      dashboard_comercial: {
+        Args: {
+          p_empresa?: string
+          p_moneda?: string
+          p_fecha?: string
+          p_vendedor?: string
+          p_familia?: string
+          p_periodo?: string
+        }
+        Returns: Json
+      }
       next_order_number: { Args: never; Returns: string }
       catalog_final_prices: {
         Args: { p_source_ids: string[] }

@@ -207,59 +207,35 @@ export async function fetchComercialDashboard(
   error: string | null;
 }> {
   const supabase = await createCommercialServerClient();
-  const empresa = filters.empresa;
-  const moneda = filters.moneda;
-  const fecha = filters.fecha;
-  const vendedor = filters.vendedor || undefined;
-  const familia = filters.familia || undefined;
-  const periodo = filters.periodoRanking ?? "mes";
+  const { data, error } = await supabase.rpc("dashboard_comercial", {
+    p_empresa: filters.empresa,
+    p_moneda: filters.moneda,
+    p_fecha: filters.fecha,
+    p_vendedor: filters.vendedor || undefined,
+    p_familia: filters.familia || undefined,
+    p_periodo: filters.periodoRanking ?? "mes",
+  });
 
-  const [kpisRes, matrizRes, rankingRes, empRes, dimRes] = await Promise.all([
-    supabase.rpc("dashboard_kpis", {
-      p_empresa: empresa,
-      p_moneda: moneda,
-      p_fecha: fecha,
-      p_vendedor: vendedor,
-      p_familia: familia,
-    }),
-    supabase.rpc("dashboard_matriz", {
-      p_empresa: empresa,
-      p_moneda: moneda,
-      p_vendedor: vendedor,
-      p_familia: familia,
-    }),
-    supabase.rpc("dashboard_ranking", {
-      p_empresa: empresa,
-      p_periodo: periodo,
-      p_fecha: fecha,
-      p_moneda: moneda,
-      p_familia: familia,
-    }),
-    supabase.rpc("dashboard_por_empresa", {
-      p_fecha: fecha,
-      p_moneda: moneda,
-      p_vendedor: vendedor,
-      p_familia: familia,
-    }),
-    supabase.rpc("dashboard_dimensiones", { p_empresa: empresa }),
-  ]);
+  if (error) {
+    return {
+      kpis: null,
+      matriz: null,
+      ranking: [],
+      empresas: [],
+      dimensiones: { vendedores: [], familias: [] },
+      error: error.message,
+    };
+  }
 
-  const err =
-    kpisRes.error?.message ||
-    matrizRes.error?.message ||
-    rankingRes.error?.message ||
-    empRes.error?.message ||
-    dimRes.error?.message ||
-    null;
-
+  const root = asObj(data);
   return {
-    kpis: kpisRes.data ? parseKpis(kpisRes.data) : null,
-    matriz: matrizRes.data ? parseMatriz(matrizRes.data) : null,
-    ranking: rankingRes.data ? parseRanking(rankingRes.data) : [],
-    empresas: empRes.data ? parseEmpresas(empRes.data) : [],
-    dimensiones: dimRes.data
-      ? parseDimensiones(dimRes.data)
+    kpis: root.kpis ? parseKpis(root.kpis) : null,
+    matriz: root.matriz ? parseMatriz(root.matriz) : null,
+    ranking: root.ranking ? parseRanking(root.ranking) : [],
+    empresas: root.empresas ? parseEmpresas(root.empresas) : [],
+    dimensiones: root.dimensiones
+      ? parseDimensiones(root.dimensiones)
       : { vendedores: [], familias: [] },
-    error: err,
+    error: null,
   };
 }
