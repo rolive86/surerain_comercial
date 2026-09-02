@@ -17,7 +17,9 @@ export function GestionSidebarNav({ items }: { items: GestionSidebarItem[] }) {
     <nav className="mt-1.5 flex flex-col gap-0.5">
       {items.map((item) => {
         const active =
-          pathname === item.href || pathname.startsWith(`${item.href}/`);
+          item.href === "/gestion"
+            ? pathname === "/gestion"
+            : pathname === item.href || pathname.startsWith(`${item.href}/`);
         return (
           <Link
             key={item.href}
@@ -87,6 +89,31 @@ export const GESTION_NAV_ICONS: Record<string, ReactNode> = {
   Admin: (
     <svg className={iconClass} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
       <path d="M12 2l3 6 6.5 1-4.7 4.6L18 20l-6-3.5L6 20l1.2-6.4L2.5 9l6.5-1z" />
+    </svg>
+  ),
+  Home: (
+    <svg className={iconClass} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+      <path d="M3 10.5 12 3l9 7.5" />
+      <path d="M5 9.5V21h14V9.5" />
+    </svg>
+  ),
+  Stock: (
+    <svg className={iconClass} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+      <path d="M4 7h16v12H4z" />
+      <path d="M8 7V5h8v2" />
+      <path d="M8 12h8" />
+    </svg>
+  ),
+  Pulseada: (
+    <svg className={iconClass} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+      <path d="M3 12h4l2-5 4 10 2-5h6" />
+    </svg>
+  ),
+  Facturas: (
+    <svg className={iconClass} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+      <path d="M7 3h8l4 4v14H7z" />
+      <path d="M15 3v4h4" />
+      <path d="M10 12h6M10 16h6" />
     </svg>
   ),
 };

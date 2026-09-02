@@ -1114,6 +1114,90 @@ export type Database = {
         }
         Relationships: []
       }
+      centros_costo: {
+        Row: {
+          id: string
+          nombre: string
+          activo: boolean
+        }
+        Insert: {
+          id?: string
+          nombre: string
+          activo?: boolean
+        }
+        Update: {
+          id?: string
+          nombre?: string
+          activo?: boolean
+        }
+        Relationships: []
+      }
+      motivos_factura: {
+        Row: {
+          id: string
+          nombre: string
+          activo: boolean
+        }
+        Insert: {
+          id?: string
+          nombre: string
+          activo?: boolean
+        }
+        Update: {
+          id?: string
+          nombre?: string
+          activo?: boolean
+        }
+        Relationships: []
+      }
+      facturas: {
+        Row: {
+          id: string
+          uploaded_by: string | null
+          cod_vendedor: string | null
+          tipo: string | null
+          centro_costo_id: string | null
+          motivo_id: string | null
+          image_path: string
+          monto: number | null
+          fecha: string | null
+          cuit: string | null
+          ocr_raw: Json | null
+          estado: string
+          created_at: string
+        }
+        Insert: {
+          id?: string
+          uploaded_by?: string | null
+          cod_vendedor?: string | null
+          tipo?: string | null
+          centro_costo_id?: string | null
+          motivo_id?: string | null
+          image_path: string
+          monto?: number | null
+          fecha?: string | null
+          cuit?: string | null
+          ocr_raw?: Json | null
+          estado?: string
+          created_at?: string
+        }
+        Update: {
+          id?: string
+          uploaded_by?: string | null
+          cod_vendedor?: string | null
+          tipo?: string | null
+          centro_costo_id?: string | null
+          motivo_id?: string | null
+          image_path?: string
+          monto?: number | null
+          fecha?: string | null
+          cuit?: string | null
+          ocr_raw?: Json | null
+          estado?: string
+          created_at?: string
+        }
+        Relationships: []
+      }
       sales_reps: {
         Row: {
           active: boolean
@@ -1254,6 +1338,10 @@ export type Database = {
       current_role: { Args: never; Returns: string }
       custom_access_token_hook: { Args: { event: Json }; Returns: Json }
       dashboard_summary: { Args: never; Returns: Json }
+      vendedor_home_kpis: {
+        Args: { p_fecha?: string }
+        Returns: Json
+      }
       dashboard_kpis: {
         Args: {
           p_empresa?: string

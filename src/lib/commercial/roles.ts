@@ -26,7 +26,13 @@ export function homePathForRole(role: string | null | undefined): string {
   if (role === "sales_manager" || role === "operations") {
     return "/gestion/comercial";
   }
+  if (role === "sales_rep") return "/gestion";
   return isStaffRole(role) ? "/gestion" : "/";
+}
+
+/** Nav móvil de 4 pestañas exclusivo del vendedor (PWA). */
+export function isVendedorPwaRole(role: string | null | undefined): boolean {
+  return role === "sales_rep";
 }
 
 export function isBackofficePath(path: string): boolean {

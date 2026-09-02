@@ -314,6 +314,16 @@ export async function getTangoProductByCode(
   };
 }
 
+/**
+ * Lista plana del catálogo Tango (sin colapsar variantes) para Stock PWA.
+ * Server-side over all matching rows (sin tope artificial de página).
+ */
+export async function listTangoStockRows(
+  filters: TangoProductFilters = {},
+): Promise<TangoProductRow[]> {
+  return fetchAllMatchingRows(filters);
+}
+
 export async function getTangoProductsByCodes(
   codes: string[],
 ): Promise<ProductListItem[]> {

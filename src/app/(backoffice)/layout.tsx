@@ -1,13 +1,21 @@
 import Link from "next/link";
 import { redirect } from "next/navigation";
-import { GestionBottomNav } from "@/components/GestionBottomNav";
+import {
+  GestionBottomNav,
+  VENDEDOR_TAB_ICONS,
+} from "@/components/GestionBottomNav";
 import {
   GESTION_NAV_ICONS,
   GestionSidebarNav,
 } from "@/components/GestionSidebarNav";
 import { signOutCommercial } from "@/lib/commercial/auth-actions";
 import { canViewModule, getModuleViewFlags } from "@/lib/commercial/modules";
-import { homePathForRole, isAdminConsoleRole, isStaffRole } from "@/lib/commercial/roles";
+import {
+  homePathForRole,
+  isAdminConsoleRole,
+  isStaffRole,
+  isVendedorPwaRole,
+} from "@/lib/commercial/roles";
 import { getCommercialSession, roleLabel } from "@/lib/commercial/session";
 
 type NavDef = {
@@ -19,7 +27,7 @@ type NavDef = {
   comercialBi?: boolean;
 };
 
-const NAV: NavDef[] = [
+const STAFF_NAV: NavDef[] = [
   {
     href: "/gestion/dashboard",
     label: "Dashboard",
@@ -52,6 +60,13 @@ const NAV: NavDef[] = [
   { href: "/gestion/admin", label: "Admin", module: "admin_console" },
 ];
 
+const VENDEDOR_NAV: NavDef[] = [
+  { href: "/gestion", label: "Home", module: null },
+  { href: "/gestion/stock", label: "Stock", module: null },
+  { href: "/gestion/pulseada", label: "Pulseada", module: null },
+  { href: "/gestion/facturas", label: "Facturas", module: null },
+];
+
 export default async function BackofficeLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
@@ -63,28 +78,36 @@ export default async function BackofficeLayout({
 
   const role = session.claims.app_role;
   const flags = await getModuleViewFlags(role);
-  const nav = NAV.filter((item) => {
-    if (item.adminOnly) return role === "admin";
-    if (item.comercialBi) {
-      return (
-        role === "admin" ||
-        role === "sales_manager" ||
-        role === "operations"
-      );
-    }
-    if (item.module === "admin_console" && !isAdminConsoleRole(role)) {
-      return false;
-    }
-    if (!item.module) return false;
-    return canViewModule(flags, item.module, role);
-  });
+  const vendedorPwa = isVendedorPwaRole(role);
+
+  const nav = vendedorPwa
+    ? VENDEDOR_NAV
+    : STAFF_NAV.filter((item) => {
+        if (item.adminOnly) return role === "admin";
+        if (item.comercialBi) {
+          return (
+            role === "admin" ||
+            role === "sales_manager" ||
+            role === "operations"
+          );
+        }
+        if (item.module === "admin_console" && !isAdminConsoleRole(role)) {
+          return false;
+        }
+        if (!item.module) return false;
+        return canViewModule(flags, item.module, role);
+      });
 
   const sidebarItems = nav.map((item) => ({
     href: item.href,
     label: item.label,
     icon: GESTION_NAV_ICONS[item.label],
   }));
-  const bottomItems = nav.map(({ href, label }) => ({ href, label }));
+  const bottomItems = nav.map(({ href, label }) => ({
+    href,
+    label,
+    icon: vendedorPwa ? VENDEDOR_TAB_ICONS[label] : undefined,
+  }));
   const homeHref = homePathForRole(role);
 
   return (
@@ -99,7 +122,7 @@ export default async function BackofficeLayout({
               Sure Rain
             </div>
             <div className="text-[10.5px] font-semibold tracking-[0.08em] text-sr-green-light">
-              COMERCIAL
+              {vendedorPwa ? "VENDEDOR" : "COMERCIAL"}
             </div>
           </div>
         </Link>
@@ -108,12 +131,21 @@ export default async function BackofficeLayout({
 
         <div className="mt-auto px-2">
           <div className="flex flex-col gap-2 border-t border-[#232f28] pt-4">
-            <Link
-              href="/catalogo"
-              className="text-[11.5px] font-semibold text-sr-green-light hover:underline"
-            >
-              ← Volver al catálogo
-            </Link>
+            {!vendedorPwa ? (
+              <Link
+                href="/catalogo"
+                className="text-[11.5px] font-semibold text-sr-green-light hover:underline"
+              >
+                ← Volver al catálogo
+              </Link>
+            ) : (
+              <Link
+                href="/gestion/pedidos"
+                className="text-[11.5px] font-semibold text-sr-green-light hover:underline"
+              >
+                Pedidos y clientes →
+              </Link>
+            )}
             <div className="break-all text-[11.5px] text-[#8f9993]">
               {session.user.email}
             </div>
@@ -134,7 +166,6 @@ export default async function BackofficeLayout({
         </div>
       </aside>
 
-      {/* Mobile top bar — brand + salir (sidebar is desktop-only) */}
       <div className="flex min-w-0 flex-1 flex-col">
         <header className="sticky top-0 z-40 flex min-h-14 items-center justify-between gap-2 border-b border-black/10 bg-sr-ink px-3 text-white lg:hidden">
           <Link
@@ -143,16 +174,18 @@ export default async function BackofficeLayout({
           >
             Sure Rain{" "}
             <span className="ml-1 font-sans text-[10px] font-medium uppercase tracking-[0.16em] text-sr-green-light">
-              Comercial
+              {vendedorPwa ? "Vendedor" : "Comercial"}
             </span>
           </Link>
           <div className="flex items-center gap-2">
-            <Link
-              href="/catalogo"
-              className="inline-flex min-h-11 items-center px-2 text-[12px] text-white/70"
-            >
-              Catálogo
-            </Link>
+            {!vendedorPwa ? (
+              <Link
+                href="/catalogo"
+                className="inline-flex min-h-11 items-center px-2 text-[12px] text-white/70"
+              >
+                Catálogo
+              </Link>
+            ) : null}
             <form action={signOutCommercial}>
               <button
                 type="submit"
