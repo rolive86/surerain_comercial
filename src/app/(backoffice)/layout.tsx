@@ -15,6 +15,8 @@ type NavDef = {
   label: keyof typeof GESTION_NAV_ICONS;
   module: "gestion_pedidos" | "gestion_clientes" | "gestion_vendedores" | "admin_console" | null;
   adminOnly?: boolean;
+  /** BI comercial: sales_manager / operations / admin */
+  comercialBi?: boolean;
 };
 
 const NAV: NavDef[] = [
@@ -23,6 +25,12 @@ const NAV: NavDef[] = [
     label: "Dashboard",
     module: null,
     adminOnly: true,
+  },
+  {
+    href: "/gestion/comercial",
+    label: "Comercial",
+    module: null,
+    comercialBi: true,
   },
   { href: "/gestion/pedidos", label: "Pedidos", module: "gestion_pedidos" },
   {
@@ -57,6 +65,13 @@ export default async function BackofficeLayout({
   const flags = await getModuleViewFlags(role);
   const nav = NAV.filter((item) => {
     if (item.adminOnly) return role === "admin";
+    if (item.comercialBi) {
+      return (
+        role === "admin" ||
+        role === "sales_manager" ||
+        role === "operations"
+      );
+    }
     if (item.module === "admin_console" && !isAdminConsoleRole(role)) {
       return false;
     }

@@ -8,6 +8,9 @@ export default async function GestionIndexPage() {
   if (role === "admin") {
     redirect("/gestion/dashboard");
   }
+  if (role === "sales_manager" || role === "operations") {
+    redirect("/gestion/comercial");
+  }
   if (isStaffRole(role)) {
     redirect("/gestion/pedidos");
   }

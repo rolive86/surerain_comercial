@@ -1254,6 +1254,48 @@ export type Database = {
       current_role: { Args: never; Returns: string }
       custom_access_token_hook: { Args: { event: Json }; Returns: Json }
       dashboard_summary: { Args: never; Returns: Json }
+      dashboard_kpis: {
+        Args: {
+          p_empresa?: string
+          p_moneda?: string
+          p_fecha?: string
+          p_vendedor?: string
+          p_familia?: string
+        }
+        Returns: Json
+      }
+      dashboard_matriz: {
+        Args: {
+          p_empresa?: string
+          p_moneda?: string
+          p_vendedor?: string
+          p_familia?: string
+        }
+        Returns: Json
+      }
+      dashboard_ranking: {
+        Args: {
+          p_empresa?: string
+          p_periodo?: string
+          p_fecha?: string
+          p_moneda?: string
+          p_familia?: string
+        }
+        Returns: Json
+      }
+      dashboard_por_empresa: {
+        Args: {
+          p_fecha?: string
+          p_moneda?: string
+          p_vendedor?: string
+          p_familia?: string
+        }
+        Returns: Json
+      }
+      dashboard_dimensiones: {
+        Args: { p_empresa?: string }
+        Returns: Json
+      }
       next_order_number: { Args: never; Returns: string }
       catalog_final_prices: {
         Args: { p_source_ids: string[] }
