@@ -88,7 +88,7 @@ async function main() {
 
   // Lista
   await gotoSettle(page, "/gestion/rendicion");
-  await page.waitForSelector("text=Rendición", { timeout: 30_000 });
+  await page.getByRole("heading", { name: "Rendición" }).waitFor({ timeout: 30_000 });
   await shot(page, "rendicion-lista.png");
 
   // Subir
@@ -105,7 +105,7 @@ async function main() {
       .waitFor({ timeout: 90_000 })
       .catch(() => undefined);
     // Esperar a que deje de decir "Leyendo"
-    for (let i = 0; i < 40; i++) {
+    for (let i = 0; i < 60; i++) {
       const txt = await page.getByTestId("ocr-metodo-chip").textContent();
       if (txt && !/Leyendo/i.test(txt)) break;
       await page.waitForTimeout(1000);
@@ -126,7 +126,7 @@ async function main() {
 
   // Stock compacto
   await gotoSettle(page, "/gestion/stock");
-  await page.waitForSelector("text=Stock", { timeout: 30_000 });
+  await page.getByRole("heading", { name: "Stock" }).waitFor({ timeout: 30_000 });
   await shot(page, "stock-compacto.png");
 
   await browser.close();
