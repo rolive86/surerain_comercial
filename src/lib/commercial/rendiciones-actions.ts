@@ -12,6 +12,8 @@ export type SaveRendicionInput = {
   tipoComprobante: string | null;
   nroComprobante: string | null;
   cuitEmisor: string | null;
+  moneda?: string | null;
+  caiCae?: string | null;
   conceptoId: string;
   observaciones: string | null;
   iva?: Array<{ cod_alicuota: string | null; importe: number | null }> | null;
@@ -40,6 +42,8 @@ export async function saveRendicionAction(
       tipo_comprobante: input.tipoComprobante,
       nro_comprobante: input.nroComprobante,
       cuit_emisor: input.cuitEmisor,
+      moneda: input.moneda ?? "PES",
+      cai_cae: input.caiCae ?? null,
       concepto_id: input.conceptoId,
       observaciones: input.observaciones,
       iva: (input.iva ?? []).map((row) => ({
