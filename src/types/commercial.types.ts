@@ -1342,6 +1342,9 @@ export type Database = {
         Args: { p_fecha?: string }
         Returns: Json
       }
+      rendicion_list_conceptos: { Args: never; Returns: Json }
+      rendicion_list_mis: { Args: { p_limit?: number }; Returns: Json }
+      rendicion_save: { Args: { p: Json }; Returns: string }
       dashboard_kpis: {
         Args: {
           p_empresa?: string

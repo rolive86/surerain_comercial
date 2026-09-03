@@ -96,41 +96,36 @@ export function StockList({ rows }: { rows: StockListRow[] }) {
       {rows.map((row) => {
         const name = row.descripcion?.trim() || row.cod_articulo;
         const qty = row.stock_qty;
+        const hasPhoto = Boolean(row.image_url);
         return (
-          <li key={row.cod_articulo} className="flex items-center gap-3 px-3 py-3">
-            <div className="relative h-14 w-14 shrink-0 overflow-hidden rounded-lg bg-sr-mist">
-              {row.image_url ? (
+          <li
+            key={row.cod_articulo}
+            className={`flex items-center gap-2.5 px-3 ${hasPhoto ? "py-1.5" : "py-1"}`}
+          >
+            {hasPhoto ? (
+              <div className="relative h-9 w-9 shrink-0 overflow-hidden rounded-md bg-sr-mist">
                 <Image
-                  src={row.image_url}
+                  src={row.image_url!}
                   alt=""
                   fill
                   className="object-cover"
-                  sizes="56px"
+                  sizes="36px"
                   unoptimized
                 />
-              ) : (
-                <div className="flex h-full w-full items-center justify-center text-[10px] font-semibold text-sr-ink/35">
-                  Sin foto
-                </div>
-              )}
-            </div>
-            <div className="min-w-0 flex-1">
-              <p className="truncate text-sm font-semibold text-sr-ink">{name}</p>
-              <p className="truncate font-mono text-[11px] text-sr-ink/50">
+              </div>
+            ) : null}
+            <div className="min-w-0 flex-1 leading-tight">
+              <p className="truncate text-[13px] font-semibold text-sr-ink">
+                {name}
+              </p>
+              <p className="truncate font-mono text-[10px] text-sr-ink/45">
                 {row.cod_articulo}
-              </p>
-              {row.familia ? (
-                <p className="truncate text-[11px] text-sr-ink/40">{row.familia}</p>
-              ) : null}
-            </div>
-            <div className="shrink-0 text-right">
-              <p className="font-display text-lg font-bold tabular-nums text-sr-green">
-                {qty == null ? "—" : qty.toLocaleString("es-AR")}
-              </p>
-              <p className="text-[10px] uppercase tracking-wide text-sr-ink/40">
-                stock
+                {row.familia ? ` · ${row.familia}` : ""}
               </p>
             </div>
+            <p className="shrink-0 font-display text-base font-bold tabular-nums text-sr-green">
+              {qty == null ? "—" : qty.toLocaleString("es-AR")}
+            </p>
           </li>
         );
       })}

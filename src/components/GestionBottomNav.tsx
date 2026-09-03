@@ -31,7 +31,7 @@ export const VENDEDOR_TAB_ICONS: Record<string, ReactNode> = {
       <path d="M3 12h4l2-5 4 10 2-5h6" />
     </svg>
   ),
-  Facturas: (
+  Rendición: (
     <svg className={iconClass} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
       <path d="M7 3h8l4 4v14H7z" />
       <path d="M15 3v4h4" />

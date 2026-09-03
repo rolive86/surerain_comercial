@@ -64,7 +64,7 @@ const VENDEDOR_NAV: NavDef[] = [
   { href: "/gestion", label: "Home", module: null },
   { href: "/gestion/stock", label: "Stock", module: null },
   { href: "/gestion/pulseada", label: "Pulseada", module: null },
-  { href: "/gestion/facturas", label: "Facturas", module: null },
+  { href: "/gestion/rendicion", label: "Rendición", module: null },
 ];
 
 export default async function BackofficeLayout({
