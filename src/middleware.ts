@@ -5,6 +5,9 @@ import {
   isBackofficePath,
   isCustomerPortalPath,
   isStaffRole,
+  isVendedorAppContext,
+  VENDEDOR_APP_COOKIE,
+  VENDEDOR_APP_PARAM,
 } from "@/lib/commercial/roles";
 
 function getCommercialEnv() {
@@ -35,6 +38,24 @@ function redirectWithCookies(
   const response = NextResponse.redirect(url);
   supabaseResponse.cookies.getAll().forEach((cookie) => {
     response.cookies.set(cookie.name, cookie.value);
+  });
+  return response;
+}
+
+function readVendedorApp(request: NextRequest): boolean {
+  const fromQuery = request.nextUrl.searchParams.get("app");
+  const fromCookie = request.cookies.get(VENDEDOR_APP_COOKIE)?.value;
+  return (
+    isVendedorAppContext(fromQuery) || isVendedorAppContext(fromCookie)
+  );
+}
+
+function withVendedorCookie(response: NextResponse): NextResponse {
+  response.cookies.set(VENDEDOR_APP_COOKIE, VENDEDOR_APP_PARAM, {
+    path: "/",
+    maxAge: 60 * 60 * 24 * 400,
+    sameSite: "lax",
+    secure: true,
   });
   return response;
 }
@@ -75,6 +96,15 @@ export async function middleware(request: NextRequest) {
   const bounce = (pathname: string, search?: Record<string, string>) =>
     redirectWithCookies(request, supabaseResponse, pathname, search);
 
+  const vendedorApp = readVendedorApp(request);
+  // Persist APK context when the TWA declares ?app=vendedor (or cookie already set).
+  if (
+    isVendedorAppContext(request.nextUrl.searchParams.get("app")) ||
+    vendedorApp
+  ) {
+    withVendedorCookie(supabaseResponse);
+  }
+
   // Staff does not land on the customer home (public catalog stays reachable).
   if (user && isStaffRole(role) && path === "/") {
     return bounce(role === "admin" ? "/gestion/dashboard" : "/gestion");
@@ -82,7 +112,11 @@ export async function middleware(request: NextRequest) {
 
   if (isBackofficePath(path)) {
     if (!user) {
-      return bounce("/login", { next: path });
+      const search: Record<string, string> = { next: path };
+      if (vendedorApp) search.app = VENDEDOR_APP_PARAM;
+      const res = bounce("/login", search);
+      if (vendedorApp) withVendedorCookie(res);
+      return res;
     }
     if (!isStaffRole(role)) {
       return bounce("/");

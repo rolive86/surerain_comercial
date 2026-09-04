@@ -1,8 +1,8 @@
 import { redirect } from "next/navigation";
-import { ShopFooter, ShopHeader } from "@/components/ShopHeader";
 import { homePathForRole } from "@/lib/commercial/roles";
 import { getCommercialSession } from "@/lib/commercial/session";
 
+/** Auth shell mínimo: sin chrome de catálogo (el login elige portal vs vendedor). */
 export default async function AuthLayout({
   children,
 }: Readonly<{
@@ -13,11 +13,5 @@ export default async function AuthLayout({
     redirect(homePathForRole(session.claims.app_role));
   }
 
-  return (
-    <>
-      <ShopHeader />
-      <main className="min-h-[70vh]">{children}</main>
-      <ShopFooter />
-    </>
-  );
+  return children;
 }

@@ -35,6 +35,16 @@ export function isVendedorPwaRole(role: string | null | undefined): boolean {
   return role === "sales_rep";
 }
 
+/** Contexto explícito de la APK Android Vendedor (`?app=vendedor` / cookie). */
+export const VENDEDOR_APP_PARAM = "vendedor";
+export const VENDEDOR_APP_COOKIE = "sr_app";
+
+export function isVendedorAppContext(
+  app: string | null | undefined,
+): boolean {
+  return app?.trim() === VENDEDOR_APP_PARAM;
+}
+
 export function isBackofficePath(path: string): boolean {
   return path === "/gestion" || path.startsWith("/gestion/");
 }

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 import {
   GestionBottomNav,
@@ -8,13 +9,17 @@ import {
   GESTION_NAV_ICONS,
   GestionSidebarNav,
 } from "@/components/GestionSidebarNav";
+import { VendedorLiveSync } from "@/components/vendedor/VendedorLiveSync";
 import { signOutCommercial } from "@/lib/commercial/auth-actions";
 import { canViewModule, getModuleViewFlags } from "@/lib/commercial/modules";
 import {
   homePathForRole,
   isAdminConsoleRole,
   isStaffRole,
+  isVendedorAppContext,
   isVendedorPwaRole,
+  VENDEDOR_APP_COOKIE,
+  VENDEDOR_APP_PARAM,
 } from "@/lib/commercial/roles";
 import { getCommercialSession, roleLabel } from "@/lib/commercial/session";
 
@@ -71,7 +76,15 @@ export default async function BackofficeLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   const session = await getCommercialSession();
-  if (!session) redirect("/login?next=/gestion");
+  if (!session) {
+    const jar = await cookies();
+    const vendedor = isVendedorAppContext(jar.get(VENDEDOR_APP_COOKIE)?.value);
+    redirect(
+      vendedor
+        ? `/login?next=/gestion&app=${VENDEDOR_APP_PARAM}`
+        : "/login?next=/gestion",
+    );
+  }
   if (!isStaffRole(session.claims.app_role)) {
     redirect("/");
   }
@@ -112,6 +125,7 @@ export default async function BackofficeLayout({
 
   return (
     <div className="flex min-h-screen bg-sr-sand text-sr-ink text-sm">
+      {vendedorPwa ? <VendedorLiveSync /> : null}
       <aside className="sticky top-0 hidden h-screen w-[230px] shrink-0 flex-col bg-sr-ink px-4 py-6 lg:flex">
         <Link href={homeHref} className="mb-[26px] flex items-center gap-2.5 px-2">
           <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-sr-green-light to-sr-green-dark text-[15px] font-bold text-white">
