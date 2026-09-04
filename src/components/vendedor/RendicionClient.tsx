@@ -1,7 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { useState, useTransition } from "react";
+import { useRef, useState, useTransition } from "react";
 import { createCommercialBrowserClient } from "@/lib/supabase/commercial/client";
 import { saveRendicionAction } from "@/lib/commercial/rendiciones-actions";
 import type { ConceptoRendicion } from "@/lib/commercial/rendiciones";
@@ -13,6 +13,15 @@ import type {
 } from "@/lib/commercial/ocr/types";
 
 type Step = "list" | "capture" | "review" | "meta";
+
+/** Bajo el maxDuration=60 del API; margen para que el abort llegue antes del corte del servidor. */
+const OCR_TIMEOUT_MS = 40_000;
+
+const OCR_TIMEOUT_MSG =
+  "No pudimos leer automáticamente el comprobante. Podés intentar nuevamente o cargar los datos manualmente.";
+const OCR_OFFLINE_MSG =
+  "Sin conexión. Revisá Internet e intentá de nuevo, o cargá los datos a mano.";
+const OCR_HTTP_MSG = "No se pudo contactar el lector de comprobantes. Probá de nuevo o cargá a mano.";
 
 type OcrResult = {
   metodo: OcrMetodo;
@@ -92,12 +101,17 @@ export function RendicionClient({
   const [cuit, setCuit] = useState("");
   const [conceptoId, setConceptoId] = useState(conceptos[0]?.id ?? "");
   const [observaciones, setObservaciones] = useState("");
+  const ocrAbortRef = useRef<AbortController | null>(null);
+  const saveLockRef = useRef(false);
 
   function markEdited(key: string) {
     setEdited((prev) => new Set(prev).add(key));
   }
 
   function resetFlow() {
+    ocrAbortRef.current?.abort();
+    ocrAbortRef.current = null;
+    saveLockRef.current = false;
     setStep("list");
     setError(null);
     setPreviewUrl(null);
@@ -115,48 +129,125 @@ export function RendicionClient({
     setOcrPending(false);
   }
 
-  async function onFileChosen(f: File | null) {
-    if (!f) return;
+  function applyOcrFields(data: OcrResult) {
+    setOcr(data);
+    setTotal(data.total != null ? String(data.total) : "");
+    setFecha(data.fecha_emision ?? "");
+    setTipoComp(data.tipo_comprobante ?? "");
+    setNroComp(data.nro_comprobante ?? "");
+    setCuit(data.cuit ?? "");
+  }
+
+  function clearOcrFields(notes: string) {
+    applyOcrFields({
+      metodo: "none",
+      total: null,
+      fecha_emision: null,
+      tipo_comprobante: null,
+      nro_comprobante: null,
+      cuit: null,
+      sources: {},
+      notes,
+      ocr_available: false,
+    });
+  }
+
+  async function runOcr(f: File) {
+    ocrAbortRef.current?.abort();
+    const ac = new AbortController();
+    ocrAbortRef.current = ac;
+    let timedOut = false;
+    const timer = window.setTimeout(() => {
+      timedOut = true;
+      ac.abort();
+    }, OCR_TIMEOUT_MS);
+
     setError(null);
-    setFile(f);
-    setPreviewUrl(URL.createObjectURL(f));
-    setStep("review");
     setOcrPending(true);
     setEdited(new Set());
 
     const fd = new FormData();
     fd.set("file", f);
     try {
-      const res = await fetch("/api/rendicion/ocr", { method: "POST", body: fd });
-      const data = (await res.json()) as OcrResult & { error?: string };
-      if (!res.ok) throw new Error(data.error || "OCR falló");
-      setOcr(data);
-      setTotal(data.total != null ? String(data.total) : "");
-      setFecha(data.fecha_emision ?? "");
-      setTipoComp(data.tipo_comprobante ?? "");
-      setNroComp(data.nro_comprobante ?? "");
-      setCuit(data.cuit ?? "");
-    } catch (e) {
-      setOcr({
-        metodo: "none",
-        total: null,
-        fecha_emision: null,
-        tipo_comprobante: null,
-        nro_comprobante: null,
-        cuit: null,
-        sources: {},
-        notes: e instanceof Error ? e.message : "OCR no disponible",
-        ocr_available: false,
+      if (!navigator.onLine) {
+        throw new Error(OCR_OFFLINE_MSG);
+      }
+      const res = await fetch("/api/rendicion/ocr", {
+        method: "POST",
+        body: fd,
+        signal: ac.signal,
       });
-      setError(e instanceof Error ? e.message : "OCR no disponible");
+      let data: OcrResult & { error?: string };
+      try {
+        data = (await res.json()) as OcrResult & { error?: string };
+      } catch {
+        throw new Error(OCR_HTTP_MSG);
+      }
+      if (!res.ok) {
+        throw new Error(data.error || OCR_HTTP_MSG);
+      }
+      applyOcrFields(data);
+      if (
+        data.metodo === "none" &&
+        data.total == null &&
+        !data.fecha_emision &&
+        !data.cuit
+      ) {
+        setError(
+          data.notes ||
+            "No se detectaron datos. Completá a mano o probá otra imagen.",
+        );
+      } else {
+        setError(null);
+      }
+    } catch (e) {
+      const aborted = ac.signal.aborted;
+      let message: string;
+      if (timedOut) {
+        message = OCR_TIMEOUT_MSG;
+      } else if (!navigator.onLine) {
+        message = OCR_OFFLINE_MSG;
+      } else if (aborted) {
+        // Reemplazado por otro OCR / cancelación de flujo.
+        return;
+      } else if (e instanceof TypeError) {
+        message = OCR_OFFLINE_MSG;
+      } else if (e instanceof Error && e.message) {
+        message = e.message;
+      } else {
+        message = OCR_HTTP_MSG;
+      }
+      clearOcrFields(message);
+      setError(message);
     } finally {
-      setOcrPending(false);
+      window.clearTimeout(timer);
+      if (ocrAbortRef.current === ac) {
+        ocrAbortRef.current = null;
+        setOcrPending(false);
+      }
     }
+  }
+
+  async function onFileChosen(f: File | null) {
+    if (!f) return;
+    setFile(f);
+    setPreviewUrl(URL.createObjectURL(f));
+    setStep("review");
+    await runOcr(f);
+  }
+
+  function retryOcr() {
+    if (!file || ocrPending) return;
+    void runOcr(file);
   }
 
   async function uploadAndContinue() {
     if (!file) return;
     setError(null);
+    if (!navigator.onLine) {
+      setError("Sin conexión. No se pudo subir la imagen. Reintentá cuando vuelva Internet.");
+      return;
+    }
     const supabase = createCommercialBrowserClient();
     const ext =
       file.name.split(".").pop()?.toLowerCase().replace(/[^a-z0-9]/g, "") ||
@@ -177,9 +268,13 @@ export function RendicionClient({
   }
 
   function confirmSave() {
-    if (!imagePath) return;
+    if (!imagePath || pending || saveLockRef.current) return;
     if (!conceptoId) {
       setError("Elegí un concepto / motivo");
+      return;
+    }
+    if (!navigator.onLine) {
+      setError("Sin conexión. No se pudo guardar. Reintentá cuando vuelva Internet.");
       return;
     }
     const totalNum = total.trim() ? Number(total.replace(",", ".")) : null;
@@ -191,27 +286,36 @@ export function RendicionClient({
       edited_fields: Array.from(edited),
       confirmed_at: new Date().toISOString(),
     };
+    saveLockRef.current = true;
     startTransition(async () => {
-      const result = await saveRendicionAction({
-        imagePath,
-        total: Number.isFinite(totalNum as number) ? totalNum : null,
-        fechaEmision: fecha.trim() || null,
-        tipoComprobante: tipoComp.trim() || null,
-        nroComprobante: nroComp.trim() || null,
-        cuitEmisor: cuit.trim() || null,
-        moneda: ocr?.moneda ?? null,
-        caiCae: ocr?.cai_cae ?? null,
-        conceptoId,
-        observaciones: observaciones.trim() || null,
-        iva: ocr?.iva ?? null,
-        ocrRaw,
-      });
-      if (!result.ok) {
-        setError(result.error);
-        return;
+      try {
+        const result = await saveRendicionAction({
+          imagePath,
+          total: Number.isFinite(totalNum as number) ? totalNum : null,
+          fechaEmision: fecha.trim() || null,
+          tipoComprobante: tipoComp.trim() || null,
+          nroComprobante: nroComp.trim() || null,
+          cuitEmisor: cuit.trim() || null,
+          moneda: ocr?.moneda ?? null,
+          caiCae: ocr?.cai_cae ?? null,
+          conceptoId,
+          observaciones: observaciones.trim() || null,
+          iva: ocr?.iva ?? null,
+          ocrRaw,
+        });
+        if (!result.ok) {
+          setError(result.error);
+          saveLockRef.current = false;
+          return;
+        }
+        resetFlow();
+        router.refresh();
+      } catch (e) {
+        setError(
+          e instanceof Error ? e.message : "No se pudo guardar la rendición",
+        );
+        saveLockRef.current = false;
       }
-      resetFlow();
-      router.refresh();
     });
   }
 
@@ -295,6 +399,31 @@ export function RendicionClient({
               </p>
             ) : ocr?.notes ? (
               <p className="text-[12px] text-sr-ink/50">{ocr.notes}</p>
+            ) : null}
+
+            {!ocrPending ? (
+              <div className="flex flex-wrap gap-2">
+                <button
+                  type="button"
+                  data-testid="rendicion-ocr-retry"
+                  onClick={retryOcr}
+                  disabled={!file}
+                  className="rounded-xl border border-sr-ink/15 bg-sr-sand px-3 py-2 text-[12px] font-semibold disabled:opacity-50"
+                >
+                  Reintentar OCR
+                </button>
+                <label className="cursor-pointer rounded-xl border border-sr-ink/15 px-3 py-2 text-[12px] font-semibold">
+                  Cambiar imagen
+                  <input
+                    type="file"
+                    accept="image/*,application/pdf"
+                    className="hidden"
+                    onChange={(e) =>
+                      void onFileChosen(e.target.files?.[0] ?? null)
+                    }
+                  />
+                </label>
+              </div>
             ) : null}
 
             <Field

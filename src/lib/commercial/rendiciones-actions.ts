@@ -54,6 +54,8 @@ export async function saveRendicionAction(
       estado: "rendido",
     };
 
+    // Never accept client-supplied cod_vendedor; RPC derives it from session
+    // (sales_rep) or allows staff override only for admin/ops/manager.
     const { data, error } = await supabase.rpc("rendicion_save", {
       p: payload as never,
     });
