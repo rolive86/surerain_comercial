@@ -1464,6 +1464,7 @@ export type Database = {
           p_mes_desde?: number
           p_mes_hasta?: number
           p_anio_base?: number
+          p_dia_hasta?: number
         }
         Returns: {
           cod_articulo: string

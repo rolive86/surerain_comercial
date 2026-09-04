@@ -62,9 +62,14 @@ export default async function PulseadaPage({
   const customerId = asString(sp.customer);
   const limit = parseLimit(asString(sp.limit), 5);
 
-  const now = new Date();
-  const mesHasta = now.getMonth() + 1;
-  const anioBase = now.getFullYear() - 1;
+  // Argentina calendar: same-day YoY cutoff (not full current month vs prior year).
+  const todayAr = new Date().toLocaleDateString("en-CA", {
+    timeZone: "America/Argentina/Buenos_Aires",
+  }); // YYYY-MM-DD
+  const [yAr, mAr, dAr] = todayAr.split("-").map(Number);
+  const mesHasta = mAr;
+  const diaHasta = dAr;
+  const anioBase = yAr - 1;
 
   const cartera = await listCarteraCustomers();
 
@@ -72,7 +77,13 @@ export default async function PulseadaPage({
   let errorMessage: string | null = null;
   if (customerId) {
     try {
-      rows = await getClienteComparativo(customerId, 1, mesHasta, anioBase);
+      rows = await getClienteComparativo(
+        customerId,
+        1,
+        mesHasta,
+        anioBase,
+        diaHasta,
+      );
     } catch (e) {
       errorMessage =
         e instanceof Error ? e.message : "No se pudo cargar la pulseada";

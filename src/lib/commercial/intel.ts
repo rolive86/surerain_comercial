@@ -182,6 +182,7 @@ export async function getClienteComparativo(
   mesDesde: number,
   mesHasta: number,
   anioBase: number,
+  diaHasta?: number | null,
 ): Promise<ComparativoRow[]> {
   const session = await getCommercialSession();
   requireStaffSession(session);
@@ -192,6 +193,7 @@ export async function getClienteComparativo(
     p_mes_desde: mesDesde,
     p_mes_hasta: mesHasta,
     p_anio_base: anioBase,
+    ...(diaHasta != null ? { p_dia_hasta: diaHasta } : {}),
   });
   if (error) throw new Error(error.message);
 
