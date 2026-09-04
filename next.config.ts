@@ -6,6 +6,7 @@ const root = path.dirname(fileURLToPath(import.meta.url));
 
 const nextConfig: NextConfig = {
   outputFileTracingRoot: root,
+  serverExternalPackages: ["pdfkit", "tesseract.js", "sharp", "jsqr"],
   images: {
     remotePatterns: [
       {

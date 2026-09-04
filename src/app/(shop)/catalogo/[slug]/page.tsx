@@ -11,6 +11,9 @@ import {
 } from "@/lib/catalog";
 import { getCommercialSession } from "@/lib/commercial/session";
 import { getAlsoBoughtSourceIds } from "@/lib/recommendations";
+import { getFinalPriceForSourceId, withFinalPrices } from "@/lib/commercial/pricing";
+import { displayFinalUsd } from "@/lib/commercial/money";
+import { getProductCodesBySourceIds, withProductCodes } from "@/lib/commercial/product-codes";
 
 export const dynamic = "force-dynamic";
 
@@ -72,6 +75,16 @@ export default async function ProductPage({ params }: { params: Params }) {
       if (together.length >= 8) break;
     }
   }
+  together = await withProductCodes(together);
+  if (authenticated) {
+    together = await withFinalPrices(together);
+  }
+
+  const [finalPrice, productCodes] = await Promise.all([
+    authenticated ? getFinalPriceForSourceId(product.source_id) : Promise.resolve(null),
+    getProductCodesBySourceIds([product.source_id]),
+  ]);
+  const tangoCode = productCodes.get(product.source_id) ?? null;
 
   const addControl = (
     <AddToCartButton
@@ -165,8 +178,17 @@ export default async function ProductPage({ params }: { params: Params }) {
           <h1 className="mt-4 font-display text-3xl font-bold text-sr-ink sm:text-4xl">
             {product.name}
           </h1>
+          {tangoCode ? (
+            <p className="mt-2 font-mono text-sm text-sr-ink/55">Código: {tangoCode}</p>
+          ) : null}
           {product.brand_name ? (
-            <p className="mt-2 text-base text-sr-ink/55">{product.brand_name}</p>
+            <p className="mt-1 text-base text-sr-ink/55">{product.brand_name}</p>
+          ) : null}
+
+          {authenticated ? (
+            <p className="mt-4 font-display text-2xl font-semibold text-sr-green">
+              {displayFinalUsd(finalPrice?.amount)}
+            </p>
           ) : null}
 
           <div className="mt-6 hidden lg:block">{addControl}</div>
@@ -254,7 +276,10 @@ export default async function ProductPage({ params }: { params: Params }) {
         </div>
       ) : null}
 
-      <div className="fixed inset-x-0 bottom-[calc(3.65rem+env(safe-area-inset-bottom))] z-40 border-t border-black/5 bg-[#f7f5f0]/95 px-4 py-3 backdrop-blur-md lg:hidden">
+      <div
+        data-testid="product-sticky-cta"
+        className="fixed inset-x-0 bottom-[calc(3.65rem+env(safe-area-inset-bottom))] z-40 border-t border-black/5 bg-[#f7f5f0]/95 px-4 py-3 backdrop-blur-md lg:hidden"
+      >
         {addControl}
       </div>
     </div>

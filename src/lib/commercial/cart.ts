@@ -1,5 +1,6 @@
 import { createCommercialServerClient } from "@/lib/supabase/commercial/server";
 import { getCommercialSession } from "@/lib/commercial/session";
+import { getProductCodesBySourceIds } from "@/lib/commercial/product-codes";
 
 export type CartItemInput = {
   product_source_id: string;
@@ -21,6 +22,8 @@ export type CartView = {
     unit_snapshot: string | null;
     image_url?: string | null;
     image_alt?: string | null;
+    unit_price?: number | null;
+    tango_code?: string | null;
   }>;
   itemCount: number;
 };
@@ -87,11 +90,36 @@ async function loadCartView(cartId: string): Promise<CartView> {
     quantity: Number(item.quantity),
   }));
 
+  const sourceIds = mapped.map((i) => i.product_source_id);
+  const [codes, tangoRows] = await Promise.all([
+    getProductCodesBySourceIds(sourceIds),
+    (async () => {
+      const { data } = await supabase
+        .from("products_tango")
+        .select("cod_articulo, image_url, descripcion")
+        .in("cod_articulo", sourceIds);
+      return data ?? [];
+    })(),
+  ]);
+  const tangoByCode = new Map(tangoRows.map((r) => [r.cod_articulo, r]));
+  const withMeta = mapped.map((item) => {
+    const tango = tangoByCode.get(item.product_source_id);
+    return {
+      ...item,
+      unit_price: null as number | null,
+      tango_code:
+        codes.get(item.product_source_id) ??
+        (tango ? item.product_source_id : null),
+      image_url: tango?.image_url ?? null,
+      image_alt: tango?.descripcion ?? item.product_name_snapshot,
+    };
+  });
+
   return {
     id: cart.id,
     customer_id: cart.customer_id,
-    items: mapped,
-    itemCount: mapped.reduce((sum, item) => sum + Number(item.quantity), 0),
+    items: withMeta,
+    itemCount: withMeta.reduce((sum, item) => sum + Number(item.quantity), 0),
   };
 }
 
@@ -218,12 +246,17 @@ export async function confirmOpenCart(customerNote?: string): Promise<{
     .single();
   if (orderErr) throw new Error(orderErr.message);
 
+  const codes = await getProductCodesBySourceIds(
+    cart.items.map((item) => item.product_source_id),
+  );
+
   const { error: itemsErr } = await supabase.from("order_items").insert(
     cart.items.map((item) => ({
       order_id: order.id,
       product_source_id: item.product_source_id,
       product_name_snapshot: item.product_name_snapshot,
       product_slug_snapshot: item.product_slug_snapshot,
+      sku_snapshot: codes.get(item.product_source_id) ?? null,
       unit_snapshot: item.unit_snapshot,
       quantity: item.quantity,
       unit_price_snapshot: null,
@@ -238,7 +271,7 @@ export async function confirmOpenCart(customerNote?: string): Promise<{
     from_status: null,
     to_status: "submitted",
     changed_by: userId,
-    comment: "Pedido confirmado desde portal",
+    comment: "Solicitud de cotización enviada desde portal",
   });
   if (histErr) throw new Error(histErr.message);
 

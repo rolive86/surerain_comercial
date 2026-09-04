@@ -41,9 +41,9 @@ export function CartClient({
   if (!cart.items.length) {
     return (
       <div className="surface px-6 py-16 text-center">
-        <p className="font-display text-xl text-sr-ink/70">Tu carrito está vacío</p>
+        <p className="font-display text-xl text-sr-ink/70">Tu solicitud está vacía</p>
         <p className="mt-2 text-sm text-sr-ink/45">
-          Agregá productos desde el catálogo. No hay precios en esta etapa.
+          Agregá artículos desde el catálogo.
         </p>
         <a href="/catalogo" className="btn-primary mt-6 inline-flex">
           Ir al catálogo
@@ -61,7 +61,8 @@ export function CartClient({
       ) : null}
       {searchOk === "reorder" ? (
         <p className="rounded-md bg-emerald-50 px-3 py-2 text-sm text-emerald-800">
-          Volviste a cargar el pedido.{searchMissing ? ` ${searchMissing} producto(s) ya no están disponibles.` : ""}
+          Volviste a cargar la solicitud.
+          {searchMissing ? ` ${searchMissing} artículo(s) ya no están disponibles.` : ""}
         </p>
       ) : null}
 
@@ -90,16 +91,21 @@ export function CartClient({
                     />
                   ) : (
                     <span className="flex h-full w-full items-center justify-center px-1 text-center text-[10px] font-semibold leading-tight text-sr-green/45">
-                      {item.product_name_snapshot.slice(0, 18)}
+                      Sure Rain
                     </span>
                   )}
                 </a>
-                <a
-                  href={href}
-                  className="font-display text-lg font-semibold text-sr-ink hover:text-sr-green"
-                >
-                  {item.product_name_snapshot}
-                </a>
+                <div className="min-w-0">
+                  <a
+                    href={href}
+                    className="font-display text-lg font-semibold text-sr-ink hover:text-sr-green"
+                  >
+                    {item.product_name_snapshot}
+                  </a>
+                  {item.tango_code ? (
+                    <p className="font-mono text-xs text-sr-ink/50">{item.tango_code}</p>
+                  ) : null}
+                </div>
               </div>
               <div className="flex items-center gap-3 sm:pl-0 pl-[4.75rem]">
                 <label className="text-xs font-semibold uppercase tracking-wider text-sr-ink/45">
@@ -133,24 +139,32 @@ export function CartClient({
       </ul>
 
       <form action={confirmCartAction} className="surface space-y-4 p-6">
+        <p className="rounded-md bg-sr-mist/70 px-3 py-2 text-sm text-sr-ink/75">
+          {cart.items.length} artículo(s) · Sin precios en la solicitud; tu vendedor cotiza y te
+          envía el PDF.
+        </p>
         <div>
-          <h2 className="font-display text-xl font-semibold text-sr-ink">Confirmar pedido</h2>
+          <h2 className="font-display text-xl font-semibold text-sr-ink">
+            Enviar solicitud de cotización
+          </h2>
           <p className="mt-1 text-sm text-sr-ink/55">
-            Se crea un pedido en estado <strong>Enviado</strong> con snapshot de productos. Sin
-            pago online.
+            Se crea en estado <strong>Pendiente</strong>. El precio lo vas a ver recién en el PDF
+            cuando el vendedor lo envíe.
           </p>
         </div>
         <label className="block">
-          <span className="text-sm font-semibold text-sr-ink/70">Nota para Sure Rain (opcional)</span>
+          <span className="text-sm font-semibold text-sr-ink/70">
+            Nota para Sure Rain (opcional)
+          </span>
           <textarea
             name="customer_note"
             rows={3}
             className="mt-1 w-full rounded-md border border-black/10 bg-white px-3 py-2 text-sm outline-none ring-sr-green/30 focus:ring-2"
-            placeholder="Observaciones de entrega, referencias, etc."
+            placeholder="Observaciones, referencias, etc."
           />
         </label>
         <button type="submit" className="btn-primary" disabled={pending}>
-          Confirmar pedido
+          Enviar solicitud
         </button>
       </form>
     </div>

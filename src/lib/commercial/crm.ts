@@ -19,7 +19,11 @@ export type CrmCustomerRow = {
   created_at: string;
   active_rep_name: string | null;
   active_rep_id: string | null;
+  /** false = asignación vigente a un sales_reps inactivo */
+  active_rep_is_active: boolean | null;
 };
+
+export type CrmCustomerListFilter = "all" | "sin_vendedor_activo";
 
 export type CrmContactRow = {
   id: string;
@@ -108,95 +112,33 @@ function pickRepName(
   return sales_reps.name ?? null;
 }
 
-export async function listCrmCustomers(q?: string): Promise<CrmCustomerRow[]> {
-  const session = await getCommercialSession();
-  requireStaffSession(session);
-  const supabase = await createCommercialServerClient();
-
-  let query = supabase
-    .from("customers")
-    .select(
-      `
-      id, legal_name, trade_name, cuit, email, phone, city, province, address, active, created_at,
-      customer_sales_rep (
-        sales_rep_id, active, valid_to,
-        sales_reps ( name )
-      )
-    `,
-    )
-    .order("legal_name", { ascending: true });
-
-  if (q?.trim()) {
-    const term = `%${q.trim()}%`;
-    query = query.or(
-      `legal_name.ilike.${term},trade_name.ilike.${term},cuit.ilike.${term},email.ilike.${term}`,
-    );
-  }
-
-  const { data, error } = await query;
-  if (error) throw new Error(error.message);
-
-  return (data ?? []).map((row) => {
-    const links = (row.customer_sales_rep ?? []) as Array<{
-      sales_rep_id: string;
-      active: boolean;
-      valid_to: string | null;
-      sales_reps: { name: string } | { name: string }[] | null;
-    }>;
-    const activeLink = links.find((l) => l.active && l.valid_to == null);
-    return {
-      id: row.id as string,
-      legal_name: row.legal_name as string,
-      trade_name: (row.trade_name as string | null) ?? null,
-      cuit: (row.cuit as string | null) ?? null,
-      email: (row.email as string | null) ?? null,
-      phone: (row.phone as string | null) ?? null,
-      city: (row.city as string | null) ?? null,
-      province: (row.province as string | null) ?? null,
-      address: (row.address as string | null) ?? null,
-      active: Boolean(row.active),
-      created_at: row.created_at as string,
-      active_rep_id: activeLink?.sales_rep_id ?? null,
-      active_rep_name: pickRepName(activeLink?.sales_reps),
-    };
-  });
-}
-
-export async function getCrmCustomer(customerId: string): Promise<{
-  customer: CrmCustomerRow;
-  contacts: CrmContactRow[];
-  assignments: CrmAssignmentRow[];
-} | null> {
-  const session = await getCommercialSession();
-  requireStaffSession(session);
-  const supabase = await createCommercialServerClient();
-
-  const { data: row, error } = await supabase
-    .from("customers")
-    .select(
-      `
-      id, legal_name, trade_name, cuit, email, phone, city, province, address, active, created_at,
-      customer_sales_rep (
-        sales_rep_id, active, valid_to,
-        sales_reps ( name )
-      )
-    `,
-    )
-    .eq("id", customerId)
-    .maybeSingle();
-
-  if (error) throw new Error(error.message);
-  if (!row) return null;
-
+function mapCustomerRow(row: {
+  id: unknown;
+  legal_name: unknown;
+  trade_name: unknown;
+  cuit: unknown;
+  email: unknown;
+  phone: unknown;
+  city: unknown;
+  province: unknown;
+  address: unknown;
+  active: unknown;
+  created_at: unknown;
+  customer_sales_rep?: unknown;
+}): CrmCustomerRow {
   const links = (row.customer_sales_rep ?? []) as Array<{
     sales_rep_id: string;
     active: boolean;
     valid_to: string | null;
-    sales_reps: { name: string } | { name: string }[] | null;
+    sales_reps:
+      | { name: string; active?: boolean }
+      | { name: string; active?: boolean }[]
+      | null;
   }>;
   const activeLink = links.find((l) => l.active && l.valid_to == null);
-
-  const customer: CrmCustomerRow = {
+  const rep = activeLink?.sales_reps;
+  const repObj = Array.isArray(rep) ? rep[0] : rep;
+  return {
     id: row.id as string,
     legal_name: row.legal_name as string,
     trade_name: (row.trade_name as string | null) ?? null,
@@ -210,7 +152,102 @@ export async function getCrmCustomer(customerId: string): Promise<{
     created_at: row.created_at as string,
     active_rep_id: activeLink?.sales_rep_id ?? null,
     active_rep_name: pickRepName(activeLink?.sales_reps),
+    active_rep_is_active:
+      activeLink == null ? null : Boolean(repObj?.active ?? true),
   };
+}
+
+const CUSTOMER_LIST_SELECT = `
+  id, legal_name, trade_name, cuit, email, phone, city, province, address, active, created_at,
+  customer_sales_rep (
+    sales_rep_id, active, valid_to,
+    sales_reps ( name, active )
+  )
+`;
+
+/** Clientes con asignación vigente a un vendedor inactivo. */
+export async function countCustomersWithoutActiveRep(): Promise<number> {
+  const session = await getCommercialSession();
+  requireStaffSession(session);
+  const supabase = await createCommercialServerClient();
+  const { count, error } = await supabase
+    .from("customer_sales_rep")
+    .select("id, sales_reps!inner(active)", { count: "exact", head: true })
+    .eq("active", true)
+    .is("valid_to", null)
+    .eq("sales_reps.active", false);
+  if (error) throw new Error(error.message);
+  return count ?? 0;
+}
+
+export async function listCrmCustomers(
+  q?: string,
+  filtro: CrmCustomerListFilter = "all",
+): Promise<CrmCustomerRow[]> {
+  const session = await getCommercialSession();
+  requireStaffSession(session);
+  const supabase = await createCommercialServerClient();
+
+  let onlyIds: string[] | null = null;
+  if (filtro === "sin_vendedor_activo") {
+    const { data: badLinks, error: badErr } = await supabase
+      .from("customer_sales_rep")
+      .select("customer_id, sales_reps!inner(active)")
+      .eq("active", true)
+      .is("valid_to", null)
+      .eq("sales_reps.active", false);
+    if (badErr) throw new Error(badErr.message);
+    onlyIds = [
+      ...new Set(
+        (badLinks ?? [])
+          .map((l) => l.customer_id as string)
+          .filter(Boolean),
+      ),
+    ];
+    if (!onlyIds.length) return [];
+  }
+
+  let query = supabase
+    .from("customers")
+    .select(CUSTOMER_LIST_SELECT)
+    .order("legal_name", { ascending: true });
+
+  if (onlyIds) {
+    query = query.in("id", onlyIds);
+  }
+
+  if (q?.trim()) {
+    const term = `%${q.trim()}%`;
+    query = query.or(
+      `legal_name.ilike.${term},trade_name.ilike.${term},cuit.ilike.${term},email.ilike.${term}`,
+    );
+  }
+
+  const { data, error } = await query;
+  if (error) throw new Error(error.message);
+
+  return (data ?? []).map((row) => mapCustomerRow(row));
+}
+
+export async function getCrmCustomer(customerId: string): Promise<{
+  customer: CrmCustomerRow;
+  contacts: CrmContactRow[];
+  assignments: CrmAssignmentRow[];
+} | null> {
+  const session = await getCommercialSession();
+  requireStaffSession(session);
+  const supabase = await createCommercialServerClient();
+
+  const { data: row, error } = await supabase
+    .from("customers")
+    .select(CUSTOMER_LIST_SELECT)
+    .eq("id", customerId)
+    .maybeSingle();
+
+  if (error) throw new Error(error.message);
+  if (!row) return null;
+
+  const customer = mapCustomerRow(row);
 
   const { data: contacts, error: cErr } = await supabase
     .from("customer_contacts")
@@ -272,6 +309,7 @@ export async function listCrmReps(q?: string): Promise<CrmRepRow[]> {
       customer_sales_rep ( id, active, valid_to )
     `,
     )
+    .eq("active", true)
     .order("name", { ascending: true });
 
   if (q?.trim()) {
@@ -401,10 +439,20 @@ export async function createCustomer(input: {
   }
 
   if (assignRepId) {
+    const { data: repOk, error: repCheckErr } = await supabase
+      .from("sales_reps")
+      .select("id")
+      .eq("id", assignRepId)
+      .eq("active", true)
+      .maybeSingle();
+    if (repCheckErr) throw new Error(repCheckErr.message);
+    if (!repOk) throw new Error("REP_INACTIVE");
+
     const { error: aErr } = await supabase.from("customer_sales_rep").insert({
       customer_id: customerId,
       sales_rep_id: assignRepId,
       active: true,
+      source_system: "platform",
     });
     if (aErr) throw new Error(`ASSIGN_FAILED: ${aErr.message}`);
   }
@@ -523,6 +571,16 @@ export async function assignSalesRep(
   }
 
   const supabase = await createCommercialServerClient();
+
+  const { data: targetRep, error: targetErr } = await supabase
+    .from("sales_reps")
+    .select("id")
+    .eq("id", salesRepId)
+    .eq("active", true)
+    .maybeSingle();
+  if (targetErr) throw new Error(targetErr.message);
+  if (!targetRep) throw new Error("REP_INACTIVE");
+
   const now = new Date().toISOString();
 
   const { data: current } = await supabase
@@ -549,6 +607,7 @@ export async function assignSalesRep(
     sales_rep_id: salesRepId,
     valid_from: now,
     active: true,
+    source_system: "platform",
   });
   if (insErr) throw new Error(insErr.message);
 

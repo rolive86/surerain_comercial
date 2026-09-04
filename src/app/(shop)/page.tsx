@@ -10,6 +10,7 @@ import { getCommercialSession } from "@/lib/commercial/session";
 import { getGreetingName } from "@/lib/commercial/profile";
 import { getDashboardRecommendations } from "@/lib/recommendations";
 import { createCommercialServerClient } from "@/lib/supabase/commercial/server";
+import { withProductCodes } from "@/lib/commercial/product-codes";
 
 export const dynamic = "force-dynamic";
 
@@ -36,6 +37,11 @@ async function CustomerDashboard({
     getDashboardRecommendations(),
     loadCompanyLabel(customerId),
   ]);
+  const [reorder, habitual, recommended] = await Promise.all([
+    withProductCodes(recs.reorder),
+    withProductCodes(recs.habitual),
+    withProductCodes(recs.recommended),
+  ]);
 
   const hasAny = recs.reorder.length + recs.habitual.length + recs.recommended.length > 0;
 
@@ -50,11 +56,14 @@ async function CustomerDashboard({
           <Link href="/catalogo" className="btn-primary">
             Catálogo
           </Link>
-          <Link href="/mis-pedidos" className="btn-secondary">
+          <Link href="/mis-compras" className="btn-secondary">
             Mis compras
           </Link>
+          <Link href="/mis-pedidos" className="btn-secondary">
+            Mis cotizaciones
+          </Link>
           <Link href="/carrito" className="btn-secondary">
-            Pedido
+            Mi solicitud
           </Link>
         </div>
       </section>
@@ -67,16 +76,16 @@ async function CustomerDashboard({
         />
       ) : (
         <>
-          <ReorderRail items={recs.reorder} authenticated />
+          <ReorderRail items={reorder} authenticated />
           <ProductRail
             title="Tus productos habituales"
-            products={recs.habitual}
+            products={habitual}
             authenticated
           />
           <ProductRail
             title="Recomendados para vos"
             subtitle={recs.coldStart ? "Destacados del catálogo" : undefined}
-            products={recs.recommended}
+            products={recommended}
             authenticated
           />
         </>
@@ -123,25 +132,32 @@ async function PublicHome({ signedIn }: { signedIn: boolean }) {
               Sure Rain
             </p>
             <h1 className="font-display max-w-xl text-4xl font-bold leading-[1.05] text-sr-ink sm:text-5xl lg:text-6xl">
-              Catálogo técnico de riego, listo para consultar.
+              Sure Rain
             </h1>
             <p className="mt-5 max-w-lg text-base leading-relaxed text-sr-ink/65 sm:text-lg">
-              {stats.products} productos en {stats.categories} categorías y{" "}
-              {stats.brands} marcas. Filtrá por mercado, tipo y marca sin salir
-              del catálogo.
+              Catálogo completo y pedidos ingresando al portal. Esta vidriera es
+              una muestra pública; stock, precios y cotizaciones están en el
+              portal comercial.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Link href="/catalogo" className="btn-primary">
-                Ver catálogo completo
-              </Link>
               {signedIn ? (
-                <Link href="/cuenta" className="btn-secondary">
-                  Mi cuenta
-                </Link>
+                <>
+                  <Link href="/catalogo" className="btn-primary">
+                    Ir al catálogo del portal
+                  </Link>
+                  <Link href="/cuenta" className="btn-secondary">
+                    Mi cuenta
+                  </Link>
+                </>
               ) : (
-                <Link href="/login" className="btn-secondary">
-                  Ingresar al portal
-                </Link>
+                <>
+                  <Link href="/login" className="btn-primary">
+                    Ingresar al portal
+                  </Link>
+                  <Link href="/catalogo" className="btn-secondary">
+                    Ver catálogo completo
+                  </Link>
+                </>
               )}
             </div>
           </div>
@@ -213,7 +229,7 @@ async function PublicHome({ signedIn }: { signedIn: boolean }) {
         {errorMessage ? (
           <ErrorBox message={errorMessage} />
         ) : (
-          <ProductGrid products={featured} />
+          <ProductGrid products={await withProductCodes(featured)} />
         )}
       </section>
     </>

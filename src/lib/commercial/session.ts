@@ -1,10 +1,10 @@
 import { createCommercialServerClient } from "@/lib/supabase/commercial/server";
+import {
+  claimsFromAccessToken,
+  type CommercialClaims,
+} from "@/lib/commercial/claims";
 
-export type CommercialClaims = {
-  app_role: string | null;
-  customer_id: string | null;
-  sales_rep_id: string | null;
-};
+export type { CommercialClaims };
 
 export type CommercialSession = {
   user: {
@@ -13,31 +13,6 @@ export type CommercialSession = {
   };
   claims: CommercialClaims;
 };
-
-function decodeJwtPayload(token: string): Record<string, unknown> | null {
-  try {
-    const payload = token.split(".")[1];
-    if (!payload) return null;
-    const json = Buffer.from(payload.replace(/-/g, "+").replace(/_/g, "/"), "base64").toString(
-      "utf8",
-    );
-    return JSON.parse(json) as Record<string, unknown>;
-  } catch {
-    return null;
-  }
-}
-
-export function claimsFromAccessToken(accessToken: string | null | undefined): CommercialClaims {
-  if (!accessToken) {
-    return { app_role: null, customer_id: null, sales_rep_id: null };
-  }
-  const claims = decodeJwtPayload(accessToken);
-  return {
-    app_role: (claims?.app_role as string | undefined) ?? null,
-    customer_id: (claims?.customer_id as string | undefined) ?? null,
-    sales_rep_id: (claims?.sales_rep_id as string | undefined) ?? null,
-  };
-}
 
 /** Current commercial session (cookies). Null if anonymous. */
 export async function getCommercialSession(): Promise<CommercialSession | null> {
@@ -74,7 +49,7 @@ export function roleLabel(role: string | null | undefined): string {
     case "sales_manager":
       return "Gerente comercial";
     case "operations":
-      return "Operaciones";
+      return "Comercial";
     case "admin":
       return "Admin";
     default:

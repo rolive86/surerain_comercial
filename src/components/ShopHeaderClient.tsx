@@ -7,12 +7,14 @@ import { signOutCommercial } from "@/lib/commercial/auth-actions";
 
 export type ShopHeaderClientProps = {
   displayName: string | null;
+  avatarUrl: string | null;
   email: string | null;
   signedIn: boolean;
   isCustomer: boolean;
   isStaff: boolean;
   cartCount: number;
   roleChip: string | null;
+  visible: Record<string, boolean>;
   searchDefault?: string;
 };
 
@@ -37,14 +39,30 @@ function AvatarInitial({ name }: { name: string }) {
   );
 }
 
+function AvatarMark({ name, url }: { name: string; url: string | null }) {
+  if (url) {
+    return (
+      // eslint-disable-next-line @next/next/no-img-element
+      <img
+        src={url}
+        alt=""
+        className="h-9 w-9 shrink-0 rounded-full object-cover"
+      />
+    );
+  }
+  return <AvatarInitial name={name} />;
+}
+
 export function ShopHeaderClient({
   displayName,
+  avatarUrl,
   email,
   signedIn,
   isCustomer,
   isStaff,
   cartCount,
   roleChip,
+  visible,
   searchDefault = "",
 }: ShopHeaderClientProps) {
   const [compact, setCompact] = useState(false);
@@ -66,7 +84,11 @@ export function ShopHeaderClient({
             compact ? "max-h-0 py-0 opacity-0 lg:py-3" : "max-h-16 py-3"
           }`}
         >
-          <Link href="/" className="flex min-h-11 items-center" aria-label="Sure Rain — inicio">
+          <Link
+            href={isStaff ? "/gestion" : "/"}
+            className="flex min-h-11 items-center"
+            aria-label="Sure Rain — inicio"
+          >
             <LogoMark className="h-7 w-auto sm:h-8" />
           </Link>
 
@@ -77,21 +99,21 @@ export function ShopHeaderClient({
           <div className="flex items-center gap-1 sm:gap-2">
             {signedIn ? (
               <>
-                {isStaff ? (
+                {isStaff && visible.gestion_pedidos !== false ? (
                   <Link
-                    href="/gestion/pedidos"
-                    className="hidden min-h-11 items-center rounded-md px-3 text-sm font-semibold text-sr-ink/80 hover:bg-sr-mist hover:text-sr-green lg:inline-flex"
+                    href="/gestion"
+                    className="inline-flex min-h-11 items-center rounded-md px-3 text-sm font-semibold text-sr-ink/80 hover:bg-sr-mist hover:text-sr-green"
                   >
-                    Gestión
+                    Comercial
                   </Link>
                 ) : null}
-                {isCustomer ? (
+                {isCustomer && visible.carrito !== false ? (
                   <Link
                     href="/carrito"
                     className="relative hidden min-h-11 min-w-11 items-center justify-center rounded-md px-3 text-sm font-semibold text-sr-ink/80 hover:bg-sr-mist hover:text-sr-green lg:inline-flex"
-                    aria-label={`Carrito${cartCount ? `, ${cartCount} ítems` : ""}`}
+                    aria-label={`Solicitud${cartCount ? `, ${cartCount} ítems` : ""}`}
                   >
-                    Pedido
+                    Solicitud
                     {cartCount > 0 ? (
                       <span className="ml-1.5 inline-flex min-h-5 min-w-5 items-center justify-center rounded-full bg-sr-green px-1.5 text-[11px] font-bold text-white">
                         {cartCount}
@@ -100,10 +122,10 @@ export function ShopHeaderClient({
                   </Link>
                 ) : null}
                 <Link
-                  href="/cuenta"
+                  href={isStaff ? "/gestion" : "/cuenta"}
                   className="flex min-h-11 items-center gap-2 rounded-full py-1 pl-1 pr-2 hover:bg-sr-mist"
                 >
-                  <AvatarInitial name={hello} />
+                  <AvatarMark name={hello} url={avatarUrl} />
                   <span className="hidden max-w-[10rem] truncate text-sm font-semibold text-sr-ink lg:inline">
                     Hola, {hello}
                   </span>

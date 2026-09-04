@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.surerain.vendedor",
+      "sha256_cert_fingerprints": [
+        "D3:70:59:21:AD:63:07:ED:35:DB:C0:B2:2C:C8:3C:C2:21:20:4F:C2:48:CD:2F:3C:8F:1D:B5:A0:E6:D4:38:82"
+      ]
+    }
+  }
+]

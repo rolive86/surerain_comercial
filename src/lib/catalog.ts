@@ -30,6 +30,15 @@ export type ProductListItem = {
   type_name: string | null;
   type_slug: string | null;
   image: MediaInfo | null;
+  finalPrice?: { amount: number; currency: string } | null;
+  tangoCode?: string | null;
+  /** Portal Tango-driven */
+  hasStock?: boolean;
+  hasPrice?: boolean;
+  stockQty?: number | null;
+  /** Padre con N medidas */
+  variantCount?: number;
+  isVariantGroup?: boolean;
 };
 
 export type ProductDetail = ProductListItem & {

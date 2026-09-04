@@ -78,46 +78,59 @@ function IconAccount() {
   );
 }
 
-export function MobileTabBarNav({ cartCount }: { cartCount: number }) {
+export function MobileTabBarNav({
+  cartCount,
+  visible = {},
+}: {
+  cartCount: number;
+  visible?: Record<string, boolean>;
+}) {
   const pathname = usePathname();
   const tabs: Tab[] = [
-    { href: "/", label: "Inicio", match: (p) => p === "/", icon: <IconHome /> },
+    { href: "/", label: "Inicio", match: (p: string) => p === "/", icon: <IconHome /> },
     {
       href: "/catalogo",
       label: "Catálogo",
-      match: (p) => p.startsWith("/catalogo"),
+      match: (p: string) => p.startsWith("/catalogo"),
       icon: <IconCatalog />,
     },
     {
       href: "/carrito",
-      label: "Carrito",
-      match: (p) => p.startsWith("/carrito"),
+      label: "Solicitud",
+      match: (p: string) => p.startsWith("/carrito"),
       icon: <IconCart />,
     },
     {
       href: "/mis-pedidos",
-      label: "Mis compras",
-      match: (p) => p.startsWith("/mis-pedidos") || p.startsWith("/pedido"),
+      label: "Cotizaciones",
+      match: (p: string) => p.startsWith("/mis-pedidos") || p.startsWith("/pedido"),
       icon: <IconOrders />,
     },
     {
       href: "/cuenta",
       label: "Cuenta",
-      match: (p) => p.startsWith("/cuenta"),
+      match: (p: string) => p.startsWith("/cuenta"),
       icon: <IconAccount />,
     },
-  ];
+  ].filter((tab) => {
+    if (tab.href === "/catalogo") return visible.catalogo !== false;
+    if (tab.href === "/carrito") return visible.carrito !== false;
+    if (tab.href === "/mis-pedidos") return visible.mis_pedidos !== false;
+    if (tab.href === "/cuenta") return visible.cuenta !== false;
+    return true;
+  });
 
   return (
     <nav
       aria-label="Navegación principal"
+      data-testid="shop-tab-bar"
       className="fixed inset-x-0 bottom-0 z-50 border-t border-black/5 bg-[#f7f5f0]/95 backdrop-blur-md tab-bar-safe lg:hidden"
     >
-      <ul className="grid grid-cols-5">
+      <ul className="flex">
         {tabs.map((tab) => {
           const active = tab.match(pathname);
           return (
-            <li key={tab.href}>
+            <li key={tab.href} className="flex-1">
               <Link
                 href={tab.href}
                 className={`relative flex min-h-11 flex-col items-center justify-center gap-0.5 py-2 text-[10px] font-semibold tracking-wide ${

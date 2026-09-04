@@ -11,8 +11,8 @@ import { getCommercialSession } from "@/lib/commercial/session";
 import { getProductThumbnailsBySourceIds } from "@/lib/catalog";
 
 export const metadata: Metadata = {
-  title: "Mis compras",
-  description: "Historial de pedidos B2B Sure Rain.",
+  title: "Mis cotizaciones",
+  description: "Solicitudes y cotizaciones B2B Sure Rain.",
 };
 
 function formatDate(value: string | null) {
@@ -49,17 +49,17 @@ export default async function MisPedidosPage({
       <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
         <div>
           <p className="text-xs font-semibold uppercase tracking-[0.18em] text-sr-green">
-            Portal de pedidos
+            Portal
           </p>
           <h1 className="mt-1 font-display text-3xl font-bold text-sr-ink sm:text-4xl">
-            Mis compras
+            Mis cotizaciones
           </h1>
           <p className="mt-2 text-sm text-sr-ink/60">
-            Pedidos de tu empresa. Sin precios publicados en esta etapa.
+            Solicitudes enviadas. El precio aparece solo en el PDF cuando está enviada.
           </p>
         </div>
         <Link href="/carrito" className="btn-secondary">
-          Ir al pedido
+          Mi solicitud
         </Link>
       </div>
 
@@ -80,7 +80,7 @@ export default async function MisPedidosPage({
       </form>
 
       <div className="mt-4 flex flex-wrap gap-2">
-        <FilterChip href="/mis-pedidos" active={!statusFilter} label="Todos" />
+        <FilterChip href="/mis-pedidos" active={!statusFilter} label="Todas" />
         {statuses.map((s) => (
           <FilterChip
             key={s.code}
@@ -95,7 +95,9 @@ export default async function MisPedidosPage({
       {orders.length === 0 ? (
         <div className="surface mt-8 px-6 py-16 text-center">
           <p className="font-display text-xl text-sr-ink/70">
-            {statusFilter || q ? "No hay pedidos con ese criterio." : "Todavía no tenés compras."}
+            {statusFilter || q
+              ? "No hay cotizaciones con ese criterio."
+              : "Todavía no tenés solicitudes."}
           </p>
           <Link href="/catalogo" className="btn-primary mt-6 inline-flex">
             Ir al catálogo
@@ -104,18 +106,15 @@ export default async function MisPedidosPage({
       ) : (
         <ul className="mt-8 space-y-3">
           {orders.map((order) => (
-            <li key={order.id}>
-              <Link
-                href={`/pedido/${order.id}`}
-                className="surface flex flex-col gap-3 p-4 transition hover:shadow-card-hover sm:flex-row sm:items-center sm:justify-between"
-              >
-                <div className="min-w-0">
+            <li key={order.id} className="surface p-4">
+              <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                <Link href={`/pedido/${order.id}`} className="min-w-0 hover:opacity-90">
                   <p className="font-display text-lg font-semibold text-sr-ink">
                     {order.order_number}
                   </p>
                   <p className="mt-1 text-sm text-sr-ink/55">
                     {formatDate(order.submitted_at ?? order.created_at)} · {order.item_count}{" "}
-                    producto(s)
+                    artículo(s)
                   </p>
                   <div className="mt-2 flex gap-1">
                     {order.preview_items.map((item) => {
@@ -138,11 +137,23 @@ export default async function MisPedidosPage({
                       );
                     })}
                   </div>
+                </Link>
+                <div className="flex flex-wrap items-center gap-2">
+                  <span className={`chip w-fit ${orderStatusClass(order.status)}`}>
+                    {order.status_label}
+                  </span>
+                  {order.status === "quoted" && order.pdf_url ? (
+                    <a
+                      href={order.pdf_url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn-primary !min-h-10 !px-3 text-sm"
+                    >
+                      Ver mi cotización (PDF)
+                    </a>
+                  ) : null}
                 </div>
-                <span className={`chip w-fit ${orderStatusClass(order.status)}`}>
-                  {order.status_label}
-                </span>
-              </Link>
+              </div>
             </li>
           ))}
         </ul>

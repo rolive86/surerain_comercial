@@ -1,3 +1,16 @@
+export function historyEventTitle(entry: {
+  from_status: string | null;
+  to_status: string;
+  to_status_label: string;
+  comment?: string | null;
+}): string {
+  if (entry.from_status && entry.from_status === entry.to_status) {
+    if ((entry.comment ?? "").toLowerCase().includes("precio")) return "Precio fijado";
+    return "Ajuste de cantidades";
+  }
+  return entry.to_status_label;
+}
+
 export function orderStatusClass(status: string): string {
   switch (status) {
     case "confirmed":
@@ -34,11 +47,13 @@ export function OrderTimeline({
       {history.map((h) => (
         <li key={h.id} className="relative text-sm">
           <span className="absolute -left-[1.55rem] top-1.5 h-3 w-3 rounded-full border-2 border-white bg-sr-green" />
-          <p className="font-semibold text-sr-ink">{h.to_status_label}</p>
+          <p className="font-semibold text-sr-ink">{historyEventTitle(h)}</p>
           <p className="text-xs text-sr-ink/40">
             {new Date(h.created_at).toLocaleString("es-AR")}
           </p>
-          {h.comment ? <p className="mt-1 text-sr-ink/60">{h.comment}</p> : null}
+          {h.comment ? (
+            <p className="mt-1 whitespace-pre-wrap text-sr-ink/60">{h.comment}</p>
+          ) : null}
         </li>
       ))}
     </ol>

@@ -2,6 +2,7 @@
 -- Sure Rain commercial — usuarios demo Auth + entidades de prueba
 -- cliente.demo@surerain.test  → f6292bdd-5e3b-407f-84eb-5b58c51fe0ca
 -- vendedor.demo@surerain.test → c8e8427a-b9be-4765-8f78-b6e8612d6849
+-- admin.demo@surerain.test    → crear en Auth y correr `npm run seed:admin-demo`
 
 -- 1) Cliente demo
 insert into public.customers (

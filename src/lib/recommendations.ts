@@ -2,7 +2,6 @@ import { createCommercialServerClient } from "@/lib/supabase/commercial/server";
 import { getCommercialSession } from "@/lib/commercial/session";
 import {
   getCatalogProductsBySourceIds,
-  getFeaturedProducts,
   type ProductListItem,
 } from "@/lib/catalog";
 
@@ -34,57 +33,49 @@ export async function getDashboardRecommendations(): Promise<DashboardRecommenda
   };
 
   if (!session || session.claims.app_role !== "customer_user" || !session.claims.customer_id) {
-    const featured = await getFeaturedProducts(8);
+    const { getTangoProducts } = await import("@/lib/commercial/products-tango");
+    const featured = await getTangoProducts({}, { limit: 8 });
     return { ...empty, recommended: featured };
   }
 
   const customerId = session.claims.customer_id;
   const supabase = await createCommercialServerClient();
 
-  const { data: freq, error: freqErr } = await supabase
-    .from("v_customer_product_frequency")
-    .select(
-      "product_source_id, veces_pedido, unidades_totales, ultima_vez, primera_vez",
-    )
-    .eq("customer_id", customerId);
-  if (freqErr) throw new Error(freqErr.message);
+  const [{ data: top }, { data: reorderRows }, { data: pairs }] = await Promise.all([
+    supabase
+      .from("v_client_top_products")
+      .select("cod_articulo, veces, unidades, ultima_compra")
+      .eq("customer_id", customerId)
+      .order("unidades", { ascending: false })
+      .limit(20),
+    supabase
+      .from("v_client_reorder")
+      .select("cod_articulo, compras, ultima, due_for_reorder")
+      .eq("customer_id", customerId)
+      .eq("due_for_reorder", true)
+      .order("ultima", { ascending: true })
+      .limit(20),
+    supabase
+      .from("v_customer_product_pairs")
+      .select("product_a, product_b, juntos")
+      .eq("customer_id", customerId)
+      .order("juntos", { ascending: false })
+      .limit(40),
+  ]);
 
-  const rows = (freq ?? []).filter((r) => r.product_source_id);
+  const topRows = (top ?? []).filter((r) => r.cod_articulo);
+  const dueReorder = (reorderRows ?? []).filter((r) => r.cod_articulo);
 
-  if (!rows.length) {
-    const featured = await getFeaturedProducts(8);
+  if (!topRows.length && !dueReorder.length) {
+    const { getTangoProducts } = await import("@/lib/commercial/products-tango");
+    const featured = await getTangoProducts({}, { limit: 8 });
     return { ...empty, recommended: featured, coldStart: true };
   }
 
-  const now = Date.now();
-  const reorderIds: string[] = [];
-  const habitualSorted = [...rows].sort(
-    (a, b) => Number(b.unidades_totales ?? 0) - Number(a.unidades_totales ?? 0),
-  );
-  const habitualIds = habitualSorted
-    .map((r) => r.product_source_id as string)
-    .slice(0, 12);
+  const habitualIds = topRows.map((r) => r.cod_articulo as string).slice(0, 12);
+  const reorderIds = dueReorder.map((r) => r.cod_articulo as string).slice(0, 12);
 
-  for (const row of rows) {
-    const veces = Number(row.veces_pedido ?? 0);
-    if (veces < 2 || !row.ultima_vez || !row.primera_vez) continue;
-    const ultima = new Date(row.ultima_vez).getTime();
-    const primera = new Date(row.primera_vez).getTime();
-    if (!Number.isFinite(ultima) || !Number.isFinite(primera) || ultima <= primera) continue;
-    const avgMs = (ultima - primera) / (veces - 1);
-    if (now - ultima >= avgMs) {
-      reorderIds.push(row.product_source_id as string);
-    }
-  }
-
-  const { data: pairs } = await supabase
-    .from("v_customer_product_pairs")
-    .select("product_a, product_b, juntos")
-    .eq("customer_id", customerId)
-    .order("juntos", { ascending: false })
-    .limit(40);
-
-  const owned = new Set(rows.map((r) => r.product_source_id as string));
+  const owned = new Set(habitualIds);
   const togetherScore = new Map<string, number>();
   for (const p of pairs ?? []) {
     if (p.product_a && owned.has(p.product_a) && p.product_b && !owned.has(p.product_b)) {
@@ -106,20 +97,38 @@ export async function getDashboardRecommendations(): Promise<DashboardRecommenda
     .slice(0, 8);
 
   const needed = [...new Set([...reorderIds, ...habitualIds, ...togetherIds])];
-  const products = await getCatalogProductsBySourceIds(needed);
-  const bySource = new Map(products.map((p) => [p.source_id, p]));
+  const { getTangoProductsByCodes } = await import("@/lib/commercial/products-tango");
+  const [catalogProducts, tangoProducts] = await Promise.all([
+    getCatalogProductsBySourceIds(needed),
+    getTangoProductsByCodes(needed),
+  ]);
+  const bySource = new Map<string, ProductListItem>();
+  for (const p of catalogProducts) bySource.set(p.source_id, p);
+  for (const p of tangoProducts) bySource.set(p.source_id, p);
 
-  const freqById = new Map(rows.map((r) => [r.product_source_id as string, r]));
+  const topById = new Map(topRows.map((r) => [r.cod_articulo as string, r]));
+  const reorderMeta = new Map(dueReorder.map((r) => [r.cod_articulo as string, r]));
 
   const reorder: ReorderCandidate[] = reorderIds
     .map((id) => {
       const product = bySource.get(id);
-      const meta = freqById.get(id);
-      if (!product || !meta?.ultima_vez) return null;
+      const meta = reorderMeta.get(id) ?? topById.get(id);
+      if (!product || !meta) return null;
+      const last =
+        "ultima" in meta && meta.ultima
+          ? String(meta.ultima)
+          : meta && "ultima_compra" in meta && meta.ultima_compra
+            ? String(meta.ultima_compra)
+            : null;
+      if (!last) return null;
       return {
         ...product,
-        lastOrderedAt: meta.ultima_vez,
-        timesOrdered: Number(meta.veces_pedido ?? 0),
+        lastOrderedAt: last.includes("T") ? last : `${last}T12:00:00.000Z`,
+        timesOrdered: Number(
+          ("compras" in meta ? meta.compras : null) ??
+            ("veces" in meta ? meta.veces : null) ??
+            0,
+        ),
       };
     })
     .filter((x): x is ReorderCandidate => Boolean(x));
@@ -133,8 +142,9 @@ export async function getDashboardRecommendations(): Promise<DashboardRecommenda
     .filter((p): p is ProductListItem => Boolean(p));
 
   if (recommended.length < 4) {
-    const featured = await getFeaturedProducts(8);
-    const used = new Set([...habitual, ...recommended].map((p) => p.source_id));
+    const { getTangoProducts } = await import("@/lib/commercial/products-tango");
+    const featured = await getTangoProducts({}, { limit: 12 });
+    const used = new Set([...habitual, ...recommended, ...reorder].map((p) => p.source_id));
     for (const p of featured) {
       if (!used.has(p.source_id)) {
         recommended.push(p);

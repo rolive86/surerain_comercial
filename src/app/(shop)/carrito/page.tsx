@@ -6,8 +6,8 @@ import { getCommercialSession } from "@/lib/commercial/session";
 import { getProductThumbnailsBySourceIds } from "@/lib/catalog";
 
 export const metadata: Metadata = {
-  title: "Carrito",
-  description: "Carrito B2B Sure Rain — confirmar pedido sin pago.",
+  title: "Mi solicitud de cotización",
+  description: "Solicitud de cotización B2B Sure Rain.",
 };
 
 export default async function CarritoPage({
@@ -26,7 +26,7 @@ export default async function CarritoPage({
   try {
     cart = await getOrCreateOpenCart();
   } catch (err) {
-    throw new Error(err instanceof Error ? err.message : "No se pudo cargar el carrito");
+    throw new Error(err instanceof Error ? err.message : "No se pudo cargar la solicitud");
   }
 
   const thumbs = await getProductThumbnailsBySourceIds(
@@ -38,18 +38,18 @@ export default async function CarritoPage({
       const thumb = thumbs.get(item.product_source_id);
       return {
         ...item,
-        image_url: thumb?.url ?? null,
-        image_alt: thumb?.alt ?? item.product_name_snapshot,
+        image_url: item.image_url ?? thumb?.url ?? null,
+        image_alt: item.image_alt ?? thumb?.alt ?? item.product_name_snapshot,
       };
     }),
   };
 
   return (
     <div className="container-sr py-12">
-      <h1 className="font-display text-3xl font-bold text-sr-green">Carrito</h1>
-      <p className="mt-2 text-sm text-sr-ink/60">
-        {cart.itemCount} ítem(s) · precios no publicados en esta etapa
-      </p>
+      <h1 className="font-display text-3xl font-bold text-sr-green">
+        Mi solicitud de cotización
+      </h1>
+      <p className="mt-2 text-sm text-sr-ink/60">{cart.itemCount} artículo(s)</p>
       <div className="mt-8">
         <CartClient
           cart={cartWithImages}

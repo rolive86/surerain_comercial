@@ -2,33 +2,32 @@ import { GuestCartMerger } from "@/components/GuestCartMerger";
 import { MobileTabBarNav } from "@/components/MobileTabBar";
 import { ShopHeaderClient } from "@/components/ShopHeaderClient";
 import { getOpenCartOrNull } from "@/lib/commercial/cart";
-import {
-  displayNameFromEmail,
-  getCommercialSession,
-  roleLabel,
-} from "@/lib/commercial/session";
+import { getHeaderIdentity } from "@/lib/commercial/profile";
+import { getModuleViewFlags } from "@/lib/commercial/modules";
+import { isCustomerRole, isStaffRole } from "@/lib/commercial/roles";
+import { getCommercialSession, roleLabel } from "@/lib/commercial/session";
 
 export async function ShopHeader({ searchDefault = "" }: { searchDefault?: string }) {
   const session = await getCommercialSession();
-  const isCustomer = session?.claims.app_role === "customer_user";
-  const isStaff = Boolean(
-    session?.claims.app_role &&
-      ["sales_rep", "sales_manager", "operations", "admin"].includes(session.claims.app_role),
-  );
+  const isCustomer = isCustomerRole(session?.claims.app_role);
+  const isStaff = isStaffRole(session?.claims.app_role);
   const cart = isCustomer ? await getOpenCartOrNull() : null;
-  const displayName = session ? displayNameFromEmail(session.user.email) : null;
+  const identity = session ? await getHeaderIdentity() : null;
+  const visible = await getModuleViewFlags(session?.claims.app_role);
 
   return (
     <>
       <GuestCartMerger enabled={Boolean(isCustomer)} />
       <ShopHeaderClient
-        displayName={displayName}
+        displayName={identity?.displayName ?? null}
+        avatarUrl={identity?.avatarUrl ?? null}
         email={session?.user.email ?? null}
         signedIn={Boolean(session)}
         isCustomer={isCustomer}
         isStaff={isStaff}
         cartCount={cart?.itemCount ?? 0}
         roleChip={session ? roleLabel(session.claims.app_role) : null}
+        visible={visible}
         searchDefault={searchDefault}
       />
     </>
@@ -37,9 +36,10 @@ export async function ShopHeader({ searchDefault = "" }: { searchDefault?: strin
 
 export async function MobileTabBar() {
   const session = await getCommercialSession();
-  const isCustomer = session?.claims.app_role === "customer_user";
+  const isCustomer = isCustomerRole(session?.claims.app_role);
   const cart = isCustomer ? await getOpenCartOrNull() : null;
-  return <MobileTabBarNav cartCount={cart?.itemCount ?? 0} />;
+  const visible = await getModuleViewFlags(session?.claims.app_role);
+  return <MobileTabBarNav cartCount={cart?.itemCount ?? 0} visible={visible} />;
 }
 
 export function ShopFooter() {

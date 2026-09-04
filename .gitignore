@@ -17,4 +17,16 @@ tsconfig.tsbuildinfo
 
 # Pipeline artifacts (regenerable)
 data/
-reports/
+reports/*
+!reports/responsive/
+!reports/responsive/**
+!reports/rendicion/
+!reports/rendicion/**
+!reports/avatars-rls.md
+!reports/product-map.md
+!reports/espejo-shapes.md
+!reports/verificacion-ventas.md
+
+# Tesseract language packs (downloaded at runtime)
+*.traineddata
+.tesscache/
