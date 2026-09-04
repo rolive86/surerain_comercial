@@ -9,7 +9,14 @@ export type StockListRow = {
   descripcion: string | null;
   familia: string | null;
   image_url: string | null;
+  /** Raw Tango qty from products_tango (null = sin dato de stock). */
   stock_qty: number | null;
+  /** From stock_availability_many; omit/null when unavailable. */
+  stock_real?: number | null;
+  comprometido?: number | null;
+  libre?: number | null;
+  /** True when availability RPC failed for this render (do not show 0). */
+  availabilityError?: boolean;
 };
 
 export function StockFilters({
@@ -82,6 +89,38 @@ export function StockFilters({
   );
 }
 
+function formatQty(n: number): string {
+  return n.toLocaleString("es-AR", { maximumFractionDigits: 0 });
+}
+
+/** Primary = disponible (libre). Never invent libre in the client. */
+function stockDisplay(row: StockListRow): {
+  primary: string;
+  secondary: string | null;
+  warn: boolean;
+} {
+  if (row.availabilityError) {
+    return { primary: "—", secondary: null, warn: false };
+  }
+  const noTangoQty = row.stock_qty == null;
+  const comprometido = row.comprometido ?? 0;
+  if (noTangoQty && comprometido === 0) {
+    return { primary: "—", secondary: null, warn: false };
+  }
+  if (row.libre == null || row.stock_real == null) {
+    return { primary: "—", secondary: null, warn: false };
+  }
+  const secondary =
+    comprometido > 0
+      ? `Stock ${formatQty(row.stock_real)} · Comprometido ${formatQty(comprometido)}`
+      : null;
+  return {
+    primary: formatQty(row.libre),
+    secondary,
+    warn: row.libre <= 0,
+  };
+}
+
 export function StockList({ rows }: { rows: StockListRow[] }) {
   if (!rows.length) {
     return (
@@ -95,7 +134,7 @@ export function StockList({ rows }: { rows: StockListRow[] }) {
     <ul className="divide-y divide-sr-mist overflow-hidden rounded-2xl border border-sr-mist bg-white">
       {rows.map((row) => {
         const name = row.descripcion?.trim() || row.cod_articulo;
-        const qty = row.stock_qty;
+        const { primary, secondary, warn } = stockDisplay(row);
         const hasPhoto = Boolean(row.image_url);
         return (
           <li
@@ -123,9 +162,20 @@ export function StockList({ rows }: { rows: StockListRow[] }) {
                 {row.familia ? ` · ${row.familia}` : ""}
               </p>
             </div>
-            <p className="shrink-0 font-display text-base font-bold tabular-nums text-sr-green">
-              {qty == null ? "—" : qty.toLocaleString("es-AR")}
-            </p>
+            <div className="shrink-0 text-right">
+              <p
+                className={`font-display text-base font-bold tabular-nums leading-none ${
+                  warn ? "text-amber-800" : "text-sr-green"
+                }`}
+              >
+                {primary}
+              </p>
+              {secondary ? (
+                <p className="mt-0.5 max-w-[9.5rem] text-[9px] leading-tight text-sr-ink/45">
+                  {secondary}
+                </p>
+              ) : null}
+            </div>
           </li>
         );
       })}
