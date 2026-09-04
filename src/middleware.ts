@@ -42,18 +42,11 @@ function redirectWithCookies(
   return response;
 }
 
-function readVendedorApp(request: NextRequest): boolean {
-  const fromQuery = request.nextUrl.searchParams.get("app");
-  const fromCookie = request.cookies.get(VENDEDOR_APP_COOKIE)?.value;
-  return (
-    isVendedorAppContext(fromQuery) || isVendedorAppContext(fromCookie)
-  );
-}
-
-function withVendedorCookie(response: NextResponse): NextResponse {
-  response.cookies.set(VENDEDOR_APP_COOKIE, VENDEDOR_APP_PARAM, {
+/** Drop legacy sr_app so TWA context cannot leak into normal Chrome. */
+function clearLegacyVendedorCookie(response: NextResponse): NextResponse {
+  response.cookies.set(VENDEDOR_APP_COOKIE, "", {
     path: "/",
-    maxAge: 60 * 60 * 24 * 400,
+    maxAge: 0,
     sameSite: "lax",
     secure: true,
   });
@@ -93,17 +86,16 @@ export async function middleware(request: NextRequest) {
     role = claimsFromAccessToken(sessionData.session?.access_token).app_role;
   }
 
-  const bounce = (pathname: string, search?: Record<string, string>) =>
-    redirectWithCookies(request, supabaseResponse, pathname, search);
+  const bounce = (pathname: string, search?: Record<string, string>) => {
+    const res = redirectWithCookies(request, supabaseResponse, pathname, search);
+    return clearLegacyVendedorCookie(res);
+  };
 
-  const vendedorApp = readVendedorApp(request);
-  // Persist APK context when the TWA declares ?app=vendedor (or cookie already set).
-  if (
-    isVendedorAppContext(request.nextUrl.searchParams.get("app")) ||
-    vendedorApp
-  ) {
-    withVendedorCookie(supabaseResponse);
-  }
+  // APK-only: explicit ?app=vendedor from TWA start URL (no shared cookie).
+  const vendedorApp = isVendedorAppContext(
+    request.nextUrl.searchParams.get("app"),
+  );
+  clearLegacyVendedorCookie(supabaseResponse);
 
   // Staff does not land on the customer home (public catalog stays reachable).
   if (user && isStaffRole(role) && path === "/") {
@@ -114,9 +106,7 @@ export async function middleware(request: NextRequest) {
     if (!user) {
       const search: Record<string, string> = { next: path };
       if (vendedorApp) search.app = VENDEDOR_APP_PARAM;
-      const res = bounce("/login", search);
-      if (vendedorApp) withVendedorCookie(res);
-      return res;
+      return bounce("/login", search);
     }
     if (!isStaffRole(role)) {
       return bounce("/");

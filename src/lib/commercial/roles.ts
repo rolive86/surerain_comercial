@@ -35,8 +35,12 @@ export function isVendedorPwaRole(role: string | null | undefined): boolean {
   return role === "sales_rep";
 }
 
-/** Contexto explícito de la APK Android Vendedor (`?app=vendedor` / cookie). */
+/**
+ * Contexto explícito de la APK Android Vendedor (`?app=vendedor` en start URL).
+ * No usar cookie compartida con Chrome: TWA y browser comparten el mismo origen.
+ */
 export const VENDEDOR_APP_PARAM = "vendedor";
+/** Legacy cookie name — cleared by middleware; do not set again. */
 export const VENDEDOR_APP_COOKIE = "sr_app";
 
 export function isVendedorAppContext(

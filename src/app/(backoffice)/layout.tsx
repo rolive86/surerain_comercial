@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 import {
   GestionBottomNav,
@@ -16,10 +15,7 @@ import {
   homePathForRole,
   isAdminConsoleRole,
   isStaffRole,
-  isVendedorAppContext,
   isVendedorPwaRole,
-  VENDEDOR_APP_COOKIE,
-  VENDEDOR_APP_PARAM,
 } from "@/lib/commercial/roles";
 import { getCommercialSession, roleLabel } from "@/lib/commercial/session";
 
@@ -77,13 +73,8 @@ export default async function BackofficeLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   const session = await getCommercialSession();
   if (!session) {
-    const jar = await cookies();
-    const vendedor = isVendedorAppContext(jar.get(VENDEDOR_APP_COOKIE)?.value);
-    redirect(
-      vendedor
-        ? `/login?next=/gestion&app=${VENDEDOR_APP_PARAM}`
-        : "/login?next=/gestion",
-    );
+    // Sin cookie de app: el cold start TWA usa /gestion?app=vendedor → login vendedor.
+    redirect("/login?next=/gestion");
   }
   if (!isStaffRole(session.claims.app_role)) {
     redirect("/");
