@@ -72,17 +72,7 @@ export async function runOcrCascade(input: {
   let tesseractText: string | null = null;
   try {
     phases.push("tesseract");
-    // Soft cap so serverless work ends before client 40s / route 60s when possible.
-    const tess = await Promise.race([
-      runTesseract(input.buffer, input.mime),
-      new Promise<never>((_, reject) => {
-        setTimeout(
-          () => reject(new Error("Tesseract timeout")),
-          35_000,
-        );
-      }),
-    ]);
-    const { text, fields } = tess;
+    const { text, fields } = await runTesseract(input.buffer, input.mime);
     tesseractText = text;
     result.tesseract_text = text.slice(0, 8000);
     result.total = fields.total;
